@@ -80,6 +80,24 @@ export default function InquiriesPage() {
             columns={[
               { key: "name", header: "Nama" },
               { key: "email", header: "Email" },
+              {
+                key: "phone",
+                header: "No. WA",
+                render: (r) => {
+                  if (!r.phone) return <span className="text-slate-muted">-</span>;
+                  const normalized = r.phone.replace(/^0/, "62").replace(/\D/g, "");
+                  return (
+                    <a
+                      href={`https://wa.me/${normalized}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-mint hover:underline font-medium"
+                    >
+                      {r.phone}
+                    </a>
+                  );
+                },
+              },
               { key: "company", header: "Perusahaan", render: (r) => r.company ?? "-" },
               { key: "budget_range", header: "Budget", render: (r) => r.budget_range ?? "-" },
               {

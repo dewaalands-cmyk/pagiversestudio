@@ -118,7 +118,7 @@ const paket = [
 
 const perbandingan = {
   id: [
-    { label: "Harga",    starter: "1 – 2 jt",  pro: "2 – 3 jt", premium: "3 – 4 jt",  ultimate: "4 – 7 jt" },
+    { label: "Harga",    starter: "1 – 2 jt",  pro: "2 – 3 jt", premium: "3 – 4 jt",  ultimate: "Hubungi Kami" },
     { label: "Halaman",  starter: "1",          pro: "3–5",       premium: "5–7",        ultimate: "5–7 + app" },
     { label: "Web App",  starter: "—",          pro: "—",         premium: "—",          ultimate: "✓" },
     { label: "Blog CMS", starter: "—",          pro: "—",         premium: "✓",          ultimate: "✓" },
@@ -128,7 +128,7 @@ const perbandingan = {
     { label: "Timeline", starter: "7–10 hari",  pro: "14 hari",   premium: "21 hari",    ultimate: "30–40 hari" },
   ],
   en: [
-    { label: "Price",     starter: "1 – 2 jt",  pro: "2 – 3 jt", premium: "3 – 4 jt",  ultimate: "4 – 7 jt" },
+    { label: "Price",     starter: "1 – 2 jt",  pro: "2 – 3 jt", premium: "3 – 4 jt",  ultimate: "Contact Us" },
     { label: "Pages",     starter: "1",          pro: "3–5",       premium: "5–7",        ultimate: "5–7 + app" },
     { label: "Web App",   starter: "—",          pro: "—",         premium: "—",          ultimate: "✓" },
     { label: "Blog CMS",  starter: "—",          pro: "—",         premium: "✓",          ultimate: "✓" },
@@ -297,7 +297,7 @@ export default function Pricing() {
                       key={h}
                       className={`p-4 font-medium ${
                         i === 0 ? "text-left" : "border-l border-white/10 text-center"
-                      } ${i === 2 ? "bg-mint/10 text-mint" : ""}`}
+                      } ${i === 3 ? "bg-mint/10 text-mint" : ""}`}
                     >
                       {h}
                     </th>
@@ -312,8 +312,8 @@ export default function Pricing() {
                   >
                     <td className="p-4 font-medium text-navy-deep">{r.label}</td>
                     <td className="border-l border-cloud-200 p-4 text-center text-slate-muted">{r.starter}</td>
-                    <td className="border-l border-cloud-200 bg-mint/5 p-4 text-center text-navy-deep">{r.pro}</td>
-                    <td className="border-l border-cloud-200 p-4 text-center text-slate-muted">{r.premium}</td>
+                    <td className="border-l border-cloud-200 p-4 text-center text-slate-muted">{r.pro}</td>
+                    <td className="border-l border-cloud-200 bg-mint/5 p-4 text-center text-navy-deep">{r.premium}</td>
                     <td className="border-l border-cloud-200 p-4 text-center text-slate-muted">{r.ultimate}</td>
                   </tr>
                 ))}
