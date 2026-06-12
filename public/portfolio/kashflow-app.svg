@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="greenBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <linearGradient id="redBar" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f87171"/>
+      <stop offset="100%" stop-color="#ef4444"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#34d399"/>
+      <stop offset="100%" stop-color="#06b6d4"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Main card -->
+  <rect x="40" y="60" width="720" height="390" rx="16" fill="#1a2744"/>
+
+  <!-- Top accent line -->
+  <rect x="40" y="60" width="720" height="3" fill="url(#accentLine)"/>
+
+  <!-- Header bar -->
+  <rect x="40" y="63" width="720" height="54" fill="#1e293b"/>
+
+  <!-- Logo circle -->
+  <circle cx="78" cy="90" r="14" fill="#34d39920"/>
+  <circle cx="78" cy="90" r="9" fill="none" stroke="#34d399" stroke-width="2"/>
+  <text x="78" y="95" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#34d399" text-anchor="middle">&#8490;</text>
+
+  <!-- App name -->
+  <text x="100" y="87" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#f8fafc">Kash</text>
+  <text x="133" y="87" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#34d399">Flow</text>
+  <text x="100" y="103" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8" letter-spacing="1">BUKU KAS DIGITAL</text>
+
+  <!-- Nav dots -->
+  <circle cx="690" cy="90" r="4" fill="#34d399"/>
+  <circle cx="706" cy="90" r="4" fill="#475569"/>
+  <circle cx="722" cy="90" r="4" fill="#475569"/>
+
+  <!-- Summary Cards -->
+  <!-- Saldo Total -->
+  <rect x="60" y="135" width="210" height="88" rx="10" fill="#0f172a"/>
+  <rect x="60" y="135" width="4" height="88" rx="2" fill="#34d399"/>
+  <text x="82" y="157" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">SALDO TOTAL</text>
+  <text x="82" y="182" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f8fafc">Rp 24,5 Jt</text>
+  <text x="82" y="203" font-family="Arial, sans-serif" font-size="9" fill="#34d399">&#9650; +12.4% bulan ini</text>
+
+  <!-- Pemasukan -->
+  <rect x="295" y="135" width="200" height="88" rx="10" fill="#0f172a"/>
+  <rect x="295" y="135" width="4" height="88" rx="2" fill="#10b981"/>
+  <text x="317" y="157" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">PEMASUKAN</text>
+  <text x="317" y="182" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#34d399">Rp 18,2 Jt</text>
+  <text x="317" y="203" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Juni 2024</text>
+
+  <!-- Pengeluaran -->
+  <rect x="520" y="135" width="200" height="88" rx="10" fill="#0f172a"/>
+  <rect x="520" y="135" width="4" height="88" rx="2" fill="#ef4444"/>
+  <text x="542" y="157" font-family="Arial, sans-serif" font-size="9" fill="#94a3b8">PENGELUARAN</text>
+  <text x="542" y="182" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#f87171">Rp 9,8 Jt</text>
+  <text x="542" y="203" font-family="Arial, sans-serif" font-size="9" fill="#64748b">Juni 2024</text>
+
+  <!-- Bar Chart -->
+  <rect x="60" y="243" width="430" height="185" rx="10" fill="#0f172a"/>
+  <text x="80" y="268" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Arus Kas Bulanan</text>
+  <text x="420" y="268" font-family="Arial, sans-serif" font-size="9" fill="#64748b">2024</text>
+
+  <line x1="80" y1="290" x2="470" y2="290" stroke="#1e293b" stroke-width="1"/>
+  <line x1="80" y1="315" x2="470" y2="315" stroke="#1e293b" stroke-width="1"/>
+  <line x1="80" y1="340" x2="470" y2="340" stroke="#1e293b" stroke-width="1"/>
+  <line x1="80" y1="365" x2="470" y2="365" stroke="#1e293b" stroke-width="1"/>
+  <line x1="80" y1="408" x2="470" y2="408" stroke="#334155" stroke-width="1"/>
+
+  <text x="76" y="294" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="end">20jt</text>
+  <text x="76" y="319" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="end">15jt</text>
+  <text x="76" y="344" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="end">10jt</text>
+  <text x="76" y="369" font-family="Arial, sans-serif" font-size="8" fill="#475569" text-anchor="end">5jt</text>
+
+  <!-- Bars Jan -->
+  <rect x="95"  y="343" width="16" height="65" rx="3" fill="url(#greenBar)"/>
+  <rect x="114" y="358" width="16" height="50" rx="3" fill="url(#redBar)" opacity="0.85"/>
+  <text x="112" y="420" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Jan</text>
+  <!-- Feb -->
+  <rect x="155" y="335" width="16" height="73" rx="3" fill="url(#greenBar)"/>
+  <rect x="174" y="355" width="16" height="53" rx="3" fill="url(#redBar)" opacity="0.85"/>
+  <text x="172" y="420" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Feb</text>
+  <!-- Mar -->
+  <rect x="215" y="325" width="16" height="83" rx="3" fill="url(#greenBar)"/>
+  <rect x="234" y="350" width="16" height="58" rx="3" fill="url(#redBar)" opacity="0.85"/>
+  <text x="232" y="420" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Mar</text>
+  <!-- Apr -->
+  <rect x="275" y="315" width="16" height="93" rx="3" fill="url(#greenBar)"/>
+  <rect x="294" y="348" width="16" height="60" rx="3" fill="url(#redBar)" opacity="0.85"/>
+  <text x="292" y="420" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Apr</text>
+  <!-- Mei -->
+  <rect x="335" y="308" width="16" height="100" rx="3" fill="url(#greenBar)"/>
+  <rect x="354" y="353" width="16" height="55" rx="3" fill="url(#redBar)" opacity="0.85"/>
+  <text x="352" y="420" font-family="Arial, sans-serif" font-size="8" fill="#64748b" text-anchor="middle">Mei</text>
+  <!-- Jun highlighted -->
+  <rect x="395" y="298" width="18" height="110" rx="3" fill="url(#greenBar)"/>
+  <rect x="416" y="348" width="18" height="60" rx="3" fill="url(#redBar)" opacity="0.85"/>
+  <text x="414" y="420" font-family="Arial, sans-serif" font-size="8" font-weight="bold" fill="#34d399" text-anchor="middle">Jun</text>
+
+  <!-- Legend -->
+  <rect x="80" y="427" width="8" height="8" rx="2" fill="#34d399"/>
+  <text x="93" y="436" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">Pemasukan</text>
+  <rect x="148" y="427" width="8" height="8" rx="2" fill="#f87171"/>
+  <text x="161" y="436" font-family="Arial, sans-serif" font-size="8" fill="#94a3b8">Pengeluaran</text>
+
+  <!-- Transactions Panel -->
+  <rect x="510" y="243" width="210" height="185" rx="10" fill="#0f172a"/>
+  <text x="530" y="268" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#f8fafc">Transaksi Terbaru</text>
+  <line x1="525" y1="280" x2="705" y2="280" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Tx 1 -->
+  <circle cx="535" cy="298" r="8" fill="#10b98125"/>
+  <text x="535" y="303" font-family="Arial, sans-serif" font-size="12" fill="#34d399" text-anchor="middle">+</text>
+  <text x="550" y="296" font-family="Arial, sans-serif" font-size="9" fill="#f1f5f9">Penjualan Produk</text>
+  <text x="550" y="308" font-family="Arial, sans-serif" font-size="8" fill="#64748b">Hari ini</text>
+  <text x="700" y="302" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#34d399" text-anchor="end">+4,5jt</text>
+  <line x1="525" y1="316" x2="705" y2="316" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Tx 2 -->
+  <circle cx="535" cy="334" r="8" fill="#ef444425"/>
+  <text x="535" y="339" font-family="Arial, sans-serif" font-size="12" fill="#f87171" text-anchor="middle">-</text>
+  <text x="550" y="332" font-family="Arial, sans-serif" font-size="9" fill="#f1f5f9">Biaya Operasional</text>
+  <text x="550" y="344" font-family="Arial, sans-serif" font-size="8" fill="#64748b">Kemarin</text>
+  <text x="700" y="338" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f87171" text-anchor="end">-1,2jt</text>
+  <line x1="525" y1="352" x2="705" y2="352" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Tx 3 -->
+  <circle cx="535" cy="370" r="8" fill="#10b98125"/>
+  <text x="535" y="375" font-family="Arial, sans-serif" font-size="12" fill="#34d399" text-anchor="middle">+</text>
+  <text x="550" y="368" font-family="Arial, sans-serif" font-size="9" fill="#f1f5f9">Pembayaran Klien</text>
+  <text x="550" y="380" font-family="Arial, sans-serif" font-size="8" fill="#64748b">2 hari lalu</text>
+  <text x="700" y="374" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#34d399" text-anchor="end">+7,8jt</text>
+  <line x1="525" y1="388" x2="705" y2="388" stroke="#1e293b" stroke-width="1"/>
+
+  <!-- Tx 4 -->
+  <circle cx="535" cy="406" r="8" fill="#ef444425"/>
+  <text x="535" y="411" font-family="Arial, sans-serif" font-size="12" fill="#f87171" text-anchor="middle">-</text>
+  <text x="550" y="404" font-family="Arial, sans-serif" font-size="9" fill="#f1f5f9">Pembelian Bahan</text>
+  <text x="550" y="416" font-family="Arial, sans-serif" font-size="8" fill="#64748b">3 hari lalu</text>
+  <text x="700" y="410" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#f87171" text-anchor="end">-2,3jt</text>
+</svg>
