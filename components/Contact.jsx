@@ -69,15 +69,18 @@ export default function Contact({ settings = {} }) {
   const [status, setStatus] = useState("idle");
 
   useEffect(() => {
-    const hash = window.location.hash;
-    const queryStr = hash.includes("?") ? hash.split("?")[1] : "";
-    const params = new URLSearchParams(queryStr);
-    const paket = params.get("paket");
-    if (paket) {
+    const paket = sessionStorage.getItem("inquiry_paket");
+    const budget = sessionStorage.getItem("inquiry_budget");
+    if (paket || budget) {
       setForm((prev) => ({
         ...prev,
-        message: `Halo, saya tertarik dengan paket ${paket}. Boleh konsultasi lebih lanjut?`,
+        budget_range: budget ?? prev.budget_range,
+        message: paket
+          ? `Halo, saya tertarik dengan paket ${paket}. Boleh konsultasi lebih lanjut?`
+          : prev.message,
       }));
+      sessionStorage.removeItem("inquiry_paket");
+      sessionStorage.removeItem("inquiry_budget");
     }
   }, []);
 

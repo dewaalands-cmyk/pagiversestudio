@@ -1,8 +1,8 @@
 "use client";
 
-import { Instagram, MessageCircle } from "lucide-react";
+import { Instagram } from "lucide-react";
 import Logo from "./Logo";
-import { WHATSAPP_URL, INSTAGRAM_URL } from "./site-config";
+import { INSTAGRAM_URL } from "./site-config";
 import { useLang } from "./LanguageProvider";
 
 const konten = {
@@ -30,16 +30,6 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-3">
-          <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="WhatsApp Pagiverse Studio"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-[#25D366] text-white transition-transform hover:-translate-y-0.5"
-          >
-            <MessageCircle className="h-5 w-5" />
-          </a>
-
           <a
             href={INSTAGRAM_URL}
             target="_blank"

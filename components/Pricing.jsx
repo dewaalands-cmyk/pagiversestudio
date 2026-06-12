@@ -139,8 +139,20 @@ const perbandingan = {
   ],
 };
 
-function inquiryLink(paketNama) {
-  return `#kontak?paket=${encodeURIComponent(paketNama)}`;
+// Budget mapping per paket
+const BUDGET_MAP = {
+  STARTER:      "< Rp 3 juta",
+  PROFESSIONAL: "Rp 3–5 juta",
+  PREMIUM:      "Rp 3–5 juta",
+  ULTIMATE:     "> Rp 5 juta",
+  "WEB APP":    "Rp 3–5 juta",
+  MAINTENANCE:  "< Rp 3 juta",
+};
+
+function pilihPaket(nama) {
+  sessionStorage.setItem("inquiry_paket", nama);
+  sessionStorage.setItem("inquiry_budget", BUDGET_MAP[nama] ?? "");
+  window.location.hash = "kontak";
 }
 
 // ─── Komponen ─────────────────────────────────────────────────────────────────
@@ -227,12 +239,12 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href={inquiryLink(p.nama)}
-                  className="block rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
+                <button
+                  onClick={() => pilihPaket(p.nama)}
+                  className="block w-full rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
                 >
                   {t.ctaKartu}
-                </a>
+                </button>
               </div>
             ))}
 
@@ -264,12 +276,12 @@ export default function Pricing() {
                   </ul>
                 </div>
               </div>
-              <a
-                href={inquiryLink("MAINTENANCE")}
-                className="block rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
+              <button
+                onClick={() => pilihPaket("MAINTENANCE")}
+                className="block w-full rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
               >
                 {t.ctaKartu}
-              </a>
+              </button>
             </div>
           </div>
         )}
