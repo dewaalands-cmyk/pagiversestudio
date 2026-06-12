@@ -149,15 +149,9 @@ const BUDGET_MAP = {
   MAINTENANCE:  "< Rp 3 juta",
 };
 
-function pilihPaket(nama) {
+function simpanPaket(nama) {
   sessionStorage.setItem("inquiry_paket", nama);
   sessionStorage.setItem("inquiry_budget", BUDGET_MAP[nama] ?? "");
-  const el = document.getElementById("kontak");
-  if (el) {
-    el.scrollIntoView({ behavior: "smooth" });
-  } else {
-    window.location.hash = "kontak";
-  }
 }
 
 // ─── Komponen ─────────────────────────────────────────────────────────────────
@@ -244,12 +238,13 @@ export default function Pricing() {
                     </li>
                   ))}
                 </ul>
-                <button
-                  onClick={() => pilihPaket(p.nama)}
-                  className="block w-full rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
+                <a
+                  href="#kontak"
+                  onClick={() => simpanPaket(p.nama)}
+                  className="block rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
                 >
                   {t.ctaKartu}
-                </button>
+                </a>
               </div>
             ))}
 
@@ -281,12 +276,13 @@ export default function Pricing() {
                   </ul>
                 </div>
               </div>
-              <button
-                onClick={() => pilihPaket("MAINTENANCE")}
-                className="block w-full rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
+              <a
+                href="#kontak"
+                onClick={() => simpanPaket("MAINTENANCE")}
+                className="block rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
               >
                 {t.ctaKartu}
-              </button>
+              </a>
             </div>
           </div>
         )}

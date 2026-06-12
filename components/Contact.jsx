@@ -69,19 +69,25 @@ export default function Contact({ settings = {} }) {
   const [status, setStatus] = useState("idle");
 
   useEffect(() => {
-    const paket = sessionStorage.getItem("inquiry_paket");
-    const budget = sessionStorage.getItem("inquiry_budget");
-    if (paket || budget) {
-      setForm((prev) => ({
-        ...prev,
-        budget_range: budget ?? prev.budget_range,
-        message: paket
-          ? `Halo, saya tertarik dengan paket ${paket}. Boleh konsultasi lebih lanjut?`
-          : prev.message,
-      }));
-      sessionStorage.removeItem("inquiry_paket");
-      sessionStorage.removeItem("inquiry_budget");
+    function applyFromStorage() {
+      const paket = sessionStorage.getItem("inquiry_paket");
+      const budget = sessionStorage.getItem("inquiry_budget");
+      if (paket || budget) {
+        setForm((prev) => ({
+          ...prev,
+          budget_range: budget ?? prev.budget_range,
+          message: paket
+            ? `Halo, saya tertarik dengan paket ${paket}. Boleh konsultasi lebih lanjut?`
+            : prev.message,
+        }));
+        sessionStorage.removeItem("inquiry_paket");
+        sessionStorage.removeItem("inquiry_budget");
+      }
     }
+
+    applyFromStorage();
+    window.addEventListener("hashchange", applyFromStorage);
+    return () => window.removeEventListener("hashchange", applyFromStorage);
   }, []);
 
   function handleChange(e) {
