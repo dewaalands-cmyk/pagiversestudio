@@ -152,7 +152,12 @@ const BUDGET_MAP = {
 function pilihPaket(nama) {
   sessionStorage.setItem("inquiry_paket", nama);
   sessionStorage.setItem("inquiry_budget", BUDGET_MAP[nama] ?? "");
-  window.location.hash = "kontak";
+  const el = document.getElementById("kontak");
+  if (el) {
+    el.scrollIntoView({ behavior: "smooth" });
+  } else {
+    window.location.hash = "kontak";
+  }
 }
 
 // ─── Komponen ─────────────────────────────────────────────────────────────────

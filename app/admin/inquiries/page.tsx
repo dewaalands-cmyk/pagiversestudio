@@ -5,7 +5,7 @@ import AdminHeader from "@/components/admin/AdminHeader";
 import DataTable from "@/components/admin/DataTable";
 import { getStatusColor, formatDate } from "@/lib/utils";
 import type { Inquiry, InquiryStatus } from "@/types";
-import { Loader2, RefreshCw } from "lucide-react";
+import { Loader2, RefreshCw, X, MessageSquare } from "lucide-react";
 
 const STATUSES: { value: string; label: string }[] = [
   { value: "", label: "Semua" },
@@ -15,11 +15,56 @@ const STATUSES: { value: string; label: string }[] = [
   { value: "closed", label: "Ditutup" },
 ];
 
+function MessageModal({ inquiry, onClose }: { inquiry: Inquiry; onClose: () => void }) {
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4"
+      onClick={(e) => { if (e.target === e.currentTarget) onClose(); }}
+    >
+      <div className="w-full max-w-lg rounded-2xl bg-white dark:bg-navy-soft shadow-xl">
+        <div className="flex items-center justify-between border-b border-cloud-200 dark:border-white/10 px-6 py-4">
+          <div>
+            <h3 className="font-semibold text-navy-deep dark:text-white">{inquiry.name}</h3>
+            <p className="text-xs text-slate-muted dark:text-slate-label">{inquiry.email}</p>
+          </div>
+          <button
+            onClick={onClose}
+            className="rounded-lg p-1.5 text-slate-muted hover:bg-cloud-100 dark:hover:bg-white/10 transition-colors"
+          >
+            <X size={18} />
+          </button>
+        </div>
+        <div className="p-6 space-y-3">
+          {inquiry.budget_range && (
+            <div className="flex gap-2 text-sm">
+              <span className="text-slate-muted dark:text-slate-label w-20 shrink-0">Budget</span>
+              <span className="font-medium text-navy-deep dark:text-white">{inquiry.budget_range}</span>
+            </div>
+          )}
+          {inquiry.company && (
+            <div className="flex gap-2 text-sm">
+              <span className="text-slate-muted dark:text-slate-label w-20 shrink-0">Perusahaan</span>
+              <span className="font-medium text-navy-deep dark:text-white">{inquiry.company}</span>
+            </div>
+          )}
+          <div className="pt-2 border-t border-cloud-200 dark:border-white/10">
+            <p className="text-xs font-semibold uppercase tracking-wider text-slate-muted dark:text-slate-label mb-2">Pesan</p>
+            <p className="text-sm text-navy-deep dark:text-cloud-100 leading-relaxed whitespace-pre-wrap">
+              {inquiry.message ?? <span className="italic text-slate-muted">Tidak ada pesan</span>}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function InquiriesPage() {
   const [inquiries, setInquiries] = useState<Inquiry[]>([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("");
   const [updating, setUpdating] = useState<number | null>(null);
+  const [selected, setSelected] = useState<Inquiry | null>(null);
 
   async function load() {
     setLoading(true);
@@ -101,6 +146,19 @@ export default function InquiriesPage() {
               { key: "company", header: "Perusahaan", render: (r) => r.company ?? "-" },
               { key: "budget_range", header: "Budget", render: (r) => r.budget_range ?? "-" },
               {
+                key: "message",
+                header: "Pesan",
+                render: (r) => r.message ? (
+                  <button
+                    onClick={() => setSelected(r)}
+                    className="inline-flex items-center gap-1.5 text-xs text-slate-muted dark:text-slate-label hover:text-mint transition-colors max-w-[180px]"
+                  >
+                    <MessageSquare size={13} className="shrink-0 text-mint" />
+                    <span className="truncate">{r.message}</span>
+                  </button>
+                ) : <span className="text-slate-muted">-</span>,
+              },
+              {
                 key: "status",
                 header: "Status",
                 render: (r) => (
@@ -125,6 +183,10 @@ export default function InquiriesPage() {
           />
         )}
       </main>
+
+      {selected && (
+        <MessageModal inquiry={selected} onClose={() => setSelected(null)} />
+      )}
     </div>
   );
 }
