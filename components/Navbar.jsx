@@ -82,10 +82,10 @@ export default function Navbar() {
           <ThemeToggle />
 
           <a
-            href="#kontak"
+            href="#harga"
             className="hidden items-center gap-2 rounded-lg bg-mint px-4 py-2 text-sm font-semibold text-navy-deep transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
-            <MessageCircle className="h-4 w-4" /> {ctaLabel[lang]}
+            {ctaLabel[lang]}
           </a>
 
           {/* Tombol menu untuk HP */}
@@ -113,7 +113,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="#kontak"
+            href="#harga"
             onClick={() => setOpen(false)}
             className="mt-1 block rounded-lg bg-mint px-3 py-2 text-center text-sm font-semibold text-navy-deep"
           >
