@@ -51,10 +51,16 @@ export async function POST(req: NextRequest) {
   const body = await req.json();
   const { content, client_id, recipient_id } = body;
 
-  if (!content) return NextResponse.json({ error: "Content required" }, { status: 400 });
+  if (!content || typeof content !== "string") {
+    return NextResponse.json({ error: "Content required" }, { status: 400 });
+  }
 
   let resolvedClientId = client_id;
   let resolvedRecipientId = recipient_id;
+
+  if (user.role === "admin" && !client_id) {
+    return NextResponse.json({ error: "client_id required" }, { status: 400 });
+  }
 
   if (user.role === "client") {
     const client = await sql`SELECT id, user_id FROM clients WHERE user_id = ${Number(user.id)} LIMIT 1`;

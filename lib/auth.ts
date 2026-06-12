@@ -1,13 +1,21 @@
 import { type NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
+import { timingSafeEqual } from "crypto";
 
-// Admin default — bcrypt hash of "Sekaran@207"
-const ADMIN_HASH = "$2b$12$KCGfejDH5MpZu76Nz0tQbukjOEeZaa0PFxtfKmNk2vcxfy1iGtZNi";
-const ADMIN_EMAIL = "wearecustomjaya@gmail.com";
+// Admin credentials come from env — never hardcode credentials in source.
+const ADMIN_EMAIL = process.env.ADMIN_EMAIL;
+const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
+
+function safeCompare(a: string, b: string): boolean {
+  const bufA = Buffer.from(a);
+  const bufB = Buffer.from(b);
+  if (bufA.length !== bufB.length) return false;
+  return timingSafeEqual(bufA, bufB);
+}
 
 export const authOptions: NextAuthOptions = {
-  secret: process.env.NEXTAUTH_SECRET ?? "pagiverse-studio-fallback-secret-key-32chars",
+  secret: process.env.NEXTAUTH_SECRET,
   session: { strategy: "jwt" },
   pages: {
     signIn: "/login",
@@ -23,10 +31,9 @@ export const authOptions: NextAuthOptions = {
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) return null;
 
-        // Admin hardcoded — email match + bcrypt verify
-        if (credentials.email === ADMIN_EMAIL) {
-          const valid = await bcrypt.compare(credentials.password, ADMIN_HASH);
-          if (valid) {
+        // Env-based admin login — works without database
+        if (ADMIN_EMAIL && ADMIN_PASSWORD && credentials.email === ADMIN_EMAIL) {
+          if (safeCompare(credentials.password, ADMIN_PASSWORD)) {
             return {
               id: "0",
               name: "Admin Pagiverse",

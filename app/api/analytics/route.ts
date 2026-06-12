@@ -5,16 +5,28 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import sql from "@/lib/db";
 
+const ALLOWED_EVENTS = new Set(["page_view", "click", "form_submit", "scroll"]);
+
 // Public: track event
 export async function POST(req: NextRequest) {
-  const body = await req.json();
-  const { event_type, page_path, session_id } = body;
+  let body: any;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+  }
 
-  if (!event_type) return NextResponse.json({ error: "event_type required" }, { status: 400 });
+  const event_type = typeof body.event_type === "string" ? body.event_type.slice(0, 50) : "";
+  const page_path = typeof body.page_path === "string" ? body.page_path.slice(0, 300) : null;
+  const session_id = typeof body.session_id === "string" ? body.session_id.slice(0, 100) : null;
+
+  if (!ALLOWED_EVENTS.has(event_type)) {
+    return NextResponse.json({ error: "Invalid event_type" }, { status: 400 });
+  }
 
   await sql`
     INSERT INTO analytics_events (event_type, page_path, session_id)
-    VALUES (${event_type}, ${page_path ?? null}, ${session_id ?? null})
+    VALUES (${event_type}, ${page_path}, ${session_id})
   `;
 
   return NextResponse.json({ ok: true });
@@ -28,7 +40,7 @@ export async function GET(req: NextRequest) {
   }
 
   const { searchParams } = new URL(req.url);
-  const days = Number(searchParams.get("days") ?? "30");
+  const days = Math.min(Math.max(Math.floor(Number(searchParams.get("days"))) || 30, 1), 365);
 
   const [pageViews, topPages, eventCounts] = await Promise.all([
     sql`
