@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { MessageCircle, Instagram, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { WHATSAPP_TEXT, INSTAGRAM_HANDLE } from "./site-config";
 import { useLang } from "./LanguageProvider";
@@ -80,6 +80,20 @@ export default function Contact({ settings = {} }) {
     name: "", email: "", phone: "", company: "", budget_range: "", message: "",
   });
   const [status, setStatus] = useState("idle"); // idle | loading | success | error
+
+  // Pre-fill paket dari URL hash query: #kontak?paket=PREMIUM
+  useEffect(() => {
+    const hash = window.location.hash; // e.g. "#kontak?paket=PREMIUM"
+    const queryStr = hash.includes("?") ? hash.split("?")[1] : "";
+    const params = new URLSearchParams(queryStr);
+    const paket = params.get("paket");
+    if (paket) {
+      setForm((prev) => ({
+        ...prev,
+        message: `Halo, saya tertarik dengan paket ${paket}. Boleh konsultasi lebih lanjut?`,
+      }));
+    }
+  }, []);
 
   function handleChange(e) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));

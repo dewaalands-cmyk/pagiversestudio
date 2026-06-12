@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react";
 import Logo from "./Logo";
 import ThemeToggle from "./ThemeToggle";
-import { WHATSAPP_URL } from "./site-config";
 import { useLang } from "./LanguageProvider";
 
 const navLinks = {
@@ -26,8 +25,8 @@ const navLinks = {
   ],
 };
 
-const ctaLabel = { id: "Konsultasi", en: "Consult" };
-const ctaMobile = { id: "Konsultasi via WhatsApp", en: "Consult via WhatsApp" };
+const ctaLabel = { id: "Mulai Proyek", en: "Start Project" };
+const ctaMobile = { id: "Mulai Proyek Sekarang", en: "Start Your Project" };
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -83,9 +82,7 @@ export default function Navbar() {
           <ThemeToggle />
 
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#kontak"
             className="hidden items-center gap-2 rounded-lg bg-mint px-4 py-2 text-sm font-semibold text-navy-deep transition-transform hover:-translate-y-0.5 sm:inline-flex"
           >
             <MessageCircle className="h-4 w-4" /> {ctaLabel[lang]}
@@ -116,9 +113,8 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href={WHATSAPP_URL}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#kontak"
+            onClick={() => setOpen(false)}
             className="mt-1 block rounded-lg bg-mint px-3 py-2 text-center text-sm font-semibold text-navy-deep"
           >
             {ctaMobile[lang]}

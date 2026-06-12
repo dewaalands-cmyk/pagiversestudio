@@ -1,7 +1,6 @@
 "use client";
 
 import { MessageCircle, ArrowRight } from "lucide-react";
-import { WHATSAPP_URL } from "./site-config";
 import { useLang } from "./LanguageProvider";
 
 const defaults = {
@@ -10,7 +9,7 @@ const defaults = {
   h1_accent: "Profesional",
   h1_end: "& Dipercaya",
   desc: "Pagiverse Studio bantu UMKM dan brand lokal punya website dan aplikasi yang cepat, rapi, dan siap pakai — tanpa pusing mengurus teknisnya. Kamu fokus ke bisnis, urusan digitalnya biar kami yang rapikan.",
-  cta1: "Konsultasi Gratis via WhatsApp",
+  cta1: "Konsultasi Gratis",
   cta2: "Lihat Portfolio",
   tagline: "Sudah dipercaya bisnis lokal, UMKM & event organizer • Respons cepat • Tanpa ribet",
 };
@@ -21,7 +20,7 @@ const en_defaults = {
   h1_accent: "Professional",
   h1_end: "& Trusted",
   desc: "Pagiverse Studio helps local businesses and brands have a fast, clean, and ready-to-use website and app — without worrying about the technical side. You focus on your business, we handle the digital.",
-  cta1: "Free Consultation via WhatsApp",
+  cta1: "Free Consultation",
   cta2: "View Portfolio",
   tagline: "Trusted by local businesses, SMEs & event organizers • Fast response • Hassle-free",
 };
@@ -67,9 +66,7 @@ export default function Hero({ settings = {} }) {
 
           <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a
-              href={WHATSAPP_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="#kontak"
               className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-mint px-6 py-3.5 font-semibold text-navy-deep shadow-lg shadow-mint/20 transition-transform hover:-translate-y-0.5 sm:w-auto"
             >
               <MessageCircle className="h-5 w-5" /> {cta1}

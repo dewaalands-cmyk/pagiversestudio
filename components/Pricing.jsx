@@ -5,7 +5,6 @@
 
 import { useState } from "react";
 import { Check } from "lucide-react";
-import { WHATSAPP_NUMBER } from "@/components/site-config";
 import { useLang } from "@/components/LanguageProvider";
 
 // ─── Teks bilingual ──────────────────────────────────────────────────────────
@@ -19,7 +18,7 @@ const teks = {
     tombolKartu: "Kartu Paket",
     tombolTabel: "Bandingkan Fitur",
     rekomendasi: "REKOMENDASI",
-    ctaKartu: "Chat WhatsApp",
+    ctaKartu: "Pilih Paket Ini",
     maintenanceSub: "Support & Perawatan Bulanan",
     maintenanceDetail: "Per bulan, mulai dari support dasar",
     basicLabel: "BASIC (Rp 500k)",
@@ -29,7 +28,7 @@ const teks = {
     footerJudul: "Tidak yakin paket mana yang tepat?",
     footerSub:
       "Chat dengan kami gratis untuk konsultasi. Kami bantu tentukan solusi terbaik untuk bisnis kamu.",
-    footerCTA: "Konsultasi Gratis via WhatsApp",
+    footerCTA: "Konsultasi Gratis Sekarang",
     waPesan: "konsultasi paket website yang cocok untuk bisnis saya",
   },
   en: {
@@ -40,7 +39,7 @@ const teks = {
     tombolKartu: "Package Cards",
     tombolTabel: "Compare Features",
     rekomendasi: "RECOMMENDED",
-    ctaKartu: "Chat on WhatsApp",
+    ctaKartu: "Choose This Package",
     maintenanceSub: "Monthly Support & Maintenance",
     maintenanceDetail: "Per month, starting from basic support",
     basicLabel: "BASIC (Rp 500k)",
@@ -50,7 +49,7 @@ const teks = {
     footerJudul: "Not sure which package is right for you?",
     footerSub:
       "Chat with us for a free consultation. We'll help you find the best solution for your business.",
-    footerCTA: "Free Consultation via WhatsApp",
+    footerCTA: "Get Free Consultation",
     waPesan: "I'd like a free consultation for the best website package for my business",
   },
 };
@@ -140,8 +139,8 @@ const perbandingan = {
   ],
 };
 
-function waLink(pesan) {
-  return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(pesan)}`;
+function inquiryLink(paketNama) {
+  return `#kontak?paket=${encodeURIComponent(paketNama)}`;
 }
 
 // ─── Komponen ─────────────────────────────────────────────────────────────────
@@ -229,9 +228,7 @@ export default function Pricing() {
                   ))}
                 </ul>
                 <a
-                  href={waLink(`Halo Pagiverse Studio, saya tertarik dengan paket ${p.nama}. Boleh konsultasi?`)}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href={inquiryLink(p.nama)}
                   className="block rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
                 >
                   {t.ctaKartu}
@@ -268,9 +265,7 @@ export default function Pricing() {
                 </div>
               </div>
               <a
-                href={waLink("Halo Pagiverse Studio, saya tertarik dengan paket MAINTENANCE. Boleh konsultasi?")}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={inquiryLink("MAINTENANCE")}
                 className="block rounded-lg bg-mint py-3 text-center text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
               >
                 {t.ctaKartu}
@@ -320,9 +315,7 @@ export default function Pricing() {
           <h2 className="text-xl font-semibold text-white">{t.footerJudul}</h2>
           <p className="mt-3 text-sm text-cloud-200/80">{t.footerSub}</p>
           <a
-            href={waLink(t.waPesan)}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="#kontak"
             className="mt-6 inline-block rounded-lg bg-mint px-8 py-3 text-sm font-semibold text-navy-deep transition-colors hover:bg-teal-400"
           >
             {t.footerCTA}
