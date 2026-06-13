@@ -65,7 +65,6 @@ export default async function InvoicePrintPage({ params }: { params: { id: strin
 
           /* Screen: centered card */
           .wrapper {
-            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: flex-start;
@@ -80,12 +79,27 @@ export default async function InvoicePrintPage({ params }: { params: { id: strin
             box-shadow: 0 8px 32px rgba(0,0,0,0.12);
           }
 
-          /* Print: full width, no card */
+          /* Print: force single page */
           @media print {
-            html, body { background: white; }
-            .wrapper { padding: 0; min-height: auto; }
+            html {
+              height: 297mm;
+              overflow: hidden;
+            }
+            body {
+              background: white !important;
+              height: 297mm;
+              overflow: hidden;
+            }
+            .wrapper {
+              display: block;
+              padding: 0;
+              height: 297mm;
+              overflow: hidden;
+            }
             .page {
               width: 100%;
+              height: 297mm;
+              overflow: hidden;
               border-radius: 0;
               box-shadow: none;
             }
