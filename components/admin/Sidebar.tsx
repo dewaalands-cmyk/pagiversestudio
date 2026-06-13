@@ -13,6 +13,7 @@ import {
   LogOut,
   Users,
   X,
+  FileText,
 } from "lucide-react";
 import Logo from "@/components/Logo";
 
@@ -22,6 +23,7 @@ const NAV = [
   { href: "/admin/inquiries", label: "Inquiries", icon: MessageSquare },
   { href: "/admin/testimonies", label: "Testimoni", icon: Star },
   { href: "/admin/clients", label: "Klien", icon: Users },
+  { href: "/admin/invoices", label: "Invoice", icon: FileText },
   { href: "/admin/analytics", label: "Analytics", icon: BarChart3 },
   { href: "/admin/settings", label: "Settings", icon: Settings },
 ];
