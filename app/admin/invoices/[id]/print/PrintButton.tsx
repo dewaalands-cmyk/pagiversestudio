@@ -9,7 +9,10 @@ export default function PrintButton({ invoiceNumber }: { invoiceNumber: string }
   }, [invoiceNumber]);
 
   return (
-    <button className="print-btn" onClick={() => window.print()}>
+    <button
+      className="print-btn no-print"
+      onClick={() => window.print()}
+    >
       <Printer size={16} />
       Cetak / Simpan PDF
     </button>
