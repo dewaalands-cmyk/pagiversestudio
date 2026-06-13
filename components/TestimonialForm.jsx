@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Star, Send, CheckCircle2, Loader2 } from "lucide-react";
 import { useLang } from "./LanguageProvider";
+import { useAnalytics } from "@/lib/useAnalytics";
 
 const T = {
   id: {
@@ -73,6 +74,7 @@ function StarRating({ value, onChange }) {
 
 export default function TestimonialForm() {
   const { lang } = useLang();
+  const { trackFormSubmit } = useAnalytics();
   const t = lang === "id" ? T.id : T.en;
 
   const [form, setForm] = useState({
@@ -98,6 +100,7 @@ export default function TestimonialForm() {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
+      trackFormSubmit("testimonial_form");
       setStatus("success");
       setForm({ client_name: "", client_company: "", rating: 5, content: "" });
     } catch {

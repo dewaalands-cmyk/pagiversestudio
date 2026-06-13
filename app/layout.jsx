@@ -5,6 +5,7 @@ import "./globals.css";
 import { Sora } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
+import AnalyticsProvider from "@/components/AnalyticsProvider";
 
 // Font Sora dimuat otomatis & dioptimasi oleh Next.js (anti layout shift).
 const sora = Sora({
@@ -42,7 +43,9 @@ export default function RootLayout({ children }) {
         className={`${sora.className} bg-cloud-50 text-navy-deep antialiased dark:bg-navy-deep dark:text-cloud-100`}
       >
         <ThemeProvider>
-          <LanguageProvider>{children}</LanguageProvider>
+          <AnalyticsProvider>
+            <LanguageProvider>{children}</LanguageProvider>
+          </AnalyticsProvider>
         </ThemeProvider>
       </body>
     </html>

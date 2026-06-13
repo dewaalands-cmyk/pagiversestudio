@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { Send, CheckCircle2, Loader2 } from "lucide-react";
 import { useLang } from "./LanguageProvider";
+import { useAnalytics } from "@/lib/useAnalytics";
 
 const BUDGET_OPTIONS = [
   "< Rp 3 juta",
@@ -58,6 +59,7 @@ const T = {
 
 export default function Contact({ settings = {} }) {
   const { lang } = useLang();
+  const { trackFormSubmit } = useAnalytics();
   const t = lang === "id" ? T.id : T.en;
 
   const heading = (lang === "id" && settings.contact_heading) || t.heading;
@@ -104,6 +106,7 @@ export default function Contact({ settings = {} }) {
         body: JSON.stringify(form),
       });
       if (!res.ok) throw new Error();
+      trackFormSubmit("inquiry_form");
       setStatus("success");
       setForm({ name: "", email: "", phone: "", company: "", budget_range: "", message: "" });
     } catch {
