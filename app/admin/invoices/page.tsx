@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import AdminHeader from "@/components/admin/AdminHeader";
 import DataTable from "@/components/admin/DataTable";
 import { formatRupiah, formatDate, getStatusColor } from "@/lib/utils";
-import { Plus, X, Loader2, RefreshCw } from "lucide-react";
+import { Plus, X, Loader2, RefreshCw, FileDown } from "lucide-react";
 
 interface InvoiceRow {
   id: number;
@@ -371,6 +371,22 @@ export default function InvoicesPage() {
                 key: "created_at",
                 header: "Dibuat",
                 render: (r) => formatDate(r.created_at),
+              },
+              {
+                key: "pdf",
+                header: "PDF",
+                render: (r) => (
+                  <a
+                    href={`/admin/invoices/${r.id}/print`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    title="Cetak / Simpan PDF"
+                    className="inline-flex items-center gap-1 rounded-lg px-2.5 py-1.5 text-xs font-medium text-mint hover:bg-mint/10 transition-colors"
+                  >
+                    <FileDown size={13} />
+                    PDF
+                  </a>
+                ),
               },
             ]}
           />
