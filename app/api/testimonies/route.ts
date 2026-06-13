@@ -20,15 +20,22 @@ export async function GET(req: NextRequest) {
 
 export async function POST(req: NextRequest) {
   const body = await req.json();
-  const { client_name, client_company, content, rating, image_url } = body;
+
+  const client_name = typeof body.client_name === "string" ? body.client_name.trim().slice(0, 100) : "";
+  const client_company = typeof body.client_company === "string" ? body.client_company.trim().slice(0, 100) : null;
+  const content = typeof body.content === "string" ? body.content.trim().slice(0, 1000) : "";
+  const rating = Number.isInteger(body.rating) && body.rating >= 1 && body.rating <= 5 ? body.rating : null;
 
   if (!client_name || !content) {
     return NextResponse.json({ error: "Name and content required" }, { status: 400 });
   }
 
+  const session = await getServerSession(authOptions);
+  const isAdmin = (session?.user as any)?.role === "admin";
+
   const result = await sql`
-    INSERT INTO testimonies (client_name, client_company, content, rating, image_url)
-    VALUES (${client_name}, ${client_company ?? null}, ${content}, ${rating ?? null}, ${image_url ?? null})
+    INSERT INTO testimonies (client_name, client_company, content, rating, approved)
+    VALUES (${client_name}, ${client_company ?? null}, ${content}, ${rating ?? null}, ${isAdmin})
     RETURNING *
   `;
 

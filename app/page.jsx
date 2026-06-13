@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import Clients from "@/components/Clients";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
+import TestimonialForm from "@/components/TestimonialForm";
 import Footer from "@/components/Footer";
 import { getSettings } from "@/lib/site-settings";
 import { getPortfolioItems, getApprovedTestimonies, getPublicClientNames } from "@/lib/public-data";
@@ -31,6 +32,7 @@ export default async function Home() {
         <Clients clientNames={clientNames} />
         <Pricing />
         <Contact settings={settings} />
+        <TestimonialForm />
       </main>
       <Footer />
     </>
