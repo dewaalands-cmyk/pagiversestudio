@@ -48,9 +48,11 @@ export default function AnalyticsPage() {
   const avgViews = data?.pageViews.length ? Math.round(totalViews / data.pageViews.length) : 0;
 
   function formatDateShort(dateStr: string) {
+    const d = new Date(dateStr);
+    if (isNaN(d.getTime())) return String(dateStr);
     return new Intl.DateTimeFormat("id-ID", {
       day: "numeric", month: "short", year: "2-digit"
-    }).format(new Date(dateStr + "T00:00:00"));
+    }).format(d);
   }
 
   return (
@@ -142,6 +144,7 @@ export default function AnalyticsPage() {
                     <XAxis
                       dataKey="date"
                       tick={{ fontSize: 11 }}
+                      tickFormatter={(value) => formatDateShort(value)}
                       interval={Math.floor(data.pageViews.length / 6) || 0}
                     />
                     <YAxis tick={{ fontSize: 12 }} />
@@ -164,10 +167,11 @@ export default function AnalyticsPage() {
                       stroke="#00D4A0"
                       strokeWidth={2.5}
                       dot={(props) => {
-                        const { cx, cy, payload } = props;
+                        const { cx, cy, payload, index } = props;
                         const isPeak = payload?.views === peakDay?.views;
                         return (
                           <circle
+                            key={`dot-${index}`}
                             cx={cx}
                             cy={cy}
                             r={isPeak ? 6 : 3}
