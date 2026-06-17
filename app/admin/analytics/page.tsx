@@ -15,7 +15,7 @@ import {
   Cell,
   Legend,
 } from "recharts";
-import { Loader2 } from "lucide-react";
+import { Loader2, TrendingUp, Calendar, BarChart3 } from "lucide-react";
 
 interface AnalyticsData {
   pageViews: { date: string; views: number }[];
@@ -40,6 +40,18 @@ export default function AnalyticsPage() {
   useEffect(() => { load(); }, [days]);
 
   const totalViews = data?.pageViews.reduce((sum, d) => sum + d.views, 0) ?? 0;
+
+  const peakDay = data?.pageViews.length
+    ? data.pageViews.reduce((max, d) => (d.views > max.views ? d : max), data.pageViews[0])
+    : null;
+
+  const avgViews = data?.pageViews.length ? Math.round(totalViews / data.pageViews.length) : 0;
+
+  function formatDateShort(dateStr: string) {
+    return new Intl.DateTimeFormat("id-ID", {
+      day: "numeric", month: "short", year: "2-digit"
+    }).format(new Date(dateStr + "T00:00:00"));
+  }
 
   return (
     <div className="flex flex-col flex-1 overflow-hidden">
@@ -71,27 +83,106 @@ export default function AnalyticsPage() {
           </div>
         ) : (
           <>
+            {/* Summary Cards */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="bg-gradient-to-br from-mint/10 to-teal-50 dark:from-mint/5 dark:to-teal-900/10 rounded-xl border border-mint/20 dark:border-mint/10 p-4 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-mint/20 rounded-lg">
+                    <BarChart3 size={18} className="text-mint" />
+                  </div>
+                  <span className="text-xs font-medium text-slate-muted dark:text-slate-label">TOTAL VIEWS</span>
+                </div>
+                <p className="text-2xl font-bold text-navy-deep dark:text-white">{totalViews}</p>
+                <p className="text-xs text-slate-muted dark:text-slate-label mt-1">{days} hari terakhir</p>
+              </div>
+
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/10 dark:to-orange-900/10 rounded-xl border border-yellow-200/50 dark:border-yellow-900/20 p-4 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-yellow-100 dark:bg-yellow-900/30 rounded-lg">
+                    <Calendar size={18} className="text-yellow-600 dark:text-yellow-400" />
+                  </div>
+                  <span className="text-xs font-medium text-slate-muted dark:text-slate-label">HARI PUNCAK</span>
+                </div>
+                {peakDay ? (
+                  <>
+                    <p className="text-2xl font-bold text-navy-deep dark:text-white">{peakDay.views}</p>
+                    <p className="text-xs text-slate-muted dark:text-slate-label mt-1">{formatDateShort(peakDay.date)}</p>
+                  </>
+                ) : (
+                  <p className="text-slate-muted text-sm">-</p>
+                )}
+              </div>
+
+              <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/10 dark:to-purple-900/10 rounded-xl border border-blue-200/50 dark:border-blue-900/20 p-4 shadow-sm">
+                <div className="flex items-center gap-3 mb-2">
+                  <div className="p-2 bg-blue-100 dark:bg-blue-900/30 rounded-lg">
+                    <TrendingUp size={18} className="text-blue-600 dark:text-blue-400" />
+                  </div>
+                  <span className="text-xs font-medium text-slate-muted dark:text-slate-label">RATA-RATA/HARI</span>
+                </div>
+                <p className="text-2xl font-bold text-navy-deep dark:text-white">{avgViews}</p>
+                <p className="text-xs text-slate-muted dark:text-slate-label mt-1">views per hari</p>
+              </div>
+            </div>
+
             {/* Page Views Chart */}
             <div className="bg-white dark:bg-navy-soft rounded-xl border border-cloud-200 dark:border-white/10 p-6 shadow-sm">
-              <h2 className="font-semibold text-navy-deep dark:text-white mb-4">Page Views</h2>
+              <div className="flex items-center justify-between mb-4">
+                <h2 className="font-semibold text-navy-deep dark:text-white">Page Views Trend</h2>
+                {peakDay && (
+                  <span className="text-xs bg-mint/20 text-mint px-2.5 py-1 rounded-full font-medium">
+                    Puncak: {formatDateShort(peakDay.date)}
+                  </span>
+                )}
+              </div>
               {data && data.pageViews.length > 0 ? (
-                <ResponsiveContainer width="100%" height={260}>
+                <ResponsiveContainer width="100%" height={300}>
                   <LineChart data={data.pageViews}>
                     <CartesianGrid strokeDasharray="3 3" stroke="rgba(0,0,0,0.1)" />
-                    <XAxis dataKey="date" tick={{ fontSize: 12 }} />
+                    <XAxis
+                      dataKey="date"
+                      tick={{ fontSize: 11 }}
+                      interval={Math.floor(data.pageViews.length / 6) || 0}
+                    />
                     <YAxis tick={{ fontSize: 12 }} />
-                    <Tooltip />
+                    <Tooltip
+                      contentStyle={{
+                        backgroundColor: "rgba(15, 34, 64, 0.95)",
+                        border: "1px solid rgba(0, 212, 160, 0.3)",
+                        borderRadius: "8px",
+                        color: "#fff",
+                      }}
+                      formatter={(value) => [
+                        `${value} views`,
+                        value === peakDay?.views ? "📍 Puncak" : "Views",
+                      ]}
+                      labelFormatter={(label) => formatDateShort(label)}
+                    />
                     <Line
                       type="monotone"
                       dataKey="views"
                       stroke="#00D4A0"
-                      strokeWidth={2}
-                      dot={false}
+                      strokeWidth={2.5}
+                      dot={(props) => {
+                        const { cx, cy, payload } = props;
+                        const isPeak = payload?.views === peakDay?.views;
+                        return (
+                          <circle
+                            cx={cx}
+                            cy={cy}
+                            r={isPeak ? 6 : 3}
+                            fill={isPeak ? "#00D4A0" : "transparent"}
+                            stroke={isPeak ? "#00D4A0" : "transparent"}
+                            strokeWidth={2}
+                          />
+                        );
+                      }}
+                      isAnimationActive={true}
                     />
                   </LineChart>
                 </ResponsiveContainer>
               ) : (
-                <p className="text-center text-slate-muted dark:text-slate-label py-12 text-sm">
+                <p className="text-center text-slate-muted dark:text-slate-label py-16 text-sm">
                   Belum ada data page views
                 </p>
               )}
