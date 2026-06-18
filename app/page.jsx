@@ -11,6 +11,9 @@ import Footer from "@/components/Footer";
 import { getSettings } from "@/lib/site-settings";
 import { getPortfolioItems, getApprovedTestimonies } from "@/lib/public-data";
 
+// Selalu ambil data terbaru dari DB (portfolio/testimoni) tanpa cache statis
+export const revalidate = 0;
+
 export default async function Home() {
   const [settings, portfolioItems, testimonies] = await Promise.all([
     getSettings(),
