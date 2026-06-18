@@ -4,20 +4,18 @@ import About from "@/components/About";
 import Services from "@/components/Services";
 import Portfolio from "@/components/Portfolio";
 import Testimonials from "@/components/Testimonials";
-import Clients from "@/components/Clients";
 import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import TestimonialForm from "@/components/TestimonialForm";
 import Footer from "@/components/Footer";
 import { getSettings } from "@/lib/site-settings";
-import { getPortfolioItems, getApprovedTestimonies, getPublicClientNames } from "@/lib/public-data";
+import { getPortfolioItems, getApprovedTestimonies } from "@/lib/public-data";
 
 export default async function Home() {
-  const [settings, portfolioItems, testimonies, clientNames] = await Promise.all([
+  const [settings, portfolioItems, testimonies] = await Promise.all([
     getSettings(),
     getPortfolioItems(),
     getApprovedTestimonies(),
-    getPublicClientNames(),
   ]);
 
   return (
@@ -29,7 +27,6 @@ export default async function Home() {
         <Services settings={settings} />
         <Portfolio settings={settings} dbItems={portfolioItems} />
         <Testimonials dbItems={testimonies} />
-        <Clients clientNames={clientNames} />
         <Pricing />
         <Contact settings={settings} />
         <TestimonialForm />
