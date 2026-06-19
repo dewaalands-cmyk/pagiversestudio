@@ -44,12 +44,17 @@ export async function GET(req: NextRequest) {
 
   const [pageViews, topPages, eventCounts] = await Promise.all([
     sql`
-      SELECT DATE(timestamp) as date, COUNT(*)::int as views
-      FROM analytics_events
-      WHERE event_type = 'page_view'
-        AND timestamp >= NOW() - (${days} || ' days')::INTERVAL
-      GROUP BY DATE(timestamp)
-      ORDER BY date ASC
+      SELECT to_char(d.day, 'YYYY-MM-DD') as date, COALESCE(COUNT(a.id), 0)::int as views
+      FROM generate_series(
+        (CURRENT_DATE - ((${days} - 1) || ' days')::INTERVAL),
+        CURRENT_DATE,
+        INTERVAL '1 day'
+      ) AS d(day)
+      LEFT JOIN analytics_events a
+        ON DATE(a.timestamp) = d.day::date
+        AND a.event_type = 'page_view'
+      GROUP BY d.day
+      ORDER BY d.day ASC
     `,
     sql`
       SELECT page_path, COUNT(*)::int as views
