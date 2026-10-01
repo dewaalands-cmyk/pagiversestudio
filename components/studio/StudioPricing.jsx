@@ -7,10 +7,10 @@ import Reveal from "@/components/Reveal";
 
 const PACKAGES = [
   {
-    name: "STARTER", price: { id: "Rp 1 - 2 jt", en: "IDR 1-2M" },
-    summary: { id: "Landing page dan website sederhana", en: "Landing page and simple website" },
-    detail: { id: "1 halaman, 5 revisi, 1 bulan support", en: "1 page, 5 revisions, 1 month support" },
-    features: { id: ["1 halaman custom", "Responsive design", "SEO dasar", "Contact form", "Domain gratis 1 tahun"], en: ["1 custom page", "Responsive design", "Basic SEO", "Contact form", "Free domain for 1 year"] },
+    name: "STARTER", price: { id: "Rp1.369.500", en: "IDR 1,369,500" }, startingAt: true,
+    summary: { id: "Website template profesional", en: "Professional template website" },
+    detail: { id: "1 halaman, 5 revisi, dan 1 bulan dukungan setelah tayang", en: "1 page, 5 revisions, and 1 month of post-launch support" },
+    features: { id: ["Template disesuaikan dengan brand", "Tampilan responsif", "SEO dasar", "Form kontak atau WhatsApp", "Domain gratis 1 tahun"], en: ["Template tailored to your brand", "Responsive design", "Basic SEO", "Contact or WhatsApp form", "Free domain for 1 year"] },
   },
   {
     name: "PROFESSIONAL", price: { id: "Rp 2 - 3 jt", en: "IDR 2-3M" },
@@ -53,12 +53,12 @@ function savePackage(name) {
 
 export default function StudioPricing() {
   const { lang } = useLang();
-  const [active, setActive] = useState("PROFESSIONAL");
+  const [active, setActive] = useState("STARTER");
   const selected = PACKAGES.find((item) => item.name === active) || PACKAGES[0];
 
   const copy = lang === "id"
-    ? { kicker: "Pilihan investasi", title: "Mulai dari paket yang paling masuk akal.", body: "Harga transparan sebagai titik awal. Kebutuhan unik tetap bisa disesuaikan setelah konsultasi.", popular: "Paling diminati", choose: "Pilih paket ini", includes: "Yang kamu dapatkan" }
-    : { kicker: "Investment options", title: "Start with the package that makes sense.", body: "Transparent pricing as a starting point. Unique needs can still be tailored after consultation.", popular: "Most popular", choose: "Choose this package", includes: "What is included" };
+    ? { kicker: "Pilihan investasi", title: "Mulai dari paket yang paling masuk akal.", body: "Harga transparan sebagai titik awal. Kebutuhan unik tetap bisa disesuaikan setelah konsultasi.", popular: "Paling diminati", startingAt: "Mulai dari", choose: "Pilih paket ini", includes: "Yang kamu dapatkan" }
+    : { kicker: "Investment options", title: "Start with the package that makes sense.", body: "Transparent pricing as a starting point. Unique needs can still be tailored after consultation.", popular: "Most popular", startingAt: "Starting at", choose: "Choose this package", includes: "What is included" };
 
   return (
     <section id="harga" className="border-y studio-rule bg-white/55">
@@ -93,7 +93,10 @@ export default function StudioPricing() {
                 </div>
                 <p className="mt-3 text-sm leading-6 text-navy-deep/55">{selected.summary[lang]}</p>
               </div>
-              <p className="text-3xl font-extrabold tracking-[-.04em] text-navy-deep sm:text-4xl">{selected.price[lang]}</p>
+              <div className="text-right">
+                {selected.startingAt && <p className="mb-1 text-[10px] font-extrabold uppercase tracking-[.14em] text-teal-700">{copy.startingAt}</p>}
+                <p className="text-3xl font-extrabold tracking-[-.04em] text-navy-deep sm:text-4xl">{selected.price[lang]}</p>
+              </div>
             </div>
 
             <div className="flex-1 pt-8">

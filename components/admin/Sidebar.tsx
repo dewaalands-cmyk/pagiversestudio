@@ -14,6 +14,7 @@ import {
   Users,
   X,
   FileText,
+  PanelsTopLeft,
 } from "lucide-react";
 import Logo from "@/components/Logo";
 
@@ -21,6 +22,7 @@ const NAV = [
   { href: "/admin", label: "Overview", icon: LayoutDashboard, exact: true },
   { href: "/admin/portfolio", label: "Portfolio", icon: FolderOpen },
   { href: "/admin/inquiries", label: "Inquiries", icon: MessageSquare },
+  { href: "/admin/template-projects", label: "Template Projects", icon: PanelsTopLeft },
   { href: "/admin/testimonies", label: "Testimoni", icon: Star },
   { href: "/admin/clients", label: "Klien", icon: Users },
   { href: "/admin/invoices", label: "Invoice", icon: FileText },

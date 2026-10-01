@@ -2,6 +2,7 @@ export type UserRole = "admin" | "client";
 export type InquiryStatus = "new" | "contacted" | "proposal_sent" | "closed";
 export type ProjectStatus = "planning" | "in_progress" | "review" | "completed" | "on_hold";
 export type InvoiceStatus = "draft" | "sent" | "paid" | "overdue" | "cancelled";
+export type TemplateProjectStatus = "draft" | "submitted" | "processing" | "revision" | "completed";
 
 export interface User {
   id: number;
@@ -122,4 +123,20 @@ export interface DashboardStats {
 export interface PageViewData {
   date: string;
   views: number;
+}
+
+export interface TemplateProject {
+  id: number;
+  project_code: string;
+  template_id: string;
+  template_name: string;
+  customer_name: string;
+  business_name: string;
+  whatsapp: string;
+  email: string;
+  notes?: string;
+  configuration: Record<string, string>;
+  status: TemplateProjectStatus;
+  created_at: string;
+  updated_at: string;
 }

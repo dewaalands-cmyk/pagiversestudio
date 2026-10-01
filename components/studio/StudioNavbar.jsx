@@ -10,14 +10,14 @@ const NAV = {
     ["#tentang", "Tentang"],
     ["#layanan", "Layanan"],
     ["#portfolio", "Portfolio"],
-    ["#harga", "Harga"],
+    ["/templates", "Template"],
     ["#kontak", "Kontak"],
   ],
   en: [
     ["#tentang", "About"],
     ["#layanan", "Services"],
     ["#portfolio", "Portfolio"],
-    ["#harga", "Pricing"],
+    ["/templates", "Templates"],
     ["#kontak", "Contact"],
   ],
 };

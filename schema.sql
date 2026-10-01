@@ -125,6 +125,24 @@ CREATE TABLE settings (
   updated_at TIMESTAMP DEFAULT NOW()
 );
 
+-- Template marketplace projects submitted from Pagiverse Studio
+CREATE TABLE template_projects (
+  id SERIAL PRIMARY KEY,
+  project_code VARCHAR(24) UNIQUE NOT NULL,
+  template_id VARCHAR(120) NOT NULL,
+  template_name VARCHAR(255) NOT NULL,
+  customer_name VARCHAR(255) NOT NULL,
+  business_name VARCHAR(255) NOT NULL,
+  whatsapp VARCHAR(30) NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  notes TEXT,
+  configuration JSONB NOT NULL,
+  status VARCHAR(30) DEFAULT 'submitted'
+    CHECK (status IN ('draft', 'submitted', 'processing', 'revision', 'completed')),
+  created_at TIMESTAMP DEFAULT NOW(),
+  updated_at TIMESTAMP DEFAULT NOW()
+);
+
 -- Default settings
 INSERT INTO settings (key, value) VALUES
   ('hero_title', 'Website Profesional untuk Bisnis Lokal'),
@@ -142,3 +160,5 @@ CREATE INDEX idx_analytics_page_path ON analytics_events(page_path);
 CREATE INDEX idx_inquiries_status ON inquiries(status);
 CREATE INDEX idx_projects_client ON projects(client_id);
 CREATE INDEX idx_messages_client ON messages(client_id);
+CREATE INDEX idx_template_projects_status ON template_projects(status);
+CREATE INDEX idx_template_projects_created ON template_projects(created_at DESC);

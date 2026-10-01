@@ -10,8 +10,8 @@ export default function StudioFooter() {
   const year = new Date().getFullYear();
   const whatsappUrl = getLocalizedWhatsAppUrl(lang);
   const t = lang === "id"
-    ? { tagline: "Website dan aplikasi yang membuat bisnis tampil matang dan dipercaya.", nav: ["Tentang", "Layanan", "Portfolio", "Harga"], consult: "Konsultasi proyek", rights: "Semua hak cipta dilindungi." }
-    : { tagline: "Websites and apps that help businesses look established and trusted.", nav: ["About", "Services", "Portfolio", "Pricing"], consult: "Discuss a project", rights: "All rights reserved." };
+    ? { tagline: "Website dan aplikasi yang membuat bisnis tampil matang dan dipercaya.", nav: ["Tentang", "Layanan", "Portfolio", "Template"], consult: "Konsultasi proyek", rights: "Semua hak cipta dilindungi." }
+    : { tagline: "Websites and apps that help businesses look established and trusted.", nav: ["About", "Services", "Portfolio", "Templates"], consult: "Discuss a project", rights: "All rights reserved." };
 
   return (
     <footer className="bg-[#f6f5f1]">
@@ -21,7 +21,7 @@ export default function StudioFooter() {
           <p className="mt-6 max-w-[34ch] text-sm leading-7 text-navy-deep/52">{t.tagline}</p>
         </div>
         <nav className="grid content-start gap-3 text-sm font-semibold">
-          {["#tentang", "#layanan", "#portfolio", "#harga"].map((href, index) => <a key={href} href={href} className="w-fit text-navy-deep/62 transition hover:text-teal-700">{t.nav[index]}</a>)}
+          {["#tentang", "#layanan", "#portfolio", "/templates"].map((href, index) => <a key={href} href={href} className="w-fit text-navy-deep/62 transition hover:text-teal-700">{t.nav[index]}</a>)}
         </nav>
         <div className="flex flex-wrap items-start gap-3 md:justify-end">
           <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 rounded-full bg-navy-deep px-5 py-3 text-sm font-bold text-white transition hover:-translate-y-0.5">{t.consult}<ArrowUpRight className="h-4 w-4" /></a>
