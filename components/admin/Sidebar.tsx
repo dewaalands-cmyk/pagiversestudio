@@ -48,7 +48,7 @@ export default function Sidebar({ onClose }: SidebarProps) {
       <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
         <Logo />
         {onClose && (
-          <button onClick={onClose} className="text-slate-label hover:text-white lg:hidden">
+          <button type="button" onClick={onClose} aria-label="Tutup menu admin" className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-slate-label transition hover:bg-white/5 hover:text-white lg:hidden">
             <X size={20} />
           </button>
         )}

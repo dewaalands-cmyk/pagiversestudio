@@ -3,6 +3,7 @@
 import { useSession } from "next-auth/react";
 import { Menu, Bell } from "lucide-react";
 import ThemeToggle from "@/components/ThemeToggle";
+import { useAdminSidebar } from "@/components/admin/AdminShellContext";
 
 interface AdminHeaderProps {
   title: string;
@@ -12,13 +13,16 @@ interface AdminHeaderProps {
 export default function AdminHeader({ title, onMenuClick }: AdminHeaderProps) {
   const { data: session } = useSession();
   const user = session?.user;
+  const openSidebar = useAdminSidebar();
 
   return (
     <header className="h-16 flex items-center justify-between px-6 bg-white dark:bg-navy-soft border-b border-cloud-200 dark:border-white/10 sticky top-0 z-10">
       <div className="flex items-center gap-4">
         <button
-          onClick={onMenuClick}
-          className="lg:hidden text-slate-muted hover:text-navy-deep dark:hover:text-white transition-colors"
+          type="button"
+          onClick={onMenuClick ?? openSidebar ?? undefined}
+          aria-label="Buka menu admin"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-xl text-slate-muted transition-colors hover:bg-cloud-100 hover:text-navy-deep dark:hover:bg-white/5 dark:hover:text-white lg:hidden"
         >
           <Menu size={22} />
         </button>

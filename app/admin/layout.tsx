@@ -3,12 +3,14 @@
 import { useState } from "react";
 import { SessionProvider } from "next-auth/react";
 import Sidebar from "@/components/admin/Sidebar";
+import { AdminSidebarProvider } from "@/components/admin/AdminShellContext";
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
     <SessionProvider>
+      <AdminSidebarProvider onOpen={() => setSidebarOpen(true)}>
       <div className="flex h-screen bg-cloud-50 dark:bg-navy-deep overflow-hidden">
         {/* Desktop Sidebar */}
         <div className="hidden lg:flex">
@@ -18,11 +20,13 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         {/* Mobile Sidebar Overlay */}
         {sidebarOpen && (
           <div className="fixed inset-0 z-50 lg:hidden">
-            <div
+            <button
+              type="button"
+              aria-label="Tutup menu admin"
               className="absolute inset-0 bg-black/50"
               onClick={() => setSidebarOpen(false)}
             />
-            <div className="relative">
+            <div className="relative h-full w-64 shadow-2xl">
               <Sidebar onClose={() => setSidebarOpen(false)} />
             </div>
           </div>
@@ -33,6 +37,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           {children}
         </div>
       </div>
+      </AdminSidebarProvider>
     </SessionProvider>
   );
 }
