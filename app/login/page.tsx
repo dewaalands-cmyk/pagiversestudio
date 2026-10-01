@@ -3,6 +3,7 @@
 import { Suspense, useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter, useSearchParams } from "next/navigation";
+import Link from "next/link";
 import { Eye, EyeOff, Loader2 } from "lucide-react";
 
 function LoginForm() {
@@ -10,7 +11,6 @@ function LoginForm() {
   const params = useSearchParams();
   const errorParam = params.get("error");
 
-  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPass, setShowPass] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,6 @@ function LoginForm() {
     setError("");
 
     const res = await signIn("credentials", {
-      email,
       password,
       redirect: false,
     });
@@ -32,7 +31,7 @@ function LoginForm() {
     setLoading(false);
 
     if (res?.error) {
-      setError("Email atau password salah. Periksa kembali.");
+      setError("Password salah. Periksa kembali.");
       return;
     }
 
@@ -51,21 +50,6 @@ function LoginForm() {
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
           <label className="block text-sm font-medium text-cloud-200 mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            autoComplete="email"
-            placeholder="admin@pagiversestudio.com"
-            className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-label focus:outline-none focus:ring-2 focus:ring-mint/60 focus:border-mint transition-all"
-          />
-        </div>
-
-        <div>
-          <label className="block text-sm font-medium text-cloud-200 mb-2">
             Password
           </label>
           <div className="relative">
@@ -74,6 +58,7 @@ function LoginForm() {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
+              autoFocus
               autoComplete="current-password"
               placeholder="••••••••"
               className="w-full px-4 py-3 pr-12 rounded-xl bg-white/5 border border-white/10 text-white placeholder-slate-label focus:outline-none focus:ring-2 focus:ring-mint/60 focus:border-mint transition-all"
@@ -104,6 +89,13 @@ function LoginForm() {
           )}
         </button>
       </form>
+
+      <p className="mt-5 text-center text-xs text-slate-label">
+        Kamu klien Pagiverse?{" "}
+        <Link href="/client-login" className="font-semibold text-mint hover:underline">
+          Masuk ke portal klien
+        </Link>
+      </p>
     </>
   );
 }
@@ -130,7 +122,7 @@ export default function LoginPage() {
         <div className="bg-navy-soft/80 backdrop-blur border border-white/10 rounded-2xl p-8 shadow-2xl">
           <h1 className="text-xl font-bold text-white mb-1">Selamat datang</h1>
           <p className="text-slate-label text-sm mb-6">
-            Masuk untuk mengelola website & klien
+            Masukkan password admin untuk melanjutkan
           </p>
 
           <Suspense

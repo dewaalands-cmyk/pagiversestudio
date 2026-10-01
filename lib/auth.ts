@@ -29,9 +29,24 @@ export const authOptions: NextAuthOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null;
+        if (!credentials?.password) return null;
 
-        // Env-based admin login — works without database
+        // Password-only admin login. The admin email stays internal and is only
+        // used as session metadata, so it never needs to be entered on the form.
+        if (!credentials.email && ADMIN_PASSWORD) {
+          if (safeCompare(credentials.password, ADMIN_PASSWORD)) {
+            return {
+              id: "0",
+              name: "Admin Pagiverse",
+              email: ADMIN_EMAIL || "admin@pagiversestudio.com",
+              role: "admin",
+            };
+          }
+          return null;
+        }
+
+        // Email-based admin login is retained for compatibility with existing
+        // integrations and the separate client login page.
         if (ADMIN_EMAIL && ADMIN_PASSWORD && credentials.email === ADMIN_EMAIL) {
           if (safeCompare(credentials.password, ADMIN_PASSWORD)) {
             return {
@@ -43,6 +58,8 @@ export const authOptions: NextAuthOptions = {
           }
           return null;
         }
+
+        if (!credentials.email) return null;
 
         // Database-based auth untuk klien lain
         try {

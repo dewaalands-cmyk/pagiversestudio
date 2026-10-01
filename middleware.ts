@@ -14,7 +14,7 @@ export default withAuth(
     // Client portal: allow client and admin
     if (path.startsWith("/client-portal")) {
       if (!token || (token.role !== "client" && token.role !== "admin")) {
-        return NextResponse.redirect(new URL("/login?error=unauthorized", req.url));
+        return NextResponse.redirect(new URL("/client-login?error=unauthorized", req.url));
       }
     }
 
