@@ -1,22 +1,22 @@
 // Kerangka utama seluruh halaman.
-// Di sini kita pasang: font Sora, info SEO, dan pengatur tema gelap/terang.
+// Di sini kita pasang font, info SEO, analytics, dan pengatur bahasa.
 
 import "./globals.css";
-import { Sora } from "next/font/google";
+import { Manrope } from "next/font/google";
 import ThemeProvider from "@/components/ThemeProvider";
 import { LanguageProvider } from "@/components/LanguageProvider";
 import AnalyticsProvider from "@/components/AnalyticsProvider";
 
-// Font Sora dimuat otomatis & dioptimasi oleh Next.js (anti layout shift).
-const sora = Sora({
+// Font dimuat otomatis dan dioptimasi oleh Next.js.
+const manrope = Manrope({
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 // Info SEO yang muncul di tab browser & hasil pencarian Google.
 export const metadata = {
-  title: "Pagiverse Studio — Jasa Pembuatan Website Profesional di Garut",
+  title: "Pagiverse Studio | Jasa Pembuatan Website Profesional di Garut",
   description:
     "Pagiverse Studio membantu UMKM dan brand lokal punya website yang cepat, rapi, dan mudah ditemukan di Google. Konsultasi gratis via WhatsApp.",
   keywords: [
@@ -27,7 +27,7 @@ export const metadata = {
     "Pagiverse Studio",
   ],
   openGraph: {
-    title: "Pagiverse Studio — Jasa Pembuatan Website Profesional",
+    title: "Pagiverse Studio | Jasa Pembuatan Website Profesional",
     description:
       "Website cepat, rapi, dan siap ditemukan di Google untuk bisnismu.",
     type: "website",
@@ -37,10 +37,9 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    // suppressHydrationWarning diperlukan agar toggle tema tidak memunculkan warning.
     <html lang="id" suppressHydrationWarning>
       <body
-        className={`${sora.className} bg-cloud-50 text-navy-deep antialiased dark:bg-navy-deep dark:text-cloud-100`}
+        className={`${manrope.className} bg-[#f6f5f1] text-navy-deep antialiased`}
       >
         <ThemeProvider>
           <AnalyticsProvider>

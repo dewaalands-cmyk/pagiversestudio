@@ -24,8 +24,8 @@ export default function Logo({ showText = true, className = "" }) {
       </svg>
 
       {showText && (
-        <span className="leading-none">
-          <span className="block text-base font-bold tracking-[0.3em] text-navy-deep dark:text-white">
+        <span className="hidden leading-none sm:block">
+          <span className="block text-base font-bold tracking-[0.3em] text-navy-deep">
             PAGIVERSE
           </span>
           <span className="mt-1 block text-[9px] font-light tracking-[0.6em] text-mint">

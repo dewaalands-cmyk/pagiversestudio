@@ -3,25 +3,103 @@
 @tailwind utilities;
 
 @layer base {
-  /* Scroll halus saat klik menu, dengan ruang agar tidak ketutup navbar */
+  :root {
+    color-scheme: light;
+  }
+
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
+    scroll-padding-top: 5.5rem;
+  }
+
+  body {
+    min-width: 320px;
+    overflow-x: hidden;
+    background: #f6f5f1;
+  }
+
+  ::selection {
+    background: #00d4a0;
+    color: #0c1b33;
+  }
+
+  :focus-visible {
+    outline: 3px solid rgba(0, 212, 160, 0.72);
+    outline-offset: 3px;
   }
 }
 
 @layer utilities {
-  /* Motif kotak-kotak halus khas Pagiverse — dipakai sebagai aksen latar.
-     Otomatis menyesuaikan warna garis di mode terang & gelap. */
-  .grid-pattern {
-    background-image:
-      linear-gradient(to right, rgba(12, 27, 51, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(12, 27, 51, 0.05) 1px, transparent 1px);
-    background-size: 40px 40px;
+  .text-balance {
+    text-wrap: balance;
   }
-  .dark .grid-pattern {
-    background-image:
-      linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+
+  .studio-shell {
+    width: min(100% - 2rem, 80rem);
+    margin-inline: auto;
+  }
+
+  .studio-kicker {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    color: #087d64;
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  }
+
+  .studio-kicker::before {
+    content: "";
+    width: 1.8rem;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .studio-rule {
+    border-color: rgba(12, 27, 51, 0.14);
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 700ms cubic-bezier(0.16, 1, 0.3, 1),
+      transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .hide-scrollbar {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+@media (min-width: 640px) {
+  .studio-shell {
+    width: min(100% - 3rem, 80rem);
   }
 }
