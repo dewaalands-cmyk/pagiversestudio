@@ -4,9 +4,9 @@ import Link from "next/link";
 import { ArrowRight, Check, Monitor, Smartphone, Tablet } from "lucide-react";
 import { useState } from "react";
 import { useLang } from "@/components/LanguageProvider";
-import { formatTemplatePrice } from "@/lib/template-library";
+import { formatTemplatePrice, getTemplateCategoryLabel, getTemplateDescription } from "@/lib/template-library";
 import MarketplaceHeader from "@/components/templates/MarketplaceHeader";
-import TemplateRenderer from "@/components/templates/TemplateRenderer";
+import TemplateRenderer from "@/components/templates/NativeTemplateRenderer";
 
 const DEVICES = {
   desktop: { width: "100%", Icon: Monitor },
@@ -17,6 +17,7 @@ const DEVICES = {
 export default function TemplatePreviewClient({ template }) {
   const { lang } = useLang();
   const [device, setDevice] = useState("desktop");
+  const hasPrice = Number.isFinite(template.price);
   const t = lang === "id" ? {
     back: "Semua template", preview: "Preview langsung", choose: "Pakai template ini", starting: "Mulai dari",
     note: "Harga termasuk penyesuaian konten dan brand", devices: { desktop: "Desktop", tablet: "Tablet", mobile: "Mobile" },
@@ -32,9 +33,9 @@ export default function TemplatePreviewClient({ template }) {
       <MarketplaceHeader backHref="/templates" backLabel={t.back} />
       <section className="border-b border-navy-deep/12 bg-[#f6f5f1]">
         <div className="studio-shell grid gap-7 py-8 lg:grid-cols-[1fr_auto] lg:items-center">
-          <div><p className="text-[10px] font-extrabold uppercase tracking-[.16em] text-teal-700">{template.categoryLabel[lang]} · {t.preview}</p><h1 className="mt-2 text-3xl font-extrabold tracking-[-.045em] sm:text-4xl">{template.name}</h1><p className="mt-3 max-w-[62ch] text-sm leading-6 text-navy-deep/50">{template.description[lang]}</p></div>
+          <div><p className="text-[10px] font-extrabold uppercase tracking-[.16em] text-teal-700">{getTemplateCategoryLabel(template, lang)} · {t.preview}</p><h1 className="mt-2 text-3xl font-extrabold tracking-[-.045em] sm:text-4xl">{template.name}</h1><p className="mt-3 max-w-[62ch] text-sm leading-6 text-navy-deep/50">{getTemplateDescription(template, lang)}</p></div>
           <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center lg:justify-end">
-            <div className="mr-2"><p className="text-[10px] font-bold uppercase tracking-wider text-navy-deep/35">{t.starting}</p><p className="text-lg font-extrabold">{formatTemplatePrice(template.price, lang)}</p><p className="text-[10px] text-navy-deep/40">{t.note}</p></div>
+            {hasPrice && <div className="mr-2"><p className="text-[10px] font-bold uppercase tracking-wider text-navy-deep/35">{t.starting}</p><p className="text-lg font-extrabold">{formatTemplatePrice(template.price, lang)}</p><p className="text-[10px] text-navy-deep/40">{t.note}</p></div>}
             <Link href={`/studio/${template.id}`} className="inline-flex items-center gap-2 rounded-full bg-navy-deep px-5 py-3 text-sm font-extrabold text-white">{t.choose}<ArrowRight className="h-4 w-4" /></Link>
           </div>
         </div>
@@ -56,7 +57,7 @@ export default function TemplatePreviewClient({ template }) {
       </section>
 
       <div className="sticky bottom-4 z-40 mx-auto mb-6 flex w-[min(92%,620px)] items-center justify-between gap-4 rounded-full border border-white/20 bg-navy-deep/96 px-5 py-3 text-white shadow-2xl backdrop-blur">
-        <div className="min-w-0"><p className="truncate text-xs font-extrabold">{template.name}</p><p className="text-[10px] text-white/48">{formatTemplatePrice(template.price, lang)}</p></div>
+        <div className="min-w-0"><p className="truncate text-xs font-extrabold">{template.name}</p>{hasPrice && <p className="text-[10px] text-white/48">{formatTemplatePrice(template.price, lang)}</p>}</div>
         <Link href={`/studio/${template.id}`} className="inline-flex shrink-0 items-center gap-2 rounded-full bg-mint px-4 py-2.5 text-xs font-extrabold text-navy-deep">{t.choose}<ArrowRight className="h-3.5 w-3.5" /></Link>
       </div>
     </main>

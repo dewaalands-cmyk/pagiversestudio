@@ -1,0 +1,1346 @@
+{
+  "pagiverseStandard": 1,
+  "templates": [
+    {
+      "pagiverseStandard": 1,
+      "id": "casa-braci-heritage-001",
+      "name": "Casa Braci Heritage",
+      "category": "restaurant",
+      "description": "Bilingual dark editorial template for a premium Italian restaurant and steakhouse.",
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html"
+        },
+        {
+          "id": "menu",
+          "path": "/menu",
+          "entry": "menu.html"
+        },
+        {
+          "id": "story",
+          "path": "/story",
+          "entry": "story.html"
+        },
+        {
+          "id": "gallery",
+          "path": "/gallery",
+          "entry": "gallery.html"
+        },
+        {
+          "id": "visit",
+          "path": "/visit",
+          "entry": "visit.html"
+        }
+      ],
+      "dependencies": [],
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "dark",
+        "tokens": {
+          "primary": {
+            "editable": true,
+            "default": "#bf6d3a"
+          },
+          "secondary": {
+            "editable": false,
+            "default": "#26362e"
+          },
+          "accent": {
+            "editable": true,
+            "default": "#d28a58"
+          },
+          "background": {
+            "editable": false,
+            "default": "#0d100e"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#151a16"
+          },
+          "text": {
+            "editable": false,
+            "default": "#f1eee7"
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "home",
+            "labelFields": {
+              "id": "navigation.home.label.id",
+              "en": "navigation.home.label.en"
+            },
+            "target": "index.html",
+            "hideable": false
+          },
+          {
+            "id": "menu",
+            "labelFields": {
+              "id": "navigation.menu.label.id",
+              "en": "navigation.menu.label.en"
+            },
+            "target": "menu.html",
+            "hideable": false
+          },
+          {
+            "id": "story",
+            "labelFields": {
+              "id": "navigation.story.label.id",
+              "en": "navigation.story.label.en"
+            },
+            "target": "story.html",
+            "hideable": false
+          },
+          {
+            "id": "gallery",
+            "labelFields": {
+              "id": "navigation.gallery.label.id",
+              "en": "navigation.gallery.label.en"
+            },
+            "target": "gallery.html",
+            "hideable": true,
+            "section": "gallery"
+          },
+          {
+            "id": "visit",
+            "labelFields": {
+              "id": "navigation.visit.label.id",
+              "en": "navigation.visit.label.en"
+            },
+            "target": "visit.html",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama restoran",
+          "required": true,
+          "maxLength": 60,
+          "default": "Casa Braci"
+        },
+        "business.tagline.id": {
+          "type": "text",
+          "label": "Tagline Indonesia",
+          "maxLength": 80,
+          "default": "Italian steakhouse di Bandung"
+        },
+        "business.tagline.en": {
+          "type": "text",
+          "label": "English tagline",
+          "maxLength": 80,
+          "default": "Italian steakhouse in Bandung"
+        },
+        "business.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi restoran Indonesia",
+          "maxLength": 220,
+          "default": "Masakan Italia, prime cuts, dan api hidup di sebuah rumah heritage Bandung."
+        },
+        "business.description.en": {
+          "type": "textarea",
+          "label": "English restaurant description",
+          "maxLength": 220,
+          "default": "Italian cooking, prime cuts, and live fire inside a Bandung heritage house."
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "WhatsApp",
+          "required": true,
+          "default": "6281234567890"
+        },
+        "contact.reservationLabel.id": {
+          "type": "text",
+          "label": "Tombol reservasi Indonesia",
+          "maxLength": 24,
+          "default": "Reservasi via WhatsApp"
+        },
+        "contact.reservationLabel.en": {
+          "type": "text",
+          "label": "English reservation button",
+          "maxLength": 24,
+          "default": "Reserve via WhatsApp"
+        },
+        "contact.whatsappMessage.id": {
+          "type": "textarea",
+          "label": "Pesan WhatsApp Indonesia",
+          "maxLength": 180,
+          "default": "Halo Casa Braci, saya ingin melakukan reservasi meja."
+        },
+        "contact.whatsappMessage.en": {
+          "type": "textarea",
+          "label": "English WhatsApp message",
+          "maxLength": 180,
+          "default": "Hello Casa Braci, I would like to reserve a table."
+        },
+        "location.address": {
+          "type": "text",
+          "label": "Alamat",
+          "maxLength": 140,
+          "default": "Jl. Citarum No. 18, Bandung, Jawa Barat"
+        },
+        "location.mapsUrl": {
+          "type": "url",
+          "label": "Tautan peta",
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "https://maps.google.com/?q=Jl.+Citarum+No.+18+Bandung"
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul SEO",
+          "maxLength": 70,
+          "default": "Casa Braci | Italian Steakhouse Bandung"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO",
+          "maxLength": 160,
+          "default": "Casa Braci, Italian fine dining dan premium steakhouse di sebuah rumah heritage Bandung."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar sosial",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "aspectRatio": "1.91:1",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/hero-interior.jpg",
+            "altId": "Ruang makan Casa Braci",
+            "altEn": "Casa Braci dining room",
+            "focalPoint": {
+              "x": 55,
+              "y": 48
+            }
+          }
+        },
+        "navigation.home.label.id": {
+          "type": "text",
+          "label": "Navigasi Beranda",
+          "maxLength": 18,
+          "default": "Beranda"
+        },
+        "navigation.home.label.en": {
+          "type": "text",
+          "label": "Navigation Home",
+          "maxLength": 18,
+          "default": "Home"
+        },
+        "navigation.menu.label.id": {
+          "type": "text",
+          "label": "Navigasi Menu",
+          "maxLength": 18,
+          "default": "Menu"
+        },
+        "navigation.menu.label.en": {
+          "type": "text",
+          "label": "Navigation Menu",
+          "maxLength": 18,
+          "default": "Menu"
+        },
+        "navigation.story.label.id": {
+          "type": "text",
+          "label": "Navigasi Kisah",
+          "maxLength": 18,
+          "default": "Kisah Kami"
+        },
+        "navigation.story.label.en": {
+          "type": "text",
+          "label": "Navigation Story",
+          "maxLength": 18,
+          "default": "Our Story"
+        },
+        "navigation.gallery.label.id": {
+          "type": "text",
+          "label": "Navigasi Galeri",
+          "maxLength": 18,
+          "default": "Galeri"
+        },
+        "navigation.gallery.label.en": {
+          "type": "text",
+          "label": "Navigation Gallery",
+          "maxLength": 18,
+          "default": "Gallery"
+        },
+        "navigation.visit.label.id": {
+          "type": "text",
+          "label": "Navigasi Kunjungi",
+          "maxLength": 18,
+          "default": "Kunjungi"
+        },
+        "navigation.visit.label.en": {
+          "type": "text",
+          "label": "Navigation Visit",
+          "maxLength": 18,
+          "default": "Visit"
+        },
+        "sections.hero.eyebrow.id": {
+          "type": "text",
+          "label": "Hero eyebrow Indonesia",
+          "maxLength": 60,
+          "default": "Italian steakhouse di Bandung"
+        },
+        "sections.hero.eyebrow.en": {
+          "type": "text",
+          "label": "Hero eyebrow English",
+          "maxLength": 60,
+          "default": "Italian steakhouse in Bandung"
+        },
+        "sections.hero.heading.id": {
+          "type": "text",
+          "label": "Judul hero Indonesia",
+          "required": true,
+          "maxLength": 54,
+          "default": "Api Italia. Jiwa Bandung."
+        },
+        "sections.hero.heading.en": {
+          "type": "text",
+          "label": "English hero heading",
+          "required": true,
+          "maxLength": 54,
+          "default": "Italian fire. Bandung soul."
+        },
+        "sections.hero.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi hero Indonesia",
+          "maxLength": 150,
+          "default": "Prime cuts, pasta buatan tangan, dan malam yang dirancang untuk dikenang."
+        },
+        "sections.hero.description.en": {
+          "type": "textarea",
+          "label": "English hero description",
+          "maxLength": 150,
+          "default": "Prime cuts, handmade pasta, and evenings designed to be remembered."
+        },
+        "sections.hero.secondaryCta.id": {
+          "type": "text",
+          "label": "Tombol hero Indonesia",
+          "maxLength": 24,
+          "default": "Lihat menu"
+        },
+        "sections.hero.secondaryCta.en": {
+          "type": "text",
+          "label": "English hero button",
+          "maxLength": 24,
+          "default": "View the menu"
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "Foto hero",
+          "required": true,
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/hero-interior.jpg",
+            "altId": "Ruang makan Casa Braci pada malam hari",
+            "altEn": "Casa Braci dining room at night",
+            "focalPoint": {
+              "x": 58,
+              "y": 48
+            }
+          }
+        },
+        "sections.home.signatureItems": {
+          "type": "array",
+          "label": "Karakter restoran",
+          "minItems": 2,
+          "maxItems": 4,
+          "default": [
+            {
+              "titleId": "Api hidup",
+              "titleEn": "Live fire",
+              "bodyId": "Prime cuts dipanggang di atas bara.",
+              "bodyEn": "Prime cuts grilled over glowing embers."
+            },
+            {
+              "titleId": "Pasta harian",
+              "titleEn": "Daily pasta",
+              "bodyId": "Dibuat segar sebelum layanan malam.",
+              "bodyEn": "Made fresh before every evening service."
+            },
+            {
+              "titleId": "Rumah 1930-an",
+              "titleEn": "1930s house",
+              "bodyId": "Heritage Bandung dipulihkan dengan tenang.",
+              "bodyEn": "Bandung heritage restored with restraint."
+            }
+          ],
+          "item": {
+            "fields": {
+              "titleId": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "titleEn": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "bodyId": {
+                "type": "textarea",
+                "maxLength": 120
+              },
+              "bodyEn": {
+                "type": "textarea",
+                "maxLength": 120
+              }
+            }
+          }
+        },
+        "sections.about.heading.id": {
+          "type": "text",
+          "label": "Judul tentang Indonesia",
+          "maxLength": 70,
+          "default": "Karakter dimulai dari bara."
+        },
+        "sections.about.heading.en": {
+          "type": "text",
+          "label": "English about heading",
+          "maxLength": 70,
+          "default": "Character begins with embers."
+        },
+        "sections.about.body.id": {
+          "type": "textarea",
+          "label": "Tentang Indonesia",
+          "maxLength": 320,
+          "default": "Daging pilihan diistirahatkan, dibumbui sederhana, lalu dipanggang perlahan untuk mendapatkan kerak, aroma, dan kelembutan yang seimbang."
+        },
+        "sections.about.body.en": {
+          "type": "textarea",
+          "label": "English about copy",
+          "maxLength": 320,
+          "default": "Selected cuts are rested, seasoned simply, then grilled slowly for balanced crust, aroma, and tenderness."
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "Foto hidangan utama",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/signature-ribeye.jpg",
+            "altId": "Dry-aged ribeye panggang dengan rosemary dan bawang putih",
+            "altEn": "Fire-grilled dry-aged ribeye with rosemary and garlic",
+            "focalPoint": {
+              "x": 52,
+              "y": 50
+            }
+          }
+        },
+        "sections.home.experiences": {
+          "type": "array",
+          "label": "Ritme malam",
+          "minItems": 2,
+          "maxItems": 4,
+          "default": [
+            {
+              "titleId": "Aperitivo",
+              "titleEn": "Aperitivo",
+              "bodyId": "Negroni, tiram, dan cahaya senja di beranda.",
+              "bodyEn": "Negroni, oysters, and dusk light on the veranda."
+            },
+            {
+              "titleId": "La tavola",
+              "titleEn": "La tavola",
+              "bodyId": "Pasta segar, prime cuts, dan wine untuk dibagikan.",
+              "bodyEn": "Fresh pasta, prime cuts, and wine selected for sharing."
+            },
+            {
+              "titleId": "Dopo cena",
+              "titleEn": "Dopo cena",
+              "bodyId": "Tiramisu, amaro, dan percakapan tanpa terburu-buru.",
+              "bodyEn": "Tiramisu, amaro, and conversation without a deadline."
+            }
+          ],
+          "item": {
+            "fields": {
+              "titleId": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "titleEn": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "bodyId": {
+                "type": "textarea",
+                "maxLength": 140
+              },
+              "bodyEn": {
+                "type": "textarea",
+                "maxLength": 140
+              }
+            }
+          }
+        },
+        "sections.home.experienceHeading.id": {
+          "type": "text",
+          "label": "Judul pengalaman Indonesia",
+          "maxLength": 65,
+          "default": "Satu malam, tiga ritme."
+        },
+        "sections.home.experienceHeading.en": {
+          "type": "text",
+          "label": "English experience heading",
+          "maxLength": 65,
+          "default": "One evening, three rhythms."
+        },
+        "sections.home.quote.id": {
+          "type": "textarea",
+          "label": "Kutipan Indonesia",
+          "maxLength": 120,
+          "default": "Api memberi rasa. Ruang memberi kenangan."
+        },
+        "sections.home.quote.en": {
+          "type": "textarea",
+          "label": "English quote",
+          "maxLength": 120,
+          "default": "Fire gives flavor. The room gives memory."
+        },
+        "sections.home.attribution": {
+          "type": "text",
+          "label": "Atribusi kutipan",
+          "maxLength": 80,
+          "default": "Alessandro Pranata, Executive Chef"
+        },
+        "sections.products.eyebrow.id": {
+          "type": "text",
+          "label": "Menu eyebrow Indonesia",
+          "maxLength": 40,
+          "default": "Menu Casa Braci"
+        },
+        "sections.products.eyebrow.en": {
+          "type": "text",
+          "label": "Menu eyebrow English",
+          "maxLength": 40,
+          "default": "Casa Braci menu"
+        },
+        "sections.products.heading.id": {
+          "type": "text",
+          "label": "Judul menu Indonesia",
+          "maxLength": 60,
+          "default": "Italia, dimasak dengan api."
+        },
+        "sections.products.heading.en": {
+          "type": "text",
+          "label": "English menu heading",
+          "maxLength": 60,
+          "default": "Italy, cooked with fire."
+        },
+        "sections.products.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi menu Indonesia",
+          "maxLength": 150,
+          "default": "Bahan terbaik, teknik klasik, dan rasa yang jujur."
+        },
+        "sections.products.description.en": {
+          "type": "textarea",
+          "label": "English menu description",
+          "maxLength": 150,
+          "default": "Exceptional produce, classical technique, and honest flavor."
+        },
+        "sections.products.image": {
+          "type": "image",
+          "label": "Foto menu",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/signature-ribeye.jpg",
+            "altId": "Signature dry-aged ribeye Casa Braci",
+            "altEn": "Casa Braci signature dry-aged ribeye",
+            "focalPoint": {
+              "x": 55,
+              "y": 50
+            }
+          }
+        },
+        "sections.products.categories": {
+          "type": "array",
+          "label": "Kategori menu",
+          "minItems": 1,
+          "maxItems": 8,
+          "default": [
+            {
+              "nameId": "Antipasti",
+              "nameEn": "Antipasti",
+              "items": [
+                {
+                  "name": "Carpaccio di Manzo",
+                  "price": "Rp 185K",
+                  "descriptionId": "Tenderloin, caper, Parmigiano Reggiano, dan minyak lemon.",
+                  "descriptionEn": "Tenderloin, capers, Parmigiano Reggiano, and lemon oil."
+                },
+                {
+                  "name": "Burrata Affumicata",
+                  "price": "Rp 165K",
+                  "descriptionId": "Burrata asap, tomat panggang, basil, dan focaccia.",
+                  "descriptionEn": "Smoked burrata, roasted tomatoes, basil, and focaccia."
+                },
+                {
+                  "name": "Polpo alla Brace",
+                  "price": "Rp 210K",
+                  "descriptionId": "Gurita panggang, kentang, zaitun hitam, dan salsa verde.",
+                  "descriptionEn": "Grilled octopus, potato, black olives, and salsa verde."
+                }
+              ]
+            },
+            {
+              "nameId": "Pasta",
+              "nameEn": "Pasta",
+              "items": [
+                {
+                  "name": "Tagliolini al Tartufo",
+                  "price": "Rp 245K",
+                  "descriptionId": "Pasta telur, truffle hitam, dan Parmigiano Reggiano.",
+                  "descriptionEn": "Egg pasta, black truffle, and Parmigiano Reggiano."
+                },
+                {
+                  "name": "Pappardelle al Ragù",
+                  "price": "Rp 195K",
+                  "descriptionId": "Ragù sapi delapan jam, tomat San Marzano, dan pecorino.",
+                  "descriptionEn": "Eight-hour beef ragù, San Marzano tomatoes, and pecorino."
+                },
+                {
+                  "name": "Ravioli di Zucca",
+                  "price": "Rp 175K",
+                  "descriptionId": "Labu panggang, brown butter, sage, dan hazelnut.",
+                  "descriptionEn": "Roasted pumpkin, brown butter, sage, and hazelnut."
+                }
+              ]
+            },
+            {
+              "nameId": "Prime cuts",
+              "nameEn": "Prime cuts",
+              "items": [
+                {
+                  "name": "Dry-aged Ribeye 400g",
+                  "price": "Rp 685K",
+                  "descriptionId": "Dipanggang di atas bara, disajikan dengan jus rosemary.",
+                  "descriptionEn": "Grilled over embers and served with rosemary jus."
+                },
+                {
+                  "name": "Wagyu Striploin 250g",
+                  "price": "Rp 895K",
+                  "descriptionId": "Marbling tinggi, garam laut, dan lada hitam.",
+                  "descriptionEn": "Rich marbling, sea salt, and black pepper."
+                },
+                {
+                  "name": "Bistecca Fiorentina 1kg",
+                  "price": "Rp 1.650K",
+                  "descriptionId": "Porterhouse untuk dua hingga tiga tamu, dipotong di meja.",
+                  "descriptionEn": "Porterhouse for two to three guests, carved tableside."
+                }
+              ]
+            },
+            {
+              "nameId": "Dolci",
+              "nameEn": "Dolci",
+              "items": [
+                {
+                  "name": "Tiramisù Casa",
+                  "price": "Rp 110K",
+                  "descriptionId": "Mascarpone, espresso, savoiardi, dan kakao.",
+                  "descriptionEn": "Mascarpone, espresso, savoiardi, and cocoa."
+                },
+                {
+                  "name": "Panna Cotta",
+                  "price": "Rp 95K",
+                  "descriptionId": "Vanila, jeruk darah, dan pistachio.",
+                  "descriptionEn": "Vanilla, blood orange, and pistachio."
+                },
+                {
+                  "name": "Affogato al Nocciola",
+                  "price": "Rp 85K",
+                  "descriptionId": "Gelato hazelnut dan espresso ganda.",
+                  "descriptionEn": "Hazelnut gelato and double espresso."
+                }
+              ]
+            }
+          ],
+          "item": {
+            "fields": {
+              "nameId": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "nameEn": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "items": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 12,
+                "item": {
+                  "fields": {
+                    "name": {
+                      "type": "text",
+                      "maxLength": 70
+                    },
+                    "price": {
+                      "type": "text",
+                      "maxLength": 24
+                    },
+                    "descriptionId": {
+                      "type": "textarea",
+                      "maxLength": 180
+                    },
+                    "descriptionEn": {
+                      "type": "textarea",
+                      "maxLength": 180
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sections.story.eyebrow.id": {
+          "type": "text",
+          "label": "Kisah eyebrow Indonesia",
+          "maxLength": 40,
+          "default": "Kisah Casa Braci"
+        },
+        "sections.story.eyebrow.en": {
+          "type": "text",
+          "label": "Story eyebrow English",
+          "maxLength": 40,
+          "default": "The Casa Braci story"
+        },
+        "sections.story.heading.id": {
+          "type": "text",
+          "label": "Judul kisah Indonesia",
+          "maxLength": 60,
+          "default": "Rumah lama. Nyala baru."
+        },
+        "sections.story.heading.en": {
+          "type": "text",
+          "label": "English story heading",
+          "maxLength": 60,
+          "default": "An old house. A new flame."
+        },
+        "sections.story.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi kisah Indonesia",
+          "maxLength": 160,
+          "default": "Pertemuan antara keramahan Bandung dan meja makan Italia."
+        },
+        "sections.story.description.en": {
+          "type": "textarea",
+          "label": "English story description",
+          "maxLength": 160,
+          "default": "A meeting of Bandung hospitality and the Italian table."
+        },
+        "sections.story.image": {
+          "type": "image",
+          "label": "Foto kisah",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/hero-interior.jpg",
+            "altId": "Interior rumah heritage Casa Braci",
+            "altEn": "Casa Braci heritage house interior",
+            "focalPoint": {
+              "x": 55,
+              "y": 48
+            }
+          }
+        },
+        "sections.story.timeline": {
+          "type": "array",
+          "label": "Linimasa",
+          "minItems": 2,
+          "maxItems": 5,
+          "default": [
+            {
+              "year": "1934",
+              "labelId": "Rumah dibangun",
+              "labelEn": "The house was built"
+            },
+            {
+              "year": "2024",
+              "labelId": "Pemulihan dimulai",
+              "labelEn": "Restoration began"
+            },
+            {
+              "year": "2026",
+              "labelId": "Pintu dibuka",
+              "labelEn": "Doors opened"
+            }
+          ],
+          "item": {
+            "fields": {
+              "year": {
+                "type": "text",
+                "maxLength": 8
+              },
+              "labelId": {
+                "type": "text",
+                "maxLength": 70
+              },
+              "labelEn": {
+                "type": "text",
+                "maxLength": 70
+              }
+            }
+          }
+        },
+        "sections.story.narrativeHeading.id": {
+          "type": "text",
+          "label": "Judul narasi Indonesia",
+          "maxLength": 90,
+          "default": "Arsitektur dijaga. Tradisi terus hidup."
+        },
+        "sections.story.narrativeHeading.en": {
+          "type": "text",
+          "label": "English narrative heading",
+          "maxLength": 90,
+          "default": "Architecture preserved. Tradition kept alive."
+        },
+        "sections.story.paragraphs": {
+          "type": "array",
+          "label": "Paragraf kisah",
+          "minItems": 1,
+          "maxItems": 4,
+          "default": [
+            {
+              "id": "Casa Braci menempati rumah kolonial yang dipulihkan tanpa menghilangkan jejak usianya. Jendela lengkung, kayu gelap, dan lantai batu tetap menjadi bagian dari pengalaman makan.",
+              "en": "Casa Braci occupies a colonial house restored without erasing its age. Arched windows, dark timber, and stone floors remain part of the dining experience."
+            },
+            {
+              "id": "Di dapur terbuka, teknik Italia bertemu dengan bahan lokal dan panas dari bara. Pasta dibuat setiap sore, sementara daging dipilih untuk merespons api dengan sempurna.",
+              "en": "In the open kitchen, Italian technique meets local produce and ember heat. Pasta is made each afternoon, while each cut is chosen for how it responds to fire."
+            }
+          ],
+          "item": {
+            "fields": {
+              "id": {
+                "type": "textarea",
+                "maxLength": 420
+              },
+              "en": {
+                "type": "textarea",
+                "maxLength": 420
+              }
+            }
+          }
+        },
+        "sections.story.chefHeading.id": {
+          "type": "text",
+          "label": "Judul chef Indonesia",
+          "maxLength": 70,
+          "default": "Dari dapur Alessandro"
+        },
+        "sections.story.chefHeading.en": {
+          "type": "text",
+          "label": "English chef heading",
+          "maxLength": 70,
+          "default": "From Alessandro's kitchen"
+        },
+        "sections.story.chefBody.id": {
+          "type": "textarea",
+          "label": "Catatan chef Indonesia",
+          "maxLength": 240,
+          "default": "Makanan yang baik tidak perlu menyembunyikan bahannya. Tugas kami adalah memberi waktu, panas, dan perhatian yang tepat."
+        },
+        "sections.story.chefBody.en": {
+          "type": "textarea",
+          "label": "English chef note",
+          "maxLength": 240,
+          "default": "Good food should not hide its ingredients. Our job is to give them the right time, heat, and attention."
+        },
+        "sections.gallery.eyebrow.id": {
+          "type": "text",
+          "label": "Galeri eyebrow Indonesia",
+          "maxLength": 40,
+          "default": "Galeri Casa Braci"
+        },
+        "sections.gallery.eyebrow.en": {
+          "type": "text",
+          "label": "Gallery eyebrow English",
+          "maxLength": 40,
+          "default": "Casa Braci gallery"
+        },
+        "sections.gallery.heading.id": {
+          "type": "text",
+          "label": "Judul galeri Indonesia",
+          "maxLength": 60,
+          "default": "Malam dalam cahaya bara."
+        },
+        "sections.gallery.heading.en": {
+          "type": "text",
+          "label": "English gallery heading",
+          "maxLength": 60,
+          "default": "An evening in ember light."
+        },
+        "sections.gallery.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi galeri Indonesia",
+          "maxLength": 170,
+          "default": "Ruang, hidangan, dan detail yang membentuk pengalaman Casa Braci."
+        },
+        "sections.gallery.description.en": {
+          "type": "textarea",
+          "label": "English gallery description",
+          "maxLength": 170,
+          "default": "The room, plates, and details that shape the Casa Braci experience."
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Foto galeri",
+          "minItems": 1,
+          "maxItems": 9,
+          "default": [
+            {
+              "src": "assets/hero-interior.jpg",
+              "altId": "Ruang makan heritage Casa Braci",
+              "altEn": "Casa Braci heritage dining room",
+              "focalPoint": {
+                "x": 55,
+                "y": 48
+              }
+            },
+            {
+              "src": "assets/signature-ribeye.jpg",
+              "altId": "Dry-aged ribeye dari live fire",
+              "altEn": "Live-fire dry-aged ribeye",
+              "focalPoint": {
+                "x": 52,
+                "y": 50
+              }
+            },
+            {
+              "src": "assets/truffle-tagliolini.jpg",
+              "altId": "Tagliolini dengan truffle hitam",
+              "altEn": "Tagliolini with black truffle",
+              "focalPoint": {
+                "x": 50,
+                "y": 48
+              }
+            }
+          ],
+          "item": {
+            "fields": {
+              "src": {
+                "type": "image",
+                "accept": [
+                  "image/jpeg",
+                  "image/png",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true
+              },
+              "altId": {
+                "type": "text",
+                "maxLength": 150
+              },
+              "altEn": {
+                "type": "text",
+                "maxLength": 150
+              }
+            }
+          }
+        },
+        "sections.gallery.captionHeading.id": {
+          "type": "text",
+          "label": "Judul caption Indonesia",
+          "maxLength": 70,
+          "default": "Tiga elemen, satu pengalaman."
+        },
+        "sections.gallery.captionHeading.en": {
+          "type": "text",
+          "label": "English caption heading",
+          "maxLength": 70,
+          "default": "Three elements, one experience."
+        },
+        "sections.gallery.captionBody.id": {
+          "type": "textarea",
+          "label": "Caption Indonesia",
+          "maxLength": 240,
+          "default": "Arsitektur heritage, panas dari bara, dan masakan Italia yang dibuat dengan tangan menjadi bahasa Casa Braci."
+        },
+        "sections.gallery.captionBody.en": {
+          "type": "textarea",
+          "label": "English gallery caption",
+          "maxLength": 240,
+          "default": "Heritage architecture, ember heat, and handmade Italian cooking form the language of Casa Braci."
+        },
+        "sections.location.eyebrow.id": {
+          "type": "text",
+          "label": "Kunjungi eyebrow Indonesia",
+          "maxLength": 40,
+          "default": "Kunjungi Casa Braci"
+        },
+        "sections.location.eyebrow.en": {
+          "type": "text",
+          "label": "Visit eyebrow English",
+          "maxLength": 40,
+          "default": "Visit Casa Braci"
+        },
+        "sections.location.heading.id": {
+          "type": "text",
+          "label": "Judul kunjungi Indonesia",
+          "maxLength": 60,
+          "default": "Temukan meja Anda."
+        },
+        "sections.location.heading.en": {
+          "type": "text",
+          "label": "English visit heading",
+          "maxLength": 60,
+          "default": "Find your table."
+        },
+        "sections.location.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi kunjungi Indonesia",
+          "maxLength": 170,
+          "default": "Makan malam dimulai pukul 17.30 di jantung kawasan heritage Bandung."
+        },
+        "sections.location.description.en": {
+          "type": "textarea",
+          "label": "English visit description",
+          "maxLength": 170,
+          "default": "Dinner begins at 5:30 PM in the heart of Bandung's heritage district."
+        },
+        "sections.location.image": {
+          "type": "image",
+          "label": "Foto lokasi",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/hero-interior.jpg",
+            "altId": "Interior heritage Casa Braci",
+            "altEn": "Casa Braci heritage interior",
+            "focalPoint": {
+              "x": 55,
+              "y": 48
+            }
+          }
+        },
+        "sections.location.details": {
+          "type": "array",
+          "label": "Informasi kunjungan",
+          "minItems": 2,
+          "maxItems": 6,
+          "default": [
+            {
+              "labelId": "Alamat",
+              "labelEn": "Address",
+              "valueId": "Jl. Citarum No. 18, Bandung, Jawa Barat",
+              "valueEn": "Jl. Citarum No. 18, Bandung, West Java"
+            },
+            {
+              "labelId": "Jam makan malam",
+              "labelEn": "Dinner hours",
+              "valueId": "Selasa sampai Minggu, 17.30 - 23.00",
+              "valueEn": "Tuesday to Sunday, 5:30 PM - 11:00 PM"
+            },
+            {
+              "labelId": "Pakaian",
+              "labelEn": "Dress code",
+              "valueId": "Smart casual",
+              "valueEn": "Smart casual"
+            },
+            {
+              "labelId": "Parkir",
+              "labelEn": "Parking",
+              "valueId": "Valet tersedia mulai pukul 17.00",
+              "valueEn": "Valet is available from 5:00 PM"
+            }
+          ],
+          "item": {
+            "fields": {
+              "labelId": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "labelEn": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "valueId": {
+                "type": "text",
+                "maxLength": 150
+              },
+              "valueEn": {
+                "type": "text",
+                "maxLength": 150
+              }
+            }
+          }
+        },
+        "sections.location.neighborhoodHeading.id": {
+          "type": "text",
+          "label": "Judul kawasan Indonesia",
+          "maxLength": 60,
+          "default": "Kawasan Citarum"
+        },
+        "sections.location.neighborhoodHeading.en": {
+          "type": "text",
+          "label": "English neighborhood heading",
+          "maxLength": 60,
+          "default": "Citarum district"
+        },
+        "sections.location.neighborhoodBody.id": {
+          "type": "textarea",
+          "label": "Deskripsi kawasan Indonesia",
+          "maxLength": 220,
+          "default": "Beberapa menit dari Gedung Sate, di antara pepohonan tua dan rumah heritage Bandung."
+        },
+        "sections.location.neighborhoodBody.en": {
+          "type": "textarea",
+          "label": "English neighborhood description",
+          "maxLength": 220,
+          "default": "Minutes from Gedung Sate, among mature trees and Bandung heritage houses."
+        },
+        "sections.footer.explore.id": {
+          "type": "text",
+          "label": "Footer jelajahi Indonesia",
+          "maxLength": 24,
+          "default": "Jelajahi"
+        },
+        "sections.footer.explore.en": {
+          "type": "text",
+          "label": "Footer explore English",
+          "maxLength": 24,
+          "default": "Explore"
+        },
+        "sections.footer.visit.id": {
+          "type": "text",
+          "label": "Footer kunjungi Indonesia",
+          "maxLength": 24,
+          "default": "Kunjungi"
+        },
+        "sections.footer.visit.en": {
+          "type": "text",
+          "label": "Footer visit English",
+          "maxLength": 24,
+          "default": "Visit"
+        },
+        "sections.footer.hours.id": {
+          "type": "text",
+          "label": "Jam footer Indonesia",
+          "maxLength": 80,
+          "default": "Selasa sampai Minggu, 17.30 - 23.00"
+        },
+        "sections.footer.hours.en": {
+          "type": "text",
+          "label": "Footer hours English",
+          "maxLength": 80,
+          "default": "Tuesday to Sunday, 5:30 PM - 11:00 PM"
+        },
+        "sections.footer.demo.id": {
+          "type": "text",
+          "label": "Catatan demo Indonesia",
+          "maxLength": 100,
+          "default": "Brand dan informasi restoran adalah konten demo."
+        },
+        "sections.footer.demo.en": {
+          "type": "text",
+          "label": "English demo notice",
+          "maxLength": 100,
+          "default": "Restaurant brand and information are demo content."
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.eyebrow.id",
+            "sections.hero.eyebrow.en",
+            "sections.hero.heading.id",
+            "sections.hero.heading.en",
+            "sections.hero.description.id",
+            "sections.hero.description.en",
+            "sections.hero.secondaryCta.id",
+            "sections.hero.secondaryCta.en",
+            "sections.hero.image"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Tentang",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.heading.id",
+            "sections.about.heading.en",
+            "sections.about.body.id",
+            "sections.about.body.en",
+            "sections.about.image"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Pengalaman",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.home.signatureItems",
+            "sections.home.experienceHeading.id",
+            "sections.home.experienceHeading.en",
+            "sections.home.experiences",
+            "sections.home.quote.id",
+            "sections.home.quote.en",
+            "sections.home.attribution"
+          ]
+        },
+        {
+          "id": "products",
+          "label": "Menu",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.products.eyebrow.id",
+            "sections.products.eyebrow.en",
+            "sections.products.heading.id",
+            "sections.products.heading.en",
+            "sections.products.description.id",
+            "sections.products.description.en",
+            "sections.products.image",
+            "sections.products.categories"
+          ]
+        },
+        {
+          "id": "story",
+          "label": "Kisah",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.story.eyebrow.id",
+            "sections.story.eyebrow.en",
+            "sections.story.heading.id",
+            "sections.story.heading.en",
+            "sections.story.description.id",
+            "sections.story.description.en",
+            "sections.story.image",
+            "sections.story.timeline",
+            "sections.story.narrativeHeading.id",
+            "sections.story.narrativeHeading.en",
+            "sections.story.paragraphs",
+            "sections.story.chefHeading.id",
+            "sections.story.chefHeading.en",
+            "sections.story.chefBody.id",
+            "sections.story.chefBody.en"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Galeri",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.eyebrow.id",
+            "sections.gallery.eyebrow.en",
+            "sections.gallery.heading.id",
+            "sections.gallery.heading.en",
+            "sections.gallery.description.id",
+            "sections.gallery.description.en",
+            "sections.gallery.items",
+            "sections.gallery.captionHeading.id",
+            "sections.gallery.captionHeading.en",
+            "sections.gallery.captionBody.id",
+            "sections.gallery.captionBody.en"
+          ]
+        },
+        {
+          "id": "location",
+          "label": "Lokasi",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "location.address",
+            "location.mapsUrl",
+            "sections.location.eyebrow.id",
+            "sections.location.eyebrow.en",
+            "sections.location.heading.id",
+            "sections.location.heading.en",
+            "sections.location.description.id",
+            "sections.location.description.en",
+            "sections.location.image",
+            "sections.location.details",
+            "sections.location.neighborhoodHeading.id",
+            "sections.location.neighborhoodHeading.en",
+            "sections.location.neighborhoodBody.id",
+            "sections.location.neighborhoodBody.en"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "business.name",
+            "business.description.id",
+            "business.description.en",
+            "sections.footer.explore.id",
+            "sections.footer.explore.en",
+            "sections.footer.visit.id",
+            "sections.footer.visit.en",
+            "sections.footer.hours.id",
+            "sections.footer.hours.en",
+            "sections.footer.demo.id",
+            "sections.footer.demo.en"
+          ]
+        }
+      ],
+      "publicPath": "/template-library/casa-braci-heritage-001"
+    }
+  ]
+}

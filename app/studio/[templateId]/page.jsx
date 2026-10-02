@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import PagiverseStudioEditor from "@/components/templates/PagiverseStudioEditor";
+import PagiverseStudioEditor from "@/components/templates/ManifestStudioEditor";
 import { getTemplateById, TEMPLATE_LIBRARY } from "@/lib/template-library";
 
 export function generateStaticParams() {

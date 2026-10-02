@@ -1,8 +1,8 @@
-import TemplateGalleryClient from "@/components/templates/TemplateGalleryClient";
+import TemplateGalleryClient from "@/components/templates/CasaBraciGalleryClient";
 
 export const metadata = {
-  title: "Template Website UMKM | Pagiverse Studio",
-  description: "Pilih template website profesional untuk kuliner, beauty, retail, jasa, hospitality, dan bisnis profesional.",
+  title: "Template Website Asli | Pagiverse Studio",
+  description: "Preview dan sesuaikan template website asli Pagiverse Studio untuk bisnis Anda.",
 };
 
 export default function TemplatesPage() {

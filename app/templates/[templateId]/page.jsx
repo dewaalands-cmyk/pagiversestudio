@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import TemplatePreviewClient from "@/components/templates/TemplatePreviewClient";
-import { getTemplateById, TEMPLATE_LIBRARY } from "@/lib/template-library";
+import { getTemplateById, getTemplateDescription, TEMPLATE_LIBRARY } from "@/lib/template-library";
 
 export function generateStaticParams() {
   return TEMPLATE_LIBRARY.map((template) => ({ templateId: template.id }));
@@ -11,7 +11,7 @@ export function generateMetadata({ params }) {
   if (!template) return {};
   return {
     title: `${template.name} | Template Pagiverse Studio`,
-    description: template.description.id,
+    description: getTemplateDescription(template, "id"),
   };
 }
 

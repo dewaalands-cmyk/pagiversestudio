@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { ExternalLink, Eye, Loader2, RefreshCw, Search, X } from "lucide-react";
 import AdminHeader from "@/components/admin/AdminHeader";
-import TemplateRenderer from "@/components/templates/TemplateRenderer";
+import TemplateRenderer from "@/components/templates/NativeTemplateRenderer";
 import { getTemplateById } from "@/lib/template-library";
 import type { TemplateProject, TemplateProjectStatus } from "@/types";
 

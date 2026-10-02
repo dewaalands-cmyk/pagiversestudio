@@ -5,25 +5,13 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import sql from "@/lib/db";
-import { getTemplateById } from "@/lib/template-library";
+import { fieldHasValue, getTemplateById, getTemplateFields, sanitizeTemplateConfiguration } from "@/lib/template-library";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function clean(value: unknown, maxLength: number) {
   if (typeof value !== "string") return "";
   return value.trim().slice(0, maxLength);
-}
-
-function safeConfiguration(template: any, value: unknown) {
-  const source = value && typeof value === "object" ? value as Record<string, unknown> : {};
-  const result: Record<string, string> = {};
-  for (const field of template.editableFields) {
-    const raw = source[field.key];
-    if (typeof raw !== "string") continue;
-    const limit = field.type === "image" ? 2_200_000 : 5000;
-    result[field.key] = raw.slice(0, limit);
-  }
-  return result;
 }
 
 async function insertWithProjectCode(values: {
@@ -34,7 +22,7 @@ async function insertWithProjectCode(values: {
   whatsapp: string;
   email: string;
   notes: string;
-  configuration: Record<string, string>;
+  configuration: Record<string, unknown>;
 }) {
   for (let attempt = 0; attempt < 8; attempt += 1) {
     const projectCode = `PV-${randomInt(1000, 10000)}`;
@@ -46,7 +34,7 @@ async function insertWithProjectCode(values: {
         ) VALUES (
           ${projectCode}, ${values.templateId}, ${values.templateName}, ${values.customerName},
           ${values.businessName}, ${values.whatsapp}, ${values.email}, ${values.notes || null},
-          ${sql.json(values.configuration)}, 'submitted'
+          ${sql.json(values.configuration as any)}, 'submitted'
         )
         RETURNING id, project_code, status, created_at
       `;
@@ -68,10 +56,13 @@ export async function POST(request: NextRequest) {
     const email = clean(body.customer?.email, 255).toLowerCase();
     const whatsapp = clean(body.customer?.whatsapp, 30).replace(/[^0-9+\-\s]/g, "");
     const notes = clean(body.customer?.notes, 5000);
-    const configuration = safeConfiguration(template, body.configuration);
-    const businessName = clean(configuration.businessName, 255);
+    const configuration = sanitizeTemplateConfiguration(template, body.configuration) as Record<string, unknown>;
+    const businessName = clean(configuration["business.name"], 255);
+    const missingRequired = getTemplateFields(template)
+      .filter((field: any) => field.required && !fieldHasValue(field, configuration[field.key]))
+      .map((field: any) => field.key);
 
-    if (!customerName || !businessName || !whatsapp || !email) {
+    if (!customerName || !businessName || !whatsapp || !email || missingRequired.length) {
       return NextResponse.json({ error: "Nama, nama bisnis, WhatsApp, dan email wajib diisi." }, { status: 400 });
     }
     if (!EMAIL_RE.test(email)) {

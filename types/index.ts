@@ -135,7 +135,7 @@ export interface TemplateProject {
   whatsapp: string;
   email: string;
   notes?: string;
-  configuration: Record<string, string>;
+  configuration: Record<string, unknown>;
   status: TemplateProjectStatus;
   created_at: string;
   updated_at: string;

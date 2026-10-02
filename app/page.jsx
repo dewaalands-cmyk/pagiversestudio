@@ -5,7 +5,6 @@ import StudioServices from "@/components/studio/StudioServices";
 import StudioProcess from "@/components/studio/StudioProcess";
 import StudioPortfolio from "@/components/studio/StudioPortfolio";
 import StudioTestimonials from "@/components/studio/StudioTestimonials";
-import StudioTemplateShowcase from "@/components/studio/StudioTemplateShowcase";
 import StudioContact from "@/components/studio/StudioContact";
 import StudioTestimonialForm from "@/components/studio/StudioTestimonialForm";
 import StudioFooter from "@/components/studio/StudioFooter";
@@ -32,7 +31,6 @@ export default async function Home() {
         <StudioProcess />
         <StudioPortfolio settings={settings} dbItems={portfolioItems} />
         <StudioTestimonials dbItems={testimonies} />
-        <StudioTemplateShowcase />
         <StudioContact settings={settings} />
         <StudioTestimonialForm />
       </main>
