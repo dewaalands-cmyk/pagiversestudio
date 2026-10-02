@@ -61,6 +61,9 @@ async function validateTemplate(directory, manifest, knownIds) {
   if (!manifest.name || !manifest.category || !manifest.description || !manifest.entry || !manifest.thumbnail) {
     throw new Error(`${manifest.id}: required metadata is incomplete`);
   }
+  if (manifest.price !== undefined && (!Number.isInteger(manifest.price) || manifest.price < 0)) {
+    throw new Error(`${manifest.id}: price must be a non-negative integer`);
+  }
   safeRelativePath(manifest.entry, `${manifest.id}: entry`);
   safeRelativePath(manifest.thumbnail, `${manifest.id}: thumbnail`);
   if (!manifest.fields || typeof manifest.fields !== "object" || Array.isArray(manifest.fields)) {

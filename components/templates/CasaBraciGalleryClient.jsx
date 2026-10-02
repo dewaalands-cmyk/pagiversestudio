@@ -5,7 +5,7 @@ import { ArrowRight, Check } from "lucide-react";
 import { useLang } from "@/components/LanguageProvider";
 import MarketplaceHeader from "@/components/templates/MarketplaceHeader";
 import NativeTemplateRenderer from "@/components/templates/NativeTemplateRenderer";
-import { TEMPLATE_LIBRARY, getTemplateCategoryLabel, getTemplateDescription } from "@/lib/template-library";
+import { TEMPLATE_LIBRARY, formatTemplatePrice, getTemplateCategoryLabel, getTemplateDescription } from "@/lib/template-library";
 
 export default function CasaBraciGalleryClient() {
   const { lang } = useLang();
@@ -14,6 +14,7 @@ export default function CasaBraciGalleryClient() {
     title: "Pilih fondasi, lalu buat sepenuhnya milik bisnismu.",
     body: "Setiap pilihan di sini berasal langsung dari repository template Pagiverse. Buka preview aslinya, lalu sesuaikan konten melalui Studio.",
     collection: "Template tersedia",
+    starting: "Mulai dari",
     preview: "Lihat preview",
     use: "Gunakan template",
     benefits: ["Website asli multi-halaman", "Konten dapat disesuaikan", "Responsif untuk mobile"],
@@ -29,6 +30,7 @@ export default function CasaBraciGalleryClient() {
     title: "Choose a foundation, then make it entirely yours.",
     body: "Every option here comes directly from the Pagiverse template repository. Preview the original site, then personalize its content in Studio.",
     collection: "Available templates",
+    starting: "Starting at",
     preview: "View preview",
     use: "Use template",
     benefits: ["A real multi-page website", "Personalizable content", "Responsive on mobile"],
@@ -70,6 +72,7 @@ export default function CasaBraciGalleryClient() {
                 <p className="text-[10px] font-extrabold uppercase tracking-[.17em] text-teal-700">{getTemplateCategoryLabel(template, lang)}</p>
                 <h2 className="mt-3 text-3xl font-extrabold tracking-[-.045em] sm:text-4xl">{template.name}</h2>
                 <p className="mt-5 text-sm leading-7 text-navy-deep/55">{getTemplateDescription(template, lang)}</p>
+                {Number.isFinite(template.price) && <p className="mt-6 text-[10px] font-extrabold uppercase tracking-[.14em] text-navy-deep/38">{copy.starting}<span className="mt-1 block text-lg normal-case tracking-normal text-navy-deep">{formatTemplatePrice(template.price, lang)}</span></p>}
                 <div className="mt-8 flex flex-wrap gap-2">
                   <Link href={`/templates/${template.id}`} className="rounded-full border border-navy-deep/18 px-5 py-3 text-xs font-extrabold transition hover:border-navy-deep">{copy.preview}</Link>
                   <Link href={`/studio/${template.id}`} className="inline-flex items-center gap-2 rounded-full bg-navy-deep px-5 py-3 text-xs font-extrabold text-white transition hover:bg-[#173253]">{copy.use}<ArrowRight className="h-3.5 w-3.5" /></Link>
