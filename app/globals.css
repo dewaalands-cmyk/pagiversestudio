@@ -83,6 +83,46 @@
   .hide-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  main.h-screen {
+    height: 100dvh;
+  }
+
+  main.h-screen > .grid {
+    min-height: 0;
+    grid-template-rows: minmax(0, 1fr);
+    overflow: hidden;
+  }
+
+  main.h-screen > .grid > aside {
+    min-height: 0;
+    overflow: hidden;
+  }
+
+  main.h-screen > .grid > aside > div:last-child {
+    min-height: 0;
+    overflow-y: scroll;
+    overscroll-behavior-y: contain;
+    scrollbar-gutter: stable;
+    touch-action: pan-y;
+  }
+
+  main.h-screen > .grid > aside > div:first-child .hide-scrollbar {
+    padding-bottom: 0.5rem;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(12, 27, 51, 0.32) transparent;
+    touch-action: pan-x;
+  }
+
+  main.h-screen > .grid > aside > div:first-child .hide-scrollbar::-webkit-scrollbar {
+    display: block;
+    height: 0.35rem;
+  }
+
+  main.h-screen > .grid > aside > div:first-child .hide-scrollbar::-webkit-scrollbar-thumb {
+    border-radius: 999px;
+    background: rgba(12, 27, 51, 0.32);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
