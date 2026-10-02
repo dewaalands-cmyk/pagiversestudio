@@ -1,39 +1,15 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef } from "react";
 import { buildDefaultConfig, getTemplateEntry, getTemplateThumbnail } from "@/lib/template-library";
 
-export default function NativeTemplateRenderer({ template, config = {}, compact = false, lang = "id", deviceMode = "auto" }) {
+export default function NativeTemplateRenderer({ template, config = {}, compact = false, deviceMode = "auto" }) {
   const frameRef = useRef(null);
-  const [documentHtml, setDocumentHtml] = useState("");
-  const [loadError, setLoadError] = useState(false);
   const configuration = useMemo(
     () => ({ ...buildDefaultConfig(template), ...config }),
     [template, config],
   );
-
-  useEffect(() => {
-    if (compact) return;
-    const controller = new AbortController();
-    setDocumentHtml("");
-    setLoadError(false);
-    fetch(getTemplateEntry(template), { cache: "no-store", signal: controller.signal })
-      .then((response) => {
-        if (!response.ok) throw new Error(`Template request failed with ${response.status}`);
-        return response.text();
-      })
-      .then((html) => {
-        const baseElement = `<base href="${template.publicPath}/">`;
-        const prepared = /<head(?:\s[^>]*)?>/i.test(html)
-          ? html.replace(/<head(?:\s[^>]*)?>/i, (head) => `${head}${baseElement}`)
-          : `${baseElement}${html}`;
-        setDocumentHtml(prepared);
-      })
-      .catch((error) => {
-        if (error.name !== "AbortError") setLoadError(true);
-      });
-    return () => controller.abort();
-  }, [compact, template]);
+  const previewUrl = `${getTemplateEntry(template)}?embed=${encodeURIComponent(`${template.id}-${template.pagiverseStandard ?? 1}-${template.price ?? 0}`)}`;
 
   function sendConfiguration() {
     frameRef.current?.contentWindow?.postMessage({
@@ -60,18 +36,10 @@ export default function NativeTemplateRenderer({ template, config = {}, compact 
     return <img src={getTemplateThumbnail(template)} alt={`${template.name} template preview`} className="h-full min-h-[320px] w-full object-cover object-top" />;
   }
 
-  if (loadError) {
-    return <div className="flex h-[760px] items-center justify-center bg-white px-6 text-center text-sm font-bold text-red-700">{lang === "id" ? "Preview belum dapat dimuat. Silakan muat ulang halaman." : "The preview could not be loaded. Please refresh the page."}</div>;
-  }
-
-  if (!documentHtml) {
-    return <div className="flex h-[760px] items-center justify-center bg-white text-sm font-bold text-navy-deep/45">{lang === "id" ? "Memuat preview..." : "Loading preview..."}</div>;
-  }
-
   return (
     <iframe
       ref={frameRef}
-      srcDoc={documentHtml}
+      src={previewUrl}
       title={`${template.name} live preview`}
       onLoad={sendConfiguration}
       sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
