@@ -1,0 +1,999 @@
+{
+  "pagiverseStandard": 1,
+  "id": "rona-nusa-restaurant-001",
+  "name": "Rona Nusa",
+  "category": "restaurant",
+  "description": "Bright cinematic bilingual template for a premium modern Indonesian restaurant",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html"
+    }
+  ],
+  "dependencies": [],
+  "languages": {
+    "supported": ["id", "en"],
+    "default": "id"
+  },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "light",
+    "tokens": {
+      "primary": {
+        "editable": true,
+        "default": "#173c31"
+      },
+      "secondary": {
+        "editable": false,
+        "default": "#414b47"
+      },
+      "accent": {
+        "editable": true,
+        "default": "#8f2637"
+      },
+      "background": {
+        "editable": false,
+        "default": "#f3f4ef"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#e7eae4"
+      },
+      "text": {
+        "editable": false,
+        "default": "#17201d"
+      }
+    }
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama restoran",
+      "required": true,
+      "maxLength": 48,
+      "default": "Rona Nusa"
+    },
+    "business.tagline.id": {
+      "type": "text",
+      "label": "Tagline Indonesia",
+      "maxLength": 72,
+      "default": "Perjalanan rasa melintasi Nusantara."
+    },
+    "business.tagline.en": {
+      "type": "text",
+      "label": "English tagline",
+      "maxLength": 72,
+      "default": "A culinary journey across the archipelago."
+    },
+    "business.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi bisnis Indonesia",
+      "maxLength": 240,
+      "default": "Restoran Indonesia modern di Yogyakarta yang merangkai bahan, bumbu, dan cerita dari berbagai pulau."
+    },
+    "business.description.en": {
+      "type": "textarea",
+      "label": "English business description",
+      "maxLength": 240,
+      "default": "A modern Indonesian restaurant in Yogyakarta bringing together ingredients, spices, and stories from across the islands."
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo",
+      "accept": ["image/png", "image/jpeg", "image/webp", "image/svg+xml"],
+      "maxFileSizeMB": 5,
+      "focalPoint": false,
+      "required": false
+    },
+    "contact.whatsapp": {
+      "type": "phone",
+      "label": "WhatsApp",
+      "required": true,
+      "default": "+6281234567890"
+    },
+    "contact.phone": {
+      "type": "phone",
+      "label": "Telepon",
+      "default": "+622744567890"
+    },
+    "contact.email": {
+      "type": "email",
+      "label": "Email",
+      "required": true,
+      "maxLength": 120,
+      "default": "hello@ronanusa.id"
+    },
+    "location.address": {
+      "type": "textarea",
+      "label": "Alamat",
+      "required": true,
+      "maxLength": 180,
+      "default": "Prawirotaman, Brontokusuman, Mergangsan, Yogyakarta"
+    },
+    "location.mapsUrl": {
+      "type": "url",
+      "label": "Tautan Google Maps",
+      "allowedProtocols": ["https:"],
+      "default": "https://www.google.com/maps/search/?api=1&query=Prawirotaman%20Yogyakarta"
+    },
+    "social.instagram": {
+      "type": "url",
+      "label": "Instagram",
+      "allowedProtocols": ["https:"],
+      "default": "https://instagram.com/ronanusa"
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul SEO",
+      "required": true,
+      "maxLength": 64,
+      "default": "Rona Nusa | Modern Indonesian Dining in Yogyakarta"
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO",
+      "required": true,
+      "maxLength": 160,
+      "default": "Discover modern Indonesian dining in Yogyakarta, with flavors and stories gathered from across the archipelago."
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Gambar sosial",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "1.91:1",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-rona-nusa.webp",
+        "focalPoint": {"x": 0.5, "y": 0.52}
+      }
+    },
+    "theme.primary": {
+      "type": "color",
+      "label": "Warna utama",
+      "default": "#173c31"
+    },
+    "theme.accent": {
+      "type": "color",
+      "label": "Warna aksen",
+      "default": "#8f2637"
+    },
+    "navigation.about.label.id": {
+      "type": "text",
+      "label": "Navigasi Tentang",
+      "maxLength": 18,
+      "default": "Cerita"
+    },
+    "navigation.about.label.en": {
+      "type": "text",
+      "label": "About navigation",
+      "maxLength": 18,
+      "default": "Story"
+    },
+    "navigation.products.label.id": {
+      "type": "text",
+      "label": "Navigasi Menu",
+      "maxLength": 18,
+      "default": "Menu"
+    },
+    "navigation.products.label.en": {
+      "type": "text",
+      "label": "Menu navigation",
+      "maxLength": 18,
+      "default": "Menu"
+    },
+    "navigation.experience.label.id": {
+      "type": "text",
+      "label": "Navigasi Pengalaman",
+      "maxLength": 18,
+      "default": "Pengalaman"
+    },
+    "navigation.experience.label.en": {
+      "type": "text",
+      "label": "Experience navigation",
+      "maxLength": 18,
+      "default": "Experience"
+    },
+    "navigation.location.label.id": {
+      "type": "text",
+      "label": "Navigasi Lokasi",
+      "maxLength": 18,
+      "default": "Lokasi"
+    },
+    "navigation.location.label.en": {
+      "type": "text",
+      "label": "Location navigation",
+      "maxLength": 18,
+      "default": "Location"
+    },
+    "navigation.reservation.label.id": {
+      "type": "text",
+      "label": "Navigasi Reservasi",
+      "maxLength": 20,
+      "default": "Reservasi Meja"
+    },
+    "navigation.reservation.label.en": {
+      "type": "text",
+      "label": "Reservation navigation",
+      "maxLength": 20,
+      "default": "Reserve a Table"
+    },
+    "sections.hero.eyebrow.id": {
+      "type": "text",
+      "label": "Label hero Indonesia",
+      "maxLength": 40,
+      "default": "Dapur Indonesia Modern"
+    },
+    "sections.hero.eyebrow.en": {
+      "type": "text",
+      "label": "English hero label",
+      "maxLength": 40,
+      "default": "Modern Indonesian Kitchen"
+    },
+    "sections.hero.heading.id": {
+      "type": "text",
+      "label": "Judul hero Indonesia",
+      "required": true,
+      "maxLength": 54,
+      "default": "Nusantara, dalam cahaya baru."
+    },
+    "sections.hero.heading.en": {
+      "type": "text",
+      "label": "English hero heading",
+      "required": true,
+      "maxLength": 54,
+      "default": "The archipelago, in a new light."
+    },
+    "sections.hero.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi hero Indonesia",
+      "maxLength": 130,
+      "default": "Perjalanan rasa lintas pulau, disajikan dengan ketelitian modern di jantung Yogyakarta."
+    },
+    "sections.hero.description.en": {
+      "type": "textarea",
+      "label": "English hero description",
+      "maxLength": 130,
+      "default": "Flavors from across the islands, served with modern precision in the heart of Yogyakarta."
+    },
+    "sections.hero.primaryCta.label.id": {
+      "type": "text",
+      "label": "CTA utama Indonesia",
+      "maxLength": 20,
+      "default": "Reservasi Meja"
+    },
+    "sections.hero.primaryCta.label.en": {
+      "type": "text",
+      "label": "English primary CTA",
+      "maxLength": 20,
+      "default": "Reserve a Table"
+    },
+    "sections.hero.secondaryCta.label.id": {
+      "type": "text",
+      "label": "CTA kedua Indonesia",
+      "maxLength": 20,
+      "default": "Jelajahi Menu"
+    },
+    "sections.hero.secondaryCta.label.en": {
+      "type": "text",
+      "label": "English secondary CTA",
+      "maxLength": 20,
+      "default": "Explore the Menu"
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Foto hero",
+      "required": true,
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 6,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-rona-nusa.webp",
+        "focalPoint": {"x": 0.5, "y": 0.52}
+      }
+    },
+    "sections.hero.imageAlt.id": {
+      "type": "text",
+      "label": "Alt foto hero Indonesia",
+      "maxLength": 140,
+      "default": "Meja hidangan Nusantara di ruang makan Rona Nusa yang terang"
+    },
+    "sections.hero.imageAlt.en": {
+      "type": "text",
+      "label": "English hero image alt",
+      "maxLength": 140,
+      "default": "An Indonesian feast in Rona Nusa's light-filled dining room"
+    },
+    "sections.about.kicker.id": {
+      "type": "text",
+      "label": "Label cerita Indonesia",
+      "maxLength": 34,
+      "default": "Dari banyak pulau"
+    },
+    "sections.about.kicker.en": {
+      "type": "text",
+      "label": "English story label",
+      "maxLength": 34,
+      "default": "From many islands"
+    },
+    "sections.about.heading.id": {
+      "type": "text",
+      "label": "Judul cerita Indonesia",
+      "maxLength": 72,
+      "default": "Satu meja, banyak cerita rasa."
+    },
+    "sections.about.heading.en": {
+      "type": "text",
+      "label": "English story heading",
+      "maxLength": 72,
+      "default": "One table, many stories of flavor."
+    },
+    "sections.about.body.id": {
+      "type": "textarea",
+      "label": "Isi cerita Indonesia",
+      "maxLength": 300,
+      "default": "Rona Nusa menelusuri bumbu, teknik, dan hasil bumi dari berbagai daerah, lalu menyajikannya dengan cara yang jernih dan masa kini."
+    },
+    "sections.about.body.en": {
+      "type": "textarea",
+      "label": "English story body",
+      "maxLength": 300,
+      "default": "Rona Nusa follows the spices, techniques, and produce of many regions, then brings them together with clarity and a modern point of view."
+    },
+    "sections.about.principleOne.title.id": {
+      "type": "text",
+      "label": "Prinsip satu Indonesia",
+      "maxLength": 18,
+      "default": "Tanah"
+    },
+    "sections.about.principleOne.title.en": {
+      "type": "text",
+      "label": "English principle one",
+      "maxLength": 18,
+      "default": "Land"
+    },
+    "sections.about.principleOne.body.id": {
+      "type": "text",
+      "label": "Isi prinsip satu Indonesia",
+      "maxLength": 100,
+      "default": "Bahan lokal dipilih mengikuti musim dan sumbernya."
+    },
+    "sections.about.principleOne.body.en": {
+      "type": "text",
+      "label": "English principle one body",
+      "maxLength": 100,
+      "default": "Local ingredients are chosen with season and source in mind."
+    },
+    "sections.about.principleTwo.title.id": {
+      "type": "text",
+      "label": "Prinsip dua Indonesia",
+      "maxLength": 18,
+      "default": "Laut"
+    },
+    "sections.about.principleTwo.title.en": {
+      "type": "text",
+      "label": "English principle two",
+      "maxLength": 18,
+      "default": "Sea"
+    },
+    "sections.about.principleTwo.body.id": {
+      "type": "text",
+      "label": "Isi prinsip dua Indonesia",
+      "maxLength": 100,
+      "default": "Hasil pesisir hadir segar, ringan, dan berlapis."
+    },
+    "sections.about.principleTwo.body.en": {
+      "type": "text",
+      "label": "English principle two body",
+      "maxLength": 100,
+      "default": "Coastal produce arrives fresh, light, and layered."
+    },
+    "sections.about.principleThree.title.id": {
+      "type": "text",
+      "label": "Prinsip tiga Indonesia",
+      "maxLength": 18,
+      "default": "Api"
+    },
+    "sections.about.principleThree.title.en": {
+      "type": "text",
+      "label": "English principle three",
+      "maxLength": 18,
+      "default": "Fire"
+    },
+    "sections.about.principleThree.body.id": {
+      "type": "text",
+      "label": "Isi prinsip tiga Indonesia",
+      "maxLength": 100,
+      "default": "Bara memperdalam rasa tanpa menutup karakter bahan."
+    },
+    "sections.about.principleThree.body.en": {
+      "type": "text",
+      "label": "English principle three body",
+      "maxLength": 100,
+      "default": "Embers deepen flavor without hiding the ingredient."
+    },
+    "sections.products.heading.id": {
+      "type": "text",
+      "label": "Judul menu Indonesia",
+      "maxLength": 60,
+      "default": "Rasa yang kami bawa pulang."
+    },
+    "sections.products.heading.en": {
+      "type": "text",
+      "label": "English menu heading",
+      "maxLength": 60,
+      "default": "Flavors we bring home."
+    },
+    "sections.products.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi menu Indonesia",
+      "maxLength": 220,
+      "default": "Pilihan hidangan kami berubah mengikuti musim. Setiap piring menjaga jejak daerah asalnya."
+    },
+    "sections.products.description.en": {
+      "type": "textarea",
+      "label": "English menu description",
+      "maxLength": 220,
+      "default": "Our selection changes with the seasons. Every plate keeps a clear connection to its region of origin."
+    },
+    "sections.products.image": {
+      "type": "image",
+      "label": "Foto menu",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "1:1",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/menu-rendang-modern.webp",
+        "focalPoint": {"x": 0.52, "y": 0.48}
+      }
+    },
+    "sections.products.imageAlt.id": {
+      "type": "text",
+      "label": "Alt foto menu Indonesia",
+      "maxLength": 140,
+      "default": "Rendang modern dengan sayur bakar dan sambal"
+    },
+    "sections.products.imageAlt.en": {
+      "type": "text",
+      "label": "English menu image alt",
+      "maxLength": 140,
+      "default": "Modern rendang with charred vegetables and sambal"
+    },
+    "sections.products.note.id": {
+      "type": "text",
+      "label": "Catatan menu Indonesia",
+      "maxLength": 120,
+      "default": "Harga dalam ribuan Rupiah. Menu dapat berubah mengikuti ketersediaan bahan."
+    },
+    "sections.products.note.en": {
+      "type": "text",
+      "label": "English menu note",
+      "maxLength": 120,
+      "default": "Prices are in thousands of Rupiah. Dishes may change with ingredient availability."
+    },
+    "sections.products.items": {
+      "type": "array",
+      "label": "Daftar menu",
+      "minItems": 2,
+      "maxItems": 8,
+      "default": [
+        {
+          "name": {"id": "Rendang Arang", "en": "Charred Rendang"},
+          "description": {"id": "Daging sapi, kuah rempah pekat, sayur bakar, sambal merah.", "en": "Slow-braised beef, reduced spice sauce, charred vegetables, red sambal."},
+          "region": {"id": "Sumatra", "en": "Sumatra"},
+          "price": "185K"
+        },
+        {
+          "name": {"id": "Ikan Rempah Timur", "en": "Eastern Spice Fish"},
+          "description": {"id": "Ikan bakar, kenari, jeruk, daun aromatik, kuah ringan.", "en": "Grilled fish, candlenut, citrus, aromatic leaves, light broth."},
+          "region": {"id": "Maluku", "en": "Maluku"},
+          "price": "168K"
+        },
+        {
+          "name": {"id": "Ayam Taliwang Bara", "en": "Ember Taliwang Chicken"},
+          "description": {"id": "Ayam kampung, cabai merah, jeruk limau, urap segar.", "en": "Free-range chicken, red chili, calamansi, fresh coconut salad."},
+          "region": {"id": "Lombok", "en": "Lombok"},
+          "price": "142K"
+        },
+        {
+          "name": {"id": "Sayur Pesisir", "en": "Coastal Vegetables"},
+          "description": {"id": "Sayur musiman, kelapa sangrai, asam, kaldu rempah.", "en": "Seasonal vegetables, toasted coconut, tamarind, spiced broth."},
+          "region": {"id": "Sulawesi", "en": "Sulawesi"},
+          "price": "118K"
+        }
+      ],
+      "item": {
+        "fields": {
+          "name.id": {"type": "text", "label": "Nama Indonesia", "required": true, "maxLength": 48},
+          "name.en": {"type": "text", "label": "English name", "required": true, "maxLength": 48},
+          "description.id": {"type": "textarea", "label": "Deskripsi Indonesia", "maxLength": 130},
+          "description.en": {"type": "textarea", "label": "English description", "maxLength": 130},
+          "region.id": {"type": "text", "label": "Daerah Indonesia", "maxLength": 30},
+          "region.en": {"type": "text", "label": "English region", "maxLength": 30},
+          "price": {"type": "text", "label": "Harga", "required": true, "maxLength": 18}
+        }
+      }
+    },
+    "sections.services.heading.id": {
+      "type": "text",
+      "label": "Judul pengalaman Indonesia",
+      "maxLength": 64,
+      "default": "Jamuan yang memberi ruang."
+    },
+    "sections.services.heading.en": {
+      "type": "text",
+      "label": "English experience heading",
+      "maxLength": 64,
+      "default": "A dining experience with room to breathe."
+    },
+    "sections.services.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi pengalaman Indonesia",
+      "maxLength": 220,
+      "default": "Datang untuk makan malam yang tenang, berbagi hidangan, dan mengenal Indonesia melalui rasa."
+    },
+    "sections.services.description.en": {
+      "type": "textarea",
+      "label": "English experience description",
+      "maxLength": 220,
+      "default": "Come for an unhurried dinner, share the table, and discover Indonesia through flavor."
+    },
+    "sections.services.atmosphere.id": {
+      "type": "text",
+      "label": "Suasana Indonesia",
+      "maxLength": 100,
+      "default": "Tenang, hangat, dan terbuka untuk percakapan."
+    },
+    "sections.services.atmosphere.en": {
+      "type": "text",
+      "label": "English atmosphere",
+      "maxLength": 100,
+      "default": "Calm, warm, and open to conversation."
+    },
+    "sections.services.dining.id": {
+      "type": "text",
+      "label": "Sajian Indonesia",
+      "maxLength": 100,
+      "default": "A la carte dan menu berbagi untuk dua orang atau lebih."
+    },
+    "sections.services.dining.en": {
+      "type": "text",
+      "label": "English dining",
+      "maxLength": 100,
+      "default": "A la carte and sharing menus for two or more guests."
+    },
+    "sections.services.dietary.id": {
+      "type": "text",
+      "label": "Kebutuhan khusus Indonesia",
+      "maxLength": 110,
+      "default": "Pilihan vegetarian tersedia dengan pemberitahuan sebelumnya."
+    },
+    "sections.services.dietary.en": {
+      "type": "text",
+      "label": "English dietary information",
+      "maxLength": 110,
+      "default": "Vegetarian options are available with advance notice."
+    },
+    "sections.services.image": {
+      "type": "image",
+      "label": "Foto pengalaman",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "2:3",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/experience-service.webp",
+        "focalPoint": {"x": 0.48, "y": 0.5}
+      }
+    },
+    "sections.services.imageAlt.id": {
+      "type": "text",
+      "label": "Alt foto pengalaman Indonesia",
+      "maxLength": 140,
+      "default": "Pelayan menyajikan hidangan Nusantara di meja tamu"
+    },
+    "sections.services.imageAlt.en": {
+      "type": "text",
+      "label": "English experience image alt",
+      "maxLength": 140,
+      "default": "A server presents an Indonesian sharing dish at the table"
+    },
+    "sections.location.heading.id": {
+      "type": "text",
+      "label": "Judul lokasi Indonesia",
+      "maxLength": 64,
+      "default": "Temukan kami di selatan kota."
+    },
+    "sections.location.heading.en": {
+      "type": "text",
+      "label": "English location heading",
+      "maxLength": 64,
+      "default": "Find us south of the city center."
+    },
+    "sections.location.hours.id": {
+      "type": "textarea",
+      "label": "Jam buka Indonesia",
+      "maxLength": 160,
+      "default": "Selasa-Minggu\n17:30-22:30\nSenin tutup"
+    },
+    "sections.location.hours.en": {
+      "type": "textarea",
+      "label": "English opening hours",
+      "maxLength": 160,
+      "default": "Tuesday-Sunday\n17:30-22:30\nClosed Monday"
+    },
+    "sections.location.mapsLabel.id": {
+      "type": "text",
+      "label": "Label peta Indonesia",
+      "maxLength": 28,
+      "default": "Buka di Google Maps"
+    },
+    "sections.location.mapsLabel.en": {
+      "type": "text",
+      "label": "English map label",
+      "maxLength": 28,
+      "default": "Open in Google Maps"
+    },
+    "sections.contact.heading.id": {
+      "type": "text",
+      "label": "Judul reservasi Indonesia",
+      "maxLength": 52,
+      "default": "Simpan tempat di meja kami."
+    },
+    "sections.contact.heading.en": {
+      "type": "text",
+      "label": "English reservation heading",
+      "maxLength": 52,
+      "default": "Save your place at our table."
+    },
+    "sections.contact.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi reservasi Indonesia",
+      "maxLength": 200,
+      "default": "Kirim permintaan reservasi. Tim kami akan mengonfirmasi ketersediaan melalui email atau WhatsApp."
+    },
+    "sections.contact.description.en": {
+      "type": "textarea",
+      "label": "English reservation description",
+      "maxLength": 200,
+      "default": "Send a reservation request. Our team will confirm availability by email or WhatsApp."
+    },
+    "sections.contact.whatsappLabel.id": {
+      "type": "text",
+      "label": "Label WhatsApp Indonesia",
+      "maxLength": 32,
+      "default": "Atau hubungi WhatsApp"
+    },
+    "sections.contact.whatsappLabel.en": {
+      "type": "text",
+      "label": "English WhatsApp label",
+      "maxLength": 32,
+      "default": "Or contact us on WhatsApp"
+    },
+    "sections.contact.whatsappMessage.id": {
+      "type": "text",
+      "label": "Pesan awal WhatsApp Indonesia",
+      "maxLength": 180,
+      "default": "Halo Rona Nusa, saya ingin menanyakan ketersediaan meja."
+    },
+    "sections.contact.whatsappMessage.en": {
+      "type": "text",
+      "label": "English WhatsApp opening message",
+      "maxLength": 180,
+      "default": "Hello Rona Nusa, I would like to ask about table availability."
+    },
+    "sections.contact.form.nameLabel.id": {
+      "type": "text",
+      "label": "Label nama Indonesia",
+      "maxLength": 24,
+      "default": "Nama lengkap"
+    },
+    "sections.contact.form.nameLabel.en": {
+      "type": "text",
+      "label": "English name label",
+      "maxLength": 24,
+      "default": "Full name"
+    },
+    "sections.contact.form.emailLabel.id": {
+      "type": "text",
+      "label": "Label email Indonesia",
+      "maxLength": 24,
+      "default": "Email"
+    },
+    "sections.contact.form.emailLabel.en": {
+      "type": "text",
+      "label": "English email label",
+      "maxLength": 24,
+      "default": "Email"
+    },
+    "sections.contact.form.phoneLabel.id": {
+      "type": "text",
+      "label": "Label telepon Indonesia",
+      "maxLength": 24,
+      "default": "Nomor telepon"
+    },
+    "sections.contact.form.phoneLabel.en": {
+      "type": "text",
+      "label": "English phone label",
+      "maxLength": 24,
+      "default": "Phone number"
+    },
+    "sections.contact.form.dateLabel.id": {
+      "type": "text",
+      "label": "Label tanggal Indonesia",
+      "maxLength": 24,
+      "default": "Tanggal"
+    },
+    "sections.contact.form.dateLabel.en": {
+      "type": "text",
+      "label": "English date label",
+      "maxLength": 24,
+      "default": "Date"
+    },
+    "sections.contact.form.timeLabel.id": {
+      "type": "text",
+      "label": "Label waktu Indonesia",
+      "maxLength": 24,
+      "default": "Waktu"
+    },
+    "sections.contact.form.timeLabel.en": {
+      "type": "text",
+      "label": "English time label",
+      "maxLength": 24,
+      "default": "Time"
+    },
+    "sections.contact.form.guestsLabel.id": {
+      "type": "text",
+      "label": "Label tamu Indonesia",
+      "maxLength": 24,
+      "default": "Jumlah tamu"
+    },
+    "sections.contact.form.guestsLabel.en": {
+      "type": "text",
+      "label": "English guests label",
+      "maxLength": 24,
+      "default": "Number of guests"
+    },
+    "sections.contact.form.noteLabel.id": {
+      "type": "text",
+      "label": "Label catatan Indonesia",
+      "maxLength": 32,
+      "default": "Catatan untuk kami"
+    },
+    "sections.contact.form.noteLabel.en": {
+      "type": "text",
+      "label": "English note label",
+      "maxLength": 32,
+      "default": "A note for our team"
+    },
+    "sections.contact.form.submitLabel.id": {
+      "type": "text",
+      "label": "Tombol formulir Indonesia",
+      "maxLength": 24,
+      "default": "Kirim Permintaan"
+    },
+    "sections.contact.form.submitLabel.en": {
+      "type": "text",
+      "label": "English form button",
+      "maxLength": 24,
+      "default": "Send Request"
+    },
+    "sections.footer.copyright": {
+      "type": "text",
+      "label": "Hak cipta",
+      "maxLength": 90,
+      "default": "© 2026 Rona Nusa. All rights reserved."
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "about",
+        "labelField": "navigation.about.label.id",
+        "alternateLabelField": "navigation.about.label.en",
+        "target": "#about",
+        "hideable": false
+      },
+      {
+        "id": "products",
+        "labelField": "navigation.products.label.id",
+        "alternateLabelField": "navigation.products.label.en",
+        "target": "#products",
+        "hideable": false
+      },
+      {
+        "id": "experience",
+        "labelField": "navigation.experience.label.id",
+        "alternateLabelField": "navigation.experience.label.en",
+        "target": "#experience",
+        "hideable": true
+      },
+      {
+        "id": "location",
+        "labelField": "navigation.location.label.id",
+        "alternateLabelField": "navigation.location.label.en",
+        "target": "#location",
+        "hideable": false
+      },
+      {
+        "id": "reservation",
+        "labelField": "navigation.reservation.label.id",
+        "alternateLabelField": "navigation.reservation.label.en",
+        "target": "#contact",
+        "hideable": false
+      }
+    ]
+  },
+  "forms": [
+    {
+      "id": "reservation",
+      "label": "Reservasi",
+      "provider": "pagiverse-core",
+      "fields": [
+        {"name": "name", "type": "text", "required": true, "maxLength": 80},
+        {"name": "email", "type": "email", "required": true, "maxLength": 120},
+        {"name": "phone", "type": "phone", "required": true, "maxLength": 24},
+        {"name": "date", "type": "date", "required": true},
+        {"name": "time", "type": "select", "required": true, "options": ["17:30", "18:30", "19:30", "20:30"]},
+        {"name": "guests", "type": "select", "required": true, "options": ["1", "2", "3", "4", "5", "6"]},
+        {"name": "note", "type": "textarea", "required": false, "maxLength": 400}
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.eyebrow.id",
+        "sections.hero.eyebrow.en",
+        "sections.hero.heading.id",
+        "sections.hero.heading.en",
+        "sections.hero.description.id",
+        "sections.hero.description.en",
+        "sections.hero.primaryCta.label.id",
+        "sections.hero.primaryCta.label.en",
+        "sections.hero.secondaryCta.label.id",
+        "sections.hero.secondaryCta.label.en",
+        "sections.hero.image",
+        "sections.hero.imageAlt.id",
+        "sections.hero.imageAlt.en"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Cerita",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.kicker.id",
+        "sections.about.kicker.en",
+        "sections.about.heading.id",
+        "sections.about.heading.en",
+        "sections.about.body.id",
+        "sections.about.body.en",
+        "sections.about.principleOne.title.id",
+        "sections.about.principleOne.title.en",
+        "sections.about.principleOne.body.id",
+        "sections.about.principleOne.body.en",
+        "sections.about.principleTwo.title.id",
+        "sections.about.principleTwo.title.en",
+        "sections.about.principleTwo.body.id",
+        "sections.about.principleTwo.body.en",
+        "sections.about.principleThree.title.id",
+        "sections.about.principleThree.title.en",
+        "sections.about.principleThree.body.id",
+        "sections.about.principleThree.body.en"
+      ]
+    },
+    {
+      "id": "products",
+      "label": "Menu",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.products.heading.id",
+        "sections.products.heading.en",
+        "sections.products.description.id",
+        "sections.products.description.en",
+        "sections.products.image",
+        "sections.products.imageAlt.id",
+        "sections.products.imageAlt.en",
+        "sections.products.items",
+        "sections.products.note.id",
+        "sections.products.note.en"
+      ]
+    },
+    {
+      "id": "experience",
+      "label": "Pengalaman",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.heading.id",
+        "sections.services.heading.en",
+        "sections.services.description.id",
+        "sections.services.description.en",
+        "sections.services.atmosphere.id",
+        "sections.services.atmosphere.en",
+        "sections.services.dining.id",
+        "sections.services.dining.en",
+        "sections.services.dietary.id",
+        "sections.services.dietary.en",
+        "sections.services.image",
+        "sections.services.imageAlt.id",
+        "sections.services.imageAlt.en"
+      ]
+    },
+    {
+      "id": "location",
+      "label": "Lokasi",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.location.heading.id",
+        "sections.location.heading.en",
+        "sections.location.hours.id",
+        "sections.location.hours.en",
+        "sections.location.mapsLabel.id",
+        "sections.location.mapsLabel.en",
+        "location.address",
+        "location.mapsUrl"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Reservasi",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.contact.heading.id",
+        "sections.contact.heading.en",
+        "sections.contact.description.id",
+        "sections.contact.description.en",
+        "sections.contact.whatsappLabel.id",
+        "sections.contact.whatsappLabel.en",
+        "sections.contact.whatsappMessage.id",
+        "sections.contact.whatsappMessage.en",
+        "sections.contact.form.nameLabel.id",
+        "sections.contact.form.nameLabel.en",
+        "sections.contact.form.emailLabel.id",
+        "sections.contact.form.emailLabel.en",
+        "sections.contact.form.phoneLabel.id",
+        "sections.contact.form.phoneLabel.en",
+        "sections.contact.form.dateLabel.id",
+        "sections.contact.form.dateLabel.en",
+        "sections.contact.form.timeLabel.id",
+        "sections.contact.form.timeLabel.en",
+        "sections.contact.form.guestsLabel.id",
+        "sections.contact.form.guestsLabel.en",
+        "sections.contact.form.noteLabel.id",
+        "sections.contact.form.noteLabel.en",
+        "sections.contact.form.submitLabel.id",
+        "sections.contact.form.submitLabel.en",
+        "contact.whatsapp",
+        "contact.email"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "business.name",
+        "business.tagline.id",
+        "business.tagline.en",
+        "social.instagram",
+        "sections.footer.copyright"
+      ]
+    }
+  ]
+}

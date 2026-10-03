@@ -1,0 +1,58 @@
+name: Sync template catalog
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+  repository_dispatch:
+    types: [template-repository-updated]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-template-catalog
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Check out Pagiverse Studio
+        uses: actions/checkout@v4
+
+      - name: Check out template repository
+        uses: actions/checkout@v4
+        with:
+          repository: dewaalands-cmyk/pagiverse-template
+          path: .template-source
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Sync and validate templates
+        env:
+          PAGIVERSE_TEMPLATE_REPO: ${{ github.workspace }}/.template-source
+        run: npm run templates:sync
+
+      - name: Verify production build
+        run: npm run build
+
+      - name: Commit catalog changes
+        run: |
+          git add lib/template-catalog.generated.json public/template-library
+          if git diff --cached --quiet; then
+            echo "Template catalog is already current."
+            exit 0
+          fi
+          git config user.name "pagiverse-template-bot"
+          git config user.email "pagiverse-template-bot@users.noreply.github.com"
+          git commit -m "chore: sync template catalog"
+          git push

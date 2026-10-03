@@ -34,15 +34,16 @@ async function exists(target) {
 }
 
 async function findTemplateDirectories() {
-  if (await exists(path.join(sourceRoot, "template.json"))) return [sourceRoot];
+  const directories = [];
+  if (await exists(path.join(sourceRoot, "template.json"))) directories.push(sourceRoot);
 
   const templatesRoot = path.join(sourceRoot, "templates");
   if (!(await exists(templatesRoot))) {
+    if (directories.length) return directories;
     throw new Error(`No template.json or templates directory found in ${sourceRoot}`);
   }
 
   const entries = await readdir(templatesRoot, { withFileTypes: true });
-  const directories = [];
   for (const entry of entries) {
     if (!entry.isDirectory()) continue;
     const directory = path.join(templatesRoot, entry.name);
