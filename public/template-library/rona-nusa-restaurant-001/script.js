@@ -9,6 +9,7 @@
   };
 
   function readPath(source, path) {
+    if (source && Object.prototype.hasOwnProperty.call(source, path)) return source[path];
     return path.split('.').reduce((value, key) => {
       if (value && Object.prototype.hasOwnProperty.call(value, key)) return value[key];
       return undefined;
@@ -285,7 +286,16 @@
     setupReveal();
     setupForm();
     setLanguage('id');
+    window.parent.postMessage({ type: 'pagiverse:ready', templateId: state.schema.id }, window.location.origin);
   }
+
+  window.addEventListener('message', (event) => {
+    if (event.origin !== window.location.origin || event.source !== window.parent) return;
+    const payload = event.data;
+    if (!payload || payload.type !== 'pagiverse:config' || payload.templateId !== state.schema?.id) return;
+    state.data = payload.configuration && typeof payload.configuration === 'object' ? payload.configuration : {};
+    setLanguage(state.language);
+  });
 
   init();
 })();

@@ -5,6 +5,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import sql from "@/lib/db";
 import { ensureTemplateProjectsTable } from "@/lib/template-projects-db";
+import { fieldHasValue, getTemplateById, getTemplateFields, sanitizeTemplateConfiguration } from "@/lib/template-library";
 
 const STATUSES = ["draft", "submitted", "processing", "revision", "completed"];
 
@@ -34,9 +35,35 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   try {
     await ensureTemplateProjectsTable();
     const body = await request.json();
-    if (!STATUSES.includes(body.status)) return NextResponse.json({ error: "Invalid status" }, { status: 400 });
+    const currentRows = await sql`SELECT * FROM template_projects WHERE id = ${id} LIMIT 1`;
+    const current = currentRows[0];
+    if (!current) return NextResponse.json({ error: "Not found" }, { status: 404 });
+
+    const hasStatus = body.status !== undefined;
+    const hasConfiguration = body.configuration !== undefined;
+    if (!hasStatus && !hasConfiguration) return NextResponse.json({ error: "Tidak ada perubahan." }, { status: 400 });
+    if (hasStatus && !STATUSES.includes(body.status)) return NextResponse.json({ error: "Invalid status" }, { status: 400 });
+
+    let configuration = current.configuration;
+    let businessName = current.business_name;
+    if (hasConfiguration) {
+      const template = getTemplateById(current.template_id);
+      if (!template) return NextResponse.json({ error: "Template sumber tidak tersedia." }, { status: 409 });
+      configuration = sanitizeTemplateConfiguration(template, body.configuration);
+      businessName = String(configuration["business.name"] || "").trim().slice(0, 255);
+      const missingRequired = getTemplateFields(template)
+        .filter((field: any) => field.required && !fieldHasValue(field, configuration[field.key]))
+        .map((field: any) => field.key);
+      if (!businessName || missingRequired.length) {
+        return NextResponse.json({ error: "Field wajib pada website belum lengkap.", fields: missingRequired }, { status: 400 });
+      }
+    }
+
+    const nextStatus = hasStatus ? body.status : current.status;
     const rows = await sql`
-      UPDATE template_projects SET status = ${body.status}, updated_at = NOW()
+      UPDATE template_projects
+      SET status = ${nextStatus}, configuration = ${sql.json(configuration as any)},
+          business_name = ${businessName}, revision = revision + ${hasConfiguration ? 1 : 0}, updated_at = NOW()
       WHERE id = ${id}
       RETURNING *
     `;

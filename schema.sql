@@ -137,6 +137,13 @@ CREATE TABLE template_projects (
   email VARCHAR(255) NOT NULL,
   notes TEXT,
   configuration JSONB NOT NULL,
+  submitted_configuration JSONB,
+  published_configuration JSONB,
+  preview_token_hash CHAR(64),
+  preview_expires_at TIMESTAMPTZ,
+  slug VARCHAR(80),
+  published_at TIMESTAMPTZ,
+  revision INTEGER NOT NULL DEFAULT 1,
   status VARCHAR(30) DEFAULT 'submitted'
     CHECK (status IN ('draft', 'submitted', 'processing', 'revision', 'completed')),
   created_at TIMESTAMP DEFAULT NOW(),
@@ -162,3 +169,4 @@ CREATE INDEX idx_projects_client ON projects(client_id);
 CREATE INDEX idx_messages_client ON messages(client_id);
 CREATE INDEX idx_template_projects_status ON template_projects(status);
 CREATE INDEX idx_template_projects_created ON template_projects(created_at DESC);
+CREATE UNIQUE INDEX idx_template_projects_slug ON template_projects(LOWER(slug)) WHERE slug IS NOT NULL;

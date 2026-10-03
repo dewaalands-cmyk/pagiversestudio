@@ -31,11 +31,11 @@ async function insertWithProjectCode(values: {
       const rows = await sql`
         INSERT INTO template_projects (
           project_code, template_id, template_name, customer_name,
-          business_name, whatsapp, email, notes, configuration, status
+          business_name, whatsapp, email, notes, configuration, submitted_configuration, status
         ) VALUES (
           ${projectCode}, ${values.templateId}, ${values.templateName}, ${values.customerName},
           ${values.businessName}, ${values.whatsapp}, ${values.email}, ${values.notes || null},
-          ${sql.json(values.configuration as any)}, 'submitted'
+          ${sql.json(values.configuration as any)}, ${sql.json(values.configuration as any)}, 'submitted'
         )
         RETURNING id, project_code, status, created_at
       `;

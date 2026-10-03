@@ -136,6 +136,12 @@ export interface TemplateProject {
   email: string;
   notes?: string;
   configuration: Record<string, unknown>;
+  submitted_configuration?: Record<string, unknown>;
+  published_configuration?: Record<string, unknown>;
+  slug?: string;
+  published_at?: string;
+  preview_expires_at?: string;
+  revision: number;
   status: TemplateProjectStatus;
   created_at: string;
   updated_at: string;
