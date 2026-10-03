@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import sql from "@/lib/db";
+import { ensureTemplateProjectsTable } from "@/lib/template-projects-db";
 
 const STATUSES = ["draft", "submitted", "processing", "revision", "completed"];
 
@@ -17,6 +18,7 @@ export async function GET(_request: NextRequest, { params }: { params: { id: str
   const id = Number(params.id);
   if (!Number.isInteger(id)) return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
   try {
+    await ensureTemplateProjectsTable();
     const rows = await sql`SELECT * FROM template_projects WHERE id = ${id} LIMIT 1`;
     if (!rows[0]) return NextResponse.json({ error: "Not found" }, { status: 404 });
     return NextResponse.json(rows[0]);
@@ -30,6 +32,7 @@ export async function PATCH(request: NextRequest, { params }: { params: { id: st
   const id = Number(params.id);
   if (!Number.isInteger(id)) return NextResponse.json({ error: "Invalid ID" }, { status: 400 });
   try {
+    await ensureTemplateProjectsTable();
     const body = await request.json();
     if (!STATUSES.includes(body.status)) return NextResponse.json({ error: "Invalid status" }, { status: 400 });
     const rows = await sql`

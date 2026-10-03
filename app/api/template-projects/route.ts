@@ -6,6 +6,7 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import sql from "@/lib/db";
 import { fieldHasValue, getTemplateById, getTemplateFields, sanitizeTemplateConfiguration } from "@/lib/template-library";
+import { ensureTemplateProjectsTable } from "@/lib/template-projects-db";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -48,6 +49,7 @@ async function insertWithProjectCode(values: {
 
 export async function POST(request: NextRequest) {
   try {
+    await ensureTemplateProjectsTable();
     const body = await request.json();
     const template = getTemplateById(clean(body.templateId, 120));
     if (!template) return NextResponse.json({ error: "Template tidak ditemukan." }, { status: 404 });
@@ -94,6 +96,7 @@ export async function GET(request: NextRequest) {
   }
 
   try {
+    await ensureTemplateProjectsTable();
     const status = new URL(request.url).searchParams.get("status");
     const allowed = ["draft", "submitted", "processing", "revision", "completed"];
     const rows = status && allowed.includes(status)
