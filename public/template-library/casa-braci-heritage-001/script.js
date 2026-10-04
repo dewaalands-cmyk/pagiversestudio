@@ -449,7 +449,7 @@
     renderTemplate();
     initNavigation();
     document.documentElement.classList.add("site-ready");
-    window.parent.postMessage({ type: "pagiverse:ready", templateId: config.id }, "*");
+    window.parent.postMessage({ type: "pagiverse:ready", templateId: config.id }, window.location.origin);
   }
 
   window.addEventListener("message", (event) => {
@@ -458,6 +458,11 @@
     if (!payload || payload.type !== "pagiverse:config" || payload.templateId !== config.id) return;
     overrideData = payload.configuration && typeof payload.configuration === "object" ? payload.configuration : {};
     renderTemplate();
+    window.parent.postMessage({
+      type: "pagiverse:applied",
+      templateId: config.id,
+      revision: payload.revision,
+    }, window.location.origin);
   });
 
   init();

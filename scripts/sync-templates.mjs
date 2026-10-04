@@ -79,6 +79,29 @@ async function validateTemplate(directory, manifest, knownIds) {
       throw new Error(`${manifest.id}: missing page entry ${page.entry || "(empty)"}`);
     }
   }
+
+  const runtime = await readFile(path.join(directory, "script.js"), "utf8");
+  const previewTokens = ["pagiverse:ready", "pagiverse:config", "pagiverse:applied"];
+  const missingTokens = previewTokens.filter((token) => !runtime.includes(token));
+  if (missingTokens.length || !/addEventListener\s*\(\s*["']message["']/.test(runtime)) {
+    throw new Error(`${manifest.id}: incomplete live preview protocol (${missingTokens.join(", ") || "message listener missing"})`);
+  }
+
+  const pageSources = await Promise.all(manifest.pages.map(async (page) => {
+    const pageEntry = safeRelativePath(page.entry, `${manifest.id}: page entry`);
+    const source = await readFile(path.join(directory, pageEntry), "utf8");
+    if (!/<script\b[^>]*\bsrc=["'][^"']*script\.js(?:\?[^"']*)?["']/i.test(source)) {
+      throw new Error(`${manifest.id}: ${page.entry} does not load script.js`);
+    }
+    return source;
+  }));
+  const bindableSource = `${runtime}\n${pageSources.join("\n")}`;
+  const unboundImages = Object.entries(manifest.fields)
+    .filter(([fieldPath, descriptor]) => descriptor?.type === "image" && !bindableSource.includes(fieldPath))
+    .map(([fieldPath]) => fieldPath);
+  if (unboundImages.length) {
+    throw new Error(`${manifest.id}: image fields are not bound in HTML or script: ${unboundImages.join(", ")}`);
+  }
   knownIds.add(manifest.id);
 }
 

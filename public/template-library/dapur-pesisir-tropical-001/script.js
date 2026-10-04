@@ -3,7 +3,7 @@
 
   const storageKey = "dapur-pesisir-language";
   const page = document.body.dataset.page || "home";
-  const overrideData = window.PAGIVERSE_DATA || {};
+  let overrideData = window.PAGIVERSE_DATA || {};
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const previewTheme = new URLSearchParams(window.location.search).get("theme");
 
@@ -70,7 +70,8 @@
 
   function safeImageSource(value) {
     const source = String(value || "").trim();
-    if (/^(?:\.\/)?assets\/[a-z0-9._/-]+$/i.test(source)) return source;
+    if (/^(?:\.\/)?assets\/[a-z0-9._/-]+$/i.test(source) && !source.split("/").includes("..")) return source;
+    if (/^data:image\/(?:png|jpeg|webp);base64,[a-z0-9+/=]+$/i.test(source)) return source;
     return safeExternalUrl(source, ["https:", "http:"]);
   }
 
@@ -137,6 +138,29 @@
     });
 
     const businessName = String(field("business.name", "Dapur Pesisir"));
+    const businessLogo = imageValue("business.logo");
+    const businessLogoSource = businessLogo.src ? safeImageSource(businessLogo.src) : "#";
+    document.querySelectorAll(".brand").forEach((brand) => {
+      let logo = brand.querySelector(".brand-logo");
+      if (!logo) {
+        logo = document.createElement("img");
+        logo.className = "brand-logo";
+        logo.hidden = true;
+        brand.prepend(logo);
+      }
+      const fallbackParts = brand.querySelectorAll(".brand-mark, .brand-name");
+      if (businessLogoSource !== "#") {
+        logo.src = businessLogoSource;
+        logo.alt = businessLogo.altId || businessLogo.altEn || businessName;
+        logo.hidden = false;
+        fallbackParts.forEach((element) => { element.hidden = true; });
+      } else {
+        logo.removeAttribute("src");
+        logo.alt = "";
+        logo.hidden = true;
+        fallbackParts.forEach((element) => { element.hidden = false; });
+      }
+    });
     document.querySelectorAll("[data-business-copyright]").forEach((element) => {
       element.textContent = `© 2026 ${businessName}`;
     });
@@ -491,19 +515,37 @@
     });
   }
 
-  async function init() {
-    await loadConfig();
+  function renderTemplate() {
     applyTheme();
     renderDynamicContent();
     hydrateFields();
     hydrateNavigationLabels();
     applyLanguage();
+  }
+
+  async function init() {
+    await loadConfig();
+    renderTemplate();
     setupLanguageToggle();
     setupMobileMenu();
     setDateMinimum();
     setupReservationForm();
     setupReveal();
+    window.parent.postMessage({ type: "pagiverse:ready", templateId: config.id }, window.location.origin);
   }
+
+  window.addEventListener("message", (event) => {
+    if (event.origin !== window.location.origin || event.source !== window.parent) return;
+    const payload = event.data;
+    if (!payload || payload.type !== "pagiverse:config" || payload.templateId !== config.id) return;
+    overrideData = payload.configuration && typeof payload.configuration === "object" ? payload.configuration : {};
+    renderTemplate();
+    window.parent.postMessage({
+      type: "pagiverse:applied",
+      templateId: config.id,
+      revision: payload.revision,
+    }, window.location.origin);
+  });
 
   init();
 })();

@@ -31,6 +31,13 @@
     return value && typeof value.src === 'string' ? value.src : '';
   }
 
+  function safeImageSource(value) {
+    const source = String(value || '').trim();
+    if (/^(?:\.\/)?assets\/[a-z0-9._/-]+$/i.test(source) && !source.split('/').includes('..')) return source;
+    if (/^data:image\/(?:png|jpeg|webp);base64,[a-z0-9+/=]+$/i.test(source)) return source;
+    return safeUrl(source, ['https:', 'http:']);
+  }
+
   function safeUrl(value, allowedProtocols) {
     if (!value || typeof value !== 'string') return '';
     try {
@@ -48,9 +55,34 @@
     });
 
     document.querySelectorAll('[data-bind-src]').forEach((element) => {
-      const source = imageSource(valueFor(element.dataset.bindSrc));
+      const source = safeImageSource(imageSource(valueFor(element.dataset.bindSrc)));
       if (source) element.setAttribute('src', source);
     });
+
+    const wordmark = document.querySelector('.wordmark');
+    if (wordmark) {
+      const businessName = String(valueFor('business.name') || 'Rona Nusa');
+      const source = safeImageSource(imageSource(valueFor('business.logo')));
+      let logo = wordmark.querySelector('.wordmark__logo');
+      if (!logo) {
+        logo = document.createElement('img');
+        logo.className = 'wordmark__logo';
+        logo.hidden = true;
+        wordmark.prepend(logo);
+      }
+      const fallback = wordmark.querySelector('[data-bind="business.name"]');
+      if (source) {
+        logo.src = source;
+        logo.alt = businessName;
+        logo.hidden = false;
+        if (fallback) fallback.hidden = true;
+      } else {
+        logo.removeAttribute('src');
+        logo.alt = '';
+        logo.hidden = true;
+        if (fallback) fallback.hidden = false;
+      }
+    }
 
     document.querySelectorAll('[data-bind-alt]').forEach((element) => {
       const path = element.dataset.bindAlt.replace(/\.(id|en)$/, `.${state.language}`);
@@ -295,6 +327,11 @@
     if (!payload || payload.type !== 'pagiverse:config' || payload.templateId !== state.schema?.id) return;
     state.data = payload.configuration && typeof payload.configuration === 'object' ? payload.configuration : {};
     setLanguage(state.language);
+    window.parent.postMessage({
+      type: 'pagiverse:applied',
+      templateId: state.schema.id,
+      revision: payload.revision
+    }, window.location.origin);
   });
 
   init();
