@@ -26,6 +26,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: dewaalands-cmyk/pagiverse-template
+          ref: ${{ github.event.client_payload.template_sha || 'main' }}
           path: .template-source
 
       - name: Set up Node.js
