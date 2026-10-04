@@ -1,0 +1,2168 @@
+{
+  "pagiverseStandard": 1,
+  "id": "tata-tumbuh-advisory-001",
+  "name": "Tata Tumbuh Advisory",
+  "category": "business-consulting",
+  "description": "Premium bilingual company profile template for trusted family business advisors",
+  "price": 1369500,
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html",
+      "seo": {
+        "titleFields": { "id": "seo.title.id", "en": "seo.title.en" },
+        "descriptionFields": {
+          "id": "seo.description.id",
+          "en": "seo.description.en"
+        }
+      }
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "entry": "about.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.about.title.id",
+          "en": "seo.pages.about.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.about.description.id",
+          "en": "seo.pages.about.description.en"
+        }
+      }
+    },
+    {
+      "id": "services",
+      "path": "/services",
+      "entry": "services.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.services.title.id",
+          "en": "seo.pages.services.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.services.description.id",
+          "en": "seo.pages.services.description.en"
+        }
+      }
+    },
+    {
+      "id": "approach",
+      "path": "/approach",
+      "entry": "approach.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.approach.title.id",
+          "en": "seo.pages.approach.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.approach.description.id",
+          "en": "seo.pages.approach.description.en"
+        }
+      }
+    },
+    {
+      "id": "insights",
+      "path": "/insights",
+      "entry": "insights.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.insights.title.id",
+          "en": "seo.pages.insights.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.insights.description.id",
+          "en": "seo.pages.insights.description.en"
+        }
+      }
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "entry": "contact.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.contact.title.id",
+          "en": "seo.pages.contact.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.contact.description.id",
+          "en": "seo.pages.contact.description.en"
+        }
+      }
+    }
+  ],
+  "dependencies": [],
+  "languages": {
+    "supported": ["id", "en"],
+    "default": "id"
+  },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "dark",
+    "tokens": {
+      "primary": { "editable": false, "default": "#0A1B33" },
+      "secondary": { "editable": false, "default": "#153252" },
+      "accent": { "editable": false, "default": "#C6A96B" },
+      "background": { "editable": false, "default": "#061426" },
+      "surface": { "editable": false, "default": "#0E233E" },
+      "text": { "editable": false, "default": "#F4F1E8" }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "home",
+        "labelFields": {
+          "id": "navigation.home.label.id",
+          "en": "navigation.home.label.en"
+        },
+        "target": "index.html",
+        "hideable": false
+      },
+      {
+        "id": "about",
+        "labelFields": {
+          "id": "navigation.about.label.id",
+          "en": "navigation.about.label.en"
+        },
+        "target": "about.html",
+        "hideable": false
+      },
+      {
+        "id": "services",
+        "labelFields": {
+          "id": "navigation.services.label.id",
+          "en": "navigation.services.label.en"
+        },
+        "target": "services.html",
+        "hideable": false
+      },
+      {
+        "id": "approach",
+        "labelFields": {
+          "id": "navigation.approach.label.id",
+          "en": "navigation.approach.label.en"
+        },
+        "target": "approach.html",
+        "hideable": false
+      },
+      {
+        "id": "insights",
+        "labelFields": {
+          "id": "navigation.insights.label.id",
+          "en": "navigation.insights.label.en"
+        },
+        "target": "insights.html",
+        "hideable": false
+      },
+      {
+        "id": "contact",
+        "labelFields": {
+          "id": "navigation.contact.label.id",
+          "en": "navigation.contact.label.en"
+        },
+        "target": "contact.html",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama bisnis",
+      "required": true,
+      "maxLength": 60,
+      "default": "Tata Tumbuh Advisory"
+    },
+    "business.tagline.id": {
+      "type": "text",
+      "label": "Tagline Indonesia",
+      "required": true,
+      "maxLength": 72,
+      "default": "Menata Bisnis, Menjaga Pertumbuhan."
+    },
+    "business.tagline.en": {
+      "type": "text",
+      "label": "English tagline",
+      "required": true,
+      "maxLength": 72,
+      "default": "Structuring Business, Sustaining Growth."
+    },
+    "business.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi bisnis Indonesia",
+      "required": true,
+      "maxLength": 280,
+      "default": "Penasihat bisnis bagi perusahaan keluarga yang sedang bertumbuh, dengan fokus pada manajemen internal, keuangan, operasi, dan persediaan."
+    },
+    "business.description.en": {
+      "type": "textarea",
+      "label": "English business description",
+      "required": true,
+      "maxLength": 280,
+      "default": "Business advisors for growing family enterprises, focused on internal management, finance, operations, and inventory."
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo",
+      "required": false,
+      "accept": ["image/png", "image/jpeg", "image/webp", "image/svg+xml"],
+      "maxFileSizeMB": 5,
+      "focalPoint": false
+    },
+    "business.logoAlt.id": {
+      "type": "text",
+      "label": "Alt logo Indonesia",
+      "maxLength": 100,
+      "default": "Logo Tata Tumbuh Advisory"
+    },
+    "business.logoAlt.en": {
+      "type": "text",
+      "label": "English logo alt",
+      "maxLength": 100,
+      "default": "Tata Tumbuh Advisory logo"
+    },
+
+    "contact.whatsapp": {
+      "type": "phone",
+      "label": "WhatsApp",
+      "required": true,
+      "default": "+6281234567890"
+    },
+    "contact.phone": {
+      "type": "phone",
+      "label": "Telepon",
+      "default": "+622150889100"
+    },
+    "contact.email": {
+      "type": "email",
+      "label": "Email",
+      "required": true,
+      "maxLength": 120,
+      "default": "konsultasi@tatatumbuh.co.id"
+    },
+    "contact.whatsappMessage.id": {
+      "type": "textarea",
+      "label": "Pesan WhatsApp Indonesia",
+      "maxLength": 220,
+      "default": "Halo Tata Tumbuh Advisory, saya ingin menjadwalkan konsultasi untuk membahas kebutuhan bisnis kami."
+    },
+    "contact.whatsappMessage.en": {
+      "type": "textarea",
+      "label": "English WhatsApp message",
+      "maxLength": 220,
+      "default": "Hello Tata Tumbuh Advisory, I would like to schedule a consultation to discuss our business needs."
+    },
+    "location.address": {
+      "type": "textarea",
+      "label": "Alamat",
+      "required": true,
+      "maxLength": 180,
+      "default": "Sentra Artha, Lantai 8, Jl. Prof. Dr. Satrio No. 88, Jakarta Selatan 12940"
+    },
+    "location.mapsUrl": {
+      "type": "url",
+      "label": "Tautan peta",
+      "allowedProtocols": ["https:"],
+      "default": "https://www.google.com/maps/search/?api=1&query=Jakarta%20Selatan"
+    },
+    "social.linkedin": {
+      "type": "url",
+      "label": "LinkedIn",
+      "allowedProtocols": ["https:"],
+      "default": "https://www.linkedin.com/company/tata-tumbuh-advisory"
+    },
+
+    "seo.title.id": {
+      "type": "text",
+      "label": "Judul SEO Beranda Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Tata Tumbuh Advisory | Penasihat Bisnis Keluarga"
+    },
+    "seo.title.en": {
+      "type": "text",
+      "label": "English Home SEO title",
+      "required": true,
+      "maxLength": 64,
+      "default": "Tata Tumbuh Advisory | Family Business Advisors"
+    },
+    "seo.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi SEO Beranda Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Pendampingan manajemen, keuangan, operasi, dan persediaan untuk perusahaan keluarga yang sedang bertumbuh."
+    },
+    "seo.description.en": {
+      "type": "textarea",
+      "label": "English Home SEO description",
+      "required": true,
+      "maxLength": 160,
+      "default": "Management, finance, operations, and inventory advisory for growing family enterprises."
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Gambar sosial",
+      "required": true,
+      "accept": ["image/png", "image/jpeg", "image/webp"],
+      "maxFileSizeMB": 8,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-executive-meeting.webp",
+        "altId": "Rapat eksekutif Tata Tumbuh Advisory",
+        "altEn": "Tata Tumbuh Advisory executive meeting",
+        "focalPoint": { "x": 50, "y": 48 }
+      }
+    },
+    "seo.pages.about.title.id": {
+      "type": "text",
+      "label": "Judul SEO Tentang Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Tentang Kami | Tata Tumbuh Advisory"
+    },
+    "seo.pages.about.title.en": {
+      "type": "text",
+      "label": "English About SEO title",
+      "required": true,
+      "maxLength": 64,
+      "default": "About Us | Tata Tumbuh Advisory"
+    },
+    "seo.pages.about.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi SEO Tentang Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Kenali pendekatan dan tim konsultan Tata Tumbuh Advisory untuk bisnis keluarga."
+    },
+    "seo.pages.about.description.en": {
+      "type": "textarea",
+      "label": "English About SEO description",
+      "required": true,
+      "maxLength": 160,
+      "default": "Meet the advisors and principles behind Tata Tumbuh Advisory for family enterprises."
+    },
+    "seo.pages.services.title.id": {
+      "type": "text",
+      "label": "Judul SEO Layanan Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Layanan Konsultasi Bisnis | Tata Tumbuh Advisory"
+    },
+    "seo.pages.services.title.en": {
+      "type": "text",
+      "label": "English Services SEO title",
+      "required": true,
+      "maxLength": 64,
+      "default": "Business Advisory Services | Tata Tumbuh Advisory"
+    },
+    "seo.pages.services.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi SEO Layanan Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Strategi manajemen internal, keuangan, operasi, dan persediaan untuk bisnis keluarga."
+    },
+    "seo.pages.services.description.en": {
+      "type": "textarea",
+      "label": "English Services SEO description",
+      "required": true,
+      "maxLength": 160,
+      "default": "Internal management, finance, operations, and inventory advisory for family enterprises."
+    },
+    "seo.pages.approach.title.id": {
+      "type": "text",
+      "label": "Judul SEO Metode Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Metode Pendampingan | Tata Tumbuh Advisory"
+    },
+    "seo.pages.approach.title.en": {
+      "type": "text",
+      "label": "English Approach SEO title",
+      "required": true,
+      "maxLength": 64,
+      "default": "Our Approach | Tata Tumbuh Advisory"
+    },
+    "seo.pages.approach.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi SEO Metode Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Pendampingan praktis dari pemetaan masalah hingga sistem kerja yang dapat dijalankan tim."
+    },
+    "seo.pages.approach.description.en": {
+      "type": "textarea",
+      "label": "English Approach SEO description",
+      "required": true,
+      "maxLength": 160,
+      "default": "Practical advisory from problem mapping to working systems your team can sustain."
+    },
+    "seo.pages.insights.title.id": {
+      "type": "text",
+      "label": "Judul SEO Insight Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Insight Bisnis Keluarga | Tata Tumbuh Advisory"
+    },
+    "seo.pages.insights.title.en": {
+      "type": "text",
+      "label": "English Insights SEO title",
+      "required": true,
+      "maxLength": 64,
+      "default": "Family Business Insights | Tata Tumbuh Advisory"
+    },
+    "seo.pages.insights.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi SEO Insight Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Wawasan praktis tentang tata kelola, keuangan, operasi, dan persediaan bisnis keluarga."
+    },
+    "seo.pages.insights.description.en": {
+      "type": "textarea",
+      "label": "English Insights SEO description",
+      "required": true,
+      "maxLength": 160,
+      "default": "Practical perspectives on governance, finance, operations, and inventory for family enterprises."
+    },
+    "seo.pages.contact.title.id": {
+      "type": "text",
+      "label": "Judul SEO Kontak Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Jadwalkan Konsultasi | Tata Tumbuh Advisory"
+    },
+    "seo.pages.contact.title.en": {
+      "type": "text",
+      "label": "English Contact SEO title",
+      "required": true,
+      "maxLength": 64,
+      "default": "Schedule a Consultation | Tata Tumbuh Advisory"
+    },
+    "seo.pages.contact.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi SEO Kontak Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Jadwalkan percakapan awal tentang tantangan manajemen, keuangan, operasi, atau stok."
+    },
+    "seo.pages.contact.description.en": {
+      "type": "textarea",
+      "label": "English Contact SEO description",
+      "required": true,
+      "maxLength": 160,
+      "default": "Schedule an initial conversation about management, finance, operations, or inventory challenges."
+    },
+
+    "navigation.home.label.id": {
+      "type": "text",
+      "label": "Navigasi Beranda",
+      "maxLength": 18,
+      "default": "Beranda"
+    },
+    "navigation.home.label.en": {
+      "type": "text",
+      "label": "Home navigation",
+      "maxLength": 18,
+      "default": "Home"
+    },
+    "navigation.about.label.id": {
+      "type": "text",
+      "label": "Navigasi Tentang",
+      "maxLength": 18,
+      "default": "Tentang Kami"
+    },
+    "navigation.about.label.en": {
+      "type": "text",
+      "label": "About navigation",
+      "maxLength": 18,
+      "default": "About"
+    },
+    "navigation.services.label.id": {
+      "type": "text",
+      "label": "Navigasi Layanan",
+      "maxLength": 18,
+      "default": "Layanan"
+    },
+    "navigation.services.label.en": {
+      "type": "text",
+      "label": "Services navigation",
+      "maxLength": 18,
+      "default": "Services"
+    },
+    "navigation.approach.label.id": {
+      "type": "text",
+      "label": "Navigasi Metode",
+      "maxLength": 24,
+      "default": "Metode"
+    },
+    "navigation.approach.label.en": {
+      "type": "text",
+      "label": "Approach navigation",
+      "maxLength": 24,
+      "default": "Approach"
+    },
+    "navigation.insights.label.id": {
+      "type": "text",
+      "label": "Navigasi Insight",
+      "maxLength": 18,
+      "default": "Insight"
+    },
+    "navigation.insights.label.en": {
+      "type": "text",
+      "label": "Insights navigation",
+      "maxLength": 18,
+      "default": "Insights"
+    },
+    "navigation.contact.label.id": {
+      "type": "text",
+      "label": "Navigasi Kontak",
+      "maxLength": 28,
+      "default": "Jadwalkan Konsultasi"
+    },
+    "navigation.contact.label.en": {
+      "type": "text",
+      "label": "Contact navigation",
+      "maxLength": 28,
+      "default": "Schedule a Consultation"
+    },
+
+    "sections.hero.home.eyebrow.id": {
+      "type": "text",
+      "label": "Label hero Beranda Indonesia",
+      "maxLength": 52,
+      "default": "Penasihat Bisnis untuk Perusahaan Keluarga"
+    },
+    "sections.hero.home.eyebrow.en": {
+      "type": "text",
+      "label": "English Home hero label",
+      "maxLength": 52,
+      "default": "Business Advisors for Family Enterprises"
+    },
+    "sections.hero.home.heading.id": {
+      "type": "text",
+      "label": "Judul hero Beranda Indonesia",
+      "required": true,
+      "maxLength": 52,
+      "default": "Tumbuh tanpa kehilangan kendali."
+    },
+    "sections.hero.home.heading.en": {
+      "type": "text",
+      "label": "English Home hero heading",
+      "required": true,
+      "maxLength": 52,
+      "default": "Grow without losing control."
+    },
+    "sections.hero.home.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi hero Beranda Indonesia",
+      "maxLength": 150,
+      "default": "Kami menata manajemen, keuangan, operasi, dan stok agar pertumbuhan tidak bergantung pada satu orang."
+    },
+    "sections.hero.home.description.en": {
+      "type": "textarea",
+      "label": "English Home hero description",
+      "maxLength": 150,
+      "default": "We structure management, finance, operations, and inventory so growth no longer depends on one person."
+    },
+    "sections.hero.home.primaryCta.label.id": {
+      "type": "text",
+      "label": "CTA utama Beranda Indonesia",
+      "maxLength": 28,
+      "default": "Jadwalkan Konsultasi"
+    },
+    "sections.hero.home.primaryCta.label.en": {
+      "type": "text",
+      "label": "English Home primary CTA",
+      "maxLength": 28,
+      "default": "Schedule a Consultation"
+    },
+    "sections.hero.home.secondaryCta.label.id": {
+      "type": "text",
+      "label": "CTA kedua Beranda Indonesia",
+      "maxLength": 22,
+      "default": "Lihat Layanan"
+    },
+    "sections.hero.home.secondaryCta.label.en": {
+      "type": "text",
+      "label": "English Home secondary CTA",
+      "maxLength": 22,
+      "default": "Explore Services"
+    },
+    "sections.hero.home.image": {
+      "type": "image",
+      "label": "Foto hero rapat eksekutif",
+      "required": true,
+      "accept": ["image/png", "image/jpeg", "image/webp"],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-executive-meeting.webp",
+        "focalPoint": { "x": 50, "y": 46 }
+      }
+    },
+    "sections.hero.home.imageAlt.id": {
+      "type": "text",
+      "label": "Alt foto hero Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Pemilik bisnis dan konsultan berdiskusi dalam ruang rapat eksekutif"
+    },
+    "sections.hero.home.imageAlt.en": {
+      "type": "text",
+      "label": "English hero image alt",
+      "required": true,
+      "maxLength": 150,
+      "default": "Business owners and advisors in discussion inside an executive meeting room"
+    },
+    "sections.hero.about.heading.id": {
+      "type": "text",
+      "label": "Judul hero Tentang Indonesia",
+      "required": true,
+      "maxLength": 82,
+      "default": "Kejelasan profesional, dengan hormat pada dinamika keluarga."
+    },
+    "sections.hero.about.heading.en": {
+      "type": "text",
+      "label": "English About hero heading",
+      "required": true,
+      "maxLength": 82,
+      "default": "Professional clarity, with respect for family dynamics."
+    },
+    "sections.hero.about.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi hero Tentang Indonesia",
+      "maxLength": 150,
+      "default": "Pandangan objektif yang tetap menghormati nilai, hubungan, dan sejarah perusahaan keluarga."
+    },
+    "sections.hero.about.description.en": {
+      "type": "textarea",
+      "label": "English About hero description",
+      "maxLength": 150,
+      "default": "An objective perspective that respects the values, relationships, and history of a family enterprise."
+    },
+    "sections.hero.services.heading.id": {
+      "type": "text",
+      "label": "Judul hero Layanan Indonesia",
+      "required": true,
+      "maxLength": 82,
+      "default": "Pendampingan yang menyentuh cara bisnis benar-benar bekerja."
+    },
+    "sections.hero.services.heading.en": {
+      "type": "text",
+      "label": "English Services hero heading",
+      "required": true,
+      "maxLength": 82,
+      "default": "Advisory that improves how the business actually works."
+    },
+    "sections.hero.services.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi hero Layanan Indonesia",
+      "maxLength": 150,
+      "default": "Mulai dari satu prioritas atau hubungkan fungsi yang saling memengaruhi."
+    },
+    "sections.hero.services.description.en": {
+      "type": "textarea",
+      "label": "English Services hero description",
+      "maxLength": 150,
+      "default": "Start with one priority or connect the functions that influence one another."
+    },
+    "sections.hero.approach.heading.id": {
+      "type": "text",
+      "label": "Judul hero Metode Indonesia",
+      "required": true,
+      "maxLength": 82,
+      "default": "Masuk ke realitas bisnis, lalu menata perubahan bersama."
+    },
+    "sections.hero.approach.heading.en": {
+      "type": "text",
+      "label": "English Approach hero heading",
+      "required": true,
+      "maxLength": 82,
+      "default": "Grounded in your business reality, built together with your team."
+    },
+    "sections.hero.approach.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi hero Metode Indonesia",
+      "maxLength": 150,
+      "default": "Setiap rekomendasi disusun agar dapat dipahami, diuji, dan dimiliki tim internal."
+    },
+    "sections.hero.approach.description.en": {
+      "type": "textarea",
+      "label": "English Approach hero description",
+      "maxLength": 150,
+      "default": "Every recommendation is designed to be understood, tested, and owned by your internal team."
+    },
+    "sections.hero.insights.heading.id": {
+      "type": "text",
+      "label": "Judul hero Insight Indonesia",
+      "required": true,
+      "maxLength": 76,
+      "default": "Wawasan untuk pertumbuhan yang lebih tertata."
+    },
+    "sections.hero.insights.heading.en": {
+      "type": "text",
+      "label": "English Insights hero heading",
+      "required": true,
+      "maxLength": 76,
+      "default": "Insights for more structured growth."
+    },
+    "sections.hero.insights.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi hero Insight Indonesia",
+      "maxLength": 150,
+      "default": "Catatan praktis bagi pemilik dan manajemen perusahaan keluarga."
+    },
+    "sections.hero.insights.description.en": {
+      "type": "textarea",
+      "label": "English Insights hero description",
+      "maxLength": 150,
+      "default": "Practical perspectives for family business owners and management teams."
+    },
+    "sections.hero.contact.heading.id": {
+      "type": "text",
+      "label": "Judul hero Kontak Indonesia",
+      "required": true,
+      "maxLength": 76,
+      "default": "Bawa satu masalah utama. Kita mulai dari sana."
+    },
+    "sections.hero.contact.heading.en": {
+      "type": "text",
+      "label": "English Contact hero heading",
+      "required": true,
+      "maxLength": 76,
+      "default": "Bring one pressing issue. We will start there."
+    },
+    "sections.hero.contact.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi hero Kontak Indonesia",
+      "maxLength": 150,
+      "default": "Ceritakan konteks singkat bisnis Anda melalui WhatsApp atau formulir konsultasi."
+    },
+    "sections.hero.contact.description.en": {
+      "type": "textarea",
+      "label": "English Contact hero description",
+      "maxLength": 150,
+      "default": "Share a brief business context through WhatsApp or our consultation form."
+    },
+
+    "sections.about.heading.id": {
+      "type": "text",
+      "label": "Judul Tentang Indonesia",
+      "maxLength": 78,
+      "default": "Objektif pada masalah, manusiawi pada proses."
+    },
+    "sections.about.heading.en": {
+      "type": "text",
+      "label": "English About heading",
+      "maxLength": 78,
+      "default": "Objective about the issue, considerate in the process."
+    },
+    "sections.about.body.id": {
+      "type": "textarea",
+      "label": "Isi Tentang Indonesia",
+      "maxLength": 420,
+      "default": "Perusahaan keluarga menyatukan kepemilikan, hubungan, dan tanggung jawab bisnis dalam satu ruang. Kami membantu pemilik melihat persoalan dengan jernih tanpa mengabaikan nilai yang membentuk perusahaan sejak awal."
+    },
+    "sections.about.body.en": {
+      "type": "textarea",
+      "label": "English About body",
+      "maxLength": 420,
+      "default": "Family enterprises bring ownership, relationships, and business responsibilities into the same room. We help owners see issues clearly without overlooking the values that shaped the company."
+    },
+    "sections.about.image": {
+      "type": "image",
+      "label": "Foto halaman Tentang",
+      "required": true,
+      "accept": ["image/png", "image/jpeg", "image/webp"],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-executive-meeting.webp",
+        "focalPoint": { "x": 48, "y": 46 }
+      }
+    },
+    "sections.about.imageAlt.id": {
+      "type": "text",
+      "label": "Alt foto Tentang Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Tim penasihat membahas arah perusahaan keluarga bersama pemilik bisnis"
+    },
+    "sections.about.imageAlt.en": {
+      "type": "text",
+      "label": "English About image alt",
+      "required": true,
+      "maxLength": 150,
+      "default": "Advisors discussing the direction of a family enterprise with its owners"
+    },
+
+    "sections.values.heading.id": {
+      "type": "text",
+      "label": "Judul Nilai Indonesia",
+      "maxLength": 72,
+      "default": "Prinsip yang menjaga kualitas pendampingan."
+    },
+    "sections.values.heading.en": {
+      "type": "text",
+      "label": "English Values heading",
+      "maxLength": 72,
+      "default": "Principles that protect the quality of our work."
+    },
+    "sections.values.items": {
+      "type": "array",
+      "label": "Nilai pendampingan",
+      "minItems": 2,
+      "maxItems": 6,
+      "default": [
+        {
+          "title": {
+            "id": "Objektif dan manusiawi",
+            "en": "Objective and considerate"
+          },
+          "description": {
+            "id": "Masalah dibahas dengan jernih tanpa mengabaikan orang di dalamnya.",
+            "en": "Issues are addressed clearly without overlooking the people involved."
+          }
+        },
+        {
+          "title": { "id": "Praktis", "en": "Practical" },
+          "description": {
+            "id": "Rekomendasi disesuaikan dengan kapasitas tim dan kondisi bisnis.",
+            "en": "Recommendations reflect the team's capacity and business reality."
+          }
+        },
+        {
+          "title": { "id": "Transparan", "en": "Transparent" },
+          "description": {
+            "id": "Ruang lingkup, prioritas, dan tanggung jawab disepakati sejak awal.",
+            "en": "Scope, priorities, and responsibilities are agreed from the outset."
+          }
+        },
+        {
+          "title": {
+            "id": "Membangun kemandirian",
+            "en": "Built for internal ownership"
+          },
+          "description": {
+            "id": "Tim internal dilibatkan agar perubahan berlanjut setelah proyek selesai.",
+            "en": "Internal teams are involved so improvements continue beyond the engagement."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 52
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 52
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 180
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 180
+          }
+        }
+      }
+    },
+
+    "sections.team.heading.id": {
+      "type": "text",
+      "label": "Judul Tim Indonesia",
+      "maxLength": 72,
+      "default": "Empat disiplin. Satu pandangan menyeluruh."
+    },
+    "sections.team.heading.en": {
+      "type": "text",
+      "label": "English Team heading",
+      "maxLength": 72,
+      "default": "Four disciplines. One connected view."
+    },
+    "sections.team.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi Tim Indonesia",
+      "maxLength": 220,
+      "default": "Tim konsultan menghubungkan strategi, angka, proses, dan persediaan agar keputusan tidak berhenti di satu fungsi."
+    },
+    "sections.team.description.en": {
+      "type": "textarea",
+      "label": "English Team description",
+      "maxLength": 220,
+      "default": "Our advisors connect strategy, numbers, processes, and inventory so decisions do not stop within one function."
+    },
+    "sections.team.items": {
+      "type": "array",
+      "label": "Profil konsultan",
+      "minItems": 2,
+      "maxItems": 8,
+      "default": [
+        {
+          "name": "Raka Pranadipta",
+          "role": {
+            "id": "Managing Partner dan Penasihat Strategi",
+            "en": "Managing Partner and Strategy Advisor"
+          },
+          "bio": {
+            "id": "Menyelaraskan aspirasi keluarga, arah bisnis, struktur pengelolaan, dan prioritas manajemen.",
+            "en": "Aligns family aspirations, business direction, governance structures, and management priorities."
+          },
+          "expertise": {
+            "id": "Strategi dan tata kelola",
+            "en": "Strategy and governance"
+          },
+          "image": {
+            "src": "assets/team-raka-pranadipta.webp",
+            "focalPoint": { "x": 50, "y": 38 }
+          },
+          "imageAlt": {
+            "id": "Potret profesional Raka Pranadipta",
+            "en": "Professional portrait of Raka Pranadipta"
+          }
+        },
+        {
+          "name": "Maya Lestari",
+          "role": {
+            "id": "Penasihat Transformasi Keuangan",
+            "en": "Finance Transformation Advisor"
+          },
+          "bio": {
+            "id": "Berfokus pada pelaporan manajemen, arus kas, penganggaran, struktur biaya, dan kontrol keuangan.",
+            "en": "Focuses on management reporting, cash flow, budgeting, cost structures, and financial controls."
+          },
+          "expertise": {
+            "id": "Keuangan dan kontrol",
+            "en": "Finance and control"
+          },
+          "image": {
+            "src": "assets/team-maya-lestari.webp",
+            "focalPoint": { "x": 50, "y": 36 }
+          },
+          "imageAlt": {
+            "id": "Potret profesional Maya Lestari",
+            "en": "Professional portrait of Maya Lestari"
+          }
+        },
+        {
+          "name": "Arief Wibisana",
+          "role": {
+            "id": "Penasihat Keunggulan Operasional",
+            "en": "Operations Excellence Advisor"
+          },
+          "bio": {
+            "id": "Menyederhanakan proses, memperjelas koordinasi, dan membangun ritme kerja yang konsisten.",
+            "en": "Simplifies processes, clarifies coordination, and establishes consistent operating rhythms."
+          },
+          "expertise": {
+            "id": "Operasi dan proses",
+            "en": "Operations and process"
+          },
+          "image": {
+            "src": "assets/team-arief-wibisana.webp",
+            "focalPoint": { "x": 50, "y": 36 }
+          },
+          "imageAlt": {
+            "id": "Potret profesional Arief Wibisana",
+            "en": "Professional portrait of Arief Wibisana"
+          }
+        },
+        {
+          "name": "Nabila Rahardja",
+          "role": {
+            "id": "Penasihat Persediaan dan Rantai Pasok",
+            "en": "Inventory and Supply Chain Advisor"
+          },
+          "bio": {
+            "id": "Menata klasifikasi barang, kebijakan stok, pemesanan, serta hubungan penjualan dan pengadaan.",
+            "en": "Structures item classification, stock policies, replenishment, and alignment between sales and procurement."
+          },
+          "expertise": {
+            "id": "Persediaan dan rantai pasok",
+            "en": "Inventory and supply chain"
+          },
+          "image": {
+            "src": "assets/team-nabila-rahardja.webp",
+            "focalPoint": { "x": 50, "y": 36 }
+          },
+          "imageAlt": {
+            "id": "Potret profesional Nabila Rahardja",
+            "en": "Professional portrait of Nabila Rahardja"
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "name": {
+            "type": "text",
+            "label": "Nama",
+            "required": true,
+            "maxLength": 60
+          },
+          "role.id": {
+            "type": "text",
+            "label": "Jabatan Indonesia",
+            "required": true,
+            "maxLength": 72
+          },
+          "role.en": {
+            "type": "text",
+            "label": "English role",
+            "required": true,
+            "maxLength": 72
+          },
+          "bio.id": {
+            "type": "textarea",
+            "label": "Bio Indonesia",
+            "required": true,
+            "maxLength": 220
+          },
+          "bio.en": {
+            "type": "textarea",
+            "label": "English bio",
+            "required": true,
+            "maxLength": 220
+          },
+          "expertise.id": {
+            "type": "text",
+            "label": "Keahlian Indonesia",
+            "maxLength": 60
+          },
+          "expertise.en": {
+            "type": "text",
+            "label": "English expertise",
+            "maxLength": 60
+          },
+          "image": {
+            "type": "image",
+            "label": "Foto",
+            "required": true,
+            "accept": ["image/png", "image/jpeg", "image/webp"],
+            "maxFileSizeMB": 5,
+            "aspectRatio": "4:5",
+            "focalPoint": true
+          },
+          "imageAlt.id": {
+            "type": "text",
+            "label": "Alt foto Indonesia",
+            "required": true,
+            "maxLength": 130
+          },
+          "imageAlt.en": {
+            "type": "text",
+            "label": "English photo alt",
+            "required": true,
+            "maxLength": 130
+          }
+        }
+      }
+    },
+
+    "sections.services.heading.id": {
+      "type": "text",
+      "label": "Judul Layanan Indonesia",
+      "maxLength": 78,
+      "default": "Empat area yang menentukan kualitas pertumbuhan."
+    },
+    "sections.services.heading.en": {
+      "type": "text",
+      "label": "English Services heading",
+      "maxLength": 78,
+      "default": "Four areas that shape the quality of growth."
+    },
+    "sections.services.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi Layanan Indonesia",
+      "maxLength": 240,
+      "default": "Pendampingan dapat dimulai dari satu kebutuhan prioritas atau mencakup beberapa fungsi yang saling berkaitan."
+    },
+    "sections.services.description.en": {
+      "type": "textarea",
+      "label": "English Services description",
+      "maxLength": 240,
+      "default": "An engagement can begin with one priority need or cover several connected business functions."
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Daftar layanan",
+      "minItems": 2,
+      "maxItems": 8,
+      "default": [
+        {
+          "code": "01",
+          "title": {
+            "id": "Strategi Manajemen Internal",
+            "en": "Internal Management Strategy"
+          },
+          "description": {
+            "id": "Menata peran, wewenang, prioritas, dan ritme pengambilan keputusan.",
+            "en": "Clarifying roles, authority, priorities, and decision-making rhythms."
+          },
+          "scope": {
+            "id": "Struktur peran, batas wewenang, agenda rapat, penyelarasan pemilik dan manajemen.",
+            "en": "Role structures, decision rights, meeting cadence, and owner-management alignment."
+          }
+        },
+        {
+          "code": "02",
+          "title": { "id": "Manajemen Keuangan", "en": "Financial Management" },
+          "description": {
+            "id": "Membuat angka lebih mudah dibaca dan lebih berguna bagi keputusan.",
+            "en": "Making financial information clearer and more useful for decisions."
+          },
+          "scope": {
+            "id": "Laporan manajemen, arus kas, anggaran, biaya, margin, dan kontrol persetujuan.",
+            "en": "Management reporting, cash flow, budgets, costs, margins, and approval controls."
+          }
+        },
+        {
+          "code": "03",
+          "title": {
+            "id": "Keunggulan Operasional",
+            "en": "Operational Excellence"
+          },
+          "description": {
+            "id": "Menyederhanakan alur kerja dan membangun konsistensi antar fungsi.",
+            "en": "Simplifying workflows and building consistency across functions."
+          },
+          "scope": {
+            "id": "Pemetaan proses, SOP prioritas, indikator kerja, kapasitas, dan koordinasi lintas fungsi.",
+            "en": "Process mapping, priority SOPs, performance indicators, capacity, and cross-functional coordination."
+          }
+        },
+        {
+          "code": "04",
+          "title": {
+            "id": "Manajemen Persediaan",
+            "en": "Inventory Management"
+          },
+          "description": {
+            "id": "Menyeimbangkan ketersediaan barang, modal kerja, dan kebutuhan pelanggan.",
+            "en": "Balancing product availability, working capital, and customer demand."
+          },
+          "scope": {
+            "id": "Klasifikasi barang, titik pesan ulang, stok pengaman, stock count, dan stok lambat.",
+            "en": "Item classification, reorder points, safety stock, stock counts, and slow-moving inventory."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "code": {
+            "type": "text",
+            "label": "Kode",
+            "required": true,
+            "maxLength": 4
+          },
+          "title.id": {
+            "type": "text",
+            "label": "Nama layanan Indonesia",
+            "required": true,
+            "maxLength": 64
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English service name",
+            "required": true,
+            "maxLength": 64
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 190
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 190
+          },
+          "scope.id": {
+            "type": "textarea",
+            "label": "Cakupan Indonesia",
+            "required": true,
+            "maxLength": 260
+          },
+          "scope.en": {
+            "type": "textarea",
+            "label": "English scope",
+            "required": true,
+            "maxLength": 260
+          }
+        }
+      }
+    },
+
+    "sections.approach.heading.id": {
+      "type": "text",
+      "label": "Judul Metode Indonesia",
+      "maxLength": 78,
+      "default": "Dari masalah yang terasa, menuju perubahan yang dapat dijalankan."
+    },
+    "sections.approach.heading.en": {
+      "type": "text",
+      "label": "English Approach heading",
+      "maxLength": 78,
+      "default": "From visible problems to changes your team can carry forward."
+    },
+    "sections.approach.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi Metode Indonesia",
+      "maxLength": 240,
+      "default": "Kami menggabungkan pandangan pemilik, fakta lapangan, dan kemampuan tim untuk menentukan perubahan yang paling relevan."
+    },
+    "sections.approach.description.en": {
+      "type": "textarea",
+      "label": "English Approach description",
+      "maxLength": 240,
+      "default": "We combine the owner's perspective, operating facts, and team capacity to define the most relevant changes."
+    },
+    "sections.approach.items": {
+      "type": "array",
+      "label": "Tahapan pendampingan",
+      "minItems": 3,
+      "maxItems": 7,
+      "default": [
+        {
+          "step": "01",
+          "title": {
+            "id": "Mendengar dan menyelaraskan",
+            "en": "Listen and align"
+          },
+          "description": {
+            "id": "Memahami konteks pemilik, dinamika tim, dan keputusan yang sedang dihadapi.",
+            "en": "Understanding the owners' context, team dynamics, and current decisions."
+          }
+        },
+        {
+          "step": "02",
+          "title": { "id": "Memetakan fakta", "en": "Map the facts" },
+          "description": {
+            "id": "Meninjau data, proses, peran, dan kebiasaan kerja yang relevan.",
+            "en": "Reviewing the relevant data, processes, roles, and working habits."
+          }
+        },
+        {
+          "step": "03",
+          "title": { "id": "Menentukan prioritas", "en": "Set priorities" },
+          "description": {
+            "id": "Memilih perubahan yang paling penting dan realistis untuk dijalankan.",
+            "en": "Selecting the changes that matter most and are realistic to implement."
+          }
+        },
+        {
+          "step": "04",
+          "title": { "id": "Menerapkan bersama", "en": "Implement together" },
+          "description": {
+            "id": "Membangun alat kerja, menguji proses, dan mendampingi tim saat digunakan.",
+            "en": "Building working tools, testing processes, and supporting the team as they are adopted."
+          }
+        },
+        {
+          "step": "05",
+          "title": {
+            "id": "Meninjau dan menanamkan",
+            "en": "Review and embed"
+          },
+          "description": {
+            "id": "Memeriksa hasil, memperbaiki hambatan, dan menetapkan ritme tindak lanjut.",
+            "en": "Reviewing outcomes, resolving obstacles, and establishing a follow-through rhythm."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "step": {
+            "type": "text",
+            "label": "Nomor tahap",
+            "required": true,
+            "maxLength": 4
+          },
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 58
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 58
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 210
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 210
+          }
+        }
+      }
+    },
+
+    "sections.outputs.heading.id": {
+      "type": "text",
+      "label": "Judul Keluaran Indonesia",
+      "maxLength": 76,
+      "default": "Hasil kerja yang dapat diperiksa, bukan janji besar."
+    },
+    "sections.outputs.heading.en": {
+      "type": "text",
+      "label": "English Outputs heading",
+      "maxLength": 76,
+      "default": "Work you can inspect, not oversized promises."
+    },
+    "sections.outputs.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi Keluaran Indonesia",
+      "maxLength": 220,
+      "default": "Setiap pendampingan dirancang untuk meninggalkan alat kerja yang benar-benar dapat digunakan tim."
+    },
+    "sections.outputs.description.en": {
+      "type": "textarea",
+      "label": "English Outputs description",
+      "maxLength": 220,
+      "default": "Every engagement is designed to leave your team with working tools they can continue to use."
+    },
+    "sections.outputs.items": {
+      "type": "array",
+      "label": "Keluaran pendampingan",
+      "minItems": 2,
+      "maxItems": 8,
+      "default": [
+        {
+          "title": { "id": "Peran dan keputusan", "en": "Roles and decisions" },
+          "description": {
+            "id": "Matriks peran, wewenang, dan agenda keputusan manajemen.",
+            "en": "A practical matrix for roles, authority, and management decisions."
+          }
+        },
+        {
+          "title": { "id": "Kendali keuangan", "en": "Financial control" },
+          "description": {
+            "id": "Dashboard manajemen, definisi angka, dan kalender pelaporan.",
+            "en": "A management dashboard, defined metrics, and reporting calendar."
+          }
+        },
+        {
+          "title": {
+            "id": "Proses yang konsisten",
+            "en": "Consistent processes"
+          },
+          "description": {
+            "id": "Peta proses, SOP prioritas, pemilik proses, dan jalur eskalasi.",
+            "en": "Process maps, priority SOPs, process owners, and escalation paths."
+          }
+        },
+        {
+          "title": { "id": "Kebijakan persediaan", "en": "Inventory policy" },
+          "description": {
+            "id": "Aturan pemesanan ulang, stock count, dan penanganan stok lambat.",
+            "en": "Reorder rules, stock counts, and slow-moving inventory treatment."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 54
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 54
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 190
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 190
+          }
+        }
+      }
+    },
+
+    "sections.insights.heading.id": {
+      "type": "text",
+      "label": "Judul Insight Indonesia",
+      "maxLength": 72,
+      "default": "Catatan untuk keputusan yang lebih jernih."
+    },
+    "sections.insights.heading.en": {
+      "type": "text",
+      "label": "English Insights heading",
+      "maxLength": 72,
+      "default": "Notes for clearer decisions."
+    },
+    "sections.insights.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi Insight Indonesia",
+      "maxLength": 220,
+      "default": "Wawasan praktis tentang tata kelola, angka, proses, dan persediaan bagi pemilik bisnis keluarga."
+    },
+    "sections.insights.description.en": {
+      "type": "textarea",
+      "label": "English Insights description",
+      "maxLength": 220,
+      "default": "Practical perspectives on governance, numbers, processes, and inventory for family business owners."
+    },
+    "sections.insights.items": {
+      "type": "array",
+      "label": "Daftar insight",
+      "minItems": 3,
+      "maxItems": 12,
+      "default": [
+        {
+          "category": { "id": "Kepemimpinan", "en": "Leadership" },
+          "title": {
+            "id": "Ketika pertumbuhan terlalu bergantung pada pemilik",
+            "en": "When growth depends too heavily on the owner"
+          },
+          "excerpt": {
+            "id": "Mengenali keputusan yang perlu tetap di tangan pemilik dan yang sudah dapat didelegasikan.",
+            "en": "Recognising which decisions should remain with the owner and which can be delegated."
+          }
+        },
+        {
+          "category": { "id": "Keuangan", "en": "Finance" },
+          "title": {
+            "id": "Mengapa laporan keuangan belum tentu membantu keputusan",
+            "en": "Why financial reports do not always support decisions"
+          },
+          "excerpt": {
+            "id": "Membedakan laporan pencatatan dari informasi yang benar-benar dibutuhkan manajemen.",
+            "en": "Separating record-keeping reports from information management actually needs."
+          }
+        },
+        {
+          "category": { "id": "Operasional", "en": "Operations" },
+          "title": {
+            "id": "SOP yang membantu tanpa menambah birokrasi",
+            "en": "SOPs that help without adding bureaucracy"
+          },
+          "excerpt": {
+            "id": "Menentukan proses mana yang perlu distandarkan terlebih dahulu.",
+            "en": "Deciding which processes should be standardised first."
+          }
+        },
+        {
+          "category": { "id": "Persediaan", "en": "Inventory" },
+          "title": {
+            "id": "Stok aman bukan sekadar angka perkiraan",
+            "en": "Safety stock should not be guesswork"
+          },
+          "excerpt": {
+            "id": "Menimbang permintaan, waktu pengadaan, dan risiko kehabisan barang.",
+            "en": "Balancing demand, lead times, and the risk of stockouts."
+          }
+        },
+        {
+          "category": { "id": "Manajemen", "en": "Management" },
+          "title": {
+            "id": "Rapat manajemen yang menghasilkan tindak lanjut",
+            "en": "Management meetings that lead to action"
+          },
+          "excerpt": {
+            "id": "Mengubah rapat dari forum laporan menjadi ruang keputusan.",
+            "en": "Turning meetings from reporting sessions into decision forums."
+          }
+        },
+        {
+          "category": { "id": "Tata Kelola", "en": "Governance" },
+          "title": {
+            "id": "Menjaga nilai keluarga sambil memperjelas profesionalisme",
+            "en": "Preserving family values while clarifying professional roles"
+          },
+          "excerpt": {
+            "id": "Memisahkan hubungan keluarga dari tanggung jawab jabatan tanpa memutus kedekatan.",
+            "en": "Separating family relationships from role accountability without losing closeness."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "category.id": {
+            "type": "text",
+            "label": "Kategori Indonesia",
+            "required": true,
+            "maxLength": 32
+          },
+          "category.en": {
+            "type": "text",
+            "label": "English category",
+            "required": true,
+            "maxLength": 32
+          },
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 88
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 88
+          },
+          "excerpt.id": {
+            "type": "textarea",
+            "label": "Ringkasan Indonesia",
+            "required": true,
+            "maxLength": 210
+          },
+          "excerpt.en": {
+            "type": "textarea",
+            "label": "English excerpt",
+            "required": true,
+            "maxLength": 210
+          }
+        }
+      }
+    },
+    "sections.insights.newsletterHeading.id": {
+      "type": "text",
+      "label": "Judul newsletter Indonesia",
+      "maxLength": 54,
+      "default": "Catatan Tata Tumbuh"
+    },
+    "sections.insights.newsletterHeading.en": {
+      "type": "text",
+      "label": "English newsletter heading",
+      "maxLength": 54,
+      "default": "Tata Tumbuh Notes"
+    },
+    "sections.insights.newsletterBody.id": {
+      "type": "textarea",
+      "label": "Isi newsletter Indonesia",
+      "maxLength": 170,
+      "default": "Wawasan ringkas untuk membantu pemilik melihat bisnis dengan lebih jernih."
+    },
+    "sections.insights.newsletterBody.en": {
+      "type": "textarea",
+      "label": "English newsletter body",
+      "maxLength": 170,
+      "default": "Concise perspectives to help owners see their business more clearly."
+    },
+
+    "sections.faq.heading.id": {
+      "type": "text",
+      "label": "Judul FAQ Indonesia",
+      "maxLength": 64,
+      "default": "Sebelum percakapan pertama."
+    },
+    "sections.faq.heading.en": {
+      "type": "text",
+      "label": "English FAQ heading",
+      "maxLength": 64,
+      "default": "Before our first conversation."
+    },
+    "sections.faq.items": {
+      "type": "array",
+      "label": "Pertanyaan umum",
+      "minItems": 3,
+      "maxItems": 10,
+      "default": [
+        {
+          "question": {
+            "id": "Apakah konsultasi awal berbayar?",
+            "en": "Is the initial consultation paid?"
+          },
+          "answer": {
+            "id": "Percakapan perkenalan singkat tidak berbayar. Ruang lingkup pendampingan dijelaskan sebelum ada komitmen.",
+            "en": "A brief introductory conversation is complimentary. The engagement scope is explained before any commitment."
+          }
+        },
+        {
+          "question": {
+            "id": "Apakah hanya menangani industri tertentu?",
+            "en": "Do you work only with specific industries?"
+          },
+          "answer": {
+            "id": "Tidak. Pendekatan kami berfokus pada sistem pengelolaan dan disesuaikan dengan konteks setiap perusahaan.",
+            "en": "No. Our approach focuses on management systems and adapts to each company's context."
+          }
+        },
+        {
+          "question": {
+            "id": "Apakah konsultan menggantikan manajemen?",
+            "en": "Will the advisors replace our management team?"
+          },
+          "answer": {
+            "id": "Tidak. Kami bekerja bersama pemilik dan manajemen untuk memperkuat keputusan, sistem, dan kemampuan tim.",
+            "en": "No. We work alongside owners and management to strengthen decisions, systems, and team capability."
+          }
+        },
+        {
+          "question": {
+            "id": "Apakah data harus sudah lengkap?",
+            "en": "Does our data need to be complete?"
+          },
+          "answer": {
+            "id": "Tidak. Kami dapat memulai dari informasi yang tersedia dan menentukan data yang perlu diperbaiki.",
+            "en": "No. We can begin with available information and identify what needs to be improved."
+          }
+        },
+        {
+          "question": {
+            "id": "Bagaimana kerahasiaan informasi dijaga?",
+            "en": "How is confidentiality handled?"
+          },
+          "answer": {
+            "id": "Akses dibatasi sesuai kebutuhan, dan perjanjian kerahasiaan dapat digunakan sebelum data sensitif ditinjau.",
+            "en": "Access is limited by need, and a confidentiality agreement can be established before sensitive data is reviewed."
+          }
+        },
+        {
+          "question": {
+            "id": "Bisakah kami memulai dari satu area?",
+            "en": "Can we begin with one area?"
+          },
+          "answer": {
+            "id": "Bisa. Pendampingan dapat dimulai dari satu masalah prioritas dan diperluas hanya bila diperlukan.",
+            "en": "Yes. An engagement can begin with one priority issue and expand only when needed."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "question.id": {
+            "type": "text",
+            "label": "Pertanyaan Indonesia",
+            "required": true,
+            "maxLength": 110
+          },
+          "question.en": {
+            "type": "text",
+            "label": "English question",
+            "required": true,
+            "maxLength": 110
+          },
+          "answer.id": {
+            "type": "textarea",
+            "label": "Jawaban Indonesia",
+            "required": true,
+            "maxLength": 320
+          },
+          "answer.en": {
+            "type": "textarea",
+            "label": "English answer",
+            "required": true,
+            "maxLength": 320
+          }
+        }
+      }
+    },
+
+    "sections.contact.heading.id": {
+      "type": "text",
+      "label": "Judul Kontak Indonesia",
+      "maxLength": 72,
+      "default": "Mulai dengan percakapan yang terarah."
+    },
+    "sections.contact.heading.en": {
+      "type": "text",
+      "label": "English Contact heading",
+      "maxLength": 72,
+      "default": "Begin with a focused conversation."
+    },
+    "sections.contact.description.id": {
+      "type": "textarea",
+      "label": "Deskripsi Kontak Indonesia",
+      "maxLength": 240,
+      "default": "Sampaikan gambaran perusahaan, masalah yang paling mendesak, dan keputusan yang sedang Anda pertimbangkan."
+    },
+    "sections.contact.description.en": {
+      "type": "textarea",
+      "label": "English Contact description",
+      "maxLength": 240,
+      "default": "Share an overview of your company, the most pressing issue, and the decision you are considering."
+    },
+    "sections.contact.preparation.id": {
+      "type": "textarea",
+      "label": "Persiapan konsultasi Indonesia",
+      "maxLength": 280,
+      "default": "Siapkan gambaran perusahaan, masalah utama, perubahan yang diharapkan, dan waktu yang nyaman untuk berbicara."
+    },
+    "sections.contact.preparation.en": {
+      "type": "textarea",
+      "label": "English consultation preparation",
+      "maxLength": 280,
+      "default": "Prepare a company overview, the main issue, the change you need, and your preferred time to speak."
+    },
+    "sections.contact.formHeading.id": {
+      "type": "text",
+      "label": "Judul formulir Indonesia",
+      "maxLength": 64,
+      "default": "Kirim ringkasan kebutuhan Anda."
+    },
+    "sections.contact.formHeading.en": {
+      "type": "text",
+      "label": "English form heading",
+      "maxLength": 64,
+      "default": "Share a summary of your needs."
+    },
+    "sections.contact.formDescription.id": {
+      "type": "textarea",
+      "label": "Deskripsi formulir Indonesia",
+      "maxLength": 180,
+      "default": "Tim kami akan meninjau konteks Anda sebelum menghubungi kembali."
+    },
+    "sections.contact.formDescription.en": {
+      "type": "textarea",
+      "label": "English form description",
+      "maxLength": 180,
+      "default": "Our team will review your context before following up."
+    },
+    "sections.contact.submitLabel.id": {
+      "type": "text",
+      "label": "Tombol formulir Indonesia",
+      "maxLength": 24,
+      "default": "Kirim Permintaan"
+    },
+    "sections.contact.submitLabel.en": {
+      "type": "text",
+      "label": "English form button",
+      "maxLength": 24,
+      "default": "Send Enquiry"
+    },
+
+    "sections.cta.heading.id": {
+      "type": "text",
+      "label": "Judul CTA Indonesia",
+      "maxLength": 78,
+      "default": "Mulai dari satu persoalan yang paling menghambat bisnis Anda."
+    },
+    "sections.cta.heading.en": {
+      "type": "text",
+      "label": "English CTA heading",
+      "maxLength": 78,
+      "default": "Start with the one issue holding your business back."
+    },
+    "sections.cta.body.id": {
+      "type": "textarea",
+      "label": "Isi CTA Indonesia",
+      "maxLength": 190,
+      "default": "Ceritakan situasinya melalui WhatsApp. Kami akan membantu menentukan percakapan awal yang paling relevan."
+    },
+    "sections.cta.body.en": {
+      "type": "textarea",
+      "label": "English CTA body",
+      "maxLength": 190,
+      "default": "Tell us about it on WhatsApp. We will help shape the most relevant first conversation."
+    },
+    "sections.cta.buttonLabel.id": {
+      "type": "text",
+      "label": "Tombol CTA Indonesia",
+      "maxLength": 28,
+      "default": "Jadwalkan Konsultasi"
+    },
+    "sections.cta.buttonLabel.en": {
+      "type": "text",
+      "label": "English CTA button",
+      "maxLength": 28,
+      "default": "Schedule a Consultation"
+    },
+
+    "sections.footer.summary.id": {
+      "type": "textarea",
+      "label": "Ringkasan footer Indonesia",
+      "maxLength": 220,
+      "default": "Membantu bisnis keluarga bertumbuh dengan pengelolaan yang lebih jelas, disiplin, dan dapat dijalankan."
+    },
+    "sections.footer.summary.en": {
+      "type": "textarea",
+      "label": "English footer summary",
+      "maxLength": 220,
+      "default": "Helping family enterprises grow through management systems that are clearer, more disciplined, and workable."
+    },
+    "sections.footer.hours.id": {
+      "type": "text",
+      "label": "Jam konsultasi Indonesia",
+      "maxLength": 80,
+      "default": "Senin-Jumat, 09.00-17.00 WIB"
+    },
+    "sections.footer.hours.en": {
+      "type": "text",
+      "label": "English consultation hours",
+      "maxLength": 80,
+      "default": "Monday-Friday, 9:00 AM-5:00 PM WIB"
+    },
+    "sections.footer.copyright.id": {
+      "type": "text",
+      "label": "Hak cipta Indonesia",
+      "maxLength": 100,
+      "default": "© 2026 Tata Tumbuh Advisory. Seluruh hak dilindungi."
+    },
+    "sections.footer.copyright.en": {
+      "type": "text",
+      "label": "English copyright",
+      "maxLength": 100,
+      "default": "© 2026 Tata Tumbuh Advisory. All rights reserved."
+    },
+    "sections.footer.demoLabel.id": {
+      "type": "text",
+      "label": "Label data contoh Indonesia",
+      "required": true,
+      "maxLength": 32,
+      "default": "DATA CONTOH TEMPLATE"
+    },
+    "sections.footer.demoLabel.en": {
+      "type": "text",
+      "label": "English sample data label",
+      "required": true,
+      "maxLength": 32,
+      "default": "SAMPLE TEMPLATE DATA"
+    },
+    "sections.footer.demoNotice.id": {
+      "type": "textarea",
+      "label": "Catatan data contoh Indonesia",
+      "required": true,
+      "maxLength": 240,
+      "default": "Nama perusahaan, profil tim, alamat, nomor kontak, email, layanan, dan kebijakan pada template ini adalah data contoh. Ganti sebelum publikasi."
+    },
+    "sections.footer.demoNotice.en": {
+      "type": "textarea",
+      "label": "English sample data notice",
+      "required": true,
+      "maxLength": 240,
+      "default": "The company name, team profiles, address, contact numbers, email, services, and policies in this template are sample data. Replace before publishing."
+    }
+  },
+  "forms": [
+    {
+      "id": "consultation",
+      "label": "Consultation request",
+      "provider": "pagiverse-core",
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "maxLength": 80,
+          "labels": { "id": "Nama lengkap", "en": "Full name" }
+        },
+        {
+          "name": "company",
+          "type": "text",
+          "required": true,
+          "maxLength": 100,
+          "labels": { "id": "Perusahaan", "en": "Company" }
+        },
+        {
+          "name": "role",
+          "type": "text",
+          "required": false,
+          "maxLength": 80,
+          "labels": { "id": "Jabatan", "en": "Role" }
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "maxLength": 120,
+          "labels": { "id": "Email", "en": "Email" }
+        },
+        {
+          "name": "phone",
+          "type": "phone",
+          "required": true,
+          "maxLength": 24,
+          "labels": { "id": "Nomor WhatsApp", "en": "WhatsApp number" }
+        },
+        {
+          "name": "topic",
+          "type": "select",
+          "required": true,
+          "labels": { "id": "Topik utama", "en": "Primary topic" },
+          "options": [
+            {
+              "value": "management",
+              "labels": {
+                "id": "Manajemen internal",
+                "en": "Internal management"
+              }
+            },
+            {
+              "value": "finance",
+              "labels": { "id": "Keuangan", "en": "Finance" }
+            },
+            {
+              "value": "operations",
+              "labels": { "id": "Operasional", "en": "Operations" }
+            },
+            {
+              "value": "inventory",
+              "labels": { "id": "Persediaan", "en": "Inventory" }
+            }
+          ]
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": true,
+          "maxLength": 800,
+          "labels": {
+            "id": "Ceritakan situasi singkat",
+            "en": "Briefly describe the situation"
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero semua halaman",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.home.eyebrow.id",
+        "sections.hero.home.eyebrow.en",
+        "sections.hero.home.heading.id",
+        "sections.hero.home.heading.en",
+        "sections.hero.home.description.id",
+        "sections.hero.home.description.en",
+        "sections.hero.home.primaryCta.label.id",
+        "sections.hero.home.primaryCta.label.en",
+        "sections.hero.home.secondaryCta.label.id",
+        "sections.hero.home.secondaryCta.label.en",
+        "sections.hero.home.image",
+        "sections.hero.home.imageAlt.id",
+        "sections.hero.home.imageAlt.en",
+        "sections.hero.about.heading.id",
+        "sections.hero.about.heading.en",
+        "sections.hero.about.description.id",
+        "sections.hero.about.description.en",
+        "sections.hero.services.heading.id",
+        "sections.hero.services.heading.en",
+        "sections.hero.services.description.id",
+        "sections.hero.services.description.en",
+        "sections.hero.approach.heading.id",
+        "sections.hero.approach.heading.en",
+        "sections.hero.approach.description.id",
+        "sections.hero.approach.description.en",
+        "sections.hero.insights.heading.id",
+        "sections.hero.insights.heading.en",
+        "sections.hero.insights.description.id",
+        "sections.hero.insights.description.en",
+        "sections.hero.contact.heading.id",
+        "sections.hero.contact.heading.en",
+        "sections.hero.contact.description.id",
+        "sections.hero.contact.description.en"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Tentang",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.heading.id",
+        "sections.about.heading.en",
+        "sections.about.body.id",
+        "sections.about.body.en",
+        "sections.about.image",
+        "sections.about.imageAlt.id",
+        "sections.about.imageAlt.en"
+      ]
+    },
+    {
+      "id": "values",
+      "label": "Nilai Pendampingan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.values.heading.id",
+        "sections.values.heading.en",
+        "sections.values.items"
+      ]
+    },
+    {
+      "id": "team",
+      "label": "Tim Konsultan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.team.heading.id",
+        "sections.team.heading.en",
+        "sections.team.description.id",
+        "sections.team.description.en",
+        "sections.team.items"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Layanan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.heading.id",
+        "sections.services.heading.en",
+        "sections.services.description.id",
+        "sections.services.description.en",
+        "sections.services.items"
+      ]
+    },
+    {
+      "id": "approach",
+      "label": "Metode Pendampingan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.approach.heading.id",
+        "sections.approach.heading.en",
+        "sections.approach.description.id",
+        "sections.approach.description.en",
+        "sections.approach.items"
+      ]
+    },
+    {
+      "id": "outputs",
+      "label": "Keluaran Pendampingan",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.outputs.heading.id",
+        "sections.outputs.heading.en",
+        "sections.outputs.description.id",
+        "sections.outputs.description.en",
+        "sections.outputs.items"
+      ]
+    },
+    {
+      "id": "insights",
+      "label": "Insight",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.insights.heading.id",
+        "sections.insights.heading.en",
+        "sections.insights.description.id",
+        "sections.insights.description.en",
+        "sections.insights.items",
+        "sections.insights.newsletterHeading.id",
+        "sections.insights.newsletterHeading.en",
+        "sections.insights.newsletterBody.id",
+        "sections.insights.newsletterBody.en"
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.faq.heading.id",
+        "sections.faq.heading.en",
+        "sections.faq.items"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Kontak dan Konsultasi",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "contact.whatsapp",
+        "contact.phone",
+        "contact.email",
+        "contact.whatsappMessage.id",
+        "contact.whatsappMessage.en",
+        "location.address",
+        "location.mapsUrl",
+        "social.linkedin",
+        "sections.contact.heading.id",
+        "sections.contact.heading.en",
+        "sections.contact.description.id",
+        "sections.contact.description.en",
+        "sections.contact.preparation.id",
+        "sections.contact.preparation.en",
+        "sections.contact.formHeading.id",
+        "sections.contact.formHeading.en",
+        "sections.contact.formDescription.id",
+        "sections.contact.formDescription.en",
+        "sections.contact.submitLabel.id",
+        "sections.contact.submitLabel.en"
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "Ajakan Konsultasi",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.cta.heading.id",
+        "sections.cta.heading.en",
+        "sections.cta.body.id",
+        "sections.cta.body.en",
+        "sections.cta.buttonLabel.id",
+        "sections.cta.buttonLabel.en"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "business.name",
+        "business.tagline.id",
+        "business.tagline.en",
+        "business.description.id",
+        "business.description.en",
+        "business.logo",
+        "business.logoAlt.id",
+        "business.logoAlt.en",
+        "sections.footer.summary.id",
+        "sections.footer.summary.en",
+        "sections.footer.hours.id",
+        "sections.footer.hours.en",
+        "sections.footer.copyright.id",
+        "sections.footer.copyright.en",
+        "sections.footer.demoLabel.id",
+        "sections.footer.demoLabel.en",
+        "sections.footer.demoNotice.id",
+        "sections.footer.demoNotice.en"
+      ]
+    }
+  ]
+}

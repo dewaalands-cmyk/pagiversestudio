@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071a2b" />
+    <title>{{seo.pages.approach.title.id}}</title>
+    <meta name="description" content="{{seo.pages.approach.description.id}}" />
+    <meta property="og:image" content="{{seo.ogImage}}" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="approach">
+    <a class="skip-link" href="#main-content"
+      ><span data-lang="id">Lewati ke konten</span
+      ><span data-lang="en">Skip to content</span></a
+    >
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Tata Tumbuh Advisory"
+        ><span class="brand-mark" aria-hidden="true">TT</span
+        ><span class="brand-name" data-bind="business.name"
+          >{{business.name}}</span
+        ></a
+      ><button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-menu-toggle
+      >
+        <span></span><span></span
+        ><span class="sr-only" data-lang="id">Buka navigasi</span
+        ><span class="sr-only" data-lang="en">Open navigation</span>
+      </button>
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Navigasi utama"
+        data-navigation
+      >
+        <a href="index.html" data-nav="home"
+          ><span data-lang="id" data-bind="navigation.home.label.id"
+            >{{navigation.home.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.home.label.en"
+            >{{navigation.home.label.en}}</span
+          ></a
+        ><a href="about.html" data-nav="about"
+          ><span data-lang="id" data-bind="navigation.about.label.id"
+            >{{navigation.about.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.about.label.en"
+            >{{navigation.about.label.en}}</span
+          ></a
+        ><a href="services.html" data-nav="services"
+          ><span data-lang="id" data-bind="navigation.services.label.id"
+            >{{navigation.services.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.services.label.en"
+            >{{navigation.services.label.en}}</span
+          ></a
+        ><a href="approach.html" data-nav="approach"
+          ><span data-lang="id" data-bind="navigation.approach.label.id"
+            >{{navigation.approach.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.approach.label.en"
+            >{{navigation.approach.label.en}}</span
+          ></a
+        ><a href="insights.html" data-nav="insights"
+          ><span data-lang="id" data-bind="navigation.insights.label.id"
+            >{{navigation.insights.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.insights.label.en"
+            >{{navigation.insights.label.en}}</span
+          ></a
+        ><a class="nav-cta" href="contact.html" data-nav="contact"
+          ><span data-lang="id" data-bind="navigation.contact.label.id"
+            >{{navigation.contact.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.contact.label.en"
+            >{{navigation.contact.label.en}}</span
+          ></a
+        >
+        <div class="language-switcher" aria-label="Language">
+          <button type="button" data-language-button="id" aria-pressed="true">
+            ID</button
+          ><span aria-hidden="true">/</span
+          ><button type="button" data-language-button="en" aria-pressed="false">
+            EN
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div data-reveal>
+          <p class="eyebrow">
+            <span data-lang="id">Metode pendampingan</span
+            ><span data-lang="en">Our approach</span>
+          </p>
+          <h1 id="page-title">
+            <span data-lang="id" data-bind="sections.hero.approach.heading.id"
+              >{{sections.hero.approach.heading.id}}</span
+            ><span data-lang="en" data-bind="sections.hero.approach.heading.en"
+              >{{sections.hero.approach.heading.en}}</span
+            >
+          </h1>
+        </div>
+        <p data-reveal>
+          <span data-lang="id" data-bind="sections.hero.approach.description.id"
+            >{{sections.hero.approach.description.id}}</span
+          ><span
+            data-lang="en"
+            data-bind="sections.hero.approach.description.en"
+            >{{sections.hero.approach.description.en}}</span
+          >
+        </p>
+      </section>
+      <section class="section approach-detail" aria-labelledby="process-title">
+        <div class="section-heading compact" data-reveal>
+          <h2 id="process-title">
+            <span data-lang="id" data-bind="sections.approach.heading.id"
+              >{{sections.approach.heading.id}}</span
+            ><span data-lang="en" data-bind="sections.approach.heading.en"
+              >{{sections.approach.heading.en}}</span
+            >
+          </h2>
+        </div>
+        <ol
+          class="process-list"
+          data-collection="sections.approach.items"
+          data-reveal
+        ></ol>
+      </section>
+      <section
+        class="section principles-section"
+        aria-labelledby="principles-title"
+      >
+        <div class="section-heading compact" data-reveal>
+          <h2 id="principles-title">
+            <span data-lang="id" data-bind="sections.values.heading.id"
+              >{{sections.values.heading.id}}</span
+            ><span data-lang="en" data-bind="sections.values.heading.en"
+              >{{sections.values.heading.en}}</span
+            >
+          </h2>
+        </div>
+        <div
+          class="principles-grid"
+          data-collection="sections.values.items"
+          data-reveal
+        ></div>
+      </section>
+      <section class="section fit-section" aria-labelledby="fit-title">
+        <div data-reveal>
+          <h2 id="fit-title">
+            <span data-lang="id" data-bind="sections.outputs.heading.id"
+              >{{sections.outputs.heading.id}}</span
+            ><span data-lang="en" data-bind="sections.outputs.heading.en"
+              >{{sections.outputs.heading.en}}</span
+            >
+          </h2>
+          <p>
+            <span data-lang="id" data-bind="sections.outputs.description.id"
+              >{{sections.outputs.description.id}}</span
+            ><span data-lang="en" data-bind="sections.outputs.description.en"
+              >{{sections.outputs.description.en}}</span
+            >
+          </p>
+        </div>
+        <ul data-collection="sections.outputs.items" data-reveal></ul>
+      </section>
+      <section
+        class="section section-cta"
+        aria-labelledby="cta-title"
+        data-reveal
+      >
+        <div>
+          <h2 id="cta-title">
+            <span data-lang="id" data-bind="sections.cta.heading.id"
+              >{{sections.cta.heading.id}}</span
+            ><span data-lang="en" data-bind="sections.cta.heading.en"
+              >{{sections.cta.heading.en}}</span
+            >
+          </h2>
+          <p>
+            <span data-lang="id" data-bind="sections.cta.body.id"
+              >{{sections.cta.body.id}}</span
+            ><span data-lang="en" data-bind="sections.cta.body.en"
+              >{{sections.cta.body.en}}</span
+            >
+          </p>
+        </div>
+        <a
+          class="button button-accent"
+          href="#"
+          data-whatsapp-link
+          target="_blank"
+          rel="noopener noreferrer"
+          ><span data-lang="id" data-bind="sections.cta.buttonLabel.id"
+            >{{sections.cta.buttonLabel.id}}</span
+          ><span data-lang="en" data-bind="sections.cta.buttonLabel.en"
+            >{{sections.cta.buttonLabel.en}}</span
+          ></a
+        >
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">TT</span>
+        <p data-bind="business.name">{{business.name}}</p>
+      </div>
+      <p class="footer-copy">
+        <span data-lang="id" data-bind="sections.footer.summary.id"
+          >{{sections.footer.summary.id}}</span
+        ><span data-lang="en" data-bind="sections.footer.summary.en"
+          >{{sections.footer.summary.en}}</span
+        >
+      </p>
+      <div class="footer-links">
+        <a href="about.html"
+          ><span data-lang="id">Tentang</span
+          ><span data-lang="en">About</span></a
+        ><a href="services.html"
+          ><span data-lang="id">Layanan</span
+          ><span data-lang="en">Services</span></a
+        ><a href="contact.html"
+          ><span data-lang="id">Kontak</span
+          ><span data-lang="en">Contact</span></a
+        >
+      </div>
+      <div class="footer-meta">
+        <p>
+          <span data-bind="contact.email">{{contact.email}}</span><br /><span
+            data-bind="contact.phone"
+            >{{contact.phone}}</span
+          >
+        </p>
+        <p>
+          <span data-lang="id" data-bind="sections.footer.demoNotice.id"
+            >{{sections.footer.demoNotice.id}}</span
+          ><span data-lang="en" data-bind="sections.footer.demoNotice.en"
+            >{{sections.footer.demoNotice.en}}</span
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#071a2b" />
+    <title>{{seo.pages.contact.title.id}}</title>
+    <meta name="description" content="{{seo.pages.contact.description.id}}" />
+    <meta property="og:image" content="{{seo.ogImage}}" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="contact">
+    <a class="skip-link" href="#main-content"
+      ><span data-lang="id">Lewati ke konten</span
+      ><span data-lang="en">Skip to content</span></a
+    >
+    <header class="site-header" data-header>
+      <a class="brand" href="index.html" aria-label="Tata Tumbuh Advisory"
+        ><span class="brand-mark" aria-hidden="true">TT</span
+        ><span class="brand-name" data-bind="business.name"
+          >{{business.name}}</span
+        ></a
+      ><button
+        class="menu-toggle"
+        type="button"
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+        data-menu-toggle
+      >
+        <span></span><span></span
+        ><span class="sr-only" data-lang="id">Buka navigasi</span
+        ><span class="sr-only" data-lang="en">Open navigation</span>
+      </button>
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-label="Navigasi utama"
+        data-navigation
+      >
+        <a href="index.html" data-nav="home"
+          ><span data-lang="id" data-bind="navigation.home.label.id"
+            >{{navigation.home.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.home.label.en"
+            >{{navigation.home.label.en}}</span
+          ></a
+        ><a href="about.html" data-nav="about"
+          ><span data-lang="id" data-bind="navigation.about.label.id"
+            >{{navigation.about.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.about.label.en"
+            >{{navigation.about.label.en}}</span
+          ></a
+        ><a href="services.html" data-nav="services"
+          ><span data-lang="id" data-bind="navigation.services.label.id"
+            >{{navigation.services.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.services.label.en"
+            >{{navigation.services.label.en}}</span
+          ></a
+        ><a href="approach.html" data-nav="approach"
+          ><span data-lang="id" data-bind="navigation.approach.label.id"
+            >{{navigation.approach.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.approach.label.en"
+            >{{navigation.approach.label.en}}</span
+          ></a
+        ><a href="insights.html" data-nav="insights"
+          ><span data-lang="id" data-bind="navigation.insights.label.id"
+            >{{navigation.insights.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.insights.label.en"
+            >{{navigation.insights.label.en}}</span
+          ></a
+        ><a class="nav-cta" href="contact.html" data-nav="contact"
+          ><span data-lang="id" data-bind="navigation.contact.label.id"
+            >{{navigation.contact.label.id}}</span
+          ><span data-lang="en" data-bind="navigation.contact.label.en"
+            >{{navigation.contact.label.en}}</span
+          ></a
+        >
+        <div class="language-switcher" aria-label="Language">
+          <button type="button" data-language-button="id" aria-pressed="true">
+            ID</button
+          ><span aria-hidden="true">/</span
+          ><button type="button" data-language-button="en" aria-pressed="false">
+            EN
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="contact-hero" aria-labelledby="page-title">
+        <div data-reveal>
+          <p class="eyebrow">
+            <span data-lang="id">Konsultasi awal</span
+            ><span data-lang="en">Initial consultation</span>
+          </p>
+          <h1 id="page-title">
+            <span data-lang="id" data-bind="sections.contact.heading.id"
+              >{{sections.contact.heading.id}}</span
+            ><span data-lang="en" data-bind="sections.contact.heading.en"
+              >{{sections.contact.heading.en}}</span
+            >
+          </h1>
+          <p>
+            <span data-lang="id" data-bind="sections.contact.description.id"
+              >{{sections.contact.description.id}}</span
+            ><span data-lang="en" data-bind="sections.contact.description.en"
+              >{{sections.contact.description.en}}</span
+            >
+          </p>
+          <a
+            class="button button-accent"
+            href="#"
+            data-whatsapp-link
+            target="_blank"
+            rel="noopener noreferrer"
+            ><span data-lang="id" data-bind="sections.cta.buttonLabel.id"
+              >{{sections.cta.buttonLabel.id}}</span
+            ><span data-lang="en" data-bind="sections.cta.buttonLabel.en"
+              >{{sections.cta.buttonLabel.en}}</span
+            ></a
+          >
+        </div>
+        <aside class="contact-details" data-reveal>
+          <p>
+            <span data-lang="id">Email</span><span data-lang="en">Email</span
+            ><strong data-bind="contact.email">{{contact.email}}</strong>
+          </p>
+          <p>
+            <span data-lang="id">Telepon</span><span data-lang="en">Phone</span
+            ><strong data-bind="contact.phone">{{contact.phone}}</strong>
+          </p>
+          <p>
+            <span data-lang="id">Kantor contoh</span
+            ><span data-lang="en">Sample office</span
+            ><strong data-bind="location.address">{{location.address}}</strong>
+          </p>
+          <p>
+            <span data-lang="id">Jam konsultasi</span
+            ><span data-lang="en">Consulting hours</span
+            ><strong
+              ><span data-lang="id" data-bind="sections.footer.hours.id"
+                >{{sections.footer.hours.id}}</span
+              ><span data-lang="en" data-bind="sections.footer.hours.en"
+                >{{sections.footer.hours.en}}</span
+              ></strong
+            >
+          </p>
+        </aside>
+      </section>
+      <section class="section contact-workspace" aria-labelledby="form-title">
+        <div class="prepare-panel" data-reveal>
+          <h2>
+            <span data-lang="id" data-bind="sections.contact.preparation.id"
+              >{{sections.contact.preparation.id}}</span
+            ><span data-lang="en" data-bind="sections.contact.preparation.en"
+              >{{sections.contact.preparation.en}}</span
+            >
+          </h2>
+          <ul data-collection="sections.outputs.items"></ul>
+        </div>
+        <form
+          class="contact-form"
+          data-pagiverse-form="consultation"
+          novalidate
+          data-reveal
+        >
+          <h2 id="form-title">
+            <span data-lang="id" data-bind="sections.contact.formHeading.id"
+              >{{sections.contact.formHeading.id}}</span
+            ><span data-lang="en" data-bind="sections.contact.formHeading.en"
+              >{{sections.contact.formHeading.en}}</span
+            >
+          </h2>
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name"
+                ><span data-lang="id">Nama</span
+                ><span data-lang="en">Name</span></label
+              ><input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+                maxlength="80"
+              />
+              <p class="field-error" id="name-error"></p>
+            </div>
+            <div class="form-field">
+              <label for="company"
+                ><span data-lang="id">Perusahaan</span
+                ><span data-lang="en">Company</span></label
+              ><input
+                id="company"
+                name="company"
+                type="text"
+                autocomplete="organization"
+                required
+                maxlength="100"
+              />
+              <p class="field-error" id="company-error"></p>
+            </div>
+            <div class="form-field">
+              <label for="email"
+                ><span data-lang="id">Email</span
+                ><span data-lang="en">Email</span></label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                maxlength="120"
+              />
+              <p class="field-error" id="email-error"></p>
+            </div>
+            <div class="form-field">
+              <label for="phone"
+                ><span data-lang="id">Nomor WhatsApp</span
+                ><span data-lang="en">WhatsApp number</span></label
+              ><input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                required
+                maxlength="24"
+              />
+              <p class="field-error" id="phone-error"></p>
+            </div>
+            <div class="form-field form-field-wide">
+              <label for="topic"
+                ><span data-lang="id">Topik utama</span
+                ><span data-lang="en">Primary topic</span></label
+              ><select id="topic" name="topic" required>
+                <option value="">Pilih topik</option>
+                <option value="management">Strategi manajemen internal</option>
+                <option value="finance">Manajemen keuangan</option>
+                <option value="operations">Keunggulan operasional</option>
+                <option value="inventory">Manajemen persediaan</option>
+              </select>
+              <p class="field-error" id="topic-error"></p>
+            </div>
+            <div class="form-field form-field-wide">
+              <label for="situation"
+                ><span data-lang="id">Ceritakan situasi singkat</span
+                ><span data-lang="en"
+                  >Briefly describe the situation</span
+                ></label
+              ><textarea
+                id="situation"
+                name="situation"
+                rows="5"
+                required
+                maxlength="600"
+              ></textarea>
+              <p class="field-help">
+                <span data-lang="id"
+                  >Hindari mengirim data rahasia pada formulir awal.</span
+                ><span data-lang="en"
+                  >Please do not send confidential data in this initial
+                  form.</span
+                >
+              </p>
+              <p class="field-error" id="situation-error"></p>
+            </div>
+          </div>
+          <button class="button button-primary" type="submit">
+            <span data-lang="id" data-bind="sections.contact.submitLabel.id"
+              >{{sections.contact.submitLabel.id}}</span
+            ><span data-lang="en" data-bind="sections.contact.submitLabel.en"
+              >{{sections.contact.submitLabel.en}}</span
+            >
+          </button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <section class="section faq-section" id="faq" aria-labelledby="faq-title">
+        <div class="section-heading compact" data-reveal>
+          <h2 id="faq-title">
+            <span data-lang="id" data-bind="sections.faq.heading.id"
+              >{{sections.faq.heading.id}}</span
+            ><span data-lang="en" data-bind="sections.faq.heading.en"
+              >{{sections.faq.heading.en}}</span
+            >
+          </h2>
+        </div>
+        <div
+          class="faq-list"
+          data-collection="sections.faq.items"
+          data-reveal
+        ></div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">TT</span>
+        <p data-bind="business.name">{{business.name}}</p>
+      </div>
+      <p class="footer-copy">
+        <span data-lang="id" data-bind="sections.footer.summary.id"
+          >{{sections.footer.summary.id}}</span
+        ><span data-lang="en" data-bind="sections.footer.summary.en"
+          >{{sections.footer.summary.en}}</span
+        >
+      </p>
+      <div class="footer-links">
+        <a href="about.html"
+          ><span data-lang="id">Tentang</span
+          ><span data-lang="en">About</span></a
+        ><a href="services.html"
+          ><span data-lang="id">Layanan</span
+          ><span data-lang="en">Services</span></a
+        ><a href="insights.html"
+          ><span data-lang="id">Insight</span
+          ><span data-lang="en">Insights</span></a
+        >
+      </div>
+      <div class="footer-meta">
+        <p>
+          <span data-bind="contact.email">{{contact.email}}</span><br /><span
+            data-bind="contact.phone"
+            >{{contact.phone}}</span
+          >
+        </p>
+        <p>
+          <span data-lang="id" data-bind="sections.footer.demoNotice.id"
+            >{{sections.footer.demoNotice.id}}</span
+          ><span data-lang="en" data-bind="sections.footer.demoNotice.en"
+            >{{sections.footer.demoNotice.en}}</span
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
