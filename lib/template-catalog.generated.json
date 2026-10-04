@@ -1345,6 +1345,1714 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "dapur-pesisir-tropical-001",
+      "name": "Dapur Pesisir Tropical",
+      "category": "restaurant",
+      "description": "Bilingual tropical modern template for a casual family seafood restaurant in Bali.",
+      "price": 1369500,
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html"
+        },
+        {
+          "id": "menu",
+          "path": "/menu",
+          "entry": "menu.html"
+        },
+        {
+          "id": "about",
+          "path": "/about",
+          "entry": "about.html"
+        },
+        {
+          "id": "gallery",
+          "path": "/gallery",
+          "entry": "gallery.html"
+        },
+        {
+          "id": "reservation",
+          "path": "/reservation",
+          "entry": "reservation.html"
+        }
+      ],
+      "dependencies": [],
+      "theme": {
+        "supportsColorMode": true,
+        "defaultMode": "auto",
+        "tokens": {
+          "primary": {
+            "editable": true,
+            "default": "#0f4c47"
+          },
+          "secondary": {
+            "editable": true,
+            "default": "#22685f"
+          },
+          "accent": {
+            "editable": true,
+            "default": "#f08a68"
+          },
+          "background": {
+            "editable": false,
+            "default": "#f3f7f4"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#fbfdf9"
+          },
+          "text": {
+            "editable": false,
+            "default": "#14332f"
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "home",
+            "labelFields": {
+              "id": "navigation.home.label.id",
+              "en": "navigation.home.label.en"
+            },
+            "target": "index.html",
+            "hideable": false
+          },
+          {
+            "id": "menu",
+            "labelFields": {
+              "id": "navigation.menu.label.id",
+              "en": "navigation.menu.label.en"
+            },
+            "target": "menu.html",
+            "hideable": false
+          },
+          {
+            "id": "about",
+            "labelFields": {
+              "id": "navigation.about.label.id",
+              "en": "navigation.about.label.en"
+            },
+            "target": "about.html",
+            "hideable": false
+          },
+          {
+            "id": "gallery",
+            "labelFields": {
+              "id": "navigation.gallery.label.id",
+              "en": "navigation.gallery.label.en"
+            },
+            "target": "gallery.html",
+            "hideable": true,
+            "section": "gallery"
+          },
+          {
+            "id": "reservation",
+            "labelFields": {
+              "id": "navigation.reservation.label.id",
+              "en": "navigation.reservation.label.en"
+            },
+            "target": "reservation.html",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama restoran",
+          "required": true,
+          "maxLength": 60,
+          "default": "Dapur Pesisir"
+        },
+        "business.tagline.id": {
+          "type": "text",
+          "label": "Tagline Indonesia",
+          "maxLength": 80,
+          "default": "Seafood keluarga di Kuta, Bali"
+        },
+        "business.tagline.en": {
+          "type": "text",
+          "label": "English tagline",
+          "maxLength": 80,
+          "default": "Family seafood in Kuta, Bali"
+        },
+        "business.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi restoran Indonesia",
+          "maxLength": 220,
+          "default": "Restoran demo dengan suasana tropis modern dan menu seafood untuk dinikmati bersama."
+        },
+        "business.description.en": {
+          "type": "textarea",
+          "label": "English restaurant description",
+          "maxLength": 220,
+          "default": "A demo restaurant with a tropical modern atmosphere and seafood made for sharing."
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "Nomor WhatsApp",
+          "required": true,
+          "default": "6281234567890"
+        },
+        "contact.phoneDisplay": {
+          "type": "text",
+          "label": "Nomor telepon yang ditampilkan",
+          "maxLength": 32,
+          "default": "+62 812 3456 7890"
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Email",
+          "maxLength": 100,
+          "default": "halo@dapurpesisir.example"
+        },
+        "contact.whatsappMessage.id": {
+          "type": "textarea",
+          "label": "Pesan WhatsApp Indonesia",
+          "maxLength": 220,
+          "default": "Halo Dapur Pesisir, saya ingin melakukan reservasi meja."
+        },
+        "contact.whatsappMessage.en": {
+          "type": "textarea",
+          "label": "English WhatsApp message",
+          "maxLength": 220,
+          "default": "Hello Dapur Pesisir, I would like to reserve a table."
+        },
+        "contact.whatsappLabel.id": {
+          "type": "text",
+          "label": "Label WhatsApp Indonesia",
+          "maxLength": 24,
+          "default": "Buka WhatsApp"
+        },
+        "contact.whatsappLabel.en": {
+          "type": "text",
+          "label": "English WhatsApp label",
+          "maxLength": 24,
+          "default": "Open WhatsApp"
+        },
+        "location.address": {
+          "type": "text",
+          "label": "Alamat",
+          "maxLength": 140,
+          "default": "Jl. Pantai Kuta No. 88, Kuta, Bali"
+        },
+        "location.mapsUrl": {
+          "type": "url",
+          "label": "Tautan peta",
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "https://maps.google.com/?q=Kuta+Bali"
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul SEO utama",
+          "maxLength": 70,
+          "default": "Dapur Pesisir | Seafood Keluarga di Kuta"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO utama",
+          "maxLength": 160,
+          "default": "Dapur Pesisir, restoran seafood keluarga bernuansa tropis modern di Kuta, Bali."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar sosial",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "aspectRatio": "1.91:1",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-dapur-pesisir.webp",
+            "altId": "Meja seafood Dapur Pesisir",
+            "altEn": "Dapur Pesisir seafood table",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "seo.pages.home.title.id": {
+          "type": "text",
+          "label": "Judul Beranda Indonesia",
+          "maxLength": 70,
+          "default": "Dapur Pesisir | Seafood Keluarga di Kuta"
+        },
+        "seo.pages.home.title.en": {
+          "type": "text",
+          "label": "English home title",
+          "maxLength": 70,
+          "default": "Dapur Pesisir | Family Seafood in Kuta"
+        },
+        "seo.pages.home.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Beranda Indonesia",
+          "maxLength": 160,
+          "default": "Dapur Pesisir, restoran seafood keluarga bernuansa tropis modern di Kuta, Bali."
+        },
+        "seo.pages.home.description.en": {
+          "type": "textarea",
+          "label": "English home description",
+          "maxLength": 160,
+          "default": "Dapur Pesisir, a tropical modern family seafood restaurant in Kuta, Bali."
+        },
+        "seo.pages.menu.title.id": {
+          "type": "text",
+          "label": "Judul Menu Indonesia",
+          "maxLength": 70,
+          "default": "Menu | Dapur Pesisir"
+        },
+        "seo.pages.menu.title.en": {
+          "type": "text",
+          "label": "English menu title",
+          "maxLength": 70,
+          "default": "Menu | Dapur Pesisir"
+        },
+        "seo.pages.menu.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Menu Indonesia",
+          "maxLength": 160,
+          "default": "Menu seafood Dapur Pesisir di Kuta, Bali, dari ikan bakar hingga hidangan keluarga."
+        },
+        "seo.pages.menu.description.en": {
+          "type": "textarea",
+          "label": "English menu description",
+          "maxLength": 160,
+          "default": "Dapur Pesisir seafood menu in Kuta, Bali, from grilled fish to family sharing plates."
+        },
+        "seo.pages.about.title.id": {
+          "type": "text",
+          "label": "Judul Tentang Indonesia",
+          "maxLength": 70,
+          "default": "Tentang Kami | Dapur Pesisir"
+        },
+        "seo.pages.about.title.en": {
+          "type": "text",
+          "label": "English about title",
+          "maxLength": 70,
+          "default": "Our Story | Dapur Pesisir"
+        },
+        "seo.pages.about.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Tentang Indonesia",
+          "maxLength": 160,
+          "default": "Cerita Dapur Pesisir, restoran seafood keluarga tropis modern di Kuta, Bali."
+        },
+        "seo.pages.about.description.en": {
+          "type": "textarea",
+          "label": "English about description",
+          "maxLength": 160,
+          "default": "The story of Dapur Pesisir, a tropical modern family seafood restaurant in Kuta, Bali."
+        },
+        "seo.pages.gallery.title.id": {
+          "type": "text",
+          "label": "Judul Galeri Indonesia",
+          "maxLength": 70,
+          "default": "Galeri | Dapur Pesisir"
+        },
+        "seo.pages.gallery.title.en": {
+          "type": "text",
+          "label": "English gallery title",
+          "maxLength": 70,
+          "default": "Gallery | Dapur Pesisir"
+        },
+        "seo.pages.gallery.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Galeri Indonesia",
+          "maxLength": 160,
+          "default": "Galeri hidangan, dapur, dan suasana tropis modern Dapur Pesisir di Kuta."
+        },
+        "seo.pages.gallery.description.en": {
+          "type": "textarea",
+          "label": "English gallery description",
+          "maxLength": 160,
+          "default": "A gallery of food, kitchen energy, and Dapur Pesisir's tropical modern atmosphere in Kuta."
+        },
+        "seo.pages.reservation.title.id": {
+          "type": "text",
+          "label": "Judul Reservasi Indonesia",
+          "maxLength": 70,
+          "default": "Reservasi | Dapur Pesisir"
+        },
+        "seo.pages.reservation.title.en": {
+          "type": "text",
+          "label": "English reservation title",
+          "maxLength": 70,
+          "default": "Reservations | Dapur Pesisir"
+        },
+        "seo.pages.reservation.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Reservasi Indonesia",
+          "maxLength": 160,
+          "default": "Reservasi meja di Dapur Pesisir, restoran seafood keluarga di Kuta, Bali."
+        },
+        "seo.pages.reservation.description.en": {
+          "type": "textarea",
+          "label": "English reservation description",
+          "maxLength": 160,
+          "default": "Reserve a table at Dapur Pesisir, a family seafood restaurant in Kuta, Bali."
+        },
+        "navigation.home.label.id": {
+          "type": "text",
+          "label": "Navigasi Beranda",
+          "maxLength": 18,
+          "default": "Beranda"
+        },
+        "navigation.home.label.en": {
+          "type": "text",
+          "label": "Navigation Home",
+          "maxLength": 18,
+          "default": "Home"
+        },
+        "navigation.menu.label.id": {
+          "type": "text",
+          "label": "Navigasi Menu",
+          "maxLength": 18,
+          "default": "Menu"
+        },
+        "navigation.menu.label.en": {
+          "type": "text",
+          "label": "Navigation Menu",
+          "maxLength": 18,
+          "default": "Menu"
+        },
+        "navigation.about.label.id": {
+          "type": "text",
+          "label": "Navigasi Tentang",
+          "maxLength": 18,
+          "default": "Tentang Kami"
+        },
+        "navigation.about.label.en": {
+          "type": "text",
+          "label": "Navigation Story",
+          "maxLength": 18,
+          "default": "Our Story"
+        },
+        "navigation.gallery.label.id": {
+          "type": "text",
+          "label": "Navigasi Galeri",
+          "maxLength": 18,
+          "default": "Galeri"
+        },
+        "navigation.gallery.label.en": {
+          "type": "text",
+          "label": "Navigation Gallery",
+          "maxLength": 18,
+          "default": "Gallery"
+        },
+        "navigation.reservation.label.id": {
+          "type": "text",
+          "label": "Navigasi Reservasi",
+          "maxLength": 18,
+          "default": "Reservasi"
+        },
+        "navigation.reservation.label.en": {
+          "type": "text",
+          "label": "Navigation Reservation",
+          "maxLength": 18,
+          "default": "Reserve"
+        },
+        "sections.hero.eyebrow.id": {
+          "type": "text",
+          "label": "Hero eyebrow Indonesia",
+          "maxLength": 45,
+          "default": "Seafood keluarga di Kuta, Bali"
+        },
+        "sections.hero.eyebrow.en": {
+          "type": "text",
+          "label": "English hero eyebrow",
+          "maxLength": 45,
+          "default": "Family seafood in Kuta, Bali"
+        },
+        "sections.hero.heading.id": {
+          "type": "text",
+          "label": "Judul Hero Indonesia",
+          "required": true,
+          "maxLength": 58,
+          "default": "Segar dari laut, hangat di meja."
+        },
+        "sections.hero.heading.en": {
+          "type": "text",
+          "label": "English hero heading",
+          "required": true,
+          "maxLength": 58,
+          "default": "Fresh from the sea, warm at the table."
+        },
+        "sections.hero.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Hero Indonesia",
+          "maxLength": 130,
+          "default": "Seafood segar, bumbu Bali, dan meja panjang untuk waktu bersama keluarga."
+        },
+        "sections.hero.description.en": {
+          "type": "textarea",
+          "label": "English hero description",
+          "maxLength": 130,
+          "default": "Fresh seafood, Balinese flavors, and long tables made for family time."
+        },
+        "sections.hero.primaryCta.id": {
+          "type": "text",
+          "label": "Tombol Hero utama",
+          "maxLength": 20,
+          "default": "Lihat Menu"
+        },
+        "sections.hero.primaryCta.en": {
+          "type": "text",
+          "label": "English primary Hero button",
+          "maxLength": 20,
+          "default": "View Menu"
+        },
+        "sections.hero.secondaryCta.id": {
+          "type": "text",
+          "label": "Tombol Hero kedua",
+          "maxLength": 20,
+          "default": "Reservasi"
+        },
+        "sections.hero.secondaryCta.en": {
+          "type": "text",
+          "label": "English secondary Hero button",
+          "maxLength": 20,
+          "default": "Reserve"
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "Foto Hero",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "16:9",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-dapur-pesisir.webp",
+            "altId": "Hidangan seafood di restoran tropis tepi pantai saat matahari terbenam",
+            "altEn": "Seafood feast at a tropical beachfront restaurant at sunset",
+            "focalPoint": {
+              "x": 50,
+              "y": 52
+            }
+          }
+        },
+        "sections.home.noteHeading.id": {
+          "type": "text",
+          "label": "Catatan Beranda Indonesia",
+          "maxLength": 70,
+          "default": "Datang untuk seafood. Tinggal untuk suasananya."
+        },
+        "sections.home.noteHeading.en": {
+          "type": "text",
+          "label": "English home note",
+          "maxLength": 70,
+          "default": "Come for the seafood. Stay for the atmosphere."
+        },
+        "sections.home.noteFresh.id": {
+          "type": "text",
+          "label": "Catatan segar Indonesia",
+          "maxLength": 40,
+          "default": "Bahan segar setiap hari"
+        },
+        "sections.home.noteFresh.en": {
+          "type": "text",
+          "label": "English fresh note",
+          "maxLength": 40,
+          "default": "Fresh ingredients daily"
+        },
+        "sections.home.noteHours.id": {
+          "type": "text",
+          "label": "Catatan jam Indonesia",
+          "maxLength": 50,
+          "default": "Buka setiap hari, 11.00 - 23.00"
+        },
+        "sections.home.noteHours.en": {
+          "type": "text",
+          "label": "English hours note",
+          "maxLength": 50,
+          "default": "Open daily, 11 AM - 11 PM"
+        },
+        "sections.products.eyebrow.id": {
+          "type": "text",
+          "label": "Menu eyebrow Indonesia",
+          "maxLength": 35,
+          "default": "Menu pilihan"
+        },
+        "sections.products.eyebrow.en": {
+          "type": "text",
+          "label": "English menu eyebrow",
+          "maxLength": 35,
+          "default": "Menu highlights"
+        },
+        "sections.products.heading.id": {
+          "type": "text",
+          "label": "Judul menu Indonesia",
+          "maxLength": 65,
+          "default": "Rasa pesisir untuk dibagi bersama."
+        },
+        "sections.products.heading.en": {
+          "type": "text",
+          "label": "English menu heading",
+          "maxLength": 65,
+          "default": "Coastal flavors made for sharing."
+        },
+        "sections.products.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi menu Indonesia",
+          "maxLength": 180,
+          "default": "Dipanggang saat dipesan, disajikan di tengah meja, dan dibuat ramah untuk seluruh keluarga."
+        },
+        "sections.products.description.en": {
+          "type": "textarea",
+          "label": "English menu description",
+          "maxLength": 180,
+          "default": "Grilled to order, served at the center, and made to please the whole family."
+        },
+        "sections.products.image": {
+          "type": "image",
+          "label": "Foto menu unggulan",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "4:5",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/ikan-bakar.webp",
+            "altId": "Ikan bakar dengan sambal matah dan jeruk bakar",
+            "altEn": "Grilled fish with sambal matah and charred lime",
+            "focalPoint": {
+              "x": 48,
+              "y": 50
+            }
+          }
+        },
+        "sections.products.featuredItems": {
+          "type": "array",
+          "label": "Menu unggulan",
+          "minItems": 1,
+          "maxItems": 8,
+          "default": [
+            {
+              "nameId": "Ikan Bakar Pesisir",
+              "nameEn": "Coastal Grilled Fish",
+              "price": "Rp89.000",
+              "descriptionId": "Ikan segar, sambal matah, dan nasi aromatik.",
+              "descriptionEn": "Fresh fish, sambal matah, and aromatic rice."
+            },
+            {
+              "nameId": "Jimbaran Seafood Platter",
+              "nameEn": "Jimbaran Seafood Platter",
+              "price": "Rp289.000",
+              "descriptionId": "Udang, cumi, kerang, dan ikan bakar untuk 2-3 orang.",
+              "descriptionEn": "Prawns, squid, clams, and grilled fish for 2-3 guests."
+            },
+            {
+              "nameId": "Udang Bakar Kelapa Muda",
+              "nameEn": "Young Coconut Grilled Prawns",
+              "price": "Rp119.000",
+              "descriptionId": "Udang bakar dengan kelapa gurih dan jeruk limau.",
+              "descriptionEn": "Grilled prawns with savory coconut and lime."
+            },
+            {
+              "nameId": "Cumi Crispy Sambal Pantai",
+              "nameEn": "Crispy Squid with Coastal Sambal",
+              "price": "Rp69.000",
+              "descriptionId": "Cumi renyah dengan sambal khas yang ramah keluarga.",
+              "descriptionEn": "Crispy squid with a family-friendly house sambal."
+            }
+          ],
+          "item": {
+            "fields": {
+              "nameId": {
+                "type": "text",
+                "maxLength": 70
+              },
+              "nameEn": {
+                "type": "text",
+                "maxLength": 70
+              },
+              "price": {
+                "type": "text",
+                "maxLength": 24
+              },
+              "descriptionId": {
+                "type": "textarea",
+                "maxLength": 170
+              },
+              "descriptionEn": {
+                "type": "textarea",
+                "maxLength": 170
+              }
+            }
+          }
+        },
+        "sections.products.pageEyebrow.id": {
+          "type": "text",
+          "label": "Menu page eyebrow Indonesia",
+          "maxLength": 40,
+          "default": "Dari laut dan bara"
+        },
+        "sections.products.pageEyebrow.en": {
+          "type": "text",
+          "label": "English menu page eyebrow",
+          "maxLength": 40,
+          "default": "From sea and flame"
+        },
+        "sections.products.pageHeading.id": {
+          "type": "text",
+          "label": "Judul halaman Menu Indonesia",
+          "maxLength": 65,
+          "default": "Menu untuk makan bersama."
+        },
+        "sections.products.pageHeading.en": {
+          "type": "text",
+          "label": "English Menu page heading",
+          "maxLength": 65,
+          "default": "A menu made for sharing."
+        },
+        "sections.products.pageDescription.id": {
+          "type": "textarea",
+          "label": "Deskripsi halaman Menu Indonesia",
+          "maxLength": 180,
+          "default": "Seafood segar, bumbu yang akrab, dan pilihan porsi untuk meja kecil maupun keluarga besar."
+        },
+        "sections.products.pageDescription.en": {
+          "type": "textarea",
+          "label": "English Menu page description",
+          "maxLength": 180,
+          "default": "Fresh seafood, familiar flavors, and portions for small tables or big families."
+        },
+        "sections.products.pageImage": {
+          "type": "image",
+          "label": "Foto halaman Menu",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/seafood-feast.webp",
+            "altId": "Aneka hidangan seafood Dapur Pesisir untuk dinikmati bersama",
+            "altEn": "A selection of Dapur Pesisir seafood dishes made for sharing",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.products.listHeading.id": {
+          "type": "text",
+          "label": "Judul daftar menu Indonesia",
+          "maxLength": 65,
+          "default": "Pilih favorit meja Anda."
+        },
+        "sections.products.listHeading.en": {
+          "type": "text",
+          "label": "English menu list heading",
+          "maxLength": 65,
+          "default": "Choose your table favorites."
+        },
+        "sections.products.listDescription.id": {
+          "type": "textarea",
+          "label": "Deskripsi daftar menu Indonesia",
+          "maxLength": 190,
+          "default": "Tingkat pedas dapat disesuaikan. Tanyakan kepada tim kami untuk pilihan anak dan non-seafood."
+        },
+        "sections.products.listDescription.en": {
+          "type": "textarea",
+          "label": "English menu list description",
+          "maxLength": 190,
+          "default": "Spice levels can be adjusted. Ask our team about kids and non-seafood options."
+        },
+        "sections.products.disclaimer.id": {
+          "type": "textarea",
+          "label": "Catatan menu Indonesia",
+          "maxLength": 220,
+          "default": "Harga adalah data contoh dan dapat berubah. Beri tahu tim kami jika Anda memiliki alergi atau kebutuhan khusus."
+        },
+        "sections.products.disclaimer.en": {
+          "type": "textarea",
+          "label": "English menu note",
+          "maxLength": 220,
+          "default": "Prices are sample data and may change. Please tell our team about any allergies or dietary needs."
+        },
+        "sections.products.categories": {
+          "type": "array",
+          "label": "Kategori menu",
+          "minItems": 1,
+          "maxItems": 8,
+          "default": [
+            {
+              "nameId": "Hidangan Andalan",
+              "nameEn": "Signatures",
+              "items": [
+                {
+                  "nameId": "Ikan Bakar Pesisir",
+                  "nameEn": "Coastal Grilled Fish",
+                  "price": "Rp89.000",
+                  "descriptionId": "Ikan segar, sambal matah, dan nasi aromatik.",
+                  "descriptionEn": "Fresh fish, sambal matah, and aromatic rice."
+                },
+                {
+                  "nameId": "Jimbaran Seafood Platter",
+                  "nameEn": "Jimbaran Seafood Platter",
+                  "price": "Rp289.000",
+                  "descriptionId": "Udang, cumi, kerang, dan ikan bakar untuk 2-3 orang.",
+                  "descriptionEn": "Prawns, squid, clams, and grilled fish for 2-3 guests."
+                },
+                {
+                  "nameId": "Kepiting Saus Bali",
+                  "nameEn": "Balinese Sauce Crab",
+                  "price": "Rp179.000",
+                  "descriptionId": "Kepiting dengan saus rempah manis-pedas.",
+                  "descriptionEn": "Crab in a sweet and gently spicy Balinese sauce."
+                }
+              ]
+            },
+            {
+              "nameId": "Dari Panggangan",
+              "nameEn": "From the Grill",
+              "items": [
+                {
+                  "nameId": "Udang Bakar Kelapa Muda",
+                  "nameEn": "Young Coconut Grilled Prawns",
+                  "price": "Rp119.000",
+                  "descriptionId": "Udang dengan kelapa gurih dan jeruk limau.",
+                  "descriptionEn": "Prawns with savory coconut and lime."
+                },
+                {
+                  "nameId": "Cumi Bakar Rempah",
+                  "nameEn": "Spiced Grilled Squid",
+                  "price": "Rp82.000",
+                  "descriptionId": "Cumi bakar, kemangi, cabai, dan jeruk nipis.",
+                  "descriptionEn": "Grilled squid, basil, chili, and lime."
+                }
+              ]
+            },
+            {
+              "nameId": "Favorit Keluarga",
+              "nameEn": "Family Favorites",
+              "items": [
+                {
+                  "nameId": "Cumi Crispy Sambal Pantai",
+                  "nameEn": "Crispy Squid with Coastal Sambal",
+                  "price": "Rp69.000",
+                  "descriptionId": "Cumi renyah dengan sambal khas yang ramah keluarga.",
+                  "descriptionEn": "Crispy squid with a family-friendly house sambal."
+                },
+                {
+                  "nameId": "Nasi Goreng Laut",
+                  "nameEn": "Seafood Fried Rice",
+                  "price": "Rp65.000",
+                  "descriptionId": "Nasi goreng dengan udang, cumi, dan telur.",
+                  "descriptionEn": "Fried rice with prawns, squid, and egg."
+                },
+                {
+                  "nameId": "Sup Ikan Asam Segar",
+                  "nameEn": "Fresh Sour Fish Soup",
+                  "price": "Rp79.000",
+                  "descriptionId": "Kuah ringan dengan tomat, kemangi, dan jeruk nipis.",
+                  "descriptionEn": "Light broth with tomato, basil, and lime."
+                }
+              ]
+            },
+            {
+              "nameId": "Minuman dan Anak",
+              "nameEn": "Drinks and Kids",
+              "items": [
+                {
+                  "nameId": "Es Kelapa Pesisir",
+                  "nameEn": "Coastal Young Coconut",
+                  "price": "Rp35.000",
+                  "descriptionId": "Kelapa muda, jeruk nipis, dan madu.",
+                  "descriptionEn": "Young coconut, lime, and honey."
+                },
+                {
+                  "nameId": "Nasi Ikan Renyah Anak",
+                  "nameEn": "Kids Crispy Fish Rice",
+                  "price": "Rp49.000",
+                  "descriptionId": "Ikan tanpa tulang, nasi, dan sayur segar.",
+                  "descriptionEn": "Boneless fish, rice, and fresh vegetables."
+                }
+              ]
+            }
+          ],
+          "item": {
+            "fields": {
+              "nameId": {
+                "type": "text",
+                "maxLength": 50
+              },
+              "nameEn": {
+                "type": "text",
+                "maxLength": 50
+              },
+              "items": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 12,
+                "item": {
+                  "fields": {
+                    "nameId": {
+                      "type": "text",
+                      "maxLength": 70
+                    },
+                    "nameEn": {
+                      "type": "text",
+                      "maxLength": 70
+                    },
+                    "price": {
+                      "type": "text",
+                      "maxLength": 24
+                    },
+                    "descriptionId": {
+                      "type": "textarea",
+                      "maxLength": 180
+                    },
+                    "descriptionEn": {
+                      "type": "textarea",
+                      "maxLength": 180
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "sections.about.heading.id": {
+          "type": "text",
+          "label": "Judul Tentang Indonesia",
+          "maxLength": 70,
+          "default": "Meja yang menyatukan semua usia."
+        },
+        "sections.about.heading.en": {
+          "type": "text",
+          "label": "English About heading",
+          "maxLength": 70,
+          "default": "A table for every generation."
+        },
+        "sections.about.body.id": {
+          "type": "textarea",
+          "label": "Isi Tentang Indonesia",
+          "maxLength": 230,
+          "default": "Dapur Pesisir dibuat untuk makan siang santai, perayaan kecil, dan malam panjang bersama orang-orang terdekat."
+        },
+        "sections.about.body.en": {
+          "type": "textarea",
+          "label": "English About body",
+          "maxLength": 230,
+          "default": "Dapur Pesisir is made for easy lunches, small celebrations, and long evenings with the people closest to you."
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "Foto keluarga",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/family-dining.webp",
+            "altId": "Keluarga menikmati hidangan seafood bersama di Dapur Pesisir",
+            "altEn": "A family sharing seafood together at Dapur Pesisir",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.about.pageEyebrow.id": {
+          "type": "text",
+          "label": "About page eyebrow Indonesia",
+          "maxLength": 45,
+          "default": "Tentang Dapur Pesisir"
+        },
+        "sections.about.pageEyebrow.en": {
+          "type": "text",
+          "label": "English About page eyebrow",
+          "maxLength": 45,
+          "default": "About Dapur Pesisir"
+        },
+        "sections.about.pageHeading.id": {
+          "type": "text",
+          "label": "Judul halaman Tentang Indonesia",
+          "maxLength": 65,
+          "default": "Hangat seperti makan di rumah."
+        },
+        "sections.about.pageHeading.en": {
+          "type": "text",
+          "label": "English About page heading",
+          "maxLength": 65,
+          "default": "As warm as eating at home."
+        },
+        "sections.about.pageDescription.id": {
+          "type": "textarea",
+          "label": "Deskripsi halaman Tentang Indonesia",
+          "maxLength": 200,
+          "default": "Kami menyatukan hasil laut, rasa Bali, dan keramahan yang membuat semua tamu merasa menjadi bagian keluarga."
+        },
+        "sections.about.pageDescription.en": {
+          "type": "textarea",
+          "label": "English About page description",
+          "maxLength": 200,
+          "default": "We bring together the sea, Balinese flavors, and hospitality that makes every guest feel like family."
+        },
+        "sections.about.pageImage": {
+          "type": "image",
+          "label": "Foto halaman Tentang",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/family-dining.webp",
+            "altId": "Keluarga menikmati makan malam seafood bersama",
+            "altEn": "A family enjoying a seafood dinner together",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.about.storyImage": {
+          "type": "image",
+          "label": "Foto dapur",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/open-kitchen.webp",
+            "altId": "Dapur terbuka Dapur Pesisir saat memanggang seafood",
+            "altEn": "Dapur Pesisir open kitchen grilling seafood",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.about.quote.id": {
+          "type": "textarea",
+          "label": "Kutipan Tentang Indonesia",
+          "maxLength": 150,
+          "default": "Bahan segar tidak perlu banyak rahasia. Cukup panas yang tepat dan perhatian penuh."
+        },
+        "sections.about.quote.en": {
+          "type": "textarea",
+          "label": "English About quote",
+          "maxLength": 150,
+          "default": "Fresh ingredients need few secrets. Just the right heat and full attention."
+        },
+        "sections.about.attribution.id": {
+          "type": "text",
+          "label": "Atribusi Indonesia",
+          "maxLength": 60,
+          "default": "Prinsip dapur kami"
+        },
+        "sections.about.attribution.en": {
+          "type": "text",
+          "label": "English attribution",
+          "maxLength": 60,
+          "default": "Our kitchen principle"
+        },
+        "sections.about.principlesHeading.id": {
+          "type": "text",
+          "label": "Judul prinsip Indonesia",
+          "maxLength": 75,
+          "default": "Yang kami jaga setiap hari."
+        },
+        "sections.about.principlesHeading.en": {
+          "type": "text",
+          "label": "English principles heading",
+          "maxLength": 75,
+          "default": "What we protect every day."
+        },
+        "sections.about.principles": {
+          "type": "array",
+          "label": "Prinsip restoran",
+          "minItems": 2,
+          "maxItems": 6,
+          "default": [
+            {
+              "titleId": "Segar dan dapat dipercaya",
+              "titleEn": "Fresh and trustworthy",
+              "bodyId": "Seafood dipilih setiap hari dan disiapkan dengan penanganan yang bersih.",
+              "bodyEn": "Seafood is selected daily and prepared with careful, clean handling."
+            },
+            {
+              "titleId": "Rasa yang ramah keluarga",
+              "titleEn": "Flavors for the whole family",
+              "bodyId": "Bumbu tetap berkarakter dengan tingkat pedas yang dapat disesuaikan.",
+              "bodyEn": "Our seasonings stay distinctive, with spice levels that can be adjusted."
+            },
+            {
+              "titleId": "Ruang untuk benar-benar bersama",
+              "titleEn": "Room to truly be together",
+              "bodyId": "Meja panjang, pelayanan santai, dan waktu makan tanpa terburu-buru.",
+              "bodyEn": "Long tables, relaxed service, and meals with no need to rush."
+            },
+            {
+              "titleId": "Bali tanpa klise",
+              "titleEn": "Bali without clichés",
+              "bodyId": "Material alami dan rasa lokal hadir dengan cara yang modern dan jujur.",
+              "bodyEn": "Natural materials and local flavors appear in a modern, honest way."
+            }
+          ],
+          "item": {
+            "fields": {
+              "titleId": {
+                "type": "text",
+                "maxLength": 70
+              },
+              "titleEn": {
+                "type": "text",
+                "maxLength": 70
+              },
+              "bodyId": {
+                "type": "textarea",
+                "maxLength": 190
+              },
+              "bodyEn": {
+                "type": "textarea",
+                "maxLength": 190
+              }
+            }
+          }
+        },
+        "sections.gallery.previewHeading.id": {
+          "type": "text",
+          "label": "Judul galeri Beranda Indonesia",
+          "maxLength": 65,
+          "default": "Dari bara menuju meja."
+        },
+        "sections.gallery.previewHeading.en": {
+          "type": "text",
+          "label": "English home gallery heading",
+          "maxLength": 65,
+          "default": "From the grill to your table."
+        },
+        "sections.gallery.previewBody.id": {
+          "type": "textarea",
+          "label": "Isi galeri Beranda Indonesia",
+          "maxLength": 170,
+          "default": "Lihat kesegaran bahan, panas dapur terbuka, dan ruang makan yang menyambut."
+        },
+        "sections.gallery.previewBody.en": {
+          "type": "textarea",
+          "label": "English home gallery body",
+          "maxLength": 170,
+          "default": "See fresh ingredients, the energy of our open kitchen, and a dining room that welcomes everyone."
+        },
+        "sections.gallery.heading.id": {
+          "type": "text",
+          "label": "Judul Galeri Indonesia",
+          "maxLength": 70,
+          "default": "Bara, laut, dan waktu bersama."
+        },
+        "sections.gallery.heading.en": {
+          "type": "text",
+          "label": "English Gallery heading",
+          "maxLength": 70,
+          "default": "Flame, sea, and time together."
+        },
+        "sections.gallery.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Galeri Indonesia",
+          "maxLength": 180,
+          "default": "Potongan suasana dari dapur terbuka, hidangan segar, dan ruang makan kami di Kuta."
+        },
+        "sections.gallery.description.en": {
+          "type": "textarea",
+          "label": "English Gallery description",
+          "maxLength": 180,
+          "default": "Scenes from our open kitchen, fresh plates, and welcoming dining room in Kuta."
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Foto galeri",
+          "minItems": 3,
+          "maxItems": 12,
+          "default": [
+            {
+              "src": "assets/images/hero-dapur-pesisir.webp",
+              "altId": "Meja seafood menghadap laut saat matahari terbenam",
+              "altEn": "A seafood table overlooking the sea at sunset",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            },
+            {
+              "src": "assets/images/ikan-bakar.webp",
+              "altId": "Ikan bakar dengan sambal matah",
+              "altEn": "Grilled fish with sambal matah",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            },
+            {
+              "src": "assets/images/family-dining.webp",
+              "altId": "Keluarga menikmati hidangan seafood bersama",
+              "altEn": "A family sharing seafood together",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            },
+            {
+              "src": "assets/images/open-kitchen.webp",
+              "altId": "Udang dan cumi dipanggang di dapur terbuka",
+              "altEn": "Prawns and squid cooking in the open kitchen",
+              "focalPoint": {
+                "x": 52,
+                "y": 50
+              }
+            },
+            {
+              "src": "assets/images/restaurant-interior.webp",
+              "altId": "Interior tropis modern Dapur Pesisir",
+              "altEn": "Dapur Pesisir tropical modern interior",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            },
+            {
+              "src": "assets/images/seafood-feast.webp",
+              "altId": "Hidangan seafood untuk dinikmati bersama",
+              "altEn": "A seafood feast made for sharing",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            },
+            {
+              "src": "assets/images/udang-kelapa.webp",
+              "altId": "Udang bakar kelapa muda",
+              "altEn": "Young coconut grilled prawns",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            }
+          ],
+          "item": {
+            "fields": {
+              "src": {
+                "type": "image",
+                "accept": [
+                  "image/jpeg",
+                  "image/png",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true
+              },
+              "altId": {
+                "type": "text",
+                "maxLength": 150
+              },
+              "altEn": {
+                "type": "text",
+                "maxLength": 150
+              }
+            }
+          }
+        },
+        "sections.cta.image": {
+          "type": "image",
+          "label": "Foto CTA",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/restaurant-interior.webp",
+            "altId": "Ruang makan Dapur Pesisir menjelang malam",
+            "altEn": "Dapur Pesisir dining room at dusk",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.cta.heading.id": {
+          "type": "text",
+          "label": "Judul CTA Indonesia",
+          "maxLength": 65,
+          "default": "Siapkan meja untuk keluarga."
+        },
+        "sections.cta.heading.en": {
+          "type": "text",
+          "label": "English CTA heading",
+          "maxLength": 65,
+          "default": "Set the table for your family."
+        },
+        "sections.cta.body.id": {
+          "type": "textarea",
+          "label": "Isi CTA Indonesia",
+          "maxLength": 150,
+          "default": "Pesan melalui formulir atau hubungi kami langsung lewat WhatsApp."
+        },
+        "sections.cta.body.en": {
+          "type": "textarea",
+          "label": "English CTA body",
+          "maxLength": 150,
+          "default": "Book through our form or contact us directly on WhatsApp."
+        },
+        "sections.location.eyebrow.id": {
+          "type": "text",
+          "label": "Lokasi eyebrow Indonesia",
+          "maxLength": 45,
+          "default": "Reservasi dan kunjungan"
+        },
+        "sections.location.eyebrow.en": {
+          "type": "text",
+          "label": "English location eyebrow",
+          "maxLength": 45,
+          "default": "Reservations and visit"
+        },
+        "sections.location.heading.id": {
+          "type": "text",
+          "label": "Judul Lokasi Indonesia",
+          "maxLength": 60,
+          "default": "Meja Anda menunggu."
+        },
+        "sections.location.heading.en": {
+          "type": "text",
+          "label": "English Location heading",
+          "maxLength": 60,
+          "default": "Your table is waiting."
+        },
+        "sections.location.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Lokasi Indonesia",
+          "maxLength": 190,
+          "default": "Isi formulir untuk permintaan reservasi atau gunakan WhatsApp jika Anda membutuhkan jawaban cepat."
+        },
+        "sections.location.description.en": {
+          "type": "textarea",
+          "label": "English Location description",
+          "maxLength": 190,
+          "default": "Send a reservation request through the form or use WhatsApp when you need a quick answer."
+        },
+        "sections.location.image": {
+          "type": "image",
+          "label": "Foto lokasi",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:2",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/restaurant-interior.webp",
+            "altId": "Ruang makan tropis modern Dapur Pesisir pada waktu senja",
+            "altEn": "Dapur Pesisir tropical modern dining room at dusk",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.contact.heading.id": {
+          "type": "text",
+          "label": "Judul Form Indonesia",
+          "maxLength": 70,
+          "default": "Kirim permintaan reservasi."
+        },
+        "sections.contact.heading.en": {
+          "type": "text",
+          "label": "English Form heading",
+          "maxLength": 70,
+          "default": "Send a reservation request."
+        },
+        "sections.contact.description.id": {
+          "type": "textarea",
+          "label": "Deskripsi Form Indonesia",
+          "maxLength": 160,
+          "default": "Tim kami akan mengonfirmasi ketersediaan setelah formulir diterima."
+        },
+        "sections.contact.description.en": {
+          "type": "textarea",
+          "label": "English Form description",
+          "maxLength": 160,
+          "default": "Our team will confirm availability after the form is received."
+        },
+        "sections.contact.submitLabel.id": {
+          "type": "text",
+          "label": "Tombol Form Indonesia",
+          "maxLength": 24,
+          "default": "Kirim Permintaan"
+        },
+        "sections.contact.submitLabel.en": {
+          "type": "text",
+          "label": "English Form button",
+          "maxLength": 24,
+          "default": "Send Request"
+        },
+        "sections.footer.explore.id": {
+          "type": "text",
+          "label": "Footer jelajahi Indonesia",
+          "maxLength": 24,
+          "default": "Jelajahi"
+        },
+        "sections.footer.explore.en": {
+          "type": "text",
+          "label": "English footer explore",
+          "maxLength": 24,
+          "default": "Explore"
+        },
+        "sections.footer.visit.id": {
+          "type": "text",
+          "label": "Footer kunjungi Indonesia",
+          "maxLength": 24,
+          "default": "Kunjungi"
+        },
+        "sections.footer.visit.en": {
+          "type": "text",
+          "label": "English footer visit",
+          "maxLength": 24,
+          "default": "Visit"
+        },
+        "sections.footer.hours.id": {
+          "type": "text",
+          "label": "Jam buka Indonesia",
+          "maxLength": 70,
+          "default": "Setiap hari, 11.00 - 23.00"
+        },
+        "sections.footer.hours.en": {
+          "type": "text",
+          "label": "English opening hours",
+          "maxLength": 70,
+          "default": "Daily, 11 AM - 11 PM"
+        },
+        "sections.footer.demo.id": {
+          "type": "text",
+          "label": "Catatan demo Indonesia",
+          "maxLength": 110,
+          "default": "Nama, alamat, dan kontak adalah data contoh."
+        },
+        "sections.footer.demo.en": {
+          "type": "text",
+          "label": "English demo notice",
+          "maxLength": 110,
+          "default": "Name, address, and contact details are sample data."
+        },
+        "theme.primary": {
+          "type": "color",
+          "label": "Warna utama",
+          "default": "#0f4c47"
+        },
+        "theme.secondary": {
+          "type": "color",
+          "label": "Warna sekunder",
+          "default": "#22685f"
+        },
+        "theme.accent": {
+          "type": "color",
+          "label": "Warna aksen",
+          "default": "#f08a68"
+        }
+      },
+      "forms": [
+        {
+          "id": "reservation",
+          "label": "Reservation request",
+          "provider": "pagiverse-core",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "required": true,
+              "maxLength": 80,
+              "labels": {
+                "id": "Nama lengkap",
+                "en": "Full name"
+              }
+            },
+            {
+              "name": "phone",
+              "type": "phone",
+              "required": true,
+              "maxLength": 24,
+              "labels": {
+                "id": "Nomor WhatsApp",
+                "en": "WhatsApp number"
+              }
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "required": true,
+              "labels": {
+                "id": "Tanggal",
+                "en": "Date"
+              }
+            },
+            {
+              "name": "time",
+              "type": "select",
+              "required": true,
+              "labels": {
+                "id": "Waktu",
+                "en": "Time"
+              }
+            },
+            {
+              "name": "guests",
+              "type": "select",
+              "required": true,
+              "labels": {
+                "id": "Jumlah tamu",
+                "en": "Number of guests"
+              }
+            },
+            {
+              "name": "occasion",
+              "type": "select",
+              "required": false,
+              "labels": {
+                "id": "Acara",
+                "en": "Occasion"
+              }
+            },
+            {
+              "name": "notes",
+              "type": "textarea",
+              "required": false,
+              "maxLength": 500,
+              "labels": {
+                "id": "Catatan tambahan",
+                "en": "Additional notes"
+              }
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.eyebrow.id",
+            "sections.hero.eyebrow.en",
+            "sections.hero.heading.id",
+            "sections.hero.heading.en",
+            "sections.hero.description.id",
+            "sections.hero.description.en",
+            "sections.hero.primaryCta.id",
+            "sections.hero.primaryCta.en",
+            "sections.hero.secondaryCta.id",
+            "sections.hero.secondaryCta.en",
+            "sections.hero.image"
+          ]
+        },
+        {
+          "id": "products",
+          "label": "Menu",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.products.eyebrow.id",
+            "sections.products.eyebrow.en",
+            "sections.products.heading.id",
+            "sections.products.heading.en",
+            "sections.products.description.id",
+            "sections.products.description.en",
+            "sections.products.image",
+            "sections.products.featuredItems",
+            "sections.products.pageEyebrow.id",
+            "sections.products.pageEyebrow.en",
+            "sections.products.pageHeading.id",
+            "sections.products.pageHeading.en",
+            "sections.products.pageDescription.id",
+            "sections.products.pageDescription.en",
+            "sections.products.pageImage",
+            "sections.products.listHeading.id",
+            "sections.products.listHeading.en",
+            "sections.products.listDescription.id",
+            "sections.products.listDescription.en",
+            "sections.products.disclaimer.id",
+            "sections.products.disclaimer.en",
+            "sections.products.categories"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Tentang",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.heading.id",
+            "sections.about.heading.en",
+            "sections.about.body.id",
+            "sections.about.body.en",
+            "sections.about.image",
+            "sections.about.pageEyebrow.id",
+            "sections.about.pageEyebrow.en",
+            "sections.about.pageHeading.id",
+            "sections.about.pageHeading.en",
+            "sections.about.pageDescription.id",
+            "sections.about.pageDescription.en",
+            "sections.about.pageImage",
+            "sections.about.storyImage",
+            "sections.about.quote.id",
+            "sections.about.quote.en",
+            "sections.about.attribution.id",
+            "sections.about.attribution.en",
+            "sections.about.principlesHeading.id",
+            "sections.about.principlesHeading.en",
+            "sections.about.principles"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Nilai restoran",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.principles"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Galeri",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.previewHeading.id",
+            "sections.gallery.previewHeading.en",
+            "sections.gallery.previewBody.id",
+            "sections.gallery.previewBody.en",
+            "sections.gallery.heading.id",
+            "sections.gallery.heading.en",
+            "sections.gallery.description.id",
+            "sections.gallery.description.en",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "cta",
+          "label": "Ajakan reservasi",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.cta.image",
+            "sections.cta.heading.id",
+            "sections.cta.heading.en",
+            "sections.cta.body.id",
+            "sections.cta.body.en"
+          ]
+        },
+        {
+          "id": "location",
+          "label": "Lokasi",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "location.address",
+            "location.mapsUrl",
+            "sections.location.eyebrow.id",
+            "sections.location.eyebrow.en",
+            "sections.location.heading.id",
+            "sections.location.heading.en",
+            "sections.location.description.id",
+            "sections.location.description.en",
+            "sections.location.image"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Reservasi",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "contact.whatsapp",
+            "contact.phoneDisplay",
+            "contact.email",
+            "contact.whatsappMessage.id",
+            "contact.whatsappMessage.en",
+            "sections.contact.heading.id",
+            "sections.contact.heading.en",
+            "sections.contact.description.id",
+            "sections.contact.description.en",
+            "sections.contact.submitLabel.id",
+            "sections.contact.submitLabel.en"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "business.name",
+            "business.tagline.id",
+            "business.tagline.en",
+            "business.description.id",
+            "business.description.en",
+            "sections.footer.explore.id",
+            "sections.footer.explore.en",
+            "sections.footer.visit.id",
+            "sections.footer.visit.en",
+            "sections.footer.hours.id",
+            "sections.footer.hours.en",
+            "sections.footer.demo.id",
+            "sections.footer.demo.en"
+          ]
+        }
+      ],
+      "publicPath": "/template-library/dapur-pesisir-tropical-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "rona-nusa-restaurant-001",
       "name": "Rona Nusa",
       "category": "restaurant",
