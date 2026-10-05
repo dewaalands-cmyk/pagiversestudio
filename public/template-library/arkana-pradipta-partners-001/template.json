@@ -1,0 +1,482 @@
+{
+  "pagiverseStandard": 1,
+  "id": "arkana-pradipta-partners-001",
+  "name": "Arkana Pradipta & Partners",
+  "category": "services",
+  "categoryLabel": {
+    "id": "Jasa Profesional",
+    "en": "Professional Services"
+  },
+  "description": "Premium bilingual multi-page company profile template for a corporate and commercial law firm",
+  "price": 1369500,
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html",
+      "seo": {
+        "titleFields": { "id": "seo.title.id", "en": "seo.title.en" },
+        "descriptionFields": { "id": "seo.description.id", "en": "seo.description.en" }
+      }
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "entry": "about.html",
+      "seo": {
+        "titleFields": { "id": "seo.pages.about.title.id", "en": "seo.pages.about.title.en" },
+        "descriptionFields": { "id": "seo.pages.about.description.id", "en": "seo.pages.about.description.en" }
+      }
+    },
+    {
+      "id": "practices",
+      "path": "/practice-areas",
+      "entry": "practice-areas.html",
+      "seo": {
+        "titleFields": { "id": "seo.pages.practices.title.id", "en": "seo.pages.practices.title.en" },
+        "descriptionFields": { "id": "seo.pages.practices.description.id", "en": "seo.pages.practices.description.en" }
+      }
+    },
+    {
+      "id": "professionals",
+      "path": "/professionals",
+      "entry": "professionals.html",
+      "seo": {
+        "titleFields": { "id": "seo.pages.professionals.title.id", "en": "seo.pages.professionals.title.en" },
+        "descriptionFields": { "id": "seo.pages.professionals.description.id", "en": "seo.pages.professionals.description.en" }
+      }
+    },
+    {
+      "id": "insights",
+      "path": "/insights",
+      "entry": "insights.html",
+      "seo": {
+        "titleFields": { "id": "seo.pages.insights.title.id", "en": "seo.pages.insights.title.en" },
+        "descriptionFields": { "id": "seo.pages.insights.description.id", "en": "seo.pages.insights.description.en" }
+      }
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "entry": "contact.html",
+      "seo": {
+        "titleFields": { "id": "seo.pages.contact.title.id", "en": "seo.pages.contact.title.en" },
+        "descriptionFields": { "id": "seo.pages.contact.description.id", "en": "seo.pages.contact.description.en" }
+      }
+    }
+  ],
+  "dependencies": [],
+  "languages": {
+    "supported": ["id", "en"],
+    "default": "id"
+  },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "light",
+    "tokens": {
+      "primary": { "editable": false, "default": "#701F2D" },
+      "secondary": { "editable": false, "default": "#262424" },
+      "accent": { "editable": false, "default": "#8D3141" },
+      "background": { "editable": false, "default": "#F3F1ED" },
+      "surface": { "editable": false, "default": "#FFFFFF" },
+      "text": { "editable": false, "default": "#1D1B1B" }
+    }
+  },
+  "navigation": {
+    "items": [
+      { "id": "home", "labelFields": { "id": "navigation.home.label.id", "en": "navigation.home.label.en" }, "target": "index.html", "hideable": false },
+      { "id": "about", "labelFields": { "id": "navigation.about.label.id", "en": "navigation.about.label.en" }, "target": "about.html", "hideable": false },
+      { "id": "practices", "labelFields": { "id": "navigation.practices.label.id", "en": "navigation.practices.label.en" }, "target": "practice-areas.html", "hideable": false },
+      { "id": "professionals", "labelFields": { "id": "navigation.professionals.label.id", "en": "navigation.professionals.label.en" }, "target": "professionals.html", "hideable": false },
+      { "id": "insights", "labelFields": { "id": "navigation.insights.label.id", "en": "navigation.insights.label.en" }, "target": "insights.html", "hideable": false },
+      { "id": "contact", "labelFields": { "id": "navigation.contact.label.id", "en": "navigation.contact.label.en" }, "target": "contact.html", "hideable": false }
+    ]
+  },
+  "fields": {
+    "business.name": { "type": "text", "label": "Nama firma", "required": true, "maxLength": 72, "default": "Arkana Pradipta & Partners" },
+    "business.tagline.id": { "type": "text", "label": "Descriptor firma Indonesia", "required": true, "maxLength": 72, "default": "Corporate & Commercial Law Firm" },
+    "business.tagline.en": { "type": "text", "label": "English firm descriptor", "required": true, "maxLength": 72, "default": "Corporate & Commercial Law Firm" },
+    "business.description.id": { "type": "textarea", "label": "Deskripsi firma Indonesia", "required": true, "maxLength": 300, "default": "Firma hukum korporasi dan komersial berbasis di Jakarta untuk transaksi, tata kelola, kontrak, dan kebutuhan regulasi bisnis." },
+    "business.description.en": { "type": "textarea", "label": "English firm description", "required": true, "maxLength": 300, "default": "A Jakarta-based corporate and commercial law firm advising on transactions, governance, contracts, and business regulation." },
+    "business.logo": { "type": "image", "label": "Logo firma", "required": false, "accept": ["image/png", "image/jpeg", "image/webp", "image/svg+xml"], "maxFileSizeMB": 5, "focalPoint": false },
+    "business.logoAlt.id": { "type": "text", "label": "Alt logo Indonesia", "maxLength": 120, "default": "Logo Arkana Pradipta & Partners" },
+    "business.logoAlt.en": { "type": "text", "label": "English logo alt", "maxLength": 120, "default": "Arkana Pradipta & Partners logo" },
+
+    "contact.phone": { "type": "phone", "label": "Telepon", "required": true, "default": "+62 21 5550 0188" },
+    "contact.email": { "type": "email", "label": "Email", "required": true, "maxLength": 120, "default": "counsel@arkanapradipta.example" },
+    "location.address": { "type": "textarea", "label": "Alamat kantor", "required": true, "maxLength": 220, "default": "Menara Arkana, Lantai 28, Jl. Jenderal Sudirman Kav. 00, Jakarta 10220, Indonesia" },
+    "location.mapsUrl": { "type": "url", "label": "Tautan peta", "allowedProtocols": ["https:"], "default": "https://www.google.com/maps/search/?api=1&query=Jakarta%20Sudirman" },
+    "social.linkedin": { "type": "url", "label": "LinkedIn", "allowedProtocols": ["https:"], "default": "https://www.linkedin.com/" },
+
+    "seo.title.id": { "type": "text", "label": "Judul SEO Beranda Indonesia", "required": true, "maxLength": 64, "default": "Arkana Pradipta | Firma Hukum Korporasi Jakarta" },
+    "seo.title.en": { "type": "text", "label": "English Home SEO title", "required": true, "maxLength": 64, "default": "Arkana Pradipta | Corporate Law Firm Jakarta" },
+    "seo.description.id": { "type": "textarea", "label": "Deskripsi SEO Beranda Indonesia", "required": true, "maxLength": 160, "default": "Firma hukum korporasi dan komersial di Jakarta untuk transaksi, tata kelola, kontrak, investasi, serta kebutuhan regulasi bisnis." },
+    "seo.description.en": { "type": "textarea", "label": "English Home SEO description", "required": true, "maxLength": 160, "default": "Jakarta corporate and commercial law firm advising on transactions, governance, contracts, investment, and business regulation." },
+    "seo.ogImage": { "type": "image", "label": "Gambar sosial", "required": true, "accept": ["image/jpeg", "image/png", "image/webp"], "maxFileSizeMB": 8, "aspectRatio": "2:1", "focalPoint": true, "default": { "src": "assets/hero-home.webp", "altId": "Gedung korporat kontemporer di Jakarta", "altEn": "Contemporary corporate tower in Jakarta", "focalPoint": { "x": 50, "y": 50 } } },
+    "seo.pages.about.title.id": { "type": "text", "label": "Judul SEO Tentang Indonesia", "required": true, "maxLength": 64, "default": "Tentang | Arkana Pradipta & Partners" },
+    "seo.pages.about.title.en": { "type": "text", "label": "English About SEO title", "required": true, "maxLength": 64, "default": "About | Arkana Pradipta & Partners" },
+    "seo.pages.about.description.id": { "type": "textarea", "label": "Deskripsi SEO Tentang Indonesia", "required": true, "maxLength": 160, "default": "Pendekatan firma dalam mendampingi keputusan korporasi dan komersial dengan jernih, kolaboratif, dan disiplin." },
+    "seo.pages.about.description.en": { "type": "textarea", "label": "English About SEO description", "required": true, "maxLength": 160, "default": "Our clear, collaborative, and disciplined approach to corporate and commercial decisions." },
+    "seo.pages.practices.title.id": { "type": "text", "label": "Judul SEO Area Praktik Indonesia", "required": true, "maxLength": 64, "default": "Area Praktik | Arkana Pradipta & Partners" },
+    "seo.pages.practices.title.en": { "type": "text", "label": "English Practice Areas SEO title", "required": true, "maxLength": 64, "default": "Practice Areas | Arkana Pradipta & Partners" },
+    "seo.pages.practices.description.id": { "type": "textarea", "label": "Deskripsi SEO Area Praktik Indonesia", "required": true, "maxLength": 160, "default": "Keahlian hukum korporasi, M&A, kontrak komersial, investasi, pembiayaan, regulasi, teknologi, dan restrukturisasi." },
+    "seo.pages.practices.description.en": { "type": "textarea", "label": "English Practice Areas SEO description", "required": true, "maxLength": 160, "default": "Corporate, M&A, commercial contracts, investment, finance, regulatory, technology, and restructuring expertise." },
+    "seo.pages.professionals.title.id": { "type": "text", "label": "Judul SEO Profesional Indonesia", "required": true, "maxLength": 64, "default": "Profesional | Arkana Pradipta & Partners" },
+    "seo.pages.professionals.title.en": { "type": "text", "label": "English Professionals SEO title", "required": true, "maxLength": 64, "default": "Professionals | Arkana Pradipta & Partners" },
+    "seo.pages.professionals.description.id": { "type": "textarea", "label": "Deskripsi SEO Profesional Indonesia", "required": true, "maxLength": 160, "default": "Profil demo tim senior dengan keahlian korporasi, transaksi, pembiayaan, regulasi, teknologi, dan data." },
+    "seo.pages.professionals.description.en": { "type": "textarea", "label": "English Professionals SEO description", "required": true, "maxLength": 160, "default": "Demo senior team profiles across corporate, transactions, finance, regulatory, technology, and data." },
+    "seo.pages.insights.title.id": { "type": "text", "label": "Judul SEO Wawasan Indonesia", "required": true, "maxLength": 64, "default": "Wawasan | Arkana Pradipta & Partners" },
+    "seo.pages.insights.title.en": { "type": "text", "label": "English Insights SEO title", "required": true, "maxLength": 64, "default": "Insights | Arkana Pradipta & Partners" },
+    "seo.pages.insights.description.id": { "type": "textarea", "label": "Deskripsi SEO Wawasan Indonesia", "required": true, "maxLength": 160, "default": "Wawasan demo mengenai tata kelola, kontrak komersial, investasi asing, teknologi, dan transaksi data." },
+    "seo.pages.insights.description.en": { "type": "textarea", "label": "English Insights SEO description", "required": true, "maxLength": 160, "default": "Sample perspectives on governance, commercial contracts, foreign investment, technology, and data transactions." },
+    "seo.pages.contact.title.id": { "type": "text", "label": "Judul SEO Kontak Indonesia", "required": true, "maxLength": 64, "default": "Kontak | Arkana Pradipta & Partners" },
+    "seo.pages.contact.title.en": { "type": "text", "label": "English Contact SEO title", "required": true, "maxLength": 64, "default": "Contact | Arkana Pradipta & Partners" },
+    "seo.pages.contact.description.id": { "type": "textarea", "label": "Deskripsi SEO Kontak Indonesia", "required": true, "maxLength": 160, "default": "Hubungi firma untuk mendiskusikan konteks perusahaan, transaksi, atau kebutuhan hukum bisnis Anda." },
+    "seo.pages.contact.description.en": { "type": "textarea", "label": "English Contact SEO description", "required": true, "maxLength": 160, "default": "Contact the firm to discuss your company, transaction, or business legal needs." },
+
+    "navigation.home.label.id": { "type": "text", "label": "Navigasi Beranda", "maxLength": 18, "default": "Beranda" },
+    "navigation.home.label.en": { "type": "text", "label": "Home navigation", "maxLength": 18, "default": "Home" },
+    "navigation.about.label.id": { "type": "text", "label": "Navigasi Tentang", "maxLength": 18, "default": "Tentang" },
+    "navigation.about.label.en": { "type": "text", "label": "About navigation", "maxLength": 18, "default": "About" },
+    "navigation.practices.label.id": { "type": "text", "label": "Navigasi Area Praktik", "maxLength": 22, "default": "Area Praktik" },
+    "navigation.practices.label.en": { "type": "text", "label": "Practice Areas navigation", "maxLength": 22, "default": "Practice Areas" },
+    "navigation.professionals.label.id": { "type": "text", "label": "Navigasi Profesional", "maxLength": 18, "default": "Profesional" },
+    "navigation.professionals.label.en": { "type": "text", "label": "Professionals navigation", "maxLength": 18, "default": "Professionals" },
+    "navigation.insights.label.id": { "type": "text", "label": "Navigasi Wawasan", "maxLength": 18, "default": "Wawasan" },
+    "navigation.insights.label.en": { "type": "text", "label": "Insights navigation", "maxLength": 18, "default": "Insights" },
+    "navigation.contact.label.id": { "type": "text", "label": "Navigasi Kontak", "maxLength": 20, "default": "Hubungi Kami" },
+    "navigation.contact.label.en": { "type": "text", "label": "Contact navigation", "maxLength": 20, "default": "Contact Us" },
+
+    "sections.hero.home.eyebrow.id": { "type": "text", "label": "Label hero Beranda Indonesia", "maxLength": 72, "default": "Corporate & Commercial Law Firm · Jakarta" },
+    "sections.hero.home.eyebrow.en": { "type": "text", "label": "English Home hero label", "maxLength": 72, "default": "Corporate & Commercial Law Firm · Jakarta" },
+    "sections.hero.home.heading.id": { "type": "text", "label": "Judul hero Beranda Indonesia", "required": true, "maxLength": 90, "default": "Kejelasan hukum untuk keputusan bisnis yang menentukan." },
+    "sections.hero.home.heading.en": { "type": "text", "label": "English Home hero heading", "required": true, "maxLength": 90, "default": "Legal clarity for the decisions that shape your business." },
+    "sections.hero.home.description.id": { "type": "textarea", "label": "Deskripsi hero Beranda Indonesia", "maxLength": 260, "default": "Kami mendampingi perusahaan, investor, dan pemimpin bisnis dalam transaksi, tata kelola, serta persoalan regulasi yang menuntut ketelitian hukum dan pemahaman komersial." },
+    "sections.hero.home.description.en": { "type": "textarea", "label": "English Home hero description", "maxLength": 260, "default": "We advise companies, investors, and business leaders on transactions, governance, and regulatory matters that demand legal precision and commercial perspective." },
+    "sections.hero.home.primaryCta.id": { "type": "text", "label": "CTA utama Beranda Indonesia", "maxLength": 28, "default": "Jadwalkan Konsultasi" },
+    "sections.hero.home.primaryCta.en": { "type": "text", "label": "English Home primary CTA", "maxLength": 28, "default": "Schedule a Consultation" },
+    "sections.hero.home.secondaryCta.id": { "type": "text", "label": "CTA kedua Beranda Indonesia", "maxLength": 28, "default": "Jelajahi Keahlian Kami" },
+    "sections.hero.home.secondaryCta.en": { "type": "text", "label": "English Home secondary CTA", "maxLength": 28, "default": "Explore Our Expertise" },
+    "sections.hero.home.image": { "type": "image", "label": "Gambar hero Beranda", "required": true, "accept": ["image/jpeg", "image/png", "image/webp"], "maxFileSizeMB": 8, "aspectRatio": "2:1", "focalPoint": true, "default": { "src": "assets/hero-home.webp", "altId": "Gedung korporat kontemporer di Jakarta pada senja hari", "altEn": "Contemporary corporate tower in Jakarta at dusk", "focalPoint": { "x": 50, "y": 52 } } },
+
+    "sections.hero.about.eyebrow.id": { "type": "text", "label": "Label hero Tentang Indonesia", "maxLength": 30, "default": "Tentang Firma" },
+    "sections.hero.about.eyebrow.en": { "type": "text", "label": "English About hero label", "maxLength": 30, "default": "About the Firm" },
+    "sections.hero.about.heading.id": { "type": "text", "label": "Judul hero Tentang Indonesia", "required": true, "maxLength": 90, "default": "Nasihat hukum yang bergerak seirama dengan bisnis." },
+    "sections.hero.about.heading.en": { "type": "text", "label": "English About hero heading", "required": true, "maxLength": 90, "default": "Counsel that moves at the pace of business." },
+    "sections.hero.about.description.id": { "type": "textarea", "label": "Deskripsi hero Tentang Indonesia", "maxLength": 240, "default": "Firma korporasi dan komersial berbasis di Jakarta, dibangun untuk menangani keputusan bernilai tinggi dengan pendekatan yang jernih, kolaboratif, dan disiplin." },
+    "sections.hero.about.description.en": { "type": "textarea", "label": "English About hero description", "maxLength": 240, "default": "A Jakarta-based corporate and commercial law firm built to support high-value decisions with clarity, collaboration, and discipline." },
+    "sections.hero.about.image": { "type": "image", "label": "Gambar hero Tentang", "required": true, "accept": ["image/jpeg", "image/png", "image/webp"], "maxFileSizeMB": 8, "aspectRatio": "16:9", "focalPoint": true, "default": { "src": "assets/hero-about.webp", "altId": "Atrium kantor korporat kontemporer dengan batu dan kaca", "altEn": "Contemporary corporate office atrium in stone and glass", "focalPoint": { "x": 56, "y": 52 } } },
+
+    "sections.hero.practices.eyebrow.id": { "type": "text", "label": "Label hero Area Praktik Indonesia", "maxLength": 30, "default": "Area Praktik" },
+    "sections.hero.practices.eyebrow.en": { "type": "text", "label": "English Practice Areas hero label", "maxLength": 30, "default": "Practice Areas" },
+    "sections.hero.practices.heading.id": { "type": "text", "label": "Judul hero Area Praktik Indonesia", "required": true, "maxLength": 90, "default": "Keahlian yang terarah pada kebutuhan bisnis." },
+    "sections.hero.practices.heading.en": { "type": "text", "label": "English Practice Areas hero heading", "required": true, "maxLength": 90, "default": "Expertise focused on business outcomes." },
+    "sections.hero.practices.description.id": { "type": "textarea", "label": "Deskripsi hero Area Praktik Indonesia", "maxLength": 220, "default": "Dukungan hukum dari pembentukan dan operasional sehari-hari hingga transaksi transformasional dan situasi khusus." },
+    "sections.hero.practices.description.en": { "type": "textarea", "label": "English Practice Areas hero description", "maxLength": 220, "default": "Legal support from formation and day-to-day operations to transformational transactions and special situations." },
+    "sections.hero.practices.image": { "type": "image", "label": "Gambar hero Area Praktik", "required": true, "accept": ["image/jpeg", "image/png", "image/webp"], "maxFileSizeMB": 8, "aspectRatio": "2:1", "focalPoint": true, "default": { "src": "assets/hero-practices.webp", "altId": "Detail geometri gedung korporat dari batu, baja, dan kaca", "altEn": "Geometric detail of a corporate building in stone, steel, and glass", "focalPoint": { "x": 58, "y": 48 } } },
+
+    "sections.hero.professionals.eyebrow.id": { "type": "text", "label": "Label hero Profesional Indonesia", "maxLength": 30, "default": "Profesional" },
+    "sections.hero.professionals.eyebrow.en": { "type": "text", "label": "English Professionals hero label", "maxLength": 30, "default": "Professionals" },
+    "sections.hero.professionals.heading.id": { "type": "text", "label": "Judul hero Profesional Indonesia", "required": true, "maxLength": 90, "default": "Kepakaran yang jelas. Kolaborasi tanpa sekat." },
+    "sections.hero.professionals.heading.en": { "type": "text", "label": "English Professionals hero heading", "required": true, "maxLength": 90, "default": "Clear expertise. Seamless collaboration." },
+    "sections.hero.professionals.description.id": { "type": "textarea", "label": "Deskripsi hero Profesional Indonesia", "maxLength": 200, "default": "Tim senior yang bekerja lintas disiplin untuk memberi jawaban yang konsisten dan dapat digunakan." },
+    "sections.hero.professionals.description.en": { "type": "textarea", "label": "English Professionals hero description", "maxLength": 200, "default": "A senior team working across disciplines to deliver consistent, usable advice." },
+    "sections.hero.professionals.image": { "type": "image", "label": "Gambar hero Profesional", "required": true, "accept": ["image/jpeg", "image/png", "image/webp"], "maxFileSizeMB": 8, "aspectRatio": "2:1", "focalPoint": true, "default": { "src": "assets/hero-professionals.webp", "altId": "Ruang rapat eksekutif modern menghadap cakrawala Jakarta", "altEn": "Modern executive boardroom overlooking the Jakarta skyline", "focalPoint": { "x": 53, "y": 52 } } },
+
+    "sections.hero.insights.eyebrow.id": { "type": "text", "label": "Label hero Wawasan Indonesia", "maxLength": 30, "default": "Wawasan" },
+    "sections.hero.insights.eyebrow.en": { "type": "text", "label": "English Insights hero label", "maxLength": 30, "default": "Insights" },
+    "sections.hero.insights.heading.id": { "type": "text", "label": "Judul hero Wawasan Indonesia", "required": true, "maxLength": 100, "default": "Wawasan untuk melihat risiko sebelum menjadi hambatan." },
+    "sections.hero.insights.heading.en": { "type": "text", "label": "English Insights hero heading", "required": true, "maxLength": 100, "default": "Insight to see risk before it becomes friction." },
+    "sections.hero.insights.description.id": { "type": "textarea", "label": "Deskripsi hero Wawasan Indonesia", "maxLength": 220, "default": "Perspektif ringkas mengenai perkembangan hukum dan persoalan komersial yang relevan bagi pengambil keputusan." },
+    "sections.hero.insights.description.en": { "type": "textarea", "label": "English Insights hero description", "maxLength": 220, "default": "Concise perspectives on legal developments and commercial issues relevant to decision-makers." },
+    "sections.hero.insights.image": { "type": "image", "label": "Gambar hero Wawasan", "required": true, "accept": ["image/jpeg", "image/png", "image/webp"], "maxFileSizeMB": 8, "aspectRatio": "16:9", "focalPoint": true, "default": { "src": "assets/hero-insights.webp", "altId": "Perpustakaan korporat kontemporer dengan pemandangan kota", "altEn": "Contemporary corporate library overlooking the city", "focalPoint": { "x": 62, "y": 50 } } },
+
+    "sections.hero.contact.eyebrow.id": { "type": "text", "label": "Label hero Kontak Indonesia", "maxLength": 30, "default": "Kontak" },
+    "sections.hero.contact.eyebrow.en": { "type": "text", "label": "English Contact hero label", "maxLength": 30, "default": "Contact" },
+    "sections.hero.contact.heading.id": { "type": "text", "label": "Judul hero Kontak Indonesia", "required": true, "maxLength": 110, "default": "Mulai dengan konteks. Kami akan membantu memetakan langkah berikutnya." },
+    "sections.hero.contact.heading.en": { "type": "text", "label": "English Contact hero heading", "required": true, "maxLength": 110, "default": "Start with context. We’ll help map the next step." },
+    "sections.hero.contact.description.id": { "type": "textarea", "label": "Deskripsi hero Kontak Indonesia", "maxLength": 260, "default": "Sampaikan gambaran singkat mengenai perusahaan, transaksi, atau pertanyaan hukum Anda. Informasi awal membantu kami mengarahkan percakapan dengan tepat." },
+    "sections.hero.contact.description.en": { "type": "textarea", "label": "English Contact hero description", "maxLength": 260, "default": "Share a brief overview of your company, transaction, or legal question. Initial context helps us direct the conversation appropriately." },
+    "sections.hero.contact.image": { "type": "image", "label": "Gambar hero Kontak", "required": true, "accept": ["image/jpeg", "image/png", "image/webp"], "maxFileSizeMB": 8, "aspectRatio": "2:1", "focalPoint": true, "default": { "src": "assets/hero-contact.webp", "altId": "Pintu masuk gedung korporat kontemporer setelah hujan", "altEn": "Contemporary corporate tower entrance after rain", "focalPoint": { "x": 57, "y": 54 } } },
+
+    "sections.homeIntro.aside.id": { "type": "textarea", "label": "Catatan pengantar Beranda Indonesia", "maxLength": 180, "default": "Nasihat yang mempertimbangkan risiko hukum dan realitas komersial secara bersamaan." },
+    "sections.homeIntro.aside.en": { "type": "textarea", "label": "English Home introduction note", "maxLength": 180, "default": "Advice that considers legal risk and commercial reality together." },
+    "sections.homeIntro.heading.id": { "type": "text", "label": "Judul pengantar Beranda Indonesia", "maxLength": 72, "default": "Ketelitian hukum. Kepekaan komersial." },
+    "sections.homeIntro.heading.en": { "type": "text", "label": "English Home introduction heading", "maxLength": 72, "default": "Legal precision. Commercial perspective." },
+    "sections.homeIntro.body.id": { "type": "textarea", "label": "Isi pengantar Beranda Indonesia", "maxLength": 280, "default": "Nasihat hukum yang baik tidak berhenti pada apa yang diperbolehkan. Kami membantu klien memahami pilihan, menilai konsekuensi, dan bergerak dengan keyakinan." },
+    "sections.homeIntro.body.en": { "type": "textarea", "label": "English Home introduction body", "maxLength": 280, "default": "Good legal advice goes beyond what is permitted. We help clients understand their options, assess the consequences, and move forward with confidence." },
+    "sections.homePrinciples.items": {
+      "type": "array", "label": "Prinsip layanan", "minItems": 3, "maxItems": 6,
+      "default": [
+        { "title": { "id": "Jernih dalam kompleksitas", "en": "Clarity in complexity" }, "description": { "id": "Mengubah persoalan yang rumit menjadi pilihan yang dapat ditindaklanjuti.", "en": "Turning complex matters into actionable options." } },
+        { "title": { "id": "Berorientasi pada bisnis", "en": "Business-minded" }, "description": { "id": "Menempatkan tujuan komersial sebagai bagian dari setiap analisis hukum.", "en": "Keeping commercial objectives at the centre of every legal analysis." } },
+        { "title": { "id": "Hadir saat dibutuhkan", "en": "Present when it matters" }, "description": { "id": "Kolaborasi senior, respons yang terukur, dan komunikasi yang langsung.", "en": "Senior collaboration, measured responsiveness, and direct communication." } }
+      ],
+      "item": { "fields": {
+        "title.id": { "type": "text", "label": "Judul Indonesia", "required": true, "maxLength": 56 },
+        "title.en": { "type": "text", "label": "English title", "required": true, "maxLength": 56 },
+        "description.id": { "type": "textarea", "label": "Deskripsi Indonesia", "required": true, "maxLength": 190 },
+        "description.en": { "type": "textarea", "label": "English description", "required": true, "maxLength": 190 }
+      } }
+    },
+
+    "sections.about.storyLabel.id": { "type": "text", "label": "Label cerita firma Indonesia", "maxLength": 32, "default": "Cara Kami Berpikir" },
+    "sections.about.storyLabel.en": { "type": "text", "label": "English firm story label", "maxLength": 32, "default": "How We Think" },
+    "sections.about.storyHeading.id": { "type": "text", "label": "Judul cerita firma Indonesia", "maxLength": 82, "default": "Kompleksitas perlu diurai, bukan diperbesar." },
+    "sections.about.storyHeading.en": { "type": "text", "label": "English firm story heading", "maxLength": 82, "default": "Complexity should be clarified, not amplified." },
+    "sections.about.storyBody.id": { "type": "textarea", "label": "Cerita firma Indonesia", "maxLength": 520, "default": "Arkana Pradipta & Partners hadir dengan satu keyakinan sederhana: persoalan hukum bisnis seharusnya dijelaskan secara lugas tanpa kehilangan kedalaman. Kami menggabungkan analisis yang teliti dengan pemahaman terhadap cara perusahaan beroperasi, berinvestasi, dan bertumbuh." },
+    "sections.about.storyBody.en": { "type": "textarea", "label": "English firm story", "maxLength": 520, "default": "Arkana Pradipta & Partners is founded on a simple belief: business law should be explained clearly without sacrificing depth. We combine rigorous analysis with an understanding of how companies operate, invest, and grow." },
+    "sections.about.approachHeading.id": { "type": "text", "label": "Judul pendekatan Indonesia", "maxLength": 72, "default": "Dari tujuan bisnis hingga eksekusi." },
+    "sections.about.approachHeading.en": { "type": "text", "label": "English approach heading", "maxLength": 72, "default": "From business objective to execution." },
+    "sections.about.approachBody.id": { "type": "textarea", "label": "Deskripsi pendekatan Indonesia", "maxLength": 220, "default": "Setiap mandat dimulai dengan memahami keputusan yang perlu dibuat, bukan sekadar dokumen yang perlu diselesaikan." },
+    "sections.about.approachBody.en": { "type": "textarea", "label": "English approach description", "maxLength": 220, "default": "Every mandate begins with understanding the decision to be made, not merely the document to be completed." },
+    "sections.about.approachItems": {
+      "type": "array", "label": "Tahapan pendekatan", "minItems": 4, "maxItems": 6,
+      "default": [
+        { "title": { "id": "Memahami tujuan", "en": "Understand the objective" }, "description": { "id": "Kami memulai dari hasil bisnis yang ingin dicapai, bukan hanya dokumen yang perlu disusun.", "en": "We begin with the business outcome to be achieved, not merely the document to be drafted." } },
+        { "title": { "id": "Memetakan risiko", "en": "Frame the risk" }, "description": { "id": "Kami membedakan risiko yang harus dihindari, dikelola, atau diterima secara sadar.", "en": "We distinguish between risks to avoid, manage, or consciously accept." } },
+        { "title": { "id": "Membangun pilihan", "en": "Build practical options" }, "description": { "id": "Setiap rekomendasi dilengkapi konsekuensi, prioritas, dan langkah berikutnya.", "en": "Every recommendation sets out consequences, priorities, and the next step." } },
+        { "title": { "id": "Mendampingi eksekusi", "en": "Stay through execution" }, "description": { "id": "Kami tetap terlibat hingga keputusan dapat dijalankan secara tepat.", "en": "We remain involved until the decision can be implemented effectively." } }
+      ],
+      "item": { "fields": {
+        "title.id": { "type": "text", "label": "Judul Indonesia", "required": true, "maxLength": 52 },
+        "title.en": { "type": "text", "label": "English title", "required": true, "maxLength": 52 },
+        "description.id": { "type": "textarea", "label": "Deskripsi Indonesia", "required": true, "maxLength": 220 },
+        "description.en": { "type": "textarea", "label": "English description", "required": true, "maxLength": 220 }
+      } }
+    },
+    "sections.about.valuesHeading.id": { "type": "text", "label": "Judul nilai Indonesia", "maxLength": 82, "default": "Prinsip yang menjaga kualitas setiap nasihat." },
+    "sections.about.valuesHeading.en": { "type": "text", "label": "English values heading", "maxLength": 82, "default": "Principles that shape the quality of every advice." },
+    "sections.about.valuesBody.id": { "type": "textarea", "label": "Deskripsi nilai Indonesia", "maxLength": 220, "default": "Nilai kami diterjemahkan ke dalam cara menganalisis, berkomunikasi, dan bertanggung jawab atas pekerjaan." },
+    "sections.about.valuesBody.en": { "type": "textarea", "label": "English values description", "maxLength": 220, "default": "Our values are reflected in how we analyse, communicate, and take responsibility for our work." },
+    "sections.about.values": {
+      "type": "array", "label": "Nilai firma", "minItems": 3, "maxItems": 6,
+      "default": [
+        { "title": { "id": "Integritas tanpa kompromi", "en": "Integrity without compromise" }, "description": { "id": "Kami menjaga independensi penilaian dan kejujuran dalam setiap rekomendasi.", "en": "We protect independent judgment and candour in every recommendation." } },
+        { "title": { "id": "Presisi dengan perspektif", "en": "Precision with perspective" }, "description": { "id": "Ketelitian hukum kami selalu ditempatkan dalam konteks tujuan dan konsekuensi bisnis.", "en": "Our legal precision is always placed within the context of business objectives and consequences." } },
+        { "title": { "id": "Keterbukaan dengan respek", "en": "Candour with respect" }, "description": { "id": "Kami menyampaikan persoalan sulit secara langsung, terukur, dan konstruktif.", "en": "We address difficult issues directly, thoughtfully, and constructively." } },
+        { "title": { "id": "Kemitraan dengan akuntabilitas", "en": "Partnership with accountability" }, "description": { "id": "Kami bekerja dekat dengan klien dan bertanggung jawab atas kualitas proses serta hasil kerja.", "en": "We work closely with clients and remain accountable for the quality of our process and work." } }
+      ],
+      "item": { "fields": {
+        "title.id": { "type": "text", "label": "Judul nilai Indonesia", "required": true, "maxLength": 62 },
+        "title.en": { "type": "text", "label": "English value title", "required": true, "maxLength": 62 },
+        "description.id": { "type": "textarea", "label": "Deskripsi nilai Indonesia", "required": true, "maxLength": 220 },
+        "description.en": { "type": "textarea", "label": "English value description", "required": true, "maxLength": 220 }
+      } }
+    },
+    "sections.about.crossBorderHeading.id": { "type": "text", "label": "Judul lintas batas Indonesia", "maxLength": 84, "default": "Perspektif lintas batas, koordinasi yang tetap dekat." },
+    "sections.about.crossBorderHeading.en": { "type": "text", "label": "English cross-border heading", "maxLength": 84, "default": "Cross-border perspective, closely coordinated." },
+    "sections.about.crossBorderBody.id": { "type": "textarea", "label": "Catatan lintas batas Indonesia", "maxLength": 280, "default": "Untuk perkara lintas yurisdiksi, kami dapat berkoordinasi dengan penasihat independen di negara terkait sesuai kebutuhan setiap mandat." },
+    "sections.about.crossBorderBody.en": { "type": "textarea", "label": "English cross-border note", "maxLength": 280, "default": "For cross-border matters, we can coordinate with independent counsel in relevant jurisdictions according to the needs of each mandate." },
+
+    "sections.services.heading.id": { "type": "text", "label": "Judul layanan Beranda Indonesia", "maxLength": 82, "default": "Keahlian untuk setiap tahap keputusan bisnis." },
+    "sections.services.heading.en": { "type": "text", "label": "English Home services heading", "maxLength": 82, "default": "Expertise for every stage of a business decision." },
+    "sections.services.description.id": { "type": "textarea", "label": "Deskripsi layanan Beranda Indonesia", "maxLength": 260, "default": "Dari operasional harian hingga transaksi yang mengubah arah perusahaan, kami menyatukan disiplin korporasi, komersial, dan regulasi." },
+    "sections.services.description.en": { "type": "textarea", "label": "English Home services description", "maxLength": 260, "default": "From day-to-day operations to transformational transactions, we bring together corporate, commercial, and regulatory disciplines." },
+    "sections.services.linkLabel.id": { "type": "text", "label": "Tautan layanan Indonesia", "maxLength": 30, "default": "Lihat seluruh area praktik" },
+    "sections.services.linkLabel.en": { "type": "text", "label": "English services link", "maxLength": 30, "default": "View all practice areas" },
+    "sections.services.pageHeading.id": { "type": "text", "label": "Judul halaman praktik Indonesia", "maxLength": 88, "default": "Kapasitas lintas disiplin, satu arah yang jelas." },
+    "sections.services.pageHeading.en": { "type": "text", "label": "English practice page heading", "maxLength": 88, "default": "Cross-disciplinary capability, one clear direction." },
+    "sections.services.pageBody.id": { "type": "textarea", "label": "Deskripsi halaman praktik Indonesia", "maxLength": 260, "default": "Kami membentuk tim sesuai kebutuhan mandat sehingga analisis korporasi, kontrak, pembiayaan, dan regulasi tetap terhubung." },
+    "sections.services.pageBody.en": { "type": "textarea", "label": "English practice page description", "maxLength": 260, "default": "We shape teams around each mandate so that corporate, contractual, financing, and regulatory analysis remains connected." },
+    "sections.services.items": {
+      "type": "array", "label": "Area praktik", "minItems": 6, "maxItems": 10,
+      "default": [
+        { "title": { "id": "Korporasi dan Tata Kelola", "en": "Corporate Advisory & Governance" }, "description": { "id": "Struktur perusahaan, kewenangan organ, kebijakan internal, aksi korporasi, dan tanggung jawab pengurus.", "en": "Corporate structures, board and shareholder authorities, internal policies, corporate actions, and directors’ duties." } },
+        { "title": { "id": "Merger, Akuisisi, dan Transaksi Strategis", "en": "Mergers, Acquisitions & Strategic Transactions" }, "description": { "id": "Due diligence, struktur transaksi, dokumentasi, negosiasi, penutupan, dan integrasi awal.", "en": "Due diligence, transaction structuring, documentation, negotiation, closing, and early-stage integration." } },
+        { "title": { "id": "Kontrak Komersial", "en": "Commercial Agreements" }, "description": { "id": "Penyusunan dan negosiasi kontrak distribusi, pasokan, jasa, lisensi, kemitraan, dan kontrak kompleks lainnya.", "en": "Drafting and negotiation of distribution, supply, services, licensing, partnership, and other complex commercial agreements." } },
+        { "title": { "id": "Penanaman Modal Asing dan Masuk Pasar", "en": "Foreign Investment & Market Entry" }, "description": { "id": "Pilihan kendaraan usaha, kepemilikan, perizinan, joint venture, dan strategi masuk pasar Indonesia.", "en": "Business vehicles, ownership, licensing, joint ventures, and Indonesian market-entry strategy." } },
+        { "title": { "id": "Perbankan, Pembiayaan, dan Pasar Modal", "en": "Banking, Finance & Capital Markets" }, "description": { "id": "Pembiayaan korporasi, dokumentasi fasilitas, jaminan, restrukturisasi pembiayaan, dan transaksi pasar modal.", "en": "Corporate finance, facility documentation, security arrangements, financing restructurings, and capital markets transactions." } },
+        { "title": { "id": "Regulasi, Risiko, dan Kepatuhan", "en": "Regulatory, Risk & Compliance" }, "description": { "id": "Pemetaan kewajiban, program kepatuhan, investigasi internal, serta respons terhadap perubahan regulasi.", "en": "Regulatory mapping, compliance programmes, internal investigations, and responses to regulatory change." } },
+        { "title": { "id": "Teknologi, Data, dan Bisnis Digital", "en": "Technology, Data & Digital Business" }, "description": { "id": "Transaksi teknologi, perlindungan data, platform digital, alih daya, dan tata kelola penggunaan teknologi.", "en": "Technology transactions, data protection, digital platforms, outsourcing, and technology governance." } },
+        { "title": { "id": "Restrukturisasi dan Situasi Khusus", "en": "Restructuring & Special Situations" }, "description": { "id": "Restrukturisasi korporasi dan utang, negosiasi pemangku kepentingan, serta strategi hukum pada kondisi bisnis yang sensitif.", "en": "Corporate and debt restructurings, stakeholder negotiations, and legal strategy in sensitive business situations." } }
+      ],
+      "item": { "fields": {
+        "title.id": { "type": "text", "label": "Nama praktik Indonesia", "required": true, "maxLength": 78 },
+        "title.en": { "type": "text", "label": "English practice name", "required": true, "maxLength": 78 },
+        "description.id": { "type": "textarea", "label": "Deskripsi praktik Indonesia", "required": true, "maxLength": 280 },
+        "description.en": { "type": "textarea", "label": "English practice description", "required": true, "maxLength": 280 }
+      } }
+    },
+    "sections.services.industriesHeading.id": { "type": "text", "label": "Judul sektor Indonesia", "maxLength": 62, "default": "Sektor yang kami pahami." },
+    "sections.services.industriesHeading.en": { "type": "text", "label": "English industries heading", "maxLength": 62, "default": "Sectors we understand." },
+    "sections.services.industriesBody.id": { "type": "textarea", "label": "Deskripsi sektor Indonesia", "maxLength": 220, "default": "Konteks industri membantu kami melihat konsekuensi komersial di balik setiap pilihan hukum." },
+    "sections.services.industriesBody.en": { "type": "textarea", "label": "English industries description", "maxLength": 220, "default": "Industry context helps us see the commercial consequences behind every legal choice." },
+    "sections.services.industries": {
+      "type": "array", "label": "Sektor industri", "minItems": 3, "maxItems": 8,
+      "default": [
+        { "id": "Jasa Keuangan", "en": "Financial Services" },
+        { "id": "Teknologi dan Digital", "en": "Technology & Digital" },
+        { "id": "Energi dan Infrastruktur", "en": "Energy & Infrastructure" },
+        { "id": "Konsumen dan Ritel", "en": "Consumer & Retail" },
+        { "id": "Manufaktur dan Rantai Pasok", "en": "Manufacturing & Supply Chain" },
+        { "id": "Real Estat dan Hospitality", "en": "Real Estate & Hospitality" }
+      ],
+      "item": { "fields": {
+        "id": { "type": "text", "label": "Sektor Indonesia", "required": true, "maxLength": 52 },
+        "en": { "type": "text", "label": "English sector", "required": true, "maxLength": 52 }
+      } }
+    },
+
+    "sections.team.previewHeading.id": { "type": "text", "label": "Judul preview profesional Indonesia", "maxLength": 82, "default": "Kepakaran yang jelas. Kolaborasi tanpa sekat." },
+    "sections.team.previewHeading.en": { "type": "text", "label": "English professionals preview heading", "maxLength": 82, "default": "Clear expertise. Seamless collaboration." },
+    "sections.team.previewBody.id": { "type": "textarea", "label": "Deskripsi preview profesional Indonesia", "maxLength": 200, "default": "Tim senior kami bekerja lintas disiplin untuk memberi jawaban yang konsisten dan dapat digunakan." },
+    "sections.team.previewBody.en": { "type": "textarea", "label": "English professionals preview description", "maxLength": 200, "default": "Our senior team works across disciplines to deliver consistent, usable advice." },
+    "sections.team.linkLabel.id": { "type": "text", "label": "Tautan profesional Indonesia", "maxLength": 28, "default": "Kenali profesional kami" },
+    "sections.team.linkLabel.en": { "type": "text", "label": "English professionals link", "maxLength": 28, "default": "Meet our professionals" },
+    "sections.team.demoLabel.id": { "type": "text", "label": "Label profil demo Indonesia", "maxLength": 24, "default": "Profil demo" },
+    "sections.team.demoLabel.en": { "type": "text", "label": "English demo profile label", "maxLength": 24, "default": "Demo profiles" },
+    "sections.team.demoNotice.id": { "type": "textarea", "label": "Catatan profil demo Indonesia", "maxLength": 280, "default": "Seluruh nama dan biografi di halaman ini bersifat fiktif. Ganti dengan profil, kualifikasi, dan foto profesional yang telah diverifikasi sebelum publikasi." },
+    "sections.team.demoNotice.en": { "type": "textarea", "label": "English demo profile notice", "maxLength": 280, "default": "All names and biographies on this page are fictional. Replace them with verified professional profiles, credentials, and photography before publication." },
+    "sections.team.heading.id": { "type": "text", "label": "Judul tim Indonesia", "maxLength": 100, "default": "Penasihat yang memahami ruang rapat dan realitas operasional." },
+    "sections.team.heading.en": { "type": "text", "label": "English team heading", "maxLength": 100, "default": "Advisers who understand both the boardroom and operational reality." },
+    "sections.team.description.id": { "type": "textarea", "label": "Deskripsi tim Indonesia", "maxLength": 250, "default": "Setiap mandat dipimpin oleh profesional senior dan didukung oleh keahlian yang benar-benar relevan dengan keputusan klien." },
+    "sections.team.description.en": { "type": "textarea", "label": "English team description", "maxLength": 250, "default": "Every mandate is led by senior professionals and supported by expertise directly relevant to the client’s decision." },
+    "sections.team.items": {
+      "type": "array", "label": "Profil profesional", "minItems": 2, "maxItems": 12,
+      "default": [
+        { "name": "Aditya Arkana", "role": { "id": "Managing Partner", "en": "Managing Partner" }, "focus": { "id": "Korporasi · M&A · Tata Kelola", "en": "Corporate · M&A · Governance" }, "bio": { "id": "Aditya mendampingi dewan direksi, pemegang saham, dan investor dalam transaksi strategis, tata kelola, serta perubahan struktur kepemilikan.", "en": "Aditya advises boards, shareholders, and investors on strategic transactions, governance, and ownership restructurings." } },
+        { "name": "Mira Pradipta", "role": { "id": "Founding Partner", "en": "Founding Partner" }, "focus": { "id": "Komersial · Regulasi · Investasi Asing", "en": "Commercial · Regulatory · Foreign Investment" }, "bio": { "id": "Mira berfokus pada kontrak komersial kompleks, investasi asing, dan strategi regulasi bagi perusahaan yang memasuki atau memperluas pasar Indonesia.", "en": "Mira focuses on complex commercial agreements, foreign investment, and regulatory strategy for companies entering or expanding in Indonesia." } },
+        { "name": "Jonathan Wijaya", "role": { "id": "Partner", "en": "Partner" }, "focus": { "id": "Perbankan · Pembiayaan · Pasar Modal", "en": "Banking · Finance · Capital Markets" }, "bio": { "id": "Jonathan mendampingi pemberi pinjaman, peminjam, dan investor dalam pembiayaan korporasi, restrukturisasi, dan transaksi pasar modal.", "en": "Jonathan advises lenders, borrowers, and investors on corporate finance, restructurings, and capital markets transactions." } },
+        { "name": "Sari Mahendra", "role": { "id": "Counsel", "en": "Counsel" }, "focus": { "id": "Teknologi · Data · Persaingan", "en": "Technology · Data · Competition" }, "bio": { "id": "Sari membantu perusahaan teknologi dan bisnis digital menavigasi kontrak, perlindungan data, persaingan usaha, dan tata kelola produk.", "en": "Sari helps technology companies and digital businesses navigate contracts, data protection, competition, and product governance." } }
+      ],
+      "item": { "fields": {
+        "name": { "type": "text", "label": "Nama", "required": true, "maxLength": 70 },
+        "role.id": { "type": "text", "label": "Jabatan Indonesia", "required": true, "maxLength": 48 },
+        "role.en": { "type": "text", "label": "English role", "required": true, "maxLength": 48 },
+        "focus.id": { "type": "text", "label": "Fokus Indonesia", "required": true, "maxLength": 82 },
+        "focus.en": { "type": "text", "label": "English focus", "required": true, "maxLength": 82 },
+        "bio.id": { "type": "textarea", "label": "Biografi Indonesia", "required": true, "maxLength": 360 },
+        "bio.en": { "type": "textarea", "label": "English biography", "required": true, "maxLength": 360 }
+      } }
+    },
+
+    "sections.insights.demoLabel.id": { "type": "text", "label": "Label wawasan demo Indonesia", "maxLength": 24, "default": "Wawasan demo" },
+    "sections.insights.demoLabel.en": { "type": "text", "label": "English sample insight label", "maxLength": 24, "default": "Sample insights" },
+    "sections.insights.demoNotice.id": { "type": "textarea", "label": "Catatan wawasan demo Indonesia", "maxLength": 300, "default": "Judul dan ringkasan di bawah adalah contoh editorial, bukan publikasi atau nasihat hukum. Ganti dengan materi yang telah ditinjau sebelum situs diluncurkan." },
+    "sections.insights.demoNotice.en": { "type": "textarea", "label": "English sample insight notice", "maxLength": 300, "default": "The titles and summaries below are editorial examples, not publications or legal advice. Replace them with reviewed materials before launch." },
+    "sections.insights.heading.id": { "type": "text", "label": "Judul Wawasan Indonesia", "maxLength": 72, "default": "Perspektif untuk pengambil keputusan." },
+    "sections.insights.heading.en": { "type": "text", "label": "English Insights heading", "maxLength": 72, "default": "Perspectives for decision-makers." },
+    "sections.insights.description.id": { "type": "textarea", "label": "Deskripsi Wawasan Indonesia", "maxLength": 250, "default": "Analisis singkat yang menghubungkan perkembangan hukum dengan implikasi praktis bagi perusahaan." },
+    "sections.insights.description.en": { "type": "textarea", "label": "English Insights description", "maxLength": 250, "default": "Concise analysis connecting legal developments with practical implications for companies." },
+    "sections.insights.items": {
+      "type": "array", "label": "Artikel wawasan", "minItems": 3, "maxItems": 12,
+      "default": [
+        { "category": { "id": "Tata Kelola Korporasi", "en": "Corporate Governance" }, "title": { "id": "Klausul Tata Kelola yang Menentukan dalam Joint Venture", "en": "Governance Terms That Matter in a Joint Venture" }, "excerpt": { "id": "Lima keputusan yang sebaiknya disepakati sebelum para pihak berbicara mengenai pertumbuhan.", "en": "Five decisions to settle before the parties turn their attention to growth." } },
+        { "category": { "id": "Kontrak Komersial", "en": "Commercial Contracts" }, "title": { "id": "Membagi Risiko dalam Kontrak Rantai Pasok", "en": "Allocating Risk in Supply Chain Contracts" }, "excerpt": { "id": "Cara membaca ulang klausul harga, gangguan pasokan, dan perubahan keadaan secara komersial.", "en": "A commercial approach to price, supply disruption, and change-in-circumstances clauses." } },
+        { "category": { "id": "Investasi Asing", "en": "Foreign Investment" }, "title": { "id": "Menyiapkan Struktur Masuk Pasar Indonesia", "en": "Structuring an Entry into the Indonesian Market" }, "excerpt": { "id": "Pertanyaan awal tentang kepemilikan, kontrol, perizinan, dan mitra lokal.", "en": "Early questions concerning ownership, control, licensing, and local partners." } },
+        { "category": { "id": "Teknologi dan Data", "en": "Technology & Data" }, "title": { "id": "Kesiapan Regulasi untuk Transaksi Data Lintas Batas", "en": "Regulatory Readiness for Cross-Border Data Transactions" }, "excerpt": { "id": "Titik pemeriksaan praktis sebelum data, vendor, dan kontrak bergerak lintas yurisdiksi.", "en": "Practical checkpoints before data, vendors, and contracts move across jurisdictions." } }
+      ],
+      "item": { "fields": {
+        "category.id": { "type": "text", "label": "Kategori Indonesia", "required": true, "maxLength": 46 },
+        "category.en": { "type": "text", "label": "English category", "required": true, "maxLength": 46 },
+        "title.id": { "type": "text", "label": "Judul Indonesia", "required": true, "maxLength": 110 },
+        "title.en": { "type": "text", "label": "English title", "required": true, "maxLength": 110 },
+        "excerpt.id": { "type": "textarea", "label": "Ringkasan Indonesia", "required": true, "maxLength": 240 },
+        "excerpt.en": { "type": "textarea", "label": "English excerpt", "required": true, "maxLength": 240 }
+      } }
+    },
+
+    "sections.contact.heading.id": { "type": "text", "label": "Judul Kontak Indonesia", "maxLength": 72, "default": "Percakapan awal yang terarah." },
+    "sections.contact.heading.en": { "type": "text", "label": "English Contact heading", "maxLength": 72, "default": "A focused first conversation." },
+    "sections.contact.description.id": { "type": "textarea", "label": "Deskripsi Kontak Indonesia", "maxLength": 240, "default": "Berikan konteks yang cukup untuk membantu kami mengidentifikasi tim dan langkah awal yang paling relevan." },
+    "sections.contact.description.en": { "type": "textarea", "label": "English Contact description", "maxLength": 240, "default": "Share enough context to help us identify the most relevant team and first step." },
+    "sections.contact.confidentialityNotice.id": { "type": "textarea", "label": "Peringatan kerahasiaan Indonesia", "required": true, "maxLength": 280, "default": "Jangan mengirimkan informasi rahasia atau sensitif sebelum kami mengonfirmasi bahwa kami dapat menerima penugasan." },
+    "sections.contact.confidentialityNotice.en": { "type": "textarea", "label": "English confidentiality warning", "required": true, "maxLength": 280, "default": "Please do not send confidential or sensitive information before we confirm that we can accept the engagement." },
+    "sections.contact.formHeading.id": { "type": "text", "label": "Judul formulir Indonesia", "maxLength": 72, "default": "Sampaikan ringkasan kebutuhan Anda." },
+    "sections.contact.formHeading.en": { "type": "text", "label": "English form heading", "maxLength": 72, "default": "Share a summary of your needs." },
+    "sections.contact.formDescription.id": { "type": "textarea", "label": "Deskripsi formulir Indonesia", "maxLength": 220, "default": "Formulir ini adalah antarmuka demo. Pagiverse Core menangani pengiriman, validasi server, dan integrasi." },
+    "sections.contact.formDescription.en": { "type": "textarea", "label": "English form description", "maxLength": 220, "default": "This is a demo interface. Pagiverse Core handles submission, server validation, and integrations." },
+    "sections.contact.consent.id": { "type": "textarea", "label": "Persetujuan formulir Indonesia", "maxLength": 260, "default": "Saya memahami bahwa pengiriman formulir ini tidak dengan sendirinya membentuk hubungan pengacara-klien." },
+    "sections.contact.consent.en": { "type": "textarea", "label": "English form consent", "maxLength": 260, "default": "I understand that submitting this form does not by itself create a lawyer-client relationship." },
+    "sections.contact.submitLabel.id": { "type": "text", "label": "Tombol formulir Indonesia", "maxLength": 28, "default": "Kirim Permintaan" },
+    "sections.contact.submitLabel.en": { "type": "text", "label": "English form button", "maxLength": 28, "default": "Submit Enquiry" },
+
+    "sections.cta.heading.id": { "type": "text", "label": "Judul CTA Indonesia", "maxLength": 88, "default": "Keputusan penting membutuhkan dasar yang kuat." },
+    "sections.cta.heading.en": { "type": "text", "label": "English CTA heading", "maxLength": 88, "default": "Important decisions deserve a sound foundation." },
+    "sections.cta.body.id": { "type": "textarea", "label": "Isi CTA Indonesia", "maxLength": 220, "default": "Ceritakan konteks bisnis Anda. Kami akan membantu memetakan pertanyaan hukum yang perlu dijawab." },
+    "sections.cta.body.en": { "type": "textarea", "label": "English CTA body", "maxLength": 220, "default": "Share your business context. We will help identify the legal questions that need to be addressed." },
+    "sections.cta.buttonLabel.id": { "type": "text", "label": "Tombol CTA Indonesia", "maxLength": 28, "default": "Mulai Percakapan" },
+    "sections.cta.buttonLabel.en": { "type": "text", "label": "English CTA button", "maxLength": 28, "default": "Start a Conversation" },
+
+    "sections.footer.summary.id": { "type": "textarea", "label": "Ringkasan footer Indonesia", "maxLength": 200, "default": "Nasihat korporasi dan komersial untuk keputusan bisnis bernilai tinggi." },
+    "sections.footer.summary.en": { "type": "textarea", "label": "English footer summary", "maxLength": 200, "default": "Corporate and commercial counsel for high-value business decisions." },
+    "sections.footer.demoLabel.id": { "type": "text", "label": "Label data contoh Indonesia", "required": true, "maxLength": 32, "default": "Data contoh template" },
+    "sections.footer.demoLabel.en": { "type": "text", "label": "English sample data label", "required": true, "maxLength": 32, "default": "Sample template data" },
+    "sections.footer.demoNotice.id": { "type": "textarea", "label": "Catatan data contoh Indonesia", "required": true, "maxLength": 280, "default": "Nama firma, profil profesional, alamat, kontak, dan wawasan pada template ini adalah data fiktif. Ganti seluruhnya sebelum publikasi." },
+    "sections.footer.demoNotice.en": { "type": "textarea", "label": "English sample data notice", "required": true, "maxLength": 280, "default": "The firm name, professional profiles, address, contact details, and insights in this template are fictional. Replace all details before publishing." },
+    "sections.footer.copyright.id": { "type": "text", "label": "Hak cipta Indonesia", "maxLength": 100, "default": "© 2026 Arkana Pradipta & Partners. Seluruh hak dilindungi." },
+    "sections.footer.copyright.en": { "type": "text", "label": "English copyright", "maxLength": 100, "default": "© 2026 Arkana Pradipta & Partners. All rights reserved." },
+    "sections.footer.legal.id": { "type": "text", "label": "Penyangkalan hukum Indonesia", "required": true, "maxLength": 160, "default": "Materi situs ini bersifat umum dan bukan nasihat hukum." },
+    "sections.footer.legal.en": { "type": "text", "label": "English legal disclaimer", "required": true, "maxLength": 160, "default": "Website materials are general and do not constitute legal advice." }
+  },
+  "forms": [
+    {
+      "id": "consultation",
+      "label": "Legal enquiry",
+      "provider": "pagiverse-core",
+      "fields": [
+        { "name": "name", "type": "text", "required": true, "maxLength": 80, "labels": { "id": "Nama lengkap", "en": "Full name" } },
+        { "name": "company", "type": "text", "required": true, "maxLength": 100, "labels": { "id": "Perusahaan", "en": "Company" } },
+        { "name": "position", "type": "text", "required": false, "maxLength": 80, "labels": { "id": "Jabatan", "en": "Position" } },
+        { "name": "email", "type": "email", "required": true, "maxLength": 120, "labels": { "id": "Email bisnis", "en": "Business email" } },
+        { "name": "phone", "type": "phone", "required": false, "maxLength": 24, "labels": { "id": "Nomor telepon", "en": "Phone number" } },
+        {
+          "name": "topic", "type": "select", "required": true, "labels": { "id": "Area kebutuhan", "en": "Area of interest" },
+          "options": [
+            { "value": "corporate", "labels": { "id": "Korporasi dan Tata Kelola", "en": "Corporate & Governance" } },
+            { "value": "transactions", "labels": { "id": "M&A dan Transaksi", "en": "M&A & Transactions" } },
+            { "value": "commercial", "labels": { "id": "Kontrak Komersial", "en": "Commercial Agreements" } },
+            { "value": "regulatory", "labels": { "id": "Regulasi dan Kepatuhan", "en": "Regulatory & Compliance" } },
+            { "value": "other", "labels": { "id": "Lainnya", "en": "Other" } }
+          ]
+        },
+        { "name": "message", "type": "textarea", "required": true, "maxLength": 1000, "labels": { "id": "Pesan", "en": "Message" } },
+        { "name": "consent", "type": "boolean", "required": true, "labels": { "id": "Persetujuan", "en": "Consent" } }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero", "label": "Hero semua halaman", "required": true, "visibleByDefault": true,
+      "fields": [
+        "sections.hero.home.eyebrow.id", "sections.hero.home.eyebrow.en", "sections.hero.home.heading.id", "sections.hero.home.heading.en", "sections.hero.home.description.id", "sections.hero.home.description.en", "sections.hero.home.primaryCta.id", "sections.hero.home.primaryCta.en", "sections.hero.home.secondaryCta.id", "sections.hero.home.secondaryCta.en", "sections.hero.home.image",
+        "sections.hero.about.eyebrow.id", "sections.hero.about.eyebrow.en", "sections.hero.about.heading.id", "sections.hero.about.heading.en", "sections.hero.about.description.id", "sections.hero.about.description.en", "sections.hero.about.image",
+        "sections.hero.practices.eyebrow.id", "sections.hero.practices.eyebrow.en", "sections.hero.practices.heading.id", "sections.hero.practices.heading.en", "sections.hero.practices.description.id", "sections.hero.practices.description.en", "sections.hero.practices.image",
+        "sections.hero.professionals.eyebrow.id", "sections.hero.professionals.eyebrow.en", "sections.hero.professionals.heading.id", "sections.hero.professionals.heading.en", "sections.hero.professionals.description.id", "sections.hero.professionals.description.en", "sections.hero.professionals.image",
+        "sections.hero.insights.eyebrow.id", "sections.hero.insights.eyebrow.en", "sections.hero.insights.heading.id", "sections.hero.insights.heading.en", "sections.hero.insights.description.id", "sections.hero.insights.description.en", "sections.hero.insights.image",
+        "sections.hero.contact.eyebrow.id", "sections.hero.contact.eyebrow.en", "sections.hero.contact.heading.id", "sections.hero.contact.heading.en", "sections.hero.contact.description.id", "sections.hero.contact.description.en", "sections.hero.contact.image"
+      ]
+    },
+    {
+      "id": "about", "label": "Tentang dan pendekatan", "required": true, "visibleByDefault": true,
+      "fields": ["sections.homeIntro.aside.id", "sections.homeIntro.aside.en", "sections.homeIntro.heading.id", "sections.homeIntro.heading.en", "sections.homeIntro.body.id", "sections.homeIntro.body.en", "sections.homePrinciples.items", "sections.about.storyLabel.id", "sections.about.storyLabel.en", "sections.about.storyHeading.id", "sections.about.storyHeading.en", "sections.about.storyBody.id", "sections.about.storyBody.en", "sections.about.approachHeading.id", "sections.about.approachHeading.en", "sections.about.approachBody.id", "sections.about.approachBody.en", "sections.about.approachItems", "sections.about.valuesHeading.id", "sections.about.valuesHeading.en", "sections.about.valuesBody.id", "sections.about.valuesBody.en", "sections.about.values", "sections.about.crossBorderHeading.id", "sections.about.crossBorderHeading.en", "sections.about.crossBorderBody.id", "sections.about.crossBorderBody.en"]
+    },
+    {
+      "id": "services", "label": "Area Praktik", "required": true, "visibleByDefault": true,
+      "fields": ["sections.services.heading.id", "sections.services.heading.en", "sections.services.description.id", "sections.services.description.en", "sections.services.linkLabel.id", "sections.services.linkLabel.en", "sections.services.pageHeading.id", "sections.services.pageHeading.en", "sections.services.pageBody.id", "sections.services.pageBody.en", "sections.services.items", "sections.services.industriesHeading.id", "sections.services.industriesHeading.en", "sections.services.industriesBody.id", "sections.services.industriesBody.en", "sections.services.industries"]
+    },
+    {
+      "id": "team", "label": "Profesional", "required": true, "visibleByDefault": true,
+      "fields": ["sections.team.previewHeading.id", "sections.team.previewHeading.en", "sections.team.previewBody.id", "sections.team.previewBody.en", "sections.team.linkLabel.id", "sections.team.linkLabel.en", "sections.team.demoLabel.id", "sections.team.demoLabel.en", "sections.team.demoNotice.id", "sections.team.demoNotice.en", "sections.team.heading.id", "sections.team.heading.en", "sections.team.description.id", "sections.team.description.en", "sections.team.items"]
+    },
+    {
+      "id": "insights", "label": "Wawasan", "required": true, "visibleByDefault": true,
+      "fields": ["sections.insights.demoLabel.id", "sections.insights.demoLabel.en", "sections.insights.demoNotice.id", "sections.insights.demoNotice.en", "sections.insights.heading.id", "sections.insights.heading.en", "sections.insights.description.id", "sections.insights.description.en", "sections.insights.items"]
+    },
+    {
+      "id": "contact", "label": "Kontak", "required": true, "visibleByDefault": true,
+      "fields": ["contact.phone", "contact.email", "location.address", "location.mapsUrl", "social.linkedin", "sections.contact.heading.id", "sections.contact.heading.en", "sections.contact.description.id", "sections.contact.description.en", "sections.contact.confidentialityNotice.id", "sections.contact.confidentialityNotice.en", "sections.contact.formHeading.id", "sections.contact.formHeading.en", "sections.contact.formDescription.id", "sections.contact.formDescription.en", "sections.contact.consent.id", "sections.contact.consent.en", "sections.contact.submitLabel.id", "sections.contact.submitLabel.en"]
+    },
+    {
+      "id": "cta", "label": "Ajakan konsultasi", "required": false, "visibleByDefault": true,
+      "fields": ["sections.cta.heading.id", "sections.cta.heading.en", "sections.cta.body.id", "sections.cta.body.en", "sections.cta.buttonLabel.id", "sections.cta.buttonLabel.en"]
+    },
+    {
+      "id": "footer", "label": "Footer", "required": true, "visibleByDefault": true,
+      "fields": ["business.name", "business.tagline.id", "business.tagline.en", "business.description.id", "business.description.en", "business.logo", "business.logoAlt.id", "business.logoAlt.en", "sections.footer.summary.id", "sections.footer.summary.en", "sections.footer.demoLabel.id", "sections.footer.demoLabel.en", "sections.footer.demoNotice.id", "sections.footer.demoNotice.en", "sections.footer.copyright.id", "sections.footer.copyright.en", "sections.footer.legal.id", "sections.footer.legal.en"]
+    }
+  ]
+}
