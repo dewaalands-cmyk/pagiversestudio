@@ -547,6 +547,7 @@
     if (state.revealObserver) state.revealObserver.disconnect();
     const elements = [...document.querySelectorAll("[data-reveal]")];
     if (
+      window.parent !== window ||
       window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
       !("IntersectionObserver" in window)
     ) {
