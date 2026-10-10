@@ -1,0 +1,2630 @@
+{
+  "pagiverseStandard": 1,
+  "id": "naratama-dispute-counsel-001",
+  "name": "Naratama Dispute Counsel",
+  "category": "services",
+  "categoryLabel": {
+    "id": "Jasa Profesional",
+    "en": "Professional Services"
+  },
+  "description": "Dark luxury bilingual multi-page profile template for a private litigation and strategic disputes firm",
+  "price": 1495000,
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.title.id",
+          "en": "seo.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.description.id",
+          "en": "seo.description.en"
+        }
+      }
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "entry": "about.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.about.title.id",
+          "en": "seo.pages.about.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.about.description.id",
+          "en": "seo.pages.about.description.en"
+        }
+      }
+    },
+    {
+      "id": "practices",
+      "path": "/practice-areas",
+      "entry": "practice-areas.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.practices.title.id",
+          "en": "seo.pages.practices.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.practices.description.id",
+          "en": "seo.pages.practices.description.en"
+        }
+      }
+    },
+    {
+      "id": "professionals",
+      "path": "/professionals",
+      "entry": "professionals.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.professionals.title.id",
+          "en": "seo.pages.professionals.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.professionals.description.id",
+          "en": "seo.pages.professionals.description.en"
+        }
+      }
+    },
+    {
+      "id": "insights",
+      "path": "/insights",
+      "entry": "insights.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.insights.title.id",
+          "en": "seo.pages.insights.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.insights.description.id",
+          "en": "seo.pages.insights.description.en"
+        }
+      }
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "entry": "contact.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.contact.title.id",
+          "en": "seo.pages.contact.title.en"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.contact.description.id",
+          "en": "seo.pages.contact.description.en"
+        }
+      }
+    }
+  ],
+  "dependencies": [],
+  "languages": {
+    "supported": [
+      "id",
+      "en"
+    ],
+    "default": "id"
+  },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "dark",
+    "tokens": {
+      "primary": {
+        "editable": false,
+        "default": "#D2E1EA"
+      },
+      "secondary": {
+        "editable": false,
+        "default": "#171C22"
+      },
+      "accent": {
+        "editable": false,
+        "default": "#A9C1D1"
+      },
+      "background": {
+        "editable": false,
+        "default": "#090B0E"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#11151A"
+      },
+      "text": {
+        "editable": false,
+        "default": "#EDF1F4"
+      }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "home",
+        "labelFields": {
+          "id": "navigation.home.label.id",
+          "en": "navigation.home.label.en"
+        },
+        "target": "index.html",
+        "hideable": false
+      },
+      {
+        "id": "about",
+        "labelFields": {
+          "id": "navigation.about.label.id",
+          "en": "navigation.about.label.en"
+        },
+        "target": "about.html",
+        "hideable": false
+      },
+      {
+        "id": "practices",
+        "labelFields": {
+          "id": "navigation.practices.label.id",
+          "en": "navigation.practices.label.en"
+        },
+        "target": "practice-areas.html",
+        "hideable": false
+      },
+      {
+        "id": "professionals",
+        "labelFields": {
+          "id": "navigation.professionals.label.id",
+          "en": "navigation.professionals.label.en"
+        },
+        "target": "professionals.html",
+        "hideable": false
+      },
+      {
+        "id": "insights",
+        "labelFields": {
+          "id": "navigation.insights.label.id",
+          "en": "navigation.insights.label.en"
+        },
+        "target": "insights.html",
+        "hideable": false
+      },
+      {
+        "id": "contact",
+        "labelFields": {
+          "id": "navigation.contact.label.id",
+          "en": "navigation.contact.label.en"
+        },
+        "target": "contact.html",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama firma",
+      "required": true,
+      "maxLength": 72,
+      "default": "Naratama Dispute Counsel"
+    },
+    "business.tagline.id": {
+      "type": "text",
+      "label": "tagline firma Indonesia",
+      "required": true,
+      "maxLength": 72,
+      "default": "Litigasi Privat dan Sengketa Strategis"
+    },
+    "business.tagline.en": {
+      "type": "text",
+      "label": "English tagline firma",
+      "required": true,
+      "maxLength": 72,
+      "default": "Private Litigation and Strategic Disputes"
+    },
+    "business.description.id": {
+      "type": "textarea",
+      "label": "deskripsi firma Indonesia",
+      "required": true,
+      "maxLength": 320,
+      "default": "Firma litigasi butik fiktif di Jakarta yang dirancang untuk mendampingi individu bernilai tinggi dalam sengketa kompleks, sensitif, dan berisiko reputasi."
+    },
+    "business.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi firma",
+      "required": true,
+      "maxLength": 320,
+      "default": "A fictional Jakarta boutique litigation firm designed to advise high-net-worth individuals in complex, sensitive, and reputation-critical disputes."
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo firma",
+      "required": false,
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": false
+    },
+    "business.logoAlt.id": {
+      "type": "text",
+      "label": "alt logo Indonesia",
+      "maxLength": 120,
+      "default": "Logo contoh Naratama Dispute Counsel"
+    },
+    "business.logoAlt.en": {
+      "type": "text",
+      "label": "English alt logo",
+      "maxLength": 120,
+      "default": "Sample Naratama Dispute Counsel logo"
+    },
+    "contact.phone": {
+      "type": "phone",
+      "label": "Telepon contoh",
+      "required": true,
+      "default": "+62 21 555 0147"
+    },
+    "contact.email": {
+      "type": "email",
+      "label": "Email contoh",
+      "required": true,
+      "maxLength": 120,
+      "default": "confidential@naratama.example"
+    },
+    "location.address": {
+      "type": "textarea",
+      "label": "Alamat kantor contoh",
+      "required": true,
+      "maxLength": 220,
+      "default": "Jakarta, Indonesia (alamat contoh, ganti sebelum publikasi)"
+    },
+    "location.mapsUrl": {
+      "type": "url",
+      "label": "Tautan peta",
+      "allowedProtocols": [
+        "https:"
+      ],
+      "default": "https://www.google.com/maps/search/?api=1&query=Jakarta%20Sudirman"
+    },
+    "social.linkedin": {
+      "type": "url",
+      "label": "LinkedIn",
+      "allowedProtocols": [
+        "https:"
+      ],
+      "default": "https://www.linkedin.com/"
+    },
+    "seo.title.id": {
+      "type": "text",
+      "label": "judul SEO Beranda Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Naratama | Litigasi Privat & Sengketa Kompleks"
+    },
+    "seo.title.en": {
+      "type": "text",
+      "label": "English judul SEO Beranda",
+      "required": true,
+      "maxLength": 64,
+      "default": "Naratama | Private Litigation & Complex Disputes"
+    },
+    "seo.description.id": {
+      "type": "textarea",
+      "label": "deskripsi SEO Beranda Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Template firma litigasi privat untuk sengketa kompleks, perlindungan aset, konflik keluarga bisnis, dan perkara sensitif bernilai tinggi."
+    },
+    "seo.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi SEO Beranda",
+      "required": true,
+      "maxLength": 160,
+      "default": "Private litigation template for complex disputes, asset protection, business-family conflicts, and sensitive high-value matters."
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "gambar sosial",
+      "required": true,
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-home.webp",
+        "altId": "Atrium batu gelap menghadap cakrawala kota dengan sosok berjas menuju tangga",
+        "altEn": "Dark stone atrium overlooking a city skyline with a suited figure approaching the stairs",
+        "focalPoint": {
+          "x": 55,
+          "y": 48
+        },
+        "alt": {
+          "id": "Atrium batu gelap menghadap cakrawala kota dengan sosok berjas menuju tangga",
+          "en": "Dark stone atrium overlooking a city skyline with a suited figure approaching the stairs"
+        }
+      }
+    },
+    "seo.ogImageAlt.id": {
+      "type": "text",
+      "label": "alt gambar sosial Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Atrium batu gelap menghadap cakrawala kota dengan sosok berjas menuju tangga"
+    },
+    "seo.ogImageAlt.en": {
+      "type": "text",
+      "label": "English alt gambar sosial",
+      "required": true,
+      "maxLength": 150,
+      "default": "Dark stone atrium overlooking a city skyline with a suited figure approaching the stairs"
+    },
+    "seo.pages.about.title.id": {
+      "type": "text",
+      "label": "judul SEO about Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Tentang Firma | Naratama Dispute Counsel"
+    },
+    "seo.pages.about.title.en": {
+      "type": "text",
+      "label": "English judul SEO about",
+      "required": true,
+      "maxLength": 64,
+      "default": "About the Firm | Naratama Dispute Counsel"
+    },
+    "seo.pages.about.description.id": {
+      "type": "textarea",
+      "label": "deskripsi SEO about Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Pendekatan strategis, diskret, dan terukur untuk melindungi kepentingan pribadi, keluarga, aset, serta reputasi klien."
+    },
+    "seo.pages.about.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi SEO about",
+      "required": true,
+      "maxLength": 160,
+      "default": "A strategic, discreet, and measured approach to protecting clients' personal, family, asset, and reputational interests."
+    },
+    "seo.pages.practices.title.id": {
+      "type": "text",
+      "label": "judul SEO practices Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Keahlian Sengketa | Naratama Dispute Counsel"
+    },
+    "seo.pages.practices.title.en": {
+      "type": "text",
+      "label": "English judul SEO practices",
+      "required": true,
+      "maxLength": 64,
+      "default": "Dispute Capabilities | Naratama Dispute Counsel"
+    },
+    "seo.pages.practices.description.id": {
+      "type": "textarea",
+      "label": "deskripsi SEO practices Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Litigasi perdata, sengketa aset, konflik keluarga bisnis, fraud, reputasi, dan strategi penyelesaian sengketa privat."
+    },
+    "seo.pages.practices.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi SEO practices",
+      "required": true,
+      "maxLength": 160,
+      "default": "Civil litigation, asset disputes, business-family conflicts, fraud, reputation, and private dispute strategy."
+    },
+    "seo.pages.professionals.title.id": {
+      "type": "text",
+      "label": "judul SEO professionals Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Profesional | Naratama Dispute Counsel"
+    },
+    "seo.pages.professionals.title.en": {
+      "type": "text",
+      "label": "English judul SEO professionals",
+      "required": true,
+      "maxLength": 64,
+      "default": "Professionals | Naratama Dispute Counsel"
+    },
+    "seo.pages.professionals.description.id": {
+      "type": "textarea",
+      "label": "deskripsi SEO professionals Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Profil tim fiktif untuk litigasi privat, sengketa aset, investigasi, dan perlindungan reputasi."
+    },
+    "seo.pages.professionals.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi SEO professionals",
+      "required": true,
+      "maxLength": 160,
+      "default": "Fictional team profiles for private litigation, asset disputes, investigations, and reputation protection."
+    },
+    "seo.pages.insights.title.id": {
+      "type": "text",
+      "label": "judul SEO insights Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Wawasan Sengketa | Naratama Dispute Counsel"
+    },
+    "seo.pages.insights.title.en": {
+      "type": "text",
+      "label": "English judul SEO insights",
+      "required": true,
+      "maxLength": 64,
+      "default": "Dispute Insights | Naratama Dispute Counsel"
+    },
+    "seo.pages.insights.description.id": {
+      "type": "textarea",
+      "label": "deskripsi SEO insights Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Artikel contoh mengenai kesiapan sengketa, perlindungan bukti, aset, privasi, dan strategi komunikasi."
+    },
+    "seo.pages.insights.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi SEO insights",
+      "required": true,
+      "maxLength": 160,
+      "default": "Sample articles on dispute readiness, evidence preservation, assets, privacy, and communications strategy."
+    },
+    "seo.pages.contact.title.id": {
+      "type": "text",
+      "label": "judul SEO contact Indonesia",
+      "required": true,
+      "maxLength": 64,
+      "default": "Konsultasi Rahasia | Naratama Dispute Counsel"
+    },
+    "seo.pages.contact.title.en": {
+      "type": "text",
+      "label": "English judul SEO contact",
+      "required": true,
+      "maxLength": 64,
+      "default": "Private Consultation | Naratama Dispute Counsel"
+    },
+    "seo.pages.contact.description.id": {
+      "type": "textarea",
+      "label": "deskripsi SEO contact Indonesia",
+      "required": true,
+      "maxLength": 160,
+      "default": "Sampaikan ringkasan awal sengketa. Jangan kirim informasi rahasia sebelum konflik diperiksa."
+    },
+    "seo.pages.contact.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi SEO contact",
+      "required": true,
+      "maxLength": 160,
+      "default": "Share an initial dispute summary. Do not send confidential details before conflict checks."
+    },
+    "navigation.home.label.id": {
+      "type": "text",
+      "label": "label navigasi home Indonesia",
+      "required": true,
+      "maxLength": 18,
+      "default": "Beranda"
+    },
+    "navigation.home.label.en": {
+      "type": "text",
+      "label": "English label navigasi home",
+      "required": true,
+      "maxLength": 18,
+      "default": "Home"
+    },
+    "navigation.about.label.id": {
+      "type": "text",
+      "label": "label navigasi about Indonesia",
+      "required": true,
+      "maxLength": 18,
+      "default": "Firma"
+    },
+    "navigation.about.label.en": {
+      "type": "text",
+      "label": "English label navigasi about",
+      "required": true,
+      "maxLength": 18,
+      "default": "Firm"
+    },
+    "navigation.practices.label.id": {
+      "type": "text",
+      "label": "label navigasi practices Indonesia",
+      "required": true,
+      "maxLength": 22,
+      "default": "Keahlian"
+    },
+    "navigation.practices.label.en": {
+      "type": "text",
+      "label": "English label navigasi practices",
+      "required": true,
+      "maxLength": 22,
+      "default": "Expertise"
+    },
+    "navigation.professionals.label.id": {
+      "type": "text",
+      "label": "label navigasi professionals Indonesia",
+      "required": true,
+      "maxLength": 18,
+      "default": "Penasihat"
+    },
+    "navigation.professionals.label.en": {
+      "type": "text",
+      "label": "English label navigasi professionals",
+      "required": true,
+      "maxLength": 18,
+      "default": "Counsel"
+    },
+    "navigation.insights.label.id": {
+      "type": "text",
+      "label": "label navigasi insights Indonesia",
+      "required": true,
+      "maxLength": 18,
+      "default": "Wawasan"
+    },
+    "navigation.insights.label.en": {
+      "type": "text",
+      "label": "English label navigasi insights",
+      "required": true,
+      "maxLength": 18,
+      "default": "Insights"
+    },
+    "navigation.contact.label.id": {
+      "type": "text",
+      "label": "label navigasi contact Indonesia",
+      "required": true,
+      "maxLength": 22,
+      "default": "Konsultasi Privat"
+    },
+    "navigation.contact.label.en": {
+      "type": "text",
+      "label": "English label navigasi contact",
+      "required": true,
+      "maxLength": 22,
+      "default": "Private Consultation"
+    },
+    "sections.hero.home.eyebrow.id": {
+      "type": "text",
+      "label": "label hero home Indonesia",
+      "maxLength": 70,
+      "default": "Naratama Dispute Counsel, Jakarta"
+    },
+    "sections.hero.home.eyebrow.en": {
+      "type": "text",
+      "label": "English label hero home",
+      "maxLength": 70,
+      "default": "Naratama Dispute Counsel, Jakarta"
+    },
+    "sections.hero.home.heading.id": {
+      "type": "text",
+      "label": "judul hero home Indonesia",
+      "required": true,
+      "maxLength": 94,
+      "default": "Kendali dalam sengketa yang menentukan."
+    },
+    "sections.hero.home.heading.en": {
+      "type": "text",
+      "label": "English judul hero home",
+      "required": true,
+      "maxLength": 94,
+      "default": "Control when the dispute matters most."
+    },
+    "sections.hero.home.description.id": {
+      "type": "textarea",
+      "label": "deskripsi hero home Indonesia",
+      "maxLength": 280,
+      "default": "Strategi litigasi diskret untuk sengketa pribadi, keluarga, reputasi, dan aset bernilai tinggi."
+    },
+    "sections.hero.home.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi hero home",
+      "maxLength": 280,
+      "default": "Discreet litigation strategy for personal, family, reputation, and high-value asset disputes."
+    },
+    "sections.hero.home.image": {
+      "type": "image",
+      "label": "gambar hero home",
+      "required": true,
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-home.webp",
+        "altId": "Atrium batu gelap menghadap cakrawala kota dengan sosok berjas menuju tangga",
+        "altEn": "Dark stone atrium overlooking a city skyline with a suited figure approaching the stairs",
+        "focalPoint": {
+          "x": 56,
+          "y": 50
+        },
+        "alt": {
+          "id": "Atrium batu gelap menghadap cakrawala kota dengan sosok berjas menuju tangga",
+          "en": "Dark stone atrium overlooking a city skyline with a suited figure approaching the stairs"
+        }
+      }
+    },
+    "sections.hero.home.imageAlt.id": {
+      "type": "text",
+      "label": "alt gambar hero home Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Atrium batu gelap menghadap cakrawala kota dengan sosok berjas menuju tangga"
+    },
+    "sections.hero.home.imageAlt.en": {
+      "type": "text",
+      "label": "English alt gambar hero home",
+      "required": true,
+      "maxLength": 150,
+      "default": "Dark stone atrium overlooking a city skyline with a suited figure approaching the stairs"
+    },
+    "sections.hero.home.primaryCta.id": {
+      "type": "text",
+      "label": "CTA utama Beranda Indonesia",
+      "maxLength": 30,
+      "default": "Konsultasi Privat"
+    },
+    "sections.hero.home.primaryCta.en": {
+      "type": "text",
+      "label": "English CTA utama Beranda",
+      "maxLength": 30,
+      "default": "Private Consultation"
+    },
+    "sections.hero.home.secondaryCta.id": {
+      "type": "text",
+      "label": "CTA kedua Beranda Indonesia",
+      "maxLength": 28,
+      "default": "Lihat Keahlian"
+    },
+    "sections.hero.home.secondaryCta.en": {
+      "type": "text",
+      "label": "English CTA kedua Beranda",
+      "maxLength": 28,
+      "default": "View Expertise"
+    },
+    "sections.hero.about.eyebrow.id": {
+      "type": "text",
+      "label": "label hero about Indonesia",
+      "maxLength": 70,
+      "default": "Firma"
+    },
+    "sections.hero.about.eyebrow.en": {
+      "type": "text",
+      "label": "English label hero about",
+      "maxLength": 70,
+      "default": "Firm"
+    },
+    "sections.hero.about.heading.id": {
+      "type": "text",
+      "label": "judul hero about Indonesia",
+      "required": true,
+      "maxLength": 94,
+      "default": "Dekat pada persoalan. Tegas pada arah."
+    },
+    "sections.hero.about.heading.en": {
+      "type": "text",
+      "label": "English judul hero about",
+      "required": true,
+      "maxLength": 94,
+      "default": "Close to the matter. Decisive on direction."
+    },
+    "sections.hero.about.description.id": {
+      "type": "textarea",
+      "label": "deskripsi hero about Indonesia",
+      "maxLength": 280,
+      "default": "Pendampingan senior untuk sengketa yang memerlukan ketelitian, diskresi, dan kendali personal."
+    },
+    "sections.hero.about.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi hero about",
+      "maxLength": 280,
+      "default": "Senior counsel for disputes requiring precision, discretion, and personal control."
+    },
+    "sections.hero.about.image": {
+      "type": "image",
+      "label": "gambar hero about",
+      "required": true,
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-about.webp",
+        "altId": "Ruang konsultasi privat dengan meja batu, dua kursi, dan cakrawala kota pada malam hari",
+        "altEn": "Private consultation room with a stone table, two chairs, and a city skyline at night",
+        "focalPoint": {
+          "x": 50,
+          "y": 48
+        },
+        "alt": {
+          "id": "Ruang konsultasi privat dengan meja batu, dua kursi, dan cakrawala kota pada malam hari",
+          "en": "Private consultation room with a stone table, two chairs, and a city skyline at night"
+        }
+      }
+    },
+    "sections.hero.about.imageAlt.id": {
+      "type": "text",
+      "label": "alt gambar hero about Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Ruang konsultasi privat dengan meja batu, dua kursi, dan cakrawala kota pada malam hari"
+    },
+    "sections.hero.about.imageAlt.en": {
+      "type": "text",
+      "label": "English alt gambar hero about",
+      "required": true,
+      "maxLength": 150,
+      "default": "Private consultation room with a stone table, two chairs, and a city skyline at night"
+    },
+    "sections.hero.practices.eyebrow.id": {
+      "type": "text",
+      "label": "label hero practices Indonesia",
+      "maxLength": 70,
+      "default": "Keahlian"
+    },
+    "sections.hero.practices.eyebrow.en": {
+      "type": "text",
+      "label": "English label hero practices",
+      "maxLength": 70,
+      "default": "Expertise"
+    },
+    "sections.hero.practices.heading.id": {
+      "type": "text",
+      "label": "judul hero practices Indonesia",
+      "required": true,
+      "maxLength": 94,
+      "default": "Satu sengketa, beberapa lapis kepentingan."
+    },
+    "sections.hero.practices.heading.en": {
+      "type": "text",
+      "label": "English judul hero practices",
+      "required": true,
+      "maxLength": 94,
+      "default": "One dispute, several layers of interest."
+    },
+    "sections.hero.practices.description.id": {
+      "type": "textarea",
+      "label": "deskripsi hero practices Indonesia",
+      "maxLength": 280,
+      "default": "Strategi terpadu untuk perkara perdata, komersial, keluarga, reputasi, dan aset."
+    },
+    "sections.hero.practices.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi hero practices",
+      "maxLength": 280,
+      "default": "Integrated strategy for civil, commercial, family, reputation, and asset matters."
+    },
+    "sections.hero.practices.image": {
+      "type": "image",
+      "label": "gambar hero practices",
+      "required": true,
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-practices.webp",
+        "altId": "Arsitektur batu dan kaca menghadap kota dengan tangga yang diterangi secara tenang",
+        "altEn": "Stone and glass architecture overlooking the city with a quietly lit staircase",
+        "focalPoint": {
+          "x": 58,
+          "y": 46
+        },
+        "alt": {
+          "id": "Arsitektur batu dan kaca menghadap kota dengan tangga yang diterangi secara tenang",
+          "en": "Stone and glass architecture overlooking the city with a quietly lit staircase"
+        }
+      }
+    },
+    "sections.hero.practices.imageAlt.id": {
+      "type": "text",
+      "label": "alt gambar hero practices Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Arsitektur batu dan kaca menghadap kota dengan tangga yang diterangi secara tenang"
+    },
+    "sections.hero.practices.imageAlt.en": {
+      "type": "text",
+      "label": "English alt gambar hero practices",
+      "required": true,
+      "maxLength": 150,
+      "default": "Stone and glass architecture overlooking the city with a quietly lit staircase"
+    },
+    "sections.hero.professionals.eyebrow.id": {
+      "type": "text",
+      "label": "label hero professionals Indonesia",
+      "maxLength": 70,
+      "default": "Penasihat"
+    },
+    "sections.hero.professionals.eyebrow.en": {
+      "type": "text",
+      "label": "English label hero professionals",
+      "maxLength": 70,
+      "default": "Counsel"
+    },
+    "sections.hero.professionals.heading.id": {
+      "type": "text",
+      "label": "judul hero professionals Indonesia",
+      "required": true,
+      "maxLength": 94,
+      "default": "Nasihat senior. Tim yang tetap dekat."
+    },
+    "sections.hero.professionals.heading.en": {
+      "type": "text",
+      "label": "English judul hero professionals",
+      "required": true,
+      "maxLength": 94,
+      "default": "Senior judgment. A team that stays close."
+    },
+    "sections.hero.professionals.description.id": {
+      "type": "textarea",
+      "label": "deskripsi hero professionals Indonesia",
+      "maxLength": 280,
+      "default": "Penasihat terpilih memimpin strategi dan komunikasi pada setiap tahap perkara."
+    },
+    "sections.hero.professionals.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi hero professionals",
+      "maxLength": 280,
+      "default": "Selected counsel lead strategy and communication at every stage of the matter."
+    },
+    "sections.hero.professionals.image": {
+      "type": "image",
+      "label": "gambar hero professionals",
+      "required": true,
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-professionals.webp",
+        "altId": "Tiga penasihat litigasi senior Indonesia berdiri di kantor modern berwarna gelap",
+        "altEn": "Three senior Indonesian litigation counsel standing in a modern dark-toned office",
+        "focalPoint": {
+          "x": 52,
+          "y": 44
+        },
+        "alt": {
+          "id": "Tiga penasihat litigasi senior Indonesia berdiri di kantor modern berwarna gelap",
+          "en": "Three senior Indonesian litigation counsel standing in a modern dark-toned office"
+        }
+      }
+    },
+    "sections.hero.professionals.imageAlt.id": {
+      "type": "text",
+      "label": "alt gambar hero professionals Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Tiga penasihat litigasi senior Indonesia berdiri di kantor modern berwarna gelap"
+    },
+    "sections.hero.professionals.imageAlt.en": {
+      "type": "text",
+      "label": "English alt gambar hero professionals",
+      "required": true,
+      "maxLength": 150,
+      "default": "Three senior Indonesian litigation counsel standing in a modern dark-toned office"
+    },
+    "sections.hero.insights.eyebrow.id": {
+      "type": "text",
+      "label": "label hero insights Indonesia",
+      "maxLength": 70,
+      "default": "Wawasan"
+    },
+    "sections.hero.insights.eyebrow.en": {
+      "type": "text",
+      "label": "English label hero insights",
+      "maxLength": 70,
+      "default": "Insights"
+    },
+    "sections.hero.insights.heading.id": {
+      "type": "text",
+      "label": "judul hero insights Indonesia",
+      "required": true,
+      "maxLength": 94,
+      "default": "Membaca risiko sebelum menentukan langkah."
+    },
+    "sections.hero.insights.heading.en": {
+      "type": "text",
+      "label": "English judul hero insights",
+      "required": true,
+      "maxLength": 94,
+      "default": "Reading risk before choosing a move."
+    },
+    "sections.hero.insights.description.id": {
+      "type": "textarea",
+      "label": "deskripsi hero insights Indonesia",
+      "maxLength": 280,
+      "default": "Perspektif ringkas untuk perkara privat yang sensitif dan bernilai tinggi."
+    },
+    "sections.hero.insights.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi hero insights",
+      "maxLength": 280,
+      "default": "Concise perspectives for sensitive, high-value private matters."
+    },
+    "sections.hero.insights.image": {
+      "type": "image",
+      "label": "gambar hero insights",
+      "required": true,
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-insights.webp",
+        "altId": "Meja konsultasi dengan folio tertutup dan cakrawala kota pada malam hari",
+        "altEn": "Consultation table with a closed folio and a city skyline at night",
+        "focalPoint": {
+          "x": 46,
+          "y": 50
+        },
+        "alt": {
+          "id": "Meja konsultasi dengan folio tertutup dan cakrawala kota pada malam hari",
+          "en": "Consultation table with a closed folio and a city skyline at night"
+        }
+      }
+    },
+    "sections.hero.insights.imageAlt.id": {
+      "type": "text",
+      "label": "alt gambar hero insights Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Meja konsultasi dengan folio tertutup dan cakrawala kota pada malam hari"
+    },
+    "sections.hero.insights.imageAlt.en": {
+      "type": "text",
+      "label": "English alt gambar hero insights",
+      "required": true,
+      "maxLength": 150,
+      "default": "Consultation table with a closed folio and a city skyline at night"
+    },
+    "sections.hero.contact.eyebrow.id": {
+      "type": "text",
+      "label": "label hero contact Indonesia",
+      "maxLength": 70,
+      "default": "Konsultasi Privat"
+    },
+    "sections.hero.contact.eyebrow.en": {
+      "type": "text",
+      "label": "English label hero contact",
+      "maxLength": 70,
+      "default": "Private Consultation"
+    },
+    "sections.hero.contact.heading.id": {
+      "type": "text",
+      "label": "judul hero contact Indonesia",
+      "required": true,
+      "maxLength": 94,
+      "default": "Mulai dengan konteks yang terjaga."
+    },
+    "sections.hero.contact.heading.en": {
+      "type": "text",
+      "label": "English judul hero contact",
+      "required": true,
+      "maxLength": 94,
+      "default": "Begin with context, carefully contained."
+    },
+    "sections.hero.contact.description.id": {
+      "type": "textarea",
+      "label": "deskripsi hero contact Indonesia",
+      "maxLength": 280,
+      "default": "Ceritakan kebutuhan awal tanpa mengirimkan informasi rahasia atau dokumen sensitif."
+    },
+    "sections.hero.contact.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi hero contact",
+      "maxLength": 280,
+      "default": "Share your initial need without sending confidential information or sensitive documents."
+    },
+    "sections.hero.contact.image": {
+      "type": "image",
+      "label": "gambar hero contact",
+      "required": true,
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero-contact.webp",
+        "altId": "Ruang konsultasi privat dengan meja batu dan cakrawala kota pada malam hari",
+        "altEn": "Private consultation room with a stone table and a city skyline at night",
+        "focalPoint": {
+          "x": 56,
+          "y": 50
+        },
+        "alt": {
+          "id": "Ruang konsultasi privat dengan meja batu dan cakrawala kota pada malam hari",
+          "en": "Private consultation room with a stone table and a city skyline at night"
+        }
+      }
+    },
+    "sections.hero.contact.imageAlt.id": {
+      "type": "text",
+      "label": "alt gambar hero contact Indonesia",
+      "required": true,
+      "maxLength": 150,
+      "default": "Ruang konsultasi privat dengan meja batu dan cakrawala kota pada malam hari"
+    },
+    "sections.hero.contact.imageAlt.en": {
+      "type": "text",
+      "label": "English alt gambar hero contact",
+      "required": true,
+      "maxLength": 150,
+      "default": "Private consultation room with a stone table and a city skyline at night"
+    },
+    "sections.home.introHeading.id": {
+      "type": "text",
+      "label": "judul pengantar Beranda Indonesia",
+      "maxLength": 84,
+      "default": "Sengketa privat menuntut lebih dari argumen yang kuat."
+    },
+    "sections.home.introHeading.en": {
+      "type": "text",
+      "label": "English judul pengantar Beranda",
+      "maxLength": 84,
+      "default": "Private disputes demand more than a strong argument."
+    },
+    "sections.home.introBody.id": {
+      "type": "textarea",
+      "label": "isi pengantar Beranda Indonesia",
+      "maxLength": 340,
+      "default": "Kami menilai posisi hukum bersama dampaknya pada keluarga, kepemilikan, reputasi, dan ruang gerak klien. Setiap keputusan dirancang agar tetap proporsional, dapat dijalankan, dan terjaga."
+    },
+    "sections.home.introBody.en": {
+      "type": "textarea",
+      "label": "English isi pengantar Beranda",
+      "maxLength": 340,
+      "default": "We assess legal position alongside its effect on family, ownership, reputation, and personal latitude. Each decision is designed to remain proportionate, executable, and protected."
+    },
+    "sections.home.principles": {
+      "type": "array",
+      "label": "Prinsip pendampingan",
+      "minItems": 3,
+      "maxItems": 6,
+      "default": [
+        {
+          "title": {
+            "id": "Diskresi sejak awal",
+            "en": "Discretion from the outset"
+          },
+          "description": {
+            "id": "Informasi dibatasi pada tim yang perlu mengetahui dan setiap langkah dinilai terhadap dampak privasi.",
+            "en": "Information is limited to those who need to know, and every step is assessed for privacy impact."
+          },
+          "label": {
+            "id": "Posisi",
+            "en": "Position"
+          }
+        },
+        {
+          "title": {
+            "id": "Keterlibatan partner",
+            "en": "Partner attention"
+          },
+          "description": {
+            "id": "Perkara penting dipimpin langsung dengan jalur komunikasi yang ringkas dan dapat dipertanggungjawabkan.",
+            "en": "Critical matters are led directly with concise, accountable communication."
+          },
+          "label": {
+            "id": "Paparan",
+            "en": "Exposure"
+          }
+        },
+        {
+          "title": {
+            "id": "Satu strategi, banyak konsekuensi",
+            "en": "One strategy, many consequences"
+          },
+          "description": {
+            "id": "Pilihan litigasi diuji terhadap aset, keluarga, bisnis, dan reputasi-bukan hanya peluang menang.",
+            "en": "Litigation choices are tested against assets, family, business, and reputation-not only the prospects of winning."
+          },
+          "label": {
+            "id": "Tujuan",
+            "en": "Objective"
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 72
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 72
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 280
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 280
+          },
+          "label.id": {
+            "type": "text",
+            "label": "Label Indonesia",
+            "required": true,
+            "maxLength": 24
+          },
+          "label.en": {
+            "type": "text",
+            "label": "English label",
+            "required": true,
+            "maxLength": 24
+          }
+        }
+      }
+    },
+    "sections.home.processHeading.id": {
+      "type": "text",
+      "label": "judul proses Indonesia",
+      "maxLength": 76,
+      "default": "Terstruktur sejak percakapan pertama."
+    },
+    "sections.home.processHeading.en": {
+      "type": "text",
+      "label": "English judul proses",
+      "maxLength": 76,
+      "default": "Structured from the first conversation."
+    },
+    "sections.home.processBody.id": {
+      "type": "textarea",
+      "label": "deskripsi proses Indonesia",
+      "maxLength": 250,
+      "default": "Mandat dimulai dengan pemeriksaan konflik, pemetaan urgensi, dan penetapan jalur komunikasi yang aman."
+    },
+    "sections.home.processBody.en": {
+      "type": "textarea",
+      "label": "English deskripsi proses",
+      "maxLength": 250,
+      "default": "Each mandate begins with conflict checks, urgency mapping, and a secure communication path."
+    },
+    "sections.home.processItems": {
+      "type": "array",
+      "label": "Tahapan konsultasi",
+      "minItems": 3,
+      "maxItems": 6,
+      "default": [
+        {
+          "title": {
+            "id": "Ringkasan awal",
+            "en": "Initial overview"
+          },
+          "description": {
+            "id": "Sampaikan para pihak, jenis sengketa, tahap perkara, dan tenggat tanpa materi rahasia.",
+            "en": "Identify the parties, dispute type, current stage, and deadlines without confidential material."
+          },
+          "step": {
+            "id": "Pemeriksaan awal",
+            "en": "Initial review"
+          }
+        },
+        {
+          "title": {
+            "id": "Pemeriksaan konflik",
+            "en": "Conflict check"
+          },
+          "description": {
+            "id": "Tim menilai apakah firma dapat mempertimbangkan penugasan tanpa konflik kepentingan.",
+            "en": "The team assesses whether the firm may consider the engagement without a conflict of interest."
+          },
+          "step": {
+            "id": "Pemeriksaan konflik",
+            "en": "Conflict check"
+          }
+        },
+        {
+          "title": {
+            "id": "Konsultasi privat",
+            "en": "Private consultation"
+          },
+          "description": {
+            "id": "Tujuan, paparan, bukti, privasi, dan pilihan awal dibahas dalam percakapan terarah.",
+            "en": "Objectives, exposure, evidence, privacy, and initial options are discussed in a focused conversation."
+          },
+          "step": {
+            "id": "Konsultasi privat",
+            "en": "Private consultation"
+          }
+        },
+        {
+          "title": {
+            "id": "Rencana tindakan",
+            "en": "Action plan"
+          },
+          "description": {
+            "id": "Jika diterima, ruang lingkup, tim, prioritas, dan protokol komunikasi disepakati.",
+            "en": "If accepted, scope, team, priorities, and communications protocol are agreed."
+          },
+          "step": {
+            "id": "Rencana tindakan",
+            "en": "Action plan"
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 72
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 72
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 280
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 280
+          },
+          "step.id": {
+            "type": "text",
+            "label": "Tahap Indonesia",
+            "required": true,
+            "maxLength": 30
+          },
+          "step.en": {
+            "type": "text",
+            "label": "English stage",
+            "required": true,
+            "maxLength": 30
+          }
+        }
+      }
+    },
+    "sections.home.quote.id": {
+      "type": "textarea",
+      "label": "kutipan Beranda Indonesia",
+      "maxLength": 220,
+      "default": "Kami membutuhkan arah yang tenang tanpa kehilangan ketegasan. Setiap pilihan dijelaskan bersama konsekuensinya."
+    },
+    "sections.home.quote.en": {
+      "type": "textarea",
+      "label": "English kutipan Beranda",
+      "maxLength": 220,
+      "default": "We needed calm direction without losing resolve. Every option was explained together with its consequences."
+    },
+    "sections.home.quoteAttribution.id": {
+      "type": "text",
+      "label": "atribusi kutipan Indonesia",
+      "maxLength": 72,
+      "default": "Ilustrasi editorial, bukan testimoni klien nyata"
+    },
+    "sections.home.quoteAttribution.en": {
+      "type": "text",
+      "label": "English atribusi kutipan",
+      "maxLength": 72,
+      "default": "Editorial illustration, not an actual client testimonial"
+    },
+    "sections.about.approachHeading.id": {
+      "type": "text",
+      "label": "judul pendekatan Indonesia",
+      "maxLength": 82,
+      "default": "Litigasi sebagai instrumen, bukan refleks."
+    },
+    "sections.about.approachHeading.en": {
+      "type": "text",
+      "label": "English judul pendekatan",
+      "maxLength": 82,
+      "default": "Litigation as an instrument, not a reflex."
+    },
+    "sections.about.approachBody.id": {
+      "type": "textarea",
+      "label": "isi pendekatan Indonesia",
+      "maxLength": 380,
+      "default": "Kami menilai apa yang perlu dilindungi, bukti yang harus diamankan, forum yang memberi posisi terbaik, dan kapan penyelesaian lebih bernilai daripada putusan. Narasi ini adalah contoh dan harus diganti dengan pendekatan firma sebenarnya."
+    },
+    "sections.about.approachBody.en": {
+      "type": "textarea",
+      "label": "English isi pendekatan",
+      "maxLength": 380,
+      "default": "We assess what must be protected, which evidence must be preserved, which forum offers the strongest position, and when settlement is more valuable than judgment. This is sample copy and must be replaced with the firm's actual approach."
+    },
+    "sections.about.principlesHeading.id": {
+      "type": "text",
+      "label": "judul prinsip Indonesia",
+      "maxLength": 76,
+      "default": "Cara kami membangun posisi."
+    },
+    "sections.about.principlesHeading.en": {
+      "type": "text",
+      "label": "English judul prinsip",
+      "maxLength": 76,
+      "default": "How we build a position."
+    },
+    "sections.about.principlesBody.id": {
+      "type": "textarea",
+      "label": "deskripsi prinsip Indonesia",
+      "maxLength": 240,
+      "default": "Prinsip contoh untuk ritme kerja firma sengketa privat yang modern dan disiplin."
+    },
+    "sections.about.principlesBody.en": {
+      "type": "textarea",
+      "label": "English deskripsi prinsip",
+      "maxLength": 240,
+      "default": "Sample principles for the rhythm of a modern, disciplined private disputes practice."
+    },
+    "sections.about.principles": {
+      "type": "array",
+      "label": "Prinsip strategi",
+      "minItems": 3,
+      "maxItems": 6,
+      "default": [
+        {
+          "title": {
+            "id": "Petakan sebelum bergerak",
+            "en": "Map before moving"
+          },
+          "description": {
+            "id": "Para pihak, aset, bukti, forum, tenggat, dan titik tekan dipahami sebagai satu sistem.",
+            "en": "Parties, assets, evidence, forums, deadlines, and pressure points are understood as one system."
+          },
+          "label": {
+            "id": "Kendali",
+            "en": "Control"
+          }
+        },
+        {
+          "title": {
+            "id": "Lindungi opsi",
+            "en": "Protect optionality"
+          },
+          "description": {
+            "id": "Langkah awal tidak boleh menutup jalur negosiasi, tindakan darurat, atau pembelaan berikutnya.",
+            "en": "Early steps should not foreclose negotiation, urgent relief, or later defenses."
+          },
+          "label": {
+            "id": "Pilihan",
+            "en": "Optionality"
+          }
+        },
+        {
+          "title": {
+            "id": "Komunikasikan dengan disiplin",
+            "en": "Communicate with discipline"
+          },
+          "description": {
+            "id": "Pesan, dokumen, dan keputusan dikelola dengan asumsi bahwa semuanya dapat diuji.",
+            "en": "Messages, documents, and decisions are managed on the assumption that each may be scrutinized."
+          },
+          "label": {
+            "id": "Disiplin",
+            "en": "Discipline"
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 72
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 72
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 280
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 280
+          },
+          "label.id": {
+            "type": "text",
+            "label": "Label Indonesia",
+            "required": true,
+            "maxLength": 24
+          },
+          "label.en": {
+            "type": "text",
+            "label": "English label",
+            "required": true,
+            "maxLength": 24
+          }
+        }
+      }
+    },
+    "sections.about.confidentialityHeading.id": {
+      "type": "text",
+      "label": "judul kerahasiaan Indonesia",
+      "maxLength": 82,
+      "default": "Privasi adalah bagian dari strategi perkara."
+    },
+    "sections.about.confidentialityHeading.en": {
+      "type": "text",
+      "label": "English judul kerahasiaan",
+      "maxLength": 82,
+      "default": "Privacy is part of the case strategy."
+    },
+    "sections.about.confidentialityBody.id": {
+      "type": "textarea",
+      "label": "isi kerahasiaan Indonesia",
+      "maxLength": 360,
+      "default": "Jalur komunikasi, akses dokumen, dan alur persetujuan disesuaikan dengan sensitivitas perkara. Pernyataan ini adalah contoh dan bukan janji layanan entitas hukum nyata."
+    },
+    "sections.about.confidentialityBody.en": {
+      "type": "textarea",
+      "label": "English isi kerahasiaan",
+      "maxLength": 360,
+      "default": "Communication channels, document access, and approval flows are suited to a matter's sensitivity. This statement is sample copy and not a service promise by a real legal entity."
+    },
+    "sections.services.heading.id": {
+      "type": "text",
+      "label": "judul keahlian Indonesia",
+      "maxLength": 82,
+      "default": "Keahlian untuk sengketa dengan konsekuensi pribadi."
+    },
+    "sections.services.heading.en": {
+      "type": "text",
+      "label": "English judul keahlian",
+      "maxLength": 82,
+      "default": "Capabilities for disputes with personal consequences."
+    },
+    "sections.services.description.id": {
+      "type": "textarea",
+      "label": "deskripsi keahlian Indonesia",
+      "maxLength": 300,
+      "default": "Daftar berikut adalah contoh area praktik, bukan pernyataan kemampuan firma nyata. Sesuaikan dengan izin, pengalaman, dan yurisdiksi kantor Anda."
+    },
+    "sections.services.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi keahlian",
+      "maxLength": 300,
+      "default": "The following are sample practice areas, not claims about a real firm. Adapt them to your office's licensing, experience, and jurisdiction."
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Area keahlian",
+      "minItems": 4,
+      "maxItems": 10,
+      "default": [
+        {
+          "title": {
+            "id": "Litigasi Perdata Kompleks",
+            "en": "Complex Civil Litigation"
+          },
+          "description": {
+            "id": "Sengketa kontrak, kepemilikan, perbuatan melawan hukum, dan tuntutan bernilai material dengan banyak pihak atau forum.",
+            "en": "Contract, ownership, tort, and material-value claims involving multiple parties or forums."
+          },
+          "eyebrow": {
+            "id": "Perdata privat",
+            "en": "Private civil"
+          }
+        },
+        {
+          "title": {
+            "id": "Sengketa Aset & Kepemilikan",
+            "en": "Asset & Ownership Disputes"
+          },
+          "description": {
+            "id": "Strategi terkait penguasaan, pembekuan, penelusuran, pemulihan, dan pembagian aset bernilai tinggi.",
+            "en": "Strategy concerning control, freezing, tracing, recovery, and division of high-value assets."
+          },
+          "eyebrow": {
+            "id": "Aset",
+            "en": "Assets"
+          }
+        },
+        {
+          "title": {
+            "id": "Konflik Keluarga Bisnis",
+            "en": "Business-Family Conflicts"
+          },
+          "description": {
+            "id": "Perselisihan pemegang saham keluarga, suksesi, amanat, dan kendali atas usaha atau kekayaan bersama.",
+            "en": "Conflicts among family shareholders involving succession, mandates, and control of shared enterprises or wealth."
+          },
+          "eyebrow": {
+            "id": "Keluarga",
+            "en": "Family"
+          }
+        },
+        {
+          "title": {
+            "id": "Fraud & Investigasi Privat",
+            "en": "Fraud & Private Investigations"
+          },
+          "description": {
+            "id": "Pelestarian bukti, pemetaan aliran aset, koordinasi ahli, dan strategi gugatan atau pembelaan terkait dugaan fraud.",
+            "en": "Evidence preservation, asset-flow mapping, expert coordination, and claim or defense strategy concerning suspected fraud."
+          },
+          "eyebrow": {
+            "id": "Investigasi",
+            "en": "Investigations"
+          }
+        },
+        {
+          "title": {
+            "id": "Perlindungan Reputasi",
+            "en": "Reputation Protection"
+          },
+          "description": {
+            "id": "Respons terkoordinasi terhadap tuduhan, publikasi merugikan, kebocoran informasi, dan risiko komunikasi.",
+            "en": "Coordinated responses to allegations, harmful publication, information leaks, and communications risk."
+          },
+          "eyebrow": {
+            "id": "Reputasi",
+            "en": "Reputation"
+          }
+        },
+        {
+          "title": {
+            "id": "Negosiasi & Penyelesaian Privat",
+            "en": "Negotiation & Private Resolution"
+          },
+          "description": {
+            "id": "Posisi, syarat penyelesaian, dan mekanisme pelaksanaan yang menjaga tujuan serta privasi klien.",
+            "en": "Positioning, settlement terms, and enforcement mechanisms that preserve client objectives and privacy."
+          },
+          "eyebrow": {
+            "id": "Penyelesaian",
+            "en": "Resolution"
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 72
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 72
+          },
+          "description.id": {
+            "type": "textarea",
+            "label": "Deskripsi Indonesia",
+            "required": true,
+            "maxLength": 280
+          },
+          "description.en": {
+            "type": "textarea",
+            "label": "English description",
+            "required": true,
+            "maxLength": 280
+          },
+          "eyebrow.id": {
+            "type": "text",
+            "label": "Kategori Indonesia",
+            "required": true,
+            "maxLength": 28
+          },
+          "eyebrow.en": {
+            "type": "text",
+            "label": "English category",
+            "required": true,
+            "maxLength": 28
+          }
+        }
+      }
+    },
+    "sections.team.heading.id": {
+      "type": "text",
+      "label": "judul tim Indonesia",
+      "maxLength": 76,
+      "default": "Profesional yang tetap dekat dengan perkara."
+    },
+    "sections.team.heading.en": {
+      "type": "text",
+      "label": "English judul tim",
+      "maxLength": 76,
+      "default": "Professionals who stay close to the matter."
+    },
+    "sections.team.description.id": {
+      "type": "textarea",
+      "label": "deskripsi tim Indonesia",
+      "maxLength": 280,
+      "default": "Seluruh nama, foto, jabatan, fokus, dan biografi di bawah adalah data fiktif untuk demonstrasi tata letak."
+    },
+    "sections.team.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi tim",
+      "maxLength": 280,
+      "default": "All names, images, titles, focus areas, and biographies below are fictional layout data."
+    },
+    "sections.team.demoLabel.id": {
+      "type": "text",
+      "label": "label tim contoh Indonesia",
+      "required": true,
+      "maxLength": 28,
+      "default": "Profil fiktif"
+    },
+    "sections.team.demoLabel.en": {
+      "type": "text",
+      "label": "English label tim contoh",
+      "required": true,
+      "maxLength": 28,
+      "default": "Fictional profiles"
+    },
+    "sections.team.demoNotice.id": {
+      "type": "textarea",
+      "label": "catatan tim contoh Indonesia",
+      "required": true,
+      "maxLength": 300,
+      "default": "Profil berikut tidak mewakili advokat atau firma nyata dan tidak boleh dipublikasikan sebagai kredensial."
+    },
+    "sections.team.demoNotice.en": {
+      "type": "textarea",
+      "label": "English catatan tim contoh",
+      "required": true,
+      "maxLength": 300,
+      "default": "The following profiles do not represent real lawyers or a real firm and must not be published as credentials."
+    },
+    "sections.team.items": {
+      "type": "array",
+      "label": "Profil profesional",
+      "minItems": 2,
+      "maxItems": 8,
+      "default": [
+        {
+          "name": "Armand Naratama",
+          "role": {
+            "id": "Founding Partner, profil fiktif",
+            "en": "Founding Partner, fictional profile"
+          },
+          "focus": {
+            "id": "Litigasi Privat, Sengketa Aset",
+            "en": "Private Litigation, Asset Disputes"
+          },
+          "bio": {
+            "id": "Biografi contoh untuk partner yang memimpin sengketa kepemilikan, tindakan perlindungan darurat, dan negosiasi bernilai tinggi.",
+            "en": "Sample biography for a partner leading ownership disputes, urgent protective measures, and high-value negotiations."
+          }
+        },
+        {
+          "name": "Maya Adinegara",
+          "role": {
+            "id": "Partner, profil fiktif",
+            "en": "Partner, fictional profile"
+          },
+          "focus": {
+            "id": "Keluarga Bisnis, Reputasi",
+            "en": "Business Families, Reputation"
+          },
+          "bio": {
+            "id": "Biografi contoh untuk partner yang menangani konflik keluarga bisnis, komunikasi sensitif, dan penyelesaian privat.",
+            "en": "Sample biography for a partner handling business-family conflicts, sensitive communications, and private resolution."
+          }
+        },
+        {
+          "name": "Raka Wisesa",
+          "role": {
+            "id": "Counsel, profil fiktif",
+            "en": "Counsel, fictional profile"
+          },
+          "focus": {
+            "id": "Fraud, Investigasi, Bukti",
+            "en": "Fraud, Investigations, Evidence"
+          },
+          "bio": {
+            "id": "Biografi contoh untuk counsel yang berfokus pada pelestarian bukti, investigasi internal, dan pemetaan aliran aset.",
+            "en": "Sample biography for counsel focused on evidence preservation, internal investigations, and asset-flow mapping."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "name": {
+            "type": "text",
+            "label": "Nama",
+            "required": true,
+            "maxLength": 72
+          },
+          "role.id": {
+            "type": "text",
+            "label": "Jabatan Indonesia",
+            "required": true,
+            "maxLength": 62
+          },
+          "role.en": {
+            "type": "text",
+            "label": "English role",
+            "required": true,
+            "maxLength": 62
+          },
+          "focus.id": {
+            "type": "text",
+            "label": "Fokus Indonesia",
+            "required": true,
+            "maxLength": 86
+          },
+          "focus.en": {
+            "type": "text",
+            "label": "English focus",
+            "required": true,
+            "maxLength": 86
+          },
+          "bio.id": {
+            "type": "textarea",
+            "label": "Biografi Indonesia",
+            "required": true,
+            "maxLength": 360
+          },
+          "bio.en": {
+            "type": "textarea",
+            "label": "English biography",
+            "required": true,
+            "maxLength": 360
+          }
+        }
+      }
+    },
+    "sections.insights.heading.id": {
+      "type": "text",
+      "label": "judul wawasan Indonesia",
+      "maxLength": 78,
+      "default": "Perspektif sebelum konflik mengeras."
+    },
+    "sections.insights.heading.en": {
+      "type": "text",
+      "label": "English judul wawasan",
+      "maxLength": 78,
+      "default": "Perspective before a conflict hardens."
+    },
+    "sections.insights.description.id": {
+      "type": "textarea",
+      "label": "deskripsi wawasan Indonesia",
+      "maxLength": 280,
+      "default": "Materi contoh untuk membahas kesiapan perkara tanpa membuka strategi klien atau memberi nasihat untuk situasi tertentu."
+    },
+    "sections.insights.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi wawasan",
+      "maxLength": 280,
+      "default": "Sample material discussing dispute readiness without revealing client strategy or advising on a particular situation."
+    },
+    "sections.insights.demoLabel.id": {
+      "type": "text",
+      "label": "label wawasan contoh Indonesia",
+      "required": true,
+      "maxLength": 28,
+      "default": "Artikel contoh"
+    },
+    "sections.insights.demoLabel.en": {
+      "type": "text",
+      "label": "English label wawasan contoh",
+      "required": true,
+      "maxLength": 28,
+      "default": "Sample articles"
+    },
+    "sections.insights.demoNotice.id": {
+      "type": "textarea",
+      "label": "catatan wawasan contoh Indonesia",
+      "required": true,
+      "maxLength": 320,
+      "default": "Judul dan ringkasan berikut sepenuhnya fiktif, bukan publikasi firma, dan bukan nasihat hukum. Ganti sebelum peluncuran."
+    },
+    "sections.insights.demoNotice.en": {
+      "type": "textarea",
+      "label": "English catatan wawasan contoh",
+      "required": true,
+      "maxLength": 320,
+      "default": "The following titles and summaries are entirely fictional, are not firm publications, and do not constitute legal advice. Replace them before launch."
+    },
+    "sections.insights.items": {
+      "type": "array",
+      "label": "Artikel wawasan",
+      "minItems": 3,
+      "maxItems": 12,
+      "default": [
+        {
+          "category": {
+            "id": "Kesiapan Sengketa",
+            "en": "Dispute Readiness"
+          },
+          "title": {
+            "id": "Lima Keputusan dalam 72 Jam Pertama Sengketa",
+            "en": "Five Decisions in the First 72 Hours of a Dispute"
+          },
+          "excerpt": {
+            "id": "Kerangka contoh untuk menjaga bukti, hak, komunikasi, dan opsi penyelesaian ketika situasi masih bergerak cepat.",
+            "en": "A sample framework for preserving evidence, rights, communications, and settlement options while events move quickly."
+          }
+        },
+        {
+          "category": {
+            "id": "Aset & Bukti",
+            "en": "Assets & Evidence"
+          },
+          "title": {
+            "id": "Menjaga Jejak Aset Tanpa Memperbesar Risiko",
+            "en": "Preserving an Asset Trail Without Enlarging Risk"
+          },
+          "excerpt": {
+            "id": "Pertanyaan awal mengenai data, dokumen, pihak ketiga, dan tindakan perlindungan sebelum mengambil posisi terbuka.",
+            "en": "Early questions on data, documents, third parties, and protective measures before taking an open position."
+          }
+        },
+        {
+          "category": {
+            "id": "Privasi & Reputasi",
+            "en": "Privacy & Reputation"
+          },
+          "title": {
+            "id": "Satu Perkara, Dua Ruang: Pengadilan dan Persepsi",
+            "en": "One Matter, Two Arenas: Court and Perception"
+          },
+          "excerpt": {
+            "id": "Mengapa pesan internal, pernyataan publik, dan ritme proses hukum perlu dikelola dalam satu strategi.",
+            "en": "Why internal messaging, public statements, and the pace of legal proceedings should be managed within one strategy."
+          }
+        },
+        {
+          "category": {
+            "id": "Penyelesaian Privat",
+            "en": "Private Resolution"
+          },
+          "title": {
+            "id": "Menilai Nilai Penyelesaian di Luar Angka",
+            "en": "Assessing Settlement Value Beyond the Number"
+          },
+          "excerpt": {
+            "id": "Kontrol, kerahasiaan, pelaksanaan, waktu, dan hubungan dapat sama pentingnya dengan nilai pembayaran.",
+            "en": "Control, confidentiality, enforceability, timing, and relationships may matter as much as the payment figure."
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "category.id": {
+            "type": "text",
+            "label": "Kategori Indonesia",
+            "required": true,
+            "maxLength": 48
+          },
+          "category.en": {
+            "type": "text",
+            "label": "English category",
+            "required": true,
+            "maxLength": 48
+          },
+          "title.id": {
+            "type": "text",
+            "label": "Judul Indonesia",
+            "required": true,
+            "maxLength": 112
+          },
+          "title.en": {
+            "type": "text",
+            "label": "English title",
+            "required": true,
+            "maxLength": 112
+          },
+          "excerpt.id": {
+            "type": "textarea",
+            "label": "Ringkasan Indonesia",
+            "required": true,
+            "maxLength": 260
+          },
+          "excerpt.en": {
+            "type": "textarea",
+            "label": "English excerpt",
+            "required": true,
+            "maxLength": 260
+          }
+        }
+      }
+    },
+    "sections.contact.heading.id": {
+      "type": "text",
+      "label": "judul kontak Indonesia",
+      "maxLength": 80,
+      "default": "Permintaan konsultasi privat."
+    },
+    "sections.contact.heading.en": {
+      "type": "text",
+      "label": "English judul kontak",
+      "maxLength": 80,
+      "default": "A request for private consultation."
+    },
+    "sections.contact.description.id": {
+      "type": "textarea",
+      "label": "deskripsi kontak Indonesia",
+      "maxLength": 280,
+      "default": "Berikan informasi minimum mengenai jenis perkara, pihak yang terlibat, tahap sengketa, dan tenggat terdekat."
+    },
+    "sections.contact.description.en": {
+      "type": "textarea",
+      "label": "English deskripsi kontak",
+      "maxLength": 280,
+      "default": "Provide the minimum information needed about the matter type, parties involved, current stage, and nearest deadline."
+    },
+    "sections.contact.confidentialityHeading.id": {
+      "type": "text",
+      "label": "judul peringatan kerahasiaan Indonesia",
+      "required": true,
+      "maxLength": 82,
+      "default": "Sebelum Anda mengirimkan formulir."
+    },
+    "sections.contact.confidentialityHeading.en": {
+      "type": "text",
+      "label": "English judul peringatan kerahasiaan",
+      "required": true,
+      "maxLength": 82,
+      "default": "Before you submit the form."
+    },
+    "sections.contact.confidentialityNotice.id": {
+      "type": "textarea",
+      "label": "peringatan kerahasiaan Indonesia",
+      "required": true,
+      "maxLength": 380,
+      "default": "Jangan sertakan dokumen, strategi, pengakuan, nomor identitas, data rekening, atau informasi sensitif. Pengiriman formulir tidak membuat hubungan pengacara-klien dan tidak menjamin perkara dapat diterima."
+    },
+    "sections.contact.confidentialityNotice.en": {
+      "type": "textarea",
+      "label": "English peringatan kerahasiaan",
+      "required": true,
+      "maxLength": 380,
+      "default": "Do not include documents, strategy, admissions, identification numbers, account data, or sensitive information. Submitting the form does not create a lawyer-client relationship or guarantee that the matter can be accepted."
+    },
+    "sections.contact.formHeading.id": {
+      "type": "text",
+      "label": "judul formulir Indonesia",
+      "maxLength": 76,
+      "default": "Berikan ringkasan awal."
+    },
+    "sections.contact.formHeading.en": {
+      "type": "text",
+      "label": "English judul formulir",
+      "maxLength": 76,
+      "default": "Provide an initial overview."
+    },
+    "sections.contact.formDescription.id": {
+      "type": "textarea",
+      "label": "deskripsi formulir Indonesia",
+      "maxLength": 280,
+      "default": "Formulir ini adalah antarmuka template. Pagiverse Core menangani pengiriman, validasi server, spam, penyimpanan, dan integrasi."
+    },
+    "sections.contact.formDescription.en": {
+      "type": "textarea",
+      "label": "English deskripsi formulir",
+      "maxLength": 280,
+      "default": "This form is a template interface. Pagiverse Core handles submission, server validation, spam protection, storage, and integrations."
+    },
+    "sections.contact.consent.id": {
+      "type": "textarea",
+      "label": "persetujuan formulir Indonesia",
+      "required": true,
+      "maxLength": 360,
+      "default": "Saya memahami bahwa formulir ini hanya untuk pemeriksaan awal, bukan sarana mengirim informasi rahasia, dan tidak membentuk hubungan pengacara-klien."
+    },
+    "sections.contact.consent.en": {
+      "type": "textarea",
+      "label": "English persetujuan formulir",
+      "required": true,
+      "maxLength": 360,
+      "default": "I understand that this form is for preliminary screening only, is not a channel for confidential information, and does not create a lawyer-client relationship."
+    },
+    "sections.contact.submitLabel.id": {
+      "type": "text",
+      "label": "tombol formulir Indonesia",
+      "maxLength": 30,
+      "default": "Kirim Permintaan"
+    },
+    "sections.contact.submitLabel.en": {
+      "type": "text",
+      "label": "English tombol formulir",
+      "maxLength": 30,
+      "default": "Submit Request"
+    },
+    "sections.cta.heading.id": {
+      "type": "text",
+      "label": "judul CTA Indonesia",
+      "maxLength": 88,
+      "default": "Mulai secara privat dan terarah."
+    },
+    "sections.cta.heading.en": {
+      "type": "text",
+      "label": "English judul CTA",
+      "maxLength": 88,
+      "default": "Begin privately and with purpose."
+    },
+    "sections.cta.body.id": {
+      "type": "textarea",
+      "label": "isi CTA Indonesia",
+      "maxLength": 260,
+      "default": "Sampaikan konteks awal tanpa informasi sensitif. Tim kami akan melakukan pemeriksaan konflik sebelum pembahasan lebih lanjut."
+    },
+    "sections.cta.body.en": {
+      "type": "textarea",
+      "label": "English isi CTA",
+      "maxLength": 260,
+      "default": "Share initial context without sensitive information. Our team will complete a conflict check before any further discussion."
+    },
+    "sections.cta.buttonLabel.id": {
+      "type": "text",
+      "label": "tombol CTA Indonesia",
+      "maxLength": 30,
+      "default": "Konsultasi Privat"
+    },
+    "sections.cta.buttonLabel.en": {
+      "type": "text",
+      "label": "English tombol CTA",
+      "maxLength": 30,
+      "default": "Private Consultation"
+    },
+    "sections.footer.summary.id": {
+      "type": "textarea",
+      "label": "ringkasan footer Indonesia",
+      "maxLength": 220,
+      "default": "Pendampingan sengketa yang diskret bagi individu, keluarga, dan pemilik aset bernilai tinggi."
+    },
+    "sections.footer.summary.en": {
+      "type": "textarea",
+      "label": "English ringkasan footer",
+      "maxLength": 220,
+      "default": "Discreet dispute counsel for individuals, families, and owners of significant assets."
+    },
+    "sections.footer.demoLabel.id": {
+      "type": "text",
+      "label": "label data contoh Indonesia",
+      "required": true,
+      "maxLength": 34,
+      "default": "Data contoh fiktif"
+    },
+    "sections.footer.demoLabel.en": {
+      "type": "text",
+      "label": "English label data contoh",
+      "required": true,
+      "maxLength": 34,
+      "default": "Fictional sample data"
+    },
+    "sections.footer.demoNotice.id": {
+      "type": "textarea",
+      "label": "catatan data contoh Indonesia",
+      "required": true,
+      "maxLength": 380,
+      "default": "Nama firma, penasihat, kontak, perkara, dan wawasan pada template ini adalah contoh. Ganti dengan data terverifikasi sebelum publikasi."
+    },
+    "sections.footer.demoNotice.en": {
+      "type": "textarea",
+      "label": "English catatan data contoh",
+      "required": true,
+      "maxLength": 380,
+      "default": "The firm, counsel, contact, matter, and insight details in this template are examples. Replace them with verified data before publication."
+    },
+    "sections.footer.copyright.id": {
+      "type": "text",
+      "label": "hak cipta Indonesia",
+      "maxLength": 110,
+      "default": "© 2026 Naratama Dispute Counsel. Seluruh hak dilindungi."
+    },
+    "sections.footer.copyright.en": {
+      "type": "text",
+      "label": "English hak cipta",
+      "maxLength": 110,
+      "default": "© 2026 Naratama Dispute Counsel. All rights reserved."
+    },
+    "sections.footer.legal.id": {
+      "type": "text",
+      "label": "penyangkalan hukum Indonesia",
+      "required": true,
+      "maxLength": 180,
+      "default": "Materi situs bersifat umum dan bukan nasihat hukum."
+    },
+    "sections.footer.legal.en": {
+      "type": "text",
+      "label": "English penyangkalan hukum",
+      "required": true,
+      "maxLength": 180,
+      "default": "Site materials are general and do not constitute legal advice."
+    }
+  },
+  "forms": [
+    {
+      "id": "private-consultation",
+      "label": "Private consultation request",
+      "provider": "pagiverse-core",
+      "fields": [
+        {
+          "name": "fullName",
+          "type": "text",
+          "required": true,
+          "maxLength": 80,
+          "labels": {
+            "id": "Nama lengkap",
+            "en": "Full name"
+          }
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "maxLength": 120,
+          "labels": {
+            "id": "Email",
+            "en": "Email"
+          }
+        },
+        {
+          "name": "phone",
+          "type": "phone",
+          "required": true,
+          "maxLength": 24,
+          "labels": {
+            "id": "Nomor telepon",
+            "en": "Telephone number"
+          }
+        },
+        {
+          "name": "preferredContact",
+          "type": "select",
+          "required": true,
+          "labels": {
+            "id": "Cara menghubungi",
+            "en": "Preferred contact"
+          },
+          "options": [
+            {
+              "value": "email",
+              "labels": {
+                "id": "Email",
+                "en": "Email"
+              }
+            },
+            {
+              "value": "phone",
+              "labels": {
+                "id": "Telepon",
+                "en": "Telephone"
+              }
+            },
+            {
+              "value": "secure-call",
+              "labels": {
+                "id": "Panggilan aman",
+                "en": "Secure call"
+              }
+            }
+          ]
+        },
+        {
+          "name": "matterType",
+          "type": "select",
+          "required": true,
+          "labels": {
+            "id": "Jenis persoalan",
+            "en": "Matter type"
+          },
+          "options": [
+            {
+              "value": "civil",
+              "labels": {
+                "id": "Sengketa perdata privat",
+                "en": "Private civil dispute"
+              }
+            },
+            {
+              "value": "commercial",
+              "labels": {
+                "id": "Sengketa komersial",
+                "en": "Commercial dispute"
+              }
+            },
+            {
+              "value": "family-wealth",
+              "labels": {
+                "id": "Keluarga dan kekayaan",
+                "en": "Family and wealth"
+              }
+            },
+            {
+              "value": "reputation",
+              "labels": {
+                "id": "Reputasi dan privasi",
+                "en": "Reputation and privacy"
+              }
+            },
+            {
+              "value": "assets",
+              "labels": {
+                "id": "Aset dan kepemilikan",
+                "en": "Assets and ownership"
+              }
+            },
+            {
+              "value": "other",
+              "labels": {
+                "id": "Lainnya",
+                "en": "Other"
+              }
+            }
+          ]
+        },
+        {
+          "name": "opposingParties",
+          "type": "textarea",
+          "required": true,
+          "maxLength": 500,
+          "labels": {
+            "id": "Pihak lain yang terlibat",
+            "en": "Other parties involved"
+          }
+        },
+        {
+          "name": "urgency",
+          "type": "select",
+          "required": true,
+          "labels": {
+            "id": "Tingkat urgensi",
+            "en": "Urgency"
+          },
+          "options": [
+            {
+              "value": "immediate",
+              "labels": {
+                "id": "Tindakan diperlukan dalam 48 jam",
+                "en": "Action needed within 48 hours"
+              }
+            },
+            {
+              "value": "week",
+              "labels": {
+                "id": "Dalam tujuh hari",
+                "en": "Within seven days"
+              }
+            },
+            {
+              "value": "planning",
+              "labels": {
+                "id": "Perencanaan awal",
+                "en": "Early planning"
+              }
+            }
+          ]
+        },
+        {
+          "name": "summary",
+          "type": "textarea",
+          "required": true,
+          "maxLength": 1400,
+          "labels": {
+            "id": "Ringkasan persoalan",
+            "en": "Matter summary"
+          }
+        },
+        {
+          "name": "consent",
+          "type": "boolean",
+          "required": true,
+          "labels": {
+            "id": "Persetujuan",
+            "en": "Consent"
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "site",
+      "label": "Identitas, navigasi, dan SEO",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "business.name",
+        "business.tagline.id",
+        "business.tagline.en",
+        "business.description.id",
+        "business.description.en",
+        "business.logo",
+        "business.logoAlt.id",
+        "business.logoAlt.en",
+        "seo.title.id",
+        "seo.title.en",
+        "seo.description.id",
+        "seo.description.en",
+        "seo.ogImage",
+        "seo.ogImageAlt.id",
+        "seo.ogImageAlt.en",
+        "seo.pages.about.title.id",
+        "seo.pages.about.title.en",
+        "seo.pages.about.description.id",
+        "seo.pages.about.description.en",
+        "seo.pages.practices.title.id",
+        "seo.pages.practices.title.en",
+        "seo.pages.practices.description.id",
+        "seo.pages.practices.description.en",
+        "seo.pages.professionals.title.id",
+        "seo.pages.professionals.title.en",
+        "seo.pages.professionals.description.id",
+        "seo.pages.professionals.description.en",
+        "seo.pages.insights.title.id",
+        "seo.pages.insights.title.en",
+        "seo.pages.insights.description.id",
+        "seo.pages.insights.description.en",
+        "seo.pages.contact.title.id",
+        "seo.pages.contact.title.en",
+        "seo.pages.contact.description.id",
+        "seo.pages.contact.description.en",
+        "navigation.home.label.id",
+        "navigation.home.label.en",
+        "navigation.about.label.id",
+        "navigation.about.label.en",
+        "navigation.practices.label.id",
+        "navigation.practices.label.en",
+        "navigation.professionals.label.id",
+        "navigation.professionals.label.en",
+        "navigation.insights.label.id",
+        "navigation.insights.label.en",
+        "navigation.contact.label.id",
+        "navigation.contact.label.en"
+      ]
+    },
+    {
+      "id": "hero",
+      "label": "Hero semua halaman",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.home.eyebrow.id",
+        "sections.hero.home.eyebrow.en",
+        "sections.hero.home.heading.id",
+        "sections.hero.home.heading.en",
+        "sections.hero.home.description.id",
+        "sections.hero.home.description.en",
+        "sections.hero.home.image",
+        "sections.hero.home.imageAlt.id",
+        "sections.hero.home.imageAlt.en",
+        "sections.hero.home.primaryCta.id",
+        "sections.hero.home.primaryCta.en",
+        "sections.hero.home.secondaryCta.id",
+        "sections.hero.home.secondaryCta.en",
+        "sections.hero.about.eyebrow.id",
+        "sections.hero.about.eyebrow.en",
+        "sections.hero.about.heading.id",
+        "sections.hero.about.heading.en",
+        "sections.hero.about.description.id",
+        "sections.hero.about.description.en",
+        "sections.hero.about.image",
+        "sections.hero.about.imageAlt.id",
+        "sections.hero.about.imageAlt.en",
+        "sections.hero.practices.eyebrow.id",
+        "sections.hero.practices.eyebrow.en",
+        "sections.hero.practices.heading.id",
+        "sections.hero.practices.heading.en",
+        "sections.hero.practices.description.id",
+        "sections.hero.practices.description.en",
+        "sections.hero.practices.image",
+        "sections.hero.practices.imageAlt.id",
+        "sections.hero.practices.imageAlt.en",
+        "sections.hero.professionals.eyebrow.id",
+        "sections.hero.professionals.eyebrow.en",
+        "sections.hero.professionals.heading.id",
+        "sections.hero.professionals.heading.en",
+        "sections.hero.professionals.description.id",
+        "sections.hero.professionals.description.en",
+        "sections.hero.professionals.image",
+        "sections.hero.professionals.imageAlt.id",
+        "sections.hero.professionals.imageAlt.en",
+        "sections.hero.insights.eyebrow.id",
+        "sections.hero.insights.eyebrow.en",
+        "sections.hero.insights.heading.id",
+        "sections.hero.insights.heading.en",
+        "sections.hero.insights.description.id",
+        "sections.hero.insights.description.en",
+        "sections.hero.insights.image",
+        "sections.hero.insights.imageAlt.id",
+        "sections.hero.insights.imageAlt.en",
+        "sections.hero.contact.eyebrow.id",
+        "sections.hero.contact.eyebrow.en",
+        "sections.hero.contact.heading.id",
+        "sections.hero.contact.heading.en",
+        "sections.hero.contact.description.id",
+        "sections.hero.contact.description.en",
+        "sections.hero.contact.image",
+        "sections.hero.contact.imageAlt.id",
+        "sections.hero.contact.imageAlt.en"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Pendekatan dan prinsip",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.home.introHeading.id",
+        "sections.home.introHeading.en",
+        "sections.home.introBody.id",
+        "sections.home.introBody.en",
+        "sections.home.principles",
+        "sections.home.processHeading.id",
+        "sections.home.processHeading.en",
+        "sections.home.processBody.id",
+        "sections.home.processBody.en",
+        "sections.home.processItems",
+        "sections.home.quote.id",
+        "sections.home.quote.en",
+        "sections.home.quoteAttribution.id",
+        "sections.home.quoteAttribution.en",
+        "sections.about.approachHeading.id",
+        "sections.about.approachHeading.en",
+        "sections.about.approachBody.id",
+        "sections.about.approachBody.en",
+        "sections.about.principlesHeading.id",
+        "sections.about.principlesHeading.en",
+        "sections.about.principlesBody.id",
+        "sections.about.principlesBody.en",
+        "sections.about.principles",
+        "sections.about.confidentialityHeading.id",
+        "sections.about.confidentialityHeading.en",
+        "sections.about.confidentialityBody.id",
+        "sections.about.confidentialityBody.en"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Keahlian sengketa",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.heading.id",
+        "sections.services.heading.en",
+        "sections.services.description.id",
+        "sections.services.description.en",
+        "sections.services.items"
+      ]
+    },
+    {
+      "id": "team",
+      "label": "Profesional",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.team.heading.id",
+        "sections.team.heading.en",
+        "sections.team.description.id",
+        "sections.team.description.en",
+        "sections.team.demoLabel.id",
+        "sections.team.demoLabel.en",
+        "sections.team.demoNotice.id",
+        "sections.team.demoNotice.en",
+        "sections.team.items"
+      ]
+    },
+    {
+      "id": "insights",
+      "label": "Wawasan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.insights.heading.id",
+        "sections.insights.heading.en",
+        "sections.insights.description.id",
+        "sections.insights.description.en",
+        "sections.insights.demoLabel.id",
+        "sections.insights.demoLabel.en",
+        "sections.insights.demoNotice.id",
+        "sections.insights.demoNotice.en",
+        "sections.insights.items"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Konsultasi rahasia",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "contact.phone",
+        "contact.email",
+        "location.address",
+        "location.mapsUrl",
+        "social.linkedin",
+        "sections.contact.heading.id",
+        "sections.contact.heading.en",
+        "sections.contact.description.id",
+        "sections.contact.description.en",
+        "sections.contact.confidentialityHeading.id",
+        "sections.contact.confidentialityHeading.en",
+        "sections.contact.confidentialityNotice.id",
+        "sections.contact.confidentialityNotice.en",
+        "sections.contact.formHeading.id",
+        "sections.contact.formHeading.en",
+        "sections.contact.formDescription.id",
+        "sections.contact.formDescription.en",
+        "sections.contact.consent.id",
+        "sections.contact.consent.en",
+        "sections.contact.submitLabel.id",
+        "sections.contact.submitLabel.en"
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "Ajakan konsultasi",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.cta.heading.id",
+        "sections.cta.heading.en",
+        "sections.cta.body.id",
+        "sections.cta.body.en",
+        "sections.cta.buttonLabel.id",
+        "sections.cta.buttonLabel.en"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer dan penyangkalan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.footer.summary.id",
+        "sections.footer.summary.en",
+        "sections.footer.demoLabel.id",
+        "sections.footer.demoLabel.en",
+        "sections.footer.demoNotice.id",
+        "sections.footer.demoNotice.en",
+        "sections.footer.copyright.id",
+        "sections.footer.copyright.en",
+        "sections.footer.legal.id",
+        "sections.footer.legal.en"
+      ]
+    }
+  ]
+}
