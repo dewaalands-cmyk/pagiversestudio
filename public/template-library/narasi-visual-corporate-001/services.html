@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Dokumentasi konferensi, town hall, gala, brand activation, serta kebutuhan visual perusahaan."
+    />
+    <meta name="theme-color" content="#F4F6F8" />
+    <meta property="og:image" content="assets/images/hero-conference.webp" />
+    <link rel="icon" type="image/webp" href="thumbnail.webp" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Layanan Fotografi Perusahaan | Narasi Visual</title>
+  </head>
+  <body data-page="services">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand" href="index.html" aria-label="Narasi Visual, Beranda"
+          ><span class="brand-mark" aria-hidden="true">NV</span
+          ><img
+            class="brand-logo"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+            data-bind-src="business.logo"
+            data-bind-alt="business.logoAlt"
+            alt="Logo Narasi Visual"
+            hidden
+          /><span class="brand-word" data-bind="business.name"
+            >Narasi Visual</span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="Navigasi utama">
+          <a href="index.html" data-nav="home"
+            ><span data-bind="navigation.home.label">Beranda</span></a
+          ><a href="portfolio.html" data-nav="portfolio"
+            ><span data-bind="navigation.portfolio.label">Portofolio</span></a
+          ><a href="services.html" data-nav="services"
+            ><span data-bind="navigation.services.label">Layanan</span></a
+          ><a href="about.html" data-nav="about"
+            ><span data-bind="navigation.about.label">Tentang</span></a
+          ><a href="contact.html" data-nav="contact"
+            ><span data-bind="navigation.contact.label">Kontak</span></a
+          >
+        </nav>
+        <a
+          class="nav-cta"
+          href="contact.html"
+          data-bind="sections.hero.primaryCta.label"
+          >Minta Penawaran</a
+        ><button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+        >
+          Menu
+        </button>
+      </div>
+      <nav
+        class="mobile-navigation"
+        id="mobile-navigation"
+        data-navigation
+        aria-label="Navigasi seluler"
+      >
+        <a href="index.html"
+          ><span data-bind="navigation.home.label">Beranda</span></a
+        ><a href="portfolio.html"
+          ><span data-bind="navigation.portfolio.label">Portofolio</span></a
+        ><a href="services.html"
+          ><span data-bind="navigation.services.label">Layanan</span></a
+        ><a href="about.html"
+          ><span data-bind="navigation.about.label">Tentang</span></a
+        ><a href="contact.html"
+          ><span data-bind="navigation.contact.label">Kontak</span></a
+        >
+      </nav>
+    </header>
+
+    <main id="main">
+      <header class="page-hero shell" data-section="services">
+        <h1 data-bind="sections.services.heading" data-reveal>
+          Cakupan yang dirancang untuk kebutuhan perusahaan.
+        </h1>
+        <p data-bind="sections.services.description" data-reveal>
+          Setiap penugasan dimulai dari tujuan komunikasi, alur acara, dan
+          prioritas momen yang perlu diamankan.
+        </p>
+      </header>
+
+      <section class="service-page shell" data-section="services">
+        <div
+          class="service-list service-list-large"
+          data-collection="sections.services.items"
+          data-collection-view="services"
+        ></div>
+      </section>
+
+      <section class="process-section" data-section="process">
+        <div class="shell process-layout">
+          <div class="process-intro" data-reveal>
+            <h2 data-bind="sections.process.heading">
+              Alur kerja yang jelas sejak awal.
+            </h2>
+            <p data-bind="sections.process.description">
+              Koordinasi rapi membantu kami tetap responsif di lapangan dan
+              menjaga hasil akhir tetap konsisten.
+            </p>
+          </div>
+          <div
+            class="process-list"
+            data-collection="sections.process.items"
+            data-collection-view="process"
+          ></div>
+        </div>
+      </section>
+
+      <section class="faq-section shell" data-section="faq">
+        <h2 data-bind="sections.faq.heading" data-reveal>
+          Pertanyaan yang sering diajukan.
+        </h2>
+        <div
+          class="faq-list"
+          data-collection="sections.faq.items"
+          data-collection-view="faq"
+        ></div>
+      </section>
+
+      <section class="cta-section" data-section="cta">
+        <div class="shell cta-layout" data-reveal>
+          <div>
+            <h2 data-bind="sections.cta.heading">
+              Beri ruang bagi momen untuk bercerita.
+            </h2>
+            <p data-bind="sections.cta.body">
+              Mulai dari tujuan acara, lalu kami bantu merancang cakupan
+              dokumentasinya.
+            </p>
+          </div>
+          <div class="button-row cta-actions">
+            <a
+              class="button button-light"
+              href="contact.html"
+              data-bind="sections.cta.primaryCta.label"
+              >Minta Penawaran</a
+            ><a
+              class="text-link text-link-light"
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-whatsapp-link
+              data-bind="sections.cta.secondaryCta.label"
+              >Chat WhatsApp</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-section="footer">
+      <div class="shell footer-main">
+        <div class="footer-brand-block">
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">NV</span
+            ><span class="brand-word" data-bind="business.name"
+              >Narasi Visual</span
+            ></a
+          >
+          <span class="footer-tagline" data-bind="business.tagline"
+            >Dokumentasi yang menjaga nilai setiap momen.</span
+          >
+          <p data-bind="business.description">
+            Agency fotografi dokumentasi untuk perusahaan dan corporate event,
+            dengan pendekatan editorial yang tenang, tajam, dan siap publikasi.
+          </p>
+        </div>
+        <div class="footer-links">
+          <strong>Jelajahi</strong
+          ><a href="portfolio.html" data-bind="navigation.portfolio.label"
+            >Portofolio</a
+          ><a href="services.html" data-bind="navigation.services.label"
+            >Layanan</a
+          ><a href="about.html" data-bind="navigation.about.label">Tentang</a>
+        </div>
+        <div class="footer-links">
+          <strong>Kontak</strong
+          ><a
+            href="mailto:halo@narasivisual.id"
+            data-email-link
+            data-bind="contact.email"
+            >halo@narasivisual.id</a
+          ><a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-whatsapp-link
+            data-bind="sections.contact.whatsappLabel"
+            >Chat WhatsApp</a
+          >
+          <a href="tel:+622150889880" data-phone-link data-bind="contact.phone"
+            >+62 21 5088 9880</a
+          >
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-external-link="social.instagram"
+            >Instagram</a
+          >
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-external-link="social.linkedin"
+            >LinkedIn</a
+          >
+          <span data-bind="location.address">Jakarta Selatan, Indonesia</span>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span data-bind="sections.footer.copyright"
+          >© 2026 Narasi Visual. Hak cipta dilindungi.</span
+        ><span data-bind="sections.footer.demoNotice"
+          >Nama agency, klien, proyek, testimoni, alamat, nomor kontak, email,
+          dan seluruh foto dalam template ini adalah konten contoh yang mudah
+          diganti sebelum publikasi.</span
+        >
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

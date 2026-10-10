@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Kirim detail acara perusahaan Anda untuk mendapatkan rekomendasi cakupan dokumentasi dan penawaran."
+    />
+    <meta name="theme-color" content="#F4F6F8" />
+    <meta property="og:image" content="assets/images/hero-conference.webp" />
+    <link rel="icon" type="image/webp" href="thumbnail.webp" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Minta Penawaran | Narasi Visual</title>
+  </head>
+  <body data-page="contact">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="shell nav-shell">
+        <a class="brand" href="index.html" aria-label="Narasi Visual, Beranda"
+          ><span class="brand-mark" aria-hidden="true">NV</span
+          ><img
+            class="brand-logo"
+            src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw=="
+            data-bind-src="business.logo"
+            data-bind-alt="business.logoAlt"
+            alt="Logo Narasi Visual"
+            hidden
+          /><span class="brand-word" data-bind="business.name"
+            >Narasi Visual</span
+          ></a
+        >
+        <nav class="desktop-nav" aria-label="Navigasi utama">
+          <a href="index.html" data-nav="home"
+            ><span data-bind="navigation.home.label">Beranda</span></a
+          ><a href="portfolio.html" data-nav="portfolio"
+            ><span data-bind="navigation.portfolio.label">Portofolio</span></a
+          ><a href="services.html" data-nav="services"
+            ><span data-bind="navigation.services.label">Layanan</span></a
+          ><a href="about.html" data-nav="about"
+            ><span data-bind="navigation.about.label">Tentang</span></a
+          ><a href="contact.html" data-nav="contact"
+            ><span data-bind="navigation.contact.label">Kontak</span></a
+          >
+        </nav>
+        <a
+          class="nav-cta"
+          href="contact.html"
+          data-bind="sections.hero.primaryCta.label"
+          >Minta Penawaran</a
+        ><button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="mobile-navigation"
+        >
+          Menu
+        </button>
+      </div>
+      <nav
+        class="mobile-navigation"
+        id="mobile-navigation"
+        data-navigation
+        aria-label="Navigasi seluler"
+      >
+        <a href="index.html"
+          ><span data-bind="navigation.home.label">Beranda</span></a
+        ><a href="portfolio.html"
+          ><span data-bind="navigation.portfolio.label">Portofolio</span></a
+        ><a href="services.html"
+          ><span data-bind="navigation.services.label">Layanan</span></a
+        ><a href="about.html"
+          ><span data-bind="navigation.about.label">Tentang</span></a
+        ><a href="contact.html"
+          ><span data-bind="navigation.contact.label">Kontak</span></a
+        >
+      </nav>
+    </header>
+
+    <main id="main">
+      <header class="page-hero shell page-hero-contact" data-section="contact">
+        <h1 data-bind="sections.contact.heading" data-reveal>
+          Ceritakan acara yang sedang Anda siapkan.
+        </h1>
+        <p data-bind="sections.contact.description" data-reveal>
+          Kirim detail dasar acara. Kami akan membantu menyusun cakupan
+          dokumentasi yang paling relevan.
+        </p>
+      </header>
+
+      <section class="contact-section shell" data-section="contact">
+        <aside class="contact-details" data-reveal>
+          <p data-bind="sections.contact.responseNote">
+            Respons awal pada hari kerja.
+          </p>
+          <div class="contact-method">
+            <span>Email</span
+            ><a
+              href="mailto:halo@narasivisual.id"
+              data-email-link
+              data-bind="contact.email"
+              >halo@narasivisual.id</a
+            >
+          </div>
+          <div class="contact-method">
+            <span>WhatsApp</span
+            ><a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              data-whatsapp-link
+              data-bind="contact.whatsapp"
+              >+62 812 3456 7890</a
+            >
+          </div>
+          <div class="contact-method">
+            <span>Basis</span>
+            <p data-bind="location.address">Jakarta Selatan, Indonesia</p>
+          </div>
+          <a
+            class="button button-primary"
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-whatsapp-link
+            data-bind="sections.contact.whatsappLabel"
+            >Chat WhatsApp</a
+          >
+        </aside>
+
+        <form class="quote-form" data-pagiverse-form="quote-request" novalidate>
+          <div class="form-intro">
+            <h2 data-bind="sections.contact.formHeading">
+              Permintaan penawaran
+            </h2>
+            <p data-bind="sections.contact.formDescription">
+              Isi informasi berikut agar kami dapat menyiapkan rekomendasi awal.
+            </p>
+          </div>
+          <div class="form-grid">
+            <div class="field">
+              <label for="name">Nama lengkap</label
+              ><input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                maxlength="80"
+                required
+              /><small id="name-error" class="field-error"></small>
+            </div>
+            <div class="field">
+              <label for="company">Perusahaan</label
+              ><input
+                id="company"
+                name="company"
+                type="text"
+                autocomplete="organization"
+                maxlength="100"
+                required
+              /><small id="company-error" class="field-error"></small>
+            </div>
+            <div class="field">
+              <label for="email">Email</label
+              ><input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                maxlength="120"
+                required
+              /><small id="email-error" class="field-error"></small>
+            </div>
+            <div class="field">
+              <label for="phone">Nomor WhatsApp</label
+              ><input
+                id="phone"
+                name="phone"
+                type="tel"
+                autocomplete="tel"
+                maxlength="24"
+                required
+              /><small id="phone-error" class="field-error"></small>
+            </div>
+            <div class="field">
+              <label for="eventType">Jenis acara</label
+              ><select id="eventType" name="eventType" required>
+                <option value="">Pilih jenis acara</option>
+                <option value="corporate-event">Corporate event</option>
+                <option value="conference">Konferensi atau seminar</option>
+                <option value="town-hall">Town hall</option>
+                <option value="awards-gala">Awards atau gala</option>
+                <option value="brand-activation">Brand activation</option>
+                <option value="company-profile">Profil perusahaan</option>
+                <option value="other">Lainnya</option></select
+              ><small id="eventType-error" class="field-error"></small>
+            </div>
+            <div class="field">
+              <label for="eventDate">Tanggal acara</label
+              ><input
+                id="eventDate"
+                name="eventDate"
+                type="date"
+                required
+              /><small id="eventDate-error" class="field-error"></small>
+            </div>
+            <div class="field">
+              <label for="location">Lokasi acara</label
+              ><input
+                id="location"
+                name="location"
+                type="text"
+                maxlength="120"
+                required
+              /><small id="location-error" class="field-error"></small>
+            </div>
+            <div class="field">
+              <label for="duration">Durasi</label
+              ><select id="duration" name="duration" required>
+                <option value="">Pilih durasi</option>
+                <option value="half-day">Setengah hari</option>
+                <option value="full-day">Satu hari</option>
+                <option value="multi-day">Lebih dari satu hari</option></select
+              ><small id="duration-error" class="field-error"></small>
+            </div>
+            <div class="field field-full">
+              <label for="message">Detail kebutuhan</label
+              ><textarea
+                id="message"
+                name="message"
+                rows="6"
+                maxlength="900"
+                required
+              ></textarea
+              ><small class="field-helper"
+                >Ceritakan agenda utama, jumlah peserta, dan kebutuhan
+                khusus.</small
+              ><small id="message-error" class="field-error"></small>
+            </div>
+          </div>
+          <button
+            class="button button-primary"
+            type="submit"
+            data-bind="sections.contact.submitLabel"
+          >
+            Kirim Permintaan
+          </button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-section="footer">
+      <div class="shell footer-main">
+        <div class="footer-brand-block">
+          <a class="brand footer-brand" href="index.html"
+            ><span class="brand-mark" aria-hidden="true">NV</span
+            ><span class="brand-word" data-bind="business.name"
+              >Narasi Visual</span
+            ></a
+          >
+          <span class="footer-tagline" data-bind="business.tagline"
+            >Dokumentasi yang menjaga nilai setiap momen.</span
+          >
+          <p data-bind="business.description">
+            Agency fotografi dokumentasi untuk perusahaan dan corporate event,
+            dengan pendekatan editorial yang tenang, tajam, dan siap publikasi.
+          </p>
+        </div>
+        <div class="footer-links">
+          <strong>Jelajahi</strong
+          ><a href="portfolio.html" data-bind="navigation.portfolio.label"
+            >Portofolio</a
+          ><a href="services.html" data-bind="navigation.services.label"
+            >Layanan</a
+          ><a href="about.html" data-bind="navigation.about.label">Tentang</a>
+        </div>
+        <div class="footer-links">
+          <strong>Kontak</strong
+          ><a
+            href="mailto:halo@narasivisual.id"
+            data-email-link
+            data-bind="contact.email"
+            >halo@narasivisual.id</a
+          ><a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-whatsapp-link
+            data-bind="sections.contact.whatsappLabel"
+            >Chat WhatsApp</a
+          >
+          <a href="tel:+622150889880" data-phone-link data-bind="contact.phone"
+            >+62 21 5088 9880</a
+          >
+          <a
+            href="https://www.instagram.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-external-link="social.instagram"
+            >Instagram</a
+          >
+          <a
+            href="https://www.linkedin.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-external-link="social.linkedin"
+            >LinkedIn</a
+          >
+          <span data-bind="location.address">Jakarta Selatan, Indonesia</span>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span data-bind="sections.footer.copyright"
+          >© 2026 Narasi Visual. Hak cipta dilindungi.</span
+        ><span data-bind="sections.footer.demoNotice"
+          >Nama agency, klien, proyek, testimoni, alamat, nomor kontak, email,
+          dan seluruh foto dalam template ini adalah konten contoh yang mudah
+          diganti sebelum publikasi.</span
+        >
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

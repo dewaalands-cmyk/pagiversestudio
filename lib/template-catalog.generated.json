@@ -5494,6 +5494,1280 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "narasi-visual-corporate-001",
+      "name": "Narasi Visual",
+      "category": "services",
+      "description": "Template agency fotografi dokumentasi perusahaan dan corporate event dengan gaya bright editorial premium",
+      "price": 1369500,
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html",
+          "seo": {
+            "titleField": "seo.title",
+            "descriptionField": "seo.description"
+          }
+        },
+        {
+          "id": "portfolio",
+          "path": "/portfolio",
+          "entry": "portfolio.html",
+          "seo": {
+            "titleField": "seo.pages.portfolio.title",
+            "descriptionField": "seo.pages.portfolio.description"
+          }
+        },
+        {
+          "id": "services",
+          "path": "/services",
+          "entry": "services.html",
+          "seo": {
+            "titleField": "seo.pages.services.title",
+            "descriptionField": "seo.pages.services.description"
+          }
+        },
+        {
+          "id": "about",
+          "path": "/about",
+          "entry": "about.html",
+          "seo": {
+            "titleField": "seo.pages.about.title",
+            "descriptionField": "seo.pages.about.description"
+          }
+        },
+        {
+          "id": "contact",
+          "path": "/contact",
+          "entry": "contact.html",
+          "seo": {
+            "titleField": "seo.pages.contact.title",
+            "descriptionField": "seo.pages.contact.description"
+          }
+        }
+      ],
+      "dependencies": [],
+      "languages": {
+        "supported": [
+          "id"
+        ],
+        "default": "id"
+      },
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "light",
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#15171C"
+          },
+          "secondary": {
+            "editable": false,
+            "default": "#5D6470"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#234FCB"
+          },
+          "background": {
+            "editable": false,
+            "default": "#F4F6F8"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#FCFCFD"
+          },
+          "text": {
+            "editable": false,
+            "default": "#17191E"
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "home",
+            "labelField": "navigation.home.label",
+            "target": "index.html",
+            "hideable": false
+          },
+          {
+            "id": "portfolio",
+            "labelField": "navigation.portfolio.label",
+            "target": "portfolio.html",
+            "hideable": false
+          },
+          {
+            "id": "services",
+            "labelField": "navigation.services.label",
+            "target": "services.html",
+            "hideable": false
+          },
+          {
+            "id": "about",
+            "labelField": "navigation.about.label",
+            "target": "about.html",
+            "hideable": false
+          },
+          {
+            "id": "contact",
+            "labelField": "navigation.contact.label",
+            "target": "contact.html",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama agency",
+          "required": true,
+          "maxLength": 60,
+          "default": "Narasi Visual"
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Tagline",
+          "required": true,
+          "maxLength": 80,
+          "default": "Dokumentasi yang menjaga nilai setiap momen."
+        },
+        "business.description": {
+          "type": "textarea",
+          "label": "Deskripsi agency",
+          "required": true,
+          "maxLength": 280,
+          "default": "Agency fotografi dokumentasi untuk perusahaan dan corporate event, dengan pendekatan editorial yang tenang, tajam, dan siap publikasi."
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo",
+          "required": false,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": false
+        },
+        "business.logoAlt": {
+          "type": "text",
+          "label": "Alt logo",
+          "maxLength": 100,
+          "default": "Logo Narasi Visual"
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "WhatsApp",
+          "required": true,
+          "default": "+6281234567890"
+        },
+        "contact.phone": {
+          "type": "phone",
+          "label": "Telepon",
+          "default": "+622150889880"
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Email",
+          "required": true,
+          "maxLength": 120,
+          "default": "halo@narasivisual.id"
+        },
+        "contact.whatsappMessage": {
+          "type": "textarea",
+          "label": "Pesan WhatsApp",
+          "maxLength": 220,
+          "default": "Halo Narasi Visual, saya ingin membahas kebutuhan dokumentasi untuk acara perusahaan kami."
+        },
+        "location.address": {
+          "type": "textarea",
+          "label": "Alamat",
+          "maxLength": 180,
+          "default": "Jakarta Selatan, Indonesia"
+        },
+        "social.instagram": {
+          "type": "url",
+          "label": "Instagram",
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "https://www.instagram.com/"
+        },
+        "social.linkedin": {
+          "type": "url",
+          "label": "LinkedIn",
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "https://www.linkedin.com/"
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul SEO Beranda",
+          "required": true,
+          "maxLength": 64,
+          "default": "Narasi Visual | Fotografi Corporate Event"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Beranda",
+          "required": true,
+          "maxLength": 160,
+          "default": "Fotografi dokumentasi perusahaan dan corporate event dengan pendekatan editorial yang bersih, modern, dan siap publikasi."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar sosial",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-conference.webp",
+            "alt": "Pembicara perempuan di konferensi perusahaan",
+            "focalPoint": {
+              "x": 70,
+              "y": 48
+            }
+          }
+        },
+        "seo.pages.portfolio.title": {
+          "type": "text",
+          "label": "Judul SEO Portofolio",
+          "required": true,
+          "maxLength": 64,
+          "default": "Portofolio Corporate Event | Narasi Visual"
+        },
+        "seo.pages.portfolio.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Portofolio",
+          "required": true,
+          "maxLength": 160,
+          "default": "Pilihan dokumentasi konferensi, town hall, gala, networking, dan kegiatan perusahaan dari Narasi Visual."
+        },
+        "seo.pages.services.title": {
+          "type": "text",
+          "label": "Judul SEO Layanan",
+          "required": true,
+          "maxLength": 64,
+          "default": "Layanan Fotografi Perusahaan | Narasi Visual"
+        },
+        "seo.pages.services.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Layanan",
+          "required": true,
+          "maxLength": 160,
+          "default": "Dokumentasi konferensi, town hall, gala, brand activation, serta kebutuhan visual perusahaan."
+        },
+        "seo.pages.about.title": {
+          "type": "text",
+          "label": "Judul SEO Tentang",
+          "required": true,
+          "maxLength": 64,
+          "default": "Tentang Narasi Visual | Fotografi Dokumenter"
+        },
+        "seo.pages.about.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Tentang",
+          "required": true,
+          "maxLength": 160,
+          "default": "Kenali pendekatan dokumenter Narasi Visual untuk menghasilkan foto corporate event yang natural dan konsisten."
+        },
+        "seo.pages.contact.title": {
+          "type": "text",
+          "label": "Judul SEO Kontak",
+          "required": true,
+          "maxLength": 64,
+          "default": "Minta Penawaran | Narasi Visual"
+        },
+        "seo.pages.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Kontak",
+          "required": true,
+          "maxLength": 160,
+          "default": "Kirim detail acara perusahaan Anda untuk mendapatkan rekomendasi cakupan dokumentasi dan penawaran."
+        },
+        "navigation.home.label": {
+          "type": "text",
+          "label": "Navigasi Beranda",
+          "maxLength": 18,
+          "default": "Beranda"
+        },
+        "navigation.portfolio.label": {
+          "type": "text",
+          "label": "Navigasi Portofolio",
+          "maxLength": 18,
+          "default": "Portofolio"
+        },
+        "navigation.services.label": {
+          "type": "text",
+          "label": "Navigasi Layanan",
+          "maxLength": 18,
+          "default": "Layanan"
+        },
+        "navigation.about.label": {
+          "type": "text",
+          "label": "Navigasi Tentang",
+          "maxLength": 18,
+          "default": "Tentang"
+        },
+        "navigation.contact.label": {
+          "type": "text",
+          "label": "Navigasi Kontak",
+          "maxLength": 18,
+          "default": "Kontak"
+        },
+        "sections.hero.eyebrow": {
+          "type": "text",
+          "label": "Label hero",
+          "maxLength": 48,
+          "default": "Fotografi dokumentasi perusahaan"
+        },
+        "sections.hero.heading": {
+          "type": "text",
+          "label": "Judul hero",
+          "required": true,
+          "maxLength": 72,
+          "default": "Momen penting, direkam dengan tepat."
+        },
+        "sections.hero.description": {
+          "type": "textarea",
+          "label": "Deskripsi hero",
+          "required": true,
+          "maxLength": 150,
+          "default": "Dokumentasi corporate event yang natural, konsisten, dan siap memperkuat komunikasi perusahaan."
+        },
+        "sections.hero.primaryCta.label": {
+          "type": "text",
+          "label": "CTA utama hero",
+          "maxLength": 24,
+          "default": "Minta Penawaran"
+        },
+        "sections.hero.secondaryCta.label": {
+          "type": "text",
+          "label": "CTA kedua hero",
+          "maxLength": 24,
+          "default": "Lihat Portofolio"
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "Gambar hero",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "16:10",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-conference.webp",
+            "alt": "Pembicara perempuan di hadapan peserta konferensi perusahaan",
+            "focalPoint": {
+              "x": 72,
+              "y": 48
+            }
+          }
+        },
+        "sections.hero.imageAlt": {
+          "type": "text",
+          "label": "Alt gambar hero",
+          "required": true,
+          "maxLength": 140,
+          "default": "Pembicara perempuan di hadapan peserta konferensi perusahaan"
+        },
+        "sections.intro.heading": {
+          "type": "text",
+          "label": "Judul pengantar",
+          "required": true,
+          "maxLength": 72,
+          "default": "Foto yang bekerja lebih lama dari acaranya."
+        },
+        "sections.intro.body": {
+          "type": "textarea",
+          "label": "Isi pengantar",
+          "required": true,
+          "maxLength": 300,
+          "default": "Kami menggabungkan insting dokumenter dengan standar produksi korporat. Hasilnya terasa jujur saat dilihat, rapi saat dipublikasikan, dan relevan untuk komunikasi jangka panjang."
+        },
+        "sections.gallery.previewHeading": {
+          "type": "text",
+          "label": "Judul preview portofolio",
+          "required": true,
+          "maxLength": 64,
+          "default": "Pilihan dokumentasi"
+        },
+        "sections.gallery.previewDescription": {
+          "type": "textarea",
+          "label": "Deskripsi preview portofolio",
+          "maxLength": 180,
+          "default": "Dari panggung utama sampai percakapan kecil yang menentukan suasana."
+        },
+        "sections.gallery.pageHeading": {
+          "type": "text",
+          "label": "Judul halaman portofolio",
+          "required": true,
+          "maxLength": 72,
+          "default": "Cerita perusahaan dalam gambar."
+        },
+        "sections.gallery.pageDescription": {
+          "type": "textarea",
+          "label": "Deskripsi halaman portofolio",
+          "required": true,
+          "maxLength": 220,
+          "default": "Kumpulan contoh dokumentasi untuk konferensi, town hall, gala, networking, brand activation, dan kebutuhan profil perusahaan."
+        },
+        "sections.gallery.filterAllLabel": {
+          "type": "text",
+          "label": "Label semua kategori",
+          "maxLength": 18,
+          "default": "Semua"
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Portofolio",
+          "minItems": 6,
+          "maxItems": 18,
+          "default": [
+            {
+              "title": "Leadership Forum",
+              "category": "Konferensi",
+              "client": "Arunika Group",
+              "location": "Jakarta",
+              "summary": "Dokumentasi panggung, audiens, dan interaksi utama dalam forum kepemimpinan tahunan.",
+              "image": {
+                "src": "assets/images/hero-conference.webp",
+                "alt": "Pembicara perempuan di konferensi perusahaan",
+                "focalPoint": {
+                  "x": 72,
+                  "y": 48
+                }
+              },
+              "imageAlt": "Pembicara perempuan di konferensi perusahaan"
+            },
+            {
+              "title": "Strategy Summit",
+              "category": "Town Hall",
+              "client": "Cakrawala Industri",
+              "location": "Jakarta",
+              "summary": "Pertemuan eksekutif yang direkam dengan pendekatan tenang dan tidak mengganggu jalannya diskusi.",
+              "image": {
+                "src": "assets/images/boardroom-summit.webp",
+                "alt": "Eksekutif mempresentasikan strategi dalam ruang rapat",
+                "focalPoint": {
+                  "x": 42,
+                  "y": 46
+                }
+              },
+              "imageAlt": "Eksekutif mempresentasikan strategi dalam ruang rapat"
+            },
+            {
+              "title": "Future Technology Keynote",
+              "category": "Konferensi",
+              "client": "Lentera Digital",
+              "location": "Tangerang",
+              "summary": "Visual panggung dan skala acara untuk materi media, laporan, serta komunikasi internal.",
+              "image": {
+                "src": "assets/images/keynote-stage.webp",
+                "alt": "Pembicara berjalan di panggung konferensi teknologi",
+                "focalPoint": {
+                  "x": 38,
+                  "y": 46
+                }
+              },
+              "imageAlt": "Pembicara berjalan di panggung konferensi teknologi"
+            },
+            {
+              "title": "Partner Reception",
+              "category": "Networking",
+              "client": "Mitra Adikara",
+              "location": "Jakarta",
+              "summary": "Interaksi spontan dan atmosfer relasi bisnis dalam resepsi siang yang terang.",
+              "image": {
+                "src": "assets/images/networking-reception.webp",
+                "alt": "Profesional berbincang dalam acara networking perusahaan",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 44
+                }
+              },
+              "imageAlt": "Profesional berbincang dalam acara networking perusahaan"
+            },
+            {
+              "title": "Excellence Awards",
+              "category": "Awards & Gala",
+              "client": "Nusantara Finansial",
+              "location": "Jakarta",
+              "summary": "Momen penghargaan, respons audiens, dan detail produksi dalam satu alur visual yang utuh.",
+              "image": {
+                "src": "assets/images/awards-gala.webp",
+                "alt": "Penerima penghargaan menerima trofi di panggung",
+                "focalPoint": {
+                  "x": 52,
+                  "y": 43
+                }
+              },
+              "imageAlt": "Penerima penghargaan menerima trofi di panggung"
+            },
+            {
+              "title": "Behind the Conference",
+              "category": "Profil Perusahaan",
+              "client": "Narasi Visual",
+              "location": "Jakarta",
+              "summary": "Dokumentasi di balik layar yang menunjukkan ketelitian tim dalam bekerja di tengah acara.",
+              "image": {
+                "src": "assets/images/photographer-at-work.webp",
+                "alt": "Fotografer perempuan bekerja di konferensi perusahaan",
+                "focalPoint": {
+                  "x": 36,
+                  "y": 48
+                }
+              },
+              "imageAlt": "Fotografer perempuan bekerja di konferensi perusahaan"
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "label": "Judul proyek",
+                "required": true,
+                "maxLength": 70
+              },
+              "category": {
+                "type": "text",
+                "label": "Kategori",
+                "required": true,
+                "maxLength": 40
+              },
+              "client": {
+                "type": "text",
+                "label": "Klien",
+                "required": true,
+                "maxLength": 60
+              },
+              "location": {
+                "type": "text",
+                "label": "Lokasi",
+                "maxLength": 60
+              },
+              "summary": {
+                "type": "textarea",
+                "label": "Ringkasan",
+                "maxLength": 220
+              },
+              "image": {
+                "type": "image",
+                "label": "Foto proyek",
+                "required": true,
+                "accept": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true
+              },
+              "imageAlt": {
+                "type": "text",
+                "label": "Alt foto",
+                "required": true,
+                "maxLength": 140
+              }
+            }
+          }
+        },
+        "sections.services.heading": {
+          "type": "text",
+          "label": "Judul layanan",
+          "required": true,
+          "maxLength": 72,
+          "default": "Cakupan yang dirancang untuk kebutuhan perusahaan."
+        },
+        "sections.services.description": {
+          "type": "textarea",
+          "label": "Deskripsi layanan",
+          "maxLength": 220,
+          "default": "Setiap penugasan dimulai dari tujuan komunikasi, alur acara, dan prioritas momen yang perlu diamankan."
+        },
+        "sections.services.items": {
+          "type": "array",
+          "label": "Daftar layanan",
+          "minItems": 3,
+          "maxItems": 6,
+          "default": [
+            {
+              "name": "Konferensi & Seminar",
+              "description": "Dokumentasi pembicara, audiens, sesi paralel, dan detail produksi untuk kebutuhan publikasi menyeluruh.",
+              "deliverable": "Liputan foto terkurasi"
+            },
+            {
+              "name": "Town Hall & Leadership",
+              "description": "Perekaman komunikasi pimpinan dan respons karyawan dengan kehadiran fotografer yang tetap tidak mengganggu.",
+              "deliverable": "Momen utama dan interaksi"
+            },
+            {
+              "name": "Awards & Corporate Gala",
+              "description": "Cakupan panggung, penerima penghargaan, tamu, dan atmosfer acara dengan konsistensi visual dari awal hingga akhir.",
+              "deliverable": "Dokumentasi acara lengkap"
+            },
+            {
+              "name": "Brand Activation",
+              "description": "Visual yang menangkap pengalaman pengunjung, interaksi brand, serta materi pendukung untuk kampanye setelah acara.",
+              "deliverable": "Aset editorial dan kampanye"
+            }
+          ],
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "label": "Nama layanan",
+                "required": true,
+                "maxLength": 64
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi",
+                "required": true,
+                "maxLength": 240
+              },
+              "deliverable": {
+                "type": "text",
+                "label": "Hasil utama",
+                "maxLength": 80
+              }
+            }
+          }
+        },
+        "sections.process.heading": {
+          "type": "text",
+          "label": "Judul proses",
+          "maxLength": 64,
+          "default": "Alur kerja yang jelas sejak awal."
+        },
+        "sections.process.description": {
+          "type": "textarea",
+          "label": "Deskripsi proses",
+          "maxLength": 200,
+          "default": "Koordinasi rapi membantu kami tetap responsif di lapangan dan menjaga hasil akhir tetap konsisten."
+        },
+        "sections.process.items": {
+          "type": "array",
+          "label": "Tahapan kerja",
+          "minItems": 3,
+          "maxItems": 5,
+          "default": [
+            {
+              "title": "Pemetaan kebutuhan",
+              "description": "Kami mempelajari rundown, tujuan komunikasi, kanal publikasi, dan momen prioritas."
+            },
+            {
+              "title": "Rencana liputan",
+              "description": "Tim menyusun cakupan area, koordinasi akses, dan pembagian fokus sebelum hari acara."
+            },
+            {
+              "title": "Dokumentasi acara",
+              "description": "Kami bekerja tenang, adaptif, dan dekat dengan ritme acara tanpa mengganggu peserta."
+            },
+            {
+              "title": "Kurasi & penyerahan",
+              "description": "Foto dipilih, disunting konsisten, lalu diserahkan dalam format yang siap digunakan."
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "required": true,
+                "maxLength": 60
+              },
+              "description": {
+                "type": "textarea",
+                "required": true,
+                "maxLength": 200
+              }
+            }
+          }
+        },
+        "sections.about.pageHeading": {
+          "type": "text",
+          "label": "Judul halaman tentang",
+          "required": true,
+          "maxLength": 72,
+          "default": "Hadir tanpa mengambil alih suasana."
+        },
+        "sections.about.pageDescription": {
+          "type": "textarea",
+          "label": "Deskripsi halaman tentang",
+          "required": true,
+          "maxLength": 220,
+          "default": "Kami percaya dokumentasi terbaik lahir dari perhatian, antisipasi, dan pemahaman terhadap konteks bisnis di balik sebuah acara."
+        },
+        "sections.about.storyHeading": {
+          "type": "text",
+          "label": "Judul cerita",
+          "maxLength": 64,
+          "default": "Pendekatan dokumenter, standar korporat."
+        },
+        "sections.about.storyBody": {
+          "type": "textarea",
+          "label": "Cerita agency",
+          "maxLength": 520,
+          "default": "Narasi Visual dibangun untuk perusahaan yang membutuhkan lebih dari sekadar kumpulan foto acara. Kami memetakan alur, membaca dinamika ruang, dan mengantisipasi momen agar setiap hasil dapat berfungsi sebagai arsip, materi komunikasi, dan representasi brand."
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "Foto tentang",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/photographer-at-work.webp",
+            "alt": "Fotografer Narasi Visual bekerja di konferensi",
+            "focalPoint": {
+              "x": 36,
+              "y": 48
+            }
+          }
+        },
+        "sections.about.imageAlt": {
+          "type": "text",
+          "label": "Alt foto tentang",
+          "required": true,
+          "maxLength": 140,
+          "default": "Fotografer Narasi Visual bekerja di konferensi"
+        },
+        "sections.values.heading": {
+          "type": "text",
+          "label": "Judul nilai kerja",
+          "maxLength": 60,
+          "default": "Cara kami menjaga kualitas."
+        },
+        "sections.values.items": {
+          "type": "array",
+          "label": "Nilai kerja",
+          "minItems": 3,
+          "maxItems": 6,
+          "default": [
+            {
+              "title": "Peka terhadap momen",
+              "description": "Kami membaca gestur, relasi, dan perubahan suasana sebelum momen penting benar-benar terjadi."
+            },
+            {
+              "title": "Rapi dalam koordinasi",
+              "description": "Rundown, akses, PIC, dan prioritas visual disepakati agar liputan berjalan efisien."
+            },
+            {
+              "title": "Konsisten dalam hasil",
+              "description": "Seleksi dan penyuntingan menjaga warna, ritme, dan kualitas tetap utuh dalam satu rangkaian."
+            },
+            {
+              "title": "Siap untuk publikasi",
+              "description": "File akhir disusun agar mudah digunakan oleh tim komunikasi, media, dan internal perusahaan."
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "required": true,
+                "maxLength": 60
+              },
+              "description": {
+                "type": "textarea",
+                "required": true,
+                "maxLength": 200
+              }
+            }
+          }
+        },
+        "sections.sectors.heading": {
+          "type": "text",
+          "label": "Judul sektor",
+          "maxLength": 60,
+          "default": "Terbiasa bekerja lintas sektor."
+        },
+        "sections.sectors.items": {
+          "type": "array",
+          "label": "Sektor",
+          "minItems": 4,
+          "maxItems": 10,
+          "default": [
+            "Teknologi",
+            "Jasa Keuangan",
+            "Manufaktur",
+            "Professional Services",
+            "Consumer Brand"
+          ],
+          "item": {
+            "fields": {
+              "value": {
+                "type": "text",
+                "maxLength": 50
+              }
+            }
+          }
+        },
+        "sections.testimonials.heading": {
+          "type": "text",
+          "label": "Judul testimoni",
+          "maxLength": 60,
+          "default": "Dipercaya untuk momen yang tidak terulang."
+        },
+        "sections.testimonials.items": {
+          "type": "array",
+          "label": "Testimoni",
+          "minItems": 2,
+          "maxItems": 6,
+          "default": [
+            {
+              "quote": "Tim Narasi Visual memahami ritme acara kami. Hasilnya terasa natural dan langsung siap digunakan oleh tim komunikasi.",
+              "name": "Dinda Maheswari",
+              "role": "Corporate Communications Lead",
+              "company": "Arunika Group"
+            },
+            {
+              "quote": "Koordinasinya tenang, cakupannya lengkap, dan momen penting yang kami prioritaskan semuanya tertangkap dengan baik.",
+              "name": "Rafi Pranoto",
+              "role": "Event & Brand Manager",
+              "company": "Lentera Digital"
+            }
+          ],
+          "item": {
+            "fields": {
+              "quote": {
+                "type": "textarea",
+                "required": true,
+                "maxLength": 220
+              },
+              "name": {
+                "type": "text",
+                "required": true,
+                "maxLength": 60
+              },
+              "role": {
+                "type": "text",
+                "maxLength": 80
+              },
+              "company": {
+                "type": "text",
+                "maxLength": 80
+              }
+            }
+          }
+        },
+        "sections.faq.heading": {
+          "type": "text",
+          "label": "Judul FAQ",
+          "maxLength": 60,
+          "default": "Pertanyaan yang sering diajukan."
+        },
+        "sections.faq.items": {
+          "type": "array",
+          "label": "FAQ",
+          "minItems": 3,
+          "maxItems": 8,
+          "default": [
+            {
+              "question": "Area kerja Narasi Visual di mana?",
+              "answer": "Basis kami di Jakarta dan tersedia untuk penugasan di berbagai kota sesuai kebutuhan proyek."
+            },
+            {
+              "question": "Berapa lama proses penyerahan foto?",
+              "answer": "Waktu penyerahan disepakati berdasarkan skala acara, jumlah fotografer, dan kebutuhan prioritas publikasi."
+            },
+            {
+              "question": "Apakah tersedia foto pilihan pada hari acara?",
+              "answer": "Tersedia opsi same-day selects untuk kebutuhan media sosial atau siaran pers yang perlu tayang segera."
+            },
+            {
+              "question": "Apakah bisa menyesuaikan guideline brand?",
+              "answer": "Bisa. Kami mempelajari referensi visual dan kebutuhan kanal agar hasil konsisten dengan identitas perusahaan."
+            }
+          ],
+          "item": {
+            "fields": {
+              "question": {
+                "type": "text",
+                "required": true,
+                "maxLength": 110
+              },
+              "answer": {
+                "type": "textarea",
+                "required": true,
+                "maxLength": 260
+              }
+            }
+          }
+        },
+        "sections.contact.heading": {
+          "type": "text",
+          "label": "Judul kontak",
+          "required": true,
+          "maxLength": 72,
+          "default": "Ceritakan acara yang sedang Anda siapkan."
+        },
+        "sections.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi kontak",
+          "maxLength": 220,
+          "default": "Kirim detail dasar acara. Kami akan membantu menyusun cakupan dokumentasi yang paling relevan."
+        },
+        "sections.contact.formHeading": {
+          "type": "text",
+          "label": "Judul formulir",
+          "maxLength": 60,
+          "default": "Permintaan penawaran"
+        },
+        "sections.contact.formDescription": {
+          "type": "textarea",
+          "label": "Deskripsi formulir",
+          "maxLength": 180,
+          "default": "Isi informasi berikut agar kami dapat menyiapkan rekomendasi awal."
+        },
+        "sections.contact.submitLabel": {
+          "type": "text",
+          "label": "Label tombol formulir",
+          "maxLength": 24,
+          "default": "Kirim Permintaan"
+        },
+        "sections.contact.responseNote": {
+          "type": "text",
+          "label": "Catatan respons",
+          "maxLength": 120,
+          "default": "Respons awal pada hari kerja."
+        },
+        "sections.contact.whatsappLabel": {
+          "type": "text",
+          "label": "Label WhatsApp",
+          "maxLength": 24,
+          "default": "Chat WhatsApp"
+        },
+        "sections.cta.heading": {
+          "type": "text",
+          "label": "Judul CTA",
+          "required": true,
+          "maxLength": 72,
+          "default": "Beri ruang bagi momen untuk bercerita."
+        },
+        "sections.cta.body": {
+          "type": "textarea",
+          "label": "Isi CTA",
+          "maxLength": 180,
+          "default": "Mulai dari tujuan acara, lalu kami bantu merancang cakupan dokumentasinya."
+        },
+        "sections.cta.primaryCta.label": {
+          "type": "text",
+          "label": "CTA utama",
+          "maxLength": 24,
+          "default": "Minta Penawaran"
+        },
+        "sections.cta.secondaryCta.label": {
+          "type": "text",
+          "label": "CTA WhatsApp",
+          "maxLength": 24,
+          "default": "Chat WhatsApp"
+        },
+        "sections.footer.copyright": {
+          "type": "text",
+          "label": "Hak cipta",
+          "maxLength": 120,
+          "default": "© 2026 Narasi Visual. Hak cipta dilindungi."
+        },
+        "sections.footer.demoNotice": {
+          "type": "textarea",
+          "label": "Pemberitahuan data contoh",
+          "required": true,
+          "maxLength": 280,
+          "default": "Nama agency, klien, proyek, testimoni, alamat, nomor kontak, email, dan seluruh foto dalam template ini adalah konten contoh yang mudah diganti sebelum publikasi."
+        }
+      },
+      "forms": [
+        {
+          "id": "quote-request",
+          "label": "Permintaan penawaran",
+          "provider": "pagiverse-core",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "required": true,
+              "maxLength": 80,
+              "label": "Nama lengkap"
+            },
+            {
+              "name": "company",
+              "type": "text",
+              "required": true,
+              "maxLength": 100,
+              "label": "Perusahaan"
+            },
+            {
+              "name": "email",
+              "type": "email",
+              "required": true,
+              "maxLength": 120,
+              "label": "Email"
+            },
+            {
+              "name": "phone",
+              "type": "phone",
+              "required": true,
+              "maxLength": 24,
+              "label": "Nomor WhatsApp"
+            },
+            {
+              "name": "eventType",
+              "type": "select",
+              "required": true,
+              "label": "Jenis acara",
+              "options": [
+                {
+                  "value": "corporate-event",
+                  "label": "Corporate event"
+                },
+                {
+                  "value": "conference",
+                  "label": "Konferensi atau seminar"
+                },
+                {
+                  "value": "town-hall",
+                  "label": "Town hall"
+                },
+                {
+                  "value": "awards-gala",
+                  "label": "Awards atau gala"
+                },
+                {
+                  "value": "brand-activation",
+                  "label": "Brand activation"
+                },
+                {
+                  "value": "company-profile",
+                  "label": "Profil perusahaan"
+                },
+                {
+                  "value": "other",
+                  "label": "Lainnya"
+                }
+              ]
+            },
+            {
+              "name": "eventDate",
+              "type": "date",
+              "required": true,
+              "label": "Tanggal acara"
+            },
+            {
+              "name": "location",
+              "type": "text",
+              "required": true,
+              "maxLength": 120,
+              "label": "Lokasi acara"
+            },
+            {
+              "name": "duration",
+              "type": "select",
+              "required": true,
+              "label": "Durasi",
+              "options": [
+                {
+                  "value": "half-day",
+                  "label": "Setengah hari"
+                },
+                {
+                  "value": "full-day",
+                  "label": "Satu hari"
+                },
+                {
+                  "value": "multi-day",
+                  "label": "Lebih dari satu hari"
+                }
+              ]
+            },
+            {
+              "name": "message",
+              "type": "textarea",
+              "required": true,
+              "maxLength": 900,
+              "label": "Detail kebutuhan"
+            }
+          ]
+        }
+      ],
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.eyebrow",
+            "sections.hero.heading",
+            "sections.hero.description",
+            "sections.hero.primaryCta.label",
+            "sections.hero.secondaryCta.label",
+            "sections.hero.image",
+            "sections.hero.imageAlt"
+          ]
+        },
+        {
+          "id": "intro",
+          "label": "Pengantar",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.intro.heading",
+            "sections.intro.body"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Portofolio",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.previewHeading",
+            "sections.gallery.previewDescription",
+            "sections.gallery.pageHeading",
+            "sections.gallery.pageDescription",
+            "sections.gallery.filterAllLabel",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Layanan",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.services.heading",
+            "sections.services.description",
+            "sections.services.items"
+          ]
+        },
+        {
+          "id": "process",
+          "label": "Proses",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.process.heading",
+            "sections.process.description",
+            "sections.process.items"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Tentang",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.pageHeading",
+            "sections.about.pageDescription",
+            "sections.about.storyHeading",
+            "sections.about.storyBody",
+            "sections.about.image",
+            "sections.about.imageAlt"
+          ]
+        },
+        {
+          "id": "values",
+          "label": "Nilai Kerja",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.values.heading",
+            "sections.values.items"
+          ]
+        },
+        {
+          "id": "sectors",
+          "label": "Sektor",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.sectors.heading",
+            "sections.sectors.items"
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimoni",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.testimonials.heading",
+            "sections.testimonials.items"
+          ]
+        },
+        {
+          "id": "faq",
+          "label": "FAQ",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.faq.heading",
+            "sections.faq.items"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Kontak",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.contact.heading",
+            "sections.contact.description",
+            "sections.contact.formHeading",
+            "sections.contact.formDescription",
+            "sections.contact.submitLabel",
+            "sections.contact.responseNote",
+            "sections.contact.whatsappLabel"
+          ]
+        },
+        {
+          "id": "cta",
+          "label": "CTA",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.cta.heading",
+            "sections.cta.body",
+            "sections.cta.primaryCta.label",
+            "sections.cta.secondaryCta.label"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.copyright",
+            "sections.footer.demoNotice"
+          ]
+        }
+      ],
+      "publicPath": "/template-library/narasi-visual-corporate-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "naratama-dispute-counsel-001",
       "name": "Naratama Dispute Counsel",
       "category": "services",
