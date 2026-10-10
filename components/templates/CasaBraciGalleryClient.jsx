@@ -19,7 +19,7 @@ export default function CasaBraciGalleryClient() {
   const copy = lang === "id" ? {
     eyebrow: "Koleksi template asli",
     title: "Pilih fondasi, lalu buat sepenuhnya milik bisnismu.",
-    body: "Setiap pilihan di sini berasal langsung dari repository template Pagiverse. Buka preview aslinya, lalu sesuaikan konten melalui Studio.",
+    body: "Kamu tidak perlu memulai dari halaman kosong. Pilih template yang cocok, ubah tulisan, gambar, warna, dan detail bisnis di Studio, lalu periksa hasilnya sebelum website resmi ditayangkan.",
     collectionNav: "Jelajahi berdasarkan bidang",
     templateCount: "template",
     starting: "Mulai dari",
@@ -36,7 +36,7 @@ export default function CasaBraciGalleryClient() {
   } : {
     eyebrow: "Original template collection",
     title: "Choose a foundation, then make it entirely yours.",
-    body: "Every option here comes directly from the Pagiverse template repository. Preview the original site, then personalize its content in Studio.",
+    body: "You do not need to start from a blank page. Choose a suitable template, update the copy, images, colors, and business details in Studio, then review everything before the website goes live.",
     collectionNav: "Browse by industry",
     templateCount: "templates",
     starting: "Starting at",
