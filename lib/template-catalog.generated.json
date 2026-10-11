@@ -10553,6 +10553,804 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "senja-atelier-wedding-001",
+      "name": "Senja Atelier",
+      "category": "services",
+      "description": "Template studio fotografi pernikahan dengan visual editorial mewah, galeri cerita, dan kontak WhatsApp.",
+      "price": 1495000,
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html",
+          "seo": {
+            "titleField": "seo.title",
+            "descriptionField": "seo.description"
+          }
+        },
+        {
+          "id": "portfolio",
+          "path": "/portfolio",
+          "entry": "portfolio.html",
+          "seo": {
+            "titleField": "seo.pages.portfolio.title",
+            "descriptionField": "seo.pages.portfolio.description"
+          }
+        },
+        {
+          "id": "about",
+          "path": "/about",
+          "entry": "about.html",
+          "seo": {
+            "titleField": "seo.pages.about.title",
+            "descriptionField": "seo.pages.about.description"
+          }
+        },
+        {
+          "id": "contact",
+          "path": "/contact",
+          "entry": "contact.html",
+          "seo": {
+            "titleField": "seo.pages.contact.title",
+            "descriptionField": "seo.pages.contact.description"
+          }
+        }
+      ],
+      "dependencies": [],
+      "languages": {
+        "supported": [
+          "id"
+        ],
+        "default": "id"
+      },
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "light",
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#1d2629"
+          },
+          "secondary": {
+            "editable": false,
+            "default": "#596568"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#2e5359"
+          },
+          "background": {
+            "editable": false,
+            "default": "#f2f3f1"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#e8ebea"
+          },
+          "text": {
+            "editable": false,
+            "default": "#20292c"
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "home",
+            "labelField": "navigation.home.label",
+            "target": "index.html",
+            "hideable": false
+          },
+          {
+            "id": "portfolio",
+            "labelField": "navigation.portfolio.label",
+            "target": "portfolio.html",
+            "hideable": false
+          },
+          {
+            "id": "about",
+            "labelField": "navigation.about.label",
+            "target": "about.html",
+            "hideable": false
+          },
+          {
+            "id": "contact",
+            "labelField": "navigation.contact.label",
+            "target": "contact.html",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama studio",
+          "required": true,
+          "maxLength": 60,
+          "default": "Senja Atelier"
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Tagline",
+          "required": true,
+          "maxLength": 90,
+          "default": "Kisah yang terasa, selamanya."
+        },
+        "business.description": {
+          "type": "textarea",
+          "label": "Deskripsi studio",
+          "required": true,
+          "maxLength": 300,
+          "default": "Studio fotografi pernikahan editorial yang berbasis di Jakarta. Kami merangkai potret yang jujur, berkelas, dan terasa dekat dengan cerita Anda."
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo studio",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": false
+        },
+        "navigation.home.label": {
+          "type": "text",
+          "label": "Label Beranda",
+          "required": true,
+          "maxLength": 24,
+          "default": "Beranda"
+        },
+        "navigation.portfolio.label": {
+          "type": "text",
+          "label": "Label Portofolio",
+          "required": true,
+          "maxLength": 24,
+          "default": "Portofolio"
+        },
+        "navigation.about.label": {
+          "type": "text",
+          "label": "Label Studio",
+          "required": true,
+          "maxLength": 24,
+          "default": "Studio"
+        },
+        "navigation.contact.label": {
+          "type": "text",
+          "label": "Label Kontak",
+          "required": true,
+          "maxLength": 24,
+          "default": "Kontak"
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "Nomor WhatsApp (contoh, ganti sebelum publikasi)",
+          "required": true,
+          "default": "+6281234567890"
+        },
+        "contact.whatsappMessage": {
+          "type": "textarea",
+          "label": "Pesan awal WhatsApp",
+          "maxLength": 250,
+          "default": "Halo Senja Atelier, saya ingin menanyakan ketersediaan tanggal untuk fotografi pernikahan kami."
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Email studio (contoh)",
+          "required": true,
+          "maxLength": 120,
+          "default": "halo@senjaatelier.example"
+        },
+        "location.address": {
+          "type": "textarea",
+          "label": "Lokasi studio",
+          "maxLength": 180,
+          "default": "Jakarta, Indonesia"
+        },
+        "social.instagram": {
+          "type": "url",
+          "label": "Instagram",
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "https://www.instagram.com/"
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul SEO Beranda",
+          "required": true,
+          "maxLength": 70,
+          "default": "Senja Atelier | Fotografi Pernikahan Editorial Jakarta"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Beranda",
+          "required": true,
+          "maxLength": 160,
+          "default": "Senja Atelier adalah studio fotografi pernikahan editorial di Jakarta. Potret yang jujur, puitis, dan dibuat untuk dikenang lintas generasi."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar berbagi sosial",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-wedding.webp",
+            "alt": "Pasangan pengantin dalam potret editorial",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "seo.pages.portfolio.title": {
+          "type": "text",
+          "label": "Judul SEO Portofolio",
+          "required": true,
+          "maxLength": 70,
+          "default": "Portofolio | Senja Atelier"
+        },
+        "seo.pages.portfolio.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Portofolio",
+          "required": true,
+          "maxLength": 160,
+          "default": "Jelajahi potret pernikahan editorial pilihan Senja Atelier, studio fotografi pernikahan di Jakarta."
+        },
+        "seo.pages.about.title": {
+          "type": "text",
+          "label": "Judul SEO Studio",
+          "required": true,
+          "maxLength": 70,
+          "default": "Tentang Studio | Senja Atelier"
+        },
+        "seo.pages.about.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Studio",
+          "required": true,
+          "maxLength": 160,
+          "default": "Kenali pendekatan personal Senja Atelier dalam mengabadikan pernikahan melalui fotografi editorial."
+        },
+        "seo.pages.contact.title": {
+          "type": "text",
+          "label": "Judul SEO Kontak",
+          "required": true,
+          "maxLength": 70,
+          "default": "Kontak | Senja Atelier"
+        },
+        "seo.pages.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Kontak",
+          "required": true,
+          "maxLength": 160,
+          "default": "Hubungi Senja Atelier melalui WhatsApp untuk membahas tanggal dan rencana fotografi pernikahan Anda."
+        },
+        "sections.hero.eyebrow": {
+          "type": "text",
+          "label": "Pengantar hero",
+          "required": true,
+          "maxLength": 60,
+          "default": "Fotografi pernikahan di Jakarta"
+        },
+        "sections.hero.heading": {
+          "type": "text",
+          "label": "Judul hero",
+          "required": true,
+          "maxLength": 34,
+          "default": "Kisah yang abadi."
+        },
+        "sections.hero.description": {
+          "type": "textarea",
+          "label": "Deskripsi hero",
+          "required": true,
+          "maxLength": 240,
+          "default": "Potret pernikahan yang jujur, puitis, dan dirancang untuk dikenang lintas generasi."
+        },
+        "sections.hero.primaryCta.label": {
+          "type": "text",
+          "label": "Teks tombol hero",
+          "required": true,
+          "maxLength": 34,
+          "default": "Cek tanggal via WhatsApp"
+        },
+        "sections.hero.secondaryCta.label": {
+          "type": "text",
+          "label": "Teks tautan karya",
+          "required": true,
+          "maxLength": 30,
+          "default": "Lihat karya"
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "Foto hero",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "4:5",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-wedding.webp",
+            "alt": "Pasangan pengantin dalam potret editorial",
+            "focalPoint": {
+              "x": 30,
+              "y": 50
+            }
+          }
+        },
+        "sections.hero.imageAlt": {
+          "type": "text",
+          "label": "Alt foto hero",
+          "required": true,
+          "maxLength": 140,
+          "default": "Pasangan pengantin dalam potret editorial"
+        },
+        "sections.portfolio.heading": {
+          "type": "text",
+          "label": "Judul halaman Portofolio",
+          "required": true,
+          "maxLength": 85,
+          "default": "Cerita yang tetap hidup dalam gambar."
+        },
+        "sections.portfolio.description": {
+          "type": "textarea",
+          "label": "Deskripsi halaman Portofolio",
+          "maxLength": 230,
+          "default": "Setiap perayaan memiliki suasana sendiri. Jelajahi pilihan kisah yang kami dokumentasikan."
+        },
+        "sections.gallery.heading": {
+          "type": "text",
+          "label": "Judul galeri",
+          "required": true,
+          "maxLength": 80,
+          "default": "Cerita pilihan"
+        },
+        "sections.gallery.description": {
+          "type": "textarea",
+          "label": "Deskripsi galeri",
+          "maxLength": 230,
+          "default": "Sejumlah kisah yang kami simpan dalam cahaya, gerak, dan kehangatan."
+        },
+        "sections.gallery.linkLabel": {
+          "type": "text",
+          "label": "Teks tautan portofolio",
+          "required": true,
+          "maxLength": 40,
+          "default": "Lihat seluruh portofolio"
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Galeri pernikahan",
+          "minItems": 3,
+          "maxItems": 12,
+          "default": [
+            {
+              "title": "Sebuah Hari untuk Diingat",
+              "location": "Jakarta",
+              "image": {
+                "src": "assets/images/ceremony.webp",
+                "alt": "Pasangan pengantin pada upacara pernikahan",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Pasangan pengantin pada upacara pernikahan"
+            },
+            {
+              "title": "Dalam Cahaya yang Lembut",
+              "location": "Jakarta",
+              "image": {
+                "src": "assets/images/portrait.webp",
+                "alt": "Potret intim pasangan pengantin",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Potret intim pasangan pengantin"
+            },
+            {
+              "title": "Perayaan yang Hangat",
+              "location": "Jakarta",
+              "image": {
+                "src": "assets/images/reception.webp",
+                "alt": "Suasana resepsi pernikahan",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Suasana resepsi pernikahan"
+            },
+            {
+              "title": "Hal Kecil yang Bermakna",
+              "location": "Jakarta",
+              "image": {
+                "src": "assets/images/detail.webp",
+                "alt": "Detail bunga dan busana pernikahan",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Detail bunga dan busana pernikahan"
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "label": "Judul cerita",
+                "required": true,
+                "maxLength": 70
+              },
+              "location": {
+                "type": "text",
+                "label": "Lokasi",
+                "maxLength": 60
+              },
+              "image": {
+                "type": "image",
+                "label": "Foto cerita",
+                "required": true,
+                "accept": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true
+              },
+              "imageAlt": {
+                "type": "text",
+                "label": "Alt foto",
+                "required": true,
+                "maxLength": 140
+              }
+            }
+          }
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "Judul studio",
+          "required": true,
+          "maxLength": 90,
+          "default": "Setiap kisah pantas dilihat dengan saksama."
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "Cerita studio",
+          "required": true,
+          "maxLength": 500,
+          "default": "Kami mendekati hari pernikahan seperti sebuah cerita. Emosi yang muncul spontan, detail yang dipilih dengan cinta, dan kehadiran orang terdekat menjadi bagian dari tiap bingkai."
+        },
+        "sections.about.linkLabel": {
+          "type": "text",
+          "label": "Teks tautan studio",
+          "required": true,
+          "maxLength": 30,
+          "default": "Kenali studio"
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "Foto halaman studio",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "4:5",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/portrait.webp",
+            "alt": "Potret pasangan dalam cahaya lembut",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.about.imageAlt": {
+          "type": "text",
+          "label": "Alt foto studio",
+          "required": true,
+          "maxLength": 140,
+          "default": "Potret pasangan dalam cahaya lembut"
+        },
+        "sections.services.heading": {
+          "type": "text",
+          "label": "Judul layanan",
+          "required": true,
+          "maxLength": 80,
+          "default": "Ruang untuk setiap perayaan."
+        },
+        "sections.services.description": {
+          "type": "textarea",
+          "label": "Deskripsi layanan",
+          "maxLength": 230,
+          "default": "Pendekatan yang personal, dari pertemuan pertama hingga album terakhir."
+        },
+        "sections.services.items": {
+          "type": "array",
+          "label": "Layanan fotografi",
+          "minItems": 2,
+          "maxItems": 8,
+          "default": [
+            {
+              "name": "Wedding Day",
+              "description": "Liputan hari pernikahan dari persiapan hingga perayaan, dengan perhatian pada momen besar dan gestur kecil yang jujur."
+            },
+            {
+              "name": "Pre-Wedding Editorial",
+              "description": "Sesi potret yang dirancang sesuai kepribadian pasangan, lokasi, dan suasana cerita yang ingin dikenang."
+            },
+            {
+              "name": "Intimate Celebration",
+              "description": "Dokumentasi perayaan yang dekat dan personal, dengan ruang bagi setiap emosi untuk hadir secara alami."
+            }
+          ],
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "label": "Nama layanan",
+                "required": true,
+                "maxLength": 60
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi layanan",
+                "required": true,
+                "maxLength": 240
+              }
+            }
+          }
+        },
+        "sections.testimonials.heading": {
+          "type": "text",
+          "label": "Judul testimoni",
+          "maxLength": 70,
+          "default": "Kata mereka"
+        },
+        "sections.testimonials.items": {
+          "type": "array",
+          "label": "Testimoni pasangan (contoh, ganti dengan izin klien)",
+          "minItems": 1,
+          "maxItems": 6,
+          "default": [
+            {
+              "quote": "Rasanya seperti melihat kembali hari itu dengan hati yang sama hangatnya. Setiap foto terasa sangat kami.",
+              "name": "Nadia & Arga"
+            },
+            {
+              "quote": "Mereka hadir dengan tenang, menangkap semua yang penting, termasuk momen kecil yang nyaris kami lewatkan.",
+              "name": "Alya & Faris"
+            }
+          ],
+          "item": {
+            "fields": {
+              "quote": {
+                "type": "textarea",
+                "label": "Kutipan",
+                "required": true,
+                "maxLength": 260
+              },
+              "name": {
+                "type": "text",
+                "label": "Nama pasangan",
+                "required": true,
+                "maxLength": 70
+              }
+            }
+          }
+        },
+        "sections.contact.heading": {
+          "type": "text",
+          "label": "Judul halaman Kontak",
+          "required": true,
+          "maxLength": 90,
+          "default": "Mari mulai dengan cerita Anda."
+        },
+        "sections.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi halaman Kontak",
+          "maxLength": 260,
+          "default": "Bagikan tanggal, lokasi, dan gambaran perayaan Anda. Kami akan membalas secara pribadi melalui WhatsApp."
+        },
+        "sections.contact.primaryCta.label": {
+          "type": "text",
+          "label": "Teks tombol WhatsApp kontak",
+          "required": true,
+          "maxLength": 34,
+          "default": "Chat via WhatsApp"
+        },
+        "sections.contact.image": {
+          "type": "image",
+          "label": "Foto halaman Kontak",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "3:4",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/detail.webp",
+            "alt": "Detail bunga dan busana pernikahan",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.contact.imageAlt": {
+          "type": "text",
+          "label": "Alt foto Kontak",
+          "required": true,
+          "maxLength": 140,
+          "default": "Detail bunga dan busana pernikahan"
+        },
+        "sections.cta.heading": {
+          "type": "text",
+          "label": "Judul ajakan",
+          "required": true,
+          "maxLength": 80,
+          "default": "Mari abadikan cerita Anda."
+        },
+        "sections.cta.description": {
+          "type": "textarea",
+          "label": "Deskripsi ajakan",
+          "maxLength": 240,
+          "default": "Ceritakan tanggal dan rencana perayaan Anda. Kami akan menghubungi Anda secara pribadi."
+        },
+        "sections.cta.primaryCta.label": {
+          "type": "text",
+          "label": "Teks tombol ajakan",
+          "required": true,
+          "maxLength": 34,
+          "default": "Tanyakan ketersediaan"
+        },
+        "sections.footer.copyright": {
+          "type": "text",
+          "label": "Teks hak cipta",
+          "maxLength": 120,
+          "default": "© 2026 Senja Atelier. Konten contoh."
+        },
+        "sections.footer.instagramLabel": {
+          "type": "text",
+          "label": "Teks tautan Instagram",
+          "required": true,
+          "maxLength": 30,
+          "default": "Instagram"
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.eyebrow",
+            "sections.hero.heading",
+            "sections.hero.description",
+            "sections.hero.primaryCta.label",
+            "sections.hero.secondaryCta.label",
+            "sections.hero.image",
+            "sections.hero.imageAlt"
+          ]
+        },
+        {
+          "id": "portfolio",
+          "label": "Pengantar portofolio",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.portfolio.heading",
+            "sections.portfolio.description"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Galeri",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.heading",
+            "sections.gallery.description",
+            "sections.gallery.linkLabel",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Tentang studio",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.heading",
+            "sections.about.body",
+            "sections.about.linkLabel",
+            "sections.about.image",
+            "sections.about.imageAlt"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Layanan",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.services.heading",
+            "sections.services.description",
+            "sections.services.items"
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimoni",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.testimonials.heading",
+            "sections.testimonials.items"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Kontak",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.contact.heading",
+            "sections.contact.description",
+            "sections.contact.primaryCta.label",
+            "sections.contact.image",
+            "sections.contact.imageAlt"
+          ]
+        },
+        {
+          "id": "cta",
+          "label": "Ajakan WhatsApp",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.cta.heading",
+            "sections.cta.description",
+            "sections.cta.primaryCta.label"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.copyright",
+            "sections.footer.instagramLabel"
+          ]
+        }
+      ],
+      "publicPath": "/template-library/senja-atelier-wedding-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "tata-tumbuh-advisory-001",
       "name": "Tata Tumbuh Advisory",
       "category": "business-consulting",

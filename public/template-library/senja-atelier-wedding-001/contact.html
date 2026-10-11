@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2f3f1" />
+    <meta
+      name="description"
+      content="Hubungi Senja Atelier untuk fotografi pernikahan editorial."
+    />
+    <meta property="og:image" content="assets/images/hero-wedding.webp" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Kontak | Senja Atelier</title>
+  </head>
+  <body data-page="contact">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="header-inner shell">
+        <a class="brand" href="index.html" aria-label="Senja Atelier, beranda"
+          ><img
+            class="brand-logo"
+            data-bind-src="business.logo"
+            alt=""
+            hidden
+          /><span class="brand-text" data-bind="business.name"
+            >Senja Atelier</span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Buka menu"
+        >
+          <span></span><span></span>
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-nav"
+          data-navigation
+          aria-label="Navigasi utama"
+        >
+          <a href="index.html" data-bind="navigation.home.label">Beranda</a
+          ><a href="portfolio.html" data-bind="navigation.portfolio.label"
+            >Portofolio</a
+          ><a href="about.html" data-bind="navigation.about.label">Studio</a
+          ><a
+            href="contact.html"
+            aria-current="page"
+            data-bind="navigation.contact.label"
+            >Kontak</a
+          >
+        </nav>
+        <a class="header-cta" href="contact.html"
+          ><span data-bind="sections.cta.primaryCta.label"
+            >Tanyakan ketersediaan</span
+          ><span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <section class="contact-layout shell" data-section="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Hubungi kami</p>
+          <h1 data-bind="sections.contact.heading">
+            Mari mulai dengan cerita Anda.
+          </h1>
+          <p data-bind="sections.contact.description">
+            Bagikan tanggal, lokasi, dan gambaran perayaan Anda. Kami akan
+            membalas secara pribadi melalui WhatsApp.
+          </p>
+          <a
+            class="button button-primary"
+            data-whatsapp-link
+            href="#contact-details"
+            data-bind="sections.contact.primaryCta.label"
+            >Chat via WhatsApp</a
+          >
+          <div id="contact-details" class="contact-details">
+            <div>
+              <span>Email</span
+              ><a
+                data-email-link
+                href="mailto:hello@example.com"
+                data-bind="contact.email"
+                >hello@example.com</a
+              >
+            </div>
+            <div>
+              <span>Instagram</span
+              ><a data-instagram-link href="https://instagram.com/"
+                >Lihat Instagram ↗</a
+              >
+            </div>
+          </div>
+        </div>
+        <figure class="contact-media image-frame">
+          <img
+            data-bind-src="sections.contact.image"
+            data-bind-alt="sections.contact.imageAlt"
+            src="assets/images/detail.webp"
+            alt="Detail bunga dan busana pernikahan"
+            width="900"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </section>
+    </main>
+    <footer class="site-footer" data-section="footer">
+      <div class="shell footer-inner">
+        <div>
+          <a class="footer-brand" href="index.html" data-bind="business.name"
+            >Senja Atelier</a
+          >
+          <p data-bind="business.tagline">Kisah yang terasa, selamanya.</p>
+        </div>
+        <div class="footer-links">
+          <a href="portfolio.html" data-bind="navigation.portfolio.label"
+            >Portofolio</a
+          ><a href="about.html" data-bind="navigation.about.label">Studio</a
+          ><a href="contact.html" data-bind="navigation.contact.label">Kontak</a
+          ><a data-instagram-link href="https://instagram.com/"
+            ><span data-bind="sections.footer.instagramLabel">Instagram</span>
+            ↗</a
+          >
+        </div>
+        <p class="copyright" data-bind="sections.footer.copyright">
+          © 2026 Senja Atelier. Konten contoh.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>

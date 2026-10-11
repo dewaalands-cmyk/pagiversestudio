@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f2f3f1" />
+    <meta
+      name="description"
+      content="Kenali pendekatan fotografi pernikahan Senja Atelier di Jakarta."
+    />
+    <meta property="og:image" content="assets/images/hero-wedding.webp" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Studio | Senja Atelier</title>
+  </head>
+  <body data-page="about">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="site-header">
+      <div class="header-inner shell">
+        <a class="brand" href="index.html" aria-label="Senja Atelier, beranda"
+          ><img
+            class="brand-logo"
+            data-bind-src="business.logo"
+            alt=""
+            hidden
+          /><span class="brand-text" data-bind="business.name"
+            >Senja Atelier</span
+          ></a
+        >
+        <button
+          class="menu-toggle"
+          type="button"
+          data-menu-toggle
+          aria-expanded="false"
+          aria-controls="site-navigation"
+          aria-label="Buka menu"
+        >
+          <span></span><span></span>
+        </button>
+        <nav
+          id="site-navigation"
+          class="site-nav"
+          data-navigation
+          aria-label="Navigasi utama"
+        >
+          <a href="index.html" data-bind="navigation.home.label">Beranda</a
+          ><a href="portfolio.html" data-bind="navigation.portfolio.label"
+            >Portofolio</a
+          ><a
+            href="about.html"
+            aria-current="page"
+            data-bind="navigation.about.label"
+            >Studio</a
+          ><a href="contact.html" data-bind="navigation.contact.label"
+            >Kontak</a
+          >
+        </nav>
+        <a class="header-cta" href="contact.html"
+          ><span data-bind="sections.cta.primaryCta.label"
+            >Tanyakan ketersediaan</span
+          ><span aria-hidden="true">↗</span></a
+        >
+      </div>
+    </header>
+    <main id="main">
+      <section class="page-intro shell" data-section="about">
+        <p class="eyebrow">Tentang studio</p>
+        <h1 data-bind="sections.about.heading">
+          Setiap kisah pantas dilihat dengan saksama.
+        </h1>
+        <p data-bind="business.description">
+          Studio fotografi pernikahan editorial yang berbasis di Jakarta.
+        </p>
+      </section>
+      <section class="about-story shell" data-section="about">
+        <figure class="image-frame about-media">
+          <img
+            data-bind-src="sections.about.image"
+            data-bind-alt="sections.about.imageAlt"
+            src="assets/images/portrait.webp"
+            alt="Potret pasangan dalam cahaya lembut"
+            width="960"
+            height="1200"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="about-story-copy">
+          <p data-bind="sections.about.body">
+            Kami mendekati hari pernikahan seperti sebuah cerita. Emosi yang
+            muncul spontan, detail yang dipilih dengan cinta, dan kehadiran
+            orang terdekat menjadi bagian dari tiap bingkai.
+          </p>
+          <span class="fine-rule" aria-hidden="true"></span>
+          <p data-bind="business.tagline">Kisah yang terasa, selamanya.</p>
+        </div>
+      </section>
+      <section class="about-services shell" data-section="services">
+        <div class="section-heading">
+          <h2 data-bind="sections.services.heading">
+            Ruang untuk setiap perayaan.
+          </h2>
+          <p data-bind="sections.services.description">
+            Pendekatan yang personal, dari pertemuan pertama hingga album
+            terakhir.
+          </p>
+        </div>
+        <div
+          class="services-list"
+          data-collection="sections.services.items"
+          data-collection-kind="services"
+        ></div>
+      </section>
+      <section class="cta-section shell" data-section="cta">
+        <div class="cta-line" aria-hidden="true"></div>
+        <h2 data-bind="sections.cta.heading">Mari abadikan cerita Anda.</h2>
+        <p data-bind="sections.cta.description">
+          Ceritakan tanggal dan rencana perayaan Anda. Kami akan menghubungi
+          Anda secara pribadi.
+        </p>
+        <a
+          class="button button-primary"
+          data-whatsapp-link
+          href="contact.html"
+          data-bind="sections.cta.primaryCta.label"
+          >Tanyakan ketersediaan</a
+        >
+      </section>
+    </main>
+    <footer class="site-footer" data-section="footer">
+      <div class="shell footer-inner">
+        <div>
+          <a class="footer-brand" href="index.html" data-bind="business.name"
+            >Senja Atelier</a
+          >
+          <p data-bind="business.tagline">Kisah yang terasa, selamanya.</p>
+        </div>
+        <div class="footer-links">
+          <a href="portfolio.html" data-bind="navigation.portfolio.label"
+            >Portofolio</a
+          ><a href="about.html" data-bind="navigation.about.label">Studio</a
+          ><a href="contact.html" data-bind="navigation.contact.label">Kontak</a
+          ><a data-instagram-link href="https://instagram.com/"
+            ><span data-bind="sections.footer.instagramLabel">Instagram</span>
+            ↗</a
+          >
+        </div>
+        <p class="copyright" data-bind="sections.footer.copyright">
+          © 2026 Senja Atelier. Konten contoh.
+        </p>
+      </div>
+    </footer>
+    <script src="script.js" defer></script>
+  </body>
+</html>
