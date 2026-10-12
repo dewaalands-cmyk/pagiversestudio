@@ -5494,6 +5494,1092 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "maison-roselle-weddings-001",
+      "name": "Maison Roselle Weddings",
+      "category": "services",
+      "description": "Template wedding agency satu halaman dengan gaya romantic editorial untuk grand ballroom wedding, layanan terpadu, portofolio, formulir konsultasi, dan WhatsApp.",
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html",
+          "seo": {
+            "titleField": "seo.title",
+            "descriptionField": "seo.description"
+          }
+        }
+      ],
+      "dependencies": [],
+      "languages": {
+        "supported": [
+          "id"
+        ],
+        "default": "id"
+      },
+      "theme": {
+        "supportsColorMode": true,
+        "defaultMode": "light",
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#5B1930"
+          },
+          "secondary": {
+            "editable": false,
+            "default": "#A77280"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#5B1930"
+          },
+          "background": {
+            "editable": false,
+            "default": "#F6F0F3"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#FFF9FB"
+          },
+          "text": {
+            "editable": false,
+            "default": "#2C2026"
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "about",
+            "labelField": "navigation.about.label",
+            "target": "#tentang",
+            "hideable": false
+          },
+          {
+            "id": "services",
+            "labelField": "navigation.services.label",
+            "target": "#layanan",
+            "hideable": true
+          },
+          {
+            "id": "portfolio",
+            "labelField": "navigation.portfolio.label",
+            "target": "#karya",
+            "hideable": true
+          },
+          {
+            "id": "process",
+            "labelField": "navigation.process.label",
+            "target": "#proses",
+            "hideable": true
+          },
+          {
+            "id": "contact",
+            "labelField": "navigation.contact.label",
+            "target": "#consultasi",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama wedding agency",
+          "required": true,
+          "maxLength": 60,
+          "default": "Maison Roselle Weddings"
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Tagline",
+          "required": true,
+          "maxLength": 80,
+          "default": "Perayaan yang dirancang dengan rasa"
+        },
+        "business.description": {
+          "type": "textarea",
+          "label": "Deskripsi agency",
+          "required": true,
+          "maxLength": 240,
+          "default": "Wedding planning dan design untuk grand ballroom wedding di seluruh Indonesia."
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo agency",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": false
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "Nomor WhatsApp contoh, ganti sebelum digunakan",
+          "required": true,
+          "default": "+6281234567890"
+        },
+        "contact.whatsappMessage": {
+          "type": "textarea",
+          "label": "Pesan awal WhatsApp",
+          "maxLength": 260,
+          "default": "Halo Maison Roselle Weddings, saya ingin berkonsultasi mengenai rencana pernikahan kami."
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Email contoh, ganti sebelum digunakan",
+          "required": true,
+          "maxLength": 120,
+          "default": "hello@maisonroselle.example"
+        },
+        "location.address": {
+          "type": "textarea",
+          "label": "Wilayah layanan",
+          "required": true,
+          "maxLength": 160,
+          "default": "Melayani seluruh Indonesia"
+        },
+        "social.instagram": {
+          "type": "url",
+          "label": "Instagram",
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "https://www.instagram.com/"
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul SEO",
+          "required": true,
+          "maxLength": 70,
+          "default": "Maison Roselle Weddings | Grand Ballroom Wedding Indonesia"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO",
+          "required": true,
+          "maxLength": 160,
+          "default": "Maison Roselle Weddings merancang grand ballroom wedding yang romantis dan personal dengan layanan planning, design, styling, dan produksi terpadu."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar berbagi sosial",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-ballroom.webp",
+            "alt": "Pasangan pengantin di ballroom dengan dekorasi bunga burgundy",
+            "focalPoint": {
+              "x": 68,
+              "y": 50
+            }
+          }
+        },
+        "navigation.about.label": {
+          "type": "text",
+          "label": "Navigasi Tentang",
+          "required": true,
+          "maxLength": 18,
+          "default": "Tentang"
+        },
+        "navigation.services.label": {
+          "type": "text",
+          "label": "Navigasi Layanan",
+          "required": true,
+          "maxLength": 18,
+          "default": "Layanan"
+        },
+        "navigation.portfolio.label": {
+          "type": "text",
+          "label": "Navigasi Karya",
+          "required": true,
+          "maxLength": 18,
+          "default": "Karya"
+        },
+        "navigation.process.label": {
+          "type": "text",
+          "label": "Navigasi Proses",
+          "required": true,
+          "maxLength": 18,
+          "default": "Proses"
+        },
+        "navigation.contact.label": {
+          "type": "text",
+          "label": "Navigasi Konsultasi",
+          "required": true,
+          "maxLength": 18,
+          "default": "Konsultasi"
+        },
+        "sections.hero.eyebrow": {
+          "type": "text",
+          "label": "Pengantar hero",
+          "required": true,
+          "maxLength": 50,
+          "default": "Wedding planning dan design"
+        },
+        "sections.hero.heading": {
+          "type": "text",
+          "label": "Judul hero",
+          "required": true,
+          "maxLength": 52,
+          "default": "Megah. Tetap personal."
+        },
+        "sections.hero.description": {
+          "type": "textarea",
+          "label": "Deskripsi hero",
+          "required": true,
+          "maxLength": 180,
+          "default": "Kami merancang grand ballroom wedding yang megah, romantis, dan benar-benar mencerminkan cerita Anda."
+        },
+        "sections.hero.primaryCta.label": {
+          "type": "text",
+          "label": "Tombol konsultasi hero",
+          "required": true,
+          "maxLength": 22,
+          "default": "Konsultasi"
+        },
+        "sections.hero.secondaryCta.label": {
+          "type": "text",
+          "label": "Tombol WhatsApp hero",
+          "required": true,
+          "maxLength": 22,
+          "default": "WhatsApp"
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "Foto hero ballroom",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "16:9",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/hero-ballroom.webp",
+            "alt": "Pasangan pengantin di ballroom dengan dekorasi bunga burgundy",
+            "focalPoint": {
+              "x": 68,
+              "y": 50
+            }
+          }
+        },
+        "sections.hero.imageAlt": {
+          "type": "text",
+          "label": "Alt foto hero",
+          "required": true,
+          "maxLength": 140,
+          "default": "Pasangan pengantin di ballroom dengan dekorasi bunga burgundy"
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "Judul tentang",
+          "required": true,
+          "maxLength": 72,
+          "default": "Kemegahan yang tetap terasa dekat."
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "Deskripsi tentang",
+          "required": true,
+          "maxLength": 420,
+          "default": "Maison Roselle menyatukan perencanaan, desain, dan produksi dalam satu arahan kreatif. Setiap keputusan dibuat agar ballroom terasa indah sekaligus personal."
+        },
+        "sections.about.statement": {
+          "type": "textarea",
+          "label": "Pernyataan tentang",
+          "required": true,
+          "maxLength": 180,
+          "default": "Bukan sekadar hari yang sempurna. Sebuah suasana yang akan selalu Anda ingat."
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "Foto pengantar",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "2:3",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/bride-editorial.webp",
+            "alt": "Pengantin perempuan dengan buket burgundy di ballroom",
+            "focalPoint": {
+              "x": 55,
+              "y": 48
+            }
+          }
+        },
+        "sections.about.imageAlt": {
+          "type": "text",
+          "label": "Alt foto pengantar",
+          "required": true,
+          "maxLength": 140,
+          "default": "Pengantin perempuan dengan buket burgundy di ballroom"
+        },
+        "sections.services.heading": {
+          "type": "text",
+          "label": "Judul layanan",
+          "required": true,
+          "maxLength": 72,
+          "default": "Satu tim untuk seluruh perayaan."
+        },
+        "sections.services.description": {
+          "type": "textarea",
+          "label": "Deskripsi layanan",
+          "maxLength": 240,
+          "default": "Dari strategi awal hingga ballroom siap menyambut tamu, seluruh proses berjalan dalam satu standar yang sama."
+        },
+        "sections.services.items": {
+          "type": "array",
+          "label": "Daftar layanan",
+          "minItems": 2,
+          "maxItems": 6,
+          "default": [
+            {
+              "name": "Full Wedding Planning",
+              "description": "Perencanaan menyeluruh untuk anggaran, jadwal, vendor, dan alur kerja agar setiap keputusan tetap terarah."
+            },
+            {
+              "name": "Creative Direction dan Styling",
+              "description": "Konsep visual yang menyatukan ruang, bunga, warna, stationery, pencahayaan, serta pengalaman tamu."
+            },
+            {
+              "name": "Vendor Curation",
+              "description": "Pemilihan dan koordinasi vendor yang sesuai dengan standar kreatif, kebutuhan teknis, dan prioritas Anda."
+            },
+            {
+              "name": "Wedding Day Production",
+              "description": "Pengawasan produksi dan eksekusi pada hari pernikahan, dari persiapan ballroom hingga momen penutup."
+            }
+          ],
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "label": "Nama layanan",
+                "required": true,
+                "maxLength": 64
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi layanan",
+                "required": true,
+                "maxLength": 240
+              }
+            }
+          }
+        },
+        "sections.gallery.eyebrow": {
+          "type": "text",
+          "label": "Pengantar galeri",
+          "maxLength": 40,
+          "default": "Selected celebrations"
+        },
+        "sections.gallery.heading": {
+          "type": "text",
+          "label": "Judul galeri",
+          "required": true,
+          "maxLength": 72,
+          "default": "Ballroom, dalam bahasa cinta."
+        },
+        "sections.gallery.description": {
+          "type": "textarea",
+          "label": "Deskripsi galeri",
+          "maxLength": 220,
+          "default": "Setiap ruang dibentuk dari ritme, cahaya, bunga, dan detail yang saling berbicara."
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Galeri contoh, ganti dengan karya berizin",
+          "minItems": 3,
+          "maxItems": 8,
+          "default": [
+            {
+              "title": "Malam yang Berkilau",
+              "detail": "Konsep ballroom",
+              "image": {
+                "src": "assets/images/hero-ballroom.webp",
+                "alt": "Pasangan pengantin di ballroom dengan instalasi bunga burgundy",
+                "focalPoint": {
+                  "x": 68,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Pasangan pengantin di ballroom dengan instalasi bunga burgundy"
+            },
+            {
+              "title": "Sebelum Pintu Terbuka",
+              "detail": "Potret pengantin",
+              "image": {
+                "src": "assets/images/bride-editorial.webp",
+                "alt": "Potret pengantin perempuan dengan bunga burgundy",
+                "focalPoint": {
+                  "x": 55,
+                  "y": 48
+                }
+              },
+              "imageAlt": "Potret pengantin perempuan dengan bunga burgundy"
+            },
+            {
+              "title": "Ruang untuk Berkumpul",
+              "detail": "Desain resepsi",
+              "image": {
+                "src": "assets/images/ballroom-design.webp",
+                "alt": "Ballroom dengan meja panjang dan cahaya lilin",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Ballroom dengan meja panjang dan cahaya lilin"
+            },
+            {
+              "title": "Berjalan ke Babak Baru",
+              "detail": "Momen perayaan",
+              "image": {
+                "src": "assets/images/couple-celebration.webp",
+                "alt": "Pasangan pengantin berjalan bersama di resepsi ballroom",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 48
+                }
+              },
+              "imageAlt": "Pasangan pengantin berjalan bersama di resepsi ballroom"
+            },
+            {
+              "title": "Ruang untuk Setiap Detail",
+              "detail": "Proses desain",
+              "image": {
+                "src": "assets/images/design-table.webp",
+                "alt": "Meja desain dengan kain burgundy, bunga, dan sketsa ballroom",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Meja desain dengan kain burgundy, bunga, dan sketsa ballroom"
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "label": "Judul karya",
+                "required": true,
+                "maxLength": 64
+              },
+              "detail": {
+                "type": "text",
+                "label": "Keterangan karya",
+                "maxLength": 48
+              },
+              "image": {
+                "type": "image",
+                "label": "Foto karya",
+                "required": true,
+                "accept": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true
+              },
+              "imageAlt": {
+                "type": "text",
+                "label": "Alt foto karya",
+                "required": true,
+                "maxLength": 140
+              }
+            }
+          }
+        },
+        "sections.process.heading": {
+          "type": "text",
+          "label": "Judul proses",
+          "required": true,
+          "maxLength": 72,
+          "default": "Tenang sejak pertemuan pertama."
+        },
+        "sections.process.description": {
+          "type": "textarea",
+          "label": "Deskripsi proses",
+          "maxLength": 220,
+          "default": "Proses yang jelas memberi Anda ruang untuk menikmati perjalanan, bukan mengejar detail sendirian."
+        },
+        "sections.process.items": {
+          "type": "array",
+          "label": "Tahapan kerja",
+          "minItems": 3,
+          "maxItems": 6,
+          "default": [
+            {
+              "name": "Mendengarkan",
+              "description": "Kami mengenal cerita, prioritas, ritme keluarga, dan pengalaman yang ingin Anda hadirkan."
+            },
+            {
+              "name": "Merancang",
+              "description": "Konsep kreatif, anggaran, jadwal, dan tim vendor disusun menjadi satu arah yang realistis."
+            },
+            {
+              "name": "Menyelaraskan",
+              "description": "Setiap vendor bergerak dengan brief, detail teknis, dan standar visual yang sama."
+            },
+            {
+              "name": "Merayakan",
+              "description": "Tim produksi menjaga seluruh alur agar Anda dapat hadir penuh bersama orang-orang terdekat."
+            }
+          ],
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "label": "Nama tahapan",
+                "required": true,
+                "maxLength": 48
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi tahapan",
+                "required": true,
+                "maxLength": 220
+              }
+            }
+          }
+        },
+        "sections.atelier.heading": {
+          "type": "text",
+          "label": "Judul pendekatan",
+          "required": true,
+          "maxLength": 88,
+          "default": "Dari moodboard sampai lampu terakhir menyala."
+        },
+        "sections.atelier.body": {
+          "type": "textarea",
+          "label": "Deskripsi pendekatan",
+          "required": true,
+          "maxLength": 360,
+          "default": "Kami menerjemahkan preferensi Anda menjadi konsep yang utuh, lalu menjaganya tetap konsisten pada setiap vendor, material, dan momen."
+        },
+        "sections.atelier.image": {
+          "type": "image",
+          "label": "Foto proses desain",
+          "required": true,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "aspectRatio": "2:3",
+          "focalPoint": true,
+          "default": {
+            "src": "assets/images/design-table.webp",
+            "alt": "Meja desain wedding dengan kain burgundy dan sketsa ballroom",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.atelier.imageAlt": {
+          "type": "text",
+          "label": "Alt foto proses desain",
+          "required": true,
+          "maxLength": 140,
+          "default": "Meja desain wedding dengan kain burgundy dan sketsa ballroom"
+        },
+        "sections.atelier.factOneLabel": {
+          "type": "text",
+          "label": "Label fakta pertama",
+          "maxLength": 24,
+          "default": "Cakupan"
+        },
+        "sections.atelier.factOneValue": {
+          "type": "text",
+          "label": "Isi fakta pertama",
+          "maxLength": 80,
+          "default": "Seluruh Indonesia"
+        },
+        "sections.atelier.factTwoLabel": {
+          "type": "text",
+          "label": "Label fakta kedua",
+          "maxLength": 24,
+          "default": "Pendekatan"
+        },
+        "sections.atelier.factTwoValue": {
+          "type": "text",
+          "label": "Isi fakta kedua",
+          "maxLength": 100,
+          "default": "Planning dan design terpadu"
+        },
+        "sections.testimonials.heading": {
+          "type": "text",
+          "label": "Judul testimoni",
+          "required": true,
+          "maxLength": 88,
+          "default": "Yang tersisa setelah hari itu berlalu."
+        },
+        "sections.testimonials.note": {
+          "type": "text",
+          "label": "Catatan testimoni contoh",
+          "maxLength": 100,
+          "default": "Testimoni di bawah adalah contoh dan dapat diganti."
+        },
+        "sections.testimonials.items": {
+          "type": "array",
+          "label": "Testimoni contoh, ganti dengan izin klien",
+          "minItems": 1,
+          "maxItems": 6,
+          "default": [
+            {
+              "quote": "Kami bisa menikmati hari pernikahan tanpa memikirkan hal teknis. Semuanya terasa hangat dan sangat kami.",
+              "name": "Nadira dan Raka, konten contoh"
+            },
+            {
+              "quote": "Dari pertemuan pertama, tim Maison Roselle membuat keputusan besar terasa lebih ringan dan terarah.",
+              "name": "Citra dan Dion, konten contoh"
+            },
+            {
+              "quote": "Ballroom kami terlihat megah, tetapi tetap terasa intim. Setiap sudut memiliki alasan dan cerita.",
+              "name": "Alya dan Fajar, konten contoh"
+            }
+          ],
+          "item": {
+            "fields": {
+              "quote": {
+                "type": "textarea",
+                "label": "Kutipan",
+                "required": true,
+                "maxLength": 220
+              },
+              "name": {
+                "type": "text",
+                "label": "Nama pasangan",
+                "required": true,
+                "maxLength": 80
+              }
+            }
+          }
+        },
+        "sections.faq.heading": {
+          "type": "text",
+          "label": "Judul FAQ",
+          "required": true,
+          "maxLength": 64,
+          "default": "Hal yang sering ditanyakan."
+        },
+        "sections.faq.description": {
+          "type": "textarea",
+          "label": "Deskripsi FAQ",
+          "maxLength": 180,
+          "default": "Jawaban singkat sebelum kita membicarakan perayaan Anda lebih jauh."
+        },
+        "sections.faq.items": {
+          "type": "array",
+          "label": "Pertanyaan umum",
+          "minItems": 2,
+          "maxItems": 8,
+          "default": [
+            {
+              "question": "Apakah Maison Roselle melayani pernikahan di luar Jakarta?",
+              "answer": "Ya. Konsep contoh ini dirancang untuk wedding agency yang melayani grand ballroom wedding di seluruh Indonesia."
+            },
+            {
+              "question": "Kapan waktu ideal untuk mulai merencanakan?",
+              "answer": "Untuk perayaan ballroom berskala besar, konsultasi awal idealnya dimulai 10-18 bulan sebelum tanggal pernikahan."
+            },
+            {
+              "question": "Apakah layanan mencakup desain dan dekorasi?",
+              "answer": "Ya. Layanan contoh mencakup planning, creative direction, styling, kurasi vendor, dan pengawasan produksi."
+            },
+            {
+              "question": "Bisakah kami memakai vendor pilihan keluarga?",
+              "answer": "Bisa. Tim akan menilai kebutuhan teknis dan menyelaraskan vendor pilihan agar tetap konsisten dengan rencana keseluruhan."
+            }
+          ],
+          "item": {
+            "fields": {
+              "question": {
+                "type": "text",
+                "label": "Pertanyaan",
+                "required": true,
+                "maxLength": 120
+              },
+              "answer": {
+                "type": "textarea",
+                "label": "Jawaban",
+                "required": true,
+                "maxLength": 320
+              }
+            }
+          }
+        },
+        "sections.contact.kicker": {
+          "type": "text",
+          "label": "Pengantar kontak",
+          "maxLength": 40,
+          "default": "Konsultasi awal"
+        },
+        "sections.contact.heading": {
+          "type": "text",
+          "label": "Judul kontak",
+          "required": true,
+          "maxLength": 72,
+          "default": "Mari mulai dari cerita Anda."
+        },
+        "sections.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi kontak",
+          "required": true,
+          "maxLength": 260,
+          "default": "Bagikan tanggal, kota, dan gambaran perayaan. Tim kami akan membantu menyusun langkah pertama yang tepat."
+        },
+        "sections.contact.whatsappLabel": {
+          "type": "text",
+          "label": "Tombol WhatsApp kontak",
+          "required": true,
+          "maxLength": 22,
+          "default": "Chat WhatsApp"
+        },
+        "sections.contact.formHeading": {
+          "type": "text",
+          "label": "Judul formulir",
+          "required": true,
+          "maxLength": 80,
+          "default": "Ceritakan rencana perayaan Anda."
+        },
+        "sections.contact.formDescription": {
+          "type": "textarea",
+          "label": "Deskripsi formulir",
+          "maxLength": 220,
+          "default": "Kami akan menghubungi Anda secara pribadi setelah menerima detail awal ini."
+        },
+        "sections.contact.form.nameLabel": {
+          "type": "text",
+          "label": "Label nama",
+          "maxLength": 32,
+          "default": "Nama lengkap"
+        },
+        "sections.contact.form.emailLabel": {
+          "type": "text",
+          "label": "Label email",
+          "maxLength": 32,
+          "default": "Email"
+        },
+        "sections.contact.form.phoneLabel": {
+          "type": "text",
+          "label": "Label WhatsApp",
+          "maxLength": 32,
+          "default": "Nomor WhatsApp"
+        },
+        "sections.contact.form.dateLabel": {
+          "type": "text",
+          "label": "Label tanggal",
+          "maxLength": 32,
+          "default": "Tanggal pernikahan"
+        },
+        "sections.contact.form.cityLabel": {
+          "type": "text",
+          "label": "Label kota",
+          "maxLength": 32,
+          "default": "Kota"
+        },
+        "sections.contact.form.guestLabel": {
+          "type": "text",
+          "label": "Label jumlah tamu",
+          "maxLength": 40,
+          "default": "Perkiraan jumlah tamu"
+        },
+        "sections.contact.form.visionLabel": {
+          "type": "text",
+          "label": "Label gambaran perayaan",
+          "maxLength": 40,
+          "default": "Gambaran perayaan"
+        },
+        "sections.contact.form.visionHelp": {
+          "type": "text",
+          "label": "Bantuan gambaran perayaan",
+          "maxLength": 140,
+          "default": "Ceritakan venue, suasana, atau prioritas yang sudah Anda bayangkan."
+        },
+        "sections.contact.submitLabel": {
+          "type": "text",
+          "label": "Tombol kirim",
+          "required": true,
+          "maxLength": 24,
+          "default": "Kirim permintaan"
+        },
+        "sections.contact.responseNote": {
+          "type": "textarea",
+          "label": "Catatan integrasi formulir",
+          "maxLength": 200,
+          "default": "Pengiriman formulir akan aktif melalui Pagiverse Core. Untuk respons langsung, gunakan WhatsApp."
+        },
+        "sections.contact.invalidMessage": {
+          "type": "text",
+          "label": "Pesan formulir tidak valid",
+          "maxLength": 100,
+          "default": "Periksa kembali kolom yang wajib diisi."
+        },
+        "sections.contact.integrationNote": {
+          "type": "textarea",
+          "label": "Pesan mode tanpa integrasi",
+          "maxLength": 180,
+          "default": "Pengiriman formulir memerlukan Pagiverse Core. Isian Anda tetap tersimpan di halaman ini."
+        },
+        "sections.contact.sendingLabel": {
+          "type": "text",
+          "label": "Label saat mengirim",
+          "maxLength": 24,
+          "default": "Mengirim..."
+        },
+        "sections.contact.sendingMessage": {
+          "type": "text",
+          "label": "Pesan saat mengirim",
+          "maxLength": 100,
+          "default": "Mengirim permintaan konsultasi..."
+        },
+        "sections.contact.successMessage": {
+          "type": "text",
+          "label": "Pesan berhasil",
+          "maxLength": 120,
+          "default": "Permintaan konsultasi berhasil dikirim."
+        },
+        "sections.contact.errorMessage": {
+          "type": "text",
+          "label": "Pesan gagal",
+          "maxLength": 140,
+          "default": "Permintaan belum terkirim. Silakan coba lagi atau gunakan WhatsApp."
+        },
+        "sections.footer.instagramLabel": {
+          "type": "text",
+          "label": "Tautan Instagram",
+          "maxLength": 24,
+          "default": "Instagram"
+        },
+        "sections.footer.copyright": {
+          "type": "text",
+          "label": "Hak cipta",
+          "maxLength": 120,
+          "default": "© 2026 Maison Roselle Weddings. Konten contoh."
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.eyebrow",
+            "sections.hero.heading",
+            "sections.hero.description",
+            "sections.hero.primaryCta.label",
+            "sections.hero.secondaryCta.label",
+            "sections.hero.image",
+            "sections.hero.imageAlt"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Tentang",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.heading",
+            "sections.about.body",
+            "sections.about.statement",
+            "sections.about.image",
+            "sections.about.imageAlt"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Layanan",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.services.heading",
+            "sections.services.description",
+            "sections.services.items"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Karya",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.eyebrow",
+            "sections.gallery.heading",
+            "sections.gallery.description",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "process",
+          "label": "Proses",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.process.heading",
+            "sections.process.description",
+            "sections.process.items"
+          ]
+        },
+        {
+          "id": "atelier",
+          "label": "Pendekatan",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.atelier.heading",
+            "sections.atelier.body",
+            "sections.atelier.image",
+            "sections.atelier.imageAlt",
+            "sections.atelier.factOneLabel",
+            "sections.atelier.factOneValue",
+            "sections.atelier.factTwoLabel",
+            "sections.atelier.factTwoValue"
+          ]
+        },
+        {
+          "id": "testimonials",
+          "label": "Testimoni",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.testimonials.heading",
+            "sections.testimonials.note",
+            "sections.testimonials.items"
+          ]
+        },
+        {
+          "id": "faq",
+          "label": "FAQ",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.faq.heading",
+            "sections.faq.description",
+            "sections.faq.items"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Konsultasi",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.contact.kicker",
+            "sections.contact.heading",
+            "sections.contact.description",
+            "sections.contact.whatsappLabel",
+            "sections.contact.formHeading",
+            "sections.contact.formDescription",
+            "sections.contact.form.nameLabel",
+            "sections.contact.form.emailLabel",
+            "sections.contact.form.phoneLabel",
+            "sections.contact.form.dateLabel",
+            "sections.contact.form.cityLabel",
+            "sections.contact.form.guestLabel",
+            "sections.contact.form.visionLabel",
+            "sections.contact.form.visionHelp",
+            "sections.contact.submitLabel",
+            "sections.contact.responseNote",
+            "sections.contact.invalidMessage",
+            "sections.contact.integrationNote",
+            "sections.contact.sendingLabel",
+            "sections.contact.sendingMessage",
+            "sections.contact.successMessage",
+            "sections.contact.errorMessage"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.instagramLabel",
+            "sections.footer.copyright"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "id": "wedding-consultation",
+          "label": "Konsultasi Pernikahan",
+          "provider": "pagiverse-core",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "required": true,
+              "maxLength": 80
+            },
+            {
+              "name": "email",
+              "type": "email",
+              "required": true,
+              "maxLength": 120
+            },
+            {
+              "name": "phone",
+              "type": "phone",
+              "required": true,
+              "maxLength": 24
+            },
+            {
+              "name": "weddingDate",
+              "type": "date",
+              "required": true
+            },
+            {
+              "name": "city",
+              "type": "text",
+              "required": true,
+              "maxLength": 80
+            },
+            {
+              "name": "guestCount",
+              "type": "select",
+              "required": true,
+              "options": [
+                "under-300",
+                "300-600",
+                "600-1000",
+                "over-1000"
+              ]
+            },
+            {
+              "name": "vision",
+              "type": "textarea",
+              "required": false,
+              "maxLength": 600
+            }
+          ]
+        }
+      ],
+      "publicPath": "/template-library/maison-roselle-weddings-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "narasi-visual-corporate-001",
       "name": "Narasi Visual",
       "category": "services",

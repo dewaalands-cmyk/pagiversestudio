@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Maison Roselle Weddings merancang grand ballroom wedding yang romantis, personal, dan tertata hingga detail terkecil."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Maison Roselle Weddings" />
+    <meta property="og:description" content="Perencanaan dan desain grand ballroom wedding di seluruh Indonesia." />
+    <meta property="og:image" content="assets/images/hero-ballroom.webp" />
+    <meta name="theme-color" content="#5b1930" />
+    <link rel="preload" as="image" href="assets/images/hero-ballroom.webp" type="image/webp" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Maison Roselle Weddings | Grand Ballroom Wedding Indonesia</title>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Lewati ke konten utama</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#hero" aria-label="Kembali ke beranda">
+        <img class="brand-logo" data-bind-src="business.logo" src="" alt="" hidden />
+        <span class="brand-name" data-brand-fallback data-bind="business.name">Maison Roselle Weddings</span>
+      </a>
+      <button
+        class="menu-toggle"
+        type="button"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="site-navigation"
+        aria-label="Buka menu"
+      >
+        <span></span><span></span>
+      </button>
+      <nav id="site-navigation" class="site-navigation" data-navigation aria-label="Navigasi utama">
+        <a href="#tentang" data-bind="navigation.about.label">Tentang</a>
+        <a href="#layanan" data-bind="navigation.services.label">Layanan</a>
+        <a href="#karya" data-bind="navigation.portfolio.label">Karya</a>
+        <a href="#proses" data-bind="navigation.process.label">Proses</a>
+        <a class="nav-cta" href="#consultasi" data-bind="navigation.contact.label">Konsultasi</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section id="hero" class="hero" data-section="hero" aria-labelledby="hero-title">
+        <div class="hero-media">
+          <img
+            data-bind-src="sections.hero.image"
+            data-bind-alt="sections.hero.imageAlt"
+            src="assets/images/hero-ballroom.webp"
+            alt="Pasangan pengantin di ballroom dengan dekorasi bunga burgundy"
+            width="1774"
+            height="887"
+            fetchpriority="high"
+            decoding="async"
+          />
+        </div>
+        <div class="hero-scrim"></div>
+        <div class="hero-content shell">
+          <p class="eyebrow" data-bind="sections.hero.eyebrow">Wedding planning dan design</p>
+          <h1 id="hero-title" data-bind="sections.hero.heading">Megah. Tetap personal.</h1>
+          <p class="hero-description" data-bind="sections.hero.description">
+            Kami merancang grand ballroom wedding yang megah, romantis, dan benar-benar mencerminkan cerita Anda.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#consultasi" data-bind="sections.hero.primaryCta.label">Konsultasi</a>
+            <a class="button button-ghost" href="#" data-whatsapp-link data-bind="sections.hero.secondaryCta.label">WhatsApp</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="tentang" class="intro-section shell" data-section="about" aria-labelledby="about-title">
+        <div class="intro-copy" data-reveal>
+          <p class="section-kicker" data-bind="business.tagline">Perayaan yang dirancang dengan rasa</p>
+          <h2 id="about-title" data-bind="sections.about.heading">Kemegahan yang tetap terasa dekat.</h2>
+          <p data-bind="sections.about.body">
+            Maison Roselle menyatukan perencanaan, desain, dan produksi dalam satu arahan kreatif. Setiap keputusan dibuat agar ballroom terasa indah sekaligus personal.
+          </p>
+          <blockquote data-bind="sections.about.statement">
+            Bukan sekadar hari yang sempurna. Sebuah suasana yang akan selalu Anda ingat.
+          </blockquote>
+        </div>
+        <figure class="intro-portrait" data-reveal>
+          <img
+            data-bind-src="sections.about.image"
+            data-bind-alt="sections.about.imageAlt"
+            src="assets/images/bride-editorial.webp"
+            alt="Pengantin perempuan dengan buket burgundy di ballroom"
+            width="1024"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+      </section>
+
+      <section id="layanan" class="services-section" data-section="services" aria-labelledby="services-title">
+        <div class="shell">
+          <div class="section-heading section-heading-narrow" data-reveal>
+            <h2 id="services-title" data-bind="sections.services.heading">Satu tim untuk seluruh perayaan.</h2>
+            <p data-bind="sections.services.description">
+              Dari strategi awal hingga ballroom siap menyambut tamu, seluruh proses berjalan dalam satu standar yang sama.
+            </p>
+          </div>
+          <div class="service-list" data-collection="sections.services.items" data-collection-kind="services"></div>
+        </div>
+      </section>
+
+      <section id="karya" class="gallery-section shell" data-section="gallery" aria-labelledby="gallery-title">
+        <div class="gallery-heading" data-reveal>
+          <p class="eyebrow eyebrow-dark" data-bind="sections.gallery.eyebrow">Selected celebrations</p>
+          <h2 id="gallery-title" data-bind="sections.gallery.heading">Ballroom, dalam bahasa cinta.</h2>
+          <p data-bind="sections.gallery.description">
+            Setiap ruang dibentuk dari ritme, cahaya, bunga, dan detail yang saling berbicara.
+          </p>
+        </div>
+        <div class="editorial-grid" data-collection="sections.gallery.items" data-collection-kind="gallery"></div>
+      </section>
+
+      <section id="proses" class="process-section" data-section="process" aria-labelledby="process-title">
+        <div class="shell process-layout">
+          <div class="process-sticky" data-reveal>
+            <h2 id="process-title" data-bind="sections.process.heading">Tenang sejak pertemuan pertama.</h2>
+            <p data-bind="sections.process.description">
+              Proses yang jelas memberi Anda ruang untuk menikmati perjalanan, bukan mengejar detail sendirian.
+            </p>
+          </div>
+          <ol class="process-list" data-collection="sections.process.items" data-collection-kind="process"></ol>
+        </div>
+      </section>
+
+      <section class="atelier-section shell" data-section="atelier" aria-labelledby="atelier-title">
+        <figure class="atelier-image" data-reveal>
+          <img
+            data-bind-src="sections.atelier.image"
+            data-bind-alt="sections.atelier.imageAlt"
+            src="assets/images/design-table.webp"
+            alt="Meja desain wedding dengan kain burgundy dan sketsa ballroom"
+            width="1024"
+            height="1536"
+            loading="lazy"
+            decoding="async"
+          />
+        </figure>
+        <div class="atelier-copy" data-reveal>
+          <h2 id="atelier-title" data-bind="sections.atelier.heading">Dari moodboard sampai lampu terakhir menyala.</h2>
+          <p data-bind="sections.atelier.body">
+            Kami menerjemahkan preferensi Anda menjadi konsep yang utuh, lalu menjaganya tetap konsisten pada setiap vendor, material, dan momen.
+          </p>
+          <dl class="atelier-facts">
+            <div>
+              <dt data-bind="sections.atelier.factOneLabel">Cakupan</dt>
+              <dd data-bind="sections.atelier.factOneValue">Seluruh Indonesia</dd>
+            </div>
+            <div>
+              <dt data-bind="sections.atelier.factTwoLabel">Pendekatan</dt>
+              <dd data-bind="sections.atelier.factTwoValue">Planning dan design terpadu</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="testimonials-section" data-section="testimonials" aria-labelledby="testimonials-title">
+        <div class="shell">
+          <h2 id="testimonials-title" data-bind="sections.testimonials.heading">Yang tersisa setelah hari itu berlalu.</h2>
+          <div class="testimonial-track" data-collection="sections.testimonials.items" data-collection-kind="testimonials"></div>
+          <p class="demo-note" data-bind="sections.testimonials.note">Testimoni di bawah adalah contoh dan dapat diganti.</p>
+        </div>
+      </section>
+
+      <section class="faq-section shell" data-section="faq" aria-labelledby="faq-title">
+        <div class="faq-heading" data-reveal>
+          <h2 id="faq-title" data-bind="sections.faq.heading">Hal yang sering ditanyakan.</h2>
+          <p data-bind="sections.faq.description">Jawaban singkat sebelum kita membicarakan perayaan Anda lebih jauh.</p>
+        </div>
+        <div class="faq-list" data-collection="sections.faq.items" data-collection-kind="faq"></div>
+      </section>
+
+      <section id="consultasi" class="contact-section" data-section="contact" aria-labelledby="contact-title">
+        <div class="shell contact-layout">
+          <div class="contact-copy" data-reveal>
+            <p class="section-kicker" data-bind="sections.contact.kicker">Konsultasi awal</p>
+            <h2 id="contact-title" data-bind="sections.contact.heading">Mari mulai dari cerita Anda.</h2>
+            <p data-bind="sections.contact.description">
+              Bagikan tanggal, kota, dan gambaran perayaan. Tim kami akan membantu menyusun langkah pertama yang tepat.
+            </p>
+            <a class="button button-light" href="#" data-whatsapp-link data-bind="sections.contact.whatsappLabel">Chat WhatsApp</a>
+            <div class="contact-details">
+              <a data-email-link href="mailto:hello@maisonroselle.example" data-bind="contact.email">hello@maisonroselle.example</a>
+              <span data-bind="location.address">Melayani seluruh Indonesia</span>
+            </div>
+          </div>
+
+          <form class="consultation-form" data-pagiverse-form="wedding-consultation" novalidate data-reveal>
+            <div class="form-heading">
+              <h3 data-bind="sections.contact.formHeading">Ceritakan rencana perayaan Anda.</h3>
+              <p data-bind="sections.contact.formDescription">Kami akan menghubungi Anda secara pribadi setelah menerima detail awal ini.</p>
+            </div>
+            <div class="form-grid">
+              <div class="form-field form-field-wide">
+                <label for="full-name" data-bind="sections.contact.form.nameLabel">Nama lengkap</label>
+                <input id="full-name" name="name" type="text" autocomplete="name" required maxlength="80" aria-describedby="full-name-error" />
+                <small class="field-error" id="full-name-error"></small>
+              </div>
+              <div class="form-field">
+                <label for="email" data-bind="sections.contact.form.emailLabel">Email</label>
+                <input id="email" name="email" type="email" autocomplete="email" required maxlength="120" aria-describedby="email-error" />
+                <small class="field-error" id="email-error"></small>
+              </div>
+              <div class="form-field">
+                <label for="phone" data-bind="sections.contact.form.phoneLabel">Nomor WhatsApp</label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel" required maxlength="24" aria-describedby="phone-error" />
+                <small class="field-error" id="phone-error"></small>
+              </div>
+              <div class="form-field">
+                <label for="wedding-date" data-bind="sections.contact.form.dateLabel">Tanggal pernikahan</label>
+                <input id="wedding-date" name="weddingDate" type="date" required aria-describedby="wedding-date-error" />
+                <small class="field-error" id="wedding-date-error"></small>
+              </div>
+              <div class="form-field">
+                <label for="city" data-bind="sections.contact.form.cityLabel">Kota</label>
+                <input id="city" name="city" type="text" required maxlength="80" aria-describedby="city-error" />
+                <small class="field-error" id="city-error"></small>
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="guest-count" data-bind="sections.contact.form.guestLabel">Perkiraan jumlah tamu</label>
+                <select id="guest-count" name="guestCount" required aria-describedby="guest-count-error">
+                  <option value="">Pilih perkiraan tamu</option>
+                  <option value="under-300">Di bawah 300 tamu</option>
+                  <option value="300-600">300-600 tamu</option>
+                  <option value="600-1000">600-1.000 tamu</option>
+                  <option value="over-1000">Lebih dari 1.000 tamu</option>
+                </select>
+                <small class="field-error" id="guest-count-error"></small>
+              </div>
+              <div class="form-field form-field-wide">
+                <label for="vision" data-bind="sections.contact.form.visionLabel">Gambaran perayaan</label>
+                <textarea id="vision" name="vision" rows="5" maxlength="600" aria-describedby="vision-help"></textarea>
+                <small class="field-help" id="vision-help" data-bind="sections.contact.form.visionHelp">Ceritakan venue, suasana, atau prioritas yang sudah Anda bayangkan.</small>
+              </div>
+            </div>
+            <button class="button button-primary form-submit" type="submit" data-bind="sections.contact.submitLabel">Kirim permintaan</button>
+            <p class="form-status" data-form-status role="status" aria-live="polite" data-bind="sections.contact.responseNote">
+              Pengiriman formulir akan aktif melalui Pagiverse Core. Untuk respons langsung, gunakan WhatsApp.
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-section="footer">
+      <div class="shell footer-grid">
+        <div>
+          <strong data-bind="business.name">Maison Roselle Weddings</strong>
+          <p data-bind="business.description">Wedding planning dan design untuk grand ballroom wedding di seluruh Indonesia.</p>
+        </div>
+        <div class="footer-links">
+          <a href="#layanan" data-bind="navigation.services.label">Layanan</a>
+          <a href="#karya" data-bind="navigation.portfolio.label">Karya</a>
+          <a href="#consultasi" data-bind="navigation.contact.label">Konsultasi</a>
+          <a href="https://www.instagram.com/" data-instagram-link data-bind="sections.footer.instagramLabel">Instagram</a>
+        </div>
+        <p class="copyright" data-bind="sections.footer.copyright">© 2026 Maison Roselle Weddings. Konten contoh.</p>
+      </div>
+    </footer>
+
+    <noscript>Aktifkan JavaScript untuk menggunakan konfigurasi dan formulir template ini.</noscript>
+    <script src="script.js" defer></script>
+  </body>
+</html>
