@@ -1,0 +1,828 @@
+{
+  "pagiverseStandard": 1,
+  "id": "brew-haven-coffee-001",
+  "name": "Brew Haven Coffee",
+  "category": "restaurant",
+  "description": "Template kedai kopi Indonesia dengan fotografi sinematik, animasi uap, dan ekstensi keranjang demo tanpa checkout.",
+  "price": 1299000,
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html"
+    }
+  ],
+  "dependencies": [],
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "dark",
+    "tokens": {
+      "background": {
+        "editable": false,
+        "default": "#100e09"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#24190f"
+      },
+      "text": {
+        "editable": false,
+        "default": "#f5efe5"
+      },
+      "accent": {
+        "editable": false,
+        "default": "#b88a62"
+      }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "home",
+        "labelField": "navigation.home.label",
+        "target": "#hero",
+        "hideable": false
+      },
+      {
+        "id": "menu",
+        "labelField": "navigation.menu.label",
+        "target": "#products",
+        "hideable": false
+      },
+      {
+        "id": "about",
+        "labelField": "navigation.about.label",
+        "target": "#about",
+        "hideable": true,
+        "section": "about"
+      },
+      {
+        "id": "contact",
+        "labelField": "navigation.contact.label",
+        "target": "#contact",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama kedai",
+      "default": "Brew Haven",
+      "maxLength": 60,
+      "required": true
+    },
+    "business.tagline": {
+      "type": "text",
+      "label": "Tagline",
+      "default": "Kaya rasa. Lembut. Sempurna.",
+      "maxLength": 50
+    },
+    "business.description": {
+      "type": "textarea",
+      "label": "Deskripsi kedai",
+      "default": "Kopi pilihan yang diracik sepenuh hati.",
+      "maxLength": 160
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo kedai",
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "1:1",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/logo.webp",
+        "alt": "Logo Brew Haven",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Foto untuk media sosial",
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "1.91:1",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero.webp",
+        "alt": "Cappuccino Brew Haven",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul halaman",
+      "default": "Brew Haven | Setiap Teguk, Sebuah Cerita",
+      "maxLength": 70
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi pencarian",
+      "default": "Temukan kopi racikan Brew Haven. Biji pilihan, sangrai segar, dan kehangatan dalam setiap cangkir.",
+      "maxLength": 160
+    },
+    "contact.phone": {
+      "type": "phone",
+      "label": "Nomor telepon",
+      "default": "+62 812 0000 0000",
+      "maxLength": 30
+    },
+    "contact.email": {
+      "type": "email",
+      "label": "Alamat email",
+      "default": "halo@brewhaven.example",
+      "maxLength": 100
+    },
+    "location.address": {
+      "type": "text",
+      "label": "Alamat kedai",
+      "default": "Jl. Aroma Kopi No. 12, Jakarta Selatan",
+      "maxLength": 160
+    },
+    "social.instagram": {
+      "type": "url",
+      "label": "Tautan instagram",
+      "default": "",
+      "allowedProtocols": [
+        "https:"
+      ]
+    },
+    "social.facebook": {
+      "type": "url",
+      "label": "Tautan facebook",
+      "default": "",
+      "allowedProtocols": [
+        "https:"
+      ]
+    },
+    "social.youtube": {
+      "type": "url",
+      "label": "Tautan youtube",
+      "default": "",
+      "allowedProtocols": [
+        "https:"
+      ]
+    },
+    "sections.hero.heading": {
+      "type": "text",
+      "label": "Judul baris pertama",
+      "default": "Nikmati Kopi",
+      "maxLength": 36,
+      "required": true
+    },
+    "sections.hero.headingSecond": {
+      "type": "text",
+      "label": "Judul baris kedua",
+      "default": "Dengan Cara",
+      "maxLength": 36
+    },
+    "sections.hero.headingAccent": {
+      "type": "text",
+      "label": "Judul dengan warna aksen",
+      "default": "Berbeda.",
+      "maxLength": 36
+    },
+    "sections.hero.description": {
+      "type": "textarea",
+      "label": "Deskripsi",
+      "default": "Diracik dari biji kopi pilihan, diseduh sepenuh hati untuk menemani harimu.",
+      "maxLength": 160
+    },
+    "sections.hero.primaryCta.label": {
+      "type": "text",
+      "label": "Label tombol",
+      "default": "Jelajahi Menu",
+      "maxLength": 24
+    },
+    "sections.hero.secondaryCta.label": {
+      "type": "text",
+      "label": "Label tombol",
+      "default": "Cerita Kami",
+      "maxLength": 24
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Foto bagian",
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "3:2",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero.webp",
+        "alt": "Cappuccino hangat di atas kayu dengan biji kopi",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.benefits": {
+      "type": "array",
+      "label": "Keunggulan singkat",
+      "minItems": 0,
+      "maxItems": 3,
+      "item": {
+        "fields": {
+          "label": {
+            "type": "text",
+            "label": "Label",
+            "maxLength": 35
+          }
+        }
+      },
+      "default": [
+        {
+          "label": "Biji Kopi Pilihan"
+        },
+        {
+          "label": "Disangrai Ahli"
+        },
+        {
+          "label": "Diracik Sepenuh Hati"
+        }
+      ]
+    },
+    "sections.about.eyebrow": {
+      "type": "text",
+      "label": "Teks pengantar",
+      "default": "Tentang Kami",
+      "maxLength": 40
+    },
+    "sections.about.heading": {
+      "type": "text",
+      "label": "Judul bagian",
+      "default": "Lebih dari Sekadar Secangkir Kopi",
+      "maxLength": 70
+    },
+    "sections.about.body": {
+      "type": "textarea",
+      "label": "Cerita singkat",
+      "default": "Di Brew Haven, kopi bukan sekadar minuman. Setiap cangkir adalah perpaduan dedikasi, kualitas, dan momen yang layak dinikmati.",
+      "maxLength": 320
+    },
+    "sections.about.cta": {
+      "type": "text",
+      "label": "Label tombol",
+      "default": "Kenali Kami",
+      "maxLength": 24
+    },
+    "sections.about.image": {
+      "type": "image",
+      "label": "Foto bagian",
+      "accept": [
+        "image/jpeg",
+        "image/png",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "1:1",
+      "focalPoint": true,
+      "default": {
+        "src": "assets/about.webp",
+        "alt": "Kemasan Brew Haven di meja kedai kopi",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.about.values": {
+      "type": "array",
+      "label": "Nilai kedai",
+      "minItems": 0,
+      "maxItems": 6,
+      "item": {
+        "fields": {
+          "label": {
+            "type": "text",
+            "label": "Nilai",
+            "maxLength": 50
+          }
+        }
+      },
+      "default": [
+        {
+          "label": "Biji dari Sumber Berkelanjutan"
+        },
+        {
+          "label": "Perdagangan yang Adil"
+        },
+        {
+          "label": "Disangrai Segar"
+        },
+        {
+          "label": "Racikan Barista"
+        }
+      ]
+    },
+    "sections.about.storyHeading": {
+      "type": "text",
+      "label": "Judul cerita lengkap",
+      "default": "Dari Biji, Menjadi Cerita",
+      "maxLength": 70
+    },
+    "sections.about.storyBody": {
+      "type": "textarea",
+      "label": "Cerita lengkap",
+      "default": "Brew Haven lahir dari kecintaan pada ritual sederhana: secangkir kopi yang dibuat dengan perhatian. Kami memilih biji dengan karakter yang kaya, menyangrainya dalam batch kecil, dan meracik setiap cangkir untuk memberi ruang bagi percakapan, ide baru, dan jeda yang hangat. Cerita ini adalah contoh yang dapat disesuaikan dengan kedai kamu.",
+      "maxLength": 900
+    },
+    "sections.products.eyebrow": {
+      "type": "text",
+      "label": "Teks pengantar",
+      "default": "Racikan Istimewa Kami",
+      "maxLength": 45
+    },
+    "sections.products.heading": {
+      "type": "text",
+      "label": "Judul bagian",
+      "default": "Pilihan Favorit",
+      "maxLength": 60
+    },
+    "sections.products.cta": {
+      "type": "text",
+      "label": "Label tombol",
+      "default": "Lihat Semua Menu",
+      "maxLength": 24
+    },
+    "sections.products.menuHeading": {
+      "type": "text",
+      "label": "Judul menu lengkap",
+      "default": "Menu Brew Haven",
+      "maxLength": 60
+    },
+    "sections.products.cartEyebrow": {
+      "type": "text",
+      "label": "Pengantar keranjang",
+      "default": "Pilihanmu",
+      "maxLength": 30
+    },
+    "sections.products.cartHeading": {
+      "type": "text",
+      "label": "Judul keranjang",
+      "default": "Keranjang Kopi",
+      "maxLength": 60
+    },
+    "sections.products.totalLabel": {
+      "type": "text",
+      "label": "Label total",
+      "default": "Total",
+      "maxLength": 20
+    },
+    "sections.products.cartNote": {
+      "type": "text",
+      "label": "Catatan keranjang demo",
+      "default": "Keranjang demo untuk menjelajahi menu. Tidak ada pembayaran atau checkout.",
+      "maxLength": 160
+    },
+    "sections.products.continueLabel": {
+      "type": "text",
+      "label": "Tombol lanjut memilih",
+      "default": "Lanjut Pilih Kopi",
+      "maxLength": 24
+    },
+    "sections.products.addLabel": {
+      "type": "text",
+      "label": "Label tambah minuman",
+      "default": "Tambahkan",
+      "maxLength": 24
+    },
+    "sections.products.addedLabel": {
+      "type": "text",
+      "label": "Pesan minuman ditambahkan",
+      "default": "ditambahkan ke keranjang.",
+      "maxLength": 65
+    },
+    "sections.products.removeLabel": {
+      "type": "text",
+      "label": "Tombol hapus",
+      "default": "Hapus",
+      "maxLength": 20
+    },
+    "sections.products.emptyLabel": {
+      "type": "text",
+      "label": "Pesan keranjang kosong",
+      "default": "Keranjang masih kosong. Yuk, pilih kopi favoritmu.",
+      "maxLength": 120
+    },
+    "sections.products.items": {
+      "type": "array",
+      "label": "Daftar minuman",
+      "minItems": 0,
+      "maxItems": 12,
+      "item": {
+        "fields": {
+          "id": {
+            "type": "text",
+            "label": "ID produk",
+            "maxLength": 40
+          },
+          "name": {
+            "type": "text",
+            "label": "Nama minuman",
+            "maxLength": 60
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi",
+            "maxLength": 180
+          },
+          "price": {
+            "type": "text",
+            "label": "Harga Rupiah tanpa pemisah",
+            "maxLength": 12
+          },
+          "image": {
+            "type": "image",
+            "label": "Foto minuman",
+            "accept": [
+              "image/webp",
+              "image/png",
+              "image/jpeg"
+            ],
+            "maxFileSizeMB": 5,
+            "aspectRatio": "4:5",
+            "focalPoint": true
+          }
+        }
+      },
+      "default": [
+        {
+          "id": "latte",
+          "name": "Iced Caramel Latte",
+          "description": "Espresso lembut, karamel, dan susu dingin.",
+          "price": "35000",
+          "image": {
+            "src": "assets/latte.webp",
+            "alt": "Iced Caramel Latte",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "id": "cappuccino",
+          "name": "Cappuccino",
+          "description": "Cappuccino klasik dengan buih susu lembut.",
+          "price": "32000",
+          "image": {
+            "src": "assets/cappuccino.webp",
+            "alt": "Cappuccino",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "id": "mocha",
+          "name": "Mocha",
+          "description": "Espresso, cokelat, dan susu yang hangat.",
+          "price": "38000",
+          "image": {
+            "src": "assets/mocha.webp",
+            "alt": "Mocha",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "id": "espresso",
+          "name": "Espresso",
+          "description": "Kopi pekat dengan karakter yang kaya.",
+          "price": "24000",
+          "image": {
+            "src": "assets/espresso.webp",
+            "alt": "Espresso",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        }
+      ]
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Daftar keunggulan",
+      "minItems": 0,
+      "maxItems": 4,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Judul",
+            "maxLength": 35
+          },
+          "description": {
+            "type": "text",
+            "label": "Deskripsi",
+            "maxLength": 65
+          }
+        }
+      },
+      "default": [
+        {
+          "title": "Pengiriman Gratis",
+          "description": "Contoh: pesanan di atas Rp100rb"
+        },
+        {
+          "title": "Segar & Cepat",
+          "description": "Diracik dengan perhatian"
+        },
+        {
+          "title": "Kualitas Terjaga",
+          "description": "Biji pilihan, rasa istimewa"
+        },
+        {
+          "title": "Hadiah Loyalitas",
+          "description": "Contoh: poin setiap pembelian"
+        }
+      ]
+    },
+    "sections.footer.newsletterHeading": {
+      "type": "text",
+      "label": "Judul newsletter",
+      "default": "Tetap Terhubung",
+      "maxLength": 100
+    },
+    "sections.footer.newsletterBody": {
+      "type": "text",
+      "label": "Deskripsi newsletter",
+      "default": "Dapatkan kabar racikan terbaru, tips kopi, dan penawaran dari Brew Haven.",
+      "maxLength": 200
+    },
+    "sections.footer.emailLabel": {
+      "type": "text",
+      "label": "Label kolom email",
+      "default": "Alamat email",
+      "maxLength": 100
+    },
+    "sections.footer.emailPlaceholder": {
+      "type": "text",
+      "label": "Petunjuk kolom email",
+      "default": "Masukkan email kamu",
+      "maxLength": 100
+    },
+    "sections.footer.followLabel": {
+      "type": "text",
+      "label": "Label media sosial",
+      "default": "Ikuti Kami",
+      "maxLength": 100
+    },
+    "sections.footer.linksHeading": {
+      "type": "text",
+      "label": "Judul navigasi",
+      "default": "Jelajahi",
+      "maxLength": 100
+    },
+    "sections.footer.helpHeading": {
+      "type": "text",
+      "label": "Judul bantuan",
+      "default": "Layanan Pelanggan",
+      "maxLength": 100
+    },
+    "sections.footer.contactHeading": {
+      "type": "text",
+      "label": "Judul kontak",
+      "default": "Hubungi Kami",
+      "maxLength": 100
+    },
+    "sections.footer.storyLabel": {
+      "type": "text",
+      "label": "Tombol cerita",
+      "default": "Cerita Kami",
+      "maxLength": 100
+    },
+    "sections.footer.copyright": {
+      "type": "text",
+      "label": "Hak cipta",
+      "default": "© 2026 Brew Haven. Semua hak dilindungi.",
+      "maxLength": 100
+    },
+    "sections.footer.demoNotice": {
+      "type": "text",
+      "label": "Catatan website demo",
+      "default": "Website demo · Harga dan kontak adalah contoh.",
+      "maxLength": 100
+    },
+    "sections.footer.formUnavailable": {
+      "type": "text",
+      "label": "Pesan integrasi belum aktif",
+      "default": "Newsletter belum terhubung. Integrasi pengiriman dikelola Pagiverse Core.",
+      "maxLength": 200
+    },
+    "sections.footer.formSuccess": {
+      "type": "text",
+      "label": "Pesan berhasil mendaftar",
+      "default": "Terima kasih! Email kamu berhasil didaftarkan.",
+      "maxLength": 200
+    },
+    "sections.footer.formError": {
+      "type": "text",
+      "label": "Pesan gagal mendaftar",
+      "default": "Belum berhasil mendaftar. Silakan coba lagi.",
+      "maxLength": 200
+    },
+    "sections.footer.help": {
+      "type": "array",
+      "label": "Daftar informasi bantuan",
+      "minItems": 0,
+      "maxItems": 8,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Judul bantuan",
+            "maxLength": 45
+          },
+          "body": {
+            "type": "textarea",
+            "label": "Isi bantuan",
+            "maxLength": 1200
+          }
+        }
+      },
+      "default": [
+        {
+          "title": "Pertanyaan Umum",
+          "body": "Menu dan harga di website ini adalah contoh. Pilih minuman lalu gunakan ikon tas untuk mencoba keranjang. Informasi kedai dapat diperbarui di Studio."
+        },
+        {
+          "title": "Pengiriman",
+          "body": "Kebijakan pengiriman ini adalah contoh. Area layanan, biaya, dan jam pengiriman akan ditentukan oleh kedai."
+        },
+        {
+          "title": "Pengembalian",
+          "body": "Kebijakan pengembalian ini adalah contoh. Hubungi kedai jika produk yang diterima tidak sesuai."
+        },
+        {
+          "title": "Syarat & Ketentuan",
+          "body": "Website ini adalah demonstrasi Brew Haven. Keranjang tidak membuat pesanan dan tidak memproses pembayaran."
+        },
+        {
+          "title": "Kebijakan Privasi",
+          "body": "Keranjang demo disimpan di perangkat kamu. Tidak ada data pesanan dikirim. Pengiriman newsletter hanya tersedia jika integrasi Pagiverse Core telah diaktifkan."
+        }
+      ]
+    },
+    "navigation.home.label": {
+      "type": "text",
+      "label": "Navigasi Beranda",
+      "default": "Beranda",
+      "maxLength": 24
+    },
+    "navigation.menu.label": {
+      "type": "text",
+      "label": "Navigasi Menu",
+      "default": "Menu",
+      "maxLength": 24
+    },
+    "navigation.about.label": {
+      "type": "text",
+      "label": "Navigasi Tentang Kami",
+      "default": "Tentang Kami",
+      "maxLength": 24
+    },
+    "navigation.contact.label": {
+      "type": "text",
+      "label": "Navigasi Kontak",
+      "default": "Kontak",
+      "maxLength": 24
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.heading",
+        "sections.hero.headingSecond",
+        "sections.hero.headingAccent",
+        "sections.hero.description",
+        "sections.hero.primaryCta.label",
+        "sections.hero.secondaryCta.label",
+        "sections.hero.image",
+        "sections.hero.benefits"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Tentang Kami",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.eyebrow",
+        "sections.about.heading",
+        "sections.about.body",
+        "sections.about.cta",
+        "sections.about.image",
+        "sections.about.values",
+        "sections.about.storyHeading",
+        "sections.about.storyBody"
+      ]
+    },
+    {
+      "id": "products",
+      "label": "Menu Kopi",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.products.eyebrow",
+        "sections.products.heading",
+        "sections.products.cta",
+        "sections.products.menuHeading",
+        "sections.products.cartEyebrow",
+        "sections.products.cartHeading",
+        "sections.products.totalLabel",
+        "sections.products.cartNote",
+        "sections.products.continueLabel",
+        "sections.products.addLabel",
+        "sections.products.addedLabel",
+        "sections.products.removeLabel",
+        "sections.products.emptyLabel",
+        "sections.products.items"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Keunggulan",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.items"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.footer.newsletterHeading",
+        "sections.footer.newsletterBody",
+        "sections.footer.emailLabel",
+        "sections.footer.emailPlaceholder",
+        "sections.footer.followLabel",
+        "sections.footer.linksHeading",
+        "sections.footer.helpHeading",
+        "sections.footer.contactHeading",
+        "sections.footer.storyLabel",
+        "sections.footer.copyright",
+        "sections.footer.demoNotice",
+        "sections.footer.formUnavailable",
+        "sections.footer.formSuccess",
+        "sections.footer.formError",
+        "sections.footer.help"
+      ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "newsletter",
+      "fields": [
+        {
+          "name": "email",
+          "type": "email",
+          "required": true
+        }
+      ],
+      "handler": "Pagiverse Core"
+    }
+  ],
+  "extensions": {
+    "demoCart": {
+      "enabled": true,
+      "checkout": false,
+      "storage": "localStorage",
+      "standard1Exception": true,
+      "userRequested": true
+    }
+  }
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Brew Haven | Setiap Teguk, Sebuah Cerita</title>
+  <meta name="description" content="Temukan kopi racikan Brew Haven. Biji pilihan, sangrai segar, dan kehangatan dalam setiap cangkir.">
+  <meta property="og:title" content="Brew Haven"><meta property="og:description" content="Setiap teguk, sebuah cerita."><meta property="og:image" content="assets/hero.webp">
+  <link rel="stylesheet" href="style.css"><script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip" href="#products">Lewati ke menu</a>
+  <main>
+    <section id="hero" class="hero" data-section="hero">
+      <img class="hero-image" src="assets/hero.webp" alt="Cappuccino hangat di atas kayu dengan biji kopi" data-bind-src="sections.hero.image" data-bind-alt="sections.hero.image" width="1536" height="1024" fetchpriority="high">
+      <div class="steam" aria-hidden="true"><i></i><i></i><i></i></div>
+      <button class="cart-launch" data-open-cart aria-label="Buka keranjang"><span class="icon" data-icon="bag"></span><span data-cart-count>0</span></button>
+      <div class="hero-content container">
+        <p class="script" data-bind="business.tagline">Kaya rasa. Lembut. Sempurna.</p>
+        <h1><span data-bind="sections.hero.heading">Nikmati Kopi</span><span data-bind="sections.hero.headingSecond">Dengan Cara</span><em data-bind="sections.hero.headingAccent">Berbeda.</em></h1>
+        <p class="description" data-bind="sections.hero.description">Diracik dari biji kopi pilihan, diseduh sepenuh hati untuk menemani harimu.</p>
+        <div class="actions"><a class="button" href="#products"><span data-bind="sections.hero.primaryCta.label">Jelajahi Menu</span><span aria-hidden="true">→</span></a><a class="button outline" href="#about"><span data-bind="sections.hero.secondaryCta.label">Cerita Kami</span><span class="icon" data-icon="play"></span></a></div>
+        <div class="hero-benefits" data-list="sections.hero.benefits"></div>
+      </div>
+    </section>
+    <section id="about" class="about" data-section="about">
+      <div class="about-photo" data-reveal><img src="assets/about.webp" alt="Kemasan Brew Haven di meja kedai kopi" data-bind-src="sections.about.image" data-bind-alt="sections.about.image" width="1024" height="1024" loading="lazy"></div>
+      <div class="about-copy" data-reveal><p class="script" data-bind="sections.about.eyebrow">Tentang Kami</p><h2 data-bind="sections.about.heading">Lebih dari Sekadar Secangkir Kopi</h2><p class="description" data-bind="sections.about.body">Di Brew Haven, kopi bukan sekadar minuman. Setiap cangkir adalah perpaduan dedikasi, kualitas, dan momen yang layak dinikmati.</p><ul class="about-values" data-list="sections.about.values"></ul><button class="button" data-open-story><span data-bind="sections.about.cta">Kenali Kami</span><span aria-hidden="true">→</span></button></div>
+    </section>
+    <section id="products" class="products container" data-section="products">
+      <header class="section-heading" data-reveal><p class="script" data-bind="sections.products.eyebrow">Racikan Istimewa Kami</p><h2 data-bind="sections.products.heading">Pilihan Favorit</h2><span class="heading-ornament" aria-hidden="true">❧</span></header>
+      <div class="product-carousel"><button class="carousel-arrow prev" data-slide="-1" aria-label="Menu sebelumnya">‹</button><div class="product-grid" id="product-grid"></div><button class="carousel-arrow next" data-slide="1" aria-label="Menu berikutnya">›</button></div>
+      <div class="menu-action"><button class="button outline" data-open-menu><span data-bind="sections.products.cta">Lihat Semua Menu</span><span aria-hidden="true">→</span></button></div>
+    </section>
+    <section id="services" class="service-strip container" data-section="services" aria-label="Keunggulan Brew Haven" data-list="sections.services.items"></section>
+  </main>
+  <footer id="footer" class="footer container" data-section="footer">
+    <div class="footer-grid">
+      <div class="newsletter"><h3 data-bind="sections.footer.newsletterHeading">Tetap Terhubung</h3><p data-bind="sections.footer.newsletterBody">Dapatkan kabar racikan terbaru, tips kopi, dan penawaran dari Brew Haven.</p><form data-pagiverse-form="newsletter"><label class="sr-only" for="email" data-bind="sections.footer.emailLabel">Alamat email</label><div class="email-field"><input type="email" id="email" name="email" placeholder="Masukkan email kamu" required maxlength="120" autocomplete="email"><button type="submit" aria-label="Daftar newsletter">→</button></div><p class="form-status" role="status"></p></form><div class="social-links"><span data-bind="sections.footer.followLabel">Ikuti Kami</span><a data-social="instagram" aria-label="Instagram"><span data-icon="instagram" class="icon"></span></a><a data-social="facebook" aria-label="Facebook"><span data-icon="facebook" class="icon"></span></a><a data-social="youtube" aria-label="YouTube"><span data-icon="youtube" class="icon"></span></a></div></div>
+      <nav aria-label="Navigasi footer"><h3 data-bind="sections.footer.linksHeading">Jelajahi</h3><a href="#hero" data-nav="home">Beranda</a><a href="#products" data-nav="menu">Menu</a><a href="#about" data-nav="about">Tentang Kami</a><button data-open-story data-bind="sections.footer.storyLabel">Cerita Kami</button><a href="#contact" data-nav="contact">Kontak</a></nav>
+      <div><h3 data-bind="sections.footer.helpHeading">Layanan Pelanggan</h3><div class="help-links" data-help-list></div></div>
+      <address id="contact"><h3 data-bind="sections.footer.contactHeading">Hubungi Kami</h3><a data-contact="phone"><span class="icon" data-icon="phone"></span><span data-bind="contact.phone">+62 812 0000 0000</span></a><a data-contact="email"><span class="icon" data-icon="mail"></span><span data-bind="contact.email">halo@brewhaven.example</span></a><p><span class="icon" data-icon="pin"></span><span data-bind="location.address">Jl. Aroma Kopi No. 12, Jakarta Selatan</span></p></address>
+    </div>
+    <div class="footer-bottom"><img class="brand-mark" src="assets/logo.webp" alt="Logo Brew Haven" data-bind-src="business.logo" data-bind-alt="business.logo" width="40" height="40" loading="lazy"><span data-bind="sections.footer.copyright">© 2026 Brew Haven. Semua hak dilindungi.</span><span data-bind="sections.footer.demoNotice">Website demo · Harga dan kontak adalah contoh.</span><a href="#hero" aria-label="Kembali ke atas">↑</a></div>
+  </footer>
+  <dialog id="cart-dialog" class="cart-dialog"><div class="dialog-top"><div><p class="script" data-bind="sections.products.cartEyebrow">Pilihanmu</p><h2 data-bind="sections.products.cartHeading">Keranjang Kopi</h2></div><button class="close" data-close aria-label="Tutup keranjang">×</button></div><div id="cart-items"></div><div class="cart-total"><span data-bind="sections.products.totalLabel">Total</span><strong id="cart-total">Rp0</strong></div><p class="dialog-note" data-bind="sections.products.cartNote">Keranjang demo untuk menjelajahi menu. Tidak ada pembayaran atau checkout.</p><button class="button full" data-close data-bind="sections.products.continueLabel">Lanjut Pilih Kopi</button></dialog>
+  <dialog id="menu-dialog" class="menu-dialog"><div class="dialog-top"><div><p class="script" data-bind="sections.products.eyebrow">Racikan Istimewa Kami</p><h2 data-bind="sections.products.menuHeading">Menu Brew Haven</h2></div><button class="close" data-close aria-label="Tutup menu">×</button></div><div id="full-menu"></div></dialog>
+  <dialog id="info-dialog"><div class="dialog-top"><h2 id="info-heading"></h2><button class="close" data-close aria-label="Tutup informasi">×</button></div><p id="info-body" class="description"></p></dialog>
+  <div class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
