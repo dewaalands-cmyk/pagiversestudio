@@ -2444,6 +2444,1122 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "aurea-aesthetic-clinic-001",
+      "name": "Auréa Aesthetic Clinic",
+      "category": "beauty-clinic",
+      "description": "Template klinik kecantikan premium lima halaman dengan palet espresso dan warm cream, katalog treatment, profil dokter, WhatsApp, dan formulir reservasi.",
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html",
+          "seo": {
+            "titleField": "seo.title",
+            "descriptionField": "seo.description"
+          }
+        },
+        {
+          "id": "services",
+          "path": "/treatment",
+          "entry": "treatment.html",
+          "seo": {
+            "titleField": "seo.pages.services.title",
+            "descriptionField": "seo.pages.services.description"
+          }
+        },
+        {
+          "id": "about",
+          "path": "/tentang",
+          "entry": "tentang.html",
+          "seo": {
+            "titleField": "seo.pages.about.title",
+            "descriptionField": "seo.pages.about.description"
+          }
+        },
+        {
+          "id": "team",
+          "path": "/dokter",
+          "entry": "dokter.html",
+          "seo": {
+            "titleField": "seo.pages.team.title",
+            "descriptionField": "seo.pages.team.description"
+          }
+        },
+        {
+          "id": "contact",
+          "path": "/kontak",
+          "entry": "kontak.html",
+          "seo": {
+            "titleField": "seo.pages.contact.title",
+            "descriptionField": "seo.pages.contact.description"
+          }
+        }
+      ],
+      "dependencies": [],
+      "languages": {
+        "supported": [
+          "id"
+        ],
+        "default": "id"
+      },
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "light",
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#34251F"
+          },
+          "secondary": {
+            "editable": false,
+            "default": "#6B5144"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#765642"
+          },
+          "background": {
+            "editable": false,
+            "default": "#F5EFE6"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#EBE2D6"
+          },
+          "text": {
+            "editable": false,
+            "default": "#34251F"
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "home",
+            "labelField": "navigation.home.label",
+            "target": "index.html",
+            "hideable": false
+          },
+          {
+            "id": "services",
+            "labelField": "navigation.services.label",
+            "target": "treatment.html",
+            "hideable": false
+          },
+          {
+            "id": "about",
+            "labelField": "navigation.about.label",
+            "target": "tentang.html",
+            "hideable": false
+          },
+          {
+            "id": "team",
+            "labelField": "navigation.team.label",
+            "target": "dokter.html",
+            "hideable": false
+          },
+          {
+            "id": "contact",
+            "labelField": "navigation.contact.label",
+            "target": "kontak.html",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama klinik",
+          "maxLength": 60,
+          "default": "Auréa Aesthetic Clinic"
+        },
+        "business.wordmark": {
+          "type": "text",
+          "label": "Nama pendek",
+          "maxLength": 24,
+          "default": "Auréa"
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Tagline",
+          "maxLength": 60,
+          "default": "Klinik Estetika Bandung"
+        },
+        "business.description": {
+          "type": "textarea",
+          "label": "Deskripsi",
+          "maxLength": 280,
+          "default": "Ruang perawatan kulit dan estetika medis yang tenang, personal, dan berpusat pada kebutuhan Anda."
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 3,
+          "focalPoint": false
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "WhatsApp (contoh)",
+          "default": "+6281234567890"
+        },
+        "contact.phone": {
+          "type": "phone",
+          "label": "Telepon (contoh)",
+          "default": "+6281234567890"
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Email (contoh)",
+          "default": "hello@aurea.example",
+          "maxLength": 120
+        },
+        "contact.whatsappMessage": {
+          "type": "textarea",
+          "label": "Pesan WhatsApp",
+          "maxLength": 220,
+          "default": "Halo Auréa, saya ingin konsultasi dan mengetahui jadwal treatment."
+        },
+        "location.address": {
+          "type": "textarea",
+          "label": "Alamat",
+          "maxLength": 180,
+          "default": "Jl. Ciumbuleuit No. 88, Bandung (alamat contoh)"
+        },
+        "location.hours": {
+          "type": "text",
+          "label": "Jam operasional",
+          "maxLength": 80,
+          "default": "Senin–Sabtu, 09.00–18.00"
+        },
+        "location.mapsUrl": {
+          "type": "url",
+          "label": "Peta",
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "https://www.google.com/maps/search/?api=1&query=Ciumbuleuit%20Bandung"
+        },
+        "navigation.home.label": {
+          "type": "text",
+          "label": "Navigasi Beranda",
+          "maxLength": 24,
+          "default": "Beranda"
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "SEO Beranda",
+          "maxLength": 80,
+          "default": "Beranda | Auréa Aesthetic Clinic Bandung"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Beranda",
+          "maxLength": 160,
+          "default": "Template klinik kecantikan premium di Bandung. Jelajahi perawatan kulit, estetika medis, dan konsultasi personal."
+        },
+        "navigation.services.label": {
+          "type": "text",
+          "label": "Navigasi Treatment",
+          "maxLength": 24,
+          "default": "Treatment"
+        },
+        "seo.pages.services.title": {
+          "type": "text",
+          "label": "SEO Treatment",
+          "maxLength": 80,
+          "default": "Treatment | Auréa Aesthetic Clinic Bandung"
+        },
+        "seo.pages.services.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Treatment",
+          "maxLength": 160,
+          "default": "Template klinik kecantikan premium di Bandung. Jelajahi perawatan kulit, estetika medis, dan konsultasi personal."
+        },
+        "navigation.about.label": {
+          "type": "text",
+          "label": "Navigasi Tentang Klinik",
+          "maxLength": 24,
+          "default": "Tentang Klinik"
+        },
+        "seo.pages.about.title": {
+          "type": "text",
+          "label": "SEO Tentang Klinik",
+          "maxLength": 80,
+          "default": "Tentang Klinik | Auréa Aesthetic Clinic Bandung"
+        },
+        "seo.pages.about.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Tentang Klinik",
+          "maxLength": 160,
+          "default": "Template klinik kecantikan premium di Bandung. Jelajahi perawatan kulit, estetika medis, dan konsultasi personal."
+        },
+        "navigation.team.label": {
+          "type": "text",
+          "label": "Navigasi Dokter",
+          "maxLength": 24,
+          "default": "Dokter"
+        },
+        "seo.pages.team.title": {
+          "type": "text",
+          "label": "SEO Dokter",
+          "maxLength": 80,
+          "default": "Dokter | Auréa Aesthetic Clinic Bandung"
+        },
+        "seo.pages.team.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Dokter",
+          "maxLength": 160,
+          "default": "Template klinik kecantikan premium di Bandung. Jelajahi perawatan kulit, estetika medis, dan konsultasi personal."
+        },
+        "navigation.contact.label": {
+          "type": "text",
+          "label": "Navigasi Kontak",
+          "maxLength": 24,
+          "default": "Kontak"
+        },
+        "seo.pages.contact.title": {
+          "type": "text",
+          "label": "SEO Kontak",
+          "maxLength": 80,
+          "default": "Kontak | Auréa Aesthetic Clinic Bandung"
+        },
+        "seo.pages.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO Kontak",
+          "maxLength": 160,
+          "default": "Template klinik kecantikan premium di Bandung. Jelajahi perawatan kulit, estetika medis, dan konsultasi personal."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "seo.ogImage",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "crop": true,
+          "default": {
+            "src": "assets/images/interior.webp",
+            "alt": "Interior contoh Auréa",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "sections.hero.image",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "crop": true,
+          "default": {
+            "src": "assets/images/interior.webp",
+            "alt": "Interior klinik contoh dengan kayu espresso dan travertine cream",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "sections.about.image",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "crop": true,
+          "default": {
+            "src": "assets/images/treatment.webp",
+            "alt": "Ilustrasi perawatan facial dalam ruang yang tenang",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.gallery.image": {
+          "type": "image",
+          "label": "sections.gallery.image",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "crop": true,
+          "default": {
+            "src": "assets/images/interior.webp",
+            "alt": "Ruang konsultasi dan penerimaan contoh",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.team.image": {
+          "type": "image",
+          "label": "sections.team.image",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "crop": true,
+          "default": {
+            "src": "assets/images/doctor.webp",
+            "alt": "Potret dokter fiktif untuk demonstrasi template",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.hero.heading": {
+          "type": "text",
+          "label": "hero · heading",
+          "maxLength": 100,
+          "default": "Kecantikan, dengan\npendekatan personal."
+        },
+        "sections.hero.description": {
+          "type": "text",
+          "label": "hero · description",
+          "maxLength": 420,
+          "default": "Perawatan kulit dan estetika medis dalam ruang yang tenang, dirancang untuk kebutuhan Anda."
+        },
+        "sections.hero.eyebrow": {
+          "type": "text",
+          "label": "hero · eyebrow",
+          "maxLength": 420,
+          "default": "Auréa Aesthetic Clinic · Bandung"
+        },
+        "sections.hero.primaryCta": {
+          "type": "text",
+          "label": "hero · primaryCta",
+          "maxLength": 60,
+          "default": "Jadwalkan Konsultasi"
+        },
+        "sections.hero.secondaryCta": {
+          "type": "text",
+          "label": "hero · secondaryCta",
+          "maxLength": 60,
+          "default": "Jelajahi Treatment"
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "about · heading",
+          "maxLength": 100,
+          "default": "Ruang untuk merawat\ndiri, sepenuhnya."
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "about · body",
+          "maxLength": 420,
+          "default": "Kami percaya bahwa perawatan yang baik dimulai dari percakapan. Di Auréa, kebutuhan kulit, kenyamanan, dan preferensi Anda menjadi dasar setiap rencana perawatan."
+        },
+        "sections.about.link": {
+          "type": "text",
+          "label": "about · link",
+          "maxLength": 420,
+          "default": "Mengenal Auréa"
+        },
+        "sections.about.pageHeading": {
+          "type": "text",
+          "label": "about · pageHeading",
+          "maxLength": 100,
+          "default": "Perawatan personal.\nDalam ruang yang tenang."
+        },
+        "sections.about.pageDescription": {
+          "type": "text",
+          "label": "about · pageDescription",
+          "maxLength": 420,
+          "default": "Auréa menghadirkan pengalaman klinik butik dengan pendekatan yang hangat dan perhatian pada setiap detail."
+        },
+        "sections.about.valuesHeading": {
+          "type": "text",
+          "label": "about · valuesHeading",
+          "maxLength": 100,
+          "default": "Perhatian pada hal yang berarti."
+        },
+        "sections.services.heading": {
+          "type": "text",
+          "label": "services · heading",
+          "maxLength": 100,
+          "default": "Perawatan pilihan,\nuntuk kebutuhan Anda."
+        },
+        "sections.services.description": {
+          "type": "text",
+          "label": "services · description",
+          "maxLength": 420,
+          "default": "Dari ritual facial hingga estetika medis, temukan pilihan yang dapat dibahas bersama dokter."
+        },
+        "sections.services.pageHeading": {
+          "type": "text",
+          "label": "services · pageHeading",
+          "maxLength": 100,
+          "default": "Pilihan perawatan.\nSatu pendekatan personal."
+        },
+        "sections.services.pageDescription": {
+          "type": "text",
+          "label": "services · pageDescription",
+          "maxLength": 420,
+          "default": "Jelajahi perawatan kulit dan estetika medis, lalu diskusikan pilihan yang sesuai melalui konsultasi."
+        },
+        "sections.services.priceNote": {
+          "type": "textarea",
+          "label": "services · priceNote",
+          "maxLength": 420,
+          "default": "Harga merupakan contoh, mulai dari, dan dapat berubah. Rencana, biaya akhir, serta kelayakan tindakan dikonfirmasi setelah konsultasi."
+        },
+        "sections.services.allLabel": {
+          "type": "text",
+          "label": "services · allLabel",
+          "maxLength": 60,
+          "default": "Semua"
+        },
+        "sections.services.skinLabel": {
+          "type": "text",
+          "label": "services · skinLabel",
+          "maxLength": 60,
+          "default": "Perawatan Kulit"
+        },
+        "sections.services.medicalLabel": {
+          "type": "text",
+          "label": "services · medicalLabel",
+          "maxLength": 60,
+          "default": "Estetika Medis"
+        },
+        "sections.services.emptyLabel": {
+          "type": "text",
+          "label": "services · emptyLabel",
+          "maxLength": 60,
+          "default": "Belum ada treatment dalam kategori ini."
+        },
+        "sections.services.link": {
+          "type": "text",
+          "label": "services · link",
+          "maxLength": 420,
+          "default": "Lihat Semua Treatment"
+        },
+        "sections.team.heading": {
+          "type": "text",
+          "label": "team · heading",
+          "maxLength": 100,
+          "default": "Percakapan yang baik\nmendahului perawatan."
+        },
+        "sections.team.description": {
+          "type": "text",
+          "label": "team · description",
+          "maxLength": 420,
+          "default": "Kenali pendekatan, diskusikan kebutuhan, dan luangkan waktu untuk memahami pilihan Anda."
+        },
+        "sections.team.name": {
+          "type": "text",
+          "label": "team · name",
+          "maxLength": 420,
+          "default": "dr. Nadira Putri (contoh)"
+        },
+        "sections.team.role": {
+          "type": "text",
+          "label": "team · role",
+          "maxLength": 420,
+          "default": "Dokter estetika · profil fiktif"
+        },
+        "sections.team.body": {
+          "type": "textarea",
+          "label": "team · body",
+          "maxLength": 420,
+          "default": "Profil ini adalah contoh untuk template. Ganti dengan dokter klinik, kualifikasi yang terverifikasi, dan foto yang telah mendapat izin sebelum digunakan."
+        },
+        "sections.team.link": {
+          "type": "text",
+          "label": "team · link",
+          "maxLength": 420,
+          "default": "Kenali Dokter"
+        },
+        "sections.team.pageHeading": {
+          "type": "text",
+          "label": "team · pageHeading",
+          "maxLength": 100,
+          "default": "Pendamping untuk\nperjalanan kulit Anda."
+        },
+        "sections.team.pageDescription": {
+          "type": "text",
+          "label": "team · pageDescription",
+          "maxLength": 420,
+          "default": "Konsultasi memberi ruang untuk membicarakan kebutuhan, riwayat, serta pilihan perawatan dengan jelas."
+        },
+        "sections.gallery.heading": {
+          "type": "text",
+          "label": "gallery · heading",
+          "maxLength": 100,
+          "default": "Ketenangan, dalam setiap detail."
+        },
+        "sections.gallery.description": {
+          "type": "text",
+          "label": "gallery · description",
+          "maxLength": 420,
+          "default": "Material hangat, cahaya lembut, dan ruang yang privat membentuk pengalaman kunjungan Anda."
+        },
+        "sections.cta.heading": {
+          "type": "text",
+          "label": "cta · heading",
+          "maxLength": 100,
+          "default": "Awali dengan\nsebuah percakapan."
+        },
+        "sections.cta.description": {
+          "type": "text",
+          "label": "cta · description",
+          "maxLength": 420,
+          "default": "Ceritakan kebutuhan Anda. Kami membantu menyiapkan jadwal konsultasi yang nyaman."
+        },
+        "sections.cta.primaryCta": {
+          "type": "text",
+          "label": "cta · primaryCta",
+          "maxLength": 60,
+          "default": "Reservasi Konsultasi"
+        },
+        "sections.contact.heading": {
+          "type": "text",
+          "label": "contact · heading",
+          "maxLength": 100,
+          "default": "Kami siap\nmenyambut Anda."
+        },
+        "sections.contact.description": {
+          "type": "text",
+          "label": "contact · description",
+          "maxLength": 420,
+          "default": "Pilih WhatsApp untuk percakapan langsung atau isi formulir permintaan reservasi."
+        },
+        "sections.contact.formHeading": {
+          "type": "text",
+          "label": "contact · formHeading",
+          "maxLength": 100,
+          "default": "Permintaan reservasi"
+        },
+        "sections.contact.formDescription": {
+          "type": "text",
+          "label": "contact · formDescription",
+          "maxLength": 420,
+          "default": "Jadwal belum dikonfirmasi sampai admin menghubungi Anda."
+        },
+        "sections.contact.nameLabel": {
+          "type": "text",
+          "label": "contact · nameLabel",
+          "maxLength": 60,
+          "default": "Nama lengkap"
+        },
+        "sections.contact.phoneLabel": {
+          "type": "text",
+          "label": "contact · phoneLabel",
+          "maxLength": 60,
+          "default": "Nomor WhatsApp"
+        },
+        "sections.contact.serviceLabel": {
+          "type": "text",
+          "label": "contact · serviceLabel",
+          "maxLength": 60,
+          "default": "Pilihan treatment"
+        },
+        "sections.contact.dateLabel": {
+          "type": "text",
+          "label": "contact · dateLabel",
+          "maxLength": 60,
+          "default": "Tanggal yang diinginkan"
+        },
+        "sections.contact.noteLabel": {
+          "type": "text",
+          "label": "contact · noteLabel",
+          "maxLength": 60,
+          "default": "Catatan (opsional)"
+        },
+        "sections.contact.consentLabel": {
+          "type": "text",
+          "label": "contact · consentLabel",
+          "maxLength": 60,
+          "default": "Saya bersedia dihubungi terkait permintaan reservasi ini."
+        },
+        "sections.contact.submitLabel": {
+          "type": "text",
+          "label": "contact · submitLabel",
+          "maxLength": 60,
+          "default": "Kirim Permintaan"
+        },
+        "sections.contact.waLabel": {
+          "type": "text",
+          "label": "contact · waLabel",
+          "maxLength": 60,
+          "default": "Hubungi via WhatsApp"
+        },
+        "sections.contact.mapLabel": {
+          "type": "text",
+          "label": "contact · mapLabel",
+          "maxLength": 60,
+          "default": "Petunjuk Arah"
+        },
+        "sections.contact.optionLabel": {
+          "type": "text",
+          "label": "contact · optionLabel",
+          "maxLength": 60,
+          "default": "Konsultasi terlebih dahulu"
+        },
+        "sections.contact.demoStatus": {
+          "type": "text",
+          "label": "contact · demoStatus",
+          "maxLength": 420,
+          "default": "Mode demo: permintaan belum tersimpan. Lanjutkan melalui WhatsApp untuk mengirim detail ke admin."
+        },
+        "sections.contact.demoAction": {
+          "type": "text",
+          "label": "contact · demoAction",
+          "maxLength": 420,
+          "default": "Lanjutkan di WhatsApp"
+        },
+        "sections.contact.coreStatus": {
+          "type": "text",
+          "label": "contact · coreStatus",
+          "maxLength": 420,
+          "default": "Permintaan diserahkan ke sistem reservasi. Tunggu konfirmasi dari admin."
+        },
+        "sections.contact.successStatus": {
+          "type": "text",
+          "label": "contact · successStatus",
+          "maxLength": 420,
+          "default": "Permintaan terkirim. Admin akan menghubungi Anda untuk konfirmasi."
+        },
+        "sections.contact.errorStatus": {
+          "type": "text",
+          "label": "contact · errorStatus",
+          "maxLength": 420,
+          "default": "Permintaan belum terkirim. Silakan coba kembali atau hubungi WhatsApp."
+        },
+        "sections.faq.heading": {
+          "type": "text",
+          "label": "faq · heading",
+          "maxLength": 100,
+          "default": "Sebelum kunjungan Anda."
+        },
+        "sections.footer.copyright": {
+          "type": "text",
+          "label": "footer · copyright",
+          "maxLength": 420,
+          "default": "© 2026 Auréa Aesthetic Clinic."
+        },
+        "sections.footer.demoNote": {
+          "type": "text",
+          "label": "footer · demoNote",
+          "maxLength": 420,
+          "default": "Template demo. Nama, dokter, foto AI, harga, alamat, dan kontak adalah contoh."
+        },
+        "sections.footer.privacyNote": {
+          "type": "text",
+          "label": "footer · privacyNote",
+          "maxLength": 420,
+          "default": "Jangan cantumkan informasi medis sensitif dalam formulir reservasi."
+        },
+        "sections.services.items": {
+          "type": "array",
+          "label": "sections.services.items",
+          "minItems": 0,
+          "maxItems": 12,
+          "default": [
+            {
+              "name": "Auréa Signature Facial",
+              "category": "skin",
+              "description": "Ritual pembersihan dan perawatan kulit dengan sentuhan personal.",
+              "price": "Mulai Rp450.000",
+              "duration": "60 menit",
+              "image": {
+                "src": "assets/images/treatment.webp",
+                "alt": "Perawatan facial contoh",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              }
+            },
+            {
+              "name": "Hydration & Barrier Care",
+              "category": "skin",
+              "description": "Perawatan kulit dengan fokus pada kelembapan dan kenyamanan.",
+              "price": "Mulai Rp650.000",
+              "duration": "60 menit",
+              "image": {
+                "src": "assets/images/treatment.webp",
+                "alt": "Ilustrasi perawatan kelembapan",
+                "focalPoint": {
+                  "x": 70,
+                  "y": 50
+                }
+              }
+            },
+            {
+              "name": "Acne Care Consultation",
+              "category": "skin",
+              "description": "Konsultasi kebutuhan kulit berjerawat dan rencana perawatan.",
+              "price": "Mulai Rp250.000",
+              "duration": "30 menit",
+              "image": {
+                "src": "assets/images/doctor.webp",
+                "alt": "Dokter contoh untuk konsultasi",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 30
+                }
+              }
+            },
+            {
+              "name": "Laser Skin Consultation",
+              "category": "medical",
+              "description": "Diskusi pilihan perawatan laser setelah evaluasi oleh dokter.",
+              "price": "Mulai Rp950.000",
+              "duration": "Sesuai konsultasi",
+              "image": {
+                "src": "assets/images/interior.webp",
+                "alt": "Ruang perawatan contoh",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              }
+            },
+            {
+              "name": "Skin Rejuvenation",
+              "category": "medical",
+              "description": "Pilihan estetika medis disusun berdasarkan hasil konsultasi.",
+              "price": "Mulai Rp1.500.000",
+              "duration": "Sesuai konsultasi",
+              "image": {
+                "src": "assets/images/treatment.webp",
+                "alt": "Ilustrasi perawatan estetika",
+                "focalPoint": {
+                  "x": 30,
+                  "y": 50
+                }
+              }
+            },
+            {
+              "name": "Injectable Consultation",
+              "category": "medical",
+              "description": "Konsultasi mengenai pilihan tindakan, risiko, dan ekspektasi.",
+              "price": "Mulai Rp300.000",
+              "duration": "30 menit",
+              "image": {
+                "src": "assets/images/doctor.webp",
+                "alt": "Potret dokter fiktif",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 30
+                }
+              }
+            }
+          ],
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "maxLength": 60
+              },
+              "category": {
+                "type": "select",
+                "options": [
+                  "skin",
+                  "medical"
+                ]
+              },
+              "description": {
+                "type": "textarea",
+                "maxLength": 180
+              },
+              "price": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "duration": {
+                "type": "text",
+                "maxLength": 40
+              },
+              "image": {
+                "type": "image",
+                "focalPoint": true,
+                "accept": [
+                  "image/webp",
+                  "image/jpeg",
+                  "image/png"
+                ],
+                "maxFileSizeMB": 5
+              }
+            }
+          }
+        },
+        "sections.about.items": {
+          "type": "array",
+          "label": "sections.about.items",
+          "minItems": 0,
+          "maxItems": 6,
+          "default": [
+            {
+              "name": "Konsultasi personal",
+              "description": "Percakapan tentang kebutuhan dan preferensi Anda menjadi langkah pertama."
+            },
+            {
+              "name": "Pilihan yang jelas",
+              "description": "Pahami rencana, biaya, dan hal yang perlu dipertimbangkan sebelum memutuskan."
+            },
+            {
+              "name": "Kenyamanan yang dijaga",
+              "description": "Ruang tenang dan perhatian pada privasi untuk pengalaman yang lebih nyaman."
+            }
+          ],
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "maxLength": 60
+              },
+              "description": {
+                "type": "textarea",
+                "maxLength": 180
+              }
+            }
+          }
+        },
+        "sections.faq.items": {
+          "type": "array",
+          "label": "sections.faq.items",
+          "minItems": 0,
+          "maxItems": 8,
+          "default": [
+            {
+              "question": "Apakah perlu konsultasi sebelum treatment?",
+              "answer": "Konsultasi membantu menentukan pilihan. Tindakan estetika medis memerlukan evaluasi dokter terlebih dahulu."
+            },
+            {
+              "question": "Apakah harga yang ditampilkan sudah final?",
+              "answer": "Harga di template ini adalah contoh mulai dari. Biaya akhir ditentukan berdasarkan kebutuhan dan rencana perawatan."
+            },
+            {
+              "question": "Bagaimana cara menjadwalkan kunjungan?",
+              "answer": "Hubungi WhatsApp atau isi permintaan reservasi. Admin akan mengonfirmasi jadwal yang tersedia."
+            }
+          ],
+          "item": {
+            "fields": {
+              "question": {
+                "type": "text",
+                "maxLength": 120
+              },
+              "answer": {
+                "type": "textarea",
+                "maxLength": 350
+              }
+            }
+          }
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.image",
+            "sections.hero.heading",
+            "sections.hero.description",
+            "sections.hero.eyebrow",
+            "sections.hero.primaryCta",
+            "sections.hero.secondaryCta"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "about",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.image",
+            "sections.about.heading",
+            "sections.about.body",
+            "sections.about.link",
+            "sections.about.pageHeading",
+            "sections.about.pageDescription",
+            "sections.about.valuesHeading",
+            "sections.about.items"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "services",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.services.heading",
+            "sections.services.description",
+            "sections.services.pageHeading",
+            "sections.services.pageDescription",
+            "sections.services.priceNote",
+            "sections.services.allLabel",
+            "sections.services.skinLabel",
+            "sections.services.medicalLabel",
+            "sections.services.emptyLabel",
+            "sections.services.link",
+            "sections.services.items"
+          ]
+        },
+        {
+          "id": "team",
+          "label": "team",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.team.image",
+            "sections.team.heading",
+            "sections.team.description",
+            "sections.team.name",
+            "sections.team.role",
+            "sections.team.body",
+            "sections.team.link",
+            "sections.team.pageHeading",
+            "sections.team.pageDescription"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "gallery",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.image",
+            "sections.gallery.heading",
+            "sections.gallery.description"
+          ]
+        },
+        {
+          "id": "cta",
+          "label": "cta",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.cta.heading",
+            "sections.cta.description",
+            "sections.cta.primaryCta"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "contact",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.contact.heading",
+            "sections.contact.description",
+            "sections.contact.formHeading",
+            "sections.contact.formDescription",
+            "sections.contact.nameLabel",
+            "sections.contact.phoneLabel",
+            "sections.contact.serviceLabel",
+            "sections.contact.dateLabel",
+            "sections.contact.noteLabel",
+            "sections.contact.consentLabel",
+            "sections.contact.submitLabel",
+            "sections.contact.waLabel",
+            "sections.contact.mapLabel",
+            "sections.contact.optionLabel",
+            "sections.contact.demoStatus",
+            "sections.contact.demoAction",
+            "sections.contact.coreStatus",
+            "sections.contact.successStatus",
+            "sections.contact.errorStatus"
+          ]
+        },
+        {
+          "id": "faq",
+          "label": "faq",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.faq.heading",
+            "sections.faq.items"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.copyright",
+            "sections.footer.demoNote",
+            "sections.footer.privacyNote"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "id": "reservation",
+          "owner": "pagiverse-core",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "required": true,
+              "maxLength": 80
+            },
+            {
+              "name": "phone",
+              "type": "tel",
+              "required": true,
+              "maxLength": 24
+            },
+            {
+              "name": "service",
+              "type": "select",
+              "required": true
+            },
+            {
+              "name": "date",
+              "type": "date",
+              "required": true
+            },
+            {
+              "name": "note",
+              "type": "textarea",
+              "maxLength": 400
+            },
+            {
+              "name": "consent",
+              "type": "checkbox",
+              "required": true
+            }
+          ]
+        }
+      ],
+      "publicPath": "/template-library/aurea-aesthetic-clinic-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "casa-braci-heritage-001",
       "name": "Casa Braci Heritage",
       "category": "restaurant",
