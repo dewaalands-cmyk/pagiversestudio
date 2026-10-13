@@ -2,7 +2,7 @@
   "pagiverseStandard": 1,
   "id": "aurea-aesthetic-clinic-001",
   "name": "Auréa Aesthetic Clinic",
-  "category": "beauty-clinic",
+  "category": "services",
   "description": "Template klinik kecantikan premium lima halaman dengan palet espresso dan warm cream, katalog treatment, profil dokter, WhatsApp, dan formulir reservasi.",
   "entry": "index.html",
   "thumbnail": "thumbnail.webp",
@@ -309,7 +309,8 @@
         "focalPoint": {
           "x": 50,
           "y": 50
-        }
+        },
+        "altId": "Interior contoh Auréa"
       }
     },
     "sections.hero.image": {
@@ -329,7 +330,8 @@
         "focalPoint": {
           "x": 50,
           "y": 50
-        }
+        },
+        "altId": "Interior klinik contoh dengan kayu espresso dan travertine cream"
       }
     },
     "sections.about.image": {
@@ -349,7 +351,8 @@
         "focalPoint": {
           "x": 50,
           "y": 50
-        }
+        },
+        "altId": "Ilustrasi perawatan facial dalam ruang yang tenang"
       }
     },
     "sections.gallery.image": {
@@ -369,7 +372,8 @@
         "focalPoint": {
           "x": 50,
           "y": 50
-        }
+        },
+        "altId": "Ruang konsultasi dan penerimaan contoh"
       }
     },
     "sections.team.image": {
@@ -389,7 +393,8 @@
         "focalPoint": {
           "x": 50,
           "y": 50
-        }
+        },
+        "altId": "Potret dokter fiktif untuk demonstrasi template"
       }
     },
     "sections.hero.heading": {
@@ -752,7 +757,8 @@
             "focalPoint": {
               "x": 50,
               "y": 50
-            }
+            },
+            "altId": "Perawatan facial contoh"
           }
         },
         {
@@ -767,7 +773,8 @@
             "focalPoint": {
               "x": 70,
               "y": 50
-            }
+            },
+            "altId": "Ilustrasi perawatan kelembapan"
           }
         },
         {
@@ -782,7 +789,8 @@
             "focalPoint": {
               "x": 50,
               "y": 30
-            }
+            },
+            "altId": "Dokter contoh untuk konsultasi"
           }
         },
         {
@@ -797,7 +805,8 @@
             "focalPoint": {
               "x": 50,
               "y": 50
-            }
+            },
+            "altId": "Ruang perawatan contoh"
           }
         },
         {
@@ -812,7 +821,8 @@
             "focalPoint": {
               "x": 30,
               "y": 50
-            }
+            },
+            "altId": "Ilustrasi perawatan estetika"
           }
         },
         {
@@ -827,7 +837,8 @@
             "focalPoint": {
               "x": 50,
               "y": 30
-            }
+            },
+            "altId": "Potret dokter fiktif"
           }
         }
       ],
@@ -937,7 +948,7 @@
   "sections": [
     {
       "id": "hero",
-      "label": "hero",
+      "label": "Beranda",
       "required": true,
       "visibleByDefault": true,
       "fields": [
@@ -951,7 +962,7 @@
     },
     {
       "id": "about",
-      "label": "about",
+      "label": "Tentang Klinik",
       "required": false,
       "visibleByDefault": true,
       "fields": [
@@ -967,7 +978,7 @@
     },
     {
       "id": "services",
-      "label": "services",
+      "label": "Treatment",
       "required": false,
       "visibleByDefault": true,
       "fields": [
@@ -986,7 +997,7 @@
     },
     {
       "id": "team",
-      "label": "team",
+      "label": "Dokter",
       "required": false,
       "visibleByDefault": true,
       "fields": [
@@ -1003,7 +1014,7 @@
     },
     {
       "id": "gallery",
-      "label": "gallery",
+      "label": "Suasana Klinik",
       "required": false,
       "visibleByDefault": true,
       "fields": [
@@ -1014,7 +1025,7 @@
     },
     {
       "id": "cta",
-      "label": "cta",
+      "label": "Ajakan Reservasi",
       "required": true,
       "visibleByDefault": true,
       "fields": [
@@ -1025,7 +1036,7 @@
     },
     {
       "id": "contact",
-      "label": "contact",
+      "label": "Kontak dan Reservasi",
       "required": true,
       "visibleByDefault": true,
       "fields": [
@@ -1052,7 +1063,7 @@
     },
     {
       "id": "faq",
-      "label": "faq",
+      "label": "Pertanyaan Umum",
       "required": false,
       "visibleByDefault": true,
       "fields": [
@@ -1062,7 +1073,7 @@
     },
     {
       "id": "footer",
-      "label": "footer",
+      "label": "Footer",
       "required": true,
       "visibleByDefault": true,
       "fields": [
@@ -1111,5 +1122,9 @@
         }
       ]
     }
-  ]
+  ],
+  "categoryLabel": {
+    "id": "Klinik Kecantikan",
+    "en": "Beauty Clinic"
+  }
 }

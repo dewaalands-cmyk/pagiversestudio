@@ -53,8 +53,11 @@
   }
 
   function imageAlt(value, fallback) {
-    if (typeof fallback === "string" && fallback.trim()) return fallback.trim();
-    return value && typeof value === "object" ? plainText(value.alt) : "";
+    if (value && typeof value === "object") {
+      const alt = plainText(value.altId || value.alt);
+      if (alt.trim()) return alt.trim();
+    }
+    return typeof fallback === "string" ? fallback.trim() : "";
   }
 
   function applyFocalPoint(image, value) {
