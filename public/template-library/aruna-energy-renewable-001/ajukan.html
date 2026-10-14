@@ -1,0 +1,238 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#171721">
+<meta name="description" content="Susun dan unduh ringkasan kebutuhan energi perusahaan melalui formulir demo ARUNA ENERGY.">
+<title>Ajukan Kebutuhan Energi | ARUNA ENERGY</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+
+
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="Ajukan Kebutuhan Energi | ARUNA ENERGY">
+<meta property="og:image" content="assets/hero-energy.webp">
+
+<script src="script.js" defer></script></head>
+<body data-page="contact">
+<a class="skip-link" href="#main">Lewati ke konten</a>
+<div class="nav-sentinel" aria-hidden="true">
+</div>
+<header class="site-header">
+<div class="nav-wrap">
+<a class="brand" href="index.html" aria-label="ARUNA ENERGY, beranda"><img class="brand-logo" src="assets/logo-aruna.svg" alt="ARUNA ENERGY" width="132" height="45" data-bind-src="business.logo" data-bind-alt="business.logo.altId">
+<span class="brand-symbol" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</span>
+<span data-brand-fallback data-bind="business.name">ARUNA ENERGY</span>
+</a>
+<nav id="main-nav" aria-label="Navigasi utama">
+<a href="index.html"><span data-bind="navigation.home.label">Beranda</span></a>
+<a href="solusi.html"><span data-bind="navigation.solutions.label">Solusi Energi</span></a>
+<a href="proyek.html"><span data-bind="navigation.projects.label">Proyek</span></a>
+<a href="tentang.html"><span data-bind="navigation.about.label">Tentang ARUNA</span></a>
+</nav>
+<a class="nav-cta button button-primary" href="ajukan.html" aria-current="page"><span data-bind="navigation.contact.label" class="copy-run">Ajukan Kebutuhan </span><span aria-hidden="true">↗</span>
+</a>
+<button class="menu-toggle" type="button" aria-label="Buka navigasi" aria-expanded="false" aria-controls="mobile-nav">
+<span>
+</span>
+<span>
+</span>
+</button>
+</div>
+<nav id="mobile-nav" class="mobile-nav" aria-label="Navigasi seluler" hidden>
+<a href="index.html"><span data-bind="navigation.home.label">Beranda</span></a>
+<a href="solusi.html"><span data-bind="navigation.solutions.label">Solusi Energi</span></a>
+<a href="proyek.html"><span data-bind="navigation.projects.label">Proyek</span></a>
+<a href="tentang.html"><span data-bind="navigation.about.label">Tentang ARUNA</span></a>
+<a href="ajukan.html"><span data-bind="navigation.contact.label">Ajukan Kebutuhan Energi </span><span aria-hidden="true">↗</span>
+</a>
+</nav>
+</header>
+<main id="main" tabindex="-1">
+<section class="request-header wrap" data-section="contact">
+<p class="eyebrow" data-bind="sections.contact.contact.text1">AJUKAN KEBUTUHAN ENERGI</p>
+<h1 data-bind="sections.contact.contact.heading1">Mulai dari kebutuhan Anda.</h1>
+<p data-bind="sections.contact.contact.text2">Susun gambaran awal energi perusahaan untuk menemukan pendekatan yang sesuai.</p>
+</section>
+<section class="request-layout wrap" data-section="contact">
+<aside class="request-aside">
+<h2 data-bind="sections.contact.contact.title1" class="bound-lines">Mari rencanakan<br>langkah berikutnya.</h2>
+<p data-bind="sections.contact.contact.text3">Informasi awal membantu memahami karakter fasilitas, lokasi proyek, dan kebutuhan energi perusahaan Anda.</p>
+<div class="request-info">
+<h3 data-bind="sections.contact.contact.title3">Siapkan informasi dasar.</h3>
+<p data-bind="sections.contact.contact.text4">Nama perusahaan, lokasi fasilitas, perkiraan kebutuhan daya, dan solusi yang ingin dieksplorasi.</p>
+</div>
+<div class="request-info">
+<h3 data-bind="sections.contact.contact.title4">Belum tahu kebutuhan daya?</h3>
+<p data-bind="sections.contact.contact.text5">Gunakan daya terpasang sebagai gambaran awal. Nilainya dapat diperbarui setelah kajian teknis.</p>
+</div>
+<div class="demo-notice">
+<span class="notice-label" data-bind="sections.contact.contact.text6">FORMULIR DEMO</span>
+<p data-bind="sections.contact.contact.text7">Data hanya diproses di browser untuk membuat ringkasan. Tidak dikirim ke tim atau disimpan di server.</p>
+</div>
+</aside>
+<div class="form-panel">
+<form id="energy-form" novalidate data-pagiverse-form="energy-needs">
+<h2 data-bind="sections.contact.contact.title5">Profil perusahaan</h2>
+<p class="form-intro" data-bind="sections.contact.contact.text8">Kolom bertanda * wajib diisi.</p>
+<div class="form-grid">
+<div class="form-field">
+<label for="company"><span data-bind="sections.contact.contact.label2" class="copy-run">Nama perusahaan </span><span aria-hidden="true">*</span>
+</label>
+<input id="company" name="company" type="text" required autocomplete="organization" maxlength="120" placeholder="Contoh: PT Cakrawala Industri" aria-describedby="error-company" data-bind-placeholder="sections.contact.form.company.placeholder">
+<span class="field-error" id="error-company">
+</span>
+</div>
+<div class="form-field">
+<label for="industry"><span data-bind="sections.contact.contact.label3" class="copy-run">Bidang usaha </span><span aria-hidden="true">*</span>
+</label>
+<select id="industry" name="industry" required aria-describedby="error-industry">
+<option value="">Pilih bidang usaha</option>
+<option value="industri" data-bind="sections.contact.contact.label4">Industri &amp; manufaktur</option>
+<option value="logistik" data-bind="sections.contact.contact.label5">Logistik &amp; pergudangan</option>
+<option value="komersial" data-bind="sections.contact.contact.label6">Properti &amp; komersial</option>
+<option value="hospitality" data-bind="sections.contact.contact.label7">Perhotelan &amp; pariwisata</option>
+<option value="lainnya" data-bind="sections.contact.contact.label8">Lainnya</option>
+</select>
+<span class="field-error" id="error-industry">
+</span>
+</div>
+<div class="form-field">
+<label for="province"><span data-bind="sections.contact.contact.label9" class="copy-run">Provinsi </span><span aria-hidden="true">*</span>
+</label>
+<input id="province" name="province" type="text" required maxlength="80" autocomplete="address-level1" placeholder="Contoh: Jawa Barat" aria-describedby="error-province" data-bind-placeholder="sections.contact.form.province.placeholder">
+<span class="field-error" id="error-province">
+</span>
+</div>
+<div class="form-field">
+<label for="city"><span data-bind="sections.contact.contact.label10" class="copy-run">Kota / kabupaten </span><span aria-hidden="true">*</span>
+</label>
+<input id="city" name="city" type="text" required maxlength="80" autocomplete="address-level2" placeholder="Contoh: Kabupaten Bekasi" aria-describedby="error-city" data-bind-placeholder="sections.contact.form.city.placeholder">
+<span class="field-error" id="error-city">
+</span>
+</div>
+</div>
+<h2 class="form-section-title" data-bind="sections.contact.contact.title6">Kebutuhan energi</h2>
+<div class="form-grid">
+<div class="form-field">
+<label for="solution"><span data-bind="sections.contact.contact.label11" class="copy-run">Solusi yang diminati </span><span aria-hidden="true">*</span>
+</label>
+<select id="solution" name="solution" required aria-describedby="error-solution">
+<option value="">Pilih solusi yang diminati</option>
+<option value="surya" data-bind="sections.contact.contact.label12">Energi surya</option>
+<option value="angin" data-bind="sections.contact.contact.label13">Energi angin</option>
+<option value="penyimpanan" data-bind="sections.contact.contact.label14">Penyimpanan energi</option>
+<option value="terintegrasi" data-bind="sections.contact.contact.label15">Solusi terintegrasi</option>
+<option value="diskusi" data-bind="sections.contact.contact.label16">Perlu rekomendasi</option>
+</select>
+<span class="field-error" id="error-solution">
+</span>
+</div>
+<div class="form-field">
+<label for="demand"><span data-bind="sections.contact.contact.label17" class="copy-run">Perkiraan kebutuhan daya (kVA) </span><span aria-hidden="true">*</span>
+</label>
+<input id="demand" name="demand" type="number" required min="0.01" step="any" inputmode="decimal" placeholder="Contoh: 500" aria-describedby="hint-demand error-demand" data-bind-placeholder="sections.contact.form.demand.placeholder">
+<span class="field-hint" id="hint-demand" data-bind="sections.contact.contact.text9">Gunakan perkiraan atau daya terpasang saat ini.</span>
+<span class="field-error" id="error-demand">
+</span>
+</div>
+</div>
+<h2 class="form-section-title" data-bind="sections.contact.contact.title7">Kontak penanggung jawab</h2>
+<div class="form-grid">
+<div class="form-field">
+<label for="contactName"><span data-bind="sections.contact.contact.label18" class="copy-run">Nama lengkap </span><span aria-hidden="true">*</span>
+</label>
+<input id="contactName" name="contactName" type="text" required autocomplete="name" maxlength="100" aria-describedby="error-contactName">
+<span class="field-error" id="error-contactName">
+</span>
+</div>
+<div class="form-field">
+<label for="email"><span data-bind="sections.contact.contact.label19" class="copy-run">Email perusahaan </span><span aria-hidden="true">*</span>
+</label>
+<input id="email" name="email" type="email" required autocomplete="email" maxlength="160" placeholder="nama@perusahaan.co.id" aria-describedby="error-email" data-bind-placeholder="sections.contact.form.email.placeholder">
+<span class="field-error" id="error-email">
+</span>
+</div>
+<div class="form-field">
+<label for="phone"><span data-bind="sections.contact.contact.label20" class="copy-run">Nomor telepon </span><span aria-hidden="true">*</span>
+</label>
+<input id="phone" name="phone" type="tel" required autocomplete="tel" maxlength="25" inputmode="tel" placeholder="08xx atau +62" aria-describedby="error-phone" data-bind-placeholder="sections.contact.form.phone.placeholder">
+<span class="field-error" id="error-phone">
+</span>
+</div>
+<div class="form-field">
+<label for="notes"><span data-bind="sections.contact.contact.label21" class="copy-run">Catatan tambahan </span><span class="optional" data-bind="sections.contact.contact.text10">(opsional)</span>
+</label>
+<textarea id="notes" name="notes" rows="3" maxlength="1500" placeholder="Rencana lokasi, target implementasi, atau kebutuhan khusus." data-bind-placeholder="sections.contact.form.notes.placeholder">
+</textarea>
+</div>
+</div>
+<div class="consent-block">
+<label class="consent-label" for="consent">
+<input type="checkbox" id="consent" name="consent" required aria-describedby="error-consent">
+<span data-bind="sections.contact.contact.text11">Saya memahami bahwa formulir ini adalah demo dan data hanya digunakan untuk membuat ringkasan di browser.</span>
+</label>
+<span class="field-error" id="error-consent">
+</span>
+</div>
+<p id="form-status" class="form-status" role="status" aria-live="polite">
+</p>
+<button class="button button-primary form-submit" type="submit" disabled><span data-bind="sections.contact.contact.label22" class="copy-run">Tinjau kebutuhan energi </span><span aria-hidden="true">↗</span>
+</button>
+<noscript>
+<p>Aktifkan JavaScript untuk meninjau dan mengunduh ringkasan kebutuhan.</p>
+</noscript>
+</form>
+<section id="submission-summary" class="submission-summary" aria-labelledby="summary-title" hidden data-section="contact">
+<h2 id="summary-title" tabindex="-1">Ringkasan kebutuhan siap</h2>
+<p id="summary-note">Ringkasan ini belum dikirim. Anda dapat mengunduhnya atau kembali mengedit data.</p>
+<dl id="summary-list">
+</dl>
+<div class="summary-actions">
+<button id="download-brief" type="button" class="button button-primary">Unduh Ringkasan <span aria-hidden="true">↓</span>
+</button>
+<button id="edit-brief" type="button" class="button button-ghost">Edit Data</button>
+<button type="button" class="button button-ghost" data-core-submit><span data-bind="sections.contact.coreCta">Lanjutkan Pengajuan</span></button></div>
+<p id="core-form-status" class="form-status" role="status" aria-live="polite"></p></section>
+</div>
+</section>
+</main>
+<footer class="footer wrap" data-section="footer">
+<div class="footer-top">
+<a class="brand" href="index.html" aria-label="ARUNA ENERGY, beranda"><img class="brand-logo" src="assets/logo-aruna.svg" alt="ARUNA ENERGY" width="132" height="45" data-bind-src="business.logo" data-bind-alt="business.logo.altId">
+<span class="brand-symbol" aria-hidden="true">
+<i>
+</i>
+<i>
+</i>
+<i>
+</i>
+</span>
+<span data-brand-fallback data-bind="business.name">ARUNA ENERGY</span>
+</a>
+<p data-bind="business.tagline" class="bound-lines">Mengembangkan energi bersih.<br>Menggerakkan masa depan bisnis.</p>
+<div>
+<a href="solusi.html" data-bind="sections.footer.contact.label1">Solusi Energi</a>
+<a href="proyek.html" data-bind="sections.footer.contact.label2">Proyek</a>
+<a href="tentang.html" data-bind="sections.footer.contact.label3">Tentang ARUNA</a>
+<a href="ajukan.html" data-bind="sections.footer.contact.label4">Ajukan Kebutuhan</a>
+</div>
+</div>
+<div class="footer-bottom">
+<span data-bind="sections.footer.contact.text1">© 2026 ARUNA ENERGY</span>
+<p data-bind="sections.footer.contact.text2">Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasitas, dan visual merupakan ilustrasi.</p>
+</div>
+</footer>
+</body>
+</html>

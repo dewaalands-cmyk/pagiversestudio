@@ -1,0 +1,3024 @@
+{
+  "pagiverseStandard": 1,
+  "id": "aruna-energy-renewable-001",
+  "name": "ARUNA ENERGY",
+  "category": "renewable-energy",
+  "categoryLabel": {
+    "id": "Energi Terbarukan",
+    "en": "Renewable Energy"
+  },
+  "description": "Template multipage berbahasa Indonesia untuk pengembang energi terbarukan, dengan desain gelap sinematik, solusi energi, koleksi proyek, dan formulir kebutuhan bisnis.",
+  "descriptionEn": "Cinematic dark Indonesian multipage template for renewable energy developers and corporate energy users.",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "languages": {
+    "supported": [
+      "id"
+    ],
+    "default": "id"
+  },
+  "dependencies": [],
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.title"
+        },
+        "descriptionFields": {
+          "id": "seo.description"
+        }
+      }
+    },
+    {
+      "id": "solutions",
+      "path": "/solusi",
+      "entry": "solusi.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.solutions.title"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.solutions.description"
+        }
+      }
+    },
+    {
+      "id": "projects",
+      "path": "/proyek",
+      "entry": "proyek.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.projects.title"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.projects.description"
+        }
+      }
+    },
+    {
+      "id": "about",
+      "path": "/tentang",
+      "entry": "tentang.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.about.title"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.about.description"
+        }
+      }
+    },
+    {
+      "id": "contact",
+      "path": "/ajukan",
+      "entry": "ajukan.html",
+      "seo": {
+        "titleFields": {
+          "id": "seo.pages.contact.title"
+        },
+        "descriptionFields": {
+          "id": "seo.pages.contact.description"
+        }
+      }
+    }
+  ],
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "dark",
+    "tokens": {
+      "primary": {
+        "editable": false,
+        "default": "#86d5ae"
+      },
+      "accent": {
+        "editable": true,
+        "default": "#86d5ae"
+      },
+      "background": {
+        "editable": false,
+        "default": "#171721"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#1e1e2a"
+      },
+      "text": {
+        "editable": false,
+        "default": "#ededf3"
+      }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "home",
+        "labelFields": {
+          "id": "navigation.home.label"
+        },
+        "target": "index.html",
+        "hideable": false
+      },
+      {
+        "id": "solutions",
+        "labelFields": {
+          "id": "navigation.solutions.label"
+        },
+        "target": "solusi.html",
+        "hideable": false
+      },
+      {
+        "id": "projects",
+        "labelFields": {
+          "id": "navigation.projects.label"
+        },
+        "target": "proyek.html",
+        "hideable": false
+      },
+      {
+        "id": "about",
+        "labelFields": {
+          "id": "navigation.about.label"
+        },
+        "target": "tentang.html",
+        "hideable": false
+      },
+      {
+        "id": "contact",
+        "labelFields": {
+          "id": "navigation.contact.label"
+        },
+        "target": "ajukan.html",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama perusahaan",
+      "default": "ARUNA ENERGY",
+      "editable": true,
+      "group": "business",
+      "maxLength": 45,
+      "required": true
+    },
+    "business.tagline": {
+      "type": "textarea",
+      "label": "Tagline perusahaan",
+      "default": "Mengembangkan energi bersih.\nMenggerakkan masa depan bisnis.",
+      "editable": true,
+      "group": "business",
+      "maxLength": 160
+    },
+    "business.description": {
+      "type": "textarea",
+      "label": "Deskripsi perusahaan",
+      "default": "ARUNA ENERGY mengembangkan energi terbarukan untuk perusahaan yang ingin membangun operasi lebih efisien dan bertanggung jawab.",
+      "editable": true,
+      "group": "business",
+      "maxLength": 400
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo perusahaan",
+      "default": {
+        "src": "assets/logo-aruna.svg",
+        "altId": "ARUNA ENERGY",
+        "altEn": "ARUNA ENERGY",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "business",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    },
+    "business.logo.altId": {
+      "type": "text",
+      "label": "Teks alternatif: Logo perusahaan",
+      "group": "business",
+      "editable": true,
+      "maxLength": 180,
+      "default": "ARUNA ENERGY"
+    },
+    "business.logo.focalPoint.x": {
+      "type": "text",
+      "label": "Fokus horizontal (0-100): Logo perusahaan",
+      "group": "business",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "business.logo.focalPoint.y": {
+      "type": "text",
+      "label": "Fokus vertikal (0-100): Logo perusahaan",
+      "group": "business",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "navigation.home.label": {
+      "type": "text",
+      "label": "Navigasi: Beranda",
+      "default": "Beranda",
+      "editable": true,
+      "group": "navigation",
+      "maxLength": 25
+    },
+    "navigation.solutions.label": {
+      "type": "text",
+      "label": "Navigasi: Solusi Energi",
+      "default": "Solusi Energi",
+      "editable": true,
+      "group": "navigation",
+      "maxLength": 25
+    },
+    "navigation.projects.label": {
+      "type": "text",
+      "label": "Navigasi: Proyek",
+      "default": "Proyek",
+      "editable": true,
+      "group": "navigation",
+      "maxLength": 25
+    },
+    "navigation.about.label": {
+      "type": "text",
+      "label": "Navigasi: Tentang ARUNA",
+      "default": "Tentang ARUNA",
+      "editable": true,
+      "group": "navigation",
+      "maxLength": 25
+    },
+    "navigation.contact.label": {
+      "type": "text",
+      "label": "Navigasi: Ajukan Kebutuhan Energi",
+      "default": "Ajukan Kebutuhan",
+      "editable": true,
+      "group": "navigation",
+      "maxLength": 25
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Foto: hero",
+      "default": {
+        "src": "assets/hero-energy.webp",
+        "altId": "Ilustrasi turbin angin dan panel surya di perbukitan berkabut",
+        "altEn": "Ilustrasi turbin angin dan panel surya di perbukitan berkabut",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "hero",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    },
+    "sections.hero.image.altId": {
+      "type": "text",
+      "label": "Teks alternatif: Foto: hero",
+      "group": "hero",
+      "editable": true,
+      "maxLength": 180,
+      "default": "Ilustrasi turbin angin dan panel surya di perbukitan berkabut"
+    },
+    "sections.hero.image.focalPoint.x": {
+      "type": "text",
+      "label": "Fokus horizontal (0-100): Foto: hero",
+      "group": "hero",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.hero.image.focalPoint.y": {
+      "type": "text",
+      "label": "Fokus vertikal (0-100): Foto: hero",
+      "group": "hero",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.hero.home.text1": {
+      "type": "textarea",
+      "label": "hero / ENERGI TERBARUKAN UNTUK BISNIS",
+      "default": "ENERGI TERBARUKAN UNTUK BISNIS",
+      "editable": true,
+      "group": "hero",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.hero.home.heading1": {
+      "type": "textarea",
+      "label": "hero / Energi bersih. Daya untuk masa depan.",
+      "default": "Energi bersih.\nDaya untuk masa depan.",
+      "editable": true,
+      "group": "hero",
+      "maxLength": 90,
+      "required": true
+    },
+    "sections.hero.home.text2": {
+      "type": "textarea",
+      "label": "hero / Dari sumber alam Indonesia, untuk kebutuhan energi perusahaan And",
+      "default": "Dari sumber alam Indonesia, untuk kebutuhan energi perusahaan Anda.",
+      "editable": true,
+      "group": "hero",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.hero.home.label2": {
+      "type": "text",
+      "label": "hero / Ajukan Kebutuhan Energi",
+      "default": "Ajukan Kebutuhan Energi",
+      "editable": true,
+      "group": "hero",
+      "maxLength": 32
+    },
+    "sections.hero.home.label3": {
+      "type": "text",
+      "label": "hero / Jelajahi Solusi",
+      "default": "Jelajahi Solusi",
+      "editable": true,
+      "group": "hero",
+      "maxLength": 32
+    },
+    "sections.services.solar.image": {
+      "type": "image",
+      "label": "Foto: solar",
+      "default": {
+        "src": "assets/solar-energy.webp",
+        "altId": "Ilustrasi panel surya pada atap fasilitas industri",
+        "altEn": "Ilustrasi panel surya pada atap fasilitas industri",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "services",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    },
+    "sections.services.solar.image.altId": {
+      "type": "text",
+      "label": "Teks alternatif: Foto: solar",
+      "group": "services",
+      "editable": true,
+      "maxLength": 180,
+      "default": "Ilustrasi panel surya pada atap fasilitas industri"
+    },
+    "sections.services.solar.image.focalPoint.x": {
+      "type": "text",
+      "label": "Fokus horizontal (0-100): Foto: solar",
+      "group": "services",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.services.solar.image.focalPoint.y": {
+      "type": "text",
+      "label": "Fokus vertikal (0-100): Foto: solar",
+      "group": "services",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.services.wind.image": {
+      "type": "image",
+      "label": "Foto: wind",
+      "default": {
+        "src": "assets/hero-energy.webp",
+        "altId": "Ilustrasi pengembangan pembangkit angin",
+        "altEn": "Ilustrasi pengembangan pembangkit angin",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "services",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    },
+    "sections.services.wind.image.altId": {
+      "type": "text",
+      "label": "Teks alternatif: Foto: wind",
+      "group": "services",
+      "editable": true,
+      "maxLength": 180,
+      "default": "Ilustrasi pengembangan pembangkit angin"
+    },
+    "sections.services.wind.image.focalPoint.x": {
+      "type": "text",
+      "label": "Fokus horizontal (0-100): Foto: wind",
+      "group": "services",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.services.wind.image.focalPoint.y": {
+      "type": "text",
+      "label": "Fokus vertikal (0-100): Foto: wind",
+      "group": "services",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.services.storage.image": {
+      "type": "image",
+      "label": "Foto: storage",
+      "default": {
+        "src": "assets/battery-energy.webp",
+        "altId": "Ilustrasi fasilitas penyimpanan energi baterai",
+        "altEn": "Ilustrasi fasilitas penyimpanan energi baterai",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "services",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    },
+    "sections.services.storage.image.altId": {
+      "type": "text",
+      "label": "Teks alternatif: Foto: storage",
+      "group": "services",
+      "editable": true,
+      "maxLength": 180,
+      "default": "Ilustrasi fasilitas penyimpanan energi baterai"
+    },
+    "sections.services.storage.image.focalPoint.x": {
+      "type": "text",
+      "label": "Fokus horizontal (0-100): Foto: storage",
+      "group": "services",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.services.storage.image.focalPoint.y": {
+      "type": "text",
+      "label": "Fokus vertikal (0-100): Foto: storage",
+      "group": "services",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.services.home.title1": {
+      "type": "textarea",
+      "label": "services / Sumber berbeda. Satu tujuan yang lebih bersih.",
+      "default": "Sumber berbeda.\nSatu tujuan yang lebih bersih.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.home.text1": {
+      "type": "textarea",
+      "label": "services / Surya, angin, dan penyimpanan energi yang dirancang untuk kebutuh",
+      "default": "Surya, angin, dan penyimpanan energi yang dirancang untuk kebutuhan operasional perusahaan Anda.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.home.title3": {
+      "type": "text",
+      "label": "services / Energi surya",
+      "default": "Energi surya",
+      "editable": true,
+      "group": "services",
+      "maxLength": 180
+    },
+    "sections.services.home.text2": {
+      "type": "textarea",
+      "label": "services / Ubah area atap dan lahan menjadi sumber energi bagi operasional b",
+      "default": "Ubah area atap dan lahan menjadi sumber energi bagi operasional bisnis.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.home.text3": {
+      "type": "text",
+      "label": "services / Untuk industri dan fasilitas komersial",
+      "default": "Untuk industri dan fasilitas komersial",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.home.title4": {
+      "type": "text",
+      "label": "services / Energi angin",
+      "default": "Energi angin",
+      "editable": true,
+      "group": "services",
+      "maxLength": 180
+    },
+    "sections.services.home.text4": {
+      "type": "textarea",
+      "label": "services / Pengembangan proyek pada lokasi dengan potensi angin yang sesuai.",
+      "default": "Pengembangan proyek pada lokasi dengan potensi angin yang sesuai.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.home.title5": {
+      "type": "text",
+      "label": "services / Penyimpanan energi",
+      "default": "Penyimpanan energi",
+      "editable": true,
+      "group": "services",
+      "maxLength": 180
+    },
+    "sections.services.home.text5": {
+      "type": "textarea",
+      "label": "services / Kelola energi dan dukung fleksibilitas sistem perusahaan.",
+      "default": "Kelola energi dan dukung fleksibilitas sistem perusahaan.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text1": {
+      "type": "textarea",
+      "label": "services / SOLUSI ENERGI",
+      "default": "SOLUSI ENERGI",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.heading1": {
+      "type": "textarea",
+      "label": "services / Energi yang mengikuti cara bisnis Anda bekerja.",
+      "default": "Energi yang mengikuti\ncara bisnis Anda bekerja.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 90,
+      "required": true
+    },
+    "sections.services.solutions.text2": {
+      "type": "textarea",
+      "label": "services / Mulai dari sumber energi hingga pengelolaannya. Pilih pendekatan ",
+      "default": "Mulai dari sumber energi hingga pengelolaannya. Pilih pendekatan yang sesuai dengan fasilitas dan rencana perusahaan Anda.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.label2": {
+      "type": "text",
+      "label": "services / Energi surya",
+      "default": "Energi surya",
+      "editable": true,
+      "group": "services",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.services.solutions.label3": {
+      "type": "text",
+      "label": "services / Energi angin",
+      "default": "Energi angin",
+      "editable": true,
+      "group": "services",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.services.solutions.label4": {
+      "type": "text",
+      "label": "services / Penyimpanan energi",
+      "default": "Penyimpanan energi",
+      "editable": true,
+      "group": "services",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.services.solutions.title1": {
+      "type": "textarea",
+      "label": "services / Setiap atap menyimpan potensi.",
+      "default": "Setiap atap menyimpan potensi.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text3": {
+      "type": "textarea",
+      "label": "services / Pengembangan sistem surya pada atap atau lahan untuk mendukung ke",
+      "default": "Pengembangan sistem surya pada atap atau lahan untuk mendukung kebutuhan energi fasilitas industri dan komersial.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text4": {
+      "type": "text",
+      "label": "services / Potensi penggunaan",
+      "default": "Potensi penggunaan",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.text5": {
+      "type": "text",
+      "label": "services / Pabrik, gudang, pusat distribusi, dan fasilitas bisnis.",
+      "default": "Pabrik, gudang, pusat distribusi, dan fasilitas bisnis.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.text6": {
+      "type": "text",
+      "label": "services / Fokus perencanaan",
+      "default": "Fokus perencanaan",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.text7": {
+      "type": "text",
+      "label": "services / Luas area, kondisi struktur, pola konsumsi, dan integrasi sistem.",
+      "default": "Luas area, kondisi struktur, pola konsumsi, dan integrasi sistem.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.label5": {
+      "type": "text",
+      "label": "services / Bahas Kebutuhan Surya",
+      "default": "Bahas Kebutuhan Surya",
+      "editable": true,
+      "group": "services",
+      "maxLength": 32
+    },
+    "sections.services.solutions.title2": {
+      "type": "textarea",
+      "label": "services / Menangkap potensi dari setiap hembusan.",
+      "default": "Menangkap potensi\ndari setiap hembusan.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text8": {
+      "type": "textarea",
+      "label": "services / Pengembangan energi angin untuk lokasi yang memenuhi kajian sumbe",
+      "default": "Pengembangan energi angin untuk lokasi yang memenuhi kajian sumber daya dan kesiapan infrastruktur.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.label6": {
+      "type": "text",
+      "label": "services / Eksplorasi Energi Angin",
+      "default": "Eksplorasi Energi Angin",
+      "editable": true,
+      "group": "services",
+      "maxLength": 32
+    },
+    "sections.services.solutions.title4": {
+      "type": "textarea",
+      "label": "services / Energi tersedia. Sistem lebih fleksibel.",
+      "default": "Energi tersedia.\nSistem lebih fleksibel.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text9": {
+      "type": "textarea",
+      "label": "services / Penyimpanan baterai membantu mengatur penggunaan energi sesuai ke",
+      "default": "Penyimpanan baterai membantu mengatur penggunaan energi sesuai kebutuhan sistem. Konfigurasinya ditentukan melalui kajian teknis.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.title6": {
+      "type": "text",
+      "label": "services / Melengkapi sumber energi Anda.",
+      "default": "Melengkapi sumber energi Anda.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.text10": {
+      "type": "textarea",
+      "label": "services / Rencanakan penyimpanan bersama sistem surya atau kebutuhan fasili",
+      "default": "Rencanakan penyimpanan bersama sistem surya atau kebutuhan fasilitas yang sudah ada.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text11": {
+      "type": "textarea",
+      "label": "services / Kapasitas, durasi dukungan, dan fungsi cadangan mengikuti rancang",
+      "default": "Kapasitas, durasi dukungan, dan fungsi cadangan mengikuti rancangan serta kondisi operasi.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.label7": {
+      "type": "text",
+      "label": "services / Rencanakan Penyimpanan",
+      "default": "Rencanakan Penyimpanan",
+      "editable": true,
+      "group": "services",
+      "maxLength": 32
+    },
+    "sections.services.solutions.title7": {
+      "type": "textarea",
+      "label": "services / Satu kebutuhan. Pendekatan yang menyeluruh.",
+      "default": "Satu kebutuhan.\nPendekatan yang menyeluruh.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text12": {
+      "type": "textarea",
+      "label": "services / Pemilihan teknologi dimulai dari data konsumsi, kesiapan lokasi, ",
+      "default": "Pemilihan teknologi dimulai dari data konsumsi, kesiapan lokasi, dan tujuan perusahaan. Hasil studi menentukan rancangan serta skema kerja sama yang tepat.",
+      "editable": true,
+      "group": "services",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.services.solutions.text13": {
+      "type": "text",
+      "label": "services / Kajian lokasi",
+      "default": "Kajian lokasi",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.text14": {
+      "type": "text",
+      "label": "services / Perencanaan sistem",
+      "default": "Perencanaan sistem",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.text15": {
+      "type": "text",
+      "label": "services / Implementasi",
+      "default": "Implementasi",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.services.solutions.text16": {
+      "type": "text",
+      "label": "services / Operasi dan pemeliharaan",
+      "default": "Operasi dan pemeliharaan",
+      "editable": true,
+      "group": "services",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.gallery.featuredImage": {
+      "type": "image",
+      "label": "Foto: gallery",
+      "default": {
+        "src": "assets/solar-energy.webp",
+        "altId": "Ilustrasi fasilitas industri dengan panel surya di atap",
+        "altEn": "Ilustrasi fasilitas industri dengan panel surya di atap",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "gallery",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    },
+    "sections.gallery.featuredImage.altId": {
+      "type": "text",
+      "label": "Teks alternatif: Foto: gallery",
+      "group": "gallery",
+      "editable": true,
+      "maxLength": 180,
+      "default": "Ilustrasi fasilitas industri dengan panel surya di atap"
+    },
+    "sections.gallery.featuredImage.focalPoint.x": {
+      "type": "text",
+      "label": "Fokus horizontal (0-100): Foto: gallery",
+      "group": "gallery",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.gallery.featuredImage.focalPoint.y": {
+      "type": "text",
+      "label": "Fokus vertikal (0-100): Foto: gallery",
+      "group": "gallery",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.gallery.emptyText": {
+      "type": "text",
+      "label": "Pesan koleksi proyek kosong",
+      "default": "Belum ada proyek pada kategori ini.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 140
+    },
+    "sections.gallery.countLabel": {
+      "type": "text",
+      "label": "Label jumlah proyek",
+      "default": "konsep proyek",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 30
+    },
+    "sections.gallery.capacityLabel": {
+      "type": "text",
+      "label": "Label kapasitas",
+      "default": "Kapasitas ilustratif:",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 35
+    },
+    "sections.gallery.type.surya": {
+      "type": "text",
+      "label": "Label energi surya",
+      "default": "Energi surya",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 35
+    },
+    "sections.gallery.type.angin": {
+      "type": "text",
+      "label": "Label energi angin",
+      "default": "Energi angin",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 35
+    },
+    "sections.gallery.type.penyimpanan": {
+      "type": "text",
+      "label": "Label penyimpanan",
+      "default": "Penyimpanan energi",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 35
+    },
+    "sections.gallery.viewLabel": {
+      "type": "text",
+      "label": "Tombol detail proyek",
+      "default": "Lihat konsep",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 25
+    },
+    "sections.gallery.dialogLabel": {
+      "type": "text",
+      "label": "Label dialog proyek",
+      "default": "KONSEP FIKTIF",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 35
+    },
+    "sections.gallery.scopeLabel": {
+      "type": "text",
+      "label": "Judul lingkup proyek",
+      "default": "Lingkup kajian",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 50
+    },
+    "sections.gallery.dialogCta": {
+      "type": "text",
+      "label": "Tombol kebutuhan serupa",
+      "default": "Ajukan Kebutuhan Serupa",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 32
+    },
+    "sections.gallery.items": {
+      "type": "array",
+      "label": "Portofolio proyek",
+      "default": [
+        {
+          "type": "surya",
+          "name": "Surya Atap Cikarang",
+          "location": "Cikarang, Jawa Barat",
+          "capacity": "3 MWp",
+          "image": {
+            "src": "assets/solar-energy.webp",
+            "altId": "Ilustrasi Surya Atap Cikarang",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          "description": "Konsep pemanfaatan atap fasilitas produksi untuk mendukung konsumsi energi pada jam operasional.",
+          "scope": "Kajian struktur atap, pola beban, rancangan panel, dan integrasi fasilitas."
+        },
+        {
+          "type": "angin",
+          "name": "Angin Pesisir Sumba",
+          "location": "Sumba, Nusa Tenggara Timur",
+          "capacity": "12 MW",
+          "image": {
+            "src": "assets/hero-energy.webp",
+            "altId": "Ilustrasi Angin Pesisir Sumba",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          "description": "Konsep pembangkit angin pada area dengan potensi sumber daya yang perlu diverifikasi melalui pengukuran.",
+          "scope": "Pengukuran angin, kajian lingkungan, akses lokasi, dan perencanaan interkoneksi."
+        },
+        {
+          "type": "penyimpanan",
+          "name": "Penyimpanan Energi Batam",
+          "location": "Batam, Kepulauan Riau",
+          "capacity": "4 MWh",
+          "image": {
+            "src": "assets/battery-energy.webp",
+            "altId": "Ilustrasi Penyimpanan Energi Batam",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          "description": "Konsep penyimpanan baterai untuk mengelola penggunaan energi pada fasilitas komersial.",
+          "scope": "Analisis profil beban, kebutuhan pengaturan daya, sistem kendali, dan keselamatan."
+        },
+        {
+          "type": "surya",
+          "name": "Surya Logistik Surabaya",
+          "location": "Surabaya, Jawa Timur",
+          "capacity": "1,5 MWp",
+          "image": {
+            "src": "assets/solar-energy.webp",
+            "altId": "Ilustrasi Surya Logistik Surabaya",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          "description": "Konsep surya atap pada pusat distribusi untuk mendukung penggunaan energi fasilitas.",
+          "scope": "Kajian area atap, kebutuhan operasional, dan strategi implementasi bertahap."
+        },
+        {
+          "type": "surya",
+          "name": "Surya Industri Makassar",
+          "location": "Makassar, Sulawesi Selatan",
+          "capacity": "2 MWp",
+          "image": {
+            "src": "assets/solar-energy.webp",
+            "altId": "Ilustrasi Surya Industri Makassar",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          "description": "Konsep sistem surya bagi fasilitas industri dengan fokus pada kesiapan lahan dan kebutuhan listrik.",
+          "scope": "Analisis konsumsi, penilaian lokasi, rancangan sistem, dan perencanaan pemeliharaan."
+        },
+        {
+          "type": "penyimpanan",
+          "name": "Energi Terintegrasi Balikpapan",
+          "location": "Balikpapan, Kalimantan Timur",
+          "capacity": "2 MWh",
+          "image": {
+            "src": "assets/battery-energy.webp",
+            "altId": "Ilustrasi Energi Terintegrasi Balikpapan",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          "description": "Konsep integrasi penyimpanan energi dengan kebutuhan sistem fasilitas bisnis.",
+          "scope": "Studi integrasi, konfigurasi baterai, kendali energi, dan rencana operasi."
+        }
+      ],
+      "editable": true,
+      "group": "gallery",
+      "minItems": 0,
+      "maxItems": 12,
+      "item": {
+        "fields": {
+          "name": {
+            "type": "text",
+            "label": "Nama proyek",
+            "maxLength": 70,
+            "default": "Proyek baru"
+          },
+          "type": {
+            "type": "select",
+            "label": "Jenis energi",
+            "options": [
+              {
+                "value": "surya",
+                "label": "Energi surya"
+              },
+              {
+                "value": "angin",
+                "label": "Energi angin"
+              },
+              {
+                "value": "penyimpanan",
+                "label": "Penyimpanan energi"
+              }
+            ],
+            "default": "surya"
+          },
+          "location": {
+            "type": "text",
+            "label": "Lokasi proyek",
+            "maxLength": 90,
+            "default": ""
+          },
+          "capacity": {
+            "type": "text",
+            "label": "Kapasitas",
+            "maxLength": 40,
+            "default": ""
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi proyek",
+            "maxLength": 600,
+            "default": ""
+          },
+          "scope": {
+            "type": "textarea",
+            "label": "Lingkup kajian",
+            "maxLength": 500,
+            "default": ""
+          },
+          "image": {
+            "type": "image",
+            "label": "Foto proyek",
+            "accept": [
+              "image/png",
+              "image/jpeg",
+              "image/webp"
+            ],
+            "maxFileSizeMB": 2,
+            "focalPoint": true,
+            "default": {
+              "src": "assets/solar-energy.webp",
+              "altId": "Ilustrasi proyek energi",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            }
+          },
+          "image.altId": {
+            "type": "text",
+            "label": "Teks alternatif foto proyek",
+            "maxLength": 180,
+            "default": "Ilustrasi proyek energi"
+          },
+          "image.focalPoint.x": {
+            "type": "text",
+            "label": "Fokus horizontal foto (0-100)",
+            "maxLength": 3,
+            "pattern": "^(100|[0-9]{1,2})$",
+            "default": "50"
+          },
+          "image.focalPoint.y": {
+            "type": "text",
+            "label": "Fokus vertikal foto (0-100)",
+            "maxLength": 3,
+            "pattern": "^(100|[0-9]{1,2})$",
+            "default": "50"
+          }
+        }
+      }
+    },
+    "sections.gallery.home.title1": {
+      "type": "textarea",
+      "label": "gallery / Dirancang untuk kebutuhan nyata.",
+      "default": "Dirancang untuk kebutuhan nyata.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.gallery.home.text1": {
+      "type": "textarea",
+      "label": "gallery / Eksplorasi contoh pengembangan energi di berbagai wilayah Indones",
+      "default": "Eksplorasi contoh pengembangan energi di berbagai wilayah Indonesia.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.gallery.home.text2": {
+      "type": "text",
+      "label": "gallery / KONSEP PROYEK / JAWA BARAT",
+      "default": "KONSEP PROYEK / JAWA BARAT",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.gallery.home.title2": {
+      "type": "text",
+      "label": "gallery / Surya untuk kawasan industri.",
+      "default": "Surya untuk kawasan industri.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.gallery.home.text3": {
+      "type": "textarea",
+      "label": "gallery / Contoh sistem surya atap yang mengikuti pola penggunaan energi fa",
+      "default": "Contoh sistem surya atap yang mengikuti pola penggunaan energi fasilitas produksi.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.gallery.home.label1": {
+      "type": "text",
+      "label": "gallery / Lihat Contoh Proyek",
+      "default": "Lihat Contoh Proyek",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 32
+    },
+    "sections.gallery.projects.text1": {
+      "type": "textarea",
+      "label": "gallery / PROYEK ARUNA",
+      "default": "PROYEK ARUNA",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.gallery.projects.heading1": {
+      "type": "textarea",
+      "label": "gallery / Potensi Indonesia. Perspektif energi yang baru.",
+      "default": "Potensi Indonesia.\nPerspektif energi yang baru.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 90,
+      "required": true
+    },
+    "sections.gallery.projects.text2": {
+      "type": "textarea",
+      "label": "gallery / Contoh konsep pengembangan untuk kebutuhan industri dan bisnis di",
+      "default": "Contoh konsep pengembangan untuk kebutuhan industri dan bisnis di berbagai wilayah Indonesia.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.gallery.projects.text3": {
+      "type": "text",
+      "label": "gallery / PORTOFOLIO ILUSTRATIF",
+      "default": "PORTOFOLIO ILUSTRATIF",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.gallery.projects.text4": {
+      "type": "textarea",
+      "label": "gallery / Seluruh proyek dan kapasitas di halaman ini adalah contoh fiktif,",
+      "default": "Seluruh proyek dan kapasitas di halaman ini adalah contoh fiktif, bukan proyek operasional atau komitmen pembangunan.",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.gallery.projects.label2": {
+      "type": "text",
+      "label": "gallery / Semua proyek",
+      "default": "Semua proyek",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.gallery.projects.label3": {
+      "type": "text",
+      "label": "gallery / Surya",
+      "default": "Surya",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.gallery.projects.label4": {
+      "type": "text",
+      "label": "gallery / Angin",
+      "default": "Angin",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.gallery.projects.label5": {
+      "type": "text",
+      "label": "gallery / Penyimpanan",
+      "default": "Penyimpanan",
+      "editable": true,
+      "group": "gallery",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.about.image": {
+      "type": "image",
+      "label": "Foto: about",
+      "default": {
+        "src": "assets/hero-energy.webp",
+        "altId": "Ilustrasi sumber energi terbarukan di lanskap perbukitan Indonesia",
+        "altEn": "Ilustrasi sumber energi terbarukan di lanskap perbukitan Indonesia",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "about",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    },
+    "sections.about.image.altId": {
+      "type": "text",
+      "label": "Teks alternatif: Foto: about",
+      "group": "about",
+      "editable": true,
+      "maxLength": 180,
+      "default": "Ilustrasi sumber energi terbarukan di lanskap perbukitan Indonesia"
+    },
+    "sections.about.image.focalPoint.x": {
+      "type": "text",
+      "label": "Fokus horizontal (0-100): Foto: about",
+      "group": "about",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.about.image.focalPoint.y": {
+      "type": "text",
+      "label": "Fokus vertikal (0-100): Foto: about",
+      "group": "about",
+      "editable": true,
+      "maxLength": 3,
+      "pattern": "^(100|[0-9]{1,2})$",
+      "default": "50"
+    },
+    "sections.about.values": {
+      "type": "array",
+      "label": "Prinsip perusahaan",
+      "default": [
+        {
+          "title": "Berangkat dari kebutuhan.",
+          "description": "Rancangan energi dimulai dengan memahami operasional, lokasi, dan tujuan perusahaan."
+        },
+        {
+          "title": "Kelayakan sebagai landasan.",
+          "description": "Potensi sumber daya dan kondisi teknis dikaji sebelum menentukan solusi."
+        },
+        {
+          "title": "Tanggung jawab jangka panjang.",
+          "description": "Keselamatan, pemeliharaan, dan dampak lingkungan menjadi bagian dari perencanaan."
+        },
+        {
+          "title": "Kerja sama yang terbuka.",
+          "description": "Lingkup pekerjaan, asumsi, dan tahapan pengembangan dibahas secara jelas bersama mitra."
+        }
+      ],
+      "editable": true,
+      "group": "about",
+      "minItems": 1,
+      "maxItems": 8,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": {
+              "id": "Judul"
+            },
+            "maxLength": 90,
+            "default": ""
+          },
+          "description": {
+            "type": "textarea",
+            "label": {
+              "id": "Deskripsi"
+            },
+            "maxLength": 600,
+            "default": ""
+          }
+        }
+      }
+    },
+    "sections.about.home.text1": {
+      "type": "text",
+      "label": "about / Bisnis bergerak maju.",
+      "default": "Bisnis bergerak maju.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 180
+    },
+    "sections.about.home.text2": {
+      "type": "text",
+      "label": "about / Energinya juga harus.",
+      "default": "Energinya juga harus.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.about.home.text4": {
+      "type": "textarea",
+      "label": "about / Kami merancang solusi dari kebutuhan Anda: karakter lokasi, pola ",
+      "default": "Kami merancang solusi dari kebutuhan Anda: karakter lokasi, pola konsumsi, dan arah pertumbuhan bisnis.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.about.home.label1": {
+      "type": "text",
+      "label": "about / Kenali ARUNA",
+      "default": "Kenali ARUNA",
+      "editable": true,
+      "group": "about",
+      "maxLength": 32
+    },
+    "sections.about.about.text1": {
+      "type": "textarea",
+      "label": "about / TENTANG ARUNA",
+      "default": "TENTANG ARUNA",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.about.about.heading1": {
+      "type": "textarea",
+      "label": "about / Membangun energi. Menumbuhkan kemungkinan.",
+      "default": "Membangun energi.\nMenumbuhkan kemungkinan.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 90,
+      "required": true
+    },
+    "sections.about.about.text2": {
+      "type": "textarea",
+      "label": "about / Pengembang energi terbarukan dengan visi mendukung perjalanan bis",
+      "default": "Pengembang energi terbarukan dengan visi mendukung perjalanan bisnis Indonesia menuju penggunaan energi yang lebih bersih.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.about.about.title1": {
+      "type": "textarea",
+      "label": "about / Berawal dari sumber alam. Bergerak bersama bisnis.",
+      "default": "Berawal dari sumber alam.\nBergerak bersama bisnis.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.about.about.text3": {
+      "type": "textarea",
+      "label": "about / ARUNA berarti cahaya yang hadir di awal hari. Bagi kami, nama ini",
+      "default": "ARUNA berarti cahaya yang hadir di awal hari. Bagi kami, nama ini mewakili awal dari cara baru membangun energi untuk kebutuhan perusahaan.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.about.about.text4": {
+      "type": "textarea",
+      "label": "about / Konsep ARUNA ENERGY mempertemukan pengembangan proyek, teknologi ",
+      "default": "Konsep ARUNA ENERGY mempertemukan pengembangan proyek, teknologi energi terbarukan, dan pemahaman terhadap kebutuhan operasional bisnis.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.about.about.text5": {
+      "type": "textarea",
+      "label": "about / ARUNA ENERGY adalah brand fiktif yang dibuat untuk demonstrasi we",
+      "default": "ARUNA ENERGY adalah brand fiktif yang dibuat untuk demonstrasi website ini.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.about.about.title3": {
+      "type": "textarea",
+      "label": "about / Prinsip yang membentuk setiap keputusan.",
+      "default": "Prinsip yang membentuk\nsetiap keputusan.",
+      "editable": true,
+      "group": "about",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.process.items": {
+      "type": "array",
+      "label": "Tahapan kerja sama",
+      "default": [
+        {
+          "title": "Pahami kebutuhan",
+          "description": "Petakan konsumsi, karakter lokasi, dan prioritas perusahaan."
+        },
+        {
+          "title": "Uji kelayakan",
+          "description": "Tinjau sumber daya, kesiapan fasilitas, dan kebutuhan integrasi."
+        },
+        {
+          "title": "Rancang solusi",
+          "description": "Susun konfigurasi, tahapan proyek, dan skema kerja sama."
+        },
+        {
+          "title": "Bangun dan kelola",
+          "description": "Rencanakan implementasi, pemantauan, dan pemeliharaan sistem."
+        }
+      ],
+      "editable": true,
+      "group": "process",
+      "minItems": 1,
+      "maxItems": 6,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": {
+              "id": "Judul"
+            },
+            "maxLength": 90,
+            "default": ""
+          },
+          "description": {
+            "type": "textarea",
+            "label": {
+              "id": "Deskripsi"
+            },
+            "maxLength": 600,
+            "default": ""
+          }
+        }
+      }
+    },
+    "sections.process.home.title1": {
+      "type": "textarea",
+      "label": "process / Dari kebutuhan bisnis menjadi rencana energi.",
+      "default": "Dari kebutuhan bisnis\nmenjadi rencana energi.",
+      "editable": true,
+      "group": "process",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.faq.items": {
+      "type": "array",
+      "label": "Pertanyaan umum",
+      "default": [
+        {
+          "question": "Apakah solusi ini sesuai untuk perusahaan saya?+",
+          "answer": "Kesesuaian ditentukan oleh kebutuhan energi, kondisi lokasi, dan hasil studi kelayakan. Formulir awal membantu menyusun gambaran kebutuhan tersebut."
+        },
+        {
+          "question": "Apakah tersedia untuk seluruh Indonesia?+",
+          "answer": "Cakupan konsep ARUNA meliputi seluruh Indonesia. Setiap lokasi tetap memerlukan penilaian sumber daya, infrastruktur, perizinan, dan kelayakan proyek."
+        },
+        {
+          "question": "Apakah formulir ini mengirimkan pengajuan?+",
+          "answer": "Dalam preview template ini, formulir menyusun ringkasan yang dapat ditinjau, diedit, dan diunduh. Pengiriman yang sesungguhnya memerlukan integrasi Pagiverse Core."
+        }
+      ],
+      "editable": true,
+      "group": "faq",
+      "minItems": 0,
+      "maxItems": 10,
+      "item": {
+        "fields": {
+          "question": {
+            "type": "text",
+            "label": {
+              "id": "Pertanyaan"
+            },
+            "maxLength": 90,
+            "default": ""
+          },
+          "answer": {
+            "type": "textarea",
+            "label": {
+              "id": "Jawaban"
+            },
+            "maxLength": 600,
+            "default": ""
+          }
+        }
+      }
+    },
+    "sections.faq.home.title1": {
+      "type": "textarea",
+      "label": "faq / Sebelum memulai.",
+      "default": "Sebelum memulai.",
+      "editable": true,
+      "group": "faq",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.location.items": {
+      "type": "array",
+      "label": "Cakupan wilayah",
+      "default": [
+        {
+          "title": "Sumatra & Jawa",
+          "description": "Fasilitas industri, logistik, dan komersial."
+        },
+        {
+          "title": "Bali & Nusa Tenggara",
+          "description": "Bisnis perhotelan dan eksplorasi sumber daya energi."
+        },
+        {
+          "title": "Kalimantan & Sulawesi",
+          "description": "Kawasan industri dan fasilitas usaha."
+        },
+        {
+          "title": "Maluku & Papua",
+          "description": "Kebutuhan energi dengan kondisi lokasi yang beragam."
+        }
+      ],
+      "editable": true,
+      "group": "location",
+      "minItems": 0,
+      "maxItems": 8,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": {
+              "id": "Judul"
+            },
+            "maxLength": 90,
+            "default": ""
+          },
+          "description": {
+            "type": "textarea",
+            "label": {
+              "id": "Deskripsi"
+            },
+            "maxLength": 600,
+            "default": ""
+          }
+        }
+      }
+    },
+    "sections.location.about.title1": {
+      "type": "textarea",
+      "label": "location / Seluruh Indonesia. Setiap lokasi punya potensi.",
+      "default": "Seluruh Indonesia.\nSetiap lokasi punya potensi.",
+      "editable": true,
+      "group": "location",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.location.about.text1": {
+      "type": "textarea",
+      "label": "location / Pendekatan pengembangan menyesuaikan karakter tiap wilayah, sumbe",
+      "default": "Pendekatan pengembangan menyesuaikan karakter tiap wilayah, sumber daya lokal, dan kesiapan fasilitas bisnis.",
+      "editable": true,
+      "group": "location",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.location.about.text2": {
+      "type": "textarea",
+      "label": "location / Cakupan wilayah merupakan visi operasional brand fiktif. Setiap p",
+      "default": "Cakupan wilayah merupakan visi operasional brand fiktif. Setiap proyek memerlukan penilaian teknis dan kelayakan tersendiri.",
+      "editable": true,
+      "group": "location",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.form.company.placeholder": {
+      "type": "text",
+      "label": "Placeholder company",
+      "default": "Contoh: PT Cakrawala Industri",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 120
+    },
+    "sections.contact.form.province.placeholder": {
+      "type": "text",
+      "label": "Placeholder province",
+      "default": "Contoh: Jawa Barat",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 120
+    },
+    "sections.contact.form.city.placeholder": {
+      "type": "text",
+      "label": "Placeholder city",
+      "default": "Contoh: Kabupaten Bekasi",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 120
+    },
+    "sections.contact.form.demand.placeholder": {
+      "type": "text",
+      "label": "Placeholder demand",
+      "default": "Contoh: 500",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 120
+    },
+    "sections.contact.form.email.placeholder": {
+      "type": "text",
+      "label": "Placeholder email",
+      "default": "nama@perusahaan.co.id",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 120
+    },
+    "sections.contact.form.phone.placeholder": {
+      "type": "text",
+      "label": "Placeholder phone",
+      "default": "08xx atau +62",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 120
+    },
+    "sections.contact.form.notes.placeholder": {
+      "type": "text",
+      "label": "Placeholder notes",
+      "default": "Rencana lokasi, target implementasi, atau kebutuhan khusus.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 120
+    },
+    "sections.contact.contact.text1": {
+      "type": "textarea",
+      "label": "contact / AJUKAN KEBUTUHAN ENERGI",
+      "default": "AJUKAN KEBUTUHAN ENERGI",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.heading1": {
+      "type": "textarea",
+      "label": "contact / Mulai dari kebutuhan Anda.",
+      "default": "Mulai dari kebutuhan Anda.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 90,
+      "required": true
+    },
+    "sections.contact.contact.text2": {
+      "type": "textarea",
+      "label": "contact / Susun gambaran awal energi perusahaan untuk menemukan pendekatan ",
+      "default": "Susun gambaran awal energi perusahaan untuk menemukan pendekatan yang sesuai.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.title1": {
+      "type": "textarea",
+      "label": "contact / Mari rencanakan langkah berikutnya.",
+      "default": "Mari rencanakan\nlangkah berikutnya.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.text3": {
+      "type": "textarea",
+      "label": "contact / Informasi awal membantu memahami karakter fasilitas, lokasi proye",
+      "default": "Informasi awal membantu memahami karakter fasilitas, lokasi proyek, dan kebutuhan energi perusahaan Anda.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.title3": {
+      "type": "text",
+      "label": "contact / Siapkan informasi dasar.",
+      "default": "Siapkan informasi dasar.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.text4": {
+      "type": "textarea",
+      "label": "contact / Nama perusahaan, lokasi fasilitas, perkiraan kebutuhan daya, dan ",
+      "default": "Nama perusahaan, lokasi fasilitas, perkiraan kebutuhan daya, dan solusi yang ingin dieksplorasi.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.title4": {
+      "type": "text",
+      "label": "contact / Belum tahu kebutuhan daya?",
+      "default": "Belum tahu kebutuhan daya?",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.text5": {
+      "type": "textarea",
+      "label": "contact / Gunakan daya terpasang sebagai gambaran awal. Nilainya dapat dipe",
+      "default": "Gunakan daya terpasang sebagai gambaran awal. Nilainya dapat diperbarui setelah kajian teknis.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.text6": {
+      "type": "text",
+      "label": "contact / FORMULIR DEMO",
+      "default": "FORMULIR DEMO",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.text7": {
+      "type": "textarea",
+      "label": "contact / Data hanya diproses di browser untuk membuat ringkasan. Tidak dik",
+      "default": "Dalam preview ini, data hanya digunakan untuk membuat ringkasan di browser. Pengiriman, penyimpanan, dan tindak lanjut pada website yang diterbitkan dikelola oleh Pagiverse Core.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.title5": {
+      "type": "textarea",
+      "label": "contact / Profil perusahaan",
+      "default": "Profil perusahaan",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.text8": {
+      "type": "textarea",
+      "label": "contact / Kolom bertanda * wajib diisi.",
+      "default": "Kolom bertanda * wajib diisi.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.label2": {
+      "type": "text",
+      "label": "contact / Nama perusahaan",
+      "default": "Nama perusahaan",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.label3": {
+      "type": "text",
+      "label": "contact / Bidang usaha",
+      "default": "Bidang usaha",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.label4": {
+      "type": "text",
+      "label": "contact / Industri & manufaktur",
+      "default": "Industri & manufaktur",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label5": {
+      "type": "text",
+      "label": "contact / Logistik & pergudangan",
+      "default": "Logistik & pergudangan",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label6": {
+      "type": "text",
+      "label": "contact / Properti & komersial",
+      "default": "Properti & komersial",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label7": {
+      "type": "text",
+      "label": "contact / Perhotelan & pariwisata",
+      "default": "Perhotelan & pariwisata",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label8": {
+      "type": "text",
+      "label": "contact / Lainnya",
+      "default": "Lainnya",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label9": {
+      "type": "text",
+      "label": "contact / Provinsi",
+      "default": "Provinsi",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.label10": {
+      "type": "text",
+      "label": "contact / Kota / kabupaten",
+      "default": "Kota / kabupaten",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.title6": {
+      "type": "textarea",
+      "label": "contact / Kebutuhan energi",
+      "default": "Kebutuhan energi",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.label11": {
+      "type": "text",
+      "label": "contact / Solusi yang diminati",
+      "default": "Solusi yang diminati",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.label12": {
+      "type": "text",
+      "label": "contact / Energi surya",
+      "default": "Energi surya",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label13": {
+      "type": "text",
+      "label": "contact / Energi angin",
+      "default": "Energi angin",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label14": {
+      "type": "text",
+      "label": "contact / Penyimpanan energi",
+      "default": "Penyimpanan energi",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label15": {
+      "type": "text",
+      "label": "contact / Solusi terintegrasi",
+      "default": "Solusi terintegrasi",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label16": {
+      "type": "text",
+      "label": "contact / Perlu rekomendasi",
+      "default": "Perlu rekomendasi",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label17": {
+      "type": "text",
+      "label": "contact / Perkiraan kebutuhan daya (kVA)",
+      "default": "Perkiraan kebutuhan daya (kVA)",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.text9": {
+      "type": "text",
+      "label": "contact / Gunakan perkiraan atau daya terpasang saat ini.",
+      "default": "Gunakan perkiraan atau daya terpasang saat ini.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.title7": {
+      "type": "textarea",
+      "label": "contact / Kontak penanggung jawab",
+      "default": "Kontak penanggung jawab",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.contact.contact.label18": {
+      "type": "text",
+      "label": "contact / Nama lengkap",
+      "default": "Nama lengkap",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.label19": {
+      "type": "text",
+      "label": "contact / Email perusahaan",
+      "default": "Email perusahaan",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.label20": {
+      "type": "text",
+      "label": "contact / Nomor telepon",
+      "default": "Nomor telepon",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.label21": {
+      "type": "text",
+      "label": "contact / Catatan tambahan",
+      "default": "Catatan tambahan",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 80
+    },
+    "sections.contact.contact.text10": {
+      "type": "text",
+      "label": "contact / (opsional)",
+      "default": "(opsional)",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.text11": {
+      "type": "text",
+      "label": "contact / Saya memahami bahwa formulir ini adalah demo dan data hanya digun",
+      "default": "Saya setuju informasi ini digunakan untuk menyusun kebutuhan energi perusahaan. Pengiriman diproses oleh Pagiverse Core ketika integrasi aktif.",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.contact.label22": {
+      "type": "text",
+      "label": "contact / Tinjau kebutuhan energi",
+      "default": "Tinjau kebutuhan energi",
+      "editable": true,
+      "group": "contact",
+      "maxLength": 32
+    },
+    "sections.contact.coreCta": {
+      "type": "text",
+      "label": "Tombol lanjut ke Pagiverse",
+      "group": "contact",
+      "editable": true,
+      "maxLength": 35,
+      "default": "Lanjutkan Pengajuan"
+    },
+    "sections.cta.home.title1": {
+      "type": "textarea",
+      "label": "cta / Langkah pertama menuju energi yang lebih bersih.",
+      "default": "Langkah pertama menuju\nenergi yang lebih bersih.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.home.text1": {
+      "type": "textarea",
+      "label": "cta / Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola peng",
+      "default": "Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola penggunaan, dan rencana pengembangan bisnis.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.home.label1": {
+      "type": "text",
+      "label": "cta / Ajukan Kebutuhan Energi",
+      "default": "Ajukan Kebutuhan Energi",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 32
+    },
+    "sections.cta.solutions.title1": {
+      "type": "textarea",
+      "label": "cta / Langkah pertama menuju energi yang lebih bersih.",
+      "default": "Langkah pertama menuju\nenergi yang lebih bersih.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.solutions.text1": {
+      "type": "textarea",
+      "label": "cta / Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola peng",
+      "default": "Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola penggunaan, dan rencana pengembangan bisnis.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.solutions.label1": {
+      "type": "text",
+      "label": "cta / Ajukan Kebutuhan Energi",
+      "default": "Ajukan Kebutuhan Energi",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 32
+    },
+    "sections.cta.projects.title1": {
+      "type": "textarea",
+      "label": "cta / Langkah pertama menuju energi yang lebih bersih.",
+      "default": "Langkah pertama menuju\nenergi yang lebih bersih.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.projects.text1": {
+      "type": "textarea",
+      "label": "cta / Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola peng",
+      "default": "Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola penggunaan, dan rencana pengembangan bisnis.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.projects.label1": {
+      "type": "text",
+      "label": "cta / Ajukan Kebutuhan Energi",
+      "default": "Ajukan Kebutuhan Energi",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 32
+    },
+    "sections.cta.about.title1": {
+      "type": "textarea",
+      "label": "cta / Langkah pertama menuju energi yang lebih bersih.",
+      "default": "Langkah pertama menuju\nenergi yang lebih bersih.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.about.text1": {
+      "type": "textarea",
+      "label": "cta / Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola peng",
+      "default": "Ceritakan kebutuhan perusahaan Anda. Mulai dari lokasi, pola penggunaan, dan rencana pengembangan bisnis.",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.cta.about.label1": {
+      "type": "text",
+      "label": "cta / Ajukan Kebutuhan Energi",
+      "default": "Ajukan Kebutuhan Energi",
+      "editable": true,
+      "group": "cta",
+      "maxLength": 32
+    },
+    "sections.footer.home.label1": {
+      "type": "text",
+      "label": "footer / Solusi Energi",
+      "default": "Solusi Energi",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.home.label2": {
+      "type": "text",
+      "label": "footer / Proyek",
+      "default": "Proyek",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.home.label3": {
+      "type": "text",
+      "label": "footer / Tentang ARUNA",
+      "default": "Tentang ARUNA",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.home.label4": {
+      "type": "text",
+      "label": "footer / Ajukan Kebutuhan",
+      "default": "Ajukan Kebutuhan",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.home.text1": {
+      "type": "text",
+      "label": "footer / © 2026 ARUNA ENERGY",
+      "default": "© 2026 ARUNA ENERGY",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.footer.home.text2": {
+      "type": "textarea",
+      "label": "footer / Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasit",
+      "default": "Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasitas, dan visual merupakan ilustrasi.",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.footer.solutions.label1": {
+      "type": "text",
+      "label": "footer / Solusi Energi",
+      "default": "Solusi Energi",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.solutions.label2": {
+      "type": "text",
+      "label": "footer / Proyek",
+      "default": "Proyek",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.solutions.label3": {
+      "type": "text",
+      "label": "footer / Tentang ARUNA",
+      "default": "Tentang ARUNA",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.solutions.label4": {
+      "type": "text",
+      "label": "footer / Ajukan Kebutuhan",
+      "default": "Ajukan Kebutuhan",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.solutions.text1": {
+      "type": "text",
+      "label": "footer / © 2026 ARUNA ENERGY",
+      "default": "© 2026 ARUNA ENERGY",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.footer.solutions.text2": {
+      "type": "textarea",
+      "label": "footer / Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasit",
+      "default": "Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasitas, dan visual merupakan ilustrasi.",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.footer.projects.label1": {
+      "type": "text",
+      "label": "footer / Solusi Energi",
+      "default": "Solusi Energi",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.projects.label2": {
+      "type": "text",
+      "label": "footer / Proyek",
+      "default": "Proyek",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.projects.label3": {
+      "type": "text",
+      "label": "footer / Tentang ARUNA",
+      "default": "Tentang ARUNA",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.projects.label4": {
+      "type": "text",
+      "label": "footer / Ajukan Kebutuhan",
+      "default": "Ajukan Kebutuhan",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.projects.text1": {
+      "type": "text",
+      "label": "footer / © 2026 ARUNA ENERGY",
+      "default": "© 2026 ARUNA ENERGY",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.footer.projects.text2": {
+      "type": "textarea",
+      "label": "footer / Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasit",
+      "default": "Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasitas, dan visual merupakan ilustrasi.",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.footer.about.label1": {
+      "type": "text",
+      "label": "footer / Solusi Energi",
+      "default": "Solusi Energi",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.about.label2": {
+      "type": "text",
+      "label": "footer / Proyek",
+      "default": "Proyek",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.about.label3": {
+      "type": "text",
+      "label": "footer / Tentang ARUNA",
+      "default": "Tentang ARUNA",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.about.label4": {
+      "type": "text",
+      "label": "footer / Ajukan Kebutuhan",
+      "default": "Ajukan Kebutuhan",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.about.text1": {
+      "type": "text",
+      "label": "footer / © 2026 ARUNA ENERGY",
+      "default": "© 2026 ARUNA ENERGY",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.footer.about.text2": {
+      "type": "textarea",
+      "label": "footer / Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasit",
+      "default": "Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasitas, dan visual merupakan ilustrasi.",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 1000,
+      "required": false
+    },
+    "sections.footer.contact.label1": {
+      "type": "text",
+      "label": "footer / Solusi Energi",
+      "default": "Solusi Energi",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.contact.label2": {
+      "type": "text",
+      "label": "footer / Proyek",
+      "default": "Proyek",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.contact.label3": {
+      "type": "text",
+      "label": "footer / Tentang ARUNA",
+      "default": "Tentang ARUNA",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.contact.label4": {
+      "type": "text",
+      "label": "footer / Ajukan Kebutuhan",
+      "default": "Ajukan Kebutuhan",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 32,
+      "required": false
+    },
+    "sections.footer.contact.text1": {
+      "type": "text",
+      "label": "footer / © 2026 ARUNA ENERGY",
+      "default": "© 2026 ARUNA ENERGY",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.footer.contact.text2": {
+      "type": "textarea",
+      "label": "footer / Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasit",
+      "default": "Website konsep. ARUNA ENERGY adalah brand fiktif. Proyek, kapasitas, dan visual merupakan ilustrasi.",
+      "editable": true,
+      "group": "footer",
+      "maxLength": 1000,
+      "required": false
+    },
+    "theme.accent": {
+      "type": "color",
+      "label": "Warna aksen",
+      "default": "#86d5ae",
+      "editable": true,
+      "group": "theme"
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul SEO home",
+      "default": "Energi Bersih untuk Bisnis | ARUNA ENERGY",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 120
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO home",
+      "default": "Website konsep ARUNA ENERGY, pengembang energi surya, angin, dan penyimpanan untuk bisnis di seluruh Indonesia.",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 250
+    },
+    "seo.pages.solutions.title": {
+      "type": "text",
+      "label": "Judul SEO solutions",
+      "default": "Solusi Energi | ARUNA ENERGY",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 120
+    },
+    "seo.pages.solutions.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO solutions",
+      "default": "Eksplorasi energi surya, energi angin, dan penyimpanan baterai untuk kebutuhan perusahaan.",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 250
+    },
+    "seo.pages.projects.title": {
+      "type": "text",
+      "label": "Judul SEO projects",
+      "default": "Konsep Proyek | ARUNA ENERGY",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 120
+    },
+    "seo.pages.projects.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO projects",
+      "default": "Contoh portofolio fiktif proyek energi bersih ARUNA ENERGY di berbagai wilayah Indonesia.",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 250
+    },
+    "seo.pages.about.title": {
+      "type": "text",
+      "label": "Judul SEO about",
+      "default": "Tentang ARUNA | ARUNA ENERGY",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 120
+    },
+    "seo.pages.about.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO about",
+      "default": "Kenali konsep ARUNA ENERGY dan pendekatan pengembangan energi terbarukan untuk bisnis Indonesia.",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 250
+    },
+    "seo.pages.contact.title": {
+      "type": "text",
+      "label": "Judul SEO contact",
+      "default": "Ajukan Kebutuhan Energi | ARUNA ENERGY",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 120
+    },
+    "seo.pages.contact.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO contact",
+      "default": "Susun dan unduh ringkasan kebutuhan energi perusahaan melalui formulir demo ARUNA ENERGY.",
+      "editable": true,
+      "group": "seo",
+      "maxLength": 250
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Gambar berbagi website",
+      "default": {
+        "src": "assets/hero-energy.webp",
+        "altId": "Ilustrasi energi terbarukan",
+        "altEn": "Ilustrasi energi terbarukan",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      },
+      "editable": true,
+      "group": "seo",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 2,
+      "focalPoint": true,
+      "aspectRatio": "free"
+    }
+  },
+  "forms": [
+    {
+      "id": "energy-needs",
+      "label": "Pengajuan kebutuhan energi",
+      "provider": "pagiverse-core",
+      "fields": [
+        {
+          "name": "company",
+          "type": "text",
+          "required": true,
+          "maxLength": 120,
+          "labels": {
+            "id": "Nama perusahaan"
+          }
+        },
+        {
+          "name": "industry",
+          "type": "select",
+          "required": true,
+          "maxLength": 120,
+          "labels": {
+            "id": "Bidang usaha"
+          },
+          "options": [
+            {
+              "value": "industri",
+              "labels": {
+                "id": "Industri & manufaktur"
+              }
+            },
+            {
+              "value": "logistik",
+              "labels": {
+                "id": "Logistik & pergudangan"
+              }
+            },
+            {
+              "value": "komersial",
+              "labels": {
+                "id": "Properti & komersial"
+              }
+            },
+            {
+              "value": "hospitality",
+              "labels": {
+                "id": "Perhotelan & pariwisata"
+              }
+            },
+            {
+              "value": "lainnya",
+              "labels": {
+                "id": "Lainnya"
+              }
+            }
+          ]
+        },
+        {
+          "name": "province",
+          "type": "text",
+          "required": true,
+          "maxLength": 80,
+          "labels": {
+            "id": "Provinsi"
+          }
+        },
+        {
+          "name": "city",
+          "type": "text",
+          "required": true,
+          "maxLength": 80,
+          "labels": {
+            "id": "Kota / kabupaten"
+          }
+        },
+        {
+          "name": "solution",
+          "type": "select",
+          "required": true,
+          "maxLength": 120,
+          "labels": {
+            "id": "Solusi yang diminati"
+          },
+          "options": [
+            {
+              "value": "surya",
+              "labels": {
+                "id": "Energi surya"
+              }
+            },
+            {
+              "value": "angin",
+              "labels": {
+                "id": "Energi angin"
+              }
+            },
+            {
+              "value": "penyimpanan",
+              "labels": {
+                "id": "Penyimpanan energi"
+              }
+            },
+            {
+              "value": "terintegrasi",
+              "labels": {
+                "id": "Solusi terintegrasi"
+              }
+            },
+            {
+              "value": "diskusi",
+              "labels": {
+                "id": "Perlu rekomendasi"
+              }
+            }
+          ]
+        },
+        {
+          "name": "demand",
+          "type": "number",
+          "required": true,
+          "maxLength": 120,
+          "labels": {
+            "id": "Perkiraan kebutuhan daya (kVA)"
+          }
+        },
+        {
+          "name": "contactName",
+          "type": "text",
+          "required": true,
+          "maxLength": 100,
+          "labels": {
+            "id": "Nama lengkap"
+          }
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "maxLength": 160,
+          "labels": {
+            "id": "Email perusahaan"
+          }
+        },
+        {
+          "name": "phone",
+          "type": "phone",
+          "required": true,
+          "maxLength": 25,
+          "labels": {
+            "id": "Nomor telepon"
+          }
+        },
+        {
+          "name": "notes",
+          "type": "textarea",
+          "required": false,
+          "maxLength": 1500,
+          "labels": {
+            "id": "Catatan tambahan (opsional)"
+          }
+        },
+        {
+          "name": "consent",
+          "type": "checkbox",
+          "required": true,
+          "labels": {
+            "id": "Persetujuan pemrosesan kebutuhan energi"
+          }
+        }
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero beranda",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.image",
+        "sections.hero.image.altId",
+        "sections.hero.image.focalPoint.x",
+        "sections.hero.image.focalPoint.y",
+        "sections.hero.home.text1",
+        "sections.hero.home.heading1",
+        "sections.hero.home.text2",
+        "sections.hero.home.label2",
+        "sections.hero.home.label3"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Tentang perusahaan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.image",
+        "sections.about.image.altId",
+        "sections.about.image.focalPoint.x",
+        "sections.about.image.focalPoint.y",
+        "sections.about.values",
+        "sections.about.home.text1",
+        "sections.about.home.text2",
+        "sections.about.home.text4",
+        "sections.about.home.label1",
+        "sections.about.about.text1",
+        "sections.about.about.heading1",
+        "sections.about.about.text2",
+        "sections.about.about.title1",
+        "sections.about.about.text3",
+        "sections.about.about.text4",
+        "sections.about.about.text5",
+        "sections.about.about.title3"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Solusi energi",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.solar.image",
+        "sections.services.solar.image.altId",
+        "sections.services.solar.image.focalPoint.x",
+        "sections.services.solar.image.focalPoint.y",
+        "sections.services.wind.image",
+        "sections.services.wind.image.altId",
+        "sections.services.wind.image.focalPoint.x",
+        "sections.services.wind.image.focalPoint.y",
+        "sections.services.storage.image",
+        "sections.services.storage.image.altId",
+        "sections.services.storage.image.focalPoint.x",
+        "sections.services.storage.image.focalPoint.y",
+        "sections.services.home.title1",
+        "sections.services.home.text1",
+        "sections.services.home.title3",
+        "sections.services.home.text2",
+        "sections.services.home.text3",
+        "sections.services.home.title4",
+        "sections.services.home.text4",
+        "sections.services.home.title5",
+        "sections.services.home.text5",
+        "sections.services.solutions.text1",
+        "sections.services.solutions.heading1",
+        "sections.services.solutions.text2",
+        "sections.services.solutions.label2",
+        "sections.services.solutions.label3",
+        "sections.services.solutions.label4",
+        "sections.services.solutions.title1",
+        "sections.services.solutions.text3",
+        "sections.services.solutions.text4",
+        "sections.services.solutions.text5",
+        "sections.services.solutions.text6",
+        "sections.services.solutions.text7",
+        "sections.services.solutions.label5",
+        "sections.services.solutions.title2",
+        "sections.services.solutions.text8",
+        "sections.services.solutions.label6",
+        "sections.services.solutions.title4",
+        "sections.services.solutions.text9",
+        "sections.services.solutions.title6",
+        "sections.services.solutions.text10",
+        "sections.services.solutions.text11",
+        "sections.services.solutions.label7",
+        "sections.services.solutions.title7",
+        "sections.services.solutions.text12",
+        "sections.services.solutions.text13",
+        "sections.services.solutions.text14",
+        "sections.services.solutions.text15",
+        "sections.services.solutions.text16"
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Proyek",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.gallery.featuredImage",
+        "sections.gallery.featuredImage.altId",
+        "sections.gallery.featuredImage.focalPoint.x",
+        "sections.gallery.featuredImage.focalPoint.y",
+        "sections.gallery.emptyText",
+        "sections.gallery.countLabel",
+        "sections.gallery.capacityLabel",
+        "sections.gallery.type.surya",
+        "sections.gallery.type.angin",
+        "sections.gallery.type.penyimpanan",
+        "sections.gallery.viewLabel",
+        "sections.gallery.dialogLabel",
+        "sections.gallery.scopeLabel",
+        "sections.gallery.dialogCta",
+        "sections.gallery.items",
+        "sections.gallery.home.title1",
+        "sections.gallery.home.text1",
+        "sections.gallery.home.text2",
+        "sections.gallery.home.title2",
+        "sections.gallery.home.text3",
+        "sections.gallery.home.label1",
+        "sections.gallery.projects.text1",
+        "sections.gallery.projects.heading1",
+        "sections.gallery.projects.text2",
+        "sections.gallery.projects.text3",
+        "sections.gallery.projects.text4",
+        "sections.gallery.projects.label2",
+        "sections.gallery.projects.label3",
+        "sections.gallery.projects.label4",
+        "sections.gallery.projects.label5"
+      ]
+    },
+    {
+      "id": "process",
+      "label": "Proses kerja sama",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.process.items",
+        "sections.process.home.title1"
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "Pertanyaan umum",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.faq.items",
+        "sections.faq.home.title1"
+      ]
+    },
+    {
+      "id": "location",
+      "label": "Cakupan wilayah",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.location.items",
+        "sections.location.about.title1",
+        "sections.location.about.text1",
+        "sections.location.about.text2"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Pengajuan kebutuhan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.contact.form.company.placeholder",
+        "sections.contact.form.province.placeholder",
+        "sections.contact.form.city.placeholder",
+        "sections.contact.form.demand.placeholder",
+        "sections.contact.form.email.placeholder",
+        "sections.contact.form.phone.placeholder",
+        "sections.contact.form.notes.placeholder",
+        "sections.contact.contact.text1",
+        "sections.contact.contact.heading1",
+        "sections.contact.contact.text2",
+        "sections.contact.contact.title1",
+        "sections.contact.contact.text3",
+        "sections.contact.contact.title3",
+        "sections.contact.contact.text4",
+        "sections.contact.contact.title4",
+        "sections.contact.contact.text5",
+        "sections.contact.contact.text6",
+        "sections.contact.contact.text7",
+        "sections.contact.contact.title5",
+        "sections.contact.contact.text8",
+        "sections.contact.contact.label2",
+        "sections.contact.contact.label3",
+        "sections.contact.contact.label4",
+        "sections.contact.contact.label5",
+        "sections.contact.contact.label6",
+        "sections.contact.contact.label7",
+        "sections.contact.contact.label8",
+        "sections.contact.contact.label9",
+        "sections.contact.contact.label10",
+        "sections.contact.contact.title6",
+        "sections.contact.contact.label11",
+        "sections.contact.contact.label12",
+        "sections.contact.contact.label13",
+        "sections.contact.contact.label14",
+        "sections.contact.contact.label15",
+        "sections.contact.contact.label16",
+        "sections.contact.contact.label17",
+        "sections.contact.contact.text9",
+        "sections.contact.contact.title7",
+        "sections.contact.contact.label18",
+        "sections.contact.contact.label19",
+        "sections.contact.contact.label20",
+        "sections.contact.contact.label21",
+        "sections.contact.contact.text10",
+        "sections.contact.contact.text11",
+        "sections.contact.contact.label22",
+        "sections.contact.coreCta"
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "Ajakan utama",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.cta.home.title1",
+        "sections.cta.home.text1",
+        "sections.cta.home.label1",
+        "sections.cta.solutions.title1",
+        "sections.cta.solutions.text1",
+        "sections.cta.solutions.label1",
+        "sections.cta.projects.title1",
+        "sections.cta.projects.text1",
+        "sections.cta.projects.label1",
+        "sections.cta.about.title1",
+        "sections.cta.about.text1",
+        "sections.cta.about.label1"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.footer.home.label1",
+        "sections.footer.home.label2",
+        "sections.footer.home.label3",
+        "sections.footer.home.label4",
+        "sections.footer.home.text1",
+        "sections.footer.home.text2",
+        "sections.footer.solutions.label1",
+        "sections.footer.solutions.label2",
+        "sections.footer.solutions.label3",
+        "sections.footer.solutions.label4",
+        "sections.footer.solutions.text1",
+        "sections.footer.solutions.text2",
+        "sections.footer.projects.label1",
+        "sections.footer.projects.label2",
+        "sections.footer.projects.label3",
+        "sections.footer.projects.label4",
+        "sections.footer.projects.text1",
+        "sections.footer.projects.text2",
+        "sections.footer.about.label1",
+        "sections.footer.about.label2",
+        "sections.footer.about.label3",
+        "sections.footer.about.label4",
+        "sections.footer.about.text1",
+        "sections.footer.about.text2",
+        "sections.footer.contact.label1",
+        "sections.footer.contact.label2",
+        "sections.footer.contact.label3",
+        "sections.footer.contact.label4",
+        "sections.footer.contact.text1",
+        "sections.footer.contact.text2"
+      ]
+    }
+  ]
+}
