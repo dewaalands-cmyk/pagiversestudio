@@ -1,0 +1,1532 @@
+{
+  "pagiverseStandard": 1,
+  "id": "nusa-computer-001",
+  "name": "NUSA Computer",
+  "category": "retail",
+  "description": "Toko komputer dan laptop Indonesia dengan galeri produk putih, katalog, serta ekstensi keranjang dan perakit PC tanpa pembayaran daring.",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html"
+    }
+  ],
+  "dependencies": [],
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "light",
+    "tokens": {
+      "background": {
+        "editable": false,
+        "default": "#ffffff"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#f5f5f7"
+      },
+      "text": {
+        "editable": false,
+        "default": "#1d1d1f"
+      },
+      "primary": {
+        "editable": false,
+        "default": "#0071e3"
+      },
+      "accent": {
+        "editable": false,
+        "default": "#0066cc"
+      }
+    }
+  },
+  "navigation": {
+    "allowAddItems": false,
+    "items": [
+      {
+        "id": "laptop",
+        "labelField": "navigation.laptop.label",
+        "target": "#katalog",
+        "hideable": false,
+        "section": "products"
+      },
+      {
+        "id": "desktop",
+        "labelField": "navigation.desktop.label",
+        "target": "#katalog",
+        "hideable": false,
+        "section": "products"
+      },
+      {
+        "id": "components",
+        "labelField": "navigation.components.label",
+        "target": "#katalog",
+        "hideable": false,
+        "section": "products"
+      },
+      {
+        "id": "catalog",
+        "labelField": "navigation.catalog.label",
+        "target": "#katalog",
+        "hideable": false,
+        "section": "products"
+      },
+      {
+        "id": "builder",
+        "labelField": "navigation.builder.label",
+        "target": "#rakit-pc",
+        "hideable": true,
+        "section": "about"
+      },
+      {
+        "id": "help",
+        "labelField": "navigation.help.label",
+        "target": "#bantuan",
+        "hideable": true,
+        "section": "services"
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama toko",
+      "default": "NUSA Computer",
+      "maxLength": 48,
+      "editable": true
+    },
+    "contact.whatsapp": {
+      "type": "phone",
+      "label": "WhatsApp penerima pesanan (kosong sampai tersedia)",
+      "default": "",
+      "maxLength": 18,
+      "pattern": "^[0-9+ ()-]{0,18}$",
+      "editable": true
+    },
+    "sections.products.items": {
+      "type": "array",
+      "label": "Katalog produk dan komponen",
+      "minItems": 0,
+      "maxItems": 24,
+      "description": "ID produk harus unik. Rakit PC hanya memakai metadata teknis bawaan untuk identitas hardware asli. Mengganti ID, kategori, nama, atau spesifikasi hardware mengeluarkannya dari perakit sampai metadata teknis diperbarui pengembang.",
+      "default": [
+        {
+          "id": "nusa-air-14",
+          "name": "NUSA Air 14",
+          "category": "Laptop",
+          "price": "8999000",
+          "image": {
+            "src": "./assets/laptop.webp",
+            "alt": "NUSA Air 14",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "14 inci · Ryzen 5 · 16 GB · 512 GB",
+          "description": "Laptop contoh yang ringan untuk bekerja, belajar, dan menemani ide sehari-hari.",
+          "detailText": "Layar 14 inci Full HD\nMemori 16 GB dan SSD 512 GB\nDesain ringkas untuk mobilitas",
+          "tag": "Pilihan"
+        },
+        {
+          "id": "nusa-pro-16",
+          "name": "NUSA Pro 16",
+          "category": "Laptop",
+          "price": "15999000",
+          "image": {
+            "src": "./assets/laptop.webp",
+            "alt": "NUSA Pro 16",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "16 inci · Core i7 · 16 GB · 1 TB",
+          "description": "Ruang kerja lebih luas untuk berkarya, mengolah banyak tugas, dan menikmati konten.",
+          "detailText": "Layar 16 inci\nMemori 16 GB dan SSD 1 TB\nKonfigurasi produk demo",
+          "tag": ""
+        },
+        {
+          "id": "nusa-play",
+          "name": "NUSA Play",
+          "category": "PC Desktop",
+          "price": "16999000",
+          "image": {
+            "src": "./assets/desktop.webp",
+            "alt": "NUSA Play",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "Ryzen 5 · RTX 4060 · 16 GB DDR5",
+          "description": "Sebuah gambaran PC untuk bermain dan berkarya. Pilih komponen sendiri melalui Rakit PC.",
+          "detailText": "Ryzen 5 7600\nGeForce RTX 4060 8 GB\nMemori 16 GB DDR5 · SSD 1 TB",
+          "tag": "Pilihan"
+        },
+        {
+          "id": "ryzen-7600",
+          "name": "AMD Ryzen 5 7600",
+          "category": "Komponen",
+          "price": "2999000",
+          "image": {
+            "src": "./assets/cpu-amd-ryzen7600.webp",
+            "alt": "AMD Ryzen 5 7600",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "6 core · 12 thread · AM5",
+          "description": "Fondasi PC serbaguna dengan soket AM5 dan grafis terintegrasi untuk kebutuhan tampilan dasar.",
+          "detailText": "Soket AM5 · dukungan DDR5\nTDP 65 W\nPilihan demo menyertakan pendingin bawaan",
+          "tag": ""
+        },
+        {
+          "id": "msi-b650mp",
+          "name": "MSI PRO B650M-P",
+          "category": "Komponen",
+          "price": "2099000",
+          "image": {
+            "src": "./assets/motherboard-msi-b650mp.webp",
+            "alt": "MSI PRO B650M-P",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "AM5 · B650 · Micro-ATX · DDR5",
+          "description": "Papan utama Micro-ATX untuk membangun sistem berbasis AMD AM5 dan memori DDR5.",
+          "detailText": "Soket AM5\nMemori DDR5\nFormat Micro-ATX",
+          "tag": ""
+        },
+        {
+          "id": "rtx-4060",
+          "name": "MSI RTX 4060 VENTUS 2X",
+          "category": "Komponen",
+          "price": "4899000",
+          "image": {
+            "src": "./assets/gpu-msi-rtx4060.webp",
+            "alt": "MSI RTX 4060 VENTUS 2X",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "8 GB GDDR6 · GeForce RTX 4060",
+          "description": "Pilihan grafis diskrit untuk melengkapi rakitan gaming dan pekerjaan visual.",
+          "detailText": "Memori grafis 8 GB\nPanjang model: 199 mm\nRekomendasi catu daya model: 550 W",
+          "tag": ""
+        },
+        {
+          "id": "kingston-ddr5",
+          "name": "Kingston FURY Beast DDR5",
+          "category": "Komponen",
+          "price": "1099000",
+          "image": {
+            "src": "./assets/ram-kingston-fury.webp",
+            "alt": "Kingston FURY Beast DDR5",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "16 GB · DDR5 · 5600 MT/s",
+          "description": "Pilihan memori DDR5 untuk rakitan AM5 dalam katalog demo ini.",
+          "detailText": "Kapasitas 16 GB\nStandar DDR5\nKecepatan konfigurasi demo: 5600 MT/s",
+          "tag": ""
+        },
+        {
+          "id": "samsung-990evo",
+          "name": "Samsung 990 EVO",
+          "category": "Komponen",
+          "price": "1399000",
+          "image": {
+            "src": "./assets/ssd-samsung-990evo.webp",
+            "alt": "Samsung 990 EVO",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "1 TB · NVMe · M.2 2280",
+          "description": "Penyimpanan SSD dalam format M.2 untuk sistem operasi, aplikasi, dan koleksi pribadi.",
+          "detailText": "Kapasitas 1 TB\nFormat M.2 2280\nAntarmuka NVMe",
+          "tag": ""
+        },
+        {
+          "id": "nusa-psu-650",
+          "name": "Corsair CX650",
+          "category": "Komponen",
+          "price": "899000",
+          "image": {
+            "src": "./assets/psu650.webp",
+            "alt": "Corsair CX650",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "650 W · ATX · 80 PLUS Bronze",
+          "description": "Catu daya ATX 650 W untuk melengkapi rakitan. Pastikan kebutuhan daya dan konektor sistem telah diperiksa.",
+          "detailText": "Daya kontinu 650 W\nFormat ATX · panjang 125 mm\n80 PLUS Bronze · kabel non-modular",
+          "tag": ""
+        },
+        {
+          "id": "nusa-case",
+          "name": "MSI MAG PANO M100R PZ",
+          "category": "Komponen",
+          "price": "799000",
+          "image": {
+            "src": "./assets/case-black.webp",
+            "alt": "MSI MAG PANO M100R PZ",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "Micro-ATX · hitam · ruang GPU 390 mm",
+          "description": "Casing hitam berpanel kaca untuk sistem Micro-ATX. Tinjau kembali ukuran pendingin dan konektor sebelum perakitan.",
+          "detailText": "Dukungan Micro-ATX dan Mini-ITX\nRuang kartu grafis hingga 390 mm\nPSU ATX hingga 200 mm; cooler CPU hingga 175 mm",
+          "tag": ""
+        },
+        {
+          "id": "kingston-ddr4-demo",
+          "name": "Kingston ValueRAM SO-DIMM",
+          "category": "Komponen",
+          "price": "649000",
+          "image": {
+            "src": "./assets/laptop-ram.webp",
+            "alt": "Kingston ValueRAM SO-DIMM",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "16 GB · DDR4-3200 · RAM laptop",
+          "description": "Memori SO-DIMM untuk laptop dengan slot DDR4 yang dapat diganti. Periksa dukungan model laptop, kapasitas maksimum, dan slot sebelum membeli.",
+          "detailText": "16 GB · DDR4-3200 · CL22\nSO-DIMM 260-pin · 1.2 V\nTidak sesuai untuk motherboard DDR5 atau slot DIMM desktop",
+          "tag": ""
+        },
+        {
+          "id": "keyboard-demo",
+          "name": "NUSA Keys",
+          "category": "Aksesori",
+          "price": "699000",
+          "image": {
+            "src": "./assets/keyboard.webp",
+            "alt": "NUSA Keys",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          },
+          "spec": "Keyboard mekanis · konfigurasi demo",
+          "description": "Pilihan keyboard ringkas untuk melengkapi meja kerja dan area bermain.",
+          "detailText": "Produk aksesori demo\nModel dan spesifikasi akhir dapat diganti\nKonfirmasi pilihan dengan toko",
+          "tag": ""
+        }
+      ],
+      "item": {
+        "fields": {
+          "id": {
+            "type": "text",
+            "label": "ID unik produk",
+            "required": true,
+            "maxLength": 60,
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,59}$"
+          },
+          "name": {
+            "type": "text",
+            "label": "Nama produk",
+            "required": true,
+            "maxLength": 70
+          },
+          "category": {
+            "type": "select",
+            "label": "Kategori",
+            "options": ["Laptop", "PC Desktop", "Komponen", "Aksesori"],
+            "default": "Aksesori"
+          },
+          "price": {
+            "type": "text",
+            "label": "Harga IDR tanpa pemisah (0–1000000000)",
+            "required": true,
+            "maxLength": 12,
+            "pattern": "^\\d{1,10}(?:\\.\\d{1,2})?$"
+          },
+          "image": {
+            "type": "image",
+            "label": "Gambar produk",
+            "accept": ["image/jpeg", "image/png", "image/webp", "image/avif"],
+            "maxFileSizeMB": 8,
+            "focalPoint": true
+          },
+          "tag": {
+            "type": "text",
+            "label": "Label singkat (opsional)",
+            "maxLength": 24
+          },
+          "spec": {
+            "type": "text",
+            "label": "Ringkasan spesifikasi",
+            "maxLength": 100
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi produk",
+            "maxLength": 240
+          },
+          "detailText": {
+            "type": "textarea",
+            "label": "Detail spesifikasi (satu baris per poin)",
+            "maxLength": 350
+          }
+        }
+      }
+    },
+    "sections.products.ui.add": {
+      "type": "text",
+      "label": "Tombol tambah produk",
+      "maxLength": 24,
+      "default": "Tambah"
+    },
+    "sections.products.ui.detail": {
+      "type": "text",
+      "label": "Tautan detail produk",
+      "maxLength": 30,
+      "default": "Lihat detail"
+    },
+    "sections.products.ui.addToCart": {
+      "type": "text",
+      "label": "Tombol tambah ke keranjang",
+      "maxLength": 36,
+      "default": "Tambah ke keranjang"
+    },
+    "sections.products.ui.emptyHeading": {
+      "type": "text",
+      "label": "Judul hasil kosong",
+      "maxLength": 80,
+      "default": "Belum menemukan yang cocok."
+    },
+    "sections.products.ui.emptyBody": {
+      "type": "textarea",
+      "label": "Pesan hasil kosong",
+      "maxLength": 160,
+      "default": "Coba kata kunci lain atau lihat semua kategori."
+    },
+    "sections.products.ui.reset": {
+      "type": "text",
+      "label": "Tombol reset pencarian",
+      "maxLength": 30,
+      "default": "Reset pencarian"
+    },
+    "sections.products.ui.productUnit": {
+      "type": "text",
+      "label": "Label jumlah produk",
+      "maxLength": 20,
+      "default": "produk"
+    },
+    "sections.products.ui.demoNote": {
+      "type": "textarea",
+      "label": "Catatan harga detail produk",
+      "maxLength": 180,
+      "default": "Harga dan konfigurasi demo. Konfirmasi produk akhir dengan toko."
+    },
+    "sections.products.ui.illustrationNote": {
+      "type": "text",
+      "label": "Catatan gambar ilustrasi",
+      "maxLength": 100,
+      "default": "Gambar merupakan ilustrasi visual."
+    },
+    "sections.about.cart.eyebrow": {
+      "type": "text",
+      "label": "Eyebrow keranjang",
+      "maxLength": 40,
+      "default": "Pilihanmu"
+    },
+    "sections.about.cart.heading": {
+      "type": "text",
+      "label": "Judul keranjang",
+      "maxLength": 60,
+      "default": "Keranjang"
+    },
+    "sections.about.cart.description": {
+      "type": "textarea",
+      "label": "Deskripsi keranjang",
+      "maxLength": 160,
+      "default": "Atur pilihan, lalu simpan ringkasan pesananmu."
+    },
+    "sections.about.cart.emptyHeading": {
+      "type": "text",
+      "label": "Judul keranjang kosong",
+      "maxLength": 80,
+      "default": "Mulai dari yang kamu butuhkan."
+    },
+    "sections.about.cart.emptyBody": {
+      "type": "textarea",
+      "label": "Pesan keranjang kosong",
+      "maxLength": 160,
+      "default": "Produk dan komponen pilihanmu akan tersimpan di sini."
+    },
+    "sections.about.cart.explore": {
+      "type": "text",
+      "label": "Tombol lanjut jelajah",
+      "maxLength": 30,
+      "default": "Lanjut jelajah"
+    },
+    "sections.about.cart.remove": {
+      "type": "text",
+      "label": "Tombol hapus barang",
+      "maxLength": 24,
+      "default": "Hapus"
+    },
+    "sections.about.cart.clear": {
+      "type": "text",
+      "label": "Tombol kosongkan keranjang",
+      "maxLength": 36,
+      "default": "Kosongkan keranjang"
+    },
+    "sections.about.cart.subtotal": {
+      "type": "text",
+      "label": "Label subtotal",
+      "maxLength": 24,
+      "default": "Subtotal"
+    },
+    "sections.about.cart.priceNote": {
+      "type": "textarea",
+      "label": "Catatan harga keranjang",
+      "maxLength": 180,
+      "default": "Harga demo. Ongkir dan ketersediaan akan dikonfirmasi toko."
+    },
+    "sections.about.cart.shopperName": {
+      "type": "text",
+      "label": "Label nama pembeli",
+      "maxLength": 40,
+      "default": "Nama kamu"
+    },
+    "sections.about.cart.optional": {
+      "type": "text",
+      "label": "Label opsional",
+      "maxLength": 24,
+      "default": "opsional"
+    },
+    "sections.about.cart.namePlaceholder": {
+      "type": "text",
+      "label": "Placeholder nama pembeli",
+      "maxLength": 50,
+      "default": "Nama untuk ringkasan"
+    },
+    "sections.about.cart.summary": {
+      "type": "text",
+      "label": "Label ringkasan",
+      "maxLength": 40,
+      "default": "Ringkasan pesanan"
+    },
+    "sections.about.cart.whatsapp": {
+      "type": "text",
+      "label": "Tombol WhatsApp",
+      "maxLength": 40,
+      "default": "Lanjut ke WhatsApp"
+    },
+    "sections.about.cart.copy": {
+      "type": "text",
+      "label": "Tombol salin pesanan",
+      "maxLength": 30,
+      "default": "Salin pesanan"
+    },
+    "sections.about.cart.download": {
+      "type": "text",
+      "label": "Tombol unduh pesanan",
+      "maxLength": 30,
+      "default": "Unduh .txt"
+    },
+    "sections.about.cart.summaryPrefix": {
+      "type": "text",
+      "label": "Awalan judul pesanan",
+      "maxLength": 30,
+      "default": "PESANAN"
+    },
+    "sections.about.cart.summaryNote": {
+      "type": "textarea",
+      "label": "Catatan ringkasan pesanan",
+      "maxLength": 220,
+      "default": "Harga demo. Ongkir, ketersediaan, dan konfigurasi akhir perlu dikonfirmasi dengan toko."
+    },
+    "sections.about.builder.eyebrow": {
+      "type": "text",
+      "label": "Eyebrow perakit PC",
+      "maxLength": 70,
+      "default": "Dari komponen menjadi kemungkinan."
+    },
+    "sections.about.builder.heading": {
+      "type": "text",
+      "label": "Judul perakit PC",
+      "maxLength": 70,
+      "default": "Rakit PC versimu."
+    },
+    "sections.about.builder.description": {
+      "type": "textarea",
+      "label": "Deskripsi perakit PC",
+      "maxLength": 180,
+      "default": "Mulai dari kebutuhanmu. Kami bantu memeriksa kecocokan dasarnya."
+    },
+    "sections.about.builder.officePreset": {
+      "type": "text",
+      "label": "Label paket kerja",
+      "maxLength": 40,
+      "default": "Paket kerja harian"
+    },
+    "sections.about.builder.gamingPreset": {
+      "type": "text",
+      "label": "Label paket gaming",
+      "maxLength": 40,
+      "default": "Paket gaming"
+    },
+    "sections.about.builder.summaryHeading": {
+      "type": "text",
+      "label": "Judul ringkasan rakitan",
+      "maxLength": 50,
+      "default": "Rakitan pilihanmu"
+    },
+    "sections.about.builder.priceNote": {
+      "type": "text",
+      "label": "Catatan total rakitan",
+      "maxLength": 80,
+      "default": "Total komponen pilihan · harga demo"
+    },
+    "sections.about.builder.add": {
+      "type": "text",
+      "label": "Tombol tambah rakitan",
+      "maxLength": 45,
+      "default": "Tambah rakitan ke keranjang"
+    },
+    "sections.about.builder.reset": {
+      "type": "text",
+      "label": "Tombol mulai ulang rakitan",
+      "maxLength": 30,
+      "default": "Mulai ulang"
+    },
+    "sections.about.builder.cartNote": {
+      "type": "textarea",
+      "label": "Catatan penambahan rakitan",
+      "maxLength": 220,
+      "default": "Komponen ditambahkan satu per satu. Pilihan yang sudah ada di keranjang akan bertambah jumlahnya."
+    },
+    "business.tagline": {
+      "type": "text",
+      "label": "Tagline toko",
+      "default": "Tempat untuk upgrade berikutnya.",
+      "maxLength": 80,
+      "editable": true
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo toko",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "1:1",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/nusa-mark.svg",
+        "alt": "Logo NUSA Computer",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "crop": "contain"
+      },
+      "editable": true
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul pencarian",
+      "default": "NUSA Computer | Laptop, PC & Komponen Pilihan",
+      "maxLength": 70,
+      "editable": true
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi pencarian",
+      "default": "Temukan laptop, PC desktop, dan komponen pilihan. Rancang PC sesuai kebutuhanmu dan susun pesanan di NUSA Computer.",
+      "maxLength": 160,
+      "editable": true
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Gambar berbagi halaman",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "1.91:1",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/hero.webp",
+        "alt": "Laptop, kartu grafis, dan PC putih NUSA Computer",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "crop": "contain"
+      },
+      "editable": true
+    },
+    "navigation.laptop.label": {
+      "type": "text",
+      "label": "Navigasi Laptop",
+      "default": "Laptop",
+      "maxLength": 24,
+      "editable": true
+    },
+    "navigation.desktop.label": {
+      "type": "text",
+      "label": "Navigasi PC Desktop",
+      "default": "PC Desktop",
+      "maxLength": 24,
+      "editable": true
+    },
+    "navigation.components.label": {
+      "type": "text",
+      "label": "Navigasi Komponen",
+      "default": "Komponen",
+      "maxLength": 24,
+      "editable": true
+    },
+    "navigation.builder.label": {
+      "type": "text",
+      "label": "Navigasi Rakit PC",
+      "default": "Rakit PC",
+      "maxLength": 24,
+      "editable": true
+    },
+    "navigation.help.label": {
+      "type": "text",
+      "label": "Navigasi Bantuan",
+      "default": "Bantuan",
+      "maxLength": 24,
+      "editable": true
+    },
+    "navigation.catalog.label": {
+      "type": "text",
+      "label": "Navigasi Katalog",
+      "default": "Katalog",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.hero.announcement": {
+      "type": "text",
+      "label": "Pengantar singkat",
+      "default": "Satu tempat untuk upgrade berikutnya.",
+      "maxLength": 90,
+      "editable": true
+    },
+    "sections.hero.announcementCta": {
+      "type": "text",
+      "label": "Tautan pengantar",
+      "default": "Jelajahi produk",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.hero.heading": {
+      "type": "text",
+      "label": "Judul utama baris pertama",
+      "default": "Performa untuk",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.hero.headingSecond": {
+      "type": "text",
+      "label": "Judul utama baris kedua",
+      "default": "segala rencana.",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.hero.description": {
+      "type": "text",
+      "label": "Deskripsi baris pertama",
+      "default": "Laptop, PC, dan komponen pilihan.",
+      "maxLength": 64,
+      "editable": true
+    },
+    "sections.hero.descriptionSecond": {
+      "type": "text",
+      "label": "Deskripsi baris kedua",
+      "default": "Untuk caramu bekerja, bermain, dan berkarya.",
+      "maxLength": 74,
+      "editable": true
+    },
+    "sections.hero.primaryCta.label": {
+      "type": "text",
+      "label": "Tombol katalog",
+      "default": "Jelajahi produk",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.hero.secondaryCta.label": {
+      "type": "text",
+      "label": "Tombol perakit",
+      "default": "Rakit PC",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Gambar hero",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/hero.webp",
+        "alt": "Laptop perak, kartu grafis, dan PC putih dengan panel kaca di galeri putih",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "crop": "contain"
+      },
+      "editable": true
+    },
+    "sections.gallery.heading": {
+      "type": "text",
+      "label": "Judul pilihan baris pertama",
+      "default": "Temukan yang pas.",
+      "maxLength": 35,
+      "editable": true
+    },
+    "sections.gallery.headingSecond": {
+      "type": "text",
+      "label": "Judul pilihan baris kedua",
+      "default": "Bawa idemu lebih jauh.",
+      "maxLength": 40,
+      "editable": true
+    },
+    "sections.gallery.cta": {
+      "type": "text",
+      "label": "Tautan semua produk",
+      "default": "Lihat semua produk",
+      "maxLength": 26,
+      "editable": true
+    },
+    "sections.gallery.builderLabel": {
+      "type": "text",
+      "label": "Label kategori perakit",
+      "default": "Rakit PC",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.gallery.builderImage": {
+      "type": "image",
+      "label": "Gambar kategori perakit",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "8:5",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/thumb-hero.webp",
+        "alt": "Perangkat PC untuk dirakit",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "crop": "contain"
+      },
+      "editable": true
+    },
+    "sections.gallery.categories": {
+      "type": "array",
+      "label": "Kategori belanja",
+      "minItems": 0,
+      "maxItems": 8,
+      "item": {
+        "fields": {
+          "label": {
+            "type": "text",
+            "label": "Nama kategori",
+            "maxLength": 24
+          },
+          "category": {
+            "type": "select",
+            "label": "Filter katalog",
+            "options": ["all", "Laptop", "PC Desktop", "Komponen", "Aksesori"]
+          },
+          "image": {
+            "type": "image",
+            "label": "Gambar kategori",
+            "accept": ["image/jpeg", "image/png", "image/webp"],
+            "maxFileSizeMB": 5,
+            "aspectRatio": "16:9",
+            "focalPoint": true,
+            "crop": true
+          }
+        }
+      },
+      "default": [
+        {
+          "label": "Laptop",
+          "category": "Laptop",
+          "image": {
+            "src": "assets/thumb-laptop.webp",
+            "alt": "Laptop perak",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        },
+        {
+          "label": "PC Desktop",
+          "category": "PC Desktop",
+          "image": {
+            "src": "assets/thumb-desktop.webp",
+            "alt": "Komputer desktop putih",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        },
+        {
+          "label": "Komponen PC",
+          "category": "Komponen",
+          "image": {
+            "src": "assets/thumb-gpu-msi-rtx4060.webp",
+            "alt": "Kartu grafis PC",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        },
+        {
+          "label": "Aksesori",
+          "category": "Aksesori",
+          "image": {
+            "src": "assets/thumb-keyboard.webp",
+            "alt": "Keyboard mekanis",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        }
+      ],
+      "editable": true
+    },
+    "sections.gallery.items": {
+      "type": "array",
+      "label": "Kartu produk unggulan",
+      "minItems": 0,
+      "maxItems": 6,
+      "item": {
+        "fields": {
+          "eyebrow": {
+            "type": "text",
+            "label": "Pengantar kartu",
+            "maxLength": 30
+          },
+          "heading": {
+            "type": "textarea",
+            "label": "Judul kartu (baris baru diperbolehkan)",
+            "maxLength": 74
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi kartu",
+            "maxLength": 130
+          },
+          "ctaLabel": {
+            "type": "text",
+            "label": "Label tautan",
+            "maxLength": 26
+          },
+          "category": {
+            "type": "select",
+            "label": "Filter tujuan",
+            "options": ["all", "Laptop", "PC Desktop", "Komponen", "Aksesori"]
+          },
+          "image": {
+            "type": "image",
+            "label": "Gambar",
+            "accept": ["image/jpeg", "image/png", "image/webp"],
+            "maxFileSizeMB": 5,
+            "aspectRatio": "16:9",
+            "focalPoint": true,
+            "crop": true
+          }
+        }
+      },
+      "default": [
+        {
+          "eyebrow": "Laptop pilihan",
+          "heading": "Ringan dibawa.\nBesar kemampuannya.",
+          "description": "Dari meja kerja ke mana saja.\nTemukan laptop untuk ritmemu.",
+          "ctaLabel": "Jelajahi laptop",
+          "category": "Laptop",
+          "image": {
+            "src": "assets/laptop.webp",
+            "alt": "Laptop perak tipis dengan layar biru",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        },
+        {
+          "eyebrow": "PC Desktop",
+          "heading": "Lebih banyak tenaga.\nLebih banyak kemungkinan.",
+          "description": "Ruang untuk game, karya,\ndan upgrade berikutnya.",
+          "ctaLabel": "Jelajahi PC",
+          "category": "PC Desktop",
+          "image": {
+            "src": "assets/desktop.webp",
+            "alt": "PC desktop putih dengan panel kaca dan pencahayaan biru",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        }
+      ],
+      "editable": true
+    },
+    "sections.products.heading": {
+      "type": "text",
+      "label": "Judul katalog baris pertama",
+      "default": "Upgrade dimulai",
+      "maxLength": 30,
+      "editable": true
+    },
+    "sections.products.headingSecond": {
+      "type": "text",
+      "label": "Judul katalog baris kedua",
+      "default": "di sini.",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.products.caption": {
+      "type": "text",
+      "label": "Deskripsi katalog",
+      "default": "Pilihan untuk setiap kebutuhan.",
+      "maxLength": 70,
+      "editable": true
+    },
+    "sections.products.filter.all": {
+      "type": "text",
+      "label": "Filter Semua",
+      "default": "Semua",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.products.filter.laptop": {
+      "type": "text",
+      "label": "Filter Laptop",
+      "default": "Laptop",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.products.filter.desktop": {
+      "type": "text",
+      "label": "Filter PC Desktop",
+      "default": "PC Desktop",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.products.filter.components": {
+      "type": "text",
+      "label": "Filter Komponen",
+      "default": "Komponen",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.products.filter.accessories": {
+      "type": "text",
+      "label": "Filter Aksesori",
+      "default": "Aksesori",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.products.searchLabel": {
+      "type": "text",
+      "label": "Label pencarian",
+      "default": "Cari nama atau spesifikasi produk",
+      "maxLength": 70,
+      "editable": true
+    },
+    "sections.products.searchPlaceholder": {
+      "type": "text",
+      "label": "Petunjuk pencarian",
+      "default": "Cari produk",
+      "maxLength": 30,
+      "editable": true
+    },
+    "sections.products.sortLabel": {
+      "type": "text",
+      "label": "Label urutan",
+      "default": "Urutkan produk",
+      "maxLength": 40,
+      "editable": true
+    },
+    "sections.products.sort.featured": {
+      "type": "text",
+      "label": "Urutan Pilihan kami",
+      "default": "Pilihan kami",
+      "maxLength": 28,
+      "editable": true
+    },
+    "sections.products.sort.priceAsc": {
+      "type": "text",
+      "label": "Urutan Harga terendah",
+      "default": "Harga terendah",
+      "maxLength": 28,
+      "editable": true
+    },
+    "sections.products.sort.priceDesc": {
+      "type": "text",
+      "label": "Urutan Harga tertinggi",
+      "default": "Harga tertinggi",
+      "maxLength": 28,
+      "editable": true
+    },
+    "sections.products.sort.name": {
+      "type": "text",
+      "label": "Urutan Nama A-Z",
+      "default": "Nama A-Z",
+      "maxLength": 28,
+      "editable": true
+    },
+    "sections.products.noScript": {
+      "type": "text",
+      "label": "Pesan JavaScript tidak aktif",
+      "default": "Aktifkan JavaScript untuk menelusuri produk, menyusun rakitan, dan memakai keranjang.",
+      "maxLength": 160,
+      "editable": true
+    },
+    "sections.products.disclaimer": {
+      "type": "textarea",
+      "label": "Catatan katalog demonstrasi",
+      "default": "Katalog demonstrasi. Harga adalah contoh dan gambar produk NUSA merupakan ilustrasi. Stok serta harga akhir dikonfirmasi sebelum pemesanan.",
+      "maxLength": 240,
+      "editable": true
+    },
+    "sections.about.eyebrow": {
+      "type": "text",
+      "label": "Pengantar perakit",
+      "default": "Rakit PC",
+      "maxLength": 30,
+      "editable": true
+    },
+    "sections.about.heading": {
+      "type": "text",
+      "label": "Judul perakit baris pertama",
+      "default": "PC impianmu.",
+      "maxLength": 30,
+      "editable": true
+    },
+    "sections.about.headingSecond": {
+      "type": "text",
+      "label": "Judul perakit baris kedua",
+      "default": "Mulai dari kamu.",
+      "maxLength": 30,
+      "editable": true
+    },
+    "sections.about.description": {
+      "type": "textarea",
+      "label": "Deskripsi perakit",
+      "default": "Pilih komponen sesuai kebutuhan. Lihat estimasi biaya dan periksa kecocokan dasarnya sebelum masuk keranjang.",
+      "maxLength": 180,
+      "editable": true
+    },
+    "sections.about.cta": {
+      "type": "text",
+      "label": "Tombol perakit",
+      "default": "Rakit PC",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.about.presetsLabel": {
+      "type": "text",
+      "label": "Pengantar pilihan rakitan",
+      "default": "Mulai dengan pilihan:",
+      "maxLength": 48,
+      "editable": true
+    },
+    "sections.about.officePreset": {
+      "type": "text",
+      "label": "Label rakitan kantor",
+      "default": "Kerja harian",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.about.gamingPreset": {
+      "type": "text",
+      "label": "Label rakitan gaming",
+      "default": "Gaming",
+      "maxLength": 24,
+      "editable": true
+    },
+    "sections.about.image": {
+      "type": "image",
+      "label": "Foto perakit PC",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/desktop.webp",
+        "alt": "Detail PC rakitan putih yang dapat disesuaikan komponennya",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "crop": "contain"
+      },
+      "editable": true
+    },
+    "sections.services.heading": {
+      "type": "text",
+      "label": "Judul bantuan",
+      "default": "Biar makin yakin.",
+      "maxLength": 40,
+      "editable": true
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Keunggulan toko",
+      "minItems": 0,
+      "maxItems": 6,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Judul keunggulan",
+            "maxLength": 48
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi keunggulan",
+            "maxLength": 180
+          },
+          "image": {
+            "type": "image",
+            "label": "Ikon keunggulan",
+            "accept": ["image/jpeg", "image/png", "image/webp"],
+            "maxFileSizeMB": 5,
+            "aspectRatio": "1:1",
+            "focalPoint": true,
+            "crop": true
+          }
+        }
+      },
+      "default": [
+        {
+          "title": "Pilih sesuai kebutuhan.",
+          "description": "Telusuri laptop, PC, dan komponen. Bandingkan spesifikasi serta harga dalam satu katalog.",
+          "image": {
+            "src": "assets/icons/sliders-horizontal.svg",
+            "alt": "",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        },
+        {
+          "title": "Rancang rakitanmu.",
+          "description": "Periksa socket, memori, ukuran komponen, dan kebutuhan daya dari pilihan rakitan.",
+          "image": {
+            "src": "assets/icons/cpu.svg",
+            "alt": "",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        },
+        {
+          "title": "Pesanan lebih jelas.",
+          "description": "Simpan pilihan di keranjang. Buat ringkasan sebelum mengonfirmasi pesanan dengan toko.",
+          "image": {
+            "src": "assets/icons/shopping-bag.svg",
+            "alt": "",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "contain"
+          }
+        }
+      ],
+      "editable": true
+    },
+    "sections.faq.heading": {
+      "type": "text",
+      "label": "Judul FAQ baris pertama",
+      "default": "Ada yang ingin",
+      "maxLength": 28,
+      "editable": true
+    },
+    "sections.faq.headingSecond": {
+      "type": "text",
+      "label": "Judul FAQ baris kedua",
+      "default": "kamu tahu?",
+      "maxLength": 28,
+      "editable": true
+    },
+    "sections.faq.items": {
+      "type": "array",
+      "label": "Pertanyaan umum",
+      "minItems": 0,
+      "maxItems": 12,
+      "item": {
+        "fields": {
+          "question": {
+            "type": "text",
+            "label": "Pertanyaan",
+            "maxLength": 100
+          },
+          "answer": {
+            "type": "textarea",
+            "label": "Jawaban",
+            "maxLength": 600
+          }
+        }
+      },
+      "default": [
+        {
+          "question": "Bagaimana cara memesan?",
+          "answer": "Tambahkan produk atau rakitan ke keranjang, sesuaikan jumlah, lalu buat ringkasan pesanan. Lanjutkan ke WhatsApp bila nomor toko tersedia, atau salin dan unduh pesanan untuk disimpan."
+        },
+        {
+          "question": "Bisa membeli komponen saja?",
+          "answer": "Bisa. Pilih kategori Komponen, buka detail produk, lalu tambahkan komponen yang diperlukan ke keranjang."
+        },
+        {
+          "question": "Apa yang diperiksa oleh perakit PC?",
+          "answer": "Perakit memeriksa kecocokan dasar socket CPU, generasi RAM, ukuran motherboard dan kartu grafis, serta kapasitas daya. Versi BIOS, konektor, dan ruang fisik detail tetap perlu diperiksa toko."
+        },
+        {
+          "question": "Apakah PC bisa dipakai tanpa kartu grafis tambahan?",
+          "answer": "Bisa jika prosesor memiliki grafis terintegrasi. Perakit akan memberi tahu saat pilihan prosesormu membutuhkan kartu grafis tambahan."
+        }
+      ],
+      "editable": true
+    },
+    "sections.footer.copyright": {
+      "type": "text",
+      "label": "Hak cipta",
+      "default": "© 2026 NUSA Computer.",
+      "maxLength": 100,
+      "editable": true
+    },
+    "sections.footer.demoNotice": {
+      "type": "text",
+      "label": "Catatan data contoh",
+      "default": "Konsep toko demonstrasi. Data bisnis dapat diganti.",
+      "maxLength": 140,
+      "editable": true
+    },
+    "sections.footer.backToTop": {
+      "type": "text",
+      "label": "Tautan kembali ke atas",
+      "default": "Kembali ke atas",
+      "maxLength": 30,
+      "editable": true
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.announcement",
+        "sections.hero.announcementCta",
+        "sections.hero.heading",
+        "sections.hero.headingSecond",
+        "sections.hero.description",
+        "sections.hero.descriptionSecond",
+        "sections.hero.primaryCta.label",
+        "sections.hero.secondaryCta.label",
+        "sections.hero.image"
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Kategori dan produk unggulan",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.gallery.heading",
+        "sections.gallery.headingSecond",
+        "sections.gallery.cta",
+        "sections.gallery.builderLabel",
+        "sections.gallery.builderImage",
+        "sections.gallery.categories",
+        "sections.gallery.items"
+      ]
+    },
+    {
+      "id": "products",
+      "label": "Katalog produk",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.products.items",
+        "sections.products.ui.add",
+        "sections.products.ui.detail",
+        "sections.products.ui.addToCart",
+        "sections.products.ui.emptyHeading",
+        "sections.products.ui.emptyBody",
+        "sections.products.ui.reset",
+        "sections.products.ui.productUnit",
+        "sections.products.ui.demoNote",
+        "sections.products.ui.illustrationNote",
+        "sections.products.heading",
+        "sections.products.headingSecond",
+        "sections.products.caption",
+        "sections.products.filter.all",
+        "sections.products.filter.laptop",
+        "sections.products.filter.desktop",
+        "sections.products.filter.components",
+        "sections.products.filter.accessories",
+        "sections.products.searchLabel",
+        "sections.products.searchPlaceholder",
+        "sections.products.sortLabel",
+        "sections.products.sort.featured",
+        "sections.products.sort.priceAsc",
+        "sections.products.sort.priceDesc",
+        "sections.products.sort.name",
+        "sections.products.noScript",
+        "sections.products.disclaimer"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Cerita rakit PC",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.cart.eyebrow",
+        "sections.about.cart.heading",
+        "sections.about.cart.description",
+        "sections.about.cart.emptyHeading",
+        "sections.about.cart.emptyBody",
+        "sections.about.cart.explore",
+        "sections.about.cart.remove",
+        "sections.about.cart.clear",
+        "sections.about.cart.subtotal",
+        "sections.about.cart.priceNote",
+        "sections.about.cart.shopperName",
+        "sections.about.cart.optional",
+        "sections.about.cart.namePlaceholder",
+        "sections.about.cart.summary",
+        "sections.about.cart.whatsapp",
+        "sections.about.cart.copy",
+        "sections.about.cart.download",
+        "sections.about.cart.summaryPrefix",
+        "sections.about.cart.summaryNote",
+        "sections.about.builder.eyebrow",
+        "sections.about.builder.heading",
+        "sections.about.builder.description",
+        "sections.about.builder.officePreset",
+        "sections.about.builder.gamingPreset",
+        "sections.about.builder.summaryHeading",
+        "sections.about.builder.priceNote",
+        "sections.about.builder.add",
+        "sections.about.builder.reset",
+        "sections.about.builder.cartNote",
+        "sections.about.eyebrow",
+        "sections.about.heading",
+        "sections.about.headingSecond",
+        "sections.about.description",
+        "sections.about.cta",
+        "sections.about.presetsLabel",
+        "sections.about.officePreset",
+        "sections.about.gamingPreset",
+        "sections.about.image"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Keunggulan toko",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": ["sections.services.heading", "sections.services.items"]
+    },
+    {
+      "id": "faq",
+      "label": "Pertanyaan umum",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.faq.heading",
+        "sections.faq.headingSecond",
+        "sections.faq.items"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.footer.copyright",
+        "sections.footer.demoNotice",
+        "sections.footer.backToTop"
+      ]
+    }
+  ],
+  "forms": [],
+  "extensions": {
+    "demoCart": {
+      "enabled": true,
+      "checkout": false,
+      "storage": "localStorage",
+      "standard1Exception": true,
+      "userRequested": true,
+      "module": "assets/runtime/commerce.js"
+    },
+    "pcBuilder": {
+      "enabled": true,
+      "checkout": false,
+      "compatibility": "Basic socket, RAM, form factor, GPU clearance and power estimates; store review required.",
+      "standard1Exception": true,
+      "userRequested": true,
+      "module": "assets/runtime/commerce.js"
+    },
+    "orderSummary": {
+      "enabled": true,
+      "submission": "User-initiated WhatsApp URL only after validated contact.whatsapp is configured. Otherwise copy or download locally.",
+      "payments": false,
+      "backend": false,
+      "userRequested": true
+    },
+    "standard1Notice": "Manifest and catalog use Standard 1. Cart, PC builder, and client-side order summaries are user-requested extensions and are not strict Standard 1 Core commerce features."
+  }
+}
