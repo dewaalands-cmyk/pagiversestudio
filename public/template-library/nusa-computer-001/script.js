@@ -9,6 +9,8 @@ let schema,
 let commerce;
 let pending;
 let rendering = false;
+let renderedConfiguration;
+const renderedCollections = new WeakMap();
 function lookup(object, field) {
   if (own(object, field)) return object[field];
   let value = object;
@@ -149,6 +151,9 @@ function renderCollections() {
       document.querySelectorAll("template[data-collection-template]"),
     ).find((node) => node.dataset.collectionTemplate === field);
     if (!template || !Array.isArray(items)) continue;
+    // Repeated preview messages must not replace native disclosure state or focus.
+    const signature = JSON.stringify(items);
+    if (renderedCollections.get(container) === signature) continue;
     const fragment = document.createDocumentFragment();
     for (const item of items) {
       const clone = template.content.cloneNode(true);
@@ -179,6 +184,7 @@ function renderCollections() {
       fragment.append(clone);
     }
     container.replaceChildren(fragment);
+    renderedCollections.set(container, signature);
   }
 }
 function meta(name, content, property = false) {
@@ -200,7 +206,23 @@ function contrastOnWhite(color) {
   const l = rgb[0] * 0.2126 + rgb[1] * 0.7152 + rgb[2] * 0.0722;
   return 1.05 / (l + 0.05);
 }
+function renderSignature() {
+  const content = Object.keys(schema.fields).map((field) => value(field));
+  const visibility = schema.sections.map((section) =>
+    section.required ||
+    (lookup(configuration, "sectionVisibility." + section.id) ??
+      section.visibleByDefault) !== false,
+  );
+  return JSON.stringify([content, visibility]);
+}
 function render() {
+  const signature = renderSignature();
+  // The parent still receives pagiverse:applied for every revision below.
+  // Unchanged configuration must leave interactive DOM nodes intact.
+  if (signature === renderedConfiguration) {
+    window.PAGIVERSE_DATA = configuration;
+    return;
+  }
   rendering = true;
   document.querySelectorAll("[data-bind]").forEach((node) => {
     const v = value(node.dataset.bind);
@@ -294,6 +316,7 @@ function render() {
   meta("og:image", safeURL(typeof og === "string" ? og : og?.src, true), true);
   window.PAGIVERSE_DATA = configuration;
   commerce?.applyConfiguration(configuration, schema);
+  renderedConfiguration = signature;
   rendering = false;
 }
 window.addEventListener("message", (event) => {
