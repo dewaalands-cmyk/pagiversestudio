@@ -7429,6 +7429,750 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "brutal-bun-burger-001",
+      "name": "BRUTAL BUN",
+      "category": "restaurant",
+      "description": "Template restoran burger satu halaman berbahasa Indonesia dengan tema punk merah-burgundy, filter menu sapi/ayam/plant-based, dan lokasi. Seluruh data bisnis berupa demo.",
+      "price": 1450000,
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html"
+        }
+      ],
+      "dependencies": [],
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "dark",
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#e10600"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#ffc7c6"
+          },
+          "background": {
+            "editable": false,
+            "default": "#260212"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#4f0423"
+          },
+          "text": {
+            "editable": false,
+            "default": "#ffffff"
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "products",
+            "labelField": "navigation.products.label",
+            "target": "#products",
+            "hideable": false
+          },
+          {
+            "id": "about",
+            "labelField": "navigation.about.label",
+            "target": "#about",
+            "hideable": true,
+            "section": "about"
+          },
+          {
+            "id": "location",
+            "labelField": "navigation.location.label",
+            "target": "#location",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama restoran",
+          "default": "BRUTAL BUN",
+          "maxLength": 36,
+          "required": true
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo restoran",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/logo.webp",
+            "alt": "Logo BRUTAL BUN",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "Foto burger hero",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/hero.webp",
+            "alt": "Double smash burger dengan keju leleh",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar berbagi media sosial",
+          "accept": [
+            "image/jpeg",
+            "image/png",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/hero.webp",
+            "alt": "BRUTAL BUN burger",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul SEO",
+          "default": "BRUTAL BUN — Gigit. Berisik. Ulangi.",
+          "maxLength": 70
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO",
+          "default": "Konsep restoran burger Jakarta dengan pilihan sapi, ayam, dan plant-based. Lihat menu dan lokasi BRUTAL BUN.",
+          "maxLength": 160
+        },
+        "sections.hero.lineOne": {
+          "type": "text",
+          "label": "Headline baris 1",
+          "default": "GIGIT.",
+          "maxLength": 9
+        },
+        "sections.hero.lineTwo": {
+          "type": "text",
+          "label": "Headline baris 2",
+          "default": "BERISIK.",
+          "maxLength": 9
+        },
+        "sections.hero.lineThree": {
+          "type": "text",
+          "label": "Headline baris 3",
+          "default": "ULANGI.",
+          "maxLength": 9
+        },
+        "navigation.products.label": {
+          "type": "text",
+          "label": "Navigasi MENU",
+          "default": "MENU",
+          "maxLength": 14
+        },
+        "navigation.about.label": {
+          "type": "text",
+          "label": "Navigasi MANIFESTO",
+          "default": "MANIFESTO",
+          "maxLength": 14
+        },
+        "navigation.location.label": {
+          "type": "text",
+          "label": "Navigasi LOKASI",
+          "default": "LOKASI",
+          "maxLength": 14
+        },
+        "sections.hero.eyebrow": {
+          "type": "text",
+          "label": "Eyebrow hero",
+          "default": "JAKARTA'S LOUDEST BURGER JOINT",
+          "maxLength": 55
+        },
+        "sections.hero.meta": {
+          "type": "text",
+          "label": "Label konsep",
+          "default": "EST. 2026 / CONCEPT STORE",
+          "maxLength": 40
+        },
+        "sections.hero.imageCaption": {
+          "type": "text",
+          "label": "Keterangan foto",
+          "default": "DOUBLE SMASH.\nZERO BASA-BASI.",
+          "maxLength": 40
+        },
+        "sections.hero.description": {
+          "type": "text",
+          "label": "Deskripsi hero",
+          "default": "Bun empuk. Pinggiran garing. Rasa lantang.\nPilih patty-mu. Bawa lapar terbaikmu.",
+          "maxLength": 150
+        },
+        "navigation.ctaLabel": {
+          "type": "text",
+          "label": "Tombol navigasi",
+          "default": "MAMPIR KE SINI",
+          "maxLength": 22
+        },
+        "sections.hero.primaryCta.label": {
+          "type": "text",
+          "label": "CTA menu",
+          "default": "LIHAT MENU",
+          "maxLength": 22
+        },
+        "sections.hero.secondaryCta.label": {
+          "type": "text",
+          "label": "CTA lokasi",
+          "default": "TEMUKAN KAMI",
+          "maxLength": 22
+        },
+        "sections.products.heading": {
+          "type": "text",
+          "label": "Judul menu",
+          "default": "BUKA MULUT.\nBUKA MENU.",
+          "maxLength": 30
+        },
+        "sections.products.description": {
+          "type": "text",
+          "label": "Deskripsi menu",
+          "default": "Daging, ayam, atau dari tanaman.\nSatu prinsip: rasanya harus brutal.",
+          "maxLength": 140
+        },
+        "sections.products.priceNote": {
+          "type": "text",
+          "label": "Catatan harga",
+          "default": "BURGER ONLY. HARGA DALAM RUPIAH.",
+          "maxLength": 80
+        },
+        "sections.products.demoNote": {
+          "type": "textarea",
+          "label": "Keterangan demo menu",
+          "default": "MENU & HARGA DEMO — Foto adalah ilustrasi penyajian. Informasi bahan dan alergen perlu dikonfirmasi saat menu tersedia.",
+          "maxLength": 240
+        },
+        "sections.about.eyebrow": {
+          "type": "text",
+          "label": "Eyebrow cerita",
+          "default": "INI BUKAN TEMPAT UNTUK RASA PELAN.",
+          "maxLength": 60
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "Judul cerita",
+          "default": "BEDA PATTY.\nSATU\nKERIBUTAN.",
+          "maxLength": 45
+        },
+        "sections.about.intro": {
+          "type": "text",
+          "label": "Pembuka cerita",
+          "default": "Di meja ini, semua selera punya tempat.",
+          "maxLength": 100
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "Isi cerita",
+          "default": "Tim double beef? Silakan. Pemburu crispy chicken? Merapat. Pilih yang dari tanaman? Kami siapkan panggungnya juga.",
+          "maxLength": 400
+        },
+        "business.description": {
+          "type": "textarea",
+          "label": "Deskripsi restoran",
+          "default": "BRUTAL BUN adalah konsep kedai burger yang merayakan pilihan. Roti lembut, tekstur berani, dan saus yang nggak malu-malu.",
+          "maxLength": 400
+        },
+        "sections.about.ctaLabel": {
+          "type": "text",
+          "label": "Tombol cerita",
+          "default": "CARI BURGER VERSIMU",
+          "maxLength": 26
+        },
+        "sections.location.heading": {
+          "type": "text",
+          "label": "Judul lokasi",
+          "default": "LAPAR?\nMERAPAT.",
+          "maxLength": 28
+        },
+        "sections.location.eyebrow": {
+          "type": "text",
+          "label": "Eyebrow lokasi",
+          "default": "BRUTAL BUN / JAKARTA",
+          "maxLength": 55
+        },
+        "sections.location.title": {
+          "type": "text",
+          "label": "Nama lokasi",
+          "default": "KEMANG.\nJADI RAME.",
+          "maxLength": 40
+        },
+        "location.address": {
+          "type": "text",
+          "label": "Alamat restoran",
+          "default": "Area Kemang, Jakarta Selatan\nJakarta, Indonesia",
+          "maxLength": 180
+        },
+        "sections.location.mapsLabel": {
+          "type": "text",
+          "label": "Tombol Maps",
+          "default": "LIHAT AREA DI MAPS",
+          "maxLength": 25
+        },
+        "sections.location.demoNote": {
+          "type": "text",
+          "label": "Keterangan demo lokasi",
+          "default": "Lokasi dan jam buka contoh. Belum ada gerai BRUTAL BUN yang beroperasi di alamat ini.",
+          "maxLength": 220
+        },
+        "sections.location.region": {
+          "type": "text",
+          "label": "Kota/negara",
+          "default": "JAKARTA, INDONESIA",
+          "maxLength": 50
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Tagline",
+          "default": "GIGIT. BERISIK. ULANGI.",
+          "maxLength": 60
+        },
+        "sections.footer.copyright": {
+          "type": "text",
+          "label": "Copyright",
+          "default": "© 2026 BRUTAL BUN. KONSEP RESTORAN DEMO.",
+          "maxLength": 100
+        },
+        "sections.footer.backLabel": {
+          "type": "text",
+          "label": "Tombol kembali",
+          "default": "BALIK KE ATAS",
+          "maxLength": 22
+        },
+        "sections.footer.meta": {
+          "type": "text",
+          "label": "Label footer",
+          "default": "MADE FOR THE HUNGRY.",
+          "maxLength": 50
+        },
+        "location.mapsUrl": {
+          "type": "url",
+          "label": "Google Maps URL",
+          "default": "https://www.google.com/maps/search/?api=1&query=Kemang%2C%20Jakarta%20Selatan",
+          "maxLength": 500,
+          "allowedProtocols": [
+            "https:"
+          ]
+        },
+        "sections.location.hours": {
+          "type": "array",
+          "label": "Jam operasional",
+          "minItems": 1,
+          "maxItems": 7,
+          "item": {
+            "fields": {
+              "days": {
+                "type": "text",
+                "label": "Hari",
+                "maxLength": 35
+              },
+              "time": {
+                "type": "text",
+                "label": "Jam",
+                "maxLength": 35
+              }
+            }
+          },
+          "default": [
+            {
+              "days": "SENIN – KAMIS",
+              "time": "11.00 – 22.00"
+            },
+            {
+              "days": "JUMAT – MINGGU",
+              "time": "11.00 – 23.00"
+            }
+          ]
+        },
+        "sections.hero.stamp": {
+          "type": "text",
+          "label": "Teks stempel",
+          "default": "SAPI.\nAYAM.\nPLANTS.",
+          "maxLength": 30
+        },
+        "sections.hero.stampNote": {
+          "type": "text",
+          "label": "Catatan stempel",
+          "default": "SEMUA DAPAT PANGGUNG.",
+          "maxLength": 30
+        },
+        "sections.products.kicker": {
+          "type": "text",
+          "label": "kicker",
+          "default": "01 / PILIH JAGOANMU",
+          "maxLength": 70
+        },
+        "sections.products.meta": {
+          "type": "text",
+          "label": "meta",
+          "default": "FRESH OFF THE GRIDDLE",
+          "maxLength": 70
+        },
+        "sections.about.kicker": {
+          "type": "text",
+          "label": "kicker",
+          "default": "02 / MANIFESTO KAMI",
+          "maxLength": 70
+        },
+        "sections.about.meta": {
+          "type": "text",
+          "label": "meta",
+          "default": "NO BORING BITES.",
+          "maxLength": 70
+        },
+        "sections.location.kicker": {
+          "type": "text",
+          "label": "kicker",
+          "default": "03 / TITIK KUMPUL",
+          "maxLength": 70
+        },
+        "sections.hero.indexLabel": {
+          "type": "text",
+          "label": "indexLabel",
+          "default": "01 — BUILT FOR BIG BITES",
+          "maxLength": 70
+        },
+        "sections.hero.scrollLabel": {
+          "type": "text",
+          "label": "scrollLabel",
+          "default": "SCROLL BUAT YANG ENAK ↓",
+          "maxLength": 70
+        },
+        "sections.location.mapRegion": {
+          "type": "text",
+          "label": "mapRegion",
+          "default": "JAKARTA SELATAN",
+          "maxLength": 70
+        },
+        "sections.location.mapArea": {
+          "type": "text",
+          "label": "mapArea",
+          "default": "K E M A N G",
+          "maxLength": 70
+        },
+        "sections.location.mapNote": {
+          "type": "text",
+          "label": "mapNote",
+          "default": "PETA ILUSTRASI / LOKASI DEMO",
+          "maxLength": 70
+        },
+        "sections.hero.ticker": {
+          "type": "text",
+          "label": "Running text",
+          "default": "GOOD FOOD. BAD ATTITUDE. ✳ BIG BITES. NO RULES. ✳ GOOD FOOD. BAD ATTITUDE. ✳",
+          "maxLength": 150
+        },
+        "sections.products.filters.all": {
+          "type": "text",
+          "label": "Filter all",
+          "default": "SEMUA",
+          "maxLength": 18
+        },
+        "sections.products.filters.sapi": {
+          "type": "text",
+          "label": "Filter sapi",
+          "default": "SAPI",
+          "maxLength": 18
+        },
+        "sections.products.filters.ayam": {
+          "type": "text",
+          "label": "Filter ayam",
+          "default": "AYAM",
+          "maxLength": 18
+        },
+        "sections.products.filters.plant": {
+          "type": "text",
+          "label": "Filter plant",
+          "default": "PLANT-BASED",
+          "maxLength": 18
+        },
+        "sections.products.emptyLabel": {
+          "type": "text",
+          "label": "Pesan menu kosong",
+          "default": "Menu segera hadir.",
+          "maxLength": 90
+        },
+        "sections.products.items": {
+          "type": "array",
+          "label": "Menu burger",
+          "minItems": 0,
+          "maxItems": 18,
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "label": "Nama burger",
+                "maxLength": 40
+              },
+              "category": {
+                "type": "select",
+                "label": "Kategori",
+                "options": [
+                  {
+                    "value": "sapi",
+                    "label": "Sapi"
+                  },
+                  {
+                    "value": "ayam",
+                    "label": "Ayam"
+                  },
+                  {
+                    "value": "plant",
+                    "label": "Plant-based"
+                  }
+                ],
+                "default": "sapi"
+              },
+              "price": {
+                "type": "text",
+                "label": "Harga (contoh Rp48.000)",
+                "maxLength": 24
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi",
+                "maxLength": 220
+              },
+              "tag": {
+                "type": "text",
+                "label": "Label singkat",
+                "maxLength": 40
+              },
+              "image": {
+                "type": "image",
+                "label": "Foto menu",
+                "focalPoint": true,
+                "accept": [
+                  "image/jpeg",
+                  "image/png",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 5
+              },
+              "alt": {
+                "type": "text",
+                "label": "Deskripsi foto",
+                "maxLength": 160
+              }
+            }
+          },
+          "default": [
+            {
+              "name": "THE OG SMASH",
+              "category": "sapi",
+              "price": "Rp48.000",
+              "description": "Patty sapi smash, cheddar leleh, acar, bawang, dan saus Brutal.",
+              "tag": "THE CROWD STARTER",
+              "image": {
+                "src": "assets/beef.webp",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "alt": "Ilustrasi burger THE OG SMASH"
+            },
+            {
+              "name": "DOUBLE TROUBLE",
+              "category": "sapi",
+              "price": "Rp68.000",
+              "description": "Dua patty sapi, double cheddar, caramelized onion, dan saus lada.",
+              "tag": "DOUBLE THE NOISE",
+              "image": {
+                "src": "assets/beef.webp",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "alt": "Ilustrasi burger DOUBLE TROUBLE"
+            },
+            {
+              "name": "CRISPY RIOT",
+              "category": "ayam",
+              "price": "Rp45.000",
+              "description": "Ayam crispy, slaw renyah, acar, dan mayo bawang putih.",
+              "tag": "CRUNCH IT LOUD",
+              "image": {
+                "src": "assets/chicken.webp",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "alt": "Ilustrasi burger CRISPY RIOT"
+            },
+            {
+              "name": "HOT CHICK",
+              "category": "ayam",
+              "price": "Rp49.000",
+              "description": "Ayam crispy bersaus pedas, selada, acar, dan creamy mayo.",
+              "tag": "BUAT TIM PEDAS",
+              "image": {
+                "src": "assets/chicken.webp",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "alt": "Ilustrasi burger HOT CHICK"
+            },
+            {
+              "name": "PLANT PUNK",
+              "category": "plant",
+              "price": "Rp52.000",
+              "description": "Patty protein nabati, selada, tomat, acar, dan saus smoky.",
+              "tag": "PLANTS GO LOUD",
+              "image": {
+                "src": "assets/plant.webp",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "alt": "Ilustrasi burger PLANT PUNK"
+            },
+            {
+              "name": "MUSH PIT",
+              "category": "plant",
+              "price": "Rp55.000",
+              "description": "Patty nabati, tumis jamur, bawang karamel, dan saus lada hitam.",
+              "tag": "FULL VOLUME UMAMI",
+              "image": {
+                "src": "assets/plant.webp",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "alt": "Ilustrasi burger MUSH PIT"
+            }
+          ]
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.image",
+            "sections.hero.lineOne",
+            "sections.hero.lineTwo",
+            "sections.hero.lineThree",
+            "sections.hero.eyebrow",
+            "sections.hero.meta",
+            "sections.hero.imageCaption",
+            "sections.hero.description",
+            "sections.hero.primaryCta.label",
+            "sections.hero.secondaryCta.label",
+            "sections.hero.stamp",
+            "sections.hero.stampNote",
+            "sections.hero.indexLabel",
+            "sections.hero.scrollLabel",
+            "sections.hero.ticker"
+          ]
+        },
+        {
+          "id": "products",
+          "label": "Menu burger",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.products.heading",
+            "sections.products.description",
+            "sections.products.priceNote",
+            "sections.products.demoNote",
+            "sections.products.kicker",
+            "sections.products.meta",
+            "sections.products.filters.all",
+            "sections.products.filters.sapi",
+            "sections.products.filters.ayam",
+            "sections.products.filters.plant",
+            "sections.products.emptyLabel",
+            "sections.products.items"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Manifesto",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.eyebrow",
+            "sections.about.heading",
+            "sections.about.intro",
+            "sections.about.body",
+            "sections.about.ctaLabel",
+            "sections.about.kicker",
+            "sections.about.meta"
+          ]
+        },
+        {
+          "id": "location",
+          "label": "Lokasi",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.location.heading",
+            "sections.location.eyebrow",
+            "sections.location.title",
+            "sections.location.mapsLabel",
+            "sections.location.demoNote",
+            "sections.location.region",
+            "sections.location.hours",
+            "sections.location.kicker",
+            "sections.location.mapRegion",
+            "sections.location.mapArea",
+            "sections.location.mapNote"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.copyright",
+            "sections.footer.backLabel",
+            "sections.footer.meta"
+          ]
+        }
+      ],
+      "publicPath": "/template-library/brutal-bun-burger-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "casa-braci-heritage-001",
       "name": "Casa Braci Heritage",
       "category": "restaurant",
