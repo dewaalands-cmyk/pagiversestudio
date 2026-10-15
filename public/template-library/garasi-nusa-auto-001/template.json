@@ -1,0 +1,878 @@
+{
+  "pagiverseStandard": 1,
+  "id": "garasi-nusa-auto-001",
+  "name": "GARASI NUSA",
+  "category": "retail",
+  "description": "Template dealer mobil harian dan bekas satu halaman berbahasa Indonesia, dengan katalog filter, detail unit, tukar tambah, showroom, FAQ, dan WhatsApp. Semua data bisnis dan harga adalah demo; foto merupakan ilustrasi.",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html"
+    }
+  ],
+  "dependencies": [],
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "dark",
+    "tokens": {
+      "primary": {
+        "editable": false,
+        "default": "#202020"
+      },
+      "secondary": {
+        "editable": false,
+        "default": "#917300"
+      },
+      "accent": {
+        "editable": false,
+        "default": "#ffc000"
+      },
+      "background": {
+        "editable": false,
+        "default": "#202020"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#f5f5f5"
+      },
+      "text": {
+        "editable": false,
+        "default": "#ffffff"
+      }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "products",
+        "labelField": "navigation.products.label",
+        "target": "#products",
+        "section": "products",
+        "hideable": false
+      },
+      {
+        "id": "services",
+        "labelField": "navigation.services.label",
+        "target": "#services",
+        "section": "services",
+        "hideable": true
+      },
+      {
+        "id": "location",
+        "labelField": "navigation.location.label",
+        "target": "#location",
+        "section": "location",
+        "hideable": true
+      },
+      {
+        "id": "contact",
+        "labelField": "navigation.contact.label",
+        "target": "#contact",
+        "section": "contact",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama dealer",
+      "default": "GARASI NUSA",
+      "maxLength": 40,
+      "required": true
+    },
+    "business.tagline": {
+      "type": "text",
+      "label": "Tagline dealer",
+      "default": "PILIHAN TEPAT UNTUK SETIAP PERJALANAN.",
+      "maxLength": 80
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo dealer",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/logo.svg",
+        "alt": "Logo GARASI NUSA",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "fit": "cover"
+      }
+    },
+    "contact.whatsapp": {
+      "type": "phone",
+      "label": "Nomor WhatsApp dengan kode negara",
+      "default": "",
+      "maxLength": 18
+    },
+    "contact.whatsappMessage": {
+      "type": "textarea",
+      "label": "Pesan pembuka WhatsApp",
+      "default": "HALO GARASI NUSA, SAYA INGIN BERTANYA TENTANG MOBIL PILIHAN.",
+      "maxLength": 240
+    },
+    "location.address": {
+      "type": "textarea",
+      "label": "Alamat showroom",
+      "default": "JL. CONTOH OTOMOTIF NO. 08, JAKARTA SELATAN (LOKASI DEMO)",
+      "maxLength": 180
+    },
+    "location.mapsUrl": {
+      "type": "url",
+      "label": "Tautan petunjuk arah",
+      "default": "",
+      "maxLength": 500,
+      "allowedProtocols": ["https:"]
+    },
+    "navigation.products.label": {
+      "type": "text",
+      "label": "Navigasi koleksi",
+      "default": "KOLEKSI MOBIL",
+      "maxLength": 24
+    },
+    "navigation.services.label": {
+      "type": "text",
+      "label": "Navigasi tukar tambah",
+      "default": "TUKAR TAMBAH",
+      "maxLength": 24
+    },
+    "navigation.location.label": {
+      "type": "text",
+      "label": "Navigasi showroom",
+      "default": "SHOWROOM",
+      "maxLength": 24
+    },
+    "navigation.contact.label": {
+      "type": "text",
+      "label": "Navigasi kontak",
+      "default": "HUBUNGI KAMI",
+      "maxLength": 24
+    },
+    "navigation.menuLabel": {
+      "type": "text",
+      "label": "Tombol menu",
+      "default": "MENU",
+      "maxLength": 16
+    },
+    "navigation.skipLabel": {
+      "type": "text",
+      "label": "Tautan lewati navigasi",
+      "default": "LEWATI KE KONTEN",
+      "maxLength": 28
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul SEO",
+      "default": "GARASI NUSA | MOBIL BEKAS UNTUK PERJALANAN BARU",
+      "maxLength": 70
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO",
+      "default": "Template demo dealer mobil harian dan bekas di Jakarta Selatan. Jelajahi contoh koleksi mobil, detail unit, tukar tambah, dan kunjungan showroom.",
+      "maxLength": 160
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Gambar berbagi media sosial",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero.webp",
+        "alt": "Ilustrasi mobil SUV GARASI NUSA",
+        "focalPoint": {
+          "x": 70,
+          "y": 50
+        },
+        "fit": "cover"
+      }
+    },
+    "sections.hero.eyebrow": {
+      "type": "text",
+      "label": "Label pembuka hero",
+      "default": "MOBIL BEKAS. PILIHAN BERKELAS.",
+      "maxLength": 64
+    },
+    "sections.hero.heading": {
+      "type": "text",
+      "label": "Judul hero",
+      "default": "LANGKAH BARU. MOBIL PILIHAN.",
+      "maxLength": 60
+    },
+    "sections.hero.description": {
+      "type": "textarea",
+      "label": "Deskripsi hero",
+      "default": "TEMUKAN MOBIL UNTUK SETIAP RENCANA. PILIH UNITNYA, KENALI KONDISINYA, LALU TEMUI LANGSUNG DI SHOWROOM.",
+      "maxLength": 220
+    },
+    "sections.hero.primaryCta.label": {
+      "type": "text",
+      "label": "Tombol koleksi",
+      "default": "JELAJAHI KOLEKSI",
+      "maxLength": 28
+    },
+    "sections.products.heading": {
+      "type": "text",
+      "label": "Judul koleksi",
+      "default": "TEMUKAN YANG COCOK.",
+      "maxLength": 64
+    },
+    "sections.products.description": {
+      "type": "textarea",
+      "label": "Deskripsi koleksi",
+      "default": "PILIHAN UNIT UNTUK HARI HARI ANDA. SELURUH STOK DAN HARGA DI BAWAH INI ADALAH CONTOH.",
+      "maxLength": 240
+    },
+    "sections.products.searchLabel": {
+      "type": "text",
+      "label": "Label pencarian",
+      "default": "CARI MOBIL",
+      "maxLength": 24
+    },
+    "sections.products.searchPlaceholder": {
+      "type": "text",
+      "label": "Petunjuk pencarian",
+      "default": "MEREK ATAU MODEL",
+      "maxLength": 40
+    },
+    "sections.products.categoryLabel": {
+      "type": "text",
+      "label": "Label filter tipe",
+      "default": "TIPE MOBIL",
+      "maxLength": 24
+    },
+    "sections.products.sortLabel": {
+      "type": "text",
+      "label": "Label urutan",
+      "default": "URUTKAN",
+      "maxLength": 24
+    },
+    "sections.products.detailLabel": {
+      "type": "text",
+      "label": "Tombol detail",
+      "default": "LIHAT DETAIL",
+      "maxLength": 24
+    },
+    "sections.products.priceLabel": {
+      "type": "text",
+      "label": "Label harga",
+      "default": "HARGA DEMO",
+      "maxLength": 24
+    },
+    "sections.products.allLabel": {
+      "type": "text",
+      "label": "Pilihan semua tipe",
+      "default": "SEMUA",
+      "maxLength": 20
+    },
+    "sections.products.emptyMessage": {
+      "type": "text",
+      "label": "Pesan koleksi kosong",
+      "default": "BELUM ADA MOBIL YANG COCOK. COBA PILIHAN LAIN.",
+      "maxLength": 120
+    },
+    "sections.products.resetLabel": {
+      "type": "text",
+      "label": "Tombol reset filter",
+      "default": "RESET FILTER",
+      "maxLength": 24
+    },
+    "sections.products.imageNote": {
+      "type": "text",
+      "label": "Catatan foto koleksi",
+      "default": "FOTO ILUSTRASI. BUKAN UNIT AKTUAL.",
+      "maxLength": 100
+    },
+    "sections.products.resultLabel": {
+      "type": "text",
+      "label": "Label jumlah hasil",
+      "default": "UNIT DITEMUKAN",
+      "maxLength": 28
+    },
+    "sections.products.noPriceLabel": {
+      "type": "text",
+      "label": "Label harga kosong",
+      "default": "HUBUNGI DEALER",
+      "maxLength": 32
+    },
+    "sections.products.sortOptions.default": {
+      "type": "text",
+      "label": "Pilihan urutan awal",
+      "default": "PILIHAN KAMI",
+      "maxLength": 32
+    },
+    "sections.products.sortOptions.priceAsc": {
+      "type": "text",
+      "label": "Pilihan harga naik",
+      "default": "HARGA TERENDAH",
+      "maxLength": 32
+    },
+    "sections.products.sortOptions.priceDesc": {
+      "type": "text",
+      "label": "Pilihan harga turun",
+      "default": "HARGA TERTINGGI",
+      "maxLength": 32
+    },
+    "sections.products.sortOptions.yearDesc": {
+      "type": "text",
+      "label": "Pilihan tahun terbaru",
+      "default": "TAHUN TERBARU",
+      "maxLength": 32
+    },
+    "sections.products.dialog.closeLabel": {
+      "type": "text",
+      "label": "Tombol tutup detail",
+      "default": "TUTUP DETAIL",
+      "maxLength": 28
+    },
+    "sections.products.dialog.contactLabel": {
+      "type": "text",
+      "label": "Tombol tanya unit",
+      "default": "TANYAKAN UNIT INI",
+      "maxLength": 28
+    },
+    "sections.products.dialog.yearLabel": {
+      "type": "text",
+      "label": "Label tahun",
+      "default": "TAHUN",
+      "maxLength": 20
+    },
+    "sections.products.dialog.mileageLabel": {
+      "type": "text",
+      "label": "Label jarak tempuh",
+      "default": "JARAK TEMPUH",
+      "maxLength": 24
+    },
+    "sections.products.dialog.transmissionLabel": {
+      "type": "text",
+      "label": "Label transmisi",
+      "default": "TRANSMISI",
+      "maxLength": 24
+    },
+    "sections.products.dialog.fuelLabel": {
+      "type": "text",
+      "label": "Label bahan bakar",
+      "default": "BAHAN BAKAR",
+      "maxLength": 24
+    },
+    "sections.products.dialog.categoryLabel": {
+      "type": "text",
+      "label": "Label tipe unit",
+      "default": "TIPE MOBIL",
+      "maxLength": 24
+    },
+    "sections.products.dialog.descriptionLabel": {
+      "type": "textarea",
+      "label": "Label keterangan unit",
+      "default": "TENTANG UNIT",
+      "maxLength": 24
+    },
+    "sections.products.dialog.priceNote": {
+      "type": "textarea",
+      "label": "Catatan harga detail",
+      "default": "HARGA DAN SPESIFIKASI DEMO. KONFIRMASIKAN INFORMASI UNIT, BIAYA, DAN KETERSEDIAAN KEPADA DEALER.",
+      "maxLength": 200
+    },
+    "sections.about.heading": {
+      "type": "text",
+      "label": "Judul pendekatan dealer",
+      "default": "LEBIH DARI SEKADAR MOBIL.",
+      "maxLength": 64
+    },
+    "sections.about.body": {
+      "type": "textarea",
+      "label": "Penjelasan pendekatan dealer",
+      "default": "MOBIL PILIHAN DIMULAI DARI INFORMASI YANG JELAS. KENALI SPESIFIKASI, TANYAKAN RIWAYATNYA, DAN ATUR WAKTU UNTUK MELIHAT UNIT LANGSUNG SEBELUM MEMUTUSKAN.",
+      "maxLength": 320
+    },
+    "sections.services.heading": {
+      "type": "text",
+      "label": "Judul tukar tambah",
+      "default": "MOBIL LAMA. RENCANA BARU.",
+      "maxLength": 64
+    },
+    "sections.services.body": {
+      "type": "textarea",
+      "label": "Penjelasan tukar tambah",
+      "default": "PUNYA MOBIL UNTUK DITUKAR TAMBAH? CERITAKAN MEREK, TAHUN, DAN KONDISINYA. ATUR JANJI UNTUK PEMERIKSAAN; NILAI PENAWARAN DAN KETENTUAN DIBAHAS SETELAH UNIT DILIHAT.",
+      "maxLength": 320
+    },
+    "sections.services.primaryCta.label": {
+      "type": "text",
+      "label": "Tombol tukar tambah",
+      "default": "DISKUSI TUKAR TAMBAH",
+      "maxLength": 32
+    },
+    "sections.location.heading": {
+      "type": "text",
+      "label": "Judul showroom",
+      "default": "LIHAT LANGSUNG. RASAKAN BEDANYA.",
+      "maxLength": 72
+    },
+    "sections.location.body": {
+      "type": "textarea",
+      "label": "Deskripsi showroom",
+      "default": "ATUR JADWAL KUNJUNGAN UNTUK MELIHAT MOBIL PILIHAN ANDA. KONFIRMASIKAN KETERSEDIAAN UNIT DAN JADWAL DENGAN DEALER SEBELUM BERANGKAT.",
+      "maxLength": 280
+    },
+    "sections.location.mapsLabel": {
+      "type": "text",
+      "label": "Tombol arah showroom",
+      "default": "PETUNJUK ARAH",
+      "maxLength": 28
+    },
+    "sections.location.hours": {
+      "type": "text",
+      "label": "Jam showroom",
+      "default": "SENIN–SABTU 09.00–18.00 WIB; MINGGU DENGAN JANJI (JADWAL DEMO)",
+      "maxLength": 140
+    },
+    "sections.faq.heading": {
+      "type": "text",
+      "label": "Judul FAQ",
+      "default": "SEBELUM ANDA MEMILIH.",
+      "maxLength": 64
+    },
+    "sections.contact.heading": {
+      "type": "text",
+      "label": "Judul kontak",
+      "default": "SIAP UNTUK PERJALANAN BERIKUTNYA?",
+      "maxLength": 80
+    },
+    "sections.contact.body": {
+      "type": "textarea",
+      "label": "Penjelasan kontak",
+      "default": "TANYAKAN DETAIL UNIT ATAU ATUR KUNJUNGAN. TIM DEALER AKAN MEMBANTU ANDA MEMILIH.",
+      "maxLength": 240
+    },
+    "sections.contact.primaryCta.label": {
+      "type": "text",
+      "label": "Tombol WhatsApp",
+      "default": "HUBUNGI VIA WHATSAPP",
+      "maxLength": 32
+    },
+    "sections.contact.demoMessage": {
+      "type": "textarea",
+      "label": "Pesan kontak demo",
+      "default": "MODE DEMO: NOMOR WHATSAPP BELUM DIATUR. GANTI DATA KONTAK DI EDITOR PAGIVERSE.",
+      "maxLength": 200
+    },
+    "sections.footer.copyright": {
+      "type": "text",
+      "label": "Hak cipta",
+      "default": "© 2026 GARASI NUSA. TEMPLATE DEALER MOBIL DEMO.",
+      "maxLength": 120
+    },
+    "sections.footer.demoNotice": {
+      "type": "textarea",
+      "label": "Keterangan data contoh",
+      "default": "GARASI NUSA ADALAH MEREK CONTOH. NAMA, LOKASI, STOK, SPESIFIKASI, HARGA, DAN JADWAL ADALAH DATA DEMO YANG BISA DIGANTI. FOTO MERUPAKAN ILUSTRASI, BUKAN UNIT AKTUAL.",
+      "maxLength": 320
+    },
+    "sections.footer.backLabel": {
+      "type": "text",
+      "label": "Tombol kembali ke atas",
+      "default": "KEMBALI KE ATAS",
+      "maxLength": 28
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Foto utama dealer",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/hero.webp",
+        "alt": "Ilustrasi SUV warna putih dalam suasana otomotif sinematik",
+        "focalPoint": {
+          "x": 70,
+          "y": 50
+        },
+        "fit": "cover"
+      }
+    },
+    "sections.services.image": {
+      "type": "image",
+      "label": "Foto bagian tukar tambah",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/mpv.webp",
+        "alt": "Ilustrasi mobil MPV untuk kebutuhan keluarga",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "fit": "cover"
+      }
+    },
+    "sections.location.image": {
+      "type": "image",
+      "label": "Foto showroom",
+      "accept": ["image/jpeg", "image/png", "image/webp"],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/showroom.webp",
+        "alt": "Ilustrasi ruang showroom mobil GARASI NUSA",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "fit": "cover"
+      }
+    },
+    "sections.products.items": {
+      "type": "array",
+      "label": "Koleksi mobil",
+      "minItems": 0,
+      "maxItems": 18,
+      "item": {
+        "fields": {
+          "name": {
+            "type": "text",
+            "label": "Merek dan model",
+            "maxLength": 60
+          },
+          "variant": {
+            "type": "text",
+            "label": "Varian",
+            "maxLength": 60
+          },
+          "category": {
+            "type": "select",
+            "label": "Tipe mobil",
+            "options": ["SUV", "MPV", "HATCHBACK"],
+            "default": "SUV"
+          },
+          "year": {
+            "type": "text",
+            "label": "Tahun",
+            "maxLength": 4
+          },
+          "mileage": {
+            "type": "text",
+            "label": "Jarak tempuh",
+            "maxLength": 28
+          },
+          "transmission": {
+            "type": "select",
+            "label": "Transmisi",
+            "options": ["OTOMATIS", "MANUAL"],
+            "default": "OTOMATIS"
+          },
+          "fuel": {
+            "type": "text",
+            "label": "Bahan bakar",
+            "maxLength": 24
+          },
+          "price": {
+            "type": "text",
+            "label": "Harga angka saja, misalnya 489000000",
+            "maxLength": 12
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Keterangan unit",
+            "maxLength": 400
+          },
+          "image": {
+            "type": "image",
+            "label": "Foto ilustrasi unit",
+            "accept": ["image/jpeg", "image/png", "image/webp"],
+            "maxFileSizeMB": 5,
+            "focalPoint": true
+          }
+        }
+      },
+      "default": [
+        {
+          "name": "TOYOTA FORTUNER",
+          "variant": "2.4 VRZ A/T",
+          "category": "SUV",
+          "year": "2022",
+          "mileage": "38.000 KM",
+          "transmission": "OTOMATIS",
+          "fuel": "DIESEL",
+          "price": "489000000",
+          "description": "UNIT DAN SPESIFIKASI INI ADALAH CONTOH KATALOG. FOTO MERUPAKAN ILUSTRASI. TANYAKAN RIWAYAT PERAWATAN, KONDISI, DOKUMEN, DAN KETERSEDIAAN UNIT KEPADA DEALER SEBELUM MEMUTUSKAN.",
+          "image": {
+            "src": "assets/suv.webp",
+            "alt": "Ilustrasi TOYOTA FORTUNER; bukan foto unit aktual",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "fit": "cover"
+          }
+        },
+        {
+          "name": "TOYOTA KIJANG INNOVA",
+          "variant": "2.0 G A/T",
+          "category": "MPV",
+          "year": "2021",
+          "mileage": "42.000 KM",
+          "transmission": "OTOMATIS",
+          "fuel": "BENSIN",
+          "price": "295000000",
+          "description": "UNIT DAN SPESIFIKASI INI ADALAH CONTOH KATALOG. FOTO MERUPAKAN ILUSTRASI. TANYAKAN RIWAYAT PERAWATAN, KONDISI, DOKUMEN, DAN KETERSEDIAAN UNIT KEPADA DEALER SEBELUM MEMUTUSKAN.",
+          "image": {
+            "src": "assets/mpv.webp",
+            "alt": "Ilustrasi TOYOTA KIJANG INNOVA; bukan foto unit aktual",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "fit": "cover"
+          }
+        },
+        {
+          "name": "HONDA BRIO",
+          "variant": "SATYA E CVT",
+          "category": "HATCHBACK",
+          "year": "2022",
+          "mileage": "26.000 KM",
+          "transmission": "OTOMATIS",
+          "fuel": "BENSIN",
+          "price": "159000000",
+          "description": "UNIT DAN SPESIFIKASI INI ADALAH CONTOH KATALOG. FOTO MERUPAKAN ILUSTRASI. TANYAKAN RIWAYAT PERAWATAN, KONDISI, DOKUMEN, DAN KETERSEDIAAN UNIT KEPADA DEALER SEBELUM MEMUTUSKAN.",
+          "image": {
+            "src": "assets/hatchback.webp",
+            "alt": "Ilustrasi HONDA BRIO; bukan foto unit aktual",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "fit": "cover"
+          }
+        }
+      ]
+    },
+    "sections.about.items": {
+      "type": "array",
+      "label": "Langkah memilih mobil",
+      "minItems": 0,
+      "maxItems": 6,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Judul langkah",
+            "maxLength": 48
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Penjelasan langkah",
+            "maxLength": 240
+          }
+        }
+      },
+      "default": [
+        {
+          "title": "KENALI KONDISINYA",
+          "description": "TANYAKAN SPESIFIKASI, RIWAYAT PERAWATAN, KONDISI, DAN DOKUMEN UNIT. INFORMASI DALAM TEMPLATE INI HANYA CONTOH."
+        },
+        {
+          "title": "TEMUI LANGSUNG",
+          "description": "ATUR KUNJUNGAN UNTUK MELIHAT UNIT DAN DISKUSIKAN KESEMPATAN TEST DRIVE. JADWAL DAN SYARAT DIKONFIRMASIKAN DENGAN DEALER."
+        },
+        {
+          "title": "PILIH CARA BAYARNYA",
+          "description": "DISKUSIKAN TUNAI, OPSI PEMBIAYAAN, ATAU TUKAR TAMBAH. HARGA, BIAYA, DAN PERSETUJUAN MENGIKUTI PENAWARAN AKTUAL."
+        }
+      ]
+    },
+    "sections.faq.items": {
+      "type": "array",
+      "label": "Pertanyaan umum",
+      "minItems": 0,
+      "maxItems": 8,
+      "item": {
+        "fields": {
+          "question": {
+            "type": "text",
+            "label": "Pertanyaan",
+            "maxLength": 120
+          },
+          "answer": {
+            "type": "textarea",
+            "label": "Jawaban",
+            "maxLength": 420
+          }
+        }
+      },
+      "default": [
+        {
+          "question": "APAKAH SEMUA MOBIL DI KATALOG TERSEDIA?",
+          "answer": "KATALOG INI BERISI CONTOH UNIT DAN HARGA DEMO. UNTUK WEBSITE DEALER AKTUAL, HUBUNGI DEALER UNTUK MEMASTIKAN STOK DAN INFORMASI TERBARU."
+        },
+        {
+          "question": "BAGAIMANA CARA MELIHAT ATAU MENCOBA MOBIL?",
+          "answer": "PILIH UNIT YANG DIMINATI, LALU ATUR KUNJUNGAN MELALUI WHATSAPP. KESEMPATAN TEST DRIVE, JADWAL, DAN PERSYARATAN PERLU DIKONFIRMASIKAN KEPADA DEALER."
+        },
+        {
+          "question": "APAKAH MOBIL SAYA BISA DITUKAR TAMBAH?",
+          "answer": "SILAKAN DISKUSIKAN MEREK, MODEL, TAHUN, DAN KONDISI MOBIL ANDA. KELAYAKAN, PENILAIAN, DAN PENAWARAN DITENTUKAN SETELAH PEMERIKSAAN DAN KESEPAKATAN."
+        },
+        {
+          "question": "APAKAH HARGA SUDAH TERMASUK SEMUA BIAYA?",
+          "answer": "SELURUH HARGA DI TEMPLATE INI MERUPAKAN DEMO. PADA TRANSAKSI AKTUAL, MINTA RINCIAN HARGA, PAJAK, ADMINISTRASI, PEMBIAYAAN, DAN BIAYA LAIN SEBELUM MENYETUJUI PENAWARAN."
+        }
+      ]
+    },
+    "sections.hero.pauseLabel": {
+      "type": "text",
+      "label": "Tombol jeda animasi",
+      "default": "JEDA ANIMASI",
+      "maxLength": 28
+    },
+    "sections.hero.resumeLabel": {
+      "type": "text",
+      "label": "Tombol lanjut animasi",
+      "default": "LANJUTKAN ANIMASI",
+      "maxLength": 28
+    },
+    "sections.contact.floatingLabel": {
+      "type": "text",
+      "label": "Label kontak ringkas",
+      "maxLength": 24,
+      "default": "TANYA DEALER"
+    },
+    "sections.location.demoMessage": {
+      "type": "text",
+      "label": "Pesan lokasi demo",
+      "maxLength": 180,
+      "default": "LOKASI DEMO. GANTI ALAMAT DAN TAUTAN PETA SHOWROOM DI EDITOR PAGIVERSE."
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.eyebrow",
+        "sections.hero.heading",
+        "sections.hero.description",
+        "sections.hero.primaryCta.label",
+        "sections.hero.image",
+        "sections.hero.pauseLabel",
+        "sections.hero.resumeLabel"
+      ]
+    },
+    {
+      "id": "products",
+      "label": "Koleksi mobil dan detail unit",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.products.heading",
+        "sections.products.description",
+        "sections.products.searchLabel",
+        "sections.products.searchPlaceholder",
+        "sections.products.categoryLabel",
+        "sections.products.sortLabel",
+        "sections.products.detailLabel",
+        "sections.products.priceLabel",
+        "sections.products.allLabel",
+        "sections.products.emptyMessage",
+        "sections.products.resetLabel",
+        "sections.products.imageNote",
+        "sections.products.resultLabel",
+        "sections.products.noPriceLabel",
+        "sections.products.sortOptions.default",
+        "sections.products.sortOptions.priceAsc",
+        "sections.products.sortOptions.priceDesc",
+        "sections.products.sortOptions.yearDesc",
+        "sections.products.dialog.closeLabel",
+        "sections.products.dialog.contactLabel",
+        "sections.products.dialog.yearLabel",
+        "sections.products.dialog.mileageLabel",
+        "sections.products.dialog.transmissionLabel",
+        "sections.products.dialog.fuelLabel",
+        "sections.products.dialog.categoryLabel",
+        "sections.products.dialog.descriptionLabel",
+        "sections.products.dialog.priceNote",
+        "sections.products.items"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Cara memilih mobil",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.heading",
+        "sections.about.body",
+        "sections.about.items"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Tukar tambah",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.heading",
+        "sections.services.body",
+        "sections.services.primaryCta.label",
+        "sections.services.image"
+      ]
+    },
+    {
+      "id": "location",
+      "label": "Showroom",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.location.heading",
+        "sections.location.body",
+        "sections.location.mapsLabel",
+        "sections.location.hours",
+        "sections.location.image",
+        "sections.location.demoMessage"
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "Pertanyaan umum",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": ["sections.faq.heading", "sections.faq.items"]
+    },
+    {
+      "id": "contact",
+      "label": "Kontak",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.contact.heading",
+        "sections.contact.body",
+        "sections.contact.primaryCta.label",
+        "sections.contact.demoMessage",
+        "sections.contact.floatingLabel"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.footer.copyright",
+        "sections.footer.demoNotice",
+        "sections.footer.backLabel"
+      ]
+    }
+  ]
+}
