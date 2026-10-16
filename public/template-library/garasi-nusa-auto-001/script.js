@@ -10,6 +10,7 @@
     current: null,
     paused: false,
   };
+  const renderedFaqCollections = new WeakMap();
   const q = (s, root = document) => root.querySelector(s);
   const qa = (s, root = document) => Array.from(root.querySelectorAll(s));
   const own = (o, k) => Object.prototype.hasOwnProperty.call(o, k);
@@ -206,8 +207,13 @@
         return a;
       }),
     );
-    q('[data-collection="sections.faq.items"]').replaceChildren(
-      ...get("sections.faq.items").map((item) => {
+    const faqContainer = q('[data-collection="sections.faq.items"]');
+    const faqItems = get("sections.faq.items");
+    const faqSignature = JSON.stringify(faqItems);
+    // Preserve native disclosure state and focus when only other content changes.
+    if (renderedFaqCollections.get(faqContainer) === faqSignature) return;
+    faqContainer.replaceChildren(
+      ...faqItems.map((item) => {
         const d = node("details");
         d.append(
           node("summary", "", item.question),
@@ -216,6 +222,7 @@
         return d;
       }),
     );
+    renderedFaqCollections.set(faqContainer, faqSignature);
   }
   function amountValue(value) {
     const text = String(value).trim();

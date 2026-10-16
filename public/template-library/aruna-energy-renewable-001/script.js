@@ -2,6 +2,7 @@
   'use strict';
   const TEMPLATE_ID = 'aruna-energy-renewable-001';
   const state = { schema: null, data: window.PAGIVERSE_DATA || {}, templates: new Map(), filter: 'semua', observer: null };
+  const renderedFaqCollections = new WeakMap();
   const own = (object, key) => Object.prototype.hasOwnProperty.call(object || {}, key);
   function nested(object, path) { return path.split('.').reduce((v, key) => v && typeof v === 'object' && own(v, key) ? v[key] : undefined, object); }
   function get(path) { let value=own(state.data,path)?state.data[path]:nested(state.data,path);if(value===undefined){const parts=path.split('.');for(let index=parts.length-1;index>0;index--){const prefix=parts.slice(0,index).join('.');if(own(state.data,prefix)){value=nested(state.data[prefix],parts.slice(index).join('.'));break;}}}return value===undefined?state.schema?.fields?.[path]?.default:value; }
@@ -38,8 +39,12 @@
   function renderCollections() {
     document.querySelectorAll('[data-collection]').forEach(container => {
       const path = container.dataset.collection; const template = state.templates.get(path); if (!template) return;
+      const collectionItems = items(path);
+      const faqSignature = path === 'sections.faq.items' ? JSON.stringify(collectionItems) : null;
+      // Preserve native disclosure state and focus when only other content changes.
+      if (faqSignature !== null && renderedFaqCollections.get(container) === faqSignature) return;
       const fragment = document.createDocumentFragment();
-      items(path).forEach((item, index) => {
+      collectionItems.forEach((item, index) => {
         const clone = template.content.cloneNode(true);
         clone.querySelectorAll('[data-item-bind]').forEach(el => {
           const key = el.dataset.itemBind; const value = item[key];
@@ -58,6 +63,7 @@
         fragment.append(clone);
       });
       container.replaceChildren(fragment);
+      if (faqSignature !== null) renderedFaqCollections.set(container, faqSignature);
     });
   }
   function renderBindings() {

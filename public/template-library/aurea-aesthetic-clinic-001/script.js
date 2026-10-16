@@ -172,6 +172,7 @@
     container.replaceChildren(fragment);
   }
 
+  const faqSignatures = new WeakMap();
   let activeFilter = 'all';
   function renderCollections() {
     document.querySelectorAll('[data-collection]').forEach(container => {
@@ -181,6 +182,11 @@
       const limit = Number.parseInt(container.dataset.limit || '', 10);
       if (container.dataset.collectionKind === 'services' && activeFilter !== 'all') items = items.filter(item => item.category === activeFilter);
       if (Number.isInteger(limit)) items = items.slice(0, limit);
+      const isFaq = container.dataset.collectionKind === 'faq';
+      const faqSignature = isFaq
+        ? JSON.stringify(items.map(item => [plainText(item.question), plainText(item.answer)]))
+        : null;
+      if (isFaq && faqSignatures.get(container) === faqSignature) return;
       const fragment = document.createDocumentFragment();
       items.forEach(item => {
         if (container.dataset.collectionKind === 'faq') {
@@ -201,6 +207,7 @@
         fragment.append(article);
       });
       container.replaceChildren(fragment);
+      if (isFaq) faqSignatures.set(container, faqSignature);
       if (container.dataset.collectionKind === 'services') {const empty = document.querySelector('.empty');if(empty)empty.classList.toggle('is-visible', items.length === 0);}
     });
     const select = document.querySelector('select[name="service"]');

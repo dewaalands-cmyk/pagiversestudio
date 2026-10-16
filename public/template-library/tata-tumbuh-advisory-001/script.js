@@ -10,6 +10,8 @@
     language: "id",
   };
 
+  const faqSignatures = new WeakMap();
+
   const own = (object, key) =>
     Object.prototype.hasOwnProperty.call(object || {}, key);
 
@@ -221,18 +223,32 @@
   }
 
   function renderFaq(container, items) {
+    const signature = JSON.stringify(
+      items.map((item) => [
+        String(localized(item, "question")),
+        String(localized(item, "answer")),
+      ]),
+    );
+    if (faqSignatures.get(container) === signature) return;
+
+    container.replaceChildren();
     items.forEach((item) => {
       const details = createElement("details", "faq-item");
       details.append(createElement("summary", "", localized(item, "question")));
       details.append(createElement("p", "", localized(item, "answer")));
       container.append(details);
     });
+    faqSignatures.set(container, signature);
   }
 
   function renderCollections() {
     document.querySelectorAll("[data-collection]").forEach((container) => {
       const path = container.dataset.collection;
       const items = getValue(path);
+      if (path === "sections.faq.items") {
+        renderFaq(container, Array.isArray(items) ? items : []);
+        return;
+      }
       container.replaceChildren();
       if (!Array.isArray(items) || items.length === 0) return;
       if (path === "sections.about.signals") renderSignals(container, items);
@@ -251,7 +267,6 @@
         renderSimpleItems(container, items, "principle-item");
       else if (path === "sections.insights.items")
         renderInsights(container, items);
-      else if (path === "sections.faq.items") renderFaq(container, items);
       else renderList(container, items);
     });
   }

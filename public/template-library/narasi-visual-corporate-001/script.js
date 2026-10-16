@@ -8,6 +8,8 @@
     revealObserver: null,
   };
 
+  const faqSignatures = new WeakMap();
+
   const own = (object, key) =>
     Object.prototype.hasOwnProperty.call(object, key);
 
@@ -262,6 +264,11 @@
   }
 
   function renderFaq(container, items) {
+    const signature = JSON.stringify(
+      items.map((item) => [textValue(item.question), textValue(item.answer)]),
+    );
+    if (faqSignatures.get(container) === signature) return;
+
     const fragment = document.createDocumentFragment();
     items.forEach((item) => {
       const details = createElement("details", "faq-item");
@@ -277,6 +284,7 @@
         createElement("div", "empty-state", "Pertanyaan belum ditambahkan."),
       );
     container.replaceChildren(fragment);
+    faqSignatures.set(container, signature);
   }
 
   function renderCollections() {

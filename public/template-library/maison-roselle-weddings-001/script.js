@@ -177,17 +177,27 @@
     container.replaceChildren(fragment);
   }
 
+  const faqSignatures = new WeakMap();
+
   function renderFaq(container, items) {
+    const maxItems = state.schema?.fields?.[container.dataset.collection]?.maxItems;
+    const entries = items
+      .filter((item) => item && typeof item === "object")
+      .slice(0, Number.isInteger(maxItems) ? Math.max(0, maxItems) : items.length)
+      .map((item) => [plainText(item.question), plainText(item.answer)]);
+    const signature = JSON.stringify(entries);
+    if (faqSignatures.get(container) === signature) return;
+
     const fragment = document.createDocumentFragment();
-    items.forEach((item, index) => {
-      if (!item || typeof item !== "object") return;
+    entries.forEach(([question, answer], index) => {
       const details = element("details", "faq-item");
       details.dataset.reveal = "";
       if (index === 0) details.open = true;
-      details.append(element("summary", "", item.question), element("p", "", item.answer));
+      details.append(element("summary", "", question), element("p", "", answer));
       fragment.append(details);
     });
     container.replaceChildren(fragment);
+    faqSignatures.set(container, signature);
   }
 
   function renderCollections() {
