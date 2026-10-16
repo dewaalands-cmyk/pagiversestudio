@@ -3,10 +3,14 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { buildDefaultConfig, getTemplateEntry, getTemplateThumbnail } from "@/lib/template-library";
 
-export default function NativeTemplateRenderer({ template, config = {}, compact = false, deviceMode = "auto" }) {
+// Preview status changes must not create a fresh default config and restart sync.
+const EMPTY_CONFIGURATION = Object.freeze({});
+
+export default function NativeTemplateRenderer({ template, config = EMPTY_CONFIGURATION, compact = false, deviceMode = "auto" }) {
   const frameRef = useRef(null);
   const configurationRef = useRef(config);
   const revisionRef = useRef(0);
+  const lastSentConfigurationRef = useRef(null);
   const timeoutRef = useRef(null);
   const [previewStatus, setPreviewStatus] = useState("connecting");
   const configuration = useMemo(
@@ -19,8 +23,11 @@ export default function NativeTemplateRenderer({ template, config = {}, compact 
     configurationRef.current = configuration;
   }, [configuration]);
 
-  const sendConfiguration = useCallback(() => {
+  const sendConfiguration = useCallback((force = false) => {
     if (!frameRef.current?.contentWindow) return;
+    const signature = JSON.stringify([template.id, configurationRef.current]);
+    if (!force && lastSentConfigurationRef.current === signature) return;
+    lastSentConfigurationRef.current = signature;
     const revision = revisionRef.current + 1;
     revisionRef.current = revision;
     setPreviewStatus("syncing");
@@ -44,7 +51,7 @@ export default function NativeTemplateRenderer({ template, config = {}, compact 
     function handleMessage(event) {
       if (event.origin !== window.location.origin || event.source !== frameRef.current?.contentWindow) return;
       if (event.data?.templateId !== template.id) return;
-      if (event.data?.type === "pagiverse:ready") sendConfiguration();
+      if (event.data?.type === "pagiverse:ready") sendConfiguration(true);
       if (event.data?.type === "pagiverse:applied" && event.data?.revision === revisionRef.current) {
         window.clearTimeout(timeoutRef.current);
         setPreviewStatus("ready");
@@ -67,7 +74,7 @@ export default function NativeTemplateRenderer({ template, config = {}, compact 
         ref={frameRef}
         src={previewUrl}
         title={`${template.name} live preview`}
-        onLoad={sendConfiguration}
+        onLoad={() => sendConfiguration(true)}
         sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
         className={`block w-full border-0 bg-white ${deviceMode === "mobile" ? "h-[760px]" : "h-[900px]"}`}
       />
