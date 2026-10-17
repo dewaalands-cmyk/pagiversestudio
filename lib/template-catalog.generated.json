@@ -12138,6 +12138,865 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "kabar-studio-creative-001",
+      "name": "KABAR STUDIO",
+      "category": "agency",
+      "description": "Template agensi kreatif full-service dengan gaya broadsheet editorial. Identitas, proyek, dan isi formulir adalah contoh demo.",
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html"
+        }
+      ],
+      "dependencies": [],
+      "languages": {
+        "supported": [
+          "id"
+        ],
+        "default": "id"
+      },
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "light",
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#1d1d1b"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#c03f13"
+          },
+          "background": {
+            "editable": false,
+            "default": "#e2dedb"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#cdc6be"
+          },
+          "text": {
+            "editable": false,
+            "default": "#1d1d1b"
+          },
+          "muted": {
+            "editable": false,
+            "default": "#69645f"
+          },
+          "fontBody": {
+            "editable": false,
+            "default": "Newsreader"
+          },
+          "fontDisplay": {
+            "editable": false,
+            "default": "Bodoni Moda"
+          },
+          "fontSecondary": {
+            "editable": false,
+            "default": "Playfair Display"
+          },
+          "fontAccent": {
+            "editable": false,
+            "default": "UnifrakturMaguntia"
+          },
+          "baseFontSize": {
+            "editable": false,
+            "default": "31px"
+          },
+          "typeScale": {
+            "editable": false,
+            "default": 1.2
+          }
+        }
+      },
+      "navigation": {
+        "items": [
+          {
+            "id": "gallery",
+            "labelField": "navigation.gallery.label",
+            "target": "#gallery",
+            "hideable": true
+          },
+          {
+            "id": "services",
+            "labelField": "navigation.services.label",
+            "target": "#services",
+            "hideable": true
+          },
+          {
+            "id": "about",
+            "labelField": "navigation.about.label",
+            "target": "#about",
+            "hideable": true
+          },
+          {
+            "id": "contact",
+            "labelField": "navigation.contact.label",
+            "target": "#contact",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama agensi",
+          "required": true,
+          "maxLength": 60,
+          "default": "KABAR STUDIO"
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Tagline",
+          "maxLength": 96,
+          "default": "Ide kuat. Karya bersuara."
+        },
+        "business.demoLabel": {
+          "type": "text",
+          "label": "Label edisi",
+          "maxLength": 32,
+          "default": "Edisi contoh"
+        },
+        "navigation.menu.label": {
+          "type": "text",
+          "label": "Label menu",
+          "maxLength": 20,
+          "default": "Menu"
+        },
+        "navigation.gallery.label": {
+          "type": "text",
+          "label": "Navigasi karya",
+          "maxLength": 24,
+          "default": "Karya"
+        },
+        "navigation.services.label": {
+          "type": "text",
+          "label": "Navigasi layanan",
+          "maxLength": 24,
+          "default": "Layanan"
+        },
+        "navigation.about.label": {
+          "type": "text",
+          "label": "Navigasi studio",
+          "maxLength": 24,
+          "default": "Studio"
+        },
+        "navigation.contact.label": {
+          "type": "text",
+          "label": "Navigasi kontak",
+          "maxLength": 24,
+          "default": "Mulai proyek"
+        },
+        "sections.hero.kicker": {
+          "type": "text",
+          "label": "Pengantar hero",
+          "maxLength": 60,
+          "default": "Biro ide & karya"
+        },
+        "sections.hero.heading": {
+          "type": "text",
+          "label": "Judul banner hero",
+          "required": true,
+          "maxLength": 12,
+          "default": "KABAR"
+        },
+        "sections.hero.description": {
+          "type": "textarea",
+          "label": "Deskripsi hero",
+          "maxLength": 240,
+          "default": "Kami merangkai branding, website, dan kampanye menjadi satu cerita yang terasa utuh."
+        },
+        "sections.hero.primaryCta.label": {
+          "type": "text",
+          "label": "CTA utama hero",
+          "maxLength": 30,
+          "default": "Mulai proyek"
+        },
+        "sections.hero.secondaryCta.label": {
+          "type": "text",
+          "label": "CTA karya",
+          "maxLength": 30,
+          "default": "Lihat karya"
+        },
+        "sections.hero.byline": {
+          "type": "text",
+          "label": "Catatan hero",
+          "maxLength": 160,
+          "default": "Studio independen untuk merek yang punya sesuatu untuk dikatakan."
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "Judul studio",
+          "maxLength": 100,
+          "default": "Satu studio. Banyak sudut pandang."
+        },
+        "sections.about.mark": {
+          "type": "text",
+          "label": "Monogram studio",
+          "maxLength": 8,
+          "default": "Ks."
+        },
+        "sections.about.markCaption": {
+          "type": "text",
+          "label": "Keterangan monogram",
+          "maxLength": 70,
+          "default": "Pikiran terbuka. Arah bersama."
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "Cerita studio",
+          "maxLength": 500,
+          "default": "Kami percaya merek yang kuat lahir dari ide yang jelas. Dari strategi dan identitas hingga pengalaman digital dan kampanye, kami menjaga setiap bagian berbicara dalam bahasa yang sama."
+        },
+        "sections.about.secondaryBody": {
+          "type": "textarea",
+          "label": "Cara bekerja studio",
+          "maxLength": 400,
+          "default": "Tim kecil, percakapan dekat, dan keterlibatan dari awal sampai akhir. Kami bekerja bersama Anda untuk membentuk karya yang relevan dengan kebutuhan bisnis."
+        },
+        "sections.about.ctaLabel": {
+          "type": "text",
+          "label": "CTA layanan studio",
+          "maxLength": 30,
+          "default": "Kenali layanan"
+        },
+        "sections.gallery.intro": {
+          "type": "text",
+          "label": "Pengantar karya",
+          "maxLength": 60,
+          "default": "Karya pilihan"
+        },
+        "sections.gallery.demoLabel": {
+          "type": "text",
+          "label": "Pemberitahuan demo karya",
+          "maxLength": 120,
+          "default": "Seluruh proyek berikut adalah konsep demo."
+        },
+        "sections.gallery.heading": {
+          "type": "text",
+          "label": "Judul banner karya",
+          "maxLength": 12,
+          "default": "KARYA"
+        },
+        "sections.gallery.filterAll": {
+          "type": "text",
+          "label": "Filter semua",
+          "maxLength": 24,
+          "default": "Semua"
+        },
+        "sections.gallery.filterBranding": {
+          "type": "text",
+          "label": "Filter branding",
+          "maxLength": 24,
+          "default": "Branding"
+        },
+        "sections.gallery.filterWebsite": {
+          "type": "text",
+          "label": "Filter website",
+          "maxLength": 24,
+          "default": "Website"
+        },
+        "sections.gallery.filterCampaign": {
+          "type": "text",
+          "label": "Filter kampanye",
+          "maxLength": 24,
+          "default": "Kampanye"
+        },
+        "sections.gallery.emptyLabel": {
+          "type": "text",
+          "label": "Pesan karya kosong",
+          "maxLength": 150,
+          "default": "Belum ada karya di pilihan ini."
+        },
+        "sections.gallery.countLabel": {
+          "type": "text",
+          "label": "Label jumlah proyek",
+          "maxLength": 24,
+          "default": "proyek"
+        },
+        "sections.gallery.detailLabel": {
+          "type": "text",
+          "label": "Label detail proyek",
+          "maxLength": 40,
+          "default": "Lihat detail proyek"
+        },
+        "sections.gallery.briefLabel": {
+          "type": "text",
+          "label": "Judul brief proyek",
+          "maxLength": 50,
+          "default": "Brief konsep"
+        },
+        "sections.gallery.approachLabel": {
+          "type": "text",
+          "label": "Judul pendekatan proyek",
+          "maxLength": 50,
+          "default": "Pendekatan"
+        },
+        "sections.gallery.deliverablesLabel": {
+          "type": "text",
+          "label": "Judul keluaran proyek",
+          "maxLength": 50,
+          "default": "Lingkup konsep"
+        },
+        "sections.gallery.dialogCloseLabel": {
+          "type": "text",
+          "label": "Label tutup detail",
+          "maxLength": 50,
+          "default": "Tutup detail proyek"
+        },
+        "sections.services.heading": {
+          "type": "text",
+          "label": "Judul layanan",
+          "maxLength": 100,
+          "default": "Dari gagasan sampai jadi."
+        },
+        "sections.services.description": {
+          "type": "textarea",
+          "label": "Deskripsi layanan",
+          "maxLength": 260,
+          "default": "Tiga keahlian, satu arah kreatif. Mulai dari kebutuhan yang paling penting untuk merek Anda."
+        },
+        "sections.services.mark": {
+          "type": "text",
+          "label": "Tanda layanan",
+          "maxLength": 12,
+          "default": "Craft."
+        },
+        "sections.process.heading": {
+          "type": "text",
+          "label": "Judul proses",
+          "maxLength": 110,
+          "default": "Karya dimulai dari percakapan."
+        },
+        "sections.contact.kicker": {
+          "type": "text",
+          "label": "Pengantar kontak",
+          "maxLength": 70,
+          "default": "Ada ide di kepala?"
+        },
+        "sections.contact.heading": {
+          "type": "text",
+          "label": "Judul kontak",
+          "required": true,
+          "maxLength": 100,
+          "default": "Mari buat kabar baik."
+        },
+        "sections.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi kontak",
+          "maxLength": 300,
+          "default": "Ceritakan apa yang sedang Anda bangun. Kami mulai dari tujuan, lalu menemukan bentuknya bersama."
+        },
+        "sections.contact.demoNotice": {
+          "type": "textarea",
+          "label": "Pemberitahuan demo formulir",
+          "maxLength": 240,
+          "default": "Ini website demo. Formulir belum terhubung ke pengiriman pesan."
+        },
+        "sections.contact.form.nameLabel": {
+          "type": "text",
+          "label": "Label nama",
+          "maxLength": 60,
+          "default": "Nama Anda"
+        },
+        "sections.contact.form.emailLabel": {
+          "type": "text",
+          "label": "Label email",
+          "maxLength": 60,
+          "default": "Email"
+        },
+        "sections.contact.form.serviceLabel": {
+          "type": "text",
+          "label": "Label kebutuhan",
+          "maxLength": 60,
+          "default": "Kebutuhan Anda"
+        },
+        "sections.contact.form.servicePlaceholder": {
+          "type": "text",
+          "label": "Pilihan kosong layanan",
+          "maxLength": 60,
+          "default": "Pilih layanan"
+        },
+        "sections.contact.form.optionBranding": {
+          "type": "text",
+          "label": "Pilihan branding",
+          "maxLength": 60,
+          "default": "Branding"
+        },
+        "sections.contact.form.optionWebsite": {
+          "type": "text",
+          "label": "Pilihan website",
+          "maxLength": 60,
+          "default": "Website"
+        },
+        "sections.contact.form.optionCampaign": {
+          "type": "text",
+          "label": "Pilihan kampanye",
+          "maxLength": 60,
+          "default": "Kampanye"
+        },
+        "sections.contact.form.optionFull": {
+          "type": "text",
+          "label": "Pilihan full-service",
+          "maxLength": 60,
+          "default": "Paket full-service"
+        },
+        "sections.contact.form.messageLabel": {
+          "type": "text",
+          "label": "Label cerita proyek",
+          "maxLength": 100,
+          "default": "Sedikit cerita tentang proyek"
+        },
+        "sections.contact.form.submitLabel": {
+          "type": "text",
+          "label": "Tombol brief",
+          "maxLength": 40,
+          "default": "Susun brief"
+        },
+        "sections.footer.copyright": {
+          "type": "text",
+          "label": "Hak cipta",
+          "maxLength": 160,
+          "default": "© 2026 KABAR STUDIO. Identitas dan karya contoh."
+        },
+        "sections.footer.backLabel": {
+          "type": "text",
+          "label": "Tautan kembali",
+          "maxLength": 40,
+          "default": "Kembali ke atas"
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul mesin pencari",
+          "maxLength": 120,
+          "default": "KABAR STUDIO | Branding, Website & Kampanye"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi mesin pencari",
+          "maxLength": 280,
+          "default": "KABAR STUDIO. Agensi kreatif full-service untuk branding, website, dan kampanye. Identitas dan proyek contoh."
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Email kontak (opsional)",
+          "maxLength": 120,
+          "default": ""
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo agensi (opsional)",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": false,
+          "default": {
+            "src": "",
+            "alt": ""
+          }
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Proyek konsep demo",
+          "minItems": 0,
+          "maxItems": 6,
+          "default": [
+            {
+              "id": "akar",
+              "title": "AKAR",
+              "category": "branding",
+              "label": "Konsep Branding · Kopi",
+              "description": "Konsep demo identitas kopi lokal yang menghubungkan cerita asal, karakter rasa, dan kebiasaan menikmati kopi.",
+              "brief": "AKAR adalah merek kopi fiktif. Konsep demo ini mengeksplorasi identitas yang terasa akrab, tegas, dan mudah dikenali.",
+              "approach": "Kami memakai huruf padat, ilustrasi sederhana, dan bahasa yang langsung untuk menyatukan kemasan dengan pengalaman di kedai.",
+              "deliverables": "Strategi merek konsep\nIdentitas visual\nDesain kemasan\nArahan materi kedai",
+              "image": {
+                "src": "assets/akar.webp",
+                "alt": "Visual konsep demo merek kopi fiktif AKAR dengan kemasan dan identitas editorial.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Visual konsep demo merek kopi fiktif AKAR dengan kemasan dan identitas editorial.",
+              "badge": "NEW"
+            },
+            {
+              "id": "ruang",
+              "title": "RUANG",
+              "category": "website",
+              "label": "Konsep Website · Seni",
+              "description": "Konsep demo website pameran seni yang memberi karya, seniman, dan informasi kunjungan ruang untuk berbicara.",
+              "brief": "RUANG adalah pameran seni fiktif. Website konsep ini membantu pengunjung mengenal karya dan merencanakan kunjungan.",
+              "approach": "Kami menyusun alur dari gambaran pameran menuju karya, cerita seniman, lalu informasi kunjungan dalam tata letak editorial.",
+              "deliverables": "Struktur informasi\nDesain antarmuka\nWebsite responsif konsep\nArahan konten pameran",
+              "image": {
+                "src": "assets/ruang.webp",
+                "alt": "Visual konsep demo website pameran seni fiktif RUANG dengan komposisi karya dan tipografi editorial.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Visual konsep demo website pameran seni fiktif RUANG dengan komposisi karya dan tipografi editorial.",
+              "badge": "NEW"
+            },
+            {
+              "id": "sora",
+              "title": "SORA",
+              "category": "campaign",
+              "label": "Konsep Kampanye · Fashion",
+              "description": "Konsep demo kampanye fashion yang merangkai gerak, siluet, dan pesan singkat menjadi satu cerita koleksi.",
+              "brief": "SORA adalah label fashion fiktif. Konsep demo ini memperkenalkan koleksi imajiner melalui cerita tentang ekspresi sehari-hari.",
+              "approach": "Kami menggabungkan komposisi berani, potret bergerak, dan judul singkat agar setiap materi terasa sebagai bagian dari kampanye yang sama.",
+              "deliverables": "Ide kampanye konsep\nArahan kreatif\nKey visual\nRangkaian konten digital",
+              "image": {
+                "src": "assets/sora.webp",
+                "alt": "Visual konsep demo kampanye label fashion fiktif SORA yang menampilkan siluet dan komposisi editorial.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Visual konsep demo kampanye label fashion fiktif SORA yang menampilkan siluet dan komposisi editorial.",
+              "badge": "NEW"
+            }
+          ],
+          "item": {
+            "fields": {
+              "id": {
+                "type": "text",
+                "label": "ID proyek",
+                "maxLength": 40
+              },
+              "title": {
+                "type": "text",
+                "label": "Nama proyek",
+                "maxLength": 48
+              },
+              "category": {
+                "type": "select",
+                "label": "Kategori filter",
+                "options": [
+                  "branding",
+                  "website",
+                  "campaign"
+                ],
+                "default": "branding"
+              },
+              "label": {
+                "type": "text",
+                "label": "Label kategori",
+                "maxLength": 80
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Ringkasan proyek",
+                "maxLength": 200
+              },
+              "brief": {
+                "type": "textarea",
+                "label": "Brief konsep",
+                "maxLength": 700
+              },
+              "approach": {
+                "type": "textarea",
+                "label": "Pendekatan",
+                "maxLength": 800
+              },
+              "deliverables": {
+                "type": "textarea",
+                "label": "Lingkup konsep",
+                "maxLength": 500
+              },
+              "image": {
+                "type": "image",
+                "label": "Gambar proyek",
+                "accept": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true,
+                "default": {
+                  "src": "",
+                  "alt": "",
+                  "focalPoint": {
+                    "x": 50,
+                    "y": 50
+                  }
+                }
+              },
+              "imageAlt": {
+                "type": "text",
+                "label": "Deskripsi gambar",
+                "maxLength": 180
+              },
+              "badge": {
+                "type": "text",
+                "label": "Penanda proyek",
+                "maxLength": 3,
+                "default": "NEW",
+                "editable": false
+              }
+            }
+          }
+        },
+        "sections.services.items": {
+          "type": "array",
+          "label": "Daftar layanan",
+          "minItems": 1,
+          "maxItems": 6,
+          "default": [
+            {
+              "name": "Branding",
+              "description": "Kami membantu merek menemukan arah, suara, dan bentuk yang mudah dikenali.",
+              "details": "Strategi dan posisi merek\nIdentitas visual\nPedoman merek\nKemasan dan materi cetak"
+            },
+            {
+              "name": "Website",
+              "description": "Kami merancang website yang menjelaskan cerita merek dan memudahkan orang mengambil langkah berikutnya.",
+              "details": "Struktur dan pengalaman pengguna\nDesain antarmuka\nPengembangan website responsif\nArahan konten website"
+            },
+            {
+              "name": "Kampanye",
+              "description": "Kami menyatukan ide, visual, dan pesan untuk membawa cerita merek ke berbagai kanal.",
+              "details": "Konsep kampanye\nArahan kreatif\nKey visual\nKonten digital dan media sosial"
+            }
+          ],
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "label": "Nama layanan",
+                "maxLength": 70
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi layanan",
+                "maxLength": 300
+              },
+              "details": {
+                "type": "textarea",
+                "label": "Rincian layanan",
+                "maxLength": 500
+              }
+            }
+          }
+        },
+        "sections.process.items": {
+          "type": "array",
+          "label": "Tahapan kerja",
+          "minItems": 0,
+          "maxItems": 6,
+          "default": [
+            {
+              "title": "Dengarkan",
+              "description": "Kami mengenali kebutuhan, audiens, dan konteks merek melalui percakapan serta bahan yang tersedia."
+            },
+            {
+              "title": "Temukan Arah",
+              "description": "Kami merumuskan gagasan utama dan menyepakati arah visual, pesan, serta lingkup pekerjaan."
+            },
+            {
+              "title": "Bentuk Karya",
+              "description": "Kami mengembangkan konsep menjadi desain dan pengalaman, lalu meninjau detailnya bersama."
+            },
+            {
+              "title": "Siap Bersuara",
+              "description": "Kami menyiapkan hasil akhir dan panduan penggunaan agar karya siap dipakai di kanal yang disepakati."
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "label": "Nama tahap",
+                "maxLength": 70
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Penjelasan tahap",
+                "maxLength": 300
+              }
+            }
+          }
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar berbagi",
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 5,
+          "focalPoint": false,
+          "default": {
+            "src": "thumbnail.webp",
+            "alt": "KABAR STUDIO — contoh agensi kreatif"
+          }
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.kicker",
+            "sections.hero.heading",
+            "sections.hero.description",
+            "sections.hero.primaryCta.label",
+            "sections.hero.secondaryCta.label",
+            "sections.hero.byline"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Studio",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.heading",
+            "sections.about.mark",
+            "sections.about.markCaption",
+            "sections.about.body",
+            "sections.about.secondaryBody",
+            "sections.about.ctaLabel"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Karya",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.intro",
+            "sections.gallery.demoLabel",
+            "sections.gallery.heading",
+            "sections.gallery.filterAll",
+            "sections.gallery.filterBranding",
+            "sections.gallery.filterWebsite",
+            "sections.gallery.filterCampaign",
+            "sections.gallery.emptyLabel",
+            "sections.gallery.countLabel",
+            "sections.gallery.detailLabel",
+            "sections.gallery.briefLabel",
+            "sections.gallery.approachLabel",
+            "sections.gallery.deliverablesLabel",
+            "sections.gallery.dialogCloseLabel",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Layanan",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.services.heading",
+            "sections.services.description",
+            "sections.services.mark",
+            "sections.services.items"
+          ]
+        },
+        {
+          "id": "process",
+          "label": "Proses",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.process.heading",
+            "sections.process.items"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Kontak",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.contact.kicker",
+            "sections.contact.heading",
+            "sections.contact.description",
+            "sections.contact.demoNotice",
+            "sections.contact.form.nameLabel",
+            "sections.contact.form.emailLabel",
+            "sections.contact.form.serviceLabel",
+            "sections.contact.form.servicePlaceholder",
+            "sections.contact.form.optionBranding",
+            "sections.contact.form.optionWebsite",
+            "sections.contact.form.optionCampaign",
+            "sections.contact.form.optionFull",
+            "sections.contact.form.messageLabel",
+            "sections.contact.form.submitLabel"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Footer",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.copyright",
+            "sections.footer.backLabel"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "id": "project-inquiry",
+          "label": "Brief proyek",
+          "provider": "pagiverse-core",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "required": true,
+              "maxLength": 80
+            },
+            {
+              "name": "email",
+              "type": "email",
+              "required": true,
+              "maxLength": 120
+            },
+            {
+              "name": "service",
+              "type": "select",
+              "required": true,
+              "options": [
+                "branding",
+                "website",
+                "campaign",
+                "full-service"
+              ]
+            },
+            {
+              "name": "message",
+              "type": "textarea",
+              "required": true,
+              "minLength": 15,
+              "maxLength": 1500
+            }
+          ]
+        }
+      ],
+      "publicPath": "/template-library/kabar-studio-creative-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "maison-roselle-weddings-001",
       "name": "Maison Roselle Weddings",
       "category": "services",

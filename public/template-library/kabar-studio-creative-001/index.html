@@ -1,0 +1,417 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="KABAR STUDIO. Agensi kreatif full-service untuk branding, website, dan kampanye. Identitas dan proyek contoh."
+    />
+    <meta name="theme-color" content="#e2dedb" />
+    <meta
+      property="og:title"
+      content="KABAR STUDIO | Ide kuat. Karya bersuara."
+    />
+    <meta
+      property="og:description"
+      content="Branding, website, dan kampanye dalam satu arah kreatif. Template agensi contoh."
+    />
+    <meta property="og:image" content="thumbnail.webp" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/newsreader-300.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/bodoni-moda-800.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>KABAR STUDIO | Branding, Website & Kampanye</title>
+  </head>
+  <body data-page="home">
+    <a class="skip-link" href="#main">Lewati ke konten</a>
+    <header class="masthead">
+      <span class="edition" data-bind="business.demoLabel">Edisi contoh</span>
+      <a class="brand" href="#hero"
+        ><img data-brand-logo hidden alt="" /><span data-bind="business.name"
+          >KABAR STUDIO</span
+        ></a
+      >
+      <button
+        class="menu-toggle"
+        type="button"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="site-navigation"
+      >
+        <span data-bind="navigation.menu.label">Menu</span
+        ><span class="menu-mark" aria-hidden="true"></span>
+      </button>
+    </header>
+    <nav
+      id="site-navigation"
+      class="menu-panel"
+      data-navigation
+      aria-label="Navigasi utama"
+      hidden
+    >
+      <a
+        href="#gallery"
+        data-nav-id="gallery"
+        data-bind="navigation.gallery.label"
+        >Karya</a
+      >
+      <a
+        href="#services"
+        data-nav-id="services"
+        data-bind="navigation.services.label"
+        >Layanan</a
+      >
+      <a href="#about" data-nav-id="about" data-bind="navigation.about.label"
+        >Studio</a
+      >
+      <a
+        href="#contact"
+        data-nav-id="contact"
+        data-bind="navigation.contact.label"
+        >Mulai proyek</a
+      >
+    </nav>
+    <main id="main">
+      <section id="hero" data-section="hero" class="hero">
+        <div class="nameplate">
+          <h1 class="display banner-type" data-bind="sections.hero.heading">
+            KABAR
+          </h1>
+        </div>
+        <div class="front-page">
+          <div class="front-project" data-highlight="0"></div>
+          <div class="front-statement">
+            <p class="small-heading" data-bind="sections.hero.kicker">
+              Biro ide &amp; karya
+            </p>
+            <p class="front-heading" data-bind="business.tagline">
+              Ide kuat. Karya bersuara.
+            </p>
+            <p data-bind="sections.hero.description">
+              Kami merangkai branding, website, dan kampanye menjadi satu cerita
+              yang terasa utuh.
+            </p>
+            <a class="text-link" href="#contact"
+              ><span data-bind="sections.hero.primaryCta.label"
+                >Mulai proyek</span
+              ><span aria-hidden="true">↗</span></a
+            >
+          </div>
+          <div class="front-project" data-highlight="1"></div>
+        </div>
+        <div class="hero-byline">
+          <span data-bind="sections.hero.byline"
+            >Studio independen untuk merek yang punya sesuatu untuk
+            dikatakan.</span
+          ><a href="#gallery" class="text-link"
+            ><span data-bind="sections.hero.secondaryCta.label"
+              >Lihat karya</span
+            ><span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </section>
+      <section id="about" data-section="about" class="about section-space">
+        <div class="about-left">
+          <h2 class="section-heading" data-bind="sections.about.heading">
+            Satu studio. Banyak sudut pandang.
+          </h2>
+          <div class="printer-mark" aria-hidden="true">
+            <span class="gothic" data-bind="sections.about.mark">Ks.</span
+            ><span class="mark-line"></span
+            ><span class="small-heading" data-bind="sections.about.markCaption"
+              >Pikiran terbuka. Arah bersama.</span
+            >
+          </div>
+        </div>
+        <div class="about-right">
+          <p class="dropcap" data-bind="sections.about.body">
+            Kami percaya merek yang kuat lahir dari ide yang jelas. Dari
+            strategi dan identitas hingga pengalaman digital dan kampanye, kami
+            menjaga setiap bagian berbicara dalam bahasa yang sama.
+          </p>
+          <p data-bind="sections.about.secondaryBody">
+            Tim kecil, percakapan dekat, dan keterlibatan dari awal sampai
+            akhir. Kami bekerja bersama Anda untuk membentuk karya yang relevan
+            dengan kebutuhan bisnis.
+          </p>
+          <a class="text-link" href="#services"
+            ><span data-bind="sections.about.ctaLabel">Kenali layanan</span
+            ><span aria-hidden="true">↘</span></a
+          >
+        </div>
+      </section>
+      <section
+        id="gallery"
+        data-section="gallery"
+        class="work-section section-space"
+      >
+        <div class="section-rule">
+          <span data-bind="sections.gallery.intro">Karya pilihan</span
+          ><span data-bind="sections.gallery.demoLabel"
+            >Seluruh proyek berikut adalah konsep demo.</span
+          >
+        </div>
+        <h2 class="display section-banner" data-bind="sections.gallery.heading">
+          KARYA
+        </h2>
+        <div class="work-toolbar">
+          <div class="filters" role="group" aria-label="Filter proyek">
+            <button
+              type="button"
+              class="filter is-active"
+              data-filter="all"
+              aria-pressed="true"
+              data-bind="sections.gallery.filterAll"
+            >
+              Semua</button
+            ><button
+              type="button"
+              class="filter"
+              data-filter="branding"
+              aria-pressed="false"
+              data-bind="sections.gallery.filterBranding"
+            >
+              Branding</button
+            ><button
+              type="button"
+              class="filter"
+              data-filter="website"
+              aria-pressed="false"
+              data-bind="sections.gallery.filterWebsite"
+            >
+              Website</button
+            ><button
+              type="button"
+              class="filter"
+              data-filter="campaign"
+              aria-pressed="false"
+              data-bind="sections.gallery.filterCampaign"
+            >
+              Kampanye
+            </button>
+          </div>
+          <span
+            class="result-count"
+            data-project-count
+            aria-live="polite"
+          ></span>
+        </div>
+        <div
+          class="project-grid"
+          data-collection="sections.gallery.items"
+        ></div>
+        <p
+          class="empty-state"
+          data-project-empty
+          hidden
+          data-bind="sections.gallery.emptyLabel"
+        >
+          Belum ada karya di pilihan ini.
+        </p>
+      </section>
+      <section
+        id="services"
+        data-section="services"
+        class="services section-space"
+      >
+        <div class="services-intro">
+          <h2 class="section-heading" data-bind="sections.services.heading">
+            Dari gagasan sampai jadi.
+          </h2>
+          <p data-bind="sections.services.description">
+            Tiga keahlian, satu arah kreatif. Mulai dari kebutuhan yang paling
+            penting untuk merek Anda.
+          </p>
+          <p
+            class="gothic service-mark"
+            aria-hidden="true"
+            data-bind="sections.services.mark"
+          >
+            Craft.
+          </p>
+        </div>
+        <div
+          class="service-list"
+          data-collection="sections.services.items"
+        ></div>
+      </section>
+      <section
+        id="process"
+        data-section="process"
+        class="process section-space"
+      >
+        <h2 class="section-heading" data-bind="sections.process.heading">
+          Karya dimulai dari percakapan.
+        </h2>
+        <div
+          class="process-grid"
+          data-collection="sections.process.items"
+        ></div>
+      </section>
+      <section
+        id="contact"
+        data-section="contact"
+        class="contact section-space"
+      >
+        <div class="contact-intro">
+          <p class="small-heading" data-bind="sections.contact.kicker">
+            Ada ide di kepala?
+          </p>
+          <h2 class="section-heading" data-bind="sections.contact.heading">
+            Mari buat kabar baik.
+          </h2>
+          <p data-bind="sections.contact.description">
+            Ceritakan apa yang sedang Anda bangun. Kami mulai dari tujuan, lalu
+            menemukan bentuknya bersama.
+          </p>
+          <p class="contact-note" data-bind="sections.contact.demoNotice">
+            Ini website demo. Formulir belum terhubung ke pengiriman pesan.
+          </p>
+          <a class="contact-email text-link" data-email-link hidden
+            ><span data-bind="contact.email"></span
+            ><span aria-hidden="true">↗</span></a
+          >
+        </div>
+        <form
+          data-pagiverse-form="project-inquiry"
+          class="brief-form"
+          novalidate
+        >
+          <div class="form-field">
+            <label for="brief-name" data-bind="sections.contact.form.nameLabel"
+              >Nama Anda</label
+            ><input
+              id="brief-name"
+              name="name"
+              type="text"
+              autocomplete="name"
+              maxlength="80"
+              required
+              aria-describedby="brief-name-error"
+            />
+            <p id="brief-name-error" class="field-error"></p>
+          </div>
+          <div class="form-field">
+            <label
+              for="brief-email"
+              data-bind="sections.contact.form.emailLabel"
+              >Email</label
+            ><input
+              id="brief-email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              maxlength="120"
+              required
+              aria-describedby="brief-email-error"
+            />
+            <p id="brief-email-error" class="field-error"></p>
+          </div>
+          <div class="form-field">
+            <label
+              for="brief-service"
+              data-bind="sections.contact.form.serviceLabel"
+              >Kebutuhan Anda</label
+            ><select
+              id="brief-service"
+              name="service"
+              required
+              aria-describedby="brief-service-error"
+            >
+              <option
+                value=""
+                data-bind="sections.contact.form.servicePlaceholder"
+              >
+                Pilih layanan
+              </option>
+              <option
+                value="branding"
+                data-bind="sections.contact.form.optionBranding"
+              >
+                Branding
+              </option>
+              <option
+                value="website"
+                data-bind="sections.contact.form.optionWebsite"
+              >
+                Website
+              </option>
+              <option
+                value="campaign"
+                data-bind="sections.contact.form.optionCampaign"
+              >
+                Kampanye
+              </option>
+              <option
+                value="full-service"
+                data-bind="sections.contact.form.optionFull"
+              >
+                Paket full-service
+              </option>
+            </select>
+            <p id="brief-service-error" class="field-error"></p>
+          </div>
+          <div class="form-field">
+            <label
+              for="brief-message"
+              data-bind="sections.contact.form.messageLabel"
+              >Sedikit cerita tentang proyek</label
+            ><textarea
+              id="brief-message"
+              name="message"
+              rows="3"
+              minlength="15"
+              maxlength="1500"
+              required
+              aria-describedby="brief-message-error"
+            ></textarea>
+            <p id="brief-message-error" class="field-error"></p>
+          </div>
+          <button class="submit-button" type="submit">
+            <span data-bind="sections.contact.form.submitLabel"
+              >Susun brief</span
+            ><span aria-hidden="true">↗</span>
+          </button>
+          <p class="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+    <footer id="footer" data-section="footer" class="footer">
+      <a class="footer-brand" href="#hero" data-bind="business.name"
+        >KABAR STUDIO</a
+      >
+      <p data-bind="sections.footer.copyright">
+        © 2026 KABAR STUDIO. Identitas dan karya contoh.
+      </p>
+      <a class="text-link" href="#hero"
+        ><span data-bind="sections.footer.backLabel">Kembali ke atas</span
+        ><span aria-hidden="true">↑</span></a
+      >
+    </footer>
+    <dialog class="project-dialog" aria-labelledby="project-dialog-title">
+      <button
+        class="dialog-close"
+        type="button"
+        data-close-dialog
+        aria-label="Tutup detail proyek"
+      >
+        ×
+      </button>
+      <div data-dialog-content></div>
+    </dialog>
+    <script src="script.js" defer></script>
+  </body>
+</html>

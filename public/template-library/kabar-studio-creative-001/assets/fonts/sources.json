@@ -1,0 +1,30 @@
+[
+  {
+    "name": "Bodoni Moda",
+    "file": "bodoni-moda-800.woff2",
+    "bytes": 14808,
+    "source": "https://fonts.gstatic.com/s/bodonimoda/v28/aFT67PxzY382XsXX63LUYL6GYFcan6NJrKp-pPvfJMShrpsGFUt8oc7d8Id4tA.woff2",
+    "license": "https://github.com/google/fonts/tree/main/ofl/bodonimoda"
+  },
+  {
+    "name": "Newsreader",
+    "file": "newsreader-300.woff2",
+    "bytes": 58212,
+    "source": "https://fonts.gstatic.com/s/newsreader/v26/cY9VfjOCX1hbuyalUrK49dLafXjalZCsZBt-BgbNJYQ.woff2",
+    "license": "https://github.com/google/fonts/tree/main/ofl/newsreader"
+  },
+  {
+    "name": "Playfair Display",
+    "file": "playfair-display-500.woff2",
+    "bytes": 23048,
+    "source": "https://fonts.gstatic.com/s/playfairdisplay/v40/nuFvD-vYSZviVYUb_rj3ij__anPXJzDwcbmjWBN2PKd3vXDXbtM.woff2",
+    "license": "https://github.com/google/fonts/tree/main/ofl/playfairdisplay"
+  },
+  {
+    "name": "UnifrakturMaguntia",
+    "file": "unifrakturmaguntia-400.woff2",
+    "bytes": 26512,
+    "source": "https://fonts.gstatic.com/s/unifrakturmaguntia/v22/WWXPlieVYwiGNomYU-ciRLRvEmK7oaVemGZM.woff2",
+    "license": "https://github.com/google/fonts/tree/main/ofl/unifrakturmaguntia"
+  }
+]
