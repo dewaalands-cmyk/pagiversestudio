@@ -1,0 +1,1560 @@
+{
+  "pagiverseStandard": 1,
+  "id": "satria-capital-multi-asset-001",
+  "name": "Satria Capital",
+  "category": "services",
+  "categoryLabel": {
+    "id": "Investasi Multi-Aset",
+    "en": "Multi-Asset Investment"
+  },
+  "description": "Website editorial firma investasi multi-aset global. Enam halaman dengan tesis, riset, risiko, dan undangan privat di akhir halaman.",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html",
+      "label": "Beranda"
+    },
+    {
+      "id": "approach",
+      "path": "/approach",
+      "entry": "approach.html",
+      "label": "Pendekatan Investasi"
+    },
+    {
+      "id": "insights",
+      "path": "/insights",
+      "entry": "insights.html",
+      "label": "Riset & Perspektif"
+    },
+    {
+      "id": "about",
+      "path": "/about",
+      "entry": "about.html",
+      "label": "Tentang Satria"
+    },
+    {
+      "id": "contact",
+      "path": "/contact",
+      "entry": "contact.html",
+      "label": "Percakapan Privat"
+    },
+    {
+      "id": "insight",
+      "path": "/insight",
+      "entry": "insight.html",
+      "label": "Catatan Riset"
+    }
+  ],
+  "dependencies": [
+    {
+      "name": "gsap",
+      "version": "3.15.0",
+      "local": true,
+      "files": [
+        "assets/vendor/gsap.min.js",
+        "assets/vendor/ScrollTrigger.min.js",
+        "assets/vendor/ScrollSmoother.min.js"
+      ],
+      "purpose": "Protected scroll animation",
+      "license": "GSAP Standard No Charge License",
+      "licenseFile": "assets/vendor/GSAP-LICENSE.txt"
+    }
+  ],
+  "languages": {
+    "supported": [
+      "id"
+    ],
+    "default": "id"
+  },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "light",
+    "tokens": {
+      "primary": {
+        "editable": false,
+        "default": "#2bee4b"
+      },
+      "secondary": {
+        "editable": false,
+        "default": "#232924"
+      },
+      "accent": {
+        "editable": false,
+        "default": "#2bee4b"
+      },
+      "background": {
+        "editable": false,
+        "default": "#fafffa"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#121613"
+      },
+      "text": {
+        "editable": false,
+        "default": "#121613"
+      }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "home",
+        "labelField": "navigation.home.label",
+        "target": "index.html",
+        "hideable": false
+      },
+      {
+        "id": "approach",
+        "labelField": "navigation.approach.label",
+        "target": "approach.html",
+        "hideable": false
+      },
+      {
+        "id": "insights",
+        "labelField": "navigation.insights.label",
+        "target": "insights.html",
+        "hideable": false
+      },
+      {
+        "id": "about",
+        "labelField": "navigation.about.label",
+        "target": "about.html",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama perusahaan",
+      "maxLength": 36,
+      "default": "Satria Capital"
+    },
+    "business.tagline": {
+      "type": "text",
+      "label": "Tagline",
+      "maxLength": 100,
+      "default": "Perspektif global. Keyakinan yang terukur."
+    },
+    "business.description": {
+      "type": "textarea",
+      "label": "Deskripsi perusahaan",
+      "maxLength": 240,
+      "default": "Firma investasi multi-aset dengan perspektif global, riset mendalam, dan disiplin pengelolaan risiko."
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo opsional",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/svg+xml"
+      ],
+      "maxFileSizeMB": 3,
+      "focalPoint": false,
+      "default": ""
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul SEO",
+      "maxLength": 80,
+      "default": "Satria Capital | Perspektif Global, Keyakinan Terukur"
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO",
+      "maxLength": 180,
+      "default": "Mengenal pendekatan lintas aset Satria Capital: tesis investasi, riset, konstruksi portofolio, dan pengelolaan risiko."
+    },
+    "navigation.home.label": {
+      "type": "text",
+      "label": "Navigasi beranda",
+      "maxLength": 18,
+      "default": "Beranda"
+    },
+    "navigation.approach.label": {
+      "type": "text",
+      "label": "Navigasi pendekatan",
+      "maxLength": 22,
+      "default": "Pendekatan"
+    },
+    "navigation.insights.label": {
+      "type": "text",
+      "label": "Navigasi riset",
+      "maxLength": 24,
+      "default": "Riset & Perspektif"
+    },
+    "navigation.about.label": {
+      "type": "text",
+      "label": "Navigasi tentang",
+      "maxLength": 22,
+      "default": "Tentang Satria"
+    },
+    "sections.hero.eyebrow": {
+      "type": "text",
+      "label": "Label pembuka",
+      "maxLength": 40,
+      "default": "PERSPEKTIF LINTAS ASET"
+    },
+    "sections.hero.heading": {
+      "type": "text",
+      "label": "Hero baris pertama",
+      "maxLength": 18,
+      "default": "Perspektif"
+    },
+    "sections.hero.subheading": {
+      "type": "text",
+      "label": "Hero baris kedua",
+      "maxLength": 18,
+      "default": "global."
+    },
+    "sections.hero.description": {
+      "type": "textarea",
+      "label": "Pengantar beranda",
+      "maxLength": 180,
+      "default": "Melihat melampaui satu pasar. Berpikir lintas aset, berangkat dari riset, dan menempatkan risiko dalam setiap keputusan."
+    },
+    "sections.hero.approachHeading": {
+      "type": "text",
+      "label": "Judul pendekatan",
+      "maxLength": 65,
+      "default": "Sebelum alokasi, ada sebuah alasan."
+    },
+    "sections.hero.approachDescription": {
+      "type": "textarea",
+      "label": "Pengantar pendekatan",
+      "maxLength": 240,
+      "default": "Kami memulai dari pertanyaan. Apa yang sedang berubah, apa yang telah tercermin dalam harga, dan apa yang dapat membatalkan tesis?"
+    },
+    "sections.hero.insightsHeading": {
+      "type": "text",
+      "label": "Judul riset",
+      "maxLength": 65,
+      "default": "Di balik harga, ada sebuah cerita."
+    },
+    "sections.hero.insightsDescription": {
+      "type": "textarea",
+      "label": "Pengantar riset",
+      "maxLength": 180,
+      "default": "Catatan tentang struktur pasar, hubungan lintas aset, dan disiplin dalam mengambil keputusan."
+    },
+    "sections.hero.aboutHeading": {
+      "type": "text",
+      "label": "Judul tentang",
+      "maxLength": 72,
+      "default": "Terbuka dalam pemikiran. Teguh pada prinsip."
+    },
+    "sections.hero.aboutDescription": {
+      "type": "textarea",
+      "label": "Pengantar tentang",
+      "maxLength": 220,
+      "default": "Kedalaman pemahaman lebih bernilai daripada banyaknya pendapat. Sebuah keyakinan yang membentuk cara kami melihat dunia."
+    },
+    "sections.hero.contactHeading": {
+      "type": "text",
+      "label": "Judul percakapan",
+      "maxLength": 65,
+      "default": "Sebuah ruang untuk saling memahami."
+    },
+    "sections.hero.contactDescription": {
+      "type": "textarea",
+      "label": "Pengantar percakapan",
+      "maxLength": 220,
+      "default": "Setelah mengenal cara kami berpikir, ceritakan perspektif, konteks, dan pertanyaan yang ingin Anda diskusikan."
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Kawasan finansial dalam perspektif global",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/architecture.webp",
+        "alt": "Kawasan finansial dalam perspektif global",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageAlt": {
+      "type": "text",
+      "label": "Alt Kawasan finansial dalam perspektif global",
+      "maxLength": 140,
+      "default": "Kawasan finansial dalam perspektif global"
+    },
+    "sections.about.image": {
+      "type": "image",
+      "label": "Foto horizon",
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/horizon.webp",
+        "alt": "Pemecah ombak membentang menuju cakrawala laut",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.about.imageAlt": {
+      "type": "text",
+      "label": "Alt foto horizon",
+      "maxLength": 140,
+      "default": "Pemecah ombak membentang menuju cakrawala laut"
+    },
+    "sections.about.heading": {
+      "type": "text",
+      "label": "Pernyataan utama",
+      "maxLength": 100,
+      "default": "Sebuah aset bisa menarik. Sebuah portofolio harus masuk akal."
+    },
+    "sections.about.body": {
+      "type": "textarea",
+      "label": "Filosofi",
+      "maxLength": 380,
+      "default": "Kami tidak mengejar setiap pergerakan. Kami mencari keselarasan antara valuasi, perubahan struktural, dan waktu, seraya mempertimbangkan bagaimana satu keputusan memengaruhi keseluruhan portofolio."
+    },
+    "sections.about.linkLabel": {
+      "type": "text",
+      "label": "Tautan pendekatan",
+      "maxLength": 36,
+      "default": "Mengenal pendekatan kami"
+    },
+    "sections.about.manifesto": {
+      "type": "textarea",
+      "label": "Manifesto tentang",
+      "maxLength": 420,
+      "default": "Pasar menyediakan informasi tanpa henti. Tugas kami adalah membedakan apa yang relevan, menguji apa yang dipercaya, dan menghubungkannya dengan keputusan yang masuk akal."
+    },
+    "sections.about.valuesHeading": {
+      "type": "text",
+      "label": "Judul prinsip",
+      "maxLength": 90,
+      "default": "Keteguhan pada proses. Keterbukaan pada kesimpulan."
+    },
+    "sections.about.valuesBody": {
+      "type": "textarea",
+      "label": "Deskripsi prinsip",
+      "maxLength": 300,
+      "default": "Kami menghargai perbedaan pandangan, penalaran yang dapat ditelusuri, dan kesediaan mengubah pikiran ketika bukti berubah."
+    },
+    "sections.team.heading": {
+      "type": "text",
+      "label": "Judul fungsi tim",
+      "maxLength": 72,
+      "default": "Beragam sudut pandang. Satu disiplin."
+    },
+    "sections.team.description": {
+      "type": "textarea",
+      "label": "Pengantar fungsi tim",
+      "maxLength": 240,
+      "default": "Keputusan yang matang membutuhkan percakapan antara riset, konstruksi portofolio, dan pengelolaan risiko."
+    },
+    "sections.services.heading": {
+      "type": "text",
+      "label": "Judul cakupan aset",
+      "maxLength": 100,
+      "default": "Dunia sebagai ruang pengamatan. Selektivitas sebagai prinsip."
+    },
+    "sections.services.description": {
+      "type": "textarea",
+      "label": "Pengantar cakupan",
+      "maxLength": 220,
+      "default": "Keluasan pengamatan tidak berarti memiliki semuanya. Setiap eksposur harus mempunyai peran yang jelas."
+    },
+    "sections.services.processHeading": {
+      "type": "text",
+      "label": "Judul proses",
+      "maxLength": 72,
+      "default": "Dari pertanyaan menuju keputusan."
+    },
+    "sections.risk.heading": {
+      "type": "text",
+      "label": "Judul risiko",
+      "maxLength": 72,
+      "default": "Keyakinan perlu ruang. Risiko perlu batas."
+    },
+    "sections.risk.description": {
+      "type": "textarea",
+      "label": "Pengantar risiko",
+      "maxLength": 300,
+      "default": "Risiko tidak selesai dibaca melalui satu angka. Kami mempertimbangkan kerugian, likuiditas, konsentrasi, serta keadaan ketika beberapa asumsi gagal sekaligus."
+    },
+    "sections.risk.quote": {
+      "type": "text",
+      "label": "Kutipan utama risiko",
+      "maxLength": 110,
+      "default": "Sebuah aset bisa menarik. Sebuah portofolio harus masuk akal."
+    },
+    "sections.insights.heading": {
+      "type": "text",
+      "label": "Judul daftar riset",
+      "maxLength": 72,
+      "default": "Catatan untuk melihat lebih dalam."
+    },
+    "sections.insights.linkLabel": {
+      "type": "text",
+      "label": "Tautan semua riset",
+      "maxLength": 30,
+      "default": "Seluruh perspektif"
+    },
+    "sections.insights.readLabel": {
+      "type": "text",
+      "label": "Label baca artikel",
+      "maxLength": 24,
+      "default": "Baca catatan"
+    },
+    "sections.insights.backLabel": {
+      "type": "text",
+      "label": "Label kembali artikel",
+      "maxLength": 30,
+      "default": "Kembali ke perspektif"
+    },
+    "sections.insights.emptyLabel": {
+      "type": "text",
+      "label": "Status kosong",
+      "maxLength": 90,
+      "default": "Belum ada catatan dalam kategori ini."
+    },
+    "sections.insights.demoLabel": {
+      "type": "text",
+      "label": "Label contoh riset",
+      "maxLength": 70,
+      "default": "Contoh editorial · Catatan konseptual"
+    },
+    "sections.insights.filterAll": {
+      "type": "text",
+      "label": "Filter semua",
+      "maxLength": 24,
+      "default": "Semua catatan"
+    },
+    "sections.insights.filterPortfolio": {
+      "type": "text",
+      "label": "Filter portofolio",
+      "maxLength": 24,
+      "default": "Portofolio"
+    },
+    "sections.insights.filterRisk": {
+      "type": "text",
+      "label": "Filter risiko",
+      "maxLength": 24,
+      "default": "Risiko"
+    },
+    "sections.insights.filterProcess": {
+      "type": "text",
+      "label": "Filter proses",
+      "maxLength": 24,
+      "default": "Proses"
+    },
+    "sections.cta.heading": {
+      "type": "text",
+      "label": "Judul penutup",
+      "maxLength": 90,
+      "default": "Keselarasan dimulai dengan saling memahami."
+    },
+    "sections.cta.description": {
+      "type": "textarea",
+      "label": "Pengantar penutup",
+      "maxLength": 220,
+      "default": "Untuk mereka yang ingin mengenal cara kami melihat pasar, menyusun tesis, dan memberi batas pada risiko."
+    },
+    "sections.cta.primaryCta.label": {
+      "type": "text",
+      "label": "Tombol percakapan",
+      "maxLength": 36,
+      "default": "Mulai Percakapan Privat"
+    },
+    "sections.cta.primaryCta.url": {
+      "type": "url",
+      "label": "Tujuan tombol percakapan",
+      "default": "contact.html",
+      "allowedProtocols": [
+        "https:",
+        "mailto:"
+      ],
+      "maxLength": 300
+    },
+    "sections.cta.signature": {
+      "type": "text",
+      "label": "Tanda editorial penutup",
+      "maxLength": 72,
+      "default": "A considered perspective."
+    },
+    "sections.footer.copyright": {
+      "type": "text",
+      "label": "Hak cipta",
+      "maxLength": 100,
+      "default": "© 2026 Satria Capital"
+    },
+    "sections.footer.note": {
+      "type": "textarea",
+      "label": "Catatan konten contoh",
+      "maxLength": 240,
+      "default": "Konsep situs. Narasi, tesis, dan riset pada template ini merupakan contoh yang dapat disesuaikan."
+    },
+    "sections.footer.riskNote": {
+      "type": "textarea",
+      "label": "Catatan risiko",
+      "maxLength": 260,
+      "default": "Setiap investasi memiliki risiko, termasuk kemungkinan kehilangan modal. Materi ini bersifat ilustratif dan bukan rekomendasi investasi."
+    },
+    "sections.contact.heading": {
+      "type": "text",
+      "label": "Judul formulir",
+      "maxLength": 65,
+      "default": "Percakapan dimulai dari konteks."
+    },
+    "sections.contact.body": {
+      "type": "textarea",
+      "label": "Pengantar formulir",
+      "maxLength": 250,
+      "default": "Bagikan hal yang ingin Anda pahami. Tidak diperlukan informasi rekening, dokumen identitas, atau data keuangan sensitif."
+    },
+    "sections.contact.nameLabel": {
+      "type": "text",
+      "label": "Label nama",
+      "maxLength": 40,
+      "default": "Nama lengkap"
+    },
+    "sections.contact.emailLabel": {
+      "type": "text",
+      "label": "Label email",
+      "maxLength": 40,
+      "default": "Alamat email"
+    },
+    "sections.contact.interestLabel": {
+      "type": "text",
+      "label": "Label minat",
+      "maxLength": 40,
+      "default": "Fokus percakapan"
+    },
+    "sections.contact.messageLabel": {
+      "type": "text",
+      "label": "Label pesan",
+      "maxLength": 50,
+      "default": "Konteks & pertanyaan Anda"
+    },
+    "sections.contact.consentLabel": {
+      "type": "text",
+      "label": "Label persetujuan",
+      "maxLength": 180,
+      "default": "Saya memahami bahwa ini adalah formulir contoh dan tidak menyertakan data keuangan sensitif."
+    },
+    "sections.contact.submitLabel": {
+      "type": "text",
+      "label": "Tombol formulir",
+      "maxLength": 28,
+      "default": "Siapkan Percakapan"
+    },
+    "sections.contact.demoNote": {
+      "type": "textarea",
+      "label": "Catatan formulir",
+      "maxLength": 180,
+      "default": "Formulir contoh. Pengiriman akan tersedia setelah integrasi kontak di Pagiverse diaktifkan."
+    },
+    "sections.contact.privacyHeading": {
+      "type": "text",
+      "label": "Judul pengantar privasi",
+      "maxLength": 72,
+      "default": "Sebuah percakapan yang terarah."
+    },
+    "sections.contact.privacyBody": {
+      "type": "textarea",
+      "label": "Isi pengantar privasi",
+      "maxLength": 260,
+      "default": "Mulai dari cara berpikir, bukan dari nominal. Ruang ini mempertemukan pertanyaan Anda dengan pendekatan yang ingin Anda kenali."
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Cakupan aset",
+      "minItems": 1,
+      "maxItems": 10,
+      "default": [
+        {
+          "name": "Saham",
+          "description": "Menelaah kualitas bisnis, valuasi, dan sumber pertumbuhan yang mendasarinya.",
+          "lens": "Kualitas · Valuasi · Arus kas"
+        },
+        {
+          "name": "Obligasi",
+          "description": "Membaca kualitas kredit, durasi, struktur imbal hasil, dan kebutuhan likuiditas.",
+          "lens": "Kredit · Durasi · Likuiditas"
+        },
+        {
+          "name": "Emas",
+          "description": "Menilai perannya dalam konteks mata uang, suku bunga riil, dan ketidakpastian.",
+          "lens": "Nilai riil · Mata uang · Ketidakpastian"
+        },
+        {
+          "name": "Aset digital",
+          "description": "Memisahkan fungsi teknologi, struktur pasar, dan ekonomi token dari pergerakan harganya.",
+          "lens": "Adopsi · Struktur pasar · Kustodi"
+        },
+        {
+          "name": "Indeks global",
+          "description": "Memahami eksposur geografis, komposisi sektor, dan konsentrasi di balik sebuah indeks.",
+          "lens": "Geografi · Sektor · Konsentrasi"
+        },
+        {
+          "name": "Aset alternatif",
+          "description": "Menguji struktur, transparansi, valuasi, serta keterbatasan likuiditas sebelum menilai daya tariknya.",
+          "lens": "Struktur · Transparansi · Likuiditas"
+        }
+      ],
+      "item": {
+        "fields": {
+          "name": {
+            "type": "text",
+            "maxLength": 35
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 240
+          },
+          "lens": {
+            "type": "text",
+            "maxLength": 100
+          }
+        }
+      }
+    },
+    "sections.services.process": {
+      "type": "array",
+      "label": "Tahapan investasi",
+      "minItems": 1,
+      "maxItems": 7,
+      "default": [
+        {
+          "title": "Membaca konteks",
+          "description": "Memahami hubungan antara kebijakan, likuiditas, siklus usaha, dan perilaku pasar."
+        },
+        {
+          "title": "Menyusun tesis",
+          "description": "Menyatakan peluang, asumsi utama, rentang waktu, serta faktor yang dapat menggagalkannya."
+        },
+        {
+          "title": "Menguji skenario",
+          "description": "Mempertimbangkan hasil yang berbeda, termasuk saat pandangan awal ternyata keliru."
+        },
+        {
+          "title": "Menyusun eksposur",
+          "description": "Menilai peran aset, konsentrasi, ukuran posisi, likuiditas, dan keterkaitannya dengan portofolio."
+        },
+        {
+          "title": "Meninjau ulang",
+          "description": "Memisahkan perubahan harga dari perubahan dasar tesis, lalu memperbarui pandangan saat bukti menuntutnya."
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxLength": 60
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 240
+          }
+        }
+      }
+    },
+    "sections.about.principles": {
+      "type": "array",
+      "label": "Prinsip beranda",
+      "minItems": 1,
+      "maxItems": 5,
+      "default": [
+        {
+          "title": "Berangkat dari tesis.",
+          "description": "Setiap pandangan membutuhkan alasan, bukti, dan kondisi yang dapat membuatnya berubah."
+        },
+        {
+          "title": "Berpikir lintas aset.",
+          "description": "Harga sebuah aset dibaca bersama mata uang, likuiditas, dan perubahan di pasar lain."
+        },
+        {
+          "title": "Memberi batas pada risiko.",
+          "description": "Keyakinan menentukan arah. Ukuran posisi dan disiplin peninjauan menentukan batasnya."
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxLength": 55
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 220
+          }
+        }
+      }
+    },
+    "sections.about.values": {
+      "type": "array",
+      "label": "Nilai perusahaan",
+      "minItems": 1,
+      "maxItems": 6,
+      "default": [
+        {
+          "title": "Kejelasan",
+          "description": "Pandangan yang kuat dapat dijelaskan dengan bahasa yang jernih."
+        },
+        {
+          "title": "Kemandirian berpikir",
+          "description": "Sebuah konsensus tetap memerlukan pengujian."
+        },
+        {
+          "title": "Kerendahan hati intelektual",
+          "description": "Ketidakpastian diakui sebelum keputusan diambil."
+        },
+        {
+          "title": "Tanggung jawab",
+          "description": "Setiap keputusan perlu alasan yang dapat ditinjau kembali."
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxLength": 55
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 220
+          }
+        }
+      }
+    },
+    "sections.team.items": {
+      "type": "array",
+      "label": "Fungsi pemikiran",
+      "minItems": 1,
+      "maxItems": 5,
+      "default": [
+        {
+          "title": "Riset lintas aset",
+          "description": "Menguji bukti dan mempertanyakan asumsi."
+        },
+        {
+          "title": "Strategi portofolio",
+          "description": "Menghubungkan setiap eksposur dengan keseluruhan."
+        },
+        {
+          "title": "Risiko & tata kelola",
+          "description": "Menetapkan batas dan meninjau disiplin keputusan."
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxLength": 55
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 220
+          }
+        }
+      }
+    },
+    "sections.risk.items": {
+      "type": "array",
+      "label": "Dimensi risiko",
+      "minItems": 1,
+      "maxItems": 5,
+      "default": [
+        {
+          "title": "Konsentrasi",
+          "description": "Memahami kapan beragam aset sesungguhnya bergantung pada penggerak yang sama."
+        },
+        {
+          "title": "Likuiditas",
+          "description": "Mempertimbangkan kedalaman pasar, ukuran posisi, dan waktu yang tersedia untuk berubah arah."
+        },
+        {
+          "title": "Perubahan tesis",
+          "description": "Menetapkan bukti apa yang menuntut sebuah pandangan untuk ditinjau kembali."
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxLength": 55
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 260
+          }
+        }
+      }
+    },
+    "sections.insights.items": {
+      "type": "array",
+      "label": "Catatan riset",
+      "minItems": 0,
+      "maxItems": 12,
+      "default": [
+        {
+          "id": "diversifikasi",
+          "category": "Portofolio",
+          "title": "Banyak aset, belum tentu banyak sumber risiko.",
+          "excerpt": "Diversifikasi dimulai dengan memahami penggerak di balik kepemilikan.",
+          "image": "assets/architecture.webp",
+          "alt": "Lapisan arsitektur dan perspektif kawasan finansial",
+          "paragraphOne": "Sebuah portofolio dapat memuat banyak instrumen, tetapi tetap bergantung pada satu keadaan yang sama. Saham dari sektor berbeda, indeks di negara berbeda, dan aset digital tertentu dapat sama-sama sensitif terhadap perubahan likuiditas atau selera risiko.",
+          "paragraphTwo": "Karena itu, menghitung jumlah kepemilikan baru merupakan langkah awal. Pertanyaan berikutnya adalah: apa yang sebenarnya kita miliki? Sumber arus kas, mata uang, durasi, konsentrasi sektor, dan perilaku saat pasar tertekan memberi gambaran yang lebih berguna.",
+          "paragraphThree": "Hubungan antaraset juga tidak selalu tetap. Pola yang terlihat pada periode tenang dapat berubah ketika banyak pelaku ingin mengurangi eksposur bersamaan. Korelasi historis perlu dibaca bersama konteks, bukan diperlakukan sebagai hubungan yang permanen.",
+          "paragraphFour": "Diversifikasi tidak menjanjikan hilangnya kerugian. Ia membantu memperjelas risiko mana yang sengaja diambil, mana yang berulang tanpa disadari, dan bagaimana keseluruhan portofolio bergantung pada asumsi yang sama."
+        },
+        {
+          "id": "likuiditas",
+          "category": "Risiko",
+          "title": "Likuiditas adalah bagian dari tesis.",
+          "excerpt": "Nilai sebuah peluang juga ditentukan oleh kemampuan untuk menunggu atau berubah arah.",
+          "image": "assets/horizon.webp",
+          "alt": "Pemecah ombak di atas permukaan laut yang tenang",
+          "paragraphOne": "Pembahasan investasi sering dimulai dari harga masuk dan potensi nilai. Pertanyaan tentang jalan keluar kadang datang belakangan. Padahal, harga yang terlihat belum tentu merupakan harga yang dapat diperoleh ketika posisi perlu dilepas.",
+          "paragraphTwo": "Likuiditas memiliki beberapa lapisan: frekuensi transaksi, kedalaman pasar, selisih harga beli dan jual, serta batasan yang melekat pada instrumen. Semua itu perlu dibaca bersama ukuran posisi dan waktu yang tersedia.",
+          "paragraphThree": "Ketika kebutuhan dana berubah atau tesis melemah, keterbatasan likuiditas dapat mempersempit pilihan. Sebaliknya, ruang likuiditas dapat memberi waktu untuk menilai bukti baru tanpa harus bertindak terburu-buru.",
+          "paragraphFour": "Likuiditas memengaruhi ukuran eksposur, rentang waktu, dan kesesuaian sebuah aset dengan tujuan portofolio. Pertanyaan yang berguna bukan hanya apakah sebuah aset menarik, tetapi juga dalam kondisi apa kita masih memiliki pilihan."
+        },
+        {
+          "id": "tesis",
+          "category": "Proses",
+          "title": "Mengetahui kapan sebuah tesis perlu berubah.",
+          "excerpt": "Keyakinan lebih berguna ketika kondisi yang dapat membatalkannya dinyatakan sejak awal.",
+          "image": "assets/architecture.webp",
+          "alt": "Garis dan struktur pada gedung perkotaan",
+          "paragraphOne": "Tesis investasi menjelaskan mengapa sebuah peluang dianggap menarik. Tesis yang lengkap juga menjelaskan apa yang dapat membuat pandangan tersebut keliru.",
+          "paragraphTwo": "Tanpa batas yang jelas, setiap perkembangan mudah disusun ulang menjadi alasan untuk tetap bertahan. Penurunan harga disebut kesempatan; penundaan disebut kesabaran. Penjelasan semacam itu dapat terdengar masuk akal sekaligus menghindari pertanyaan utama: apakah dasar pemikirannya masih berlaku?",
+          "paragraphThree": "Sebelum mengambil keputusan, bedakan asumsi utama, bukti yang mendukungnya, dan kondisi yang menuntut peninjauan. Perubahan harga sendiri belum tentu membatalkan tesis. Sebaliknya, kerusakan pada asumsi pokok dapat terjadi sebelum harga bereaksi.",
+          "paragraphFour": "Meninjau tesis berarti membuka ruang untuk mempertahankan pandangan karena buktinya tetap kuat, atau mengubahnya karena keadaan telah bergeser. Konsistensi proses tidak mengharuskan kesimpulan selalu sama."
+        }
+      ],
+      "item": {
+        "fields": {
+          "id": {
+            "type": "text",
+            "maxLength": 48
+          },
+          "category": {
+            "type": "select",
+            "options": [
+              "Portofolio",
+              "Risiko",
+              "Proses"
+            ],
+            "default": "Portofolio"
+          },
+          "title": {
+            "type": "text",
+            "maxLength": 95
+          },
+          "excerpt": {
+            "type": "textarea",
+            "maxLength": 200
+          },
+          "image": {
+            "type": "image",
+            "focalPoint": true,
+            "accept": [
+              "image/webp",
+              "image/jpeg",
+              "image/png"
+            ]
+          },
+          "alt": {
+            "type": "text",
+            "maxLength": 140
+          },
+          "paragraphOne": {
+            "type": "textarea",
+            "maxLength": 900
+          },
+          "paragraphTwo": {
+            "type": "textarea",
+            "maxLength": 900
+          },
+          "paragraphThree": {
+            "type": "textarea",
+            "maxLength": 900
+          },
+          "paragraphFour": {
+            "type": "textarea",
+            "maxLength": 900
+          }
+        }
+      }
+    },
+    "sections.contact.selectPlaceholder": {
+      "type": "text",
+      "label": "Pilihan awal fokus",
+      "maxLength": 50,
+      "default": "Pilih fokus percakapan"
+    },
+    "sections.contact.options": {
+      "type": "array",
+      "label": "Pilihan fokus percakapan",
+      "minItems": 1,
+      "maxItems": 6,
+      "default": [
+        {
+          "label": "Pendekatan lintas aset"
+        },
+        {
+          "label": "Riset & tesis investasi"
+        },
+        {
+          "label": "Pengelolaan risiko"
+        },
+        {
+          "label": "Percakapan lainnya"
+        }
+      ],
+      "item": {
+        "fields": {
+          "label": {
+            "type": "text",
+            "maxLength": 60
+          }
+        }
+      }
+    },
+    "sections.hero.lineThree": {
+      "type": "text",
+      "label": "Hero baris ketiga",
+      "maxLength": 18,
+      "default": "Keyakinan"
+    },
+    "sections.hero.lineFour": {
+      "type": "text",
+      "label": "Hero baris keempat",
+      "maxLength": 18,
+      "default": "terukur."
+    },
+    "sections.hero.imageBack": {
+      "type": "image",
+      "label": "Meja riset finansial dalam ilustrasi arsip",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/archive.webp",
+        "alt": "Meja riset finansial dalam ilustrasi arsip",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageBackAlt": {
+      "type": "text",
+      "label": "Alt Meja riset finansial dalam ilustrasi arsip",
+      "maxLength": 140,
+      "default": "Meja riset finansial dalam ilustrasi arsip"
+    },
+    "sections.hero.imageTwo": {
+      "type": "image",
+      "label": "Tekstur logam mulia sebagai ilustrasi nilai",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/gold.webp",
+        "alt": "Tekstur logam mulia sebagai ilustrasi nilai",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageTwoAlt": {
+      "type": "text",
+      "label": "Alt Tekstur logam mulia sebagai ilustrasi nilai",
+      "maxLength": 140,
+      "default": "Tekstur logam mulia sebagai ilustrasi nilai"
+    },
+    "sections.hero.imageTwoBack": {
+      "type": "image",
+      "label": "Horizon laut dan pemecah ombak",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/horizon.webp",
+        "alt": "Horizon laut dan pemecah ombak",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageTwoBackAlt": {
+      "type": "text",
+      "label": "Alt Horizon laut dan pemecah ombak",
+      "maxLength": 140,
+      "default": "Horizon laut dan pemecah ombak"
+    },
+    "sections.hero.imageThree": {
+      "type": "image",
+      "label": "Infrastruktur data dan jaringan server",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/technology.webp",
+        "alt": "Infrastruktur data dan jaringan server",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageThreeAlt": {
+      "type": "text",
+      "label": "Alt Infrastruktur data dan jaringan server",
+      "maxLength": 140,
+      "default": "Infrastruktur data dan jaringan server"
+    },
+    "sections.hero.imageThreeBack": {
+      "type": "image",
+      "label": "Lapisan struktur kawasan finansial",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/architecture.webp",
+        "alt": "Lapisan struktur kawasan finansial",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageThreeBackAlt": {
+      "type": "text",
+      "label": "Alt Lapisan struktur kawasan finansial",
+      "maxLength": 140,
+      "default": "Lapisan struktur kawasan finansial"
+    },
+    "sections.hero.imageFour": {
+      "type": "image",
+      "label": "Catatan dan perangkat riset finansial",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/archive.webp",
+        "alt": "Catatan dan perangkat riset finansial",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageFourAlt": {
+      "type": "text",
+      "label": "Alt Catatan dan perangkat riset finansial",
+      "maxLength": 140,
+      "default": "Catatan dan perangkat riset finansial"
+    },
+    "sections.hero.imageFourBack": {
+      "type": "image",
+      "label": "Ruang server dan kabel data",
+      "accept": [
+        "image/webp",
+        "image/jpeg",
+        "image/png"
+      ],
+      "maxFileSizeMB": 5,
+      "focalPoint": true,
+      "default": {
+        "src": "assets/technology.webp",
+        "alt": "Ruang server dan kabel data",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.imageFourBackAlt": {
+      "type": "text",
+      "label": "Alt Ruang server dan kabel data",
+      "maxLength": 140,
+      "default": "Ruang server dan kabel data"
+    },
+    "sections.about.stories": {
+      "type": "array",
+      "label": "Cerita lintas aset",
+      "minItems": 3,
+      "maxItems": 3,
+      "default": [
+        {
+          "lineOne": "Pasar terhubung.",
+          "lineTwo": "Pandangan kita",
+          "lineThree": "sering terpisah.",
+          "description": "Sebuah aset tidak bergerak dalam ruang hampa. Hubungan antara likuiditas, valuasi, dan perubahan struktural juga perlu dipahami.",
+          "image": {
+            "src": "assets/archive.webp",
+            "alt": "Ilustrasi arsip riset finansial",
+            "focalPoint": {
+              "x": 58,
+              "y": 50
+            }
+          }
+        },
+        {
+          "lineOne": "Dari satu aset,",
+          "lineTwo": "menuju perspektif",
+          "lineThree": "yang utuh.",
+          "description": "Setiap eksposur membawa penggerak, waktu, dan risikonya sendiri. Kami menelaah bagaimana semuanya berinteraksi di dalam satu portofolio.",
+          "image": {
+            "src": "assets/technology.webp",
+            "alt": "Jaringan infrastruktur data",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "lineOne": "Keyakinan tumbuh",
+          "lineTwo": "dari pemahaman",
+          "lineThree": "yang mendalam.",
+          "description": "Kami menyusun tesis yang dapat diuji, mempertimbangkan skenario yang berbeda, dan meninjau ulang pandangan ketika bukti berubah.",
+          "image": {
+            "src": "assets/architecture.webp",
+            "alt": "Struktur dan garis kawasan finansial",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "lineOne": {
+            "type": "text",
+            "maxLength": 32
+          },
+          "lineTwo": {
+            "type": "text",
+            "maxLength": 32
+          },
+          "lineThree": {
+            "type": "text",
+            "maxLength": 32
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 260
+          },
+          "image": {
+            "type": "image",
+            "focalPoint": true,
+            "accept": [
+              "image/webp",
+              "image/jpeg",
+              "image/png"
+            ]
+          }
+        }
+      }
+    },
+    "sections.about.bandOne": {
+      "type": "text",
+      "label": "Marquee editorial pertama",
+      "maxLength": 42,
+      "default": "Melampaui batas pasar"
+    },
+    "sections.about.bandTwo": {
+      "type": "text",
+      "label": "Marquee editorial kedua",
+      "maxLength": 42,
+      "default": "Menyatukan perspektif"
+    },
+    "sections.services.thesisHeading": {
+      "type": "text",
+      "label": "Judul kerangka tesis",
+      "maxLength": 70,
+      "default": "Peluang berubah. Prinsip tetap."
+    },
+    "sections.services.thesisDescription": {
+      "type": "textarea",
+      "label": "Pengantar kerangka tesis",
+      "maxLength": 240,
+      "default": "Kami melihat dunia melalui hubungan antara perubahan ekonomi, kualitas aset, dan risiko yang menyertainya."
+    },
+    "sections.services.theses": {
+      "type": "array",
+      "label": "Tiga medan tesis",
+      "minItems": 3,
+      "maxItems": 3,
+      "default": [
+        {
+          "title": "Bisnis & pertumbuhan",
+          "description": "Memahami kualitas bisnis, ketahanan arus kas, dan valuasi di balik saham serta indeks global.",
+          "question": "Apa yang menopang nilai ketika ekspektasi berubah?",
+          "label": "Pertumbuhan",
+          "image": "assets/architecture.webp"
+        },
+        {
+          "title": "Likuiditas & nilai",
+          "description": "Membaca suku bunga, kredit, mata uang, dan siklus likuiditas dalam menilai obligasi, emas, serta hubungan lintas aset.",
+          "question": "Keadaan apa yang sedang tercermin dalam harga?",
+          "label": "Nilai",
+          "image": "assets/gold.webp"
+        },
+        {
+          "title": "Teknologi & struktur",
+          "description": "Menguji infrastruktur digital, ekonomi token, dan perubahan struktur pasar sebelum mempertimbangkan eksposur.",
+          "question": "Di mana nilai terbentuk, dan siapa yang mempertahankannya?",
+          "label": "Perubahan",
+          "image": "assets/technology.webp"
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "maxLength": 48
+          },
+          "description": {
+            "type": "textarea",
+            "maxLength": 260
+          },
+          "question": {
+            "type": "text",
+            "maxLength": 110
+          },
+          "label": {
+            "type": "text",
+            "maxLength": 24
+          },
+          "image": {
+            "type": "image",
+            "focalPoint": true,
+            "accept": [
+              "image/webp",
+              "image/jpeg",
+              "image/png"
+            ]
+          }
+        }
+      }
+    },
+    "sections.services.vennHeading": {
+      "type": "text",
+      "label": "Judul diagram pendekatan",
+      "maxLength": 70,
+      "default": "Satu perspektif. Tiga disiplin."
+    },
+    "sections.services.vennBody": {
+      "type": "textarea",
+      "label": "Pengantar diagram",
+      "maxLength": 260,
+      "default": "Riset membentuk keyakinan. Konstruksi menentukan eksposur. Risiko memberi batas. Ketiganya bertemu dalam setiap keputusan."
+    },
+    "sections.services.circleOne": {
+      "type": "text",
+      "label": "Lingkaran pertama",
+      "maxLength": 18,
+      "default": "Riset"
+    },
+    "sections.services.circleTwo": {
+      "type": "text",
+      "label": "Lingkaran kedua",
+      "maxLength": 18,
+      "default": "Konstruksi"
+    },
+    "sections.services.circleThree": {
+      "type": "text",
+      "label": "Lingkaran ketiga",
+      "maxLength": 18,
+      "default": "Risiko"
+    },
+    "sections.about.bridgeOne": {
+      "type": "text",
+      "label": "Penutup editorial baris pertama",
+      "maxLength": 38,
+      "default": "Perspektif global."
+    },
+    "sections.about.bridgeTwo": {
+      "type": "text",
+      "label": "Penutup editorial baris kedua",
+      "maxLength": 38,
+      "default": "Keyakinan terukur."
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Pembuka",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.eyebrow",
+        "sections.hero.heading",
+        "sections.hero.subheading",
+        "sections.hero.description",
+        "sections.hero.approachHeading",
+        "sections.hero.approachDescription",
+        "sections.hero.insightsHeading",
+        "sections.hero.insightsDescription",
+        "sections.hero.aboutHeading",
+        "sections.hero.aboutDescription",
+        "sections.hero.contactHeading",
+        "sections.hero.contactDescription",
+        "sections.hero.image",
+        "sections.hero.imageAlt",
+        "sections.hero.lineThree",
+        "sections.hero.lineFour",
+        "sections.hero.imageBack",
+        "sections.hero.imageBackAlt",
+        "sections.hero.imageTwo",
+        "sections.hero.imageTwoAlt",
+        "sections.hero.imageTwoBack",
+        "sections.hero.imageTwoBackAlt",
+        "sections.hero.imageThree",
+        "sections.hero.imageThreeAlt",
+        "sections.hero.imageThreeBack",
+        "sections.hero.imageThreeBackAlt",
+        "sections.hero.imageFour",
+        "sections.hero.imageFourAlt",
+        "sections.hero.imageFourBack",
+        "sections.hero.imageFourBackAlt"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Filosofi & nilai",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.image",
+        "sections.about.imageAlt",
+        "sections.about.heading",
+        "sections.about.body",
+        "sections.about.linkLabel",
+        "sections.about.manifesto",
+        "sections.about.valuesHeading",
+        "sections.about.valuesBody",
+        "sections.about.principles",
+        "sections.about.values",
+        "sections.about.stories",
+        "sections.about.bandOne",
+        "sections.about.bandTwo",
+        "sections.about.bridgeOne",
+        "sections.about.bridgeTwo"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Pendekatan & cakupan aset",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.heading",
+        "sections.services.description",
+        "sections.services.processHeading",
+        "sections.services.items",
+        "sections.services.process",
+        "sections.services.thesisHeading",
+        "sections.services.thesisDescription",
+        "sections.services.theses",
+        "sections.services.vennHeading",
+        "sections.services.vennBody",
+        "sections.services.circleOne",
+        "sections.services.circleTwo",
+        "sections.services.circleThree"
+      ]
+    },
+    {
+      "id": "team",
+      "label": "Fungsi pemikiran",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.team.heading",
+        "sections.team.description",
+        "sections.team.items"
+      ]
+    },
+    {
+      "id": "risk",
+      "label": "Pengelolaan risiko",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.risk.heading",
+        "sections.risk.description",
+        "sections.risk.quote",
+        "sections.risk.items"
+      ]
+    },
+    {
+      "id": "insights",
+      "label": "Riset & perspektif",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.insights.heading",
+        "sections.insights.linkLabel",
+        "sections.insights.readLabel",
+        "sections.insights.backLabel",
+        "sections.insights.emptyLabel",
+        "sections.insights.demoLabel",
+        "sections.insights.filterAll",
+        "sections.insights.filterPortfolio",
+        "sections.insights.filterRisk",
+        "sections.insights.filterProcess",
+        "sections.insights.items"
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "Undangan penutup",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.cta.heading",
+        "sections.cta.description",
+        "sections.cta.primaryCta.label",
+        "sections.cta.primaryCta.url",
+        "sections.cta.signature"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Formulir percakapan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.contact.heading",
+        "sections.contact.body",
+        "sections.contact.nameLabel",
+        "sections.contact.emailLabel",
+        "sections.contact.interestLabel",
+        "sections.contact.messageLabel",
+        "sections.contact.consentLabel",
+        "sections.contact.submitLabel",
+        "sections.contact.demoNote",
+        "sections.contact.privacyHeading",
+        "sections.contact.privacyBody",
+        "sections.contact.selectPlaceholder",
+        "sections.contact.options"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.footer.copyright",
+        "sections.footer.note",
+        "sections.footer.riskNote"
+      ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "private-conversation",
+      "label": "Percakapan privat",
+      "provider": "pagiverse-core",
+      "fields": [
+        {
+          "name": "fullName",
+          "type": "text",
+          "required": true,
+          "maxLength": 80,
+          "labels": {
+            "id": "Nama lengkap"
+          }
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "maxLength": 120,
+          "labels": {
+            "id": "Alamat email"
+          }
+        },
+        {
+          "name": "interest",
+          "type": "select",
+          "required": true,
+          "options": [
+            "Pendekatan lintas aset",
+            "Riset & tesis investasi",
+            "Pengelolaan risiko",
+            "Percakapan lainnya"
+          ],
+          "labels": {
+            "id": "Fokus percakapan"
+          }
+        },
+        {
+          "name": "summary",
+          "type": "textarea",
+          "required": true,
+          "maxLength": 1200,
+          "labels": {
+            "id": "Konteks & pertanyaan Anda"
+          }
+        },
+        {
+          "name": "consent",
+          "type": "boolean",
+          "required": true,
+          "labels": {
+            "id": "Persetujuan"
+          }
+        }
+      ]
+    }
+  ]
+}
