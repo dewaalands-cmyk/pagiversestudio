@@ -1,0 +1,1074 @@
+<!doctype html>
+
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta content="#0b0b0b" name="theme-color" />
+    <title data-bind="seo.title">NODARA | Fondasi untuk operasi digital</title>
+    <meta
+      content="Konsep profil perusahaan NODARA. Jelajahi colocation, dedicated server, cloud, serta pendekatan perencanaan infrastruktur untuk bisnis."
+      data-bind-content="seo.description"
+      name="description"
+    />
+    <meta content="website" property="og:type" />
+    <meta content="id_ID" property="og:locale" />
+    <meta
+      content="NODARA | Fondasi untuk operasi digital"
+      data-bind-content="seo.title"
+      property="og:title"
+    />
+    <meta
+      content="Colocation, dedicated server, dan cloud. Sebuah konsep perusahaan data center dengan ruang untuk kebutuhan bisnis yang berkembang."
+      data-bind-content="seo.description"
+      property="og:description"
+    />
+    <meta
+      content="assets/server-aisle.webp"
+      data-bind-content="seo.ogImage"
+      property="og:image"
+    />
+    <meta content="summary_large_image" name="twitter:card" />
+    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="style.css" rel="stylesheet" />
+    <link
+      as="font"
+      crossorigin=""
+      href="assets/fonts/inter-latin.woff2"
+      rel="preload"
+      type="font/woff2"
+    />
+    <link as="image" href="assets/server-aisle.webp" rel="preload" />
+    <script defer="" src="assets/site-ui.js"></script>
+    <script defer="" src="script.js"></script>
+  </head>
+  <body data-page="home" data-template-id="nodara-data-center-001">
+    <a class="skip-link" href="#main-content">Lewati ke konten</a>
+    <header class="site-header" id="site-header">
+      <div class="header-inner">
+        <a
+          aria-label="Kembali ke awal"
+          class="wordmark"
+          data-brand-home=""
+          href="#top"
+          ><img
+            alt=""
+            data-bind-alt="business.logo"
+            data-bind-src="business.logo"
+            data-brand-logo=""
+            data-image="business.logo"
+            hidden="" /><span data-bind="business.name" data-brand-name=""
+            >NODARA</span
+          ><span aria-hidden="true" class="wordmark-dot"></span
+        ></a>
+        <nav aria-label="Navigasi utama" class="desktop-nav">
+          <button
+            aria-controls="services-menu"
+            aria-expanded="false"
+            class="nav-link menu-toggle"
+            data-menu-toggle=""
+            data-nav-id="services"
+            type="button"
+          >
+            <span data-bind="navigation.services.label">Layanan</span
+            ><span aria-hidden="true" class="chevron"></span>
+          </button>
+          <a class="nav-link" data-nav-id="about" href="#infrastruktur"
+            ><span data-bind="navigation.about.label">Infrastruktur</span></a
+          >
+          <a class="nav-link" data-nav-id="process" href="#proses"
+            ><span data-bind="navigation.process.label">Proses</span></a
+          >
+          <a class="nav-link" data-nav-id="faq" href="#faq"
+            ><span data-bind="navigation.faq.label">FAQ</span></a
+          >
+        </nav>
+        <div class="header-actions">
+          <button
+            class="button button-primary header-consult"
+            data-consult=""
+            type="button"
+          >
+            <span data-bind="navigation.consultLabel">Konsultasi</span
+            ><span aria-hidden="true" class="arrow-icon">↗</span>
+          </button>
+          <button
+            aria-controls="mobile-menu"
+            aria-haspopup="dialog"
+            aria-label="Buka navigasi"
+            class="mobile-menu-toggle"
+            id="mobile-menu-toggle"
+            type="button"
+          >
+            <span></span><span></span>
+          </button>
+        </div>
+      </div>
+      <div class="services-menu" hidden="" id="services-menu">
+        <div class="services-menu-inner">
+          <div class="menu-intro">
+            <span class="eyebrow" data-bind="navigation.servicesKicker"
+              >Pilihan infrastruktur</span
+            >
+            <p data-bind="navigation.servicesDescription">
+              Mulai dari kebutuhan. Temukan ruang yang tepat.
+            </p>
+          </div>
+          <div
+            class="menu-services"
+            data-collection="sections.services.items"
+            data-collection-view="menu"
+          >
+            <a href="#colocation"
+              ><span class="menu-number">01</span
+              ><span
+                ><strong>Colocation</strong
+                ><small>Tempat untuk perangkat milik Anda.</small></span
+              ><span aria-hidden="true">↗</span></a
+            >
+            <a href="#dedicated-server"
+              ><span class="menu-number">02</span
+              ><span
+                ><strong>Dedicated server</strong
+                ><small>Perangkat khusus untuk beban kerja Anda.</small></span
+              ><span aria-hidden="true">↗</span></a
+            >
+            <a href="#cloud"
+              ><span class="menu-number">03</span
+              ><span
+                ><strong>Cloud</strong
+                ><small>Sumber daya mengikuti kebutuhan aplikasi.</small></span
+              ><span aria-hidden="true">↗</span></a
+            >
+          </div>
+        </div>
+      </div>
+    </header>
+    <main id="main-content">
+      <section
+        aria-labelledby="hero-title"
+        class="hero"
+        data-section="hero"
+        id="top"
+      >
+        <div aria-hidden="true" class="hero-media">
+          <img
+            alt=""
+            data-bind-alt="sections.hero.image"
+            data-bind-src="sections.hero.image"
+            data-image="sections.hero.image"
+            decoding="async"
+            fetchpriority="high"
+            height="900"
+            src="assets/server-aisle.webp"
+            width="1600"
+          />
+          <video
+            autoplay=""
+            data-hero-video=""
+            id="hero-video"
+            loop=""
+            muted=""
+            playsinline=""
+            poster="assets/server-aisle.webp"
+            preload="metadata"
+            tabindex="-1"
+          >
+            <source src="assets/hero-montage.mp4" type="video/mp4" />
+          </video>
+          <div class="hero-scrim"></div>
+        </div>
+        <div class="hero-content section-shell">
+          <p class="eyebrow hero-eyebrow" data-bind="sections.hero.kicker">
+            Data center untuk bisnis
+          </p>
+          <h1 id="hero-title">
+            <span data-bind="sections.hero.headingLine1">Fondasi untuk</span
+            ><span data-bind="sections.hero.headingLine2"
+              >operasi digital.</span
+            >
+          </h1>
+          <p class="hero-description" data-bind="sections.hero.description">
+            Colocation, dedicated server, dan cloud yang mengikuti kebutuhan
+            bisnis Anda.
+          </p>
+          <div class="hero-actions">
+            <button class="button button-primary" data-consult="" type="button">
+              <span data-bind="sections.hero.primaryCta.label">Konsultasi</span
+              ><span aria-hidden="true" class="arrow-icon">↗</span>
+            </button>
+            <a class="button button-ghost" href="#layanan"
+              ><span data-bind="sections.hero.secondaryCta.label"
+                >Jelajahi layanan</span
+              ><span aria-hidden="true">↓</span></a
+            >
+          </div>
+        </div>
+        <div class="hero-bottom section-shell">
+          <button
+            aria-label="Jeda video latar"
+            aria-pressed="false"
+            class="motion-toggle"
+            id="hero-motion-toggle"
+            type="button"
+          >
+            <span aria-hidden="true" class="pause-icon"></span
+            ><span data-motion-label="">Jeda video</span>
+          </button>
+        </div>
+      </section>
+      <section
+        aria-label="Jelajahi pilihan infrastruktur"
+        class="ticker"
+        data-section-related="services"
+      >
+        <div class="ticker-viewport">
+          <div
+            class="ticker-track"
+            data-collection="sections.services.items"
+            data-collection-view="ticker"
+          >
+            <div class="ticker-group">
+              <a href="#colocation"
+                >Colocation <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#dedicated-server"
+                >Dedicated server <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#cloud">Cloud <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#konektivitas"
+                >Konektivitas <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#operasional"
+                >Operasional <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span>
+            </div>
+            <div aria-hidden="true" class="ticker-group" inert="">
+              <a href="#colocation" tabindex="-1"
+                >Colocation <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#dedicated-server" tabindex="-1"
+                >Dedicated server <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#cloud" tabindex="-1"
+                >Cloud <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#konektivitas" tabindex="-1"
+                >Konektivitas <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span
+              ><a href="#operasional" tabindex="-1"
+                >Operasional <span aria-hidden="true">↗</span></a
+              ><span aria-hidden="true" class="ticker-dot"></span>
+            </div>
+          </div>
+        </div>
+        <button
+          aria-label="Jeda teks layanan bergerak"
+          aria-pressed="false"
+          class="ticker-toggle"
+          id="ticker-toggle"
+          type="button"
+        >
+          <span aria-hidden="true" class="pause-icon"></span
+          ><span class="sr-only" data-ticker-label="">Jeda teks bergerak</span>
+        </button>
+      </section>
+      <section
+        aria-labelledby="infrastructure-title"
+        class="infrastructure"
+        data-section="about"
+        id="infrastruktur"
+      >
+        <div class="section-shell">
+          <div class="section-topline">
+            <p class="eyebrow" data-bind="sections.about.kicker">
+              Fondasi di balik aplikasi
+            </p>
+          </div>
+          <div class="infrastructure-grid">
+            <div class="infrastructure-copy" data-reveal="">
+              <h2 data-bind="sections.about.heading" id="infrastructure-title">
+                Satu rencana. Setiap lapisan saling terhubung.
+              </h2>
+              <p data-bind="sections.about.body">
+                Aplikasi berjalan di atas banyak keputusan: tempat perangkat,
+                kapasitas komputasi, dan jalur koneksi. Kita mulai dengan
+                melihat semuanya sebagai satu kesatuan.
+              </p>
+              <a class="text-link text-link-light" href="#layanan"
+                ><span data-bind="sections.about.ctaLabel"
+                  >Temukan susunan yang sesuai</span
+                ><span aria-hidden="true">↗</span></a
+              >
+            </div>
+            <figure class="infrastructure-photo" data-reveal="">
+              <img
+                alt="Ilustrasi detail rak server dan sambungan kabel di dalam ruang data center"
+                data-bind-alt="sections.about.image"
+                data-bind-src="sections.about.image"
+                data-image="sections.about.image"
+                decoding="async"
+                height="1200"
+                loading="lazy"
+                src="assets/rack-detail.webp"
+                width="1600"
+              />
+              <figcaption>
+                <span data-bind="sections.about.imageCaption"
+                  >Perangkat. Koneksi. Ruang untuk berkembang.</span
+                ><span
+                  class="mono-label"
+                  data-bind="sections.about.imageDisclosure"
+                  >Visual ilustrasi</span
+                >
+              </figcaption>
+            </figure>
+          </div>
+          <figure
+            aria-labelledby="diagram-caption"
+            class="infrastructure-diagram"
+            data-reveal=""
+          >
+            <figcaption id="diagram-caption">
+              <span class="mono-label" data-bind="sections.about.diagramLabel"
+                >Cara lapisannya bekerja</span
+              >
+              <p data-bind="sections.about.diagramDescription">
+                Dari jalur masuk hingga tempat aplikasi berjalan.
+              </p>
+            </figcaption>
+            <ol class="diagram-flow" data-collection="sections.about.layers">
+              <li>
+                <span class="diagram-number">01</span>
+                <h3>Koneksi</h3>
+                <p>
+                  Jalur yang menghubungkan pengguna, sistem, dan perangkat Anda.
+                </p>
+              </li>
+              <li>
+                <span class="diagram-number">02</span>
+                <h3>Komputasi</h3>
+                <p>
+                  Colocation, server khusus, atau cloud sesuai kebutuhan beban
+                  kerja.
+                </p>
+              </li>
+              <li>
+                <span class="diagram-number">03</span>
+                <h3>Operasional</h3>
+                <p>
+                  Rencana akses, pemantauan, dan tindak lanjut selama layanan
+                  digunakan.
+                </p>
+              </li>
+            </ol>
+          </figure>
+        </div>
+      </section>
+      <section
+        aria-labelledby="services-title"
+        class="services-story"
+        data-section="services"
+        id="layanan"
+      >
+        <div class="section-shell">
+          <div class="story-intro" data-reveal="">
+            <p class="eyebrow" data-bind="sections.services.kicker">
+              Pilihan yang punya peran
+            </p>
+            <h2 data-bind="sections.services.heading" id="services-title">
+              Ruang yang tepat. Untuk setiap beban kerja.
+            </h2>
+            <p data-bind="sections.services.description">
+              Mulai dengan yang dibutuhkan hari ini. Rencanakan perubahan
+              berikutnya tanpa kehilangan gambaran besarnya.
+            </p>
+          </div>
+          <div class="story-layout">
+            <nav
+              aria-label="Bagian layanan"
+              class="chapter-nav"
+              data-collection="sections.services.items"
+              data-collection-view="rail"
+            >
+              <a
+                aria-current="true"
+                class="is-active"
+                data-chapter-link="0"
+                href="#colocation"
+                ><span>01</span>Colocation</a
+              ><a data-chapter-link="1" href="#dedicated-server"
+                ><span>02</span>Dedicated server</a
+              ><a data-chapter-link="2" href="#cloud"><span>03</span>Cloud</a
+              ><a data-chapter-link="3" href="#konektivitas"
+                ><span>04</span>Konektivitas</a
+              ><a data-chapter-link="4" href="#operasional"
+                ><span>05</span>Operasional</a
+              >
+            </nav>
+            <div
+              class="story-copy"
+              data-collection="sections.services.items"
+              data-collection-view="chapters"
+            >
+              <article class="story-chapter" data-chapter="0" id="colocation">
+                <p class="chapter-number mono-label">01 / Colocation</p>
+                <h3>Perangkat Anda. Ruang yang dipersiapkan.</h3>
+                <p>
+                  Tempatkan server milik Anda dalam susunan fasilitas yang
+                  direncanakan bersama. Mulai dari kebutuhan ruang hingga cara
+                  tim mengakses perangkat.
+                </p>
+                <ul class="feature-list">
+                  <li>Kebutuhan ruang dan penempatan rak</li>
+                  <li>Perencanaan daya dan pendinginan</li>
+                  <li>Alur akses serta instalasi perangkat</li>
+                </ul>
+                <button
+                  class="text-link"
+                  data-consult=""
+                  data-service="Colocation"
+                  type="button"
+                >
+                  Bahas kebutuhan colocation
+                  <span aria-hidden="true">↗</span></button
+                ><img
+                  alt="Ilustrasi lorong data center dengan deretan rak server"
+                  class="chapter-mobile-image"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/server-aisle.webp"
+                  width="1600"
+                />
+              </article>
+              <article
+                class="story-chapter"
+                data-chapter="1"
+                id="dedicated-server"
+              >
+                <p class="chapter-number mono-label">02 / Dedicated server</p>
+                <h3>Komputasi khusus. Sesuai cara Anda bekerja.</h3>
+                <p>
+                  Untuk beban kerja yang membutuhkan perangkat tersendiri. Susun
+                  konfigurasi berdasarkan aplikasi, pola penggunaan, dan kendali
+                  yang dibutuhkan tim Anda.
+                </p>
+                <ul class="feature-list">
+                  <li>Pemetaan kebutuhan prosesor dan memori</li>
+                  <li>Pilihan penyimpanan sesuai beban kerja</li>
+                  <li>Rencana sistem operasi dan pengelolaan</li>
+                </ul>
+                <button
+                  class="text-link"
+                  data-consult=""
+                  data-service="Dedicated server"
+                  type="button"
+                >
+                  Bahas kebutuhan server
+                  <span aria-hidden="true">↗</span></button
+                ><img
+                  alt="Ilustrasi perangkat server khusus di dalam rak"
+                  class="chapter-mobile-image"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/rack-detail.webp"
+                  width="1600"
+                />
+              </article>
+              <article class="story-chapter" data-chapter="2" id="cloud">
+                <p class="chapter-number mono-label">03 / Cloud</p>
+                <h3>Mulai terukur. Berkembang sesuai arah.</h3>
+                <p>
+                  Rencanakan sumber daya virtual mengikuti kebutuhan aplikasi.
+                  Tentukan kapasitas awal, pola perubahan, dan cara tim menjaga
+                  lingkungan tetap tertata.
+                </p>
+                <ul class="feature-list">
+                  <li>Perencanaan komputasi virtual</li>
+                  <li>Susunan jaringan dan penyimpanan</li>
+                  <li>Pemetaan kebutuhan cadangan data</li>
+                </ul>
+                <button
+                  class="text-link"
+                  data-consult=""
+                  data-service="Cloud"
+                  type="button"
+                >
+                  Bahas kebutuhan cloud
+                  <span aria-hidden="true">↗</span></button
+                ><img
+                  alt="Ilustrasi perangkat komputasi yang menopang layanan cloud"
+                  class="chapter-mobile-image"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/cloud-hardware.webp"
+                  width="1600"
+                />
+              </article>
+              <article class="story-chapter" data-chapter="3" id="konektivitas">
+                <p class="chapter-number mono-label">04 / Konektivitas</p>
+                <h3>Hubungkan yang perlu bekerja bersama.</h3>
+                <p>
+                  Jalur koneksi perlu mengikuti arus data, bukan sebaliknya.
+                  Petakan hubungan antarsistem agar pilihan jaringan dapat
+                  dibahas dengan konteks yang jelas.
+                </p>
+                <ul class="feature-list">
+                  <li>Pemetaan jalur serta titik koneksi</li>
+                  <li>Kebutuhan jaringan publik dan privat</li>
+                  <li>Rencana penghubung antarlayanan</li>
+                </ul>
+                <button class="text-link" data-consult="" type="button">
+                  Bahas kebutuhan konektivitas
+                  <span aria-hidden="true">↗</span></button
+                ><img
+                  alt="Ilustrasi sambungan serat optik dan panel jaringan"
+                  class="chapter-mobile-image"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/fiber-network.webp"
+                  width="1600"
+                />
+              </article>
+              <article class="story-chapter" data-chapter="4" id="operasional">
+                <p class="chapter-number mono-label">05 / Operasional</p>
+                <h3>Rencana yang berlanjut setelah instalasi.</h3>
+                <p>
+                  Infrastruktur tetap membutuhkan perhatian setelah aktif.
+                  Tentukan pembagian tanggung jawab, cara menangani perubahan,
+                  dan alur komunikasi sejak awal.
+                </p>
+                <ul class="feature-list">
+                  <li>Ruang lingkup pemantauan layanan</li>
+                  <li>Alur permintaan dan penanganan kendala</li>
+                  <li>Rencana pemeliharaan serta perubahan</li>
+                </ul>
+                <button class="text-link" data-consult="" type="button">
+                  Bahas kebutuhan operasional
+                  <span aria-hidden="true">↗</span></button
+                ><img
+                  alt="Ilustrasi teknisi memeriksa perangkat di ruang data center"
+                  class="chapter-mobile-image"
+                  decoding="async"
+                  height="1200"
+                  loading="lazy"
+                  src="assets/operations.webp"
+                  width="1600"
+                />
+              </article>
+            </div>
+            <div aria-hidden="true" class="story-visual">
+              <div
+                class="story-visual-frame"
+                data-collection="sections.services.items"
+                data-collection-view="images"
+              >
+                <div class="story-layer is-active" data-story-image="0">
+                  <img
+                    alt=""
+                    decoding="async"
+                    height="1200"
+                    loading="lazy"
+                    src="assets/server-aisle.webp"
+                    width="1600"
+                  />
+                </div>
+                <div class="story-layer" data-story-image="1">
+                  <img
+                    alt=""
+                    decoding="async"
+                    height="1200"
+                    loading="lazy"
+                    src="assets/rack-detail.webp"
+                    width="1600"
+                  />
+                </div>
+                <div class="story-layer" data-story-image="2">
+                  <img
+                    alt=""
+                    decoding="async"
+                    height="1200"
+                    loading="lazy"
+                    src="assets/cloud-hardware.webp"
+                    width="1600"
+                  />
+                </div>
+                <div class="story-layer" data-story-image="3">
+                  <img
+                    alt=""
+                    decoding="async"
+                    height="1200"
+                    loading="lazy"
+                    src="assets/fiber-network.webp"
+                    width="1600"
+                  />
+                </div>
+                <div class="story-layer" data-story-image="4">
+                  <img
+                    alt=""
+                    decoding="async"
+                    height="1200"
+                    loading="lazy"
+                    src="assets/operations.webp"
+                    width="1600"
+                  />
+                </div>
+                <div class="story-visual-caption" data-static="">
+                  <span
+                    class="mono-label"
+                    data-bind="sections.services.visualCaption"
+                    >Infrastruktur, dari dekat.</span
+                  ><span
+                    class="mono-label"
+                    data-bind="sections.services.imageDisclosure"
+                    >Ilustrasi fasilitas</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="process-title"
+        class="process"
+        data-section="process"
+        id="proses"
+      >
+        <div class="section-shell">
+          <div class="process-heading" data-reveal="">
+            <h2 data-bind="sections.process.heading" id="process-title">
+              Langkahnya jelas. Keputusannya bersama.
+            </h2>
+            <p data-bind="sections.process.description">
+              Sebelum memilih layanan, kita menyamakan tujuan, kebutuhan teknis,
+              dan pembagian tanggung jawab.
+            </p>
+          </div>
+          <ol class="process-grid" data-collection="sections.process.items">
+            <li class="process-step" data-reveal="">
+              <span class="process-number mono-label">01</span>
+              <h3>Petakan kebutuhan</h3>
+              <p>
+                Ceritakan aplikasi, kondisi saat ini, dan hal yang ingin
+                diperbaiki. Tentukan prioritas serta batasan proyek.
+              </p>
+            </li>
+            <li class="process-step" data-reveal="">
+              <span class="process-number mono-label">02</span>
+              <h3>Susun rancangan</h3>
+              <p>
+                Bahas pilihan layanan dan keterkaitannya. Sepakati konfigurasi,
+                ruang lingkup, serta rencana penerapan.
+              </p>
+            </li>
+            <li class="process-step" data-reveal="">
+              <span class="process-number mono-label">03</span>
+              <h3>Siapkan penerapan</h3>
+              <p>
+                Atur kebutuhan akses, instalasi, atau perpindahan. Lakukan
+                pemeriksaan bersama sebelum layanan digunakan.
+              </p>
+            </li>
+            <li class="process-step" data-reveal="">
+              <span class="process-number mono-label">04</span>
+              <h3>Kelola perubahan</h3>
+              <p>
+                Tetapkan cara berkomunikasi dan mengevaluasi kebutuhan. Perbarui
+                rencana saat penggunaan bisnis berubah.
+              </p>
+            </li>
+          </ol>
+        </div>
+      </section>
+      <section
+        aria-labelledby="faq-title"
+        class="faq"
+        data-section="faq"
+        id="faq"
+      >
+        <div class="section-shell faq-layout">
+          <div class="faq-heading" data-reveal="">
+            <h2 data-bind="sections.faq.heading" id="faq-title">
+              Pertanyaan yang sering muncul.
+            </h2>
+            <p data-bind="sections.faq.description">
+              Beberapa hal untuk membantu Anda menyiapkan percakapan pertama.
+            </p>
+          </div>
+          <div
+            class="faq-list"
+            data-collection="sections.faq.items"
+            data-reveal=""
+          >
+            <details>
+              <summary>
+                Apa perbedaan colocation, dedicated server, dan cloud?<span
+                  aria-hidden="true"
+                  class="details-indicator"
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Pada colocation, Anda menempatkan perangkat milik sendiri.
+                  Dedicated server menggunakan perangkat fisik khusus untuk
+                  kebutuhan Anda. Cloud menggunakan sumber daya virtual.
+                  Pilihannya bergantung pada kebutuhan kendali, kapasitas, dan
+                  cara pengelolaan.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Apa yang perlu disiapkan untuk konsultasi?<span
+                  aria-hidden="true"
+                  class="details-indicator"
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Mulai dengan jenis aplikasi, perkiraan kebutuhan perangkat
+                  atau sumber daya, kondisi saat ini, serta target penerapan.
+                  Jika rinciannya belum lengkap, ringkasan kebutuhan bisnis
+                  sudah cukup untuk membuka pembahasan.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Apakah saya harus memindahkan seluruh infrastruktur?<span
+                  aria-hidden="true"
+                  class="details-indicator"
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Tidak harus. Pembahasan dapat dimulai dari satu beban kerja
+                  atau satu kebutuhan. Hubungan dengan sistem yang tetap berada
+                  di tempat lain perlu dipetakan dalam rancangan.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Bagaimana harga, kapasitas, dan tingkat layanan ditentukan?<span
+                  aria-hidden="true"
+                  class="details-indicator"
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Hal tersebut perlu mengikuti konfigurasi serta ruang lingkup
+                  yang disepakati. Website demo ini tidak mencantumkan harga,
+                  kapasitas fasilitas, sertifikasi, atau jaminan tingkat
+                  layanan.
+                </p>
+              </div>
+            </details>
+            <details>
+              <summary>
+                Bagaimana permintaan konsultasi diproses?<span
+                  aria-hidden="true"
+                  class="details-indicator"
+                ></span>
+              </summary>
+              <div class="faq-answer">
+                <p>
+                  Pada preview template, formulir menyusun ringkasan di browser
+                  yang dapat disalin atau diunduh. Pengiriman permintaan dan
+                  tindak lanjut perlu diaktifkan melalui pengaturan formulir
+                  website.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <section
+        aria-labelledby="contact-title"
+        class="contact-band"
+        data-section="cta"
+        id="konsultasi"
+      >
+        <div class="contact-photo">
+          <img
+            alt="Ilustrasi teknisi di antara perangkat data center"
+            data-bind-alt="sections.cta.image"
+            data-bind-src="sections.cta.image"
+            data-image="sections.cta.image"
+            decoding="async"
+            height="1200"
+            loading="lazy"
+            src="assets/operations.webp"
+            width="1600"
+          />
+        </div>
+        <div class="contact-copy" data-reveal="">
+          <h2 data-bind="sections.cta.heading" id="contact-title">
+            Apa yang ingin Anda bangun?
+          </h2>
+          <p data-bind="sections.cta.description">
+            Ceritakan arah bisnis dan kebutuhan infrastrukturnya. Susun langkah
+            pertama dalam satu ringkasan.
+          </p>
+          <button class="button button-primary" data-consult="" type="button">
+            <span data-bind="sections.cta.label">Konsultasi</span
+            ><span aria-hidden="true" class="arrow-icon">↗</span>
+          </button>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" data-section="footer">
+      <div class="section-shell">
+        <div class="footer-main">
+          <a
+            aria-label="Kembali ke awal"
+            class="wordmark footer-wordmark"
+            data-brand-home=""
+            href="#top"
+            ><img
+              alt=""
+              data-bind-alt="business.logo"
+              data-bind-src="business.logo"
+              data-brand-logo=""
+              data-image="business.logo"
+              hidden="" /><span data-bind="business.name" data-brand-name=""
+              >NODARA</span
+            ><span aria-hidden="true" class="wordmark-dot"></span
+          ></a>
+          <p data-bind="business.tagline">
+            Ruang untuk infrastruktur yang terus tumbuh.
+          </p>
+          <nav aria-label="Navigasi footer">
+            <a data-nav-id="services" href="#layanan"
+              ><span data-bind="navigation.services.label">Layanan</span></a
+            ><a data-nav-id="about" href="#infrastruktur"
+              ><span data-bind="navigation.about.label">Infrastruktur</span></a
+            ><a data-nav-id="process" href="#proses"
+              ><span data-bind="navigation.process.label">Proses</span></a
+            ><a data-nav-id="faq" href="#faq"
+              ><span data-bind="navigation.faq.label">FAQ</span></a
+            ><button data-consult="" type="button">
+              <span data-bind="navigation.consultLabel">Konsultasi</span>
+            </button>
+          </nav>
+        </div>
+        <div class="footer-bottom">
+          <p data-bind="sections.footer.disclosure">
+            NODARA adalah brand demo. Visual fasilitas merupakan ilustrasi.
+          </p>
+          <a href="#top"
+            ><span data-bind="sections.footer.backLabel">Kembali ke atas</span
+            ><span aria-hidden="true">↑</span></a
+          >
+        </div>
+      </div>
+    </footer>
+    <dialog
+      aria-labelledby="mobile-menu-title"
+      class="mobile-menu"
+      id="mobile-menu"
+    >
+      <div class="mobile-menu-top">
+        <span class="wordmark" id="mobile-menu-title"
+          ><img
+            alt=""
+            data-bind-alt="business.logo"
+            data-bind-src="business.logo"
+            data-brand-logo=""
+            data-image="business.logo"
+            hidden="" /><span data-bind="business.name" data-brand-name=""
+            >NODARA</span
+          ><span aria-hidden="true" class="wordmark-dot"></span></span
+        ><button
+          aria-label="Tutup navigasi"
+          class="dialog-close"
+          data-close-dialog=""
+          type="button"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <nav aria-label="Navigasi ponsel">
+        <a data-nav-id="services" href="#layanan"
+          ><span data-bind="navigation.services.label">Layanan</span
+          ><span aria-hidden="true">↗</span></a
+        ><a data-nav-id="about" href="#infrastruktur"
+          ><span data-bind="navigation.about.label">Infrastruktur</span
+          ><span aria-hidden="true">↗</span></a
+        ><a data-nav-id="process" href="#proses"
+          ><span data-bind="navigation.process.label">Proses</span
+          ><span aria-hidden="true">↗</span></a
+        ><a data-nav-id="faq" href="#faq"
+          ><span data-bind="navigation.faq.label">FAQ</span
+          ><span aria-hidden="true">↗</span></a
+        >
+      </nav>
+      <button class="button button-primary" data-consult="" type="button">
+        <span data-bind="navigation.consultLabel">Konsultasi</span
+        ><span aria-hidden="true">↗</span>
+      </button>
+      <p class="mobile-menu-caption" data-bind="navigation.mobileCaption">
+        Colocation · Server · Cloud
+      </p>
+    </dialog>
+    <dialog
+      aria-describedby="consultation-description"
+      aria-labelledby="consultation-title"
+      class="consultation-dialog"
+      data-section="contact"
+      id="consultation-dialog"
+    >
+      <div class="consultation-top">
+        <p class="eyebrow" data-bind="sections.contact.kicker">
+          Percakapan pertama
+        </p>
+        <button
+          aria-label="Tutup konsultasi"
+          class="dialog-close"
+          data-close-dialog=""
+          type="button"
+        >
+          <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <h2 data-bind="sections.contact.heading" id="consultation-title">
+        Ceritakan kebutuhan Anda.
+      </h2>
+      <p data-bind="sections.contact.description" id="consultation-description">
+        Buat ringkasan untuk langkah berikutnya. Demo ini memproses data di
+        browser Anda; tidak ada permintaan yang dikirim.
+      </p>
+      <form
+        data-form-id="infrastructure-consultation"
+        data-pagiverse-form="infrastructure-consultation"
+        id="consultation-form"
+        method="dialog"
+      >
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="request-name"
+              ><span data-bind="sections.contact.form.nameLabel">Nama</span
+              ><span aria-hidden="true">*</span></label
+            ><input
+              autocomplete="name"
+              id="request-name"
+              maxlength="100"
+              name="name"
+              required=""
+              type="text"
+            />
+          </div>
+          <div class="form-field">
+            <label for="request-company"
+              ><span data-bind="sections.contact.form.companyLabel"
+                >Perusahaan</span
+              ></label
+            ><input
+              autocomplete="organization"
+              id="request-company"
+              maxlength="160"
+              name="company"
+              type="text"
+            />
+          </div>
+          <div class="form-field">
+            <label for="request-email"
+              ><span data-bind="sections.contact.form.emailLabel">Email</span
+              ><span aria-hidden="true">*</span></label
+            ><input
+              autocomplete="email"
+              id="request-email"
+              maxlength="254"
+              name="email"
+              required=""
+              type="email"
+            />
+          </div>
+          <div class="form-field">
+            <label for="request-service"
+              ><span data-bind="sections.contact.form.serviceLabel"
+                >Layanan</span
+              ><span aria-hidden="true">*</span></label
+            ><select
+              data-collection="sections.services.items"
+              data-collection-view="options"
+              id="request-service"
+              name="service"
+              required=""
+            >
+              <option
+                data-bind="sections.contact.form.servicePlaceholder"
+                value=""
+              >
+                Pilih layanan
+              </option>
+              <option value="Colocation">Colocation</option>
+              <option value="Dedicated server">Dedicated server</option>
+              <option value="Cloud">Cloud</option>
+            </select>
+          </div>
+          <div class="form-field form-field-full">
+            <label for="request-message"
+              ><span data-bind="sections.contact.form.messageLabel"
+                >Kebutuhan Anda</span
+              ><span aria-hidden="true">*</span></label
+            ><textarea
+              data-bind-placeholder="sections.contact.form.messagePlaceholder"
+              id="request-message"
+              maxlength="3000"
+              name="message"
+              placeholder="Contoh: aplikasi yang digunakan, kebutuhan kapasitas, dan rencana penerapan."
+              required=""
+              rows="4"
+            ></textarea>
+          </div>
+        </div>
+        <p class="form-note" data-bind="sections.contact.form.note">
+          Kolom bertanda * wajib diisi. Gunakan data contoh untuk mencoba demo
+          ini.
+        </p>
+        <button class="button button-primary" type="submit">
+          <span data-bind="sections.contact.form.submitLabel"
+            >Buat ringkasan</span
+          ><span aria-hidden="true">↗</span>
+        </button>
+      </form>
+      <div class="consultation-result" hidden="" id="consultation-result">
+        <label
+          data-bind="sections.contact.form.summaryLabel"
+          for="request-summary"
+          >Ringkasan kebutuhan</label
+        ><textarea id="request-summary" readonly="" rows="9"></textarea>
+        <div class="result-actions">
+          <button
+            class="button button-dark"
+            data-bind="sections.contact.form.copyLabel"
+            id="copy-request"
+            type="button"
+          >
+            Salin ringkasan</button
+          ><button
+            class="button button-outline"
+            data-bind="sections.contact.form.downloadLabel"
+            id="download-request"
+            type="button"
+          >
+            Unduh .txt
+          </button>
+        </div>
+      </div>
+      <p
+        aria-live="polite"
+        class="form-status"
+        id="form-status"
+        role="status"
+      ></p>
+    </dialog>
+  </body>
+</html>

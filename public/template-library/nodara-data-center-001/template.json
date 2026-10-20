@@ -1,0 +1,940 @@
+{
+  "pagiverseStandard": 1,
+  "id": "nodara-data-center-001",
+  "name": "NODARA Data Center",
+  "category": "services",
+  "categoryLabel": "Data Center",
+  "description": "Profil perusahaan data center dengan hero video, bab layanan sticky dan visual crossfade. Identitas dan fasilitas adalah contoh demo yang dapat diganti.",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html"
+    }
+  ],
+  "dependencies": [],
+  "languages": {
+    "supported": ["id"],
+    "default": "id"
+  },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "light",
+    "tokens": {
+      "primary": {
+        "editable": false,
+        "default": "#ff4100"
+      },
+      "accent": {
+        "editable": false,
+        "default": "#ff4100"
+      },
+      "background": {
+        "editable": false,
+        "default": "#ffffff"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#ededed"
+      },
+      "text": {
+        "editable": false,
+        "default": "#0b0b0b"
+      },
+      "secondary": {
+        "editable": false,
+        "default": "#626262"
+      },
+      "fontBody": {
+        "editable": false,
+        "default": "Inter"
+      },
+      "fontMono": {
+        "editable": false,
+        "default": "IBM Plex Mono"
+      }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "services",
+        "labelField": "navigation.services.label",
+        "target": "#layanan",
+        "hideable": false
+      },
+      {
+        "id": "about",
+        "labelField": "navigation.about.label",
+        "target": "#infrastruktur",
+        "hideable": true
+      },
+      {
+        "id": "process",
+        "labelField": "navigation.process.label",
+        "target": "#proses",
+        "hideable": true
+      },
+      {
+        "id": "faq",
+        "labelField": "navigation.faq.label",
+        "target": "#faq",
+        "hideable": true
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama perusahaan",
+      "maxLength": 36,
+      "default": "NODARA",
+      "required": true
+    },
+    "business.tagline": {
+      "type": "text",
+      "label": "Tagline perusahaan",
+      "maxLength": 120,
+      "default": "Ruang untuk infrastruktur\nyang terus tumbuh."
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo perusahaan (opsional)",
+      "accept": ["image/png", "image/jpeg", "image/webp"],
+      "allowedProtocols": ["http:", "https:"],
+      "maxFileSizeMB": 5,
+      "focalPoint": false,
+      "default": {
+        "src": "",
+        "alt": ""
+      }
+    },
+    "navigation.services.label": {
+      "type": "text",
+      "label": "Navigasi Layanan",
+      "maxLength": 24,
+      "default": "Layanan"
+    },
+    "navigation.about.label": {
+      "type": "text",
+      "label": "Navigasi Infrastruktur",
+      "maxLength": 24,
+      "default": "Infrastruktur"
+    },
+    "navigation.process.label": {
+      "type": "text",
+      "label": "Navigasi Proses",
+      "maxLength": 24,
+      "default": "Proses"
+    },
+    "navigation.faq.label": {
+      "type": "text",
+      "label": "Navigasi FAQ",
+      "maxLength": 24,
+      "default": "FAQ"
+    },
+    "navigation.consultLabel": {
+      "type": "text",
+      "label": "Tombol konsultasi navigasi",
+      "maxLength": 28,
+      "default": "Konsultasi"
+    },
+    "navigation.servicesKicker": {
+      "type": "text",
+      "label": "Pengantar menu layanan",
+      "maxLength": 50,
+      "default": "Pilihan infrastruktur"
+    },
+    "navigation.servicesDescription": {
+      "type": "textarea",
+      "label": "Deskripsi menu layanan",
+      "maxLength": 120,
+      "default": "Mulai dari kebutuhan.\nTemukan ruang yang tepat."
+    },
+    "navigation.mobileCaption": {
+      "type": "text",
+      "label": "Catatan navigasi ponsel",
+      "maxLength": 100,
+      "default": "Colocation · Server · Cloud"
+    },
+    "sections.hero.kicker": {
+      "type": "text",
+      "label": "Pengantar hero",
+      "maxLength": 70,
+      "default": "Data center untuk bisnis"
+    },
+    "sections.hero.headingLine1": {
+      "type": "text",
+      "label": "Judul hero baris pertama",
+      "maxLength": 36,
+      "default": "Fondasi untuk",
+      "required": true
+    },
+    "sections.hero.headingLine2": {
+      "type": "text",
+      "label": "Judul hero baris kedua",
+      "maxLength": 36,
+      "default": "operasi digital.",
+      "required": true
+    },
+    "sections.hero.description": {
+      "type": "textarea",
+      "label": "Deskripsi hero",
+      "maxLength": 240,
+      "default": "Colocation, dedicated server, dan cloud yang mengikuti kebutuhan bisnis Anda."
+    },
+    "sections.hero.primaryCta.label": {
+      "type": "text",
+      "label": "CTA konsultasi hero",
+      "maxLength": 32,
+      "default": "Konsultasi"
+    },
+    "sections.hero.secondaryCta.label": {
+      "type": "text",
+      "label": "CTA layanan hero",
+      "maxLength": 32,
+      "default": "Jelajahi layanan"
+    },
+    "sections.hero.image": {
+      "type": "image",
+      "label": "Gambar hero",
+      "accept": ["image/png", "image/jpeg", "image/webp", "image/avif"],
+      "allowedProtocols": ["http:", "https:"],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "16:9",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/server-aisle.webp",
+        "alt": "",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.hero.videoEnabled": {
+      "type": "boolean",
+      "label": "Aktifkan video hero bawaan",
+      "default": true,
+      "description": "Video ilustrasi bawaan adalah aset desain terlindungi. Nonaktifkan untuk menggunakan foto bisnis Anda sebagai hero."
+    },
+    "sections.about.kicker": {
+      "type": "text",
+      "label": "Pengantar infrastruktur",
+      "maxLength": 70,
+      "default": "Fondasi di balik aplikasi"
+    },
+    "sections.about.heading": {
+      "type": "text",
+      "label": "Judul infrastruktur",
+      "maxLength": 120,
+      "default": "Satu rencana.\nSetiap lapisan\nsaling terhubung."
+    },
+    "sections.about.body": {
+      "type": "textarea",
+      "label": "Deskripsi infrastruktur",
+      "maxLength": 480,
+      "default": "Aplikasi berjalan di atas banyak keputusan: tempat perangkat, kapasitas komputasi, dan jalur koneksi. Kita mulai dengan melihat semuanya sebagai satu kesatuan."
+    },
+    "sections.about.ctaLabel": {
+      "type": "text",
+      "label": "CTA layanan infrastruktur",
+      "maxLength": 42,
+      "default": "Temukan susunan yang sesuai"
+    },
+    "sections.about.image": {
+      "type": "image",
+      "label": "Foto infrastruktur",
+      "accept": ["image/png", "image/jpeg", "image/webp", "image/avif"],
+      "allowedProtocols": ["http:", "https:"],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "4:3",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/rack-detail.webp",
+        "alt": "Ilustrasi detail rak server dan sambungan kabel di dalam ruang data center",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.about.imageCaption": {
+      "type": "text",
+      "label": "Keterangan foto infrastruktur",
+      "maxLength": 100,
+      "default": "Perangkat. Koneksi. Ruang untuk berkembang."
+    },
+    "sections.about.imageDisclosure": {
+      "type": "text",
+      "label": "Label ilustrasi infrastruktur",
+      "maxLength": 40,
+      "default": "Visual ilustrasi"
+    },
+    "sections.about.diagramLabel": {
+      "type": "text",
+      "label": "Label diagram",
+      "maxLength": 60,
+      "default": "Cara lapisannya bekerja"
+    },
+    "sections.about.diagramDescription": {
+      "type": "text",
+      "label": "Deskripsi diagram",
+      "maxLength": 160,
+      "default": "Dari jalur masuk hingga tempat aplikasi berjalan."
+    },
+    "sections.about.layers": {
+      "type": "array",
+      "label": "Lapisan infrastruktur",
+      "minItems": 1,
+      "maxItems": 5,
+      "default": [
+        {
+          "title": "Koneksi",
+          "description": "Jalur yang menghubungkan pengguna, sistem, dan perangkat Anda."
+        },
+        {
+          "title": "Komputasi",
+          "description": "Colocation, server khusus, atau cloud sesuai kebutuhan beban kerja."
+        },
+        {
+          "title": "Operasional",
+          "description": "Rencana akses, pemantauan, dan tindak lanjut selama layanan digunakan."
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Nama lapisan",
+            "maxLength": 48,
+            "required": true
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Penjelasan lapisan",
+            "maxLength": 220
+          }
+        }
+      }
+    },
+    "sections.services.kicker": {
+      "type": "text",
+      "label": "Pengantar layanan",
+      "maxLength": 70,
+      "default": "Pilihan yang punya peran"
+    },
+    "sections.services.heading": {
+      "type": "text",
+      "label": "Judul layanan",
+      "maxLength": 130,
+      "default": "Ruang yang tepat.\nUntuk setiap beban kerja."
+    },
+    "sections.services.description": {
+      "type": "textarea",
+      "label": "Deskripsi layanan",
+      "maxLength": 300,
+      "default": "Mulai dengan yang dibutuhkan hari ini. Rencanakan perubahan berikutnya tanpa kehilangan gambaran besarnya."
+    },
+    "sections.services.visualCaption": {
+      "type": "text",
+      "label": "Keterangan galeri layanan",
+      "maxLength": 60,
+      "default": "Infrastruktur, dari dekat."
+    },
+    "sections.services.imageDisclosure": {
+      "type": "text",
+      "label": "Label ilustrasi layanan",
+      "maxLength": 40,
+      "default": "Ilustrasi fasilitas"
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Daftar layanan",
+      "minItems": 1,
+      "maxItems": 8,
+      "default": [
+        {
+          "id": "colocation",
+          "name": "Colocation",
+          "heading": "Perangkat Anda.\nRuang yang dipersiapkan.",
+          "description": "Tempatkan server milik Anda dalam susunan fasilitas yang direncanakan bersama. Mulai dari kebutuhan ruang hingga cara tim mengakses perangkat.",
+          "features": "Kebutuhan ruang dan penempatan rak\nPerencanaan daya dan pendinginan\nAlur akses serta instalasi perangkat",
+          "ctaLabel": "Bahas kebutuhan colocation",
+          "menuDescription": "Tempat untuk perangkat milik Anda.",
+          "image": {
+            "src": "assets/server-aisle.webp",
+            "alt": "Ilustrasi lorong data center dengan deretan rak server",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "id": "dedicated-server",
+          "name": "Dedicated server",
+          "heading": "Komputasi khusus.\nSesuai cara Anda bekerja.",
+          "description": "Untuk beban kerja yang membutuhkan perangkat tersendiri. Susun konfigurasi berdasarkan aplikasi, pola penggunaan, dan kendali yang dibutuhkan tim Anda.",
+          "features": "Pemetaan kebutuhan prosesor dan memori\nPilihan penyimpanan sesuai beban kerja\nRencana sistem operasi dan pengelolaan",
+          "ctaLabel": "Bahas kebutuhan server",
+          "menuDescription": "Perangkat khusus untuk beban kerja Anda.",
+          "image": {
+            "src": "assets/rack-detail.webp",
+            "alt": "Ilustrasi perangkat server khusus di dalam rak",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "id": "cloud",
+          "name": "Cloud",
+          "heading": "Mulai terukur.\nBerkembang sesuai arah.",
+          "description": "Rencanakan sumber daya virtual mengikuti kebutuhan aplikasi. Tentukan kapasitas awal, pola perubahan, dan cara tim menjaga lingkungan tetap tertata.",
+          "features": "Perencanaan komputasi virtual\nSusunan jaringan dan penyimpanan\nPemetaan kebutuhan cadangan data",
+          "ctaLabel": "Bahas kebutuhan cloud",
+          "menuDescription": "Sumber daya mengikuti kebutuhan aplikasi.",
+          "image": {
+            "src": "assets/cloud-hardware.webp",
+            "alt": "Ilustrasi perangkat komputasi yang menopang layanan cloud",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "id": "konektivitas",
+          "name": "Konektivitas",
+          "heading": "Hubungkan yang\nperlu bekerja bersama.",
+          "description": "Jalur koneksi perlu mengikuti arus data, bukan sebaliknya. Petakan hubungan antarsistem agar pilihan jaringan dapat dibahas dengan konteks yang jelas.",
+          "features": "Pemetaan jalur serta titik koneksi\nKebutuhan jaringan publik dan privat\nRencana penghubung antarlayanan",
+          "ctaLabel": "Bahas kebutuhan konektivitas",
+          "menuDescription": "Jalur yang menyatukan sistem Anda.",
+          "image": {
+            "src": "assets/fiber-network.webp",
+            "alt": "Ilustrasi sambungan serat optik dan panel jaringan",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        {
+          "id": "operasional",
+          "name": "Operasional",
+          "heading": "Rencana yang berlanjut\nsetelah instalasi.",
+          "description": "Infrastruktur tetap membutuhkan perhatian setelah aktif. Tentukan pembagian tanggung jawab, cara menangani perubahan, dan alur komunikasi sejak awal.",
+          "features": "Ruang lingkup pemantauan layanan\nAlur permintaan dan penanganan kendala\nRencana pemeliharaan serta perubahan",
+          "ctaLabel": "Bahas kebutuhan operasional",
+          "menuDescription": "Rencana pengelolaan setelah instalasi.",
+          "image": {
+            "src": "assets/operations.webp",
+            "alt": "Ilustrasi teknisi memeriksa perangkat di ruang data center",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        }
+      ],
+      "item": {
+        "fields": {
+          "id": {
+            "type": "text",
+            "label": "ID layanan (huruf kecil dan tanda hubung)",
+            "maxLength": 48,
+            "pattern": "^[a-z][a-z0-9-]{0,47}$"
+          },
+          "name": {
+            "type": "text",
+            "label": "Nama layanan",
+            "maxLength": 48,
+            "required": true
+          },
+          "heading": {
+            "type": "textarea",
+            "label": "Judul bab layanan",
+            "maxLength": 110,
+            "required": true
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi layanan",
+            "maxLength": 450
+          },
+          "features": {
+            "type": "textarea",
+            "label": "Rincian layanan (satu per baris)",
+            "maxLength": 500
+          },
+          "ctaLabel": {
+            "type": "text",
+            "label": "Tombol konsultasi layanan",
+            "maxLength": 44
+          },
+          "menuDescription": {
+            "type": "text",
+            "label": "Deskripsi ringkas menu",
+            "maxLength": 100
+          },
+          "image": {
+            "type": "image",
+            "label": "Foto layanan",
+            "accept": ["image/png", "image/jpeg", "image/webp", "image/avif"],
+            "allowedProtocols": ["http:", "https:"],
+            "maxFileSizeMB": 8,
+            "aspectRatio": "4:3",
+            "focalPoint": true,
+            "crop": true,
+            "default": {
+              "src": "",
+              "alt": "",
+              "focalPoint": {
+                "x": 50,
+                "y": 50
+              }
+            }
+          }
+        }
+      }
+    },
+    "sections.process.heading": {
+      "type": "text",
+      "label": "Judul proses",
+      "maxLength": 130,
+      "default": "Langkahnya jelas.\nKeputusannya bersama."
+    },
+    "sections.process.description": {
+      "type": "textarea",
+      "label": "Deskripsi proses",
+      "maxLength": 300,
+      "default": "Sebelum memilih layanan, kita menyamakan tujuan, kebutuhan teknis, dan pembagian tanggung jawab."
+    },
+    "sections.process.items": {
+      "type": "array",
+      "label": "Langkah konsultasi",
+      "minItems": 1,
+      "maxItems": 6,
+      "default": [
+        {
+          "title": "Petakan kebutuhan",
+          "description": "Ceritakan aplikasi, kondisi saat ini, dan hal yang ingin diperbaiki. Tentukan prioritas serta batasan proyek."
+        },
+        {
+          "title": "Susun rancangan",
+          "description": "Bahas pilihan layanan dan keterkaitannya. Sepakati konfigurasi, ruang lingkup, serta rencana penerapan."
+        },
+        {
+          "title": "Siapkan penerapan",
+          "description": "Atur kebutuhan akses, instalasi, atau perpindahan. Lakukan pemeriksaan bersama sebelum layanan digunakan."
+        },
+        {
+          "title": "Kelola perubahan",
+          "description": "Tetapkan cara berkomunikasi dan mengevaluasi kebutuhan. Perbarui rencana saat penggunaan bisnis berubah."
+        }
+      ],
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Nama tahap",
+            "maxLength": 60,
+            "required": true
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Penjelasan tahap",
+            "maxLength": 320
+          }
+        }
+      }
+    },
+    "sections.faq.heading": {
+      "type": "text",
+      "label": "Judul FAQ",
+      "maxLength": 110,
+      "default": "Pertanyaan\nyang sering muncul."
+    },
+    "sections.faq.description": {
+      "type": "textarea",
+      "label": "Pengantar FAQ",
+      "maxLength": 240,
+      "default": "Beberapa hal untuk membantu Anda menyiapkan percakapan pertama."
+    },
+    "sections.faq.items": {
+      "type": "array",
+      "label": "Pertanyaan umum",
+      "minItems": 0,
+      "maxItems": 8,
+      "default": [
+        {
+          "question": "Apa perbedaan colocation, dedicated server, dan cloud?",
+          "answer": "Pada colocation, Anda menempatkan perangkat milik sendiri. Dedicated server menggunakan perangkat fisik khusus untuk kebutuhan Anda. Cloud menggunakan sumber daya virtual. Pilihannya bergantung pada kebutuhan kendali, kapasitas, dan cara pengelolaan."
+        },
+        {
+          "question": "Apa yang perlu disiapkan untuk konsultasi?",
+          "answer": "Mulai dengan jenis aplikasi, perkiraan kebutuhan perangkat atau sumber daya, kondisi saat ini, serta target penerapan. Jika rinciannya belum lengkap, ringkasan kebutuhan bisnis sudah cukup untuk membuka pembahasan."
+        },
+        {
+          "question": "Apakah saya harus memindahkan seluruh infrastruktur?",
+          "answer": "Tidak harus. Pembahasan dapat dimulai dari satu beban kerja atau satu kebutuhan. Hubungan dengan sistem yang tetap berada di tempat lain perlu dipetakan dalam rancangan."
+        },
+        {
+          "question": "Bagaimana harga, kapasitas, dan tingkat layanan ditentukan?",
+          "answer": "Hal tersebut perlu mengikuti konfigurasi serta ruang lingkup yang disepakati. Website demo ini tidak mencantumkan harga, kapasitas fasilitas, sertifikasi, atau jaminan tingkat layanan."
+        },
+        {
+          "question": "Bagaimana permintaan konsultasi diproses?",
+          "answer": "Pada preview template, formulir menyusun ringkasan di browser yang dapat disalin atau diunduh. Pengiriman permintaan dan tindak lanjut perlu diaktifkan melalui pengaturan formulir website."
+        }
+      ],
+      "item": {
+        "fields": {
+          "question": {
+            "type": "text",
+            "label": "Pertanyaan",
+            "maxLength": 180,
+            "required": true
+          },
+          "answer": {
+            "type": "textarea",
+            "label": "Jawaban",
+            "maxLength": 800
+          }
+        }
+      }
+    },
+    "sections.cta.heading": {
+      "type": "text",
+      "label": "Judul ajakan konsultasi",
+      "maxLength": 110,
+      "default": "Apa yang ingin\nAnda bangun?"
+    },
+    "sections.cta.description": {
+      "type": "textarea",
+      "label": "Deskripsi ajakan konsultasi",
+      "maxLength": 300,
+      "default": "Ceritakan arah bisnis dan kebutuhan infrastrukturnya. Susun langkah pertama dalam satu ringkasan."
+    },
+    "sections.cta.label": {
+      "type": "text",
+      "label": "Tombol konsultasi bawah",
+      "maxLength": 32,
+      "default": "Konsultasi"
+    },
+    "sections.cta.image": {
+      "type": "image",
+      "label": "Foto ajakan konsultasi",
+      "accept": ["image/png", "image/jpeg", "image/webp", "image/avif"],
+      "allowedProtocols": ["http:", "https:"],
+      "maxFileSizeMB": 8,
+      "aspectRatio": "4:3",
+      "focalPoint": true,
+      "crop": true,
+      "default": {
+        "src": "assets/operations.webp",
+        "alt": "Ilustrasi teknisi di antara perangkat data center",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        }
+      }
+    },
+    "sections.footer.disclosure": {
+      "type": "text",
+      "label": "Pemberitahuan brand demo",
+      "maxLength": 180,
+      "default": "NODARA adalah brand demo. Visual fasilitas merupakan ilustrasi."
+    },
+    "sections.footer.backLabel": {
+      "type": "text",
+      "label": "Tautan kembali ke atas",
+      "maxLength": 32,
+      "default": "Kembali ke atas"
+    },
+    "sections.contact.kicker": {
+      "type": "text",
+      "label": "Pengantar formulir",
+      "maxLength": 60,
+      "default": "Percakapan pertama"
+    },
+    "sections.contact.heading": {
+      "type": "text",
+      "label": "Judul formulir",
+      "maxLength": 100,
+      "default": "Ceritakan kebutuhan Anda.",
+      "required": true
+    },
+    "sections.contact.description": {
+      "type": "textarea",
+      "label": "Deskripsi formulir",
+      "maxLength": 320,
+      "default": "Buat ringkasan untuk langkah berikutnya. Demo ini memproses data di browser Anda; tidak ada permintaan yang dikirim."
+    },
+    "sections.contact.form.nameLabel": {
+      "type": "text",
+      "label": "Label Nama",
+      "maxLength": 48,
+      "default": "Nama"
+    },
+    "sections.contact.form.companyLabel": {
+      "type": "text",
+      "label": "Label Perusahaan",
+      "maxLength": 48,
+      "default": "Perusahaan"
+    },
+    "sections.contact.form.emailLabel": {
+      "type": "text",
+      "label": "Label Email",
+      "maxLength": 48,
+      "default": "Email"
+    },
+    "sections.contact.form.serviceLabel": {
+      "type": "text",
+      "label": "Label Layanan",
+      "maxLength": 48,
+      "default": "Layanan"
+    },
+    "sections.contact.form.messageLabel": {
+      "type": "text",
+      "label": "Label Kebutuhan Anda",
+      "maxLength": 48,
+      "default": "Kebutuhan Anda"
+    },
+    "sections.contact.form.messagePlaceholder": {
+      "type": "text",
+      "label": "Contoh isian kebutuhan",
+      "maxLength": 180,
+      "default": "Contoh: aplikasi yang digunakan, kebutuhan kapasitas, dan rencana penerapan."
+    },
+    "sections.contact.form.servicePlaceholder": {
+      "type": "text",
+      "label": "Pilihan kosong layanan",
+      "maxLength": 48,
+      "default": "Pilih layanan"
+    },
+    "sections.contact.form.note": {
+      "type": "textarea",
+      "label": "Catatan formulir",
+      "maxLength": 220,
+      "default": "Kolom bertanda * wajib diisi. Gunakan data contoh untuk mencoba demo ini."
+    },
+    "sections.contact.form.submitLabel": {
+      "type": "text",
+      "label": "Tombol formulir",
+      "maxLength": 32,
+      "default": "Buat ringkasan"
+    },
+    "sections.contact.form.summaryLabel": {
+      "type": "text",
+      "label": "Label ringkasan",
+      "maxLength": 48,
+      "default": "Ringkasan kebutuhan"
+    },
+    "sections.contact.form.copyLabel": {
+      "type": "text",
+      "label": "Tombol salin ringkasan",
+      "maxLength": 32,
+      "default": "Salin ringkasan"
+    },
+    "sections.contact.form.downloadLabel": {
+      "type": "text",
+      "label": "Tombol unduh ringkasan",
+      "maxLength": 32,
+      "default": "Unduh .txt"
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul mesin pencari",
+      "maxLength": 120,
+      "default": "NODARA | Fondasi untuk operasi digital"
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi mesin pencari",
+      "maxLength": 280,
+      "default": "Konsep profil perusahaan NODARA. Jelajahi colocation, dedicated server, cloud, serta pendekatan perencanaan infrastruktur untuk bisnis."
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Gambar pratinjau tautan",
+      "accept": ["image/png", "image/jpeg", "image/webp"],
+      "allowedProtocols": ["http:", "https:"],
+      "maxFileSizeMB": 8,
+      "focalPoint": false,
+      "default": {
+        "src": "assets/server-aisle.webp",
+        "alt": "NODARA — ilustrasi infrastruktur data center"
+      }
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.kicker",
+        "sections.hero.headingLine1",
+        "sections.hero.headingLine2",
+        "sections.hero.description",
+        "sections.hero.primaryCta.label",
+        "sections.hero.secondaryCta.label",
+        "sections.hero.image",
+        "sections.hero.videoEnabled"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Infrastruktur",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.kicker",
+        "sections.about.heading",
+        "sections.about.body",
+        "sections.about.ctaLabel",
+        "sections.about.image",
+        "sections.about.imageCaption",
+        "sections.about.imageDisclosure",
+        "sections.about.diagramLabel",
+        "sections.about.diagramDescription",
+        "sections.about.layers"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Layanan",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.kicker",
+        "sections.services.heading",
+        "sections.services.description",
+        "sections.services.visualCaption",
+        "sections.services.imageDisclosure",
+        "sections.services.items"
+      ]
+    },
+    {
+      "id": "process",
+      "label": "Proses",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.process.heading",
+        "sections.process.description",
+        "sections.process.items"
+      ]
+    },
+    {
+      "id": "faq",
+      "label": "FAQ",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.faq.heading",
+        "sections.faq.description",
+        "sections.faq.items"
+      ]
+    },
+    {
+      "id": "cta",
+      "label": "Ajakan konsultasi",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.cta.heading",
+        "sections.cta.description",
+        "sections.cta.label",
+        "sections.cta.image"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Formulir konsultasi",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.contact.kicker",
+        "sections.contact.heading",
+        "sections.contact.description",
+        "sections.contact.form.nameLabel",
+        "sections.contact.form.companyLabel",
+        "sections.contact.form.emailLabel",
+        "sections.contact.form.serviceLabel",
+        "sections.contact.form.messageLabel",
+        "sections.contact.form.messagePlaceholder",
+        "sections.contact.form.servicePlaceholder",
+        "sections.contact.form.note",
+        "sections.contact.form.submitLabel",
+        "sections.contact.form.summaryLabel",
+        "sections.contact.form.copyLabel",
+        "sections.contact.form.downloadLabel"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": ["sections.footer.disclosure", "sections.footer.backLabel"]
+    }
+  ],
+  "forms": [
+    {
+      "id": "infrastructure-consultation",
+      "label": "Konsultasi infrastruktur",
+      "provider": "pagiverse-core",
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "maxLength": 100
+        },
+        {
+          "name": "company",
+          "type": "text",
+          "required": false,
+          "maxLength": 160
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "maxLength": 254
+        },
+        {
+          "name": "service",
+          "type": "select",
+          "required": true,
+          "optionsSource": "sections.services.items",
+          "optionValue": "name",
+          "optionLabel": "name",
+          "options": [
+            "Colocation",
+            "Dedicated server",
+            "Cloud",
+            "Konektivitas",
+            "Operasional"
+          ]
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": true,
+          "maxLength": 3000
+        }
+      ]
+    }
+  ]
+}
