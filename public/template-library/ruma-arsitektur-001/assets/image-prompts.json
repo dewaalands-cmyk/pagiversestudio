@@ -1,0 +1,48 @@
+{
+  "mode": "built-in image_gen",
+  "created": "2026-10-20",
+  "studio": "RUMA",
+  "notice": "AI-generated architectural concept photography for a fictional demo architecture studio. These images do not document completed built projects.",
+  "assets": [
+    {
+      "file": "images/rumah-sela.webp",
+      "prompt": "Use case: photorealistic-natural\nAsset type: editorial architecture portfolio photograph for fictional Indonesian studio RUMA.\nPrimary request: a modest premium tropical urban courtyard house in Bandung, Indonesia, exposed warm brick, honest concrete structure, teak sliding doors and a broad canopy tree.\nStyle/medium: high fidelity documentary architectural editorial photography, tactile real materials and believable built construction, understated architectural monograph.\nComposition/framing: 3:2 landscape, calm full architectural view across the intimate courtyard, verticals straight, 35mm architectural lens, layered indoor-outdoor space, house and courtyard fill the photograph.\nLighting/mood: low golden late-afternoon sunlight, long natural shadows, quiet and lived-in through material details.\nConstraints: single photograph only, no collage, no lettering, no watermark, no people, no logos, no decorative frame, no dramatic color grading, no render-like glossy surfaces.",
+      "width": 1536,
+      "height": 1024,
+      "webFile": "images/rumah-sela.webp",
+      "originalFile": "source-assets/images/rumah-sela.png"
+    },
+    {
+      "file": "images/vila-teduh.webp",
+      "prompt": "Use case: photorealistic-natural\nAsset type: editorial architecture portfolio photograph for fictional Indonesian studio RUMA.\nPrimary request: a quiet contemporary private villa in Bali, Indonesia, low horizontal timber roof, pale limestone walls, slim columns, a long restrained swimming pool reflecting palm trees.\nStyle/medium: high fidelity documentary natural architectural photography for an architecture monograph, real tactile materials and believable construction.\nComposition/framing: 3:2 landscape, calm wider three-quarter view at eye level across the long edge of the pool toward the low villa and shaded living space, architectural verticals straight. The distinct low horizontal silhouette is the subject.\nLighting/mood: gentle natural golden-hour light, soft late-afternoon warmth and long shadows, tranquil.\nMaterials/textures: pale Indonesian limestone, aged natural timber, quiet clear water, mature palms and tropical planting.\nConstraints: single photograph only, no collage, no text, no people, no logos, no watermark, no decorative frame, no infinity cliff pool, no resort cliches, no oversized luxury objects, no glossy CGI look.",
+      "width": 1536,
+      "height": 1024,
+      "webFile": "images/vila-teduh.webp",
+      "originalFile": "source-assets/images/vila-teduh.png"
+    },
+    {
+      "file": "images/rumah-tumbuh.webp",
+      "prompt": "Use case: photorealistic-natural\nAsset type: editorial architecture portfolio photograph for fictional Indonesian studio RUMA.\nPrimary request: a thoughtful architectural renovation of a 1970s Indonesian family house in Yogyakarta. The retained old terracotta tiled gabled roof and simple pale plaster original house clearly meet a contemporary lower red brick and teak glazed addition, framed by lush mature planting.\nStyle/medium: natural high fidelity architecture magazine photograph, understated documentary realism, honest built details and real material age.\nComposition/framing: 3:2 landscape photograph, eye-level three-quarter view from a quiet garden, reveal the junction of old tiled gable and new horizontal brick and timber glazed addition in one coherent architectural composition. Straight verticals.\nLighting/mood: natural late-afternoon warm light, soft shade under mature trees, quiet domestic atmosphere.\nMaterials/textures: age-patinated clay roof tiles, warm brick, timber glazing mullions, pale plaster, tropical leaves.\nConstraints: single photograph only, no collage, no text or watermark, no people, no signs, no decorative frame, no glossy CGI materials, no extravagant luxury styling.",
+      "width": 1536,
+      "height": 1024,
+      "webFile": "images/rumah-tumbuh.webp",
+      "originalFile": "source-assets/images/rumah-tumbuh.png"
+    },
+    {
+      "file": "images/cahaya-dalam.webp",
+      "width": 1024,
+      "height": 1536,
+      "prompt": "Use case: photorealistic-natural. Asset type: original project photograph for fictional Indonesian residential architecture studio RUMA. Primary request: a single portrait 2:3 architecture magazine photograph looking through a deep, dark timber doorway into a quiet Indonesian home's double-height dining interior. Warm teak ceiling, pale travertine floor, a simple solid wood dining table, side courtyard with tropical greenery and natural sunlight. Composition/framing: intimate documentary viewpoint from the threshold; strong architectural verticals and believable lived-in craftsmanship. Lighting/mood: warm late-afternoon light and deep natural shadow, serene and tactile. Style/medium: naturally real editorial architecture photography, subtle film grain, credible materials, no CGI appearance. Constraints: one photograph only, portrait 2:3, no collage, no people, no text, no logo, no watermark. The architecture must be original; do not reproduce any existing architect's image.",
+      "webFile": "images/cahaya-dalam.webp",
+      "originalFile": "source-assets/images/cahaya-dalam.png"
+    },
+    {
+      "file": "images/material-dan-bayang.webp",
+      "width": 1024,
+      "height": 1536,
+      "prompt": "Use case: photorealistic-natural. Asset type: original material-study photograph for fictional Indonesian residential architecture studio RUMA. Primary request: a single portrait 2:3 tight editorial architecture detail showing rough warm red brick and exposed board-formed concrete meeting a wooden louver, with a little green tropical foliage. Composition/framing: close architectural study of junctions, tactile material surfaces and quiet geometric lines; an Indonesian home's subtle craftsmanship. Lighting/mood: late-afternoon soft directional sunlight and natural shadow, earthy and contemplative. Style/medium: naturally real architecture magazine photograph, subtle film texture and imperfect authentic materials, not CGI. Constraints: portrait 2:3, one photograph only, no collage, no people, no text, no logo, no watermark. The architecture must be original; do not reproduce an existing architect's photograph.",
+      "webFile": "images/material-dan-bayang.webp",
+      "originalFile": "source-assets/images/material-dan-bayang.png"
+    }
+  ]
+}

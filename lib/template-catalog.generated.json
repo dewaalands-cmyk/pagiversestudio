@@ -21724,6 +21724,715 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "ruma-arsitektur-001",
+      "name": "RUMA",
+      "category": "services",
+      "categoryLabel": {
+        "id": "Studio Arsitektur",
+        "en": "Architecture Studio"
+      },
+      "description": "Portofolio studio arsitektur hunian dengan galeri horizontal editorial, kanvas bone, panel rust, dan fotografi konsep rumah, vila, serta renovasi.",
+      "version": "1.0.0",
+      "language": "id",
+      "languages": [
+        "id"
+      ],
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html"
+        }
+      ],
+      "dependencies": [],
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "light",
+        "fonts": {
+          "display": {
+            "family": "Space Grotesk",
+            "editable": false
+          },
+          "body": {
+            "family": "Inter",
+            "editable": false
+          }
+        },
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#000000"
+          },
+          "background": {
+            "editable": false,
+            "default": "#f2edde"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#f2edde"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#af6446"
+          },
+          "text": {
+            "editable": false,
+            "default": "#000000"
+          }
+        }
+      },
+      "navigation": {
+        "allowCustomItems": false,
+        "items": [
+          {
+            "id": "home",
+            "labelField": "navigation.home.label",
+            "target": "#hero",
+            "hideable": false
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama studio",
+          "default": "RUMA",
+          "maxLength": 16,
+          "required": true
+        },
+        "business.tagline": {
+          "type": "textarea",
+          "label": "Tagline",
+          "default": "Arsitektur untuk\nhidup sehari-hari.",
+          "maxLength": 80
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo studio",
+          "default": {
+            "src": "",
+            "alt": ""
+          },
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/avif",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "editable": true
+        },
+        "navigation.home.label": {
+          "type": "text",
+          "label": "Teks kembali ke karya",
+          "default": "Kembali melihat karya ↑",
+          "maxLength": 40
+        },
+        "sections.hero.kicker": {
+          "type": "text",
+          "label": "Pengantar studio",
+          "default": "Studio arsitektur hunian",
+          "maxLength": 70
+        },
+        "sections.hero.heading": {
+          "type": "textarea",
+          "label": "Judul pembuka",
+          "default": "Rumah yang dekat dengan hidup.",
+          "maxLength": 100,
+          "required": true
+        },
+        "sections.hero.description": {
+          "type": "textarea",
+          "label": "Deskripsi pembuka",
+          "default": "Kami merancang ruang untuk tinggal, beristirahat, dan tumbuh. Berangkat dari tempatnya. Berpusat pada penghuninya.",
+          "maxLength": 300
+        },
+        "sections.hero.note": {
+          "type": "textarea",
+          "label": "Catatan pembuka",
+          "default": "Rumah, vila, dan renovasi.\nDipikirkan sampai ke keseharian.",
+          "maxLength": 140
+        },
+        "sections.gallery.chapterLabel": {
+          "type": "text",
+          "label": "Label bab karya",
+          "default": "Karya",
+          "maxLength": 30
+        },
+        "sections.gallery.kicker": {
+          "type": "text",
+          "label": "Pengantar filosofi",
+          "default": "Tentang cara tinggal",
+          "maxLength": 70
+        },
+        "sections.gallery.heading": {
+          "type": "textarea",
+          "label": "Judul filosofi",
+          "default": "Bukan sekadar bentuk.\nTetapi cara hidup\ndi dalamnya.",
+          "maxLength": 140
+        },
+        "sections.gallery.description": {
+          "type": "textarea",
+          "label": "Deskripsi filosofi",
+          "default": "Cahaya yang cukup. Udara yang mengalir.\nMaterial yang terasa dekat.",
+          "maxLength": 240
+        },
+        "sections.gallery.emptyLabel": {
+          "type": "text",
+          "label": "Pesan karya kosong",
+          "default": "Karya akan segera ditampilkan.",
+          "maxLength": 100
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Karya dan fotografi konsep",
+          "minItems": 0,
+          "maxItems": 12,
+          "item": {
+            "fields": {
+              "id": {
+                "type": "text",
+                "label": "ID karya",
+                "maxLength": 40
+              },
+              "title": {
+                "type": "text",
+                "label": "Judul karya",
+                "maxLength": 80
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Keterangan karya",
+                "maxLength": 180
+              },
+              "orientation": {
+                "type": "select",
+                "label": "Orientasi gambar",
+                "default": "landscape",
+                "options": [
+                  {
+                    "value": "landscape",
+                    "label": "Lanskap"
+                  },
+                  {
+                    "value": "portrait",
+                    "label": "Potret"
+                  }
+                ]
+              },
+              "image": {
+                "type": "image",
+                "label": "Gambar karya",
+                "default": {
+                  "src": "",
+                  "alt": "",
+                  "focalPoint": {
+                    "x": 50,
+                    "y": 50
+                  }
+                },
+                "accept": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp",
+                  "image/avif",
+                  "image/svg+xml"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true,
+                "editable": true
+              },
+              "imageAlt": {
+                "type": "text",
+                "label": "Teks alternatif gambar",
+                "maxLength": 240,
+                "required": false
+              }
+            }
+          },
+          "default": [
+            {
+              "id": "rumah-sela",
+              "title": "Rumah Sela, Bandung",
+              "description": "Halaman dalam sebagai pusat kehidupan. Konsep hunian.",
+              "orientation": "landscape",
+              "image": {
+                "src": "assets/images/rumah-sela.webp",
+                "alt": "Konsep rumah dengan halaman dalam, dinding bata hangat, dan pintu kayu yang membuka ke taman.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Konsep rumah dengan halaman dalam, dinding bata hangat, dan pintu kayu yang membuka ke taman."
+            },
+            {
+              "id": "cahaya-dalam",
+              "title": "Cahaya dari dalam",
+              "description": "Ruang makan yang terhubung dengan halaman.",
+              "orientation": "portrait",
+              "image": {
+                "src": "assets/images/cahaya-dalam.webp",
+                "alt": "Konsep ruang makan berlangit-langit kayu, dilihat melalui ambang pintu menuju halaman bercahaya.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Konsep ruang makan berlangit-langit kayu, dilihat melalui ambang pintu menuju halaman bercahaya."
+            },
+            {
+              "id": "vila-teduh",
+              "title": "Vila Teduh, Bali",
+              "description": "Atap yang menaungi. Lanskap yang mendekat. Konsep vila.",
+              "orientation": "landscape",
+              "image": {
+                "src": "assets/images/vila-teduh.webp",
+                "alt": "Konsep vila tropis beratap rendah dengan batu alam, kolam tenang, dan pepohonan.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Konsep vila tropis beratap rendah dengan batu alam, kolam tenang, dan pepohonan."
+            },
+            {
+              "id": "material-dan-bayang",
+              "title": "Material dan bayang",
+              "description": "Tekstur yang berubah bersama cahaya.",
+              "orientation": "portrait",
+              "image": {
+                "src": "assets/images/material-dan-bayang.webp",
+                "alt": "Pertemuan bata bertekstur, beton ekspos, dan kisi kayu dengan bayangan daun.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Pertemuan bata bertekstur, beton ekspos, dan kisi kayu dengan bayangan daun."
+            },
+            {
+              "id": "rumah-tumbuh",
+              "title": "Rumah Tumbuh, Yogyakarta",
+              "description": "Memberi kehidupan baru pada yang sudah ada. Konsep renovasi.",
+              "orientation": "landscape",
+              "image": {
+                "src": "assets/images/rumah-tumbuh.webp",
+                "alt": "Konsep renovasi rumah beratap genteng lama yang tersambung dengan tambahan ruang berbata dan kaca di taman.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Konsep renovasi rumah beratap genteng lama yang tersambung dengan tambahan ruang berbata dan kaca di taman."
+            }
+          ]
+        },
+        "sections.about.chapterLabel": {
+          "type": "text",
+          "label": "Label bab studio",
+          "default": "Studio",
+          "maxLength": 30
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "Judul studio",
+          "default": "Ruang untuk hidup.",
+          "maxLength": 100
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "Cerita studio",
+          "default": "Rumah yang baik dimulai dari mendengarkan. Tentang kebiasaan pagi, tempat berkumpul, kebutuhan akan sunyi, dan ruang untuk bertumbuh.",
+          "maxLength": 420
+        },
+        "sections.about.secondaryBody": {
+          "type": "textarea",
+          "label": "Pendekatan studio",
+          "default": "RUMA mengeksplorasi rumah, vila, dan renovasi yang peka terhadap iklim serta karakter tempat. Kami menyatukan cahaya, udara, dan material dalam ruang yang terasa wajar untuk dihuni.",
+          "maxLength": 460
+        },
+        "sections.about.note": {
+          "type": "text",
+          "label": "Catatan studio",
+          "default": "Arsitektur hunian, interior, dan renovasi.",
+          "maxLength": 140
+        },
+        "sections.services.items": {
+          "type": "array",
+          "label": "Pendekatan kerja",
+          "minItems": 0,
+          "maxItems": 6,
+          "item": {
+            "fields": {
+              "name": {
+                "type": "text",
+                "label": "Nama tahap",
+                "maxLength": 40
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Penjelasan tahap",
+                "maxLength": 150
+              }
+            }
+          },
+          "default": [
+            {
+              "name": "Mendengar",
+              "description": "Mengenali lahan, kebutuhan, dan ritme keseharian sebelum menggambar."
+            },
+            {
+              "name": "Merancang",
+              "description": "Mengembangkan ruang, material, dan detail sebagai satu kesatuan."
+            },
+            {
+              "name": "Mendampingi",
+              "description": "Menjaga gagasan tetap utuh dari rancangan hingga pelaksanaan."
+            }
+          ]
+        },
+        "sections.contact.chapterLabel": {
+          "type": "text",
+          "label": "Label bab kontak",
+          "default": "Kontak",
+          "maxLength": 30
+        },
+        "sections.contact.kicker": {
+          "type": "text",
+          "label": "Pengantar kontak",
+          "default": "Setiap rumah berawal dari percakapan.",
+          "maxLength": 100
+        },
+        "sections.contact.heading": {
+          "type": "textarea",
+          "label": "Judul kontak",
+          "default": "Ada ruang yang\nkamu bayangkan?",
+          "maxLength": 100,
+          "required": true
+        },
+        "sections.contact.description": {
+          "type": "textarea",
+          "label": "Deskripsi kontak",
+          "default": "Ceritakan tempatnya, siapa yang akan tinggal, dan apa yang ingin kamu rasakan di dalamnya.",
+          "maxLength": 280
+        },
+        "sections.contact.demoNotice": {
+          "type": "textarea",
+          "label": "Keterangan contoh",
+          "default": "RUMA adalah studio fiktif untuk contoh website.\nSeluruh karya dan gambar adalah ilustrasi konsep.",
+          "maxLength": 240
+        },
+        "sections.contact.ctaLabel": {
+          "type": "text",
+          "label": "Teks buka brief",
+          "default": "Hubungi kami",
+          "maxLength": 40
+        },
+        "sections.contact.formNotice": {
+          "type": "textarea",
+          "label": "Keterangan formulir demo",
+          "default": "Coba siapkan brief proyekmu. Pada demo ini, ringkasan hanya disimpan di perangkatmu dan belum dikirim ke studio.",
+          "maxLength": 300
+        },
+        "sections.contact.emailLabel": {
+          "type": "text",
+          "label": "Label tautan email",
+          "default": "Email studio",
+          "maxLength": 40
+        },
+        "sections.contact.whatsappLabel": {
+          "type": "text",
+          "label": "Label tautan WhatsApp",
+          "default": "WhatsApp studio",
+          "maxLength": 40
+        },
+        "sections.contact.phoneLabel": {
+          "type": "text",
+          "label": "Label tautan telepon",
+          "default": "Telepon studio",
+          "maxLength": 40
+        },
+        "sections.contact.instagramLabel": {
+          "type": "text",
+          "label": "Label tautan Instagram",
+          "default": "Instagram studio",
+          "maxLength": 40
+        },
+        "sections.contact.closing": {
+          "type": "text",
+          "label": "Kalimat penutup",
+          "default": "Ruang yang baik terasa seperti dirimu.",
+          "maxLength": 120
+        },
+        "sections.contact.form.nameLabel": {
+          "type": "text",
+          "label": "Label nama",
+          "default": "Nama",
+          "maxLength": 40
+        },
+        "sections.contact.form.emailLabel": {
+          "type": "text",
+          "label": "Label email",
+          "default": "Email",
+          "maxLength": 40
+        },
+        "sections.contact.form.kindLabel": {
+          "type": "text",
+          "label": "Label jenis proyek",
+          "default": "Jenis proyek",
+          "maxLength": 40
+        },
+        "sections.contact.form.houseLabel": {
+          "type": "text",
+          "label": "Pilihan rumah",
+          "default": "Rumah tinggal",
+          "maxLength": 40
+        },
+        "sections.contact.form.villaLabel": {
+          "type": "text",
+          "label": "Pilihan vila",
+          "default": "Vila",
+          "maxLength": 40
+        },
+        "sections.contact.form.renovationLabel": {
+          "type": "text",
+          "label": "Pilihan renovasi",
+          "default": "Renovasi",
+          "maxLength": 40
+        },
+        "sections.contact.form.storyLabel": {
+          "type": "text",
+          "label": "Label gambaran proyek",
+          "default": "Lokasi dan gambaran proyek",
+          "maxLength": 80
+        },
+        "sections.contact.form.submitLabel": {
+          "type": "text",
+          "label": "Teks simpan brief",
+          "default": "Simpan brief",
+          "maxLength": 40
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Email studio",
+          "default": "",
+          "maxLength": 160,
+          "required": false
+        },
+        "contact.phone": {
+          "type": "phone",
+          "label": "Telepon studio",
+          "default": "",
+          "maxLength": 30,
+          "required": false
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "WhatsApp studio",
+          "default": "",
+          "maxLength": 30,
+          "required": false
+        },
+        "social.instagram": {
+          "type": "url",
+          "label": "Instagram studio",
+          "default": "",
+          "maxLength": 240,
+          "allowedProtocols": [
+            "https:"
+          ],
+          "required": false
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul mesin pencari",
+          "default": "RUMA | Arsitektur untuk hidup sehari-hari",
+          "maxLength": 100
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi mesin pencari",
+          "default": "Eksplorasi rumah, vila, dan renovasi oleh RUMA. Portofolio konsep arsitektur yang berangkat dari cahaya, material, dan kehidupan sehari-hari.",
+          "maxLength": 180
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar pratinjau sosial",
+          "default": {
+            "src": "assets/images/rumah-sela.webp",
+            "alt": "Konsep hunian RUMA",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          },
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp",
+            "image/avif",
+            "image/svg+xml"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "editable": true
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Pembuka",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.kicker",
+            "sections.hero.heading",
+            "sections.hero.description",
+            "sections.hero.note"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Karya dan filosofi",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.chapterLabel",
+            "sections.gallery.kicker",
+            "sections.gallery.heading",
+            "sections.gallery.description",
+            "sections.gallery.emptyLabel",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Tentang studio",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.chapterLabel",
+            "sections.about.heading",
+            "sections.about.body",
+            "sections.about.secondaryBody",
+            "sections.about.note"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Pendekatan kerja",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.services.items"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Kontak dan brief",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.contact.chapterLabel",
+            "sections.contact.kicker",
+            "sections.contact.heading",
+            "sections.contact.description",
+            "sections.contact.demoNotice",
+            "sections.contact.ctaLabel",
+            "sections.contact.formNotice",
+            "sections.contact.emailLabel",
+            "sections.contact.whatsappLabel",
+            "sections.contact.phoneLabel",
+            "sections.contact.instagramLabel",
+            "sections.contact.closing",
+            "sections.contact.form.nameLabel",
+            "sections.contact.form.emailLabel",
+            "sections.contact.form.kindLabel",
+            "sections.contact.form.houseLabel",
+            "sections.contact.form.villaLabel",
+            "sections.contact.form.renovationLabel",
+            "sections.contact.form.storyLabel",
+            "sections.contact.form.submitLabel",
+            "contact.email",
+            "contact.phone",
+            "contact.whatsapp",
+            "social.instagram"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Identitas studio",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "business.name",
+            "business.tagline",
+            "business.logo",
+            "navigation.home.label"
+          ]
+        }
+      ],
+      "forms": [
+        {
+          "id": "project-inquiry",
+          "provider": "pagiverse-core",
+          "label": "Brief proyek arsitektur",
+          "mode": "demo-download",
+          "description": "Template mendeklarasikan UI dan peristiwa formulir untuk Pagiverse Core. Demo menyimpan TXT lokal; pengiriman dan penyimpanan backend belum aktif.",
+          "fields": [
+            {
+              "name": "name",
+              "type": "text",
+              "labelField": "sections.contact.form.nameLabel",
+              "required": true,
+              "maxLength": 100
+            },
+            {
+              "name": "email",
+              "type": "email",
+              "labelField": "sections.contact.form.emailLabel",
+              "required": true,
+              "maxLength": 160
+            },
+            {
+              "name": "kind",
+              "type": "select",
+              "labelField": "sections.contact.form.kindLabel",
+              "required": true,
+              "options": [
+                {
+                  "value": "house",
+                  "labelField": "sections.contact.form.houseLabel"
+                },
+                {
+                  "value": "villa",
+                  "labelField": "sections.contact.form.villaLabel"
+                },
+                {
+                  "value": "renovation",
+                  "labelField": "sections.contact.form.renovationLabel"
+                }
+              ]
+            },
+            {
+              "name": "story",
+              "type": "textarea",
+              "labelField": "sections.contact.form.storyLabel",
+              "required": true,
+              "maxLength": 2000
+            }
+          ]
+        }
+      ],
+      "publicPath": "/template-library/ruma-arsitektur-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "satria-capital-multi-asset-001",
       "name": "Satria Capital",
       "category": "services",

@@ -1,0 +1,24 @@
+{
+  "studio": "RUMA",
+  "generatedFor": "Fictional studio website demo",
+  "mode": "built-in image_gen",
+  "originalAssets": true,
+  "assets": [
+    {
+      "file": "images/cahaya-dalam.webp",
+      "width": 1024,
+      "height": 1536,
+      "prompt": "Use case: photorealistic-natural. Asset type: original project photograph for fictional Indonesian residential architecture studio RUMA. Primary request: a single portrait 2:3 architecture magazine photograph looking through a deep, dark timber doorway into a quiet Indonesian home's double-height dining interior. Warm teak ceiling, pale travertine floor, a simple solid wood dining table, side courtyard with tropical greenery and natural sunlight. Composition/framing: intimate documentary viewpoint from the threshold; strong architectural verticals and believable lived-in craftsmanship. Lighting/mood: warm late-afternoon light and deep natural shadow, serene and tactile. Style/medium: naturally real editorial architecture photography, subtle film grain, credible materials, no CGI appearance. Constraints: one photograph only, portrait 2:3, no collage, no people, no text, no logo, no watermark. The architecture must be original; do not reproduce any existing architect's image.",
+      "webFile": "images/cahaya-dalam.webp",
+      "originalFile": "source-assets/images/cahaya-dalam.png"
+    },
+    {
+      "file": "images/material-dan-bayang.webp",
+      "width": 1024,
+      "height": 1536,
+      "prompt": "Use case: photorealistic-natural. Asset type: original material-study photograph for fictional Indonesian residential architecture studio RUMA. Primary request: a single portrait 2:3 tight editorial architecture detail showing rough warm red brick and exposed board-formed concrete meeting a wooden louver, with a little green tropical foliage. Composition/framing: close architectural study of junctions, tactile material surfaces and quiet geometric lines; an Indonesian home's subtle craftsmanship. Lighting/mood: late-afternoon soft directional sunlight and natural shadow, earthy and contemplative. Style/medium: naturally real architecture magazine photograph, subtle film texture and imperfect authentic materials, not CGI. Constraints: portrait 2:3, one photograph only, no collage, no people, no text, no logo, no watermark. The architecture must be original; do not reproduce an existing architect's photograph.",
+      "webFile": "images/material-dan-bayang.webp",
+      "originalFile": "source-assets/images/material-dan-bayang.png"
+    }
+  ]
+}
