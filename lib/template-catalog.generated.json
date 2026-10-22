@@ -12138,6 +12138,976 @@
     },
     {
       "pagiverseStandard": 1,
+      "id": "juna-aditya-film-001",
+      "name": "Juna Aditya Film",
+      "category": "agency",
+      "categoryLabel": {
+        "id": "Portofolio Sutradara",
+        "en": "Film Director Portfolio"
+      },
+      "description": "Portofolio sutradara film dengan galeri dua dimensi, wordmark besar, bingkai warna, detail karya, video rangkaian frame, profil, dan kontak opsional. Seluruh identitas dan karya bawaan adalah contoh.",
+      "version": "1.0.0",
+      "language": "id",
+      "languages": {
+        "supported": [
+          "id"
+        ],
+        "default": "id"
+      },
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html",
+          "label": "Portofolio",
+          "seo": {
+            "titleField": "seo.title",
+            "descriptionField": "seo.description"
+          }
+        }
+      ],
+      "dependencies": [],
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "light",
+        "fonts": {
+          "display": {
+            "family": "Helvetica",
+            "fallback": [
+              "Inter",
+              "Arial Black",
+              "sans-serif"
+            ],
+            "weight": 700,
+            "editable": false
+          },
+          "body": {
+            "family": "Helvetica",
+            "fallback": [
+              "Inter",
+              "Arial Black",
+              "sans-serif"
+            ],
+            "weight": 700,
+            "editable": false
+          },
+          "bundled": {
+            "family": "Inter",
+            "weight": 700,
+            "editable": false,
+            "src": "assets/fonts/inter-latin-700-normal.woff2",
+            "license": "SIL Open Font License 1.1",
+            "licenseFile": "assets/fonts/OFL.txt"
+          }
+        },
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#000000"
+          },
+          "secondary": {
+            "editable": false,
+            "default": "#ffffff"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#f2572c"
+          },
+          "background": {
+            "editable": false,
+            "default": "#ffffff"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#ffffff"
+          },
+          "text": {
+            "editable": false,
+            "default": "#000000"
+          },
+          "vermillion": {
+            "editable": false,
+            "default": "#e21715"
+          },
+          "cobalt": {
+            "editable": false,
+            "default": "#086392"
+          },
+          "marigold": {
+            "editable": false,
+            "default": "#f2572c"
+          },
+          "fern": {
+            "editable": false,
+            "default": "#5bc52c"
+          },
+          "brass": {
+            "editable": false,
+            "default": "#b3813c"
+          },
+          "signalRed": {
+            "editable": false,
+            "default": "#f11216"
+          },
+          "cyanBlue": {
+            "editable": false,
+            "default": "#2e99c9"
+          }
+        }
+      },
+      "navigation": {
+        "allowCustomItems": false,
+        "items": [
+          {
+            "id": "home",
+            "labelField": "navigation.home.label",
+            "target": "#gallery",
+            "sectionId": "gallery",
+            "hideable": false
+          },
+          {
+            "id": "films",
+            "labelField": "navigation.films.label",
+            "target": "#films",
+            "sectionId": "gallery",
+            "hideable": false
+          },
+          {
+            "id": "reel",
+            "labelField": "navigation.reel.label",
+            "target": "#reel",
+            "sectionId": "gallery",
+            "hideable": false
+          },
+          {
+            "id": "about",
+            "labelField": "navigation.about.label",
+            "target": "#about",
+            "sectionId": "about",
+            "hideable": true,
+            "visibleByDefault": true
+          },
+          {
+            "id": "contact",
+            "labelField": "navigation.contact.label",
+            "target": "#contact",
+            "sectionId": "contact",
+            "hideable": true,
+            "visibleByDefault": true
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama sutradara",
+          "editable": true,
+          "required": true,
+          "maxLength": 60,
+          "default": "Juna Aditya"
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Peran atau tagline",
+          "editable": true,
+          "required": true,
+          "maxLength": 60,
+          "default": "Sutradara film"
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo opsional",
+          "editable": true,
+          "required": false,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "",
+            "alt": "",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.hero.heading": {
+          "type": "text",
+          "label": "Wordmark utama",
+          "editable": true,
+          "required": true,
+          "maxLength": 16,
+          "default": "Juna"
+        },
+        "navigation.home.label": {
+          "type": "text",
+          "label": "Menu semua karya",
+          "editable": true,
+          "required": true,
+          "maxLength": 24,
+          "default": "Semua karya"
+        },
+        "navigation.films.label": {
+          "type": "text",
+          "label": "Menu film",
+          "editable": true,
+          "required": true,
+          "maxLength": 24,
+          "default": "Film pendek"
+        },
+        "navigation.reel.label": {
+          "type": "text",
+          "label": "Menu rangkaian frame",
+          "editable": true,
+          "required": true,
+          "maxLength": 24,
+          "default": "Rangkaian frame"
+        },
+        "navigation.about.label": {
+          "type": "text",
+          "label": "Menu tentang",
+          "editable": true,
+          "required": true,
+          "maxLength": 24,
+          "default": "Tentang Juna"
+        },
+        "navigation.contact.label": {
+          "type": "text",
+          "label": "Menu kontak",
+          "editable": true,
+          "required": true,
+          "maxLength": 24,
+          "default": "Kontak"
+        },
+        "sections.gallery.heading": {
+          "type": "text",
+          "label": "Judul daftar karya",
+          "editable": true,
+          "required": true,
+          "maxLength": 60,
+          "default": "Film pendek"
+        },
+        "sections.gallery.description": {
+          "type": "textarea",
+          "label": "Pengantar karya",
+          "editable": true,
+          "required": false,
+          "maxLength": 280,
+          "default": "Cerita tentang pulang, menunggu, dan orang-orang yang tinggal di dalam ingatan."
+        },
+        "sections.gallery.emptyLabel": {
+          "type": "text",
+          "label": "Pesan koleksi kosong",
+          "editable": true,
+          "required": false,
+          "maxLength": 120,
+          "default": "Karya film akan segera hadir."
+        },
+        "sections.gallery.previousLabel": {
+          "type": "text",
+          "label": "Tombol film sebelumnya",
+          "editable": true,
+          "required": true,
+          "maxLength": 28,
+          "default": "Sebelumnya"
+        },
+        "sections.gallery.nextLabel": {
+          "type": "text",
+          "label": "Tombol film berikutnya",
+          "editable": true,
+          "required": true,
+          "maxLength": 28,
+          "default": "Berikutnya"
+        },
+        "sections.gallery.directorLabel": {
+          "type": "text",
+          "label": "Label sutradara",
+          "editable": true,
+          "required": true,
+          "maxLength": 30,
+          "default": "Sutradara"
+        },
+        "sections.gallery.watchLabel": {
+          "type": "text",
+          "label": "Tombol tautan film",
+          "editable": true,
+          "required": true,
+          "maxLength": 32,
+          "default": "Tonton film"
+        },
+        "sections.gallery.demoNotice": {
+          "type": "textarea",
+          "label": "Catatan materi contoh",
+          "editable": true,
+          "required": false,
+          "maxLength": 240,
+          "default": "Konsep film dan still buatan AI untuk demonstrasi."
+        },
+        "sections.gallery.reelHeading": {
+          "type": "text",
+          "label": "Judul rangkaian frame",
+          "editable": true,
+          "required": true,
+          "maxLength": 60,
+          "default": "Rangkaian frame"
+        },
+        "sections.gallery.reelDescription": {
+          "type": "textarea",
+          "label": "Deskripsi video",
+          "editable": true,
+          "required": false,
+          "maxLength": 400,
+          "default": "Montase visual dari delapan still buatan AI. 24 detik, tanpa audio. Ini adalah materi demo untuk memperlihatkan pemutar video; bukan cuplikan film yang telah diproduksi."
+        },
+        "sections.gallery.reelUrl": {
+          "type": "url",
+          "label": "URL video rangkaian frame",
+          "editable": true,
+          "required": false,
+          "maxLength": 500,
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": "assets/rangkaian-frame.mp4",
+          "allowRelative": true,
+          "accept": [
+            "video/mp4",
+            "video/webm"
+          ]
+        },
+        "sections.gallery.reelPoster": {
+          "type": "image",
+          "label": "Poster video",
+          "editable": true,
+          "required": false,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/ruang-merah.webp",
+            "alt": "Seorang perempuan di antara kursi bioskop berwarna merah.",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.gallery.reelPosterAlt": {
+          "type": "text",
+          "label": "Alt poster video",
+          "editable": true,
+          "required": false,
+          "maxLength": 240,
+          "default": "Seorang perempuan di antara kursi bioskop berwarna merah."
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Karya film",
+          "editable": true,
+          "minItems": 0,
+          "maxItems": 12,
+          "default": [
+            {
+              "id": "ruang-merah",
+              "title": "Ruang Merah",
+              "year": "2026",
+              "format": "Film pendek",
+              "description": "Menjelang pemutaran terakhir sebuah bioskop tua, seorang perempuan kembali ke kursi yang dahulu selalu ia tempati bersama ibunya. Malam itu, ia memilih untuk tinggal hingga lampu kembali menyala.",
+              "image": {
+                "src": "assets/ruang-merah.webp",
+                "alt": "Seorang perempuan di antara kursi bioskop berwarna merah.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Seorang perempuan di antara kursi bioskop berwarna merah.",
+              "secondaryImage": {
+                "src": "assets/ruang-merah-detail.webp",
+                "alt": "Tangan bersarung merah memegang bunga putih di atas kursi bioskop.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "secondaryImageAlt": "Tangan bersarung merah memegang bunga putih di atas kursi bioskop.",
+              "borderColor": "#e21715",
+              "orientation": "landscape",
+              "trailerUrl": ""
+            },
+            {
+              "id": "arus-biru",
+              "title": "Arus Biru",
+              "year": "2025",
+              "format": "Film pendek",
+              "description": "Pada hari terakhir sebelum pindah kota, seorang pemuda mengajak adiknya kembali ke kolam tempat mereka belajar berenang. Di sela percakapan yang terputus, keduanya belajar melepaskan.",
+              "image": {
+                "src": "assets/arus-biru.webp",
+                "alt": "Seorang pemuda di kolam dengan air biru kobalt.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Seorang pemuda di kolam dengan air biru kobalt.",
+              "secondaryImage": {
+                "src": "assets/arus-biru-detail.webp",
+                "alt": "Potret pemuda dengan bayangan jendela di wajah dan latar biru.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "secondaryImageAlt": "Potret pemuda dengan bayangan jendela di wajah dan latar biru.",
+              "borderColor": "#086392",
+              "orientation": "portrait",
+              "trailerUrl": ""
+            },
+            {
+              "id": "musim-pulang",
+              "title": "Musim Pulang",
+              "year": "2025",
+              "format": "Film pendek",
+              "description": "Dua saudara kembali ke kebun keluarga yang lama mereka tinggalkan. Sambil merawat tanaman yang tumbuh tanpa mereka, keduanya mencoba menemukan cara untuk pulang.",
+              "image": {
+                "src": "assets/musim-pulang.webp",
+                "alt": "Dua saudara di antara tanaman hijau sebuah kebun tropis.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Dua saudara di antara tanaman hijau sebuah kebun tropis.",
+              "secondaryImage": {
+                "src": "assets/musim-pulang-detail.webp",
+                "alt": "Seseorang membawa payung jingga di antara teras sawah hijau.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "secondaryImageAlt": "Seseorang membawa payung jingga di antara teras sawah hijau.",
+              "borderColor": "#5bc52c",
+              "orientation": "landscape",
+              "trailerUrl": ""
+            },
+            {
+              "id": "sesudah-hujan",
+              "title": "Sesudah Hujan",
+              "year": "2024",
+              "format": "Film pendek",
+              "description": "Seorang pemilik warung menunggu pelanggan terakhir ketika hujan mulai turun. Secangkir minuman yang belum selesai memperpanjang percakapan tentang hal-hal yang ingin ia pertahankan.",
+              "image": {
+                "src": "assets/sesudah-hujan.webp",
+                "alt": "Seorang laki-laki tua di warung yang diterangi cahaya keemasan.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Seorang laki-laki tua di warung yang diterangi cahaya keemasan.",
+              "secondaryImage": {
+                "src": "",
+                "alt": "",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "secondaryImageAlt": "",
+              "borderColor": "#b3813c",
+              "orientation": "portrait",
+              "trailerUrl": ""
+            },
+            {
+              "id": "bunga-malam",
+              "title": "Bunga Malam",
+              "year": "2024",
+              "format": "Film pendek",
+              "description": "Seorang penjual bunga berkeliling kota untuk mengantarkan pesanan yang tidak pernah diambil. Setiap perhentian mempertemukannya dengan orang yang sama-sama belum ingin pulang.",
+              "image": {
+                "src": "assets/bunga-malam.webp",
+                "alt": "Seorang penjual bunga menoleh dalam cahaya malam magenta dan biru.",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "imageAlt": "Seorang penjual bunga menoleh dalam cahaya malam magenta dan biru.",
+              "secondaryImage": {
+                "src": "",
+                "alt": "",
+                "focalPoint": {
+                  "x": 50,
+                  "y": 50
+                }
+              },
+              "secondaryImageAlt": "",
+              "borderColor": "#f2572c",
+              "orientation": "landscape",
+              "trailerUrl": ""
+            }
+          ],
+          "item": {
+            "fields": {
+              "id": {
+                "type": "text",
+                "label": "ID film",
+                "editable": true,
+                "required": true,
+                "maxLength": 80,
+                "default": "film-baru"
+              },
+              "title": {
+                "type": "text",
+                "label": "Judul film",
+                "editable": true,
+                "required": true,
+                "maxLength": 72,
+                "default": "Judul film"
+              },
+              "year": {
+                "type": "text",
+                "label": "Tahun",
+                "editable": true,
+                "required": true,
+                "maxLength": 4,
+                "default": "2026"
+              },
+              "format": {
+                "type": "text",
+                "label": "Format film",
+                "editable": true,
+                "required": true,
+                "maxLength": 32,
+                "default": "Film pendek"
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Sinopsis film",
+                "editable": true,
+                "required": false,
+                "maxLength": 600,
+                "default": ""
+              },
+              "image": {
+                "type": "image",
+                "label": "Still utama",
+                "editable": true,
+                "required": true,
+                "accept": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true,
+                "default": {
+                  "src": "assets/ruang-merah.webp",
+                  "alt": "Seorang perempuan di antara kursi bioskop berwarna merah.",
+                  "focalPoint": {
+                    "x": 50,
+                    "y": 50
+                  }
+                }
+              },
+              "imageAlt": {
+                "type": "text",
+                "label": "Alt still utama",
+                "editable": true,
+                "required": true,
+                "maxLength": 240,
+                "default": "Seorang perempuan di antara kursi bioskop berwarna merah."
+              },
+              "secondaryImage": {
+                "type": "image",
+                "label": "Still tambahan opsional",
+                "editable": true,
+                "required": false,
+                "accept": [
+                  "image/png",
+                  "image/jpeg",
+                  "image/webp"
+                ],
+                "maxFileSizeMB": 8,
+                "focalPoint": true,
+                "default": {
+                  "src": "",
+                  "alt": "",
+                  "focalPoint": {
+                    "x": 50,
+                    "y": 50
+                  }
+                }
+              },
+              "secondaryImageAlt": {
+                "type": "text",
+                "label": "Alt still tambahan",
+                "editable": true,
+                "required": false,
+                "maxLength": 240,
+                "default": ""
+              },
+              "borderColor": {
+                "type": "select",
+                "label": "Warna bingkai",
+                "editable": true,
+                "required": true,
+                "options": [
+                  "#e21715",
+                  "#086392",
+                  "#f2572c",
+                  "#5bc52c",
+                  "#b3813c"
+                ],
+                "default": "#e21715"
+              },
+              "orientation": {
+                "type": "select",
+                "label": "Orientasi still utama",
+                "editable": true,
+                "required": true,
+                "options": [
+                  "landscape",
+                  "portrait"
+                ],
+                "default": "landscape"
+              },
+              "trailerUrl": {
+                "type": "url",
+                "label": "Tautan film atau trailer",
+                "editable": true,
+                "required": false,
+                "maxLength": 500,
+                "allowedProtocols": [
+                  "https:"
+                ],
+                "default": ""
+              }
+            }
+          }
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "Judul tentang",
+          "editable": true,
+          "required": true,
+          "maxLength": 100,
+          "default": "Di balik\nsebuah frame."
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "Profil sutradara",
+          "editable": true,
+          "required": false,
+          "maxLength": 500,
+          "default": "Juna Aditya adalah sutradara fiktif yang mendekatkan kamera pada kisah sehari-hari dan hal-hal kecil yang sering luput dari perhatian."
+        },
+        "sections.about.secondaryBody": {
+          "type": "textarea",
+          "label": "Pendekatan berkarya",
+          "editable": true,
+          "required": false,
+          "maxLength": 500,
+          "default": "Keheningan, jarak antarmanusia, dan warna menjadi cara untuk membangun ruang bagi penonton merasakan ceritanya sendiri."
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "Foto tentang",
+          "editable": true,
+          "required": false,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/ruang-merah-detail.webp",
+            "alt": "Tangan bersarung merah memegang bunga putih di atas kursi bioskop.",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        },
+        "sections.about.imageAlt": {
+          "type": "text",
+          "label": "Alt foto tentang",
+          "editable": true,
+          "required": false,
+          "maxLength": 240,
+          "default": "Tangan bersarung merah memegang bunga putih di atas kursi bioskop."
+        },
+        "sections.about.ctaLabel": {
+          "type": "text",
+          "label": "Tombol percakapan",
+          "editable": true,
+          "required": true,
+          "maxLength": 40,
+          "default": "Bicarakan sebuah cerita"
+        },
+        "sections.contact.heading": {
+          "type": "text",
+          "label": "Judul kontak",
+          "editable": true,
+          "required": true,
+          "maxLength": 100,
+          "default": "Untuk cerita\nberikutnya."
+        },
+        "sections.contact.description": {
+          "type": "textarea",
+          "label": "Pengantar kontak",
+          "editable": true,
+          "required": false,
+          "maxLength": 280,
+          "default": "Ruang untuk percakapan tentang film dan kemungkinan kolaborasi."
+        },
+        "sections.contact.emptyNotice": {
+          "type": "textarea",
+          "label": "Pesan kontak belum diisi",
+          "editable": true,
+          "required": false,
+          "maxLength": 260,
+          "default": "Kontak belum disetel. Alamat email dan tautan sosial dapat ditambahkan saat profil ini digunakan."
+        },
+        "sections.contact.demoNotice": {
+          "type": "textarea",
+          "label": "Catatan identitas contoh",
+          "editable": true,
+          "required": false,
+          "maxLength": 260,
+          "default": "Juna Aditya adalah identitas contoh. Informasi kontak belum terhubung ke penerima."
+        },
+        "sections.contact.ctaLabel": {
+          "type": "text",
+          "label": "Tombol kembali ke karya",
+          "editable": true,
+          "required": true,
+          "maxLength": 40,
+          "default": "Lihat karya film"
+        },
+        "sections.contact.emailLabel": {
+          "type": "text",
+          "label": "Label email",
+          "editable": true,
+          "required": true,
+          "maxLength": 40,
+          "default": "Email"
+        },
+        "sections.contact.phoneLabel": {
+          "type": "text",
+          "label": "Label telepon",
+          "editable": true,
+          "required": true,
+          "maxLength": 40,
+          "default": "Telepon"
+        },
+        "sections.contact.instagramLabel": {
+          "type": "text",
+          "label": "Label Instagram",
+          "editable": true,
+          "required": true,
+          "maxLength": 40,
+          "default": "Instagram"
+        },
+        "sections.contact.youtubeLabel": {
+          "type": "text",
+          "label": "Label YouTube",
+          "editable": true,
+          "required": true,
+          "maxLength": 40,
+          "default": "YouTube"
+        },
+        "contact.email": {
+          "type": "email",
+          "label": "Alamat email",
+          "editable": true,
+          "required": false,
+          "maxLength": 160,
+          "default": ""
+        },
+        "contact.phone": {
+          "type": "phone",
+          "label": "Nomor telepon",
+          "editable": true,
+          "required": false,
+          "maxLength": 30,
+          "default": ""
+        },
+        "social.instagram": {
+          "type": "url",
+          "label": "Tautan Instagram",
+          "editable": true,
+          "required": false,
+          "maxLength": 500,
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": ""
+        },
+        "social.youtube": {
+          "type": "url",
+          "label": "Tautan YouTube",
+          "editable": true,
+          "required": false,
+          "maxLength": 500,
+          "allowedProtocols": [
+            "https:"
+          ],
+          "default": ""
+        },
+        "sections.footer.note": {
+          "type": "text",
+          "label": "Label portofolio",
+          "editable": true,
+          "required": false,
+          "maxLength": 60,
+          "default": "Portofolio demo"
+        },
+        "sections.footer.menuNotice": {
+          "type": "textarea",
+          "label": "Catatan menu",
+          "editable": true,
+          "required": false,
+          "maxLength": 240,
+          "default": "Identitas, film, dan gambar adalah contoh."
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul SEO",
+          "editable": true,
+          "required": true,
+          "maxLength": 100,
+          "default": "Juna Aditya | Sutradara Film"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi SEO",
+          "editable": true,
+          "required": true,
+          "maxLength": 180,
+          "default": "Portofolio demo Juna Aditya. Jelajahi cerita, warna, dan frame dari lima konsep film pendek."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar berbagi sosial",
+          "editable": true,
+          "required": false,
+          "accept": [
+            "image/png",
+            "image/jpeg",
+            "image/webp"
+          ],
+          "maxFileSizeMB": 8,
+          "focalPoint": true,
+          "default": {
+            "src": "assets/ruang-merah.webp",
+            "alt": "Seorang perempuan di antara kursi bioskop berwarna merah.",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            }
+          }
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Identitas dan wordmark",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "business.name",
+            "business.tagline",
+            "business.logo",
+            "sections.hero.heading"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Karya film dan rangkaian frame",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.heading",
+            "sections.gallery.description",
+            "sections.gallery.emptyLabel",
+            "sections.gallery.previousLabel",
+            "sections.gallery.nextLabel",
+            "sections.gallery.directorLabel",
+            "sections.gallery.watchLabel",
+            "sections.gallery.demoNotice",
+            "sections.gallery.reelHeading",
+            "sections.gallery.reelDescription",
+            "sections.gallery.reelUrl",
+            "sections.gallery.reelPoster",
+            "sections.gallery.reelPosterAlt",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Tentang sutradara",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.heading",
+            "sections.about.body",
+            "sections.about.secondaryBody",
+            "sections.about.image",
+            "sections.about.imageAlt",
+            "sections.about.ctaLabel"
+          ]
+        },
+        {
+          "id": "contact",
+          "label": "Kontak dan sosial",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.contact.heading",
+            "sections.contact.description",
+            "sections.contact.emptyNotice",
+            "sections.contact.demoNotice",
+            "sections.contact.ctaLabel",
+            "sections.contact.emailLabel",
+            "sections.contact.phoneLabel",
+            "sections.contact.instagramLabel",
+            "sections.contact.youtubeLabel",
+            "contact.email",
+            "contact.phone",
+            "social.instagram",
+            "social.youtube"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Catatan portofolio",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.note",
+            "sections.footer.menuNotice"
+          ]
+        }
+      ],
+      "forms": [],
+      "publicPath": "/template-library/juna-aditya-film-001"
+    },
+    {
+      "pagiverseStandard": 1,
       "id": "kabar-studio-creative-001",
       "name": "KABAR STUDIO",
       "category": "agency",

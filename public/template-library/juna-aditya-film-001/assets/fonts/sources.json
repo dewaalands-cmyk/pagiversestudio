@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Inter",
+    "weight": 700,
+    "style": "normal",
+    "subset": "latin",
+    "file": "inter-latin-700-normal.woff2",
+    "bytes": 24356,
+    "sha256": "6f56409fd3d64bb85f7d070bce20749db2d66b6d63cec586cc22d1c761be2491",
+    "source": "https://cdn.jsdelivr.net/fontsource/fonts/inter@5.3.0/latin-700-normal.woff2",
+    "metadata": "https://api.fontsource.org/v1/fonts/inter",
+    "license": "SIL Open Font License 1.1",
+    "licenseSource": "https://raw.githubusercontent.com/rsms/inter/master/LICENSE.txt",
+    "licenseFile": "OFL.txt",
+    "licenseBytes": 4380,
+    "licenseSha256": "262481e844521b326f5ecd053e59b98c8b2da78c8ee1bdbb6e8174305e54935a",
+    "downloadedOn": "2026-10-21",
+    "protected": true
+  }
+]
