@@ -1,0 +1,912 @@
+{
+  "pagiverseStandard": 1,
+  "id": "sela-studio-design-001",
+  "name": "Sela Studio",
+  "category": "agency",
+  "description": "Template studio desain kreatif berbahasa Indonesia dengan kanvas abu-abu, tipografi editorial besar, kolase portfolio bergerak, dan galeri proyek. Brand, karya, dan kontak demo dapat diganti.",
+  "entry": "index.html",
+  "thumbnail": "thumbnail.webp",
+  "pages": [
+    {
+      "id": "home",
+      "path": "/",
+      "entry": "index.html",
+      "seo": {
+        "titleField": "seo.title",
+        "descriptionField": "seo.description"
+      }
+    }
+  ],
+  "dependencies": [],
+  "languages": {
+    "supported": ["id"],
+    "default": "id"
+  },
+  "theme": {
+    "supportsColorMode": false,
+    "defaultMode": "light",
+    "tokens": {
+      "primary": {
+        "editable": false,
+        "default": "#222222"
+      },
+      "secondary": {
+        "editable": false,
+        "default": "#333333"
+      },
+      "accent": {
+        "editable": false,
+        "default": "#000000"
+      },
+      "background": {
+        "editable": false,
+        "default": "#eeeeee"
+      },
+      "surface": {
+        "editable": false,
+        "default": "#ffffff"
+      },
+      "text": {
+        "editable": false,
+        "default": "#222222"
+      },
+      "muted": {
+        "editable": false,
+        "default": "#555555"
+      }
+    }
+  },
+  "navigation": {
+    "items": [
+      {
+        "id": "gallery",
+        "labelField": "navigation.gallery.label",
+        "target": "#karya",
+        "sectionId": "gallery",
+        "hideable": true
+      },
+      {
+        "id": "about",
+        "labelField": "navigation.about.label",
+        "target": "#studio",
+        "sectionId": "about",
+        "hideable": false
+      },
+      {
+        "id": "services",
+        "labelField": "navigation.services.label",
+        "target": "#layanan",
+        "sectionId": "services",
+        "hideable": true
+      },
+      {
+        "id": "process",
+        "labelField": "navigation.process.label",
+        "target": "#proses",
+        "sectionId": "process",
+        "hideable": true
+      },
+      {
+        "id": "contact",
+        "labelField": "navigation.contact.label",
+        "target": "#kontak",
+        "sectionId": "contact",
+        "hideable": false
+      }
+    ]
+  },
+  "fields": {
+    "business.name": {
+      "type": "text",
+      "label": "Nama studio",
+      "default": "Sela Studio",
+      "maxLength": 40,
+      "required": true
+    },
+    "business.tagline": {
+      "type": "text",
+      "label": "Tagline studio",
+      "default": "Ide berani. Bentuk berarti.",
+      "maxLength": 80,
+      "required": false
+    },
+    "business.logo": {
+      "type": "image",
+      "label": "Logo studio",
+      "required": false,
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/avif",
+        "image/svg+xml"
+      ],
+      "maxFileSizeMB": 6,
+      "focalPoint": true,
+      "crop": true,
+      "allowedProtocols": ["https:"],
+      "default": ""
+    },
+    "contact.email": {
+      "type": "email",
+      "label": "Email studio (contoh, ganti sebelum digunakan)",
+      "default": "hello@sela.example",
+      "maxLength": 120,
+      "required": false
+    },
+    "seo.title": {
+      "type": "text",
+      "label": "Judul SEO",
+      "default": "Sela Studio — Studio Desain Independen",
+      "maxLength": 70,
+      "required": true
+    },
+    "seo.description": {
+      "type": "textarea",
+      "label": "Deskripsi SEO",
+      "default": "Sela Studio merangkai strategi, identitas, dan pengalaman digital. Jelajahi karya pilihan studio desain independen ini. Brand dan proyek demo.",
+      "maxLength": 160,
+      "required": true
+    },
+    "seo.ogImage": {
+      "type": "image",
+      "label": "Gambar berbagi sosial",
+      "required": false,
+      "accept": [
+        "image/png",
+        "image/jpeg",
+        "image/webp",
+        "image/avif",
+        "image/svg+xml"
+      ],
+      "maxFileSizeMB": 6,
+      "focalPoint": true,
+      "crop": true,
+      "allowedProtocols": ["https:"],
+      "default": {
+        "src": "assets/images/ruang-rasa.webp",
+        "alt": "Eksplorasi identitas Ruang Rasa",
+        "focalPoint": {
+          "x": 50,
+          "y": 50
+        },
+        "crop": "cover"
+      }
+    },
+    "navigation.gallery.label": {
+      "type": "text",
+      "label": "Navigasi Karya",
+      "default": "Karya",
+      "maxLength": 24,
+      "required": true
+    },
+    "navigation.about.label": {
+      "type": "text",
+      "label": "Navigasi Studio",
+      "default": "Studio",
+      "maxLength": 24,
+      "required": true
+    },
+    "navigation.services.label": {
+      "type": "text",
+      "label": "Navigasi Layanan",
+      "default": "Layanan",
+      "maxLength": 24,
+      "required": true
+    },
+    "navigation.process.label": {
+      "type": "text",
+      "label": "Navigasi Proses",
+      "default": "Proses",
+      "maxLength": 24,
+      "required": true
+    },
+    "navigation.contact.label": {
+      "type": "text",
+      "label": "Navigasi Mulai percakapan",
+      "default": "Mulai percakapan",
+      "maxLength": 24,
+      "required": true
+    },
+    "navigation.menuLabel": {
+      "type": "text",
+      "label": "Tombol menu",
+      "default": "Menu",
+      "maxLength": 16,
+      "required": false
+    },
+    "navigation.closeLabel": {
+      "type": "text",
+      "label": "Tutup navigasi",
+      "default": "Tutup",
+      "maxLength": 16,
+      "required": false
+    },
+    "sections.hero.eyebrow": {
+      "type": "text",
+      "label": "Pengantar hero",
+      "default": "Studio desain independen",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.hero.heading": {
+      "type": "text",
+      "label": "Judul hero",
+      "default": "Ide berani.\nBentuk berarti.",
+      "maxLength": 36,
+      "required": true
+    },
+    "sections.hero.description": {
+      "type": "textarea",
+      "label": "Deskripsi hero",
+      "default": "Kami merangkai strategi, identitas, dan pengalaman digital menjadi karya yang terasa berbeda.",
+      "maxLength": 180,
+      "required": true
+    },
+    "sections.hero.primaryCta.label": {
+      "type": "text",
+      "label": "Tautan karya hero",
+      "default": "Jelajahi karya",
+      "maxLength": 26,
+      "required": false
+    },
+    "sections.hero.motionPauseLabel": {
+      "type": "text",
+      "label": "Jeda animasi",
+      "default": "Jeda gerak",
+      "maxLength": 20,
+      "required": false
+    },
+    "sections.hero.motionPlayLabel": {
+      "type": "text",
+      "label": "Putar animasi",
+      "default": "Putar gerak",
+      "maxLength": 20,
+      "required": false
+    },
+    "sections.hero.galleryLabel": {
+      "type": "text",
+      "label": "Label kolase karya",
+      "default": "Pilihan karya studio",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.gallery.eyebrow": {
+      "type": "text",
+      "label": "Pengantar karya",
+      "default": "01 — Karya pilihan",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.gallery.heading": {
+      "type": "text",
+      "label": "Judul karya",
+      "default": "Karya yang\nberbicara.",
+      "maxLength": 48,
+      "required": true
+    },
+    "sections.gallery.description": {
+      "type": "textarea",
+      "label": "Deskripsi karya",
+      "default": "Setiap proyek dimulai dari pertanyaan yang berbeda. Inilah sebagian cara kami menjawabnya. Semua proyek di sini adalah contoh demo.",
+      "maxLength": 230,
+      "required": false
+    },
+    "sections.gallery.projectLabel": {
+      "type": "text",
+      "label": "Tombol detail karya",
+      "default": "Lihat proyek",
+      "maxLength": 24,
+      "required": false
+    },
+    "sections.gallery.closeLabel": {
+      "type": "text",
+      "label": "Tutup detail karya",
+      "default": "Tutup proyek",
+      "maxLength": 24,
+      "required": false
+    },
+    "sections.gallery.emptyLabel": {
+      "type": "text",
+      "label": "Galeri kosong",
+      "default": "Belum ada karya untuk pilihan ini.",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.gallery.filterAll": {
+      "type": "text",
+      "label": "Filter Semua",
+      "default": "Semua",
+      "maxLength": 22,
+      "required": false
+    },
+    "sections.gallery.filterBranding": {
+      "type": "text",
+      "label": "Filter Branding",
+      "default": "Branding",
+      "maxLength": 22,
+      "required": false
+    },
+    "sections.gallery.filterDigital": {
+      "type": "text",
+      "label": "Filter Digital",
+      "default": "Digital",
+      "maxLength": 22,
+      "required": false
+    },
+    "sections.gallery.filterArtDirection": {
+      "type": "text",
+      "label": "Filter Art direction",
+      "default": "Art direction",
+      "maxLength": 22,
+      "required": false
+    },
+    "sections.gallery.items": {
+      "type": "array",
+      "label": "Karya studio (demo, dapat diganti)",
+      "minItems": 0,
+      "maxItems": 12,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Nama proyek",
+            "required": true,
+            "maxLength": 48
+          },
+          "category": {
+            "type": "select",
+            "label": "Disiplin",
+            "options": ["Branding", "Digital", "Art direction"],
+            "required": true
+          },
+          "year": {
+            "type": "text",
+            "label": "Tahun",
+            "maxLength": 4
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Cerita proyek",
+            "maxLength": 500
+          },
+          "image": {
+            "type": "image",
+            "label": "Gambar proyek",
+            "required": true,
+            "accept": ["image/png", "image/jpeg", "image/webp", "image/avif"],
+            "maxFileSizeMB": 6,
+            "focalPoint": true,
+            "crop": true,
+            "allowedProtocols": ["https:"]
+          }
+        }
+      },
+      "default": [
+        {
+          "title": "Ruang Rasa",
+          "category": "Branding",
+          "year": "2026",
+          "description": "Contoh proyek: identitas untuk merek makanan yang merayakan rasa lokal. Bentuk sederhana, warna hangat, dan tipografi yang dekat menghadirkan karakter pada setiap kemasan.",
+          "image": {
+            "src": "assets/images/ruang-rasa.webp",
+            "alt": "Kemasan identitas Ruang Rasa dalam palet oranye",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "cover"
+          }
+        },
+        {
+          "title": "Forma",
+          "category": "Digital",
+          "year": "2026",
+          "description": "Contoh proyek: pengalaman digital untuk galeri objek kontemporer. Ruang yang tenang dan komposisi tegas memberi setiap karya tempat untuk berbicara.",
+          "image": {
+            "src": "assets/images/forma.webp",
+            "alt": "Eksplorasi digital Forma dengan objek krom dan biru kobalt",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "cover"
+          }
+        },
+        {
+          "title": "Titik Temu",
+          "category": "Art direction",
+          "year": "2026",
+          "description": "Contoh proyek: arah visual untuk pertemuan lintas disiplin kreatif. Ritme tipografi dan warna lime mengubah gagasan bersama menjadi bahasa yang terbuka.",
+          "image": {
+            "src": "assets/images/titik-temu.webp",
+            "alt": "Eksplorasi poster tipografi Titik Temu berwarna lime",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "cover"
+          }
+        },
+        {
+          "title": "Antara",
+          "category": "Art direction",
+          "year": "2026",
+          "description": "Contoh proyek: studi bentuk tiga dimensi tentang ruang di antara benda. Permukaan, cahaya, dan warna merah muda membangun suasana yang terasa tak terduga.",
+          "image": {
+            "src": "assets/images/antara.webp",
+            "alt": "Eksplorasi objek tiga dimensi Antara dalam warna merah muda",
+            "focalPoint": {
+              "x": 50,
+              "y": 50
+            },
+            "crop": "cover"
+          }
+        }
+      ]
+    },
+    "sections.about.eyebrow": {
+      "type": "text",
+      "label": "Pengantar studio",
+      "default": "02 — Tentang Sela",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.about.heading": {
+      "type": "text",
+      "label": "Judul studio",
+      "default": "Ruang untuk\nsudut pandang baru.",
+      "maxLength": 64,
+      "required": true
+    },
+    "sections.about.body": {
+      "type": "textarea",
+      "label": "Cerita studio",
+      "default": "Kami percaya desain yang baik memberi ruang untuk melihat dengan cara berbeda. Sela adalah studio independen yang bekerja dekat dengan orang-orang di balik sebuah gagasan — mencari inti ceritanya, lalu memberinya bentuk yang tepat.",
+      "maxLength": 500,
+      "required": true
+    },
+    "sections.about.note": {
+      "type": "text",
+      "label": "Catatan studio",
+      "default": "Kolaborasi kecil. Gagasan besar.",
+      "maxLength": 80,
+      "required": false
+    },
+    "sections.services.eyebrow": {
+      "type": "text",
+      "label": "Pengantar layanan",
+      "default": "03 — Yang kami kerjakan",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.services.heading": {
+      "type": "text",
+      "label": "Judul layanan",
+      "default": "Dari gagasan,\nke pengalaman.",
+      "maxLength": 56,
+      "required": true
+    },
+    "sections.services.description": {
+      "type": "textarea",
+      "label": "Deskripsi layanan",
+      "default": "Satu cara berpikir. Banyak kemungkinan bentuk.",
+      "maxLength": 180,
+      "required": false
+    },
+    "sections.services.items": {
+      "type": "array",
+      "label": "Layanan studio",
+      "minItems": 0,
+      "maxItems": 8,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Nama layanan",
+            "required": true,
+            "maxLength": 48
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi layanan",
+            "required": true,
+            "maxLength": 300
+          }
+        }
+      },
+      "default": [
+        {
+          "title": "Strategi & identitas",
+          "description": "Menemukan inti sebuah merek, merangkai posisinya, dan membangun identitas visual yang terasa utuh — dari logo hingga setiap titik pertemuan."
+        },
+        {
+          "title": "Website & digital",
+          "description": "Menerjemahkan karakter merek menjadi pengalaman digital yang jernih, responsif, dan menyenangkan untuk dijelajahi."
+        },
+        {
+          "title": "Art direction",
+          "description": "Menyatukan konsep, gambar, tipografi, dan gerak ke dalam sebuah bahasa visual untuk kampanye, publikasi, dan ruang kreatif."
+        }
+      ]
+    },
+    "sections.process.eyebrow": {
+      "type": "text",
+      "label": "Pengantar proses",
+      "default": "04 — Cara kami bekerja",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.process.heading": {
+      "type": "text",
+      "label": "Judul proses",
+      "default": "Terbuka sejak\nlangkah pertama.",
+      "maxLength": 56,
+      "required": true
+    },
+    "sections.process.items": {
+      "type": "array",
+      "label": "Tahapan kerja",
+      "minItems": 0,
+      "maxItems": 6,
+      "item": {
+        "fields": {
+          "title": {
+            "type": "text",
+            "label": "Nama tahap",
+            "required": true,
+            "maxLength": 32
+          },
+          "description": {
+            "type": "textarea",
+            "label": "Deskripsi tahap",
+            "required": true,
+            "maxLength": 220
+          }
+        }
+      },
+      "default": [
+        {
+          "title": "Kenali",
+          "description": "Kami mulai dengan percakapan. Memahami cerita, kebutuhan, dan apa yang ingin dicapai bersama."
+        },
+        {
+          "title": "Eksplorasi",
+          "description": "Kami membuka berbagai kemungkinan, menguji arah, dan menyempurnakan gagasan melalui dialog."
+        },
+        {
+          "title": "Wujudkan",
+          "description": "Kami merapikan detail, menyiapkan hasil akhir, dan memastikan setiap bagian siap digunakan."
+        }
+      ]
+    },
+    "sections.contact.eyebrow": {
+      "type": "text",
+      "label": "Pengantar kontak",
+      "default": "05 — Mulai sesuatu",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.contact.heading": {
+      "type": "text",
+      "label": "Judul kontak",
+      "default": "Ada ide?\nBeri ia ruang.",
+      "maxLength": 40,
+      "required": true
+    },
+    "sections.contact.description": {
+      "type": "textarea",
+      "label": "Deskripsi kontak",
+      "default": "Ceritakan yang sedang kamu bayangkan. Kita bisa mulai dari sana.",
+      "maxLength": 200,
+      "required": false
+    },
+    "sections.contact.nameLabel": {
+      "type": "text",
+      "label": "Nama",
+      "default": "Nama",
+      "maxLength": 44,
+      "required": false
+    },
+    "sections.contact.emailLabel": {
+      "type": "text",
+      "label": "Pengantar alamat email",
+      "default": "Email",
+      "maxLength": 60,
+      "required": false
+    },
+    "sections.contact.projectLabel": {
+      "type": "text",
+      "label": "Tentang proyek",
+      "default": "Tentang proyek",
+      "maxLength": 44,
+      "required": false
+    },
+    "sections.contact.messageLabel": {
+      "type": "text",
+      "label": "Ceritakan idemu",
+      "default": "Ceritakan idemu",
+      "maxLength": 44,
+      "required": false
+    },
+    "sections.contact.submitLabel": {
+      "type": "text",
+      "label": "Siapkan brief",
+      "default": "Siapkan brief",
+      "maxLength": 44,
+      "required": false
+    },
+    "sections.contact.downloadLabel": {
+      "type": "text",
+      "label": "Unduh brief",
+      "default": "Unduh brief",
+      "maxLength": 44,
+      "required": false
+    },
+    "sections.contact.resultHeading": {
+      "type": "text",
+      "label": "Brief kamu sudah siap.",
+      "default": "Brief kamu sudah siap.",
+      "maxLength": 44,
+      "required": false
+    },
+    "sections.contact.namePlaceholder": {
+      "type": "text",
+      "label": "Placeholder namePlaceholder",
+      "default": "Nama lengkapmu",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.emailPlaceholder": {
+      "type": "text",
+      "label": "Placeholder emailPlaceholder",
+      "default": "nama@email.com",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.projectPlaceholder": {
+      "type": "text",
+      "label": "Placeholder projectPlaceholder",
+      "default": "Nama merek atau proyek",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.messagePlaceholder": {
+      "type": "text",
+      "label": "Placeholder messagePlaceholder",
+      "default": "Apa yang ingin kamu wujudkan?",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.contact.demoNote": {
+      "type": "text",
+      "label": "Penjelasan mode demo",
+      "default": "Mode demo: brief disiapkan di perangkatmu dan belum dikirim.",
+      "maxLength": 180,
+      "required": false
+    },
+    "sections.footer.copyright": {
+      "type": "text",
+      "label": "Hak cipta",
+      "default": "© 2026 Sela Studio",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.footer.demoNotice": {
+      "type": "text",
+      "label": "Keterangan demo",
+      "default": "Brand, proyek, dan kontak demo — siap diganti dengan ceritamu.",
+      "maxLength": 160,
+      "required": false
+    },
+    "sections.footer.backToTop": {
+      "type": "text",
+      "label": "Kembali ke atas",
+      "default": "Kembali ke atas",
+      "maxLength": 28,
+      "required": false
+    },
+    "sections.gallery.demoLabel": {
+      "type": "text",
+      "label": "Label karya demo",
+      "default": "Eksplorasi terpilih / 2026",
+      "maxLength": 60,
+      "required": false
+    },
+    "sections.gallery.projectDemoNote": {
+      "type": "text",
+      "label": "Keterangan proyek demo",
+      "default": "Proyek konsep untuk keperluan demonstrasi template.",
+      "maxLength": 160,
+      "required": false
+    },
+    "sections.contact.emailNote": {
+      "type": "text",
+      "label": "Catatan email demo",
+      "default": "Alamat contoh — ganti dengan email studiomu.",
+      "maxLength": 120,
+      "required": false
+    },
+    "sections.footer.note": {
+      "type": "text",
+      "label": "Catatan footer",
+      "default": "Selalu ada ruang untuk ide yang baik.",
+      "maxLength": 100,
+      "required": false
+    },
+    "sections.hero.scrollLabel": {
+      "type": "text",
+      "label": "Petunjuk gulir",
+      "default": "GULIR UNTUK MENJELAJAH ↓",
+      "maxLength": 48,
+      "required": false
+    },
+    "sections.footer.signature": {
+      "type": "text",
+      "label": "Tanda tangan footer",
+      "default": "DESIGNED TO FEEL DIFFERENT.",
+      "maxLength": 60,
+      "required": false
+    }
+  },
+  "sections": [
+    {
+      "id": "hero",
+      "label": "Hero",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.hero.eyebrow",
+        "sections.hero.heading",
+        "sections.hero.description",
+        "sections.hero.primaryCta.label",
+        "sections.hero.motionPauseLabel",
+        "sections.hero.motionPlayLabel",
+        "sections.hero.galleryLabel",
+        "sections.hero.scrollLabel"
+      ]
+    },
+    {
+      "id": "gallery",
+      "label": "Karya",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.gallery.eyebrow",
+        "sections.gallery.heading",
+        "sections.gallery.description",
+        "sections.gallery.projectLabel",
+        "sections.gallery.closeLabel",
+        "sections.gallery.emptyLabel",
+        "sections.gallery.filterAll",
+        "sections.gallery.filterBranding",
+        "sections.gallery.filterDigital",
+        "sections.gallery.filterArtDirection",
+        "sections.gallery.items",
+        "sections.gallery.demoLabel",
+        "sections.gallery.projectDemoNote"
+      ]
+    },
+    {
+      "id": "about",
+      "label": "Studio",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.about.eyebrow",
+        "sections.about.heading",
+        "sections.about.body",
+        "sections.about.note"
+      ]
+    },
+    {
+      "id": "services",
+      "label": "Layanan",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.services.eyebrow",
+        "sections.services.heading",
+        "sections.services.description",
+        "sections.services.items"
+      ]
+    },
+    {
+      "id": "process",
+      "label": "Proses",
+      "required": false,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.process.eyebrow",
+        "sections.process.heading",
+        "sections.process.items"
+      ]
+    },
+    {
+      "id": "contact",
+      "label": "Kontak",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.contact.eyebrow",
+        "sections.contact.heading",
+        "sections.contact.description",
+        "sections.contact.nameLabel",
+        "sections.contact.emailLabel",
+        "sections.contact.projectLabel",
+        "sections.contact.messageLabel",
+        "sections.contact.submitLabel",
+        "sections.contact.downloadLabel",
+        "sections.contact.resultHeading",
+        "sections.contact.namePlaceholder",
+        "sections.contact.emailPlaceholder",
+        "sections.contact.projectPlaceholder",
+        "sections.contact.messagePlaceholder",
+        "sections.contact.demoNote",
+        "sections.contact.emailNote"
+      ]
+    },
+    {
+      "id": "footer",
+      "label": "Footer",
+      "required": true,
+      "visibleByDefault": true,
+      "fields": [
+        "sections.footer.copyright",
+        "sections.footer.demoNotice",
+        "sections.footer.backToTop",
+        "sections.footer.note",
+        "sections.footer.signature"
+      ]
+    }
+  ],
+  "forms": [
+    {
+      "id": "project-brief",
+      "label": "Brief proyek",
+      "provider": "pagiverse-core",
+      "ownership": "Template owns presentation and browser-local demo summary; Pagiverse Core owns real submission, server validation, anti-spam, storage, and integrations.",
+      "demoFallback": {
+        "mode": "local-summary-download",
+        "delivery": false,
+        "description": "Prepares and downloads a text brief in this browser. It does not send any message or store data on a server."
+      },
+      "fields": [
+        {
+          "name": "name",
+          "type": "text",
+          "required": true,
+          "maxLength": 80,
+          "labelField": "sections.contact.nameLabel"
+        },
+        {
+          "name": "email",
+          "type": "email",
+          "required": true,
+          "maxLength": 120,
+          "labelField": "sections.contact.emailLabel"
+        },
+        {
+          "name": "project",
+          "type": "text",
+          "required": true,
+          "maxLength": 120,
+          "labelField": "sections.contact.projectLabel"
+        },
+        {
+          "name": "message",
+          "type": "textarea",
+          "required": true,
+          "maxLength": 1600,
+          "labelField": "sections.contact.messageLabel"
+        }
+      ]
+    }
+  ],
+  "design": {
+    "protectedFonts": ["Inter", "Inter Tight"],
+    "protectedAssets": ["assets/fonts/"],
+    "motion": "Floating portfolio collage; manually pausable and disabled for reduced motion.",
+    "shape": "4px image tiles and compact controls, 8px standard buttons; follows supplied Studio.Design tokens."
+  }
+}

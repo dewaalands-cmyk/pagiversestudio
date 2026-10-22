@@ -1,0 +1,443 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sela Studio — Ide berani. Bentuk berarti.</title>
+    <meta
+      name="description"
+      content="Studio desain independen untuk strategi, identitas visual, dan pengalaman digital. Jelajahi karya pilihan Sela Studio."
+    />
+    <meta
+      property="og:title"
+      content="Sela Studio — Ide berani. Bentuk berarti."
+    />
+    <meta
+      property="og:description"
+      content="Studio desain independen untuk identitas dan pengalaman digital."
+    />
+    <meta property="og:image" content="thumbnail.webp" />
+    <meta name="theme-color" content="#eeeeee" />
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/inter-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="assets/tokens.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#utama">Lewati ke konten</a>
+    <header class="site-header">
+      <a class="brand" href="#utama" aria-label="Sela Studio — beranda"
+        ><img
+          data-bind-src="business.logo"
+          alt=""
+          hidden
+          width="170"
+          height="44"
+        /><span data-brand-fallback data-bind="business.name">Sela Studio</span
+        ><span class="brand-dot" aria-hidden="true">*</span></a
+      >
+      <button
+        class="menu-toggle"
+        type="button"
+        data-menu-toggle
+        aria-expanded="false"
+        aria-controls="studio-navigation"
+      >
+        <span data-bind="navigation.menuLabel">Menu</span
+        ><span aria-hidden="true">+</span>
+      </button>
+      <nav
+        id="studio-navigation"
+        class="site-nav"
+        data-navigation
+        aria-label="Navigasi utama"
+      >
+        <a
+          href="#karya"
+          data-nav-section="gallery"
+          data-bind="navigation.gallery.label"
+          >Karya</a
+        ><a href="#studio" data-bind="navigation.about.label">Studio</a
+        ><a
+          href="#layanan"
+          data-nav-section="services"
+          data-bind="navigation.services.label"
+          >Layanan</a
+        ><a
+          href="#proses"
+          data-nav-section="process"
+          data-bind="navigation.process.label"
+          >Proses</a
+        ><a class="nav-contact" href="#kontak"
+          ><span data-bind="navigation.contact.label">Mulai percakapan</span
+          ><span aria-hidden="true">↗</span></a
+        >
+      </nav>
+    </header>
+    <main id="utama">
+      <section class="hero" data-section="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow" data-bind="sections.hero.eyebrow">
+            Studio desain independen
+          </p>
+          <h1 id="hero-title" data-bind="sections.hero.heading">
+            Ide berani. Bentuk berarti.
+          </h1>
+        </div>
+        <div
+          class="hero-collage"
+          data-collection="sections.gallery.items"
+          data-collection-kind="collage"
+          aria-label="Kolase karya pilihan"
+          data-bind-aria-label="sections.hero.galleryLabel"
+        ></div>
+        <div class="hero-bottom">
+          <a class="button dark" href="#karya" data-hero-gallery-link
+            ><span data-bind="sections.hero.primaryCta.label"
+              >Jelajahi karya</span
+            ><span aria-hidden="true">↘</span></a
+          >
+          <p class="hero-description" data-bind="sections.hero.description">
+            Kami merangkai strategi, identitas, dan pengalaman digital menjadi
+            karya yang terasa berbeda.
+          </p>
+        </div>
+        <div class="hero-rail">
+          <span data-bind="sections.hero.scrollLabel">SCROLL TO EXPLORE ↓</span
+          ><button
+            class="motion-control"
+            data-motion-toggle
+            type="button"
+            aria-pressed="false"
+          >
+            <span class="pause-icon" aria-hidden="true">Ⅱ</span
+            ><span data-motion-label>Jeda gerak</span>
+          </button>
+        </div>
+      </section>
+      <section
+        id="karya"
+        class="work-section section"
+        data-section="gallery"
+        aria-labelledby="work-title"
+      >
+        <div class="section-kicker">
+          <p class="eyebrow" data-bind="sections.gallery.eyebrow">
+            01 — Karya pilihan
+          </p>
+          <span class="work-count" data-work-count>04</span>
+        </div>
+        <div class="work-intro">
+          <h2 id="work-title" data-bind="sections.gallery.heading">
+            Karya yang berbicara.
+          </h2>
+          <p data-bind="sections.gallery.description">
+            Beragam bentuk, satu benang merah: gagasan yang punya alasan untuk
+            hadir.
+          </p>
+        </div>
+        <div class="filter-row" role="group" aria-label="Filter karya">
+          <button
+            type="button"
+            class="filter"
+            data-filter="Semua"
+            aria-pressed="true"
+            data-bind="sections.gallery.filterAll"
+          >
+            Semua</button
+          ><button
+            type="button"
+            class="filter"
+            data-filter="Branding"
+            aria-pressed="false"
+            data-bind="sections.gallery.filterBranding"
+          >
+            Branding</button
+          ><button
+            type="button"
+            class="filter"
+            data-filter="Digital"
+            aria-pressed="false"
+            data-bind="sections.gallery.filterDigital"
+          >
+            Digital</button
+          ><button
+            type="button"
+            class="filter"
+            data-filter="Art direction"
+            aria-pressed="false"
+            data-bind="sections.gallery.filterArtDirection"
+          >
+            Art direction</button
+          ><span class="filter-note" data-bind="sections.gallery.demoLabel"
+            >Eksplorasi terpilih / 2026</span
+          >
+        </div>
+        <div
+          class="work-grid"
+          data-collection="sections.gallery.items"
+          data-collection-kind="gallery"
+        ></div>
+        <p
+          class="empty-message"
+          data-gallery-empty
+          hidden
+          data-bind="sections.gallery.emptyLabel"
+        >
+          Belum ada karya pada kategori ini.
+        </p>
+      </section>
+      <section
+        id="studio"
+        class="about-section section"
+        data-section="about"
+        aria-labelledby="about-title"
+      >
+        <p class="eyebrow" data-bind="sections.about.eyebrow">
+          02 — Tentang studio
+        </p>
+        <div class="about-grid">
+          <h2 id="about-title" data-bind="sections.about.heading">
+            Ruang untuk sudut pandang baru.
+          </h2>
+          <div class="about-copy">
+            <p class="about-body" data-bind="sections.about.body">
+              Sela adalah ruang di antara gagasan dan bentuk. Kami bekerja
+              bersama brand yang percaya bahwa desain bukan sekadar tampilan,
+              melainkan cara membangun hubungan yang berarti.
+            </p>
+            <p data-bind="sections.about.note">
+              Kolaborasi kecil. Gagasan besar.
+            </p>
+          </div>
+        </div>
+        <div class="studio-signature">
+          <span class="asterisk" aria-hidden="true">✳</span
+          ><span data-bind="business.tagline"
+            >Sudut pandang baru, kemungkinan baru.</span
+          ><span class="studio-index" aria-hidden="true"
+            >SELA / INDEPENDENT BY DESIGN</span
+          >
+        </div>
+      </section>
+      <section
+        id="layanan"
+        class="services-section section"
+        data-section="services"
+        aria-labelledby="services-title"
+      >
+        <div class="section-kicker">
+          <p class="eyebrow" data-bind="sections.services.eyebrow">
+            03 — Yang kami kerjakan
+          </p>
+          <span aria-hidden="true">↙</span>
+        </div>
+        <div class="services-intro">
+          <h2 id="services-title" data-bind="sections.services.heading">
+            Dari gagasan. Sampai terasa.
+          </h2>
+          <p data-bind="sections.services.description">
+            Kami melihat gambaran besar, lalu memberi perhatian penuh pada
+            setiap detailnya.
+          </p>
+        </div>
+        <div
+          class="services-list"
+          data-collection="sections.services.items"
+          data-collection-kind="services"
+        ></div>
+      </section>
+      <section
+        id="proses"
+        class="process-section section"
+        data-section="process"
+        aria-labelledby="process-title"
+      >
+        <div class="section-kicker">
+          <p class="eyebrow" data-bind="sections.process.eyebrow">
+            04 — Cara kami bekerja
+          </p>
+        </div>
+        <h2 id="process-title" data-bind="sections.process.heading">
+          Berangkat dari rasa ingin tahu.
+        </h2>
+        <ol
+          class="process-list"
+          data-collection="sections.process.items"
+          data-collection-kind="process"
+        ></ol>
+      </section>
+      <section
+        id="kontak"
+        class="contact-section section"
+        data-section="contact"
+        aria-labelledby="contact-title"
+      >
+        <div class="section-kicker">
+          <p class="eyebrow" data-bind="sections.contact.eyebrow">
+            05 — Proyek berikutnya
+          </p>
+          <span aria-hidden="true">↗</span>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <h2 id="contact-title" data-bind="sections.contact.heading">
+              Ada ide? Beri ia ruang.
+            </h2>
+            <p data-bind="sections.contact.description">
+              Ceritakan apa yang sedang kamu bayangkan. Kita mulai dari sana.
+            </p>
+            <div class="contact-address">
+              <span data-bind="contact.email">hello@sela.example</span
+              ><small data-bind="sections.contact.emailNote"
+                >Alamat contoh — ganti dengan email studiomu.</small
+              >
+            </div>
+          </div>
+          <form data-pagiverse-form="project-brief" novalidate>
+            <div class="form-pair">
+              <div class="form-field">
+                <label for="brief-name" data-bind="sections.contact.nameLabel"
+                  >Nama</label
+                ><input
+                  id="brief-name"
+                  data-bind-placeholder="sections.contact.namePlaceholder"
+                  name="name"
+                  type="text"
+                  maxlength="80"
+                  autocomplete="name"
+                  required
+                  aria-describedby="brief-name-error"
+                /><span id="brief-name-error" class="field-error"></span>
+              </div>
+              <div class="form-field">
+                <label for="brief-email" data-bind="sections.contact.emailLabel"
+                  >Email</label
+                ><input
+                  id="brief-email"
+                  data-bind-placeholder="sections.contact.emailPlaceholder"
+                  name="email"
+                  type="email"
+                  maxlength="120"
+                  autocomplete="email"
+                  required
+                  aria-describedby="brief-email-error"
+                /><span id="brief-email-error" class="field-error"></span>
+              </div>
+            </div>
+            <div class="form-field">
+              <label
+                for="brief-project"
+                data-bind="sections.contact.projectLabel"
+                >Nama brand / proyek</label
+              ><input
+                id="brief-project"
+                data-bind-placeholder="sections.contact.projectPlaceholder"
+                name="project"
+                type="text"
+                maxlength="120"
+                required
+                aria-describedby="brief-project-error"
+              /><span id="brief-project-error" class="field-error"></span>
+            </div>
+            <div class="form-field">
+              <label
+                for="brief-message"
+                data-bind="sections.contact.messageLabel"
+                >Sedikit tentang idemu</label
+              ><textarea
+                id="brief-message"
+                data-bind-placeholder="sections.contact.messagePlaceholder"
+                name="message"
+                rows="3"
+                maxlength="1600"
+                required
+                aria-describedby="brief-message-error"
+              ></textarea
+              ><span id="brief-message-error" class="field-error"></span>
+            </div>
+            <button class="button dark form-submit" type="submit">
+              <span data-bind="sections.contact.submitLabel">Siapkan brief</span
+              ><span aria-hidden="true">↗</span>
+            </button>
+            <p class="form-note" data-bind="sections.contact.demoNote">
+              Mode demo: brief disiapkan di perangkatmu dan belum dikirim.
+            </p>
+            <p role="status" data-form-status class="form-status"></p>
+            <div class="brief-result" data-brief-result hidden>
+              <h3 data-bind="sections.contact.resultHeading">
+                Brief kamu siap.
+              </h3>
+              <pre data-brief-summary></pre>
+              <button
+                type="button"
+                class="button outline"
+                data-brief-download
+                data-bind="sections.contact.downloadLabel"
+              >
+                Unduh brief
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer section" data-section="footer">
+      <div class="footer-top">
+        <p data-bind="sections.footer.note">
+          Selalu ada ruang untuk ide yang baik.
+        </p>
+        <a href="#utama" class="back-top"
+          ><span data-bind="sections.footer.backToTop">Kembali ke atas</span
+          ><span aria-hidden="true">↑</span></a
+        >
+      </div>
+      <div class="footer-wordmark" data-bind="business.name" aria-hidden="true">
+        Sela Studio
+      </div>
+      <div class="footer-bottom">
+        <p data-bind="sections.footer.copyright">© 2026 Sela Studio</p>
+        <p data-bind="sections.footer.demoNotice">
+          Template demo. Seluruh proyek dan identitas bersifat contoh.
+        </p>
+        <span data-bind="sections.footer.signature"
+          >DESIGNED TO FEEL DIFFERENT.</span
+        >
+      </div>
+    </footer>
+    <dialog
+      class="project-dialog"
+      data-project-dialog
+      aria-labelledby="project-title"
+    >
+      <div class="dialog-top">
+        <p data-project-category></p>
+        <button type="button" class="dialog-close" data-dialog-close>
+          <span data-bind="sections.gallery.closeLabel">Tutup</span
+          ><span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <img
+        data-project-image
+        src="assets/images/ruang-rasa.webp"
+        alt=""
+        width="1400"
+        height="1000"
+      />
+      <div class="dialog-body">
+        <h2 id="project-title" data-project-title></h2>
+        <p data-project-description></p>
+        <p class="dialog-note" data-bind="sections.gallery.projectDemoNote">
+          Proyek konsep untuk keperluan demonstrasi template.
+        </p>
+      </div>
+    </dialog>
+  </body>
+</html>
