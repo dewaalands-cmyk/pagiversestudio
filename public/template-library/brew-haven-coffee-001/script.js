@@ -41,6 +41,14 @@
     for(const section of schema.sections){const n=$(`[data-section="${section.id}"]`);if(n)n.hidden=!section.required && (get(`sectionVisibility.${section.id}`) ?? section.visibleByDefault)===false;}
     for(const [name,token]of Object.entries(schema.theme.tokens)){const v=token.editable?(get(`theme.${name}`)??token.default):token.default;if(/^#[0-9a-f]{6}$/i.test(v))document.documentElement.style.setProperty(`--${name}`,v);}
     document.querySelectorAll('[data-nav]').forEach(n=>{const item=schema.navigation.items.find(x=>x.id===n.dataset.nav);if(item){n.textContent=text(item.labelField);n.hidden=!!item.section&&$(`[data-section="${item.section}"]`)?.hidden;}});
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      const target=document.getElementById(link.getAttribute('href').slice(1));
+      const section=target?.closest('[data-section]');
+      if(!section)return;
+      const item=schema.navigation.items.find(entry=>entry.target===link.getAttribute('href'));
+      const hiddenByNavigation=item?.hideable&&(get(`navigation.${item.id}.hidden`)===true||get(`navigation.${item.id}.visible`)===false||get(`navigation.items.${item.id}.visible`)===false);
+      link.hidden=section.hidden||hiddenByNavigation;
+    });
     document.querySelectorAll('[data-list]').forEach(n=>{
       const items=array(n.dataset.list);n.replaceChildren();
       items.forEach((item,i)=>{

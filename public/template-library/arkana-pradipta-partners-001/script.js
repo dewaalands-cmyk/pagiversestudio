@@ -229,11 +229,13 @@
   }
 
   function applyVisibility() {
-    const visibility = state.data.sectionVisibility;
-    if (!visibility || typeof visibility !== "object") return;
-    Object.entries(visibility).forEach(([sectionId, visible]) => {
-      document.querySelectorAll(`[data-section="${sectionId}"]`).forEach((element) => {
-        element.hidden = visible === false;
+    (state.schema?.sections || []).forEach((section) => {
+      const configured = getValue(`sectionVisibility.${section.id}`) ??
+        nestedValue(state.data, `sections.${section.id}.visible`);
+      const visible = section.required ||
+        (configured === undefined ? section.visibleByDefault !== false : configured !== false);
+      document.querySelectorAll(`[data-section="${section.id}"]`).forEach((element) => {
+        element.hidden = !visible;
       });
     });
   }

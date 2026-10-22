@@ -430,13 +430,14 @@
   }
 
   function applyVisibility() {
-    const visibility = getValue("sectionVisibility");
-    if (!visibility || typeof visibility !== "object") return;
-    document.querySelectorAll("[data-section]").forEach((element) => {
-      const visible = nestedValue(visibility, element.dataset.section);
-      if (visible !== undefined) {
-        element.hidden = [false, 0, "0", "false", "hidden"].includes(visible);
-      }
+    (state.schema?.sections || []).forEach((section) => {
+      const configured = getValue(`sectionVisibility.${section.id}`);
+      const visible = section.required ||
+        (configured === undefined ? section.visibleByDefault !== false :
+          ![false, 0, "0", "false", "hidden"].includes(configured));
+      document.querySelectorAll(`[data-section="${section.id}"]`).forEach((element) => {
+        element.hidden = !visible;
+      });
     });
   }
 

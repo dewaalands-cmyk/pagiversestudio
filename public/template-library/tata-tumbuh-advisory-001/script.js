@@ -284,15 +284,17 @@
   }
 
   function applyVisibility() {
-    const visibility = state.data.sectionVisibility;
-    if (!visibility || typeof visibility !== "object") return;
-    Object.entries(visibility).forEach(([sectionId, visible]) => {
-      if (visible === false)
-        document
-          .querySelectorAll(`[data-section="${sectionId}"]`)
-          .forEach((element) => {
-            element.hidden = true;
-          });
+    (state.schema?.sections || []).forEach((section) => {
+      const configured = getValue(`sectionVisibility.${section.id}`) ??
+        nestedValue(state.data, `sections.${section.id}.visible`);
+      const visible = section.required ||
+        (configured === undefined ? section.visibleByDefault !== false : configured !== false);
+      const nodes = [...document.querySelectorAll(`[data-section="${section.id}"]`)];
+      const target = document.getElementById(section.id);
+      if (target && !nodes.includes(target)) nodes.push(target);
+      nodes.forEach((element) => {
+        element.hidden = !visible;
+      });
     });
   }
 

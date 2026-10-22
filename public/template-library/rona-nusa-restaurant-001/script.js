@@ -48,6 +48,31 @@
     }
   }
 
+  function applyVisibility() {
+    (state.schema?.sections || []).forEach((section) => {
+      const configured = valueFor(`sectionVisibility.${section.id}`) ??
+        readPath(state.data, `sections.${section.id}.visible`);
+      const visible = section.required ||
+        (configured === undefined ? section.visibleByDefault !== false : configured !== false);
+      const nodes = [...document.querySelectorAll(`[data-section="${section.id}"]`)];
+      const target = document.getElementById(section.id);
+      if (target && !nodes.includes(target)) nodes.push(target);
+      nodes.forEach(node => { node.hidden = !visible; });
+      if (!section.required) {
+        document.querySelectorAll('a[href]').forEach(link => {
+          let url, targetId;
+          try {
+            url = new URL(link.getAttribute('href'), document.baseURI);
+            targetId = decodeURIComponent(url.hash.slice(1));
+          } catch (_error) { return; }
+          if (url.origin !== location.origin || url.pathname !== location.pathname || !url.hash) return;
+          const destination = document.getElementById(targetId);
+          if (destination && nodes.some(node => node.contains(destination))) link.hidden = !visible;
+        });
+      }
+    });
+  }
+
   function applyBindings() {
     document.querySelectorAll('[data-bind]').forEach((element) => {
       const value = valueFor(element.dataset.bind);
@@ -124,6 +149,7 @@
 
     renderMenu();
     updateWhatsAppLink();
+    applyVisibility();
   }
 
   function localized(value) {

@@ -413,15 +413,14 @@
 
   function applySectionVisibility() {
     state.schema?.sections?.forEach((section) => {
-      if (section.required) return;
-      const flatVisibility = state.data?.sectionVisibility?.[section.id];
-      const nestedVisibility = state.data?.sections?.[section.id]?.visible;
-      const visible =
-        nestedVisibility !== undefined ? nestedVisibility : flatVisibility;
+      const configured = getValue(`sectionVisibility.${section.id}`) ??
+        pathValue(state.data, `sections.${section.id}.visible`);
+      const visible = section.required ||
+        (configured === undefined ? section.visibleByDefault !== false : configured !== false);
       document
         .querySelectorAll(`[data-section="${section.id}"]`)
         .forEach((element) => {
-          element.hidden = visible === false;
+          element.hidden = !visible;
         });
     });
   }

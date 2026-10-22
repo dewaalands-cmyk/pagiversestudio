@@ -2062,7 +2062,7 @@
       "default": "Saya setuju informasi ini digunakan untuk menyusun kebutuhan energi perusahaan. Pengiriman diproses oleh Pagiverse Core ketika integrasi aktif.",
       "editable": true,
       "group": "contact",
-      "maxLength": 100,
+      "maxLength": 160,
       "required": false
     },
     "sections.contact.contact.label22": {

@@ -4506,7 +4506,7 @@
           "default": "Saya setuju informasi ini digunakan untuk menyusun kebutuhan energi perusahaan. Pengiriman diproses oleh Pagiverse Core ketika integrasi aktif.",
           "editable": true,
           "group": "contact",
-          "maxLength": 100,
+          "maxLength": 160,
           "required": false
         },
         "sections.contact.contact.label22": {
@@ -15867,11 +15867,21 @@
           "minItems": 4,
           "maxItems": 10,
           "default": [
-            "Teknologi",
-            "Jasa Keuangan",
-            "Manufaktur",
-            "Professional Services",
-            "Consumer Brand"
+            {
+              "value": "Teknologi"
+            },
+            {
+              "value": "Jasa Keuangan"
+            },
+            {
+              "value": "Manufaktur"
+            },
+            {
+              "value": "Professional Services"
+            },
+            {
+              "value": "Consumer Brand"
+            }
           ],
           "item": {
             "fields": {

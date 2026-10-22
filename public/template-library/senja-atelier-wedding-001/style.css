@@ -578,6 +578,8 @@ blockquote {
   overflow-wrap: anywhere;
 }
 .contact-media {
+  min-width: 0;
+  max-width: 100%;
   aspect-ratio: 4 / 5;
 }
 .contact-media img {

@@ -727,11 +727,21 @@
       "minItems": 4,
       "maxItems": 10,
       "default": [
-        "Teknologi",
-        "Jasa Keuangan",
-        "Manufaktur",
-        "Professional Services",
-        "Consumer Brand"
+        {
+          "value": "Teknologi"
+        },
+        {
+          "value": "Jasa Keuangan"
+        },
+        {
+          "value": "Manufaktur"
+        },
+        {
+          "value": "Professional Services"
+        },
+        {
+          "value": "Consumer Brand"
+        }
       ],
       "item": { "fields": { "value": { "type": "text", "maxLength": 50 } } }
     },

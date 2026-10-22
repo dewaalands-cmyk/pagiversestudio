@@ -237,20 +237,36 @@
   }
 
   function applyVisibility() {
+    const targets = new Map();
     state.schema?.sections?.forEach((section) => {
-      if (section.required) return;
       const flatKey = `sectionVisibility.${section.id}`;
       const flat = owns(state.data, flatKey)
         ? state.data[flatKey]
         : state.data?.sectionVisibility?.[section.id];
       const nested = state.data?.sections?.[section.id]?.visible;
-      const visible = nested !== undefined ? nested : flat;
+      const configured = nested !== undefined ? nested : flat;
+      const visible = section.required
+        ? true
+        : typeof configured === "boolean"
+          ? configured
+          : section.visibleByDefault !== false;
       document.querySelectorAll(`[data-section="${section.id}"]`).forEach((node) => {
-        node.hidden = visible === false;
+        node.hidden = !visible;
+        if (node.id) targets.set(`#${node.id}`, visible);
       });
     });
+    document.querySelectorAll('a[href^="#"]').forEach((link) => {
+      const target = link.getAttribute("href");
+      if (!targets.has(target)) return;
+      const item = state.schema?.navigation?.items?.find((entry) => entry.target === target);
+      const hiddenByNavigation = item?.hideable && (
+        getValue(`navigation.${item.id}.hidden`) === true ||
+        getValue(`navigation.${item.id}.visible`) === false ||
+        getValue(`navigation.items.${item.id}.visible`) === false
+      );
+      link.hidden = !targets.get(target) || hiddenByNavigation;
+    });
   }
-
   function whatsappNumber(value) {
     const normalized = plainText(value).replace(/[\s().-]/g, "");
     if (!/^\+?\d{8,15}$/.test(normalized)) return "";
