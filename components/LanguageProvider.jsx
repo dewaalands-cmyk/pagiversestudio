@@ -21,7 +21,7 @@ export function LanguageProvider({ children }) {
       description.setAttribute(
         "content",
         lang === "id"
-          ? "Pagiverse Studio membantu UMKM dan brand lokal punya website yang cepat, rapi, dan mudah ditemukan di Google. Konsultasi gratis via WhatsApp."
+          ? "Pagiverse Studio membantu UMKM dan brand lokal punya website yang cepat, rapi, dan mudah ditemukan di Google. Pilih template, edit sesuai kebutuhan, lalu kirim melalui formulir proyek."
           : "Pagiverse Studio designs fast, polished websites and web apps that help local businesses earn trust and grow."
       );
     }

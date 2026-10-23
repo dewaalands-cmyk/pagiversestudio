@@ -18,7 +18,7 @@ const manrope = Manrope({
 export const metadata = {
   title: "Pagiverse Studio | Jasa Pembuatan Website Profesional di Garut",
   description:
-    "Pagiverse Studio membantu UMKM dan brand lokal punya website yang cepat, rapi, dan mudah ditemukan di Google. Konsultasi gratis via WhatsApp.",
+    "Pagiverse Studio membantu UMKM dan brand lokal punya website yang cepat, rapi, dan mudah ditemukan di Google. Pilih template, edit sesuai kebutuhan, lalu kirim melalui formulir proyek.",
   keywords: [
     "jasa pembuatan website",
     "web developer Garut",

@@ -1,40 +1,31 @@
 import StudioNavbar from "@/components/studio/StudioNavbar";
 import StudioHero from "@/components/studio/StudioHero";
 import StudioAbout from "@/components/studio/StudioAbout";
-import StudioServices from "@/components/studio/StudioServices";
-import StudioProcess from "@/components/studio/StudioProcess";
+import StudioTemplates from "@/components/studio/StudioTemplates";
 import StudioPortfolio from "@/components/studio/StudioPortfolio";
-import StudioTestimonials from "@/components/studio/StudioTestimonials";
 import StudioContact from "@/components/studio/StudioContact";
-import StudioTestimonialForm from "@/components/studio/StudioTestimonialForm";
 import StudioFooter from "@/components/studio/StudioFooter";
 import { getSettings } from "@/lib/site-settings";
-import { getPortfolioItems, getApprovedTestimonies } from "@/lib/public-data";
+import { getPortfolioItems } from "@/lib/public-data";
+import { getTemplateById } from "@/lib/template-library";
+import "./studio-redesign.css";
 
-// Selalu ambil data terbaru dari DB (portfolio/testimoni) tanpa cache statis
 export const revalidate = 0;
 
 export default async function Home() {
-  const [settings, portfolioItems, testimonies] = await Promise.all([
-    getSettings(),
-    getPortfolioItems(),
-    getApprovedTestimonies(),
-  ]);
-
+  const [settings, portfolioItems] = await Promise.all([getSettings(), getPortfolioItems()]);
+  const demoTemplates = ["casa-braci-heritage-001", "dapur-pesisir-tropical-001"].map(getTemplateById).filter(Boolean);
   return (
-    <>
+    <div className="pg-home">
       <StudioNavbar />
       <main id="main-content">
-        <StudioHero settings={settings} />
-        <StudioAbout settings={settings} />
-        <StudioServices settings={settings} />
-        <StudioProcess />
-        <StudioPortfolio settings={settings} dbItems={portfolioItems} />
-        <StudioTestimonials dbItems={testimonies} />
+        <StudioHero />
+        <StudioAbout demoTemplates={demoTemplates} />
+        <StudioTemplates />
+        <StudioPortfolio dbItems={portfolioItems} />
         <StudioContact settings={settings} />
-        <StudioTestimonialForm />
       </main>
       <StudioFooter />
-    </>
+    </div>
   );
 }
