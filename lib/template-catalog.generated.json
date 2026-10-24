@@ -29000,6 +29000,951 @@
         }
       ],
       "publicPath": "/template-library/tata-tumbuh-advisory-001"
+    },
+    {
+      "pagiverseStandard": 1,
+      "id": "tiba-beverage-editorial-001",
+      "name": "TIBA | Ruang Kenal Minuman",
+      "category": "services",
+      "categoryLabel": "Katalog Minuman · Informatif 21+",
+      "description": "Katalog editorial minuman untuk audiens dewasa dengan tipografi besar, koleksi interaktif, dan gerak yang menghormati preferensi pengguna. Identitas dan konten contoh dapat diganti melalui konfigurasi Pagiverse.",
+      "entry": "index.html",
+      "thumbnail": "thumbnail.webp",
+      "pages": [
+        {
+          "id": "home",
+          "path": "/",
+          "entry": "index.html"
+        }
+      ],
+      "dependencies": [],
+      "contentScope": "Informational adult beverage catalog. No ordering, cart, checkout, prices, sales packs, or purchasing links.",
+      "theme": {
+        "supportsColorMode": false,
+        "defaultMode": "light",
+        "tokens": {
+          "primary": {
+            "editable": false,
+            "default": "#651c32"
+          },
+          "secondary": {
+            "editable": false,
+            "default": "#dfcac8"
+          },
+          "accent": {
+            "editable": false,
+            "default": "#ef6079"
+          },
+          "background": {
+            "editable": false,
+            "default": "#f2e2d5"
+          },
+          "surface": {
+            "editable": false,
+            "default": "#fef6ee"
+          },
+          "text": {
+            "editable": false,
+            "default": "#651c32"
+          }
+        },
+        "fonts": {
+          "editable": false,
+          "families": {
+            "display": "Bodoni Moda",
+            "body": "DM Sans",
+            "wordmark": "Lora"
+          },
+          "files": [
+            "assets/fonts/BodoniModa.ttf",
+            "assets/fonts/DMSans.ttf",
+            "assets/fonts/Lora.ttf"
+          ],
+          "licenses": [
+            "assets/fonts/BodoniModa-OFL.txt",
+            "assets/fonts/DMSans-OFL.txt",
+            "assets/fonts/Lora-OFL.txt"
+          ],
+          "note": "Designer-controlled local fonts distributed under their included SIL Open Font License files."
+        }
+      },
+      "navigation": {
+        "allowCustomItems": false,
+        "items": [
+          {
+            "id": "products",
+            "target": "#products",
+            "hideable": true
+          },
+          {
+            "id": "about",
+            "target": "#about",
+            "hideable": true
+          },
+          {
+            "id": "gallery",
+            "target": "#gallery",
+            "hideable": true
+          },
+          {
+            "id": "faq",
+            "target": "#faq",
+            "hideable": true
+          }
+        ]
+      },
+      "fields": {
+        "business.name": {
+          "type": "text",
+          "label": "Nama brand",
+          "required": true,
+          "maxLength": 18,
+          "default": "tiba"
+        },
+        "business.tagline": {
+          "type": "text",
+          "label": "Tagline brand",
+          "maxLength": 70,
+          "default": "Ruang kenal minuman."
+        },
+        "business.description": {
+          "type": "textarea",
+          "label": "Deskripsi brand",
+          "maxLength": 240,
+          "default": "TIBA adalah brand contoh untuk menjelajahi kategori dan karakter minuman."
+        },
+        "business.logo": {
+          "type": "image",
+          "label": "Logo brand opsional",
+          "required": false,
+          "accept": [
+            "image/webp",
+            "image/png",
+            "image/jpeg",
+            "image/avif"
+          ],
+          "maxFileSizeMB": 2,
+          "focalPoint": true
+        },
+        "seo.title": {
+          "type": "text",
+          "label": "Judul halaman",
+          "maxLength": 70,
+          "default": "TIBA — Ruang Kenal Minuman"
+        },
+        "seo.description": {
+          "type": "textarea",
+          "label": "Deskripsi mesin pencari",
+          "maxLength": 180,
+          "default": "Kenali kategori, asal, dan karakter minuman melalui katalog informatif TIBA untuk audiens dewasa. Identitas dan konten contoh."
+        },
+        "seo.ogImage": {
+          "type": "image",
+          "label": "Gambar berbagi halaman",
+          "default": "thumbnail.webp",
+          "accept": [
+            "image/webp",
+            "image/png",
+            "image/jpeg"
+          ],
+          "maxFileSizeMB": 3,
+          "focalPoint": true
+        },
+        "navigation.items": {
+          "type": "array",
+          "label": "Navigasi tetap",
+          "minItems": 4,
+          "maxItems": 4,
+          "allowReorder": false,
+          "allowAdd": false,
+          "allowRemove": false,
+          "default": [
+            {
+              "id": "products",
+              "label": "Koleksi",
+              "target": "#products",
+              "visible": true
+            },
+            {
+              "id": "about",
+              "label": "Cerita TIBA",
+              "target": "#about",
+              "visible": true
+            },
+            {
+              "id": "gallery",
+              "label": "Catatan visual",
+              "target": "#gallery",
+              "visible": true
+            },
+            {
+              "id": "faq",
+              "label": "Hal yang perlu tahu",
+              "target": "#faq",
+              "visible": true
+            }
+          ],
+          "item": {
+            "fields": {
+              "id": {
+                "type": "select",
+                "label": "Bagian",
+                "editable": false,
+                "options": [
+                  "products",
+                  "about",
+                  "gallery",
+                  "faq"
+                ]
+              },
+              "label": {
+                "type": "text",
+                "label": "Label",
+                "maxLength": 26
+              },
+              "target": {
+                "type": "text",
+                "label": "Tujuan tetap",
+                "editable": false,
+                "maxLength": 20
+              },
+              "visible": {
+                "type": "boolean",
+                "label": "Tampilkan",
+                "default": true
+              }
+            }
+          }
+        },
+        "sections.hero.eyebrow": {
+          "type": "text",
+          "label": "Pengantar hero",
+          "maxLength": 42,
+          "default": "Sebuah ruang untuk mengenal"
+        },
+        "sections.hero.heading": {
+          "type": "text",
+          "label": "Judul hero",
+          "required": true,
+          "maxLength": 40,
+          "default": "KENALI ISI GELASMU."
+        },
+        "sections.hero.description": {
+          "type": "textarea",
+          "label": "Deskripsi hero",
+          "maxLength": 110,
+          "default": "Dari whiskey hingga soda. Temukan cerita, bahan, dan karakter di balik setiap botol."
+        },
+        "sections.hero.notice": {
+          "type": "text",
+          "label": "Keterangan hero",
+          "maxLength": 70,
+          "default": "Katalog informatif · Khusus usia 21+"
+        },
+        "sections.hero.image": {
+          "type": "image",
+          "label": "Gambar hero",
+          "default": "assets/hero.webp",
+          "accept": [
+            "image/webp",
+            "image/png",
+            "image/jpeg",
+            "image/avif"
+          ],
+          "maxFileSizeMB": 4,
+          "aspectRatio": "4:3",
+          "focalPoint": true
+        },
+        "sections.hero.imageAlt": {
+          "type": "text",
+          "label": "Deskripsi gambar hero",
+          "maxLength": 180,
+          "default": "Komposisi gelas, botol tanpa label, dan jeruk pada latar coral"
+        },
+        "sections.products.heading": {
+          "type": "text",
+          "label": "Judul koleksi",
+          "maxLength": 60,
+          "default": "ADA CERITA DI SETIAP BOTOL."
+        },
+        "sections.products.description": {
+          "type": "textarea",
+          "label": "Pengantar koleksi",
+          "maxLength": 180,
+          "default": "Kenali jenisnya. Baca karakternya. Temukan perbedaannya."
+        },
+        "sections.products.filters.all": {
+          "type": "text",
+          "label": "Filter semua",
+          "maxLength": 22,
+          "default": "Semua"
+        },
+        "sections.products.filters.spirits": {
+          "type": "text",
+          "label": "Filter spirits",
+          "maxLength": 22,
+          "default": "Spirits"
+        },
+        "sections.products.filters.lokal": {
+          "type": "text",
+          "label": "Filter lokal",
+          "maxLength": 22,
+          "default": "Lokal"
+        },
+        "sections.products.filters.bir": {
+          "type": "text",
+          "label": "Filter bir",
+          "maxLength": 22,
+          "default": "Bir"
+        },
+        "sections.products.filters.mixer": {
+          "type": "text",
+          "label": "Filter mixer",
+          "maxLength": 22,
+          "default": "Soda & mixer"
+        },
+        "sections.products.filters.aksesori": {
+          "type": "text",
+          "label": "Filter perlengkapan",
+          "maxLength": 22,
+          "default": "Perangkat"
+        },
+        "sections.products.detailLabel": {
+          "type": "text",
+          "label": "Label detail minuman",
+          "maxLength": 28,
+          "default": "Kenali minuman"
+        },
+        "sections.products.accessoryDetailLabel": {
+          "type": "text",
+          "label": "Label detail perlengkapan",
+          "maxLength": 28,
+          "default": "Lihat detail"
+        },
+        "sections.products.searchLabel": {
+          "type": "text",
+          "label": "Label pencarian",
+          "maxLength": 44,
+          "default": "Cari dalam koleksi"
+        },
+        "sections.products.emptyLabel": {
+          "type": "text",
+          "label": "Keterangan pencarian kosong",
+          "maxLength": 140,
+          "default": "Belum ada minuman untuk pencarian ini."
+        },
+        "sections.products.resultLabel": {
+          "type": "text",
+          "label": "Keterangan jumlah hasil",
+          "maxLength": 50,
+          "default": "item dalam koleksi"
+        },
+        "sections.products.items": {
+          "type": "array",
+          "label": "Koleksi informatif",
+          "minItems": 0,
+          "maxItems": 36,
+          "default": [
+            {
+              "id": "vibe-lychee",
+              "name": "VIBE Exotic Lychee",
+              "category": "spirits",
+              "categoryLabel": "Liqueur leci",
+              "origin": "Indonesia",
+              "description": "Varian VIBE dengan identitas rasa leci, tercantum dalam lini Premium. Minuman ini termasuk kategori beralkohol dengan aroma buah.",
+              "details": "Exotic Lychee merupakan salah satu varian dalam lini Premium VIBE Indonesia. Nama variannya merujuk pada leci, sementara karakter dan komposisi lengkap sebaiknya dibaca pada label kemasan. Entri ini memperkenalkan identitas produk secara ringkas.",
+              "image": "assets/products/vibe-lychee.webp",
+              "alt": "Foto resmi botol VIBE Exotic Lychee dengan label bergambar leci",
+              "tone": "#e7b8c1"
+            },
+            {
+              "id": "jack-daniels",
+              "name": "Jack Daniel’s Old No. 7",
+              "category": "spirits",
+              "categoryLabel": "Tennessee whiskey",
+              "origin": "Tennessee, Amerika Serikat",
+              "description": "Tennessee whiskey yang melalui proses charcoal mellowing. Produsen mencatat karakter karamel, vanila, serta kayu pada profil Old No. 7.",
+              "details": "Old No. 7 dikenal sebagai Tennessee whiskey dengan proses charcoal mellowing menggunakan arang sugar maple sebelum pematangan dalam tong. Profil yang dijelaskan produsennya memuat nuansa karamel, vanila, dan kayu. Warna cairannya berada pada spektrum amber.",
+              "image": "assets/products/jack-daniels.webp",
+              "alt": "Botol Jack Daniel’s Old No. 7 dengan label hitam",
+              "tone": "#e6b864"
+            },
+            {
+              "id": "vibe-vodka",
+              "name": "VIBE Vodka Original",
+              "category": "spirits",
+              "categoryLabel": "Vodka",
+              "origin": "Indonesia",
+              "description": "Vodka Original merupakan salah satu spirit dalam portofolio VIBE Indonesia. Varian originalnya dibedakan dari rangkaian liqueur dan spirit berperisa.",
+              "details": "VIBE menempatkan Vodka Original dalam kelompok spirit pada katalog resminya. Entri ini merujuk pada varian Original, yang berbeda dari Vodka Premium serta produk berperisa lainnya. Nama dan komposisi varian tetap perlu dibaca pada label kemasan.",
+              "image": "assets/products/vibe-vodka.webp",
+              "alt": "Foto resmi VIBE Vodka Original dengan label merah",
+              "tone": "#d96c68"
+            },
+            {
+              "id": "vibe-black-tea",
+              "name": "VIBE Black Tea",
+              "category": "spirits",
+              "categoryLabel": "Spirit teh hitam",
+              "origin": "Indonesia",
+              "description": "Varian beridentitas teh hitam dalam lini Premium VIBE. Nama Black Tea membedakannya dari koleksi rasa buah dan Vodka Original.",
+              "details": "Black Tea tercantum di kelompok Premium dalam katalog resmi VIBE Indonesia. Identitas teh hitam ditampilkan melalui nama varian dan labelnya. Penamaan ini membantu membedakannya dari Exotic Lychee, Apricot, Peach, serta Vodka Premium dalam koleksi yang sama.",
+              "image": "assets/products/vibe-black-tea.webp",
+              "alt": "Foto resmi VIBE Black Tea dengan cairan amber dan label ungu",
+              "tone": "#a78fc1"
+            },
+            {
+              "id": "mansion-house",
+              "name": "Mansion House Whisky",
+              "category": "spirits",
+              "categoryLabel": "Whisky",
+              "origin": "Label varian Indonesia",
+              "description": "Mansion House hadir dengan penamaan whisky di Indonesia. Kategorinya dibedakan dari vodka, rum, dan brandy yang memakai nama serupa.",
+              "details": "Entri ini merujuk pada Mansion House dengan label Whisky yang dijumpai di Indonesia. Nama Mansion House juga digunakan pada kategori minuman lain, sehingga nama varian dan produsennya penting untuk dibaca agar identitas produknya tidak tertukar.",
+              "image": "assets/products/mansion-house.webp",
+              "alt": "Foto botol Mansion House Whisky dari katalog Tipsy Tales",
+              "tone": "#c39459"
+            },
+            {
+              "id": "kawa-merah",
+              "name": "Kawa Kawa Anggur Merah",
+              "category": "lokal",
+              "categoryLabel": "Anggur merah lokal",
+              "origin": "Indonesia",
+              "description": "Anggur merah berlabel Kawa Kawa, bagian dari koleksi lokal yang juga memiliki varian hijau dan beridentitas buah lainnya.",
+              "details": "Anggur Merah adalah salah satu penamaan varian Kawa Kawa yang beredar di Indonesia. Varian ini dibedakan dari Anggur Hijau dan Blackcurrant. Komposisi, kategori, dan informasi kandungan mengikuti label pada kemasan masing-masing produk.",
+              "image": "assets/products/kawa-merah.webp",
+              "alt": "Foto botol Kawa Kawa Anggur Merah dari katalog Kapitall",
+              "tone": "#b45c65"
+            },
+            {
+              "id": "kawa-hijau",
+              "name": "Kawa Kawa Anggur Hijau",
+              "category": "lokal",
+              "categoryLabel": "Anggur hijau lokal",
+              "origin": "Indonesia",
+              "description": "Varian Kawa Kawa dengan identitas anggur hijau. Nama dan labelnya menjadi pembeda dari Anggur Merah dalam koleksi yang sama.",
+              "details": "Entri Anggur Hijau memperkenalkan penamaan varian dalam keluarga Kawa Kawa. Nama warna di sini menjadi identitas produk, bukan penanda bahwa seluruh varian memiliki komposisi yang sama. Rincian pada label kemasan menjadi acuan untuk mengenali varian.",
+              "image": "assets/products/kawa-hijau.webp",
+              "alt": "Foto botol Kawa Kawa Anggur Hijau dari katalog Kapitall",
+              "tone": "#b0be86"
+            },
+            {
+              "id": "ot-merah",
+              "name": "Anggur Merah Orang Tua",
+              "category": "lokal",
+              "categoryLabel": "Anggur merah lokal",
+              "origin": "Indonesia",
+              "description": "Anggur merah dengan identitas Cap Orang Tua. Nama ini hadir dalam beberapa varian, sehingga informasi pada label tetap menjadi acuan.",
+              "details": "Cap Orang Tua merupakan bagian dari sejarah merek minuman di Indonesia. Entri Anggur Merah memperkenalkan salah satu identitas produknya. Berbagai label, ukuran, dan varian dapat memiliki informasi berbeda; nama lengkap produk pada kemasan menjadi pembeda utamanya.",
+              "image": "assets/products/ot-merah.webp",
+              "alt": "Foto botol Anggur Merah Orang Tua dari katalog Kapitall",
+              "tone": "#b77c88"
+            },
+            {
+              "id": "congyang",
+              "name": "Congyang",
+              "category": "lokal",
+              "categoryLabel": "Minuman lokal Semarang",
+              "origin": "Semarang, Indonesia",
+              "description": "Minuman beralkohol yang dikenal dalam sejarah keseharian Semarang. Identitas Congyang berkaitan dengan jejak budaya perkotaan dan kawasan Pecinan.",
+              "details": "Congyang dikenal sebagai salah satu minuman beralkohol lokal yang terkait dengan Semarang. Catatan penelitian mengenai kota ini membahas perkembangannya di kawasan Pecinan. Entri ini berfokus pada konteks regional, tanpa menyamakan semua kemasan atau merek dengan satu formula.",
+              "image": "assets/products/congyang.webp",
+              "alt": "Foto botol Congyang Cap Tiga Orang dari katalog Panen Lentera Jaya",
+              "tone": "#d49962"
+            },
+            {
+              "id": "bintang-pilsener",
+              "name": "BINTANG Pilsener",
+              "category": "bir",
+              "categoryLabel": "Bir pilsener",
+              "origin": "Indonesia",
+              "description": "Bir dalam portofolio Multi Bintang Indonesia dengan identitas Pilsener. Varian ini dibedakan dari Crystal, Radler, serta produk tanpa alkohol.",
+              "details": "BINTANG Pilsener merupakan bagian dari portofolio PT Multi Bintang Indonesia. Nama Pilsener menunjukkan identitas varian bir ini, yang berbeda dari BINTANG Crystal dan Radler. Informasi bahan, alergen, serta kandungan lengkap dapat ditemukan pada label kemasannya.",
+              "image": "assets/products/bintang-pilsener.webp",
+              "alt": "Foto kemasan BINTANG Pilsener botol dan kaleng dari distributor Bintang Bali Indah",
+              "tone": "#8fb38b"
+            },
+            {
+              "id": "bintang-crystal",
+              "name": "BINTANG Crystal",
+              "category": "bir",
+              "categoryLabel": "Bir",
+              "origin": "Indonesia",
+              "description": "Varian bir dari Multi Bintang Indonesia yang diperkenalkan dengan proses cold brewing. Identitas Crystal dibedakan dari varian Pilsener.",
+              "details": "BINTANG Crystal berada dalam keluarga produk Multi Bintang Indonesia. Perusahaan memperkenalkannya sebagai bir dengan proses cold brewing dan karakter yang lebih ringan tingkat kepahitannya dibanding profil bir yang lebih tegas. Rincian kandungan mengikuti label kemasan.",
+              "image": "assets/products/bintang-crystal.webp",
+              "alt": "Foto kemasan botol dan kaleng BINTANG Crystal dari distributor Bintang Bali Indah",
+              "tone": "#95c7ca"
+            },
+            {
+              "id": "soda",
+              "name": "Schweppes Air Soda",
+              "category": "mixer",
+              "categoryLabel": "Minuman tanpa alkohol",
+              "origin": "Varian Indonesia",
+              "description": "Air berkarbonasi tanpa gula dari Schweppes. Komposisi pada varian kaleng Indonesia mencantumkan air berkarbonasi serta natrium bikarbonat.",
+              "details": "Schweppes Air Soda adalah minuman berkarbonasi tanpa gula. Pada halaman produk Indonesia, komposisinya dicantumkan sebagai air berkarbonasi dan natrium bikarbonat. Identitas Air Soda perlu dibedakan dari Air Tonik yang mempunyai komposisi serta profil rasa berbeda.",
+              "image": "assets/products/soda.webp",
+              "alt": "Kaleng Schweppes Air Soda berlabel hitam dan kuning",
+              "tone": "#b3c4b0"
+            },
+            {
+              "id": "tonic",
+              "name": "Schweppes Air Tonik",
+              "category": "mixer",
+              "categoryLabel": "Minuman tanpa alkohol",
+              "origin": "Varian Indonesia",
+              "description": "Minuman berkarbonasi beridentitas tonik, dengan kuinina dalam komposisinya. Varian ini berbeda dari air soda yang tidak memiliki komposisi sama.",
+              "details": "Air Tonik Schweppes merupakan minuman berkarbonasi yang berbeda dari Air Soda. Halaman produk Indonesia mencantumkan gula, pemanis, dan kuinina dalam komposisinya. Informasi bahan pada label penting untuk mengenali karakter produk serta membedakannya dari varian Schweppes lainnya.",
+              "image": "assets/products/tonic.webp",
+              "alt": "Kaleng Schweppes Tonic Water dengan label kuning",
+              "tone": "#e9d180"
+            },
+            {
+              "id": "sloki",
+              "name": "Gelas Sloki",
+              "category": "aksesori",
+              "categoryLabel": "Perlengkapan kaca",
+              "origin": "Aksesori",
+              "description": "Gelas kecil dengan bentuk dan kapasitas yang beragam. Sloki termasuk perlengkapan kaca, sehingga dipisahkan dari kategori minuman dalam katalog.",
+              "details": "Sloki adalah sebutan untuk gelas berukuran kecil. Bentuk, bahan, ketebalan, dan volumenya dapat berbeda pada setiap desain. Dalam katalog ini, sloki diperkenalkan sebagai aksesori; ukurannya tidak dijadikan standar takaran yang berlaku untuk semua gelas.",
+              "image": "assets/products/sloki.webp",
+              "alt": "Foto gelas sloki bening dari katalog Kapitall",
+              "tone": "#c7d3dc"
+            },
+            {
+              "id": "red-label",
+              "name": "Johnnie Walker Red Label",
+              "category": "spirits",
+              "categoryLabel": "Blended Scotch whisky",
+              "origin": "Skotlandia",
+              "description": "Blended Scotch whisky yang menggabungkan hingga 35 whisky. Label merah diagonal menjadi identitas visual varian Red Label dari Johnnie Walker.",
+              "details": "Red Label merupakan blended Scotch whisky yang menurut produsen memadukan hingga 35 whisky, termasuk dari Cardhu, Caol Ila, Cameronbridge, dan Teaninich. Identitas label merahnya membedakan varian ini dari koleksi Johnnie Walker lainnya. Informasi kemasan mengikuti pasar dan varian.",
+              "image": "assets/products/red-label.webp",
+              "alt": "Foto resmi botol Johnnie Walker Red Label dengan label merah diagonal",
+              "tone": "#d96c68"
+            }
+          ],
+          "item": {
+            "fields": {
+              "id": {
+                "type": "text",
+                "label": "ID item",
+                "maxLength": 60
+              },
+              "name": {
+                "type": "text",
+                "label": "Nama",
+                "required": true,
+                "maxLength": 60
+              },
+              "category": {
+                "type": "select",
+                "label": "Kategori",
+                "options": [
+                  "spirits",
+                  "lokal",
+                  "bir",
+                  "mixer",
+                  "aksesori"
+                ],
+                "default": "spirits"
+              },
+              "categoryLabel": {
+                "type": "text",
+                "label": "Nama kategori",
+                "maxLength": 32
+              },
+              "origin": {
+                "type": "text",
+                "label": "Asal atau jenis",
+                "maxLength": 80
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi singkat",
+                "maxLength": 240
+              },
+              "details": {
+                "type": "textarea",
+                "label": "Deskripsi lengkap",
+                "maxLength": 700
+              },
+              "image": {
+                "type": "image",
+                "label": "Foto item",
+                "accept": [
+                  "image/webp",
+                  "image/png",
+                  "image/jpeg",
+                  "image/avif"
+                ],
+                "maxFileSizeMB": 3,
+                "focalPoint": true,
+                "aspectRatio": "5:6"
+              },
+              "alt": {
+                "type": "text",
+                "label": "Deskripsi foto",
+                "maxLength": 180
+              },
+              "tone": {
+                "type": "color",
+                "label": "Latar kartu",
+                "editable": false,
+                "default": "#dfcac8"
+              }
+            }
+          }
+        },
+        "sections.about.eyebrow": {
+          "type": "text",
+          "label": "Pengantar cerita",
+          "maxLength": 40,
+          "default": "Cerita TIBA"
+        },
+        "sections.about.heading": {
+          "type": "text",
+          "label": "Judul cerita",
+          "maxLength": 60,
+          "default": "SEDIKIT KENAL. LEBIH PAHAM."
+        },
+        "sections.about.body": {
+          "type": "textarea",
+          "label": "Cerita brand",
+          "maxLength": 500,
+          "default": "Di balik bentuk botol dan nama yang familier, setiap minuman punya asal dan proses yang berbeda. TIBA merangkumnya dengan bahasa yang sederhana."
+        },
+        "sections.about.ctaLabel": {
+          "type": "text",
+          "label": "Label tautan cerita",
+          "maxLength": 28,
+          "default": "Mulai dari jenisnya"
+        },
+        "sections.about.image": {
+          "type": "image",
+          "label": "Gambar cerita",
+          "default": "assets/editorial.webp",
+          "accept": [
+            "image/webp",
+            "image/png",
+            "image/jpeg",
+            "image/avif"
+          ],
+          "maxFileSizeMB": 4,
+          "focalPoint": true,
+          "aspectRatio": "4:5"
+        },
+        "sections.about.imageAlt": {
+          "type": "text",
+          "label": "Deskripsi gambar cerita",
+          "maxLength": 180,
+          "default": "Botol amber, gelas bening, dan jeruk pada kain cream"
+        },
+        "sections.services.heading": {
+          "type": "text",
+          "label": "Judul panduan",
+          "maxLength": 60,
+          "default": "MULAI DARI JENISNYA."
+        },
+        "sections.services.description": {
+          "type": "textarea",
+          "label": "Pengantar panduan",
+          "maxLength": 180,
+          "default": "Satu kategori, banyak karakter."
+        },
+        "sections.services.items": {
+          "type": "array",
+          "label": "Panduan kategori",
+          "minItems": 0,
+          "maxItems": 8,
+          "default": [
+            {
+              "title": "Whiskey & spirits",
+              "description": "Minuman hasil distilasi, dengan bahan dasar dan proses yang membentuk karakter berbeda."
+            },
+            {
+              "title": "Minuman lokal",
+              "description": "Dari anggur lokal hingga nama yang tumbuh bersama cerita sebuah kota."
+            },
+            {
+              "title": "Bir",
+              "description": "Hasil fermentasi serealia. Malt, hop, dan ragi memberi ciri pada setiap jenisnya."
+            },
+            {
+              "title": "Soda & mixer",
+              "description": "Kenali perbedaan air berkarbonasi, tonic, dan soda dengan berbagai rasa."
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "label": "Jenis",
+                "maxLength": 60
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi",
+                "maxLength": 280
+              }
+            }
+          }
+        },
+        "sections.gallery.heading": {
+          "type": "text",
+          "label": "Judul jurnal visual",
+          "maxLength": 60,
+          "default": "BENTUK, WARNA, DAN DETAIL."
+        },
+        "sections.gallery.description": {
+          "type": "textarea",
+          "label": "Pengantar jurnal visual",
+          "maxLength": 180,
+          "default": "Catatan visual tentang botol dan perangkat minum."
+        },
+        "sections.gallery.items": {
+          "type": "array",
+          "label": "Jurnal visual",
+          "minItems": 0,
+          "maxItems": 6,
+          "default": [
+            {
+              "title": "Perangkat bercerita.",
+              "description": "Bentuk gelas juga bagian dari cerita minuman.",
+              "image": "assets/editorial.webp",
+              "alt": "Detail gelas dan botol amber dalam cahaya matahari"
+            },
+            {
+              "title": "Warna punya bahasa.",
+              "description": "Dari bening hingga amber, tiap tampilan memberi petunjuk.",
+              "image": "assets/hero.webp",
+              "alt": "Detail gelas ruby dan jeruk pada latar coral"
+            }
+          ],
+          "item": {
+            "fields": {
+              "title": {
+                "type": "text",
+                "label": "Judul",
+                "maxLength": 60
+              },
+              "description": {
+                "type": "textarea",
+                "label": "Deskripsi",
+                "maxLength": 180
+              },
+              "image": {
+                "type": "image",
+                "label": "Foto",
+                "accept": [
+                  "image/webp",
+                  "image/png",
+                  "image/jpeg",
+                  "image/avif"
+                ],
+                "maxFileSizeMB": 3,
+                "focalPoint": true,
+                "aspectRatio": "5:6"
+              },
+              "alt": {
+                "type": "text",
+                "label": "Deskripsi foto",
+                "maxLength": 180
+              }
+            }
+          }
+        },
+        "sections.faq.heading": {
+          "type": "text",
+          "label": "Judul tanya jawab",
+          "maxLength": 60,
+          "default": "SEBELUM MENJELAJAH."
+        },
+        "sections.faq.items": {
+          "type": "array",
+          "label": "Tanya jawab",
+          "minItems": 0,
+          "maxItems": 12,
+          "default": [
+            {
+              "question": "Apakah TIBA adalah toko online?",
+              "answer": "TIBA adalah identitas contoh untuk sebuah katalog informatif. Halaman ini menjelaskan kategori dan karakter minuman, tanpa transaksi atau pemesanan."
+            },
+            {
+              "question": "Apa bedanya whiskey, vodka, dan bir?",
+              "answer": "Whiskey dan vodka termasuk spirit yang melalui distilasi. Bir merupakan minuman fermentasi. Bahan, proses, dan karakter masing-masing berbeda."
+            },
+            {
+              "question": "Apakah semua deskripsi berlaku untuk setiap varian?",
+              "answer": "Tidak selalu. Tiap varian dapat memiliki bahan, rasa, dan kadar alkohol berbeda. Deskripsi di sini adalah pengantar; label resmi tetap menjadi rujukan untuk informasi spesifik."
+            },
+            {
+              "question": "Untuk siapa informasi ini ditujukan?",
+              "answer": "Katalog ini ditujukan khusus untuk pengunjung berusia 21 tahun ke atas. Informasi merek disajikan sebagai pengenalan produk dan bukan anjuran untuk mengonsumsi alkohol."
+            }
+          ],
+          "item": {
+            "fields": {
+              "question": {
+                "type": "text",
+                "label": "Pertanyaan",
+                "maxLength": 140
+              },
+              "answer": {
+                "type": "textarea",
+                "label": "Jawaban",
+                "maxLength": 600
+              }
+            }
+          }
+        },
+        "sections.footer.heading": {
+          "type": "text",
+          "label": "Judul penutup",
+          "maxLength": 72,
+          "default": "SELALU ADA CERITA DI BALIK BOTOL."
+        },
+        "sections.footer.copyright": {
+          "type": "text",
+          "label": "Hak cipta",
+          "maxLength": 100,
+          "default": "© 2026 TIBA. Identitas contoh."
+        },
+        "sections.footer.note": {
+          "type": "textarea",
+          "label": "Catatan katalog",
+          "maxLength": 300,
+          "default": "Khusus usia 21+. Katalog ini bersifat informatif dan bukan sarana pemesanan. Nama merek adalah milik pemilik masing-masing."
+        },
+        "sections.footer.backTopLabel": {
+          "type": "text",
+          "label": "Label kembali ke atas",
+          "maxLength": 30,
+          "default": "Kembali ke atas"
+        },
+        "sections.services.itemLinkLabel": {
+          "type": "text",
+          "label": "Label tautan panduan kategori",
+          "maxLength": 28,
+          "default": "Kenali kategorinya"
+        },
+        "contact.whatsapp": {
+          "type": "phone",
+          "label": "WhatsApp untuk pertanyaan umum",
+          "default": "+62 000-0000-0000",
+          "maxLength": 25,
+          "required": false,
+          "description": "Nomor contoh dengan digit nol. Ganti dengan nomor bisnis untuk pertanyaan umum katalog."
+        },
+        "sections.footer.whatsappLabel": {
+          "type": "text",
+          "label": "Teks tombol WhatsApp",
+          "default": "Tanya via WhatsApp",
+          "maxLength": 28
+        }
+      },
+      "sections": [
+        {
+          "id": "hero",
+          "label": "Hero",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.hero.eyebrow",
+            "sections.hero.heading",
+            "sections.hero.description",
+            "sections.hero.notice",
+            "sections.hero.image",
+            "sections.hero.imageAlt"
+          ]
+        },
+        {
+          "id": "products",
+          "label": "Koleksi",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.products.heading",
+            "sections.products.description",
+            "sections.products.filters.all",
+            "sections.products.filters.spirits",
+            "sections.products.filters.lokal",
+            "sections.products.filters.bir",
+            "sections.products.filters.mixer",
+            "sections.products.filters.aksesori",
+            "sections.products.detailLabel",
+            "sections.products.accessoryDetailLabel",
+            "sections.products.searchLabel",
+            "sections.products.emptyLabel",
+            "sections.products.resultLabel",
+            "sections.products.items"
+          ]
+        },
+        {
+          "id": "about",
+          "label": "Cerita TIBA",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.about.eyebrow",
+            "sections.about.heading",
+            "sections.about.body",
+            "sections.about.ctaLabel",
+            "sections.about.image",
+            "sections.about.imageAlt"
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Panduan jenis",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.services.heading",
+            "sections.services.description",
+            "sections.services.items",
+            "sections.services.itemLinkLabel"
+          ]
+        },
+        {
+          "id": "gallery",
+          "label": "Jurnal visual",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.gallery.heading",
+            "sections.gallery.description",
+            "sections.gallery.items"
+          ]
+        },
+        {
+          "id": "faq",
+          "label": "Tanya jawab",
+          "required": false,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.faq.heading",
+            "sections.faq.items"
+          ]
+        },
+        {
+          "id": "footer",
+          "label": "Penutup",
+          "required": true,
+          "visibleByDefault": true,
+          "fields": [
+            "sections.footer.heading",
+            "sections.footer.copyright",
+            "sections.footer.note",
+            "sections.footer.backTopLabel",
+            "contact.whatsapp",
+            "sections.footer.whatsappLabel"
+          ]
+        }
+      ],
+      "publicPath": "/template-library/tiba-beverage-editorial-001"
     }
   ]
 }

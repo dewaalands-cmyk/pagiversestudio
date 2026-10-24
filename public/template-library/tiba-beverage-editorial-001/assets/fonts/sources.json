@@ -1,0 +1,46 @@
+{
+  "license": "SIL Open Font License 1.1",
+  "fonts": [
+    {
+      "family": "Antonio",
+      "style": "normal",
+      "file": "Antonio.ttf",
+      "weight": "100 700",
+      "license": "Antonio-OFL.txt",
+      "source": "https://github.com/google/fonts/blob/main/ofl/antonio/Antonio%5Bwght%5D.ttf"
+    },
+    {
+      "family": "Lora",
+      "style": "normal",
+      "file": "Lora.ttf",
+      "weight": "400 700",
+      "license": "Lora-OFL.txt",
+      "source": "https://github.com/google/fonts/blob/main/ofl/lora/Lora%5Bwght%5D.ttf"
+    },
+    {
+      "family": "Lora",
+      "style": "italic",
+      "file": "Lora-Italic.ttf",
+      "weight": "400 700",
+      "license": "Lora-OFL.txt",
+      "source": "https://github.com/google/fonts/blob/main/ofl/lora/Lora-Italic%5Bwght%5D.ttf"
+    },
+    {
+      "file": "BodoniModa.ttf",
+      "style": "normal",
+      "license": "BodoniModa-OFL.txt",
+      "source": "https://github.com/google/fonts/blob/main/ofl/bodonimoda/BodoniModa%5Bopsz,wght%5D.ttf",
+      "weight": "400 900",
+      "family": "Bodoni Moda"
+    },
+    {
+      "file": "DMSans.ttf",
+      "style": "normal",
+      "license": "DMSans-OFL.txt",
+      "source": "https://github.com/google/fonts/blob/main/ofl/dmsans/DMSans%5Bopsz,wght%5D.ttf",
+      "weight": "100 1000",
+      "family": "DM Sans"
+    }
+  ],
+  "acquired": "2026-10-24"
+}

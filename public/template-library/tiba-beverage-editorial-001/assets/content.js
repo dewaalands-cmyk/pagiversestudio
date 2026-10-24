@@ -1,0 +1,185 @@
+/* TIBA — katalog informatif. Fakta dan asal foto: SOURCES.md. */
+window.TIBA_CONTENT = {
+  "products": [
+    {
+      "id": "vibe-lychee",
+      "name": "VIBE Exotic Lychee",
+      "category": "spirits",
+      "categoryLabel": "Liqueur leci",
+      "origin": "Indonesia",
+      "description": "Varian VIBE dengan identitas rasa leci, tercantum dalam lini Premium. Minuman ini termasuk kategori beralkohol dengan aroma buah.",
+      "details": "Exotic Lychee merupakan salah satu varian dalam lini Premium VIBE Indonesia. Nama variannya merujuk pada leci, sementara karakter dan komposisi lengkap sebaiknya dibaca pada label kemasan. Entri ini memperkenalkan identitas produk secara ringkas.",
+      "image": "assets/products/vibe-lychee.webp",
+      "alt": "Foto resmi botol VIBE Exotic Lychee dengan label bergambar leci",
+      "tone": "#e7b8c1"
+    },
+    {
+      "id": "jack-daniels",
+      "name": "Jack Daniel’s Old No. 7",
+      "category": "spirits",
+      "categoryLabel": "Tennessee whiskey",
+      "origin": "Tennessee, Amerika Serikat",
+      "description": "Tennessee whiskey yang melalui proses charcoal mellowing. Produsen mencatat karakter karamel, vanila, serta kayu pada profil Old No. 7.",
+      "details": "Old No. 7 dikenal sebagai Tennessee whiskey dengan proses charcoal mellowing menggunakan arang sugar maple sebelum pematangan dalam tong. Profil yang dijelaskan produsennya memuat nuansa karamel, vanila, dan kayu. Warna cairannya berada pada spektrum amber.",
+      "image": "assets/products/jack-daniels.webp",
+      "alt": "Botol Jack Daniel’s Old No. 7 dengan label hitam",
+      "tone": "#e6b864"
+    },
+    {
+      "id": "vibe-vodka",
+      "name": "VIBE Vodka Original",
+      "category": "spirits",
+      "categoryLabel": "Vodka",
+      "origin": "Indonesia",
+      "description": "Vodka Original merupakan salah satu spirit dalam portofolio VIBE Indonesia. Varian originalnya dibedakan dari rangkaian liqueur dan spirit berperisa.",
+      "details": "VIBE menempatkan Vodka Original dalam kelompok spirit pada katalog resminya. Entri ini merujuk pada varian Original, yang berbeda dari Vodka Premium serta produk berperisa lainnya. Nama dan komposisi varian tetap perlu dibaca pada label kemasan.",
+      "image": "assets/products/vibe-vodka.webp",
+      "alt": "Foto resmi VIBE Vodka Original dengan label merah",
+      "tone": "#d96c68"
+    },
+    {
+      "id": "vibe-black-tea",
+      "name": "VIBE Black Tea",
+      "category": "spirits",
+      "categoryLabel": "Spirit teh hitam",
+      "origin": "Indonesia",
+      "description": "Varian beridentitas teh hitam dalam lini Premium VIBE. Nama Black Tea membedakannya dari koleksi rasa buah dan Vodka Original.",
+      "details": "Black Tea tercantum di kelompok Premium dalam katalog resmi VIBE Indonesia. Identitas teh hitam ditampilkan melalui nama varian dan labelnya. Penamaan ini membantu membedakannya dari Exotic Lychee, Apricot, Peach, serta Vodka Premium dalam koleksi yang sama.",
+      "image": "assets/products/vibe-black-tea.webp",
+      "alt": "Foto resmi VIBE Black Tea dengan cairan amber dan label ungu",
+      "tone": "#a78fc1"
+    },
+    {
+      "id": "mansion-house",
+      "name": "Mansion House Whisky",
+      "category": "spirits",
+      "categoryLabel": "Whisky",
+      "origin": "Label varian Indonesia",
+      "description": "Mansion House hadir dengan penamaan whisky di Indonesia. Kategorinya dibedakan dari vodka, rum, dan brandy yang memakai nama serupa.",
+      "details": "Entri ini merujuk pada Mansion House dengan label Whisky yang dijumpai di Indonesia. Nama Mansion House juga digunakan pada kategori minuman lain, sehingga nama varian dan produsennya penting untuk dibaca agar identitas produknya tidak tertukar.",
+      "image": "assets/products/mansion-house.webp",
+      "alt": "Foto botol Mansion House Whisky dari katalog Tipsy Tales",
+      "tone": "#c39459"
+    },
+    {
+      "id": "kawa-merah",
+      "name": "Kawa Kawa Anggur Merah",
+      "category": "lokal",
+      "categoryLabel": "Anggur merah lokal",
+      "origin": "Indonesia",
+      "description": "Anggur merah berlabel Kawa Kawa, bagian dari koleksi lokal yang juga memiliki varian hijau dan beridentitas buah lainnya.",
+      "details": "Anggur Merah adalah salah satu penamaan varian Kawa Kawa yang beredar di Indonesia. Varian ini dibedakan dari Anggur Hijau dan Blackcurrant. Komposisi, kategori, dan informasi kandungan mengikuti label pada kemasan masing-masing produk.",
+      "image": "assets/products/kawa-merah.webp",
+      "alt": "Foto botol Kawa Kawa Anggur Merah dari katalog Kapitall",
+      "tone": "#b45c65"
+    },
+    {
+      "id": "kawa-hijau",
+      "name": "Kawa Kawa Anggur Hijau",
+      "category": "lokal",
+      "categoryLabel": "Anggur hijau lokal",
+      "origin": "Indonesia",
+      "description": "Varian Kawa Kawa dengan identitas anggur hijau. Nama dan labelnya menjadi pembeda dari Anggur Merah dalam koleksi yang sama.",
+      "details": "Entri Anggur Hijau memperkenalkan penamaan varian dalam keluarga Kawa Kawa. Nama warna di sini menjadi identitas produk, bukan penanda bahwa seluruh varian memiliki komposisi yang sama. Rincian pada label kemasan menjadi acuan untuk mengenali varian.",
+      "image": "assets/products/kawa-hijau.webp",
+      "alt": "Foto botol Kawa Kawa Anggur Hijau dari katalog Kapitall",
+      "tone": "#b0be86"
+    },
+    {
+      "id": "ot-merah",
+      "name": "Anggur Merah Orang Tua",
+      "category": "lokal",
+      "categoryLabel": "Anggur merah lokal",
+      "origin": "Indonesia",
+      "description": "Anggur merah dengan identitas Cap Orang Tua. Nama ini hadir dalam beberapa varian, sehingga informasi pada label tetap menjadi acuan.",
+      "details": "Cap Orang Tua merupakan bagian dari sejarah merek minuman di Indonesia. Entri Anggur Merah memperkenalkan salah satu identitas produknya. Berbagai label, ukuran, dan varian dapat memiliki informasi berbeda; nama lengkap produk pada kemasan menjadi pembeda utamanya.",
+      "image": "assets/products/ot-merah.webp",
+      "alt": "Foto botol Anggur Merah Orang Tua dari katalog Kapitall",
+      "tone": "#b77c88"
+    },
+    {
+      "id": "congyang",
+      "name": "Congyang",
+      "category": "lokal",
+      "categoryLabel": "Minuman lokal Semarang",
+      "origin": "Semarang, Indonesia",
+      "description": "Minuman beralkohol yang dikenal dalam sejarah keseharian Semarang. Identitas Congyang berkaitan dengan jejak budaya perkotaan dan kawasan Pecinan.",
+      "details": "Congyang dikenal sebagai salah satu minuman beralkohol lokal yang terkait dengan Semarang. Catatan penelitian mengenai kota ini membahas perkembangannya di kawasan Pecinan. Entri ini berfokus pada konteks regional, tanpa menyamakan semua kemasan atau merek dengan satu formula.",
+      "image": "assets/products/congyang.webp",
+      "alt": "Foto botol Congyang Cap Tiga Orang dari katalog Panen Lentera Jaya",
+      "tone": "#d49962"
+    },
+    {
+      "id": "bintang-pilsener",
+      "name": "BINTANG Pilsener",
+      "category": "bir",
+      "categoryLabel": "Bir pilsener",
+      "origin": "Indonesia",
+      "description": "Bir dalam portofolio Multi Bintang Indonesia dengan identitas Pilsener. Varian ini dibedakan dari Crystal, Radler, serta produk tanpa alkohol.",
+      "details": "BINTANG Pilsener merupakan bagian dari portofolio PT Multi Bintang Indonesia. Nama Pilsener menunjukkan identitas varian bir ini, yang berbeda dari BINTANG Crystal dan Radler. Informasi bahan, alergen, serta kandungan lengkap dapat ditemukan pada label kemasannya.",
+      "image": "assets/products/bintang-pilsener.webp",
+      "alt": "Foto kemasan BINTANG Pilsener botol dan kaleng dari distributor Bintang Bali Indah",
+      "tone": "#8fb38b"
+    },
+    {
+      "id": "bintang-crystal",
+      "name": "BINTANG Crystal",
+      "category": "bir",
+      "categoryLabel": "Bir",
+      "origin": "Indonesia",
+      "description": "Varian bir dari Multi Bintang Indonesia yang diperkenalkan dengan proses cold brewing. Identitas Crystal dibedakan dari varian Pilsener.",
+      "details": "BINTANG Crystal berada dalam keluarga produk Multi Bintang Indonesia. Perusahaan memperkenalkannya sebagai bir dengan proses cold brewing dan karakter yang lebih ringan tingkat kepahitannya dibanding profil bir yang lebih tegas. Rincian kandungan mengikuti label kemasan.",
+      "image": "assets/products/bintang-crystal.webp",
+      "alt": "Foto kemasan botol dan kaleng BINTANG Crystal dari distributor Bintang Bali Indah",
+      "tone": "#95c7ca"
+    },
+    {
+      "id": "soda",
+      "name": "Schweppes Air Soda",
+      "category": "mixer",
+      "categoryLabel": "Minuman tanpa alkohol",
+      "origin": "Varian Indonesia",
+      "description": "Air berkarbonasi tanpa gula dari Schweppes. Komposisi pada varian kaleng Indonesia mencantumkan air berkarbonasi serta natrium bikarbonat.",
+      "details": "Schweppes Air Soda adalah minuman berkarbonasi tanpa gula. Pada halaman produk Indonesia, komposisinya dicantumkan sebagai air berkarbonasi dan natrium bikarbonat. Identitas Air Soda perlu dibedakan dari Air Tonik yang mempunyai komposisi serta profil rasa berbeda.",
+      "image": "assets/products/soda.webp",
+      "alt": "Kaleng Schweppes Air Soda berlabel hitam dan kuning",
+      "tone": "#b3c4b0"
+    },
+    {
+      "id": "tonic",
+      "name": "Schweppes Air Tonik",
+      "category": "mixer",
+      "categoryLabel": "Minuman tanpa alkohol",
+      "origin": "Varian Indonesia",
+      "description": "Minuman berkarbonasi beridentitas tonik, dengan kuinina dalam komposisinya. Varian ini berbeda dari air soda yang tidak memiliki komposisi sama.",
+      "details": "Air Tonik Schweppes merupakan minuman berkarbonasi yang berbeda dari Air Soda. Halaman produk Indonesia mencantumkan gula, pemanis, dan kuinina dalam komposisinya. Informasi bahan pada label penting untuk mengenali karakter produk serta membedakannya dari varian Schweppes lainnya.",
+      "image": "assets/products/tonic.webp",
+      "alt": "Kaleng Schweppes Tonic Water dengan label kuning",
+      "tone": "#e9d180"
+    },
+    {
+      "id": "sloki",
+      "name": "Gelas Sloki",
+      "category": "aksesori",
+      "categoryLabel": "Perlengkapan kaca",
+      "origin": "Aksesori",
+      "description": "Gelas kecil dengan bentuk dan kapasitas yang beragam. Sloki termasuk perlengkapan kaca, sehingga dipisahkan dari kategori minuman dalam katalog.",
+      "details": "Sloki adalah sebutan untuk gelas berukuran kecil. Bentuk, bahan, ketebalan, dan volumenya dapat berbeda pada setiap desain. Dalam katalog ini, sloki diperkenalkan sebagai aksesori; ukurannya tidak dijadikan standar takaran yang berlaku untuk semua gelas.",
+      "image": "assets/products/sloki.webp",
+      "alt": "Foto gelas sloki bening dari katalog Kapitall",
+      "tone": "#c7d3dc"
+    },
+    {
+      "id": "red-label",
+      "name": "Johnnie Walker Red Label",
+      "category": "spirits",
+      "categoryLabel": "Blended Scotch whisky",
+      "origin": "Skotlandia",
+      "description": "Blended Scotch whisky yang menggabungkan hingga 35 whisky. Label merah diagonal menjadi identitas visual varian Red Label dari Johnnie Walker.",
+      "details": "Red Label merupakan blended Scotch whisky yang menurut produsen memadukan hingga 35 whisky, termasuk dari Cardhu, Caol Ila, Cameronbridge, dan Teaninich. Identitas label merahnya membedakan varian ini dari koleksi Johnnie Walker lainnya. Informasi kemasan mengikuti pasar dan varian.",
+      "image": "assets/products/red-label.webp",
+      "alt": "Foto resmi botol Johnnie Walker Red Label dengan label merah diagonal",
+      "tone": "#d96c68"
+    }
+  ]
+};
